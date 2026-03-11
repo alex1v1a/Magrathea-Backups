@@ -1,0 +1,30 @@
+﻿{
+  "meta": {
+    "lastTouchedVersion": "2026.3.1",
+    "lastTouchedAt": "2026-03-04T14:25:39.772Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-04T14:25:39.766Z",
+    "lastRunVersion": "2026.3.1",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "logging": {
+    "level": "info"
+  },
+  "models": {},
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "gateway": {
+    "port": 18789,
+    "auth": {
+      "mode": "token",
+      "token": "26289adfc361a63913901262fe8269ce8097a022fb686518"
+    }
+  }
+}
+
