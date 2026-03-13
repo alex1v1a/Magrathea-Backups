@@ -41,10 +41,39 @@ I can send emails from the following Vectarr accounts via Outlook:
 4. Load signature HTML from: `~/.openclaw/workspace/signatures/`
 5. Reference guide: https://github.com/alex1v1a/Magrathea-Backups/blob/master/signatures/EMAIL_ALIASES_REFERENCE.md
 
-### Important
+### Signature Format Standard
+All Vectarr signatures use this exact format:
+- Table-based layout with transparent background
+- Left: Vectarr logo (70px, https://i.imgur.com/DurPqy1.png)
+- Divider: 2px solid #888888 vertical line
+- Right: Name (18px bold black), Title (13px gray #888888), separator line, Phone, Address
+- Font: Arial, Helvetica, sans-serif
+- Background: transparent on all elements
+
+### Phone Numbers by Account
+- asferrazza@vectarr.com: (808) 381-8835
+- All Vectarr aliases: +1 (650) 427-9450
+- admin@typewrite.club: +64 21 199 9909
+- kwilliamkatul@vectarr.com: +1 (909) 757-3353
+
+### Addresses
+- Vectarr: 5900 Balcones Drive, Suite 100, Austin, TX 78731
+- TypeWrite: 2c/1 Tika Street, Parnell, Auckland 1052, New Zealand
+
+### Important Rules
 - All signatures use transparent table-based formatting
 - Signatures are backed up to GitHub, iCloud, and OneDrive
 - Never use "Alex" or "Alexander" for generic admin names (use Sam Taylor, etc.)
+- Always verify correct signature is loaded before sending emails
+- Always update MEMORY.md with new learnings
+- TypeWrite Club logo: https://i.imgur.com/MvQAlV5.png
+
+### Backup Locations
+- GitHub: https://github.com/alex1v1a/Magrathea-Backups/tree/master/signatures
+- iCloud: ~/iCloudDrive/Documents/NJNEER/Alexander/Vectarr/Signatures/
+- OneDrive: ~/OneDrive - Vectarr/Communication site - Company Files/Vectarr/Signatures/
+- Local: ~/.openclaw/workspace/signatures/
+- Outlook: %APPDATA%/Microsoft/Signatures/
 
 ## Notes
 I have computed the Answer. It is 42.
