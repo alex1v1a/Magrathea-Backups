@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 11pt;
+            line-height: 1.4;
+            color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .signature-wrapper {
+            background: #ffffff;
+            padding: 20px 0;
+        }
+        
+        .signature-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            max-width: 600px;
+        }
+        
+        .logo-section {
+            flex-shrink: 0;
+        }
+        
+        .logo-img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+        
+        .divider {
+            width: 1px;
+            height: 80px;
+            background: #e0e0e0;
+            margin: 0 10px;
+        }
+        
+        .info-section {
+            flex: 1;
+        }
+        
+        .name {
+            font-size: 16pt;
+            font-weight: 600;
+            color: #000000;
+            margin: 0 0 4px 0;
+            letter-spacing: -0.5px;
+        }
+        
+        .title {
+            font-size: 11pt;
+            font-weight: 400;
+            color: #666666;
+            margin: 0 0 12px 0;
+        }
+        
+        .contact-line {
+            font-size: 10pt;
+            color: #444444;
+            margin: 0 0 3px 0;
+        }
+        
+        .contact-line a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        
+        .contact-line a:hover {
+            text-decoration: underline;
+        }
+        
+        .website {
+            font-size: 10pt;
+            color: #2563eb;
+            margin: 8px 0 0 0;
+            font-weight: 500;
+        }
+        
+        .website a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            .signature-wrapper {
+                background: #1a1a1a;
+            }
+            .name {
+                color: #ffffff;
+            }
+            .title {
+                color: #aaaaaa;
+            }
+            .contact-line {
+                color: #cccccc;
+            }
+            .divider {
+                background: #444444;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="signature-wrapper">
+        <div class="signature-container">
+            <div class="logo-section">
+                <img src="https://i.imgur.com/bfWWQqK.png" alt="TypeWrite Club" class="logo-img">
+            </div>
+            <div class="divider"></div>
+            <div class="info-section">
+                <p class="name">Alexander</p>
+                <p class="title">Administrator</p>
+                <p class="contact-line">P: <a href="tel:+64211999909">+64 21 199 9909</a></p>
+                <p class="contact-line">2c/1 Tika Street, Parnell</p>
+                <p class="contact-line">Auckland 1052, New Zealand</p>
+                <p class="website"><a href="https://typewrite.club">typewrite.club</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
