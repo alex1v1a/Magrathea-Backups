@@ -1,0 +1,95 @@
+CB-LCARS:
+  # LCARS Color Palette - Green Alert (Default)
+  primary-color: '#37a6d1'
+  primary-background-color: '#1e2229'
+  secondary-background-color: '#2f3749'
+  card-background-color: '#2f3749'
+  primary-text-color: '#f9ef97'
+  secondary-text-color: '#d2d5df'
+  disabled-text-color: '#6d748c'
+  divider-color: '#52596e'
+  accent-color: '#ff6753'
+  
+  # LCARS Picard Colors - CSS Variables
+  picard-darkest-orange: '#d91604'
+  picard-dark-orange: '#ef1d10'
+  picard-medium-dark-orange: '#e7442a'
+  picard-orange: '#ff6753'
+  picard-medium-light-orange: '#ff8470'
+  picard-light-orange: '#ff977b'
+  picard-lightest-orange: '#ffb399'
+  
+  picard-darkest-gray: '#1e2229'
+  picard-dark-gray: '#2f3749'
+  picard-medium-dark-gray: '#52596e'
+  picard-gray: '#6d748c'
+  picard-medium-light-gray: '#9ea5ba'
+  picard-light-gray: '#d2d5df'
+  picard-lightest-gray: '#f3f4f7'
+  picard-moonlight: '#dfe1e8'
+  
+  picard-darkest-blue: '#002241'
+  picard-dark-blue: '#1c3c55'
+  picard-medium-dark-blue: '#2a7193'
+  picard-blue: '#37a6d1'
+  picard-medium-light-blue: '#67caf0'
+  picard-light-blue: '#93e1ff'
+  picard-lightest-blue: '#00eeee'
+  
+  picard-darkest-green: '#0c2a15'
+  picard-dark-green: '#083717'
+  picard-medium-dark-green: '#095320'
+  picard-green: '#266239'
+  picard-medium-light-green: '#458359'
+  picard-light-green: '#80bb93'
+  picard-lightest-green: '#b8e0c1'
+  
+  picard-darkest-yellow: '#70602c'
+  picard-dark-yellow: '#ac943b'
+  picard-medium-dark-yellow: '#d2bf50'
+  picard-yellow: '#f9ef97'
+  picard-medium-light-yellow: '#fffac9'
+  picard-light-yellow: '#e7e6de'
+  picard-lightest-yellow: '#f5f5dc'
+  
+  # App Header
+  app-header-background-color: '#1e2229'
+  app-header-text-color: '#f9ef97'
+  app-header-selection-bar-color: '#ff6753'
+  
+  # Sidebar
+  sidebar-background-color: '#1e2229'
+  sidebar-text-color: '#f9ef97'
+  sidebar-selected-text-color: '#ff6753'
+  sidebar-selected-icon-color: '#ff6753'
+  sidebar-icon-color: '#9ea5ba'
+  
+  # States
+  state-icon-color: '#37a6d1'
+  state-icon-active-color: '#ff6753'
+  state-icon-unavailable-color: '#52596e'
+  
+  # Sliders
+  slider-bar-color: '#6d748c'
+  slider-button-color: '#ff6753'
+  slider-accent-color: '#37a6d1'
+  
+  # Switches
+  switch-checked-color: '#ff6753'
+  switch-unchecked-color: '#52596e'
+  switch-track-color: '#2f3749'
+  
+  # Radios
+  radio-selected-color: '#ff6753'
+  
+  # Markdown
+  markdown-code-background-color: '#1e2229'
+  
+  # MDC Theme
+  mdc-theme-primary: '#37a6d1'
+  mdc-theme-secondary: '#ff6753'
+  mdc-theme-background: '#1e2229'
+  mdc-theme-surface: '#2f3749'
+  mdc-theme-on-primary: '#1e2229'
+  mdc-theme-on-secondary: '#1e2229'
+  mdc-theme-on-surface: '#f9ef97'

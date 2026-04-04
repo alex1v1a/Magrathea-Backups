@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-03-03T00:16:18.181Z",
+  "uptime": 24,
+  "checksPerformed": 1,
+  "recoveriesPerformed": 0,
+  "services": [
+    {
+      "id": "gateway",
+      "name": "OpenClaw Gateway",
+      "status": "healthy",
+      "lastHealthy": "2026-03-03T00:16:18.177Z",
+      "consecutiveFailures": 0,
+      "totalFailures": 0,
+      "uptime": 100
+    },
+    {
+      "id": "dashboard",
+      "name": "Dashboard Server",
+      "status": "healthy",
+      "lastHealthy": "2026-03-03T00:16:18.179Z",
+      "consecutiveFailures": 0,
+      "totalFailures": 0,
+      "uptime": 100
+    },
+    {
+      "id": "edge-browser",
+      "name": "Edge Browser",
+      "status": "healthy",
+      "lastHealthy": "2026-03-03T00:16:18.181Z",
+      "consecutiveFailures": 0,
+      "totalFailures": 0,
+      "uptime": 100
+    }
+  ]
+}

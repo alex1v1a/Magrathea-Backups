@@ -1,0 +1,4 @@
+# Tesla Powerwall
+tesla_powerwall:
+  - ip_address: 10.0.1.70
+    password: 000F5F

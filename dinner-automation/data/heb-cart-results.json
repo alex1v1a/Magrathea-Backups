@@ -1,0 +1,183 @@
+{
+  "timestamp": "2026-02-11T15:58:24.489Z",
+  "success": false,
+  "fallbackUsed": true,
+  "fallbackMethod": "chrome_extension",
+  "itemsAdded": 0,
+  "itemsFailed": [
+    {
+      "item": "cod fillets",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "ribeye steak",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "white fish for tacos",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "chicken breast",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "salmon fillets",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "fresh parsley",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "capers",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "mixed vegetables for stir-fry",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "fresh ginger",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "green onions",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "corn tortillas",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "ripe mangos",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "jalapeño",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "fresh cilantro",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "cabbage slaw mix",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "Asian pear",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "kimchi",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "cucumbers",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "cherry tomatoes",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "red onion",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "feta cheese",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "hummus",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "Kalamata olives",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "tzatziki",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "fresh dill",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "fresh thyme",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "lemon",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "white wine",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "oyster sauce",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "cornstarch",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "beef broth",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "sesame seeds",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "chipotle mayo",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "brown sugar",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "tomato puree",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "heavy cream",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "plain yogurt",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "garam masala",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "turmeric",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "cayenne pepper",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "basmati rice",
+      "reason": "Bot detection - use Chrome extension"
+    },
+    {
+      "item": "naan bread",
+      "reason": "Bot detection - use Chrome extension"
+    }
+  ],
+  "errors": [
+    "HEB bot detection blocked automation. Chrome extension fallback generated."
+  ],
+  "shoppingListPath": "C:\\Users\\Admin\\.openclaw\\workspace\\dinner-automation\\data\\heb-shopping-list.txt",
+  "extensionItemsPath": "C:\\Users\\Admin\\.openclaw\\workspace\\dinner-automation\\data\\heb-extension-items.json",
+  "instructions": "Use Chrome extension in heb-extension/ folder"
+}

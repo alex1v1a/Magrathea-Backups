@@ -1,0 +1,394 @@
+{
+  "substitutions": {
+    "chicken": {
+      "category": "poultry",
+      "alternatives": ["turkey", "tofu", "tempeh", "chicken thighs", "rotisserie chicken"],
+      "bestFor": ["stir-fry", "salads", "soups", "curries"],
+      "notes": "Use tofu for vegetarian, turkey for similar flavor"
+    },
+    "chicken breast": {
+      "category": "poultry",
+      "alternatives": ["turkey breast", "chicken thighs", "tofu", "tempeh"],
+      "bestFor": ["grilling", "baking", "stir-fry"],
+      "notes": "Chicken thighs are more flavorful and forgiving"
+    },
+    "chicken thighs": {
+      "category": "poultry",
+      "alternatives": ["chicken breast", "turkey thighs", "drumsticks"],
+      "bestFor": ["braising", "roasting", "curries"],
+      "notes": "Bone-in thighs add more flavor"
+    },
+    "beef": {
+      "category": "red_meat",
+      "alternatives": ["ground turkey", "ground bison", "portobello mushrooms", "lentils", "beyond meat"],
+      "bestFor": ["tacos", "pasta sauce", "meatloaf"],
+      "notes": "Mushrooms provide umami, lentils for vegetarian"
+    },
+    "flank steak": {
+      "category": "red_meat",
+      "alternatives": ["skirt steak", "flat iron steak", "sirloin", "portobello mushrooms"],
+      "bestFor": ["stir-fry", "fajitas", "grilling"],
+      "notes": "Slice against the grain for tenderness"
+    },
+    "ribeye steak": {
+      "category": "red_meat",
+      "alternatives": ["strip steak", "sirloin", "flat iron"],
+      "bestFor": ["grilling", "pan-searing"],
+      "notes": "Well-marbled cuts work best"
+    },
+    "ground beef": {
+      "category": "red_meat",
+      "alternatives": ["ground turkey", "ground chicken", "ground bison", "lentils", "impossible meat"],
+      "bestFor": ["tacos", "burgers", "meatballs", "pasta"],
+      "notes": "Ground turkey is leaner, add oil when cooking"
+    },
+    "pork": {
+      "category": "pork",
+      "alternatives": ["chicken thighs", "turkey breast", "tempeh bacon"],
+      "bestFor": ["roasting", "grilling", "stir-fry"],
+      "notes": "Pork tenderloin is lean like chicken breast"
+    },
+    "pork tenderloin": {
+      "category": "pork",
+      "alternatives": ["chicken breast", "turkey tenderloin", "pork chops"],
+      "bestFor": ["roasting", "grilling"],
+      "notes": "Lean and quick-cooking"
+    },
+    "shrimp": {
+      "category": "seafood",
+      "alternatives": ["scallops", "cod", "tilapia", "chicken", "tofu"],
+      "bestFor": ["tacos", "stir-fry", "pasta", "curries"],
+      "notes": "White fish works well in most shrimp dishes"
+    },
+    "salmon": {
+      "category": "seafood",
+      "alternatives": ["arctic char", "trout", "halibut", "mahi mahi"],
+      "bestFor": ["grilling", "baking", "pan-searing"],
+      "notes": "Arctic char has similar fat content"
+    },
+    "cod": {
+      "category": "seafood",
+      "alternatives": ["tilapia", "halibut", "haddock", "catfish"],
+      "bestFor": ["baking", "frying", "tacos"],
+      "notes": "Mild white fish alternatives"
+    },
+    "onion": {
+      "category": "vegetable",
+      "alternatives": ["shallots", "leeks", "onion powder", "scallions"],
+      "bestFor": ["all cooking methods"],
+      "notes": "Shallots are milder, use 1:1 ratio"
+    },
+    "yellow onion": {
+      "category": "vegetable",
+      "alternatives": ["white onion", "sweet onion", "shallots", "onion powder"],
+      "bestFor": ["cooking", "caramelizing"],
+      "notes": "White onion is sharper, sweet onion is milder"
+    },
+    "red onion": {
+      "category": "vegetable",
+      "alternatives": [ "shallots", "scallions", "chives"],
+      "bestFor": ["raw", "salsas", "salads"],
+      "notes": "Shallots work well raw in salads"
+    },
+    "garlic": {
+      "category": "vegetable",
+      "alternatives": ["garlic powder", "shallots", "garlic scapes", "asafetida"],
+      "bestFor": ["all cooking methods"],
+      "notes": "1 clove = 1/4 tsp garlic powder"
+    },
+    "cilantro": {
+      "category": "herb",
+      "alternatives": ["parsley", "culantro", "Thai basil"],
+      "bestFor": ["salsas", "curries", "garnish"],
+      "notes": "Parsley is best substitute but different flavor"
+    },
+    "ginger": {
+      "category": "spice",
+      "alternatives": ["ground ginger", "galangal", "candied ginger"],
+      "bestFor": ["stir-fry", "curries", "marinades"],
+      "notes": "1 tbsp fresh = 1/4 tsp ground"
+    },
+    "butter": {
+      "category": "dairy",
+      "alternatives": ["olive oil", "coconut oil", "ghee", "vegan butter"],
+      "bestFor": ["cooking", "baking"],
+      "notes": "Use ghee for dairy-free with similar flavor"
+    },
+    "heavy cream": {
+      "category": "dairy",
+      "alternatives": ["coconut cream", "half and half", "evaporated milk", "cashew cream"],
+      "bestFor": ["sauces", "soups", "desserts"],
+      "notes": "Coconut cream is best dairy-free option"
+    },
+    "milk": {
+      "category": "dairy",
+      "alternatives": ["oat milk", "almond milk", "soy milk", "coconut milk"],
+      "bestFor": ["cooking", "baking", "beverages"],
+      "notes": "Oat milk has closest texture to dairy"
+    },
+    "cheese": {
+      "category": "dairy",
+      "alternatives": ["nutritional yeast", "vegan cheese", "cashew cheese"],
+      "bestFor": ["topping", "sauces"],
+      "notes": "Nutritional yeast adds cheesy flavor"
+    },
+    "feta cheese": {
+      "category": "dairy",
+      "alternatives": ["goat cheese", "cotija", "queso fresco", "tofu feta"],
+      "bestFor": ["salads", "Mediterranean dishes"],
+      "notes": "Goat cheese has similar tanginess"
+    },
+    "eggs": {
+      "category": "dairy",
+      "alternatives": ["flax eggs", "chia eggs", "applesauce", "silken tofu", "aquafaba"],
+      "bestFor": ["baking", "binding"],
+      "notes": "1 egg = 1 tbsp flax + 3 tbsp water"
+    },
+    "soy sauce": {
+      "category": "condiment",
+      "alternatives": ["tamari", "coconut aminos", "liquid aminos", "worcestershire sauce"],
+      "bestFor": ["stir-fry", "marinades", "dipping"],
+      "notes": "Coconut aminos is soy-free and lower sodium"
+    },
+    "fish sauce": {
+      "category": "condiment",
+      "alternatives": ["soy sauce", "worcestershire sauce", "miso paste", "coconut aminos"],
+      "bestFor": ["southeast asian dishes", "curries"],
+      "notes": "Use soy sauce + lime juice for similar umami"
+    },
+    "oyster sauce": {
+      "category": "condiment",
+      "alternatives": ["hoisin sauce", "soy sauce + sugar", "vegetarian oyster sauce"],
+      "bestFor": ["stir-fry", "noodles"],
+      "notes": "Hoisin is sweeter, add soy for saltiness"
+    },
+    "sesame oil": {
+      "category": "oil",
+      "alternatives": ["peanut oil", "walnut oil", "toasted sesame seeds"],
+      "bestFor": ["finishing", "stir-fry", "dressings"],
+      "notes": "No perfect substitute for the flavor"
+    },
+    "olive oil": {
+      "category": "oil",
+      "alternatives": ["avocado oil", "grapeseed oil", "vegetable oil", "coconut oil"],
+      "bestFor": ["cooking", "dressings", "finishing"],
+      "notes": "Avocado oil has similar health benefits"
+    },
+    "rice": {
+      "category": "grain",
+      "alternatives": ["quinoa", "cauliflower rice", "barley", "couscous"],
+      "bestFor": ["side dish", "base"],
+      "notes": "Quinoa is high protein, cauliflower rice is low carb"
+    },
+    "basmati rice": {
+      "category": "grain",
+      "alternatives": ["jasmine rice", "long grain rice", "quinoa"],
+      "bestFor": ["indian dishes", "pilafs"],
+      "notes": "Jasmine rice has similar fragrance"
+    },
+    "pasta": {
+      "category": "grain",
+      "alternatives": ["zucchini noodles", "spaghetti squash", "shirataki noodles", "chickpea pasta"],
+      "bestFor": ["pasta dishes"],
+      "notes": "Chickpea pasta is high protein"
+    },
+    "bread": {
+      "category": "grain",
+      "alternatives": ["lettuce wraps", "corn tortillas", "rice cakes", "gluten-free bread"],
+      "bestFor": ["sandwiches", "dipping"],
+      "notes": "Lettuce for low-carb option"
+    },
+    "tortillas": {
+      "category": "grain",
+      "alternatives": ["corn tortillas", "lettuce wraps", "collard greens", "coconut wraps"],
+      "bestFor": ["tacos", "burritos", "wraps"],
+      "notes": "Corn tortillas are traditional and gluten-free"
+    },
+    "corn tortillas": {
+      "category": "grain",
+      "alternatives": ["flour tortillas", "lettuce cups", "tostadas"],
+      "bestFor": ["tacos", "enchiladas"],
+      "notes": "Flour tortillas are softer but not gluten-free"
+    },
+    "tofu": {
+      "category": "protein",
+      "alternatives": ["tempeh", "seitan", "chicken", "paneer", "extra firm tofu"],
+      "bestFor": ["stir-fry", "curries", "scrambles"],
+      "notes": "Press tofu for better texture"
+    },
+    "tempeh": {
+      "category": "protein",
+      "alternatives": ["tofu", "seitan", "mushrooms", "chicken"],
+      "bestFor": ["stir-fry", "bowls", "sandwiches"],
+      "notes": "Steam tempeh to remove bitterness"
+    },
+    "chickpeas": {
+      "category": "legume",
+      "alternatives": ["white beans", "cannellini beans", "lima beans", "edamame"],
+      "bestFor": ["curries", "salads", "hummus"],
+      "notes": "White beans have similar creamy texture"
+    },
+    "black beans": {
+      "category": "legume",
+      "alternatives": ["pinto beans", "kidney beans", "cannellini beans"],
+      "bestFor": ["Mexican dishes", "soups", "rice bowls"],
+      "notes": "Pinto beans are closest substitute"
+    },
+    "lentils": {
+      "category": "legume",
+      "alternatives": ["split peas", "chickpeas", "black beans"],
+      "bestFor": ["soups", "curries", "salads"],
+      "notes": "Red lentils cook fastest"
+    },
+    "peanuts": {
+      "category": "nut",
+      "alternatives": ["cashews", "almonds", "sunflower seeds", "pumpkin seeds"],
+      "bestFor": ["thai dishes", "snacks", "toppings"],
+      "notes": "Cashews are best for similar texture"
+    },
+    "cashews": {
+      "category": "nut",
+      "alternatives": ["almonds", "macadamia nuts", "pine nuts", "sunflower seeds"],
+      "bestFor": ["cream sauces", "stir-fry", "snacks"],
+      "notes": "Soak for creamy sauces"
+    },
+    "almonds": {
+      "category": "nut",
+      "alternatives": ["cashews", "walnuts", "pecans", "sunflower seeds"],
+      "bestFor": ["baking", "milk", "toppings"],
+      "notes": "Walnuts for similar nutrition profile"
+    },
+    "coconut milk": {
+      "category": "dairy_alternative",
+      "alternatives": ["heavy cream", "cashew cream", "oat milk", "evaporated milk"],
+      "bestFor": ["curries", "soups", "desserts"],
+      "notes": "Full-fat coconut milk is richest"
+    },
+    "lime": {
+      "category": "citrus",
+      "alternatives": ["lemon", "lime juice", "rice vinegar"],
+      "bestFor": ["salsas", "marinades", "finishing"],
+      "notes": "Lemon is closest substitute"
+    },
+    "lemon": {
+      "category": "citrus",
+      "alternatives": ["lime", "vinegar", "cream of tartar"],
+      "bestFor": ["finishing", "marinades", "baking"],
+      "notes": "Vinegar for acidity, less bright flavor"
+    },
+    "tomatoes": {
+      "category": "vegetable",
+      "alternatives": ["red bell peppers", "canned tomatoes", "tomato sauce", "sun-dried tomatoes"],
+      "bestFor": ["sauces", "salads", "cooking"],
+      "notes": "Roasted peppers have similar sweetness"
+    },
+    "bell peppers": {
+      "category": "vegetable",
+      "alternatives": ["poblano peppers", "zucchini", "carrots", "celery"],
+      "bestFor": ["stir-fry", "stuffed", "raw"],
+      "notes": "Poblanos are milder and work cooked"
+    },
+    "jalapeno": {
+      "category": "vegetable",
+      "alternatives": ["serrano", "fresno chili", "bell pepper + cayenne"],
+      "bestFor": ["salsas", "pickled", "stuffed"],
+      "notes": "Serrano is spicier, use less"
+    },
+    "spinach": {
+      "category": "vegetable",
+      "alternatives": ["kale", "swiss chard", "arugula", "bok choy"],
+      "bestFor": ["salads", "cooking", "smoothies"],
+      "notes": "Kale holds up better when cooked"
+    },
+    "kale": {
+      "category": "vegetable",
+      "alternatives": ["spinach", "collard greens", "swiss chard", "cabbage"],
+      "bestFor": ["salads", "chips", "soups"],
+      "notes": "Massage kale for raw salads"
+    },
+    "broccoli": {
+      "category": "vegetable",
+      "alternatives": ["cauliflower", "brussels sprouts", "asparagus", "green beans"],
+      "bestFor": ["steaming", "roasting", "stir-fry"],
+      "notes": "Cauliflower has similar cooking properties"
+    },
+    "cauliflower": {
+      "category": "vegetable",
+      "alternatives": ["broccoli", "romanesco", "celeriac", "tofu"],
+      "bestFor": ["roasting", "rice substitute", "mash"],
+      "notes": "Neutral flavor, takes on seasonings well"
+    },
+    "asparagus": {
+      "category": "vegetable",
+      "alternatives": ["green beans", "broccolini", "snap peas"],
+      "bestFor": ["grilling", "roasting", "steaming"],
+      "notes": "Green beans have similar cook time"
+    },
+    "brussels sprouts": {
+      "category": "vegetable",
+      "alternatives": ["cabbage", "broccoli", "asparagus"],
+      "bestFor": ["roasting", "shredded", "sauteed"],
+      "notes": "Cabbage when shredded works similarly"
+    },
+    "zucchini": {
+      "category": "vegetable",
+      "alternatives": ["yellow squash", "eggplant", "cucumber", "celery"],
+      "bestFor": ["noodles", "grilling", "baking"],
+      "notes": "Yellow squash is nearly identical"
+    },
+    "eggplant": {
+      "category": "vegetable",
+      "alternatives": ["zucchini", "portobello mushrooms", "tofu"],
+      "bestFor": ["grilling", "roasting", "curries"],
+      "notes": "Mushrooms have similar meaty texture"
+    },
+    "cabbage": {
+      "category": "vegetable",
+      "alternatives": ["brussels sprouts", "kale", "bok choy", "lettuce"],
+      "bestFor": ["slaw", "stir-fry", "soups"],
+      "notes": "Napa cabbage for Asian dishes"
+    },
+    "avocado": {
+      "category": "vegetable",
+      "alternatives": ["mashed peas", "hummus", "cashew cream", "olive oil"],
+      "bestFor": ["toast", "guacamole", "creaminess"],
+      "notes": "No perfect substitute for the unique texture"
+    },
+    "mushrooms": {
+      "category": "vegetable",
+      "alternatives": ["portobello", "shiitake", "cremini", "eggplant", "tofu"],
+      "bestFor": ["sauteed", "grilled", "soups"],
+      "notes": "Portobello for meaty texture"
+    },
+    "portobello mushrooms": {
+      "category": "vegetable",
+      "alternatives": ["cremini mushrooms", "eggplant", "tofu steaks"],
+      "bestFor": ["grilling", "burgers", "steaks"],
+      "notes": "Eggplant for similar meaty texture"
+    },
+    "sweet potatoes": {
+      "category": "vegetable",
+      "alternatives": ["butternut squash", "pumpkin", "yukon gold potatoes", "carrots"],
+      "bestFor": ["roasting", "fries", "mashed"],
+      "notes": "Butternut squash has similar sweetness"
+    },
+    "potatoes": {
+      "category": "vegetable",
+      "alternatives": ["cauliflower", "turnips", "parsnips", "sweet potatoes"],
+      "bestFor": ["roasting", "mashed", "fries"],
+      "notes": "Cauliflower for low-carb mash"
+    },
+    "carrots": {
+      "category": "vegetable",
+      "alternatives": ["parsnips", "sweet potatoes", "butternut squash", "turnips"],
+      "bestFor": ["roasting", "soups", "raw"],
+      "notes": "Parsnips are similar but sweeter"
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2026-02-07",
+    "totalSubstitutions": 70,
+    "categories": ["poultry", "red_meat", "pork", "seafood", "vegetable", "herb", "spice", "dairy", "oil", "grain", "protein", "legume", "nut", "dairy_alternative", "citrus", "condiment"]
+  }
+}

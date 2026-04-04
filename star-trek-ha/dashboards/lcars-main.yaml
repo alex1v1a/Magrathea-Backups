@@ -1,0 +1,298 @@
+title: LCARS Main Control
+path: lcars-main
+icon: mdi:star-four-points
+badges: []
+cards:
+  # ==========================================
+  # HEADER SECTION - Environmental Controls
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      # Header Bar
+      - type: markdown
+        card_mod:
+          class: header-left
+        content: '# ENVIRONMENTAL CONTROLS'
+
+      # Climate Card
+      - type: thermostat
+        entity: climate.living_room
+        card_mod:
+          class: middle-left
+        features:
+          - type: climate-hvac-modes
+            hvac_modes:
+              - cool
+              - heat
+              - 'off'
+          - type: climate-preset-modes
+
+      # Footer
+      - type: markdown
+        card_mod:
+          class: footer-left
+        content: '## \u00a0'
+
+  # ==========================================
+  # LIGHTING CONTROLS
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      # Header
+      - type: markdown
+        card_mod:
+          class: header-contained
+        content: '# LIGHTING'
+
+      # Light Buttons - Row 1
+      - type: horizontal-stack
+        card_mod:
+          class: middle-contained
+        cards:
+          - type: button
+            entity: light.living_room
+            name: Living Room
+            show_name: true
+            show_icon: true
+            show_state: true
+            tap_action:
+              action: toggle
+            card_mod:
+              class: button-lozenge-left
+
+          - type: button
+            entity: light.kitchen
+            name: Kitchen
+            show_name: true
+            show_icon: true
+            show_state: true
+            tap_action:
+              action: toggle
+            card_mod:
+              class: button-lozenge-right
+
+      # Light Buttons - Row 2
+      - type: horizontal-stack
+        card_mod:
+          class: middle-contained
+        cards:
+          - type: button
+            entity: light.bedroom
+            name: Bedroom
+            show_name: true
+            show_icon: true
+            show_state: true
+            tap_action:
+              action: toggle
+            card_mod:
+              class: button-lozenge-left
+
+          - type: button
+            entity: light.office
+            name: Office
+            show_name: true
+            show_icon: true
+            show_state: true
+            tap_action:
+              action: toggle
+            card_mod:
+              class: button-lozenge-right
+
+      # Footer
+      - type: markdown
+        card_mod:
+          class: footer-contained
+        content: '## \u00a0'
+
+  # ==========================================
+  # SECURITY SECTION
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      # Header
+      - type: markdown
+        card_mod:
+          class: header-right
+        content: '# SECURITY'
+
+      # Door Locks
+      - type: horizontal-stack
+        card_mod:
+          class: middle-right
+        cards:
+          - type: button
+            entity: lock.front_door
+            name: Front Door
+            show_name: true
+            show_icon: true
+            show_state: true
+            tap_action:
+              action: toggle
+            card_mod:
+              class: button-bullet-left
+
+          - type: button
+            entity: lock.back_door
+            name: Back Door
+            show_name: true
+            show_icon: true
+            show_state: true
+            tap_action:
+              action: toggle
+            card_mod:
+              class: button-bullet-right
+
+      # Motion Sensors
+      - type: entities
+        entities:
+          - entity: binary_sensor.front_door_motion
+            name: Front Motion
+          - entity: binary_sensor.back_door_motion
+            name: Back Motion
+          - entity: binary_sensor.living_room_motion
+            name: Living Room Motion
+        card_mod:
+          class: middle-right
+
+      # Footer with Status
+      - type: markdown
+        card_mod:
+          class: footer-right
+        content: '## SYSTEM SECURE'
+
+  # ==========================================
+  # MEDIA CONTROLS (Full Width)
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      # Header
+      - type: markdown
+        card_mod:
+          class: header-left
+        content: '# ENTERTAINMENT SYSTEMS'
+
+      # Media Players
+      - type: horizontal-stack
+        card_mod:
+          class: middle-left
+        cards:
+          - type: media-control
+            entity: media_player.living_room_tv
+            card_mod:
+              class: middle-left
+
+          - type: media-control
+            entity: media_player.bedroom_speaker
+            card_mod:
+              class: middle-right
+
+      # Footer
+      - type: markdown
+        card_mod:
+          class: footer-right
+        content: '## END OF LINE'
+
+  # ==========================================
+  # QUICK ACTIONS BAR
+  # ==========================================
+  - type: horizontal-stack
+    card_mod:
+      class: header-contained
+    cards:
+      - type: button
+        entity: scene.good_morning
+        name: Good Morning
+        icon: mdi:white-balance-sunny
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          target:
+            entity_id: scene.good_morning
+        card_mod:
+          class: button-small
+
+      - type: button
+        entity: scene.good_night
+        name: Good Night
+        icon: mdi:weather-night
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          target:
+            entity_id: scene.good_night
+        card_mod:
+          class: button-small
+
+      - type: button
+        entity: scene.movie_mode
+        name: Movie Mode
+        icon: mdi:movie-open
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          target:
+            entity_id: scene.movie_mode
+        card_mod:
+          class: button-small
+
+      - type: button
+        entity: scene.away_mode
+        name: Away Mode
+        icon: mdi:shield-home
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          target:
+            entity_id: scene.away_mode
+        card_mod:
+          class: button-small
+
+  # ==========================================
+  # LCARS SETTINGS (Bottom of page)
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      - type: heading
+        heading_style: title
+        heading: LCARS SETTINGS
+        icon: mdi:cog
+        badges:
+          - type: entity
+            entity: input_number.lcars_horizontal
+            name: H
+          - type: entity
+            entity: input_number.lcars_vertical
+            name: V
+          - type: entity
+            entity: input_boolean.lcars_texture
+            name: FX
+        card_mod:
+          class: header-contained
+          style: |
+            :host .title { font-size: 2em; }
+
+      - type: entities
+        entities:
+          - entity: input_boolean.lcars_sound
+            name: Sound Effects
+          - entity: input_boolean.lcars_texture
+            name: Texture Effect
+          - entity: input_number.lcars_horizontal
+            name: Horizontal Border
+          - entity: input_number.lcars_vertical
+            name: Vertical Border
+        card_mod:
+          class: middle-contained
+
+      - type: markdown
+        card_mod:
+          class: footer-contained
+        content: '## USS HOME - NCC-1701'

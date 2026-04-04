@@ -1,0 +1,17 @@
+# Wyze Integration Configuration
+# Requires HACS installation first
+
+# Credentials:
+# Email: alex@1v1a.com
+# Password: Standal0ne9
+# 2FA: Will be sent to alex@1v1a.com
+
+# To install:
+# 1. HACS → Integrations → Search "Wyze"
+# 2. Install "Wyze Home Assistant Integration"
+# 3. Restart HA
+# 4. Settings → Devices & Services → Add Integration → Wyze
+# 5. Enter credentials
+
+# Expected devices from UniFi scan:
+# - 13+ Wyze cameras (WYZE_CAKP2JFUS-*)

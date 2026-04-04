@@ -1,0 +1,357 @@
+# ============================================
+# LCARS SCIENCE DASHBOARD
+# Environmental Monitoring, Weather, Sensors
+# ============================================
+
+title: Science
+icon: mdi:flask
+path: science
+panel: false
+background: "#000000"
+
+cards:
+  # ==========================================
+  # TOP HEADER BAR - Science Pink Theme
+  # ==========================================
+  - type: custom:button-card
+    template: lcars_header
+    name: "USS HOME ASSISTANT - SCIENCE LAB"
+    styles:
+      card:
+        - background: "linear-gradient(90deg, #CC6699 0%, #CC6699 15%, #CC99CC 15%, #CC99CC 85%, #CC6699 85%, #CC6699 100%)"
+
+  # ==========================================
+  # MAIN GRID LAYOUT
+  # ==========================================
+  - type: custom:layout-card
+    layout_type: custom:grid-layout
+    layout:
+      grid-template-columns: 250px 1fr 250px
+      grid-template-areas: |
+        "nav main sensors"
+      gap: 15px
+    cards:
+      # ========================================
+      # LEFT NAVIGATION
+      # ========================================
+      - type: vertical-stack
+        view_layout:
+          grid-area: nav
+        cards:
+          - type: custom:button-card
+            template: lcars_side_elbow_left
+            styles:
+              card:
+                - background: "#CC6699"
+                
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Bridge"
+            icon: mdi:view-dashboard
+            styles:
+              card:
+                - border-color: "#CC6699"
+              name:
+                - color: "#CC6699"
+              icon:
+                - color: "#CC6699"
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-bridge
+              
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Engineering"
+            icon: mdi:engine
+            styles:
+              card:
+                - border-color: "#CC6699"
+              name:
+                - color: "#CC6699"
+              icon:
+                - color: "#CC6699"
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-engineering
+              
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Tactical"
+            icon: mdi:shield
+            styles:
+              card:
+                - border-color: "#CC6699"
+              name:
+                - color: "#CC6699"
+              icon:
+                - color: "#CC6699"
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-tactical
+              
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Quarters"
+            icon: mdi:bed
+            styles:
+              card:
+                - border-color: "#CC6699"
+              name:
+                - color: "#CC6699"
+              icon:
+                - color: "#CC6699"
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-quarters
+
+      # ========================================
+      # MAIN CONTENT - Weather & Climate
+      # ========================================
+      - type: vertical-stack
+        view_layout:
+          grid-area: main
+        cards:
+          # Weather Header
+          - type: custom:button-card
+            template: lcars_header
+            name: "PLANETARY CONDITIONS"
+            styles:
+              card:
+                - background: "linear-gradient(90deg, #CC99CC 0%, #CC99CC 15%, #CC6699 15%, #CC6699 85%, #CC99CC 85%, #CC99CC 100%)"
+
+          # Weather Card
+          - type: weather-forecast
+            entity: weather.home
+            show_forecast: true
+            card_mod:
+              style: |
+                ha-card {
+                  background: #000000 !important;
+                  border: 2px solid #CC6699 !important;
+                  border-radius: 0px 20px 0px 20px !important;
+                }
+                .header {
+                  color: #CC6699 !important;
+                  font-family: Antonio, sans-serif !important;
+                  text-transform: uppercase !important;
+                }
+                .content {
+                  color: #CC99CC !important;
+                }
+
+          # Temperature Trend
+          - type: custom:button-card
+            template: lcars_header
+            name: "TEMPERATURE ANALYSIS"
+            styles:
+              card:
+                - background: "linear-gradient(90deg, #CC99CC 0%, #CC99CC 15%, #CC6699 15%, #CC6699 85%, #CC99CC 85%, #CC99CC 100%)"
+
+          - type: history-graph
+            entities:
+              - sensor.temperature_inside
+              - sensor.temperature_outside
+            hours_to_show: 48
+            refresh_interval: 60
+            title: ""
+            card_mod:
+              style: |
+                ha-card {
+                  background: #000000 !important;
+                  border: 2px solid #CC6699 !important;
+                  border-radius: 0px 20px 0px 20px !important;
+                }
+
+          # Sunrise/Sunset
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                template: lcars_data_box
+                entity: sensor.sunrise
+                name: "Sunrise"
+                icon: mdi:weather-sunset-up
+                show_state: true
+                styles:
+                  card:
+                    - background: "#FFCC99"
+                  state:
+                    - color: "#000000"
+                  name:
+                    - color: "#000000"
+                    
+              - type: custom:button-card
+                template: lcars_data_box
+                entity: sensor.sunset
+                name: "Sunset"
+                icon: mdi:weather-sunset-down
+                show_state: true
+                styles:
+                  card:
+                    - background: "#FFCC66"
+                  state:
+                    - color: "#000000"
+                  name:
+                    - color: "#000000"
+                    
+              - type: custom:button-card
+                template: lcars_data_box
+                entity: sensor.moon_phase
+                name: "Lunar Phase"
+                icon: mdi:moon-waning-crescent
+                show_state: true
+                styles:
+                  card:
+                    - background: "#9999CC"
+                  state:
+                    - color: "#000000"
+                  name:
+                    - color: "#000000"
+
+          # Air Quality
+          - type: custom:button-card
+            template: lcars_header
+            name: "ATMOSPHERIC QUALITY"
+            styles:
+              card:
+                - background: "linear-gradient(90deg, #CC99CC 0%, #CC99CC 15%, #CC6699 15%, #CC6699 85%, #CC99CC 85%, #CC99CC 100%)"
+
+          - type: custom:layout-card
+            layout_type: custom:grid-layout
+            layout:
+              grid-template-columns: repeat(3, 1fr)
+              gap: 10px
+            cards:
+              - type: gauge
+                entity: sensor.air_quality_index
+                name: "AQI"
+                min: 0
+                max: 500
+                severity:
+                  green: 0
+                  yellow: 50
+                  red: 100
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: #000000 !important;
+                      border: 2px solid #CC6699 !important;
+                    }
+                    
+              - type: gauge
+                entity: sensor.co2
+                name: "CO2 (ppm)"
+                min: 400
+                max: 2000
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: #000000 !important;
+                      border: 2px solid #CC6699 !important;
+                    }
+                    
+              - type: gauge
+                entity: sensor.voc
+                name: "VOC (ppb)"
+                min: 0
+                max: 1000
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: #000000 !important;
+                      border: 2px solid #CC6699 !important;
+                    }
+
+      # ========================================
+      # RIGHT SIDEBAR - Room Sensors
+      # ========================================
+      - type: vertical-stack
+        view_layout:
+          grid-area: sensors
+        cards:
+          - type: custom:button-card
+            template: lcars_side_elbow_right
+            styles:
+              card:
+                - background: "#CC6699"
+
+          - type: custom:button-card
+            template: lcars_pink_pill
+            name: "Living Room"
+            icon: mdi:home-thermometer
+            show_state: true
+            entity: sensor.living_room_temperature
+            state_display: "{{ states('sensor.living_room_temperature') }}°F"
+
+          - type: custom:button-card
+            template: lcars_pink_pill
+            name: "Bedroom"
+            icon: mdi:home-thermometer
+            show_state: true
+            entity: sensor.bedroom_temperature
+            state_display: "{{ states('sensor.bedroom_temperature') }}°F"
+
+          - type: custom:button-card
+            template: lcars_pink_pill
+            name: "Kitchen"
+            icon: mdi:home-thermometer
+            show_state: true
+            entity: sensor.kitchen_temperature
+            state_display: "{{ states('sensor.kitchen_temperature') }}°F"
+
+          - type: custom:button-card
+            template: lcars_purple_pill
+            name: "Outdoor"
+            icon: mdi:home-thermometer-outline
+            show_state: true
+            entity: sensor.outdoor_temperature
+            state_display: "{{ states('sensor.outdoor_temperature') }}°F"
+
+          - type: custom:button-card
+            template: lcars_data_box
+            entity: sensor.barometric_pressure
+            name: "Pressure"
+            show_state: true
+            state_display: "{{ states('sensor.barometric_pressure') }} inHg"
+            styles:
+              card:
+                - background: "#CC99CC"
+              state:
+                - color: "#000000"
+              name:
+                - color: "#000000"
+
+          - type: custom:button-card
+            template: lcars_data_box
+            entity: sensor.uv_index
+            name: "UV Index"
+            show_state: true
+            styles:
+              card:
+                - background: "#FFCC66"
+              state:
+                - color: "#000000"
+              name:
+                - color: "#000000"
+
+          - type: custom:button-card
+            template: lcars_data_box
+            entity: sensor.precipitation_probability
+            name: "Rain Chance"
+            show_state: true
+            state_display: "{{ states('sensor.precipitation_probability') }}%"
+            styles:
+              card:
+                - background: "#9999CC"
+              state:
+                - color: "#000000"
+              name:
+                - color: "#000000"
+
+  # ==========================================
+  # FOOTER
+  # ==========================================
+  - type: custom:button-card
+    template: lcars_footer
+    styles:
+      card:
+        - background: "linear-gradient(90deg, #CC6699 0%, #CC6699 80%, #000000 80%, #000000 85%, #CC99CC 85%, #CC99CC 100%)"

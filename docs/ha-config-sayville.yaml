@@ -1,0 +1,156 @@
+# ============================================
+# HOME ASSISTANT CONFIGURATION - SAYVILLE
+# Multi-Location HomeKit Setup
+# Location: Sayville, NY (10.1.1.x)
+# ============================================
+
+# Default config (keep existing)
+default_config:
+
+# ============================================
+# FRONTEND - LCARS THEME
+# ============================================
+frontend:
+  themes: !include_dir_merge_named themes
+  extra_module_url:
+    - /local/community/lovelace-card-mod/card-mod.js
+    - /local/community/ha-lcars/lcars.js
+  extra_html_url:
+    - https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap
+
+# ============================================
+# INCLUDES
+# ============================================
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+# ============================================
+# HOME ASSISTANT CORE SETTINGS
+# ============================================
+homeassistant:
+  name: "Sayville Home"
+  latitude: !secret home_latitude_sayville
+  longitude: !secret home_longitude_sayville
+  elevation: 20
+  unit_system: imperial
+  time_zone: America/New_York
+  internal_url: "http://10.1.1.XXX:8123"  # UPDATE WITH ACTUAL IP
+  external_url: !secret external_url_sayville
+  packages: !include_dir_named packages
+  
+  auth_providers:
+    - type: homeassistant
+    - type: trusted_networks
+      trusted_networks:
+        - 10.1.1.0/24
+        - 127.0.0.1
+        - ::1
+
+# ============================================
+# HOMEKIT BRIDGE - SAYVILLE ONLY
+# ============================================
+homekit:
+  - name: "HASS Bridge Sayville"
+    port: 51828
+    ip_address: 10.1.1.XXX  # UPDATE WITH ACTUAL IP
+    
+    filter:
+      include_domains:
+        - light
+        - climate
+        - sensor
+        - binary_sensor
+        - switch
+        - fan
+        - cover
+        - lock
+        - alarm_control_panel
+      
+      exclude_entities:
+        - sensor.date
+        - sensor.time
+        - update.home_assistant_core_update
+      
+      include_entity_globs:
+        - "*.sayville_*"
+    
+    entity_config:
+      light.sayville_front_porch:
+        name: "Front Porch"
+        type: lightbulb
+      
+      light.sayville_backyard:
+        name: "Backyard"
+        type: lightbulb
+      
+      lock.sayville_front_door:
+        name: "Front Door"
+      
+      climate.sayville_thermostat:
+        name: "Thermostat"
+        type: thermostat
+      
+      alarm_control_panel.sayville_alarm:
+        name: "Security System"
+
+# ============================================
+# LCARS INPUT HELPERS
+# ============================================
+input_boolean:
+  lcars_sound:
+    name: LCARS Sound
+    icon: mdi:volume-high
+  
+  lcars_texture:
+    name: LCARS Texture
+    icon: mdi:wallpaper
+  
+  sayville_vacation_mode:
+    name: "Sayville: Vacation Mode"
+    icon: mdi:palm-tree
+
+input_number:
+  lcars_horizontal:
+    name: LCARS Horizontal
+    min: 6
+    max: 60
+    step: 1
+    unit_of_measurement: px
+    icon: mdi:arrow-left-right
+  
+  lcars_vertical:
+    name: LCARS Vertical
+    min: 26
+    max: 60
+    step: 1
+    unit_of_measurement: px
+    icon: mdi:arrow-up-down
+
+input_select:
+  sayville_home_mode:
+    name: "Sayville: Home Mode"
+    options:
+      - Home
+      - Away
+      - Sleep
+      - Vacation
+    initial: Home
+    icon: mdi:home-automation
+
+# ============================================
+# LOGGING
+# ============================================
+logger:
+  default: warning
+  logs:
+    homeassistant.components.homekit: debug
+
+# ============================================
+# RECORDER
+# ============================================
+recorder:
+  purge_keep_days: 30
+  exclude:
+    domains:
+      - updater

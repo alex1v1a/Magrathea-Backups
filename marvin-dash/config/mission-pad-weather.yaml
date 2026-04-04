@@ -1,0 +1,188 @@
+title: Mission Pad
+icon: mdi:star-trek
+path: mission-pad
+type: panel
+theme: LCARS
+cards:
+  - type: vertical-stack
+    cards:
+      # HEADER - LCARS Style
+      - type: horizontal-stack
+        cards:
+          - type: markdown
+            content: |
+              <div style="background: #FF9900; padding: 10px 20px; border-radius: 20px 0 0 20px; font-family: 'Antonio', sans-serif; font-size: 24px; font-weight: bold; color: #000;">
+              MISSION PAD</div>
+          - type: markdown
+            content: |
+              <div style="background: #CC6699; padding: 10px 20px; border-radius: 0 20px 20px 0; font-family: 'Antonio', sans-serif; font-size: 18px; color: #000;">
+              STARDATE {{ now().strftime('%Y.%j') }}</div>
+          - type: markdown
+            content: |
+              <div style="background: #9999CC; padding: 10px 20px; border-radius: 20px; font-family: 'Antonio', sans-serif; font-size: 18px; color: #000;">
+              {{ now().strftime('%H:%M') }}</div>
+
+      # WEATHER OPS - Main Section
+      - type: horizontal-stack
+        cards:
+          # LEFT NAV RAIL
+          - type: vertical-stack
+            cards:
+              - type: button
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/mission-pad
+                name: WEATHER
+                icon: mdi:weather-partly-cloudy
+                styles:
+                  card:
+                    - background: '#FF9900'
+                    - border-radius: '20px 0 0 20px'
+                  name:
+                    - color: '#000'
+                    - font-family: 'Antonio'
+                    - font-weight: bold
+              - type: button
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/devices
+                name: DEVICES
+                icon: mdi:devices
+                styles:
+                  card:
+                    - background: '#CC6699'
+                    - border-radius: '20px 0 0 20px'
+                  name:
+                    - color: '#000'
+                    - font-family: 'Antonio'
+            
+          # CENTER - Weather Focus
+          - type: vertical-stack
+            cards:
+              # Current Conditions - Large
+              - type: weather-forecast
+                entity: weather.home
+                name: CURRENT CONDITIONS
+                show_current: true
+                show_forecast: true
+                style: |
+                  ha-card {
+                    background: #000;
+                    border-left: 20px solid #FF9900;
+                    border-radius: 0 20px 20px 0;
+                  }
+                  .name {
+                    font-family: 'Antonio', sans-serif;
+                    color: #FF9900;
+                  }
+              
+              # Quick Metrics Grid
+              - type: grid
+                columns: 4
+                cards:
+                  - type: sensor
+                    entity: sensor.outdoor_temperature
+                    name: TEMP
+                    icon: mdi:thermometer
+                  - type: sensor
+                    entity: sensor.humidity
+                    name: HUMIDITY
+                    icon: mdi:water-percent
+                  - type: sensor
+                    entity: sensor.wind_speed
+                    name: WIND
+                    icon: mdi:weather-windy
+                  - type: sensor
+                    entity: sensor.uv_index
+                    name: UV
+                    icon: mdi:sun-wireless
+
+              # Hourly Forecast Graph
+              - type: history-graph
+                title: HOURLY FORECAST
+                hours_to_show: 24
+                entities:
+                  - sensor.temperature
+                style: |
+                  ha-card {
+                    background: #000;
+                    border-left: 10px solid #CC6699;
+                  }
+
+              # Daily Forecast
+              - type: weather-forecast
+                entity: weather.home
+                show_current: false
+                show_forecast: true
+                forecast_type: daily
+                style: |
+                  ha-card {
+                    background: #000;
+                    border-left: 10px solid #9999CC;
+                  }
+
+          # RIGHT COLUMN - Alerts & Sensors
+          - type: vertical-stack
+            cards:
+              # Alerts Section
+              - type: conditional
+                conditions:
+                  - entity: binary_sensor.weather_alert
+                    state: 'on'
+                card:
+                  type: markdown
+                  content: |
+                    <div style="background: #FF0000; padding: 15px; border-radius: 10px; color: #FFF; font-family: 'Antonio'; font-weight: bold;">
+                    ⚠️ WEATHER ALERT ACTIVE</div>
+              
+              # Outdoor Sensors
+              - type: entities
+                title: OUTDOOR SENSORS
+                entities:
+                  - sensor.outdoor_temperature
+                  - sensor.rain_gauge
+                  - sensor.wind_gust
+                  - sensor.barometric_pressure
+                  - sensor.pollen_count
+                style: |
+                  ha-card {
+                    background: #000;
+                    border-left: 10px solid #6699CC;
+                  }
+
+              # Sun/Moon
+              - type: entities
+                title: ASTRONOMICAL
+                entities:
+                  - sensor.sunrise
+                  - sensor.sunset
+                  - sensor.moon_phase
+                style: |
+                  ha-card {
+                    background: #000;
+                    border-left: 10px solid #99CC99;
+                  }
+
+      # FOOTER - Quick Actions
+      - type: horizontal-stack
+        cards:
+          - type: button
+            tap_action:
+              action: toggle
+              entity: switch.rain_mode
+            name: RAIN MODE
+            icon: mdi:weather-pouring
+            styles:
+              card:
+                - background: '#9999CC'
+                - border-radius: '20px'
+          - type: button
+            tap_action:
+              action: toggle
+              entity: switch.irrigation
+            name: IRRIGATION
+            icon: mdi:sprinkler
+            styles:
+              card:
+                - background: '#6699CC'
+                - border-radius: '20px'

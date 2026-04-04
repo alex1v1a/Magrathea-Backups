@@ -1,0 +1,129 @@
+{
+  "weekOf": "2026-02-14",
+  "generatedAt": "2026-02-14T21:00:00.000Z",
+  "status": "confirmed",
+  "meals": [
+    {
+      "day": "Sunday",
+      "name": "Pan-Seared Cod with Lemon Butter",
+      "category": "seafood",
+      "prepTime": "20 min",
+      "cost": "$28-32",
+      "ingredients": [
+        "1.5 lbs cod fillets",
+        "4 tbsp unsalted butter",
+        "2 tbsp olive oil",
+        "3 tbsp fresh lemon juice",
+        "2 tbsp fresh parsley, chopped",
+        "2 tbsp capers, drained",
+        "2 cloves garlic, minced",
+        "Salt and pepper to taste"
+      ]
+    },
+    {
+      "day": "Monday", 
+      "name": "Pork Tenderloin with Roasted Vegetables",
+      "category": "american",
+      "prepTime": "45 min",
+      "cost": "$23",
+      "ingredients": [
+        "1.5 lbs pork tenderloin",
+        "1.5 lbs Brussels sprouts",
+        "2 lbs sweet potatoes",
+        "1 jar Dijon mustard",
+        "1 bunch fresh rosemary",
+        "1 bottle balsamic vinegar"
+      ]
+    },
+    {
+      "day": "Tuesday",
+      "name": "Fish Tacos with Mango Salsa",
+      "category": "mexican", 
+      "prepTime": "30 min",
+      "cost": "$26",
+      "ingredients": [
+        "1.5 lbs white fish fillets",
+        "1 pack corn tortillas",
+        "2 ripe mangos",
+        "1 red onion",
+        "2 jalapenos",
+        "1 bag cabbage slaw mix",
+        "1 bottle chipotle mayo"
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "name": "Chicken Tikka Masala",
+      "category": "indian",
+      "prepTime": "45 min", 
+      "cost": "$22",
+      "ingredients": [
+        "2 lbs chicken thighs",
+        "16 oz Greek yogurt",
+        "1 pint heavy cream",
+        "2 lbs Basmati rice",
+        "1 jar Tikka masala sauce",
+        "1 piece fresh ginger"
+      ]
+    },
+    {
+      "day": "Thursday",
+      "name": "Beef Stir-Fry with Vegetables",
+      "category": "asian",
+      "prepTime": "25 min",
+      "cost": "$27", 
+      "ingredients": [
+        "1.5 lbs flank steak",
+        "2 lbs broccoli florets",
+        "3 bell peppers",
+        "1 bottle soy sauce",
+        "1 bottle sesame oil",
+        "1 bunch green onions"
+      ]
+    },
+    {
+      "day": "Friday",
+      "name": "Shrimp Tacos with Cabbage Slaw",
+      "category": "mexican",
+      "prepTime": "20 min",
+      "cost": "$30",
+      "ingredients": [
+        "1.5 lbs large shrimp",
+        "1 pack corn tortillas",
+        "1 head red cabbage",
+        "2 avocados",
+        "3 limes",
+        "1 bunch cilantro",
+        "1 jar chipotle powder"
+      ]
+    },
+    {
+      "day": "Saturday",
+      "name": "Vegetable Curry with Chickpeas",
+      "category": "vegetarian",
+      "prepTime": "35 min",
+      "cost": "$18",
+      "ingredients": [
+        "2 cans chickpeas",
+        "2 cans coconut milk",
+        "10 oz spinach",
+        "1 jar curry paste",
+        "1 pack Naan bread",
+        "1 yellow onion"
+      ]
+    }
+  ],
+  "stockExclusions": [
+    "Olive oil",
+    "Ketchup", 
+    "Milk",
+    "Soy sauce",
+    "Dijon mustard",
+    "Sesame seeds",
+    "Sea salt"
+  ],
+  "totalItems": 42,
+  "estimatedCost": "$174.00",
+  "confirmedBy": "alex@1v1a.com",
+  "confirmedAt": "2026-02-14T21:00:00.000Z"
+}

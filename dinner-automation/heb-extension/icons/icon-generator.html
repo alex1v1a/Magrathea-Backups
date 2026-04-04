@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HEB Auto-Cart Icon Generator</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    canvas { border: 1px solid #ccc; margin: 10px; }
+    .icon-set { display: inline-block; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>HEB Auto-Cart Icon Generator</h1>
+  <p>Right-click each icon and "Save Image As" to the icons folder</p>
+  
+  <div class="icon-set">
+    <canvas id="icon16" width="16" height="16"></canvas>
+    <p>icon16.png</p>
+  </div>
+  
+  <div class="icon-set">
+    <canvas id="icon48" width="48" height="48"></canvas>
+    <p>icon48.png</p>
+  </div>
+  
+  <div class="icon-set">
+    <canvas id="icon128" width="128" height="128"></canvas>
+    <p>icon128.png</p>
+  </div>
+
+  <script>
+    function drawIcon(canvasId, size) {
+      const canvas = document.getElementById(canvasId);
+      const ctx = canvas.getContext('2d');
+      
+      // Background (HEB red)
+      ctx.fillStyle = '#dc2626';
+      ctx.fillRect(0, 0, size, size);
+      
+      // Rounded corners
+      ctx.globalCompositeOperation = 'destination-in';
+      ctx.beginPath();
+      ctx.roundRect(0, 0, size, size, size * 0.15);
+      ctx.fill();
+      ctx.globalCompositeOperation = 'source-over';
+      
+      // Shopping cart icon
+      ctx.fillStyle = 'white';
+      ctx.strokeStyle = 'white';
+      ctx.lineWidth = size * 0.08;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      
+      // Cart body
+      const scale = size / 128;
+      ctx.beginPath();
+      ctx.moveTo(25 * scale, 30 * scale);
+      ctx.lineTo(35 * scale, 85 * scale);
+      ctx.lineTo(95 * scale, 85 * scale);
+      ctx.lineTo(105 * scale, 35 * scale);
+      ctx.stroke();
+      
+      // Cart handle
+      ctx.beginPath();
+      ctx.moveTo(25 * scale, 30 * scale);
+      ctx.lineTo(15 * scale, 25 * scale);
+      ctx.stroke();
+      
+      // Cart wheels
+      ctx.fillStyle = 'white';
+      ctx.beginPath();
+      ctx.arc(45 * scale, 95 * scale, 8 * scale, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(85 * scale, 95 * scale, 8 * scale, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // Plus sign (indicating auto-add)
+      ctx.fillStyle = '#22c55e'; // Green
+      const plusX = 95 * scale;
+      const plusY = 25 * scale;
+      const plusSize = 20 * scale;
+      
+      ctx.beginPath();
+      ctx.arc(plusX, plusY, plusSize, 0, Math.PI * 2);
+      ctx.fill();
+      
+      ctx.fillStyle = 'white';
+      ctx.fillRect(plusX - 3 * scale, plusY - 8 * scale, 6 * scale, 16 * scale);
+      ctx.fillRect(plusX - 8 * scale, plusY - 3 * scale, 16 * scale, 6 * scale);
+    }
+    
+    drawIcon('icon16', 16);
+    drawIcon('icon48', 48);
+    drawIcon('icon128', 128);
+  </script>
+</body>
+</html>

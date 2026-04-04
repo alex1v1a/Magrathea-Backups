@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HEB Extension Test</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .box {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h1 { color: #dc2626; }
+    h2 { color: #333; margin-top: 0; }
+    .step {
+      margin: 15px 0;
+      padding: 15px;
+      background: #f9fafb;
+      border-radius: 6px;
+      border-left: 4px solid #dc2626;
+    }
+    .step h3 { margin-top: 0; color: #dc2626; }
+    code {
+      background: #e5e7eb;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+    .test-items {
+      background: #f3f4f6;
+      padding: 15px;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 12px;
+      overflow-x: auto;
+    }
+    button {
+      background: #dc2626;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover { background: #b91c1c; }
+    .success { color: #16a34a; }
+    .error { color: #dc2626; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>🛒 HEB Auto-Cart v2.0 - Test Guide</h1>
+    <p>The extension has been completely rebuilt with item-by-item verification!</p>
+  </div>
+
+  <div class="box">
+    <h2>Setup Steps</h2>
+    
+    <div class="step">
+      <h3>Step 1: Reload Extension</h3>
+      <ol>
+        <li>Go to <code>chrome://extensions/</code></li>
+        <li>Find "HEB Auto-Cart"</li>
+        <li>Click the 🔄 reload icon</li>
+      </ol>
+    </div>
+    
+    <div class="step">
+      <h3>Step 2: Sign In to HEB</h3>
+      <ol>
+        <li>Go to <a href="https://www.heb.com" target="_blank">heb.com</a></li>
+        <li>Click "Sign In" in top right</li>
+        <li>Enter your HEB credentials</li>
+        <li>Verify you see your name in the top right corner</li>
+      </ol>
+    </div>
+    
+    <div class="step">
+      <h3>Step 3: Test with Sample Items</h3>
+      <p>Copy this test data:</p>
+      <div class="test-items">
+{
+  "items": [
+    {"name": "Milk", "searchTerm": "whole milk", "amount": "1 gallon"},
+    {"name": "Eggs", "searchTerm": "large eggs", "amount": "1 dozen"},
+    {"name": "Bread", "searchTerm": "white bread", "amount": "1 loaf"}
+  ]
+}</n      </div>
+      <button onclick="copyTestData()">Copy Test Data</button>
+    </div>
+    
+    <div class="step">
+      <h3>Step 4: Run Extension</h3>
+      <ol>
+        <li>Click the 🛒 HEB Auto-Cart icon in Chrome toolbar</li>
+        <li>Paste the test data in the text box</li>
+        <li>Click "Load Items"</li>
+        <li>Click "Start Adding Items"</li>
+        <li>Watch the console (F12 → Console) for detailed logs</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="box">
+    <h2>What to Expect</h2>
+    <ul>
+      <li>✅ Green outline on buttons when clicked</li>
+      <li>✅ Console shows each step: "Searching...", "Clicking Add to Cart...", "Verified!"</li>
+      <li>✅ Progress bar updates as items are added</li>
+      <li>✅ Cart count increases as items are added</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Troubleshooting</h2>
+    
+    <h3>If nothing happens:</h3>
+    <ol>
+      <li>Press <code>F12</code> → Click <code>Console</code> tab</li>
+      <li>Look for red error messages</li>
+      <li>Check if you're logged in to HEB</li>
+    </ol>
+    
+    <h3>If items search but don't add:</h3>
+    <ol>
+      <li>Check console for "Add to Cart button" messages</li>
+      <li>Look for green outlines on buttons (means click happened)</li>
+      <li>Verify you're on the search results page</li>
+    </ol>
+    
+    <h3>To debug in console:</h3>
+    <p>Paste this and press Enter:</p>
+    <div class="test-items">
+(function check() {
+  const real = document.querySelectorAll('button[data-testid*="add-to-cart"]:not([data-testid*="logged-out"])');
+  console.log('Real buttons found:', real.length);
+  if (real.length > 0) {
+    console.log('✅ You are logged in!');
+    real[0].style.outline = '5px solid lime';
+  } else {
+    console.log('❌ Not logged in or no buttons found');
+  }
+})()
+    </div>
+  </div>
+
+  <script>
+    function copyTestData() {
+      const data = `{
+  "items": [
+    {"name": "Milk", "searchTerm": "whole milk", "amount": "1 gallon"},
+    {"name": "Eggs", "searchTerm": "large eggs", "amount": "1 dozen"},
+    {"name": "Bread", "searchTerm": "white bread", "amount": "1 loaf"}
+  ]
+}`;
+      navigator.clipboard.writeText(data).then(() => {
+        alert('Test data copied! Paste it in the extension popup.');
+      });
+    }
+  </script>
+</body>
+</html>

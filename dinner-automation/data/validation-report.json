@@ -1,0 +1,180 @@
+{
+  "timestamp": "2026-02-08T02:36:35.812Z",
+  "duration": 3358,
+  "results": {
+    "steps": [
+      {
+        "step": "STEP 1",
+        "message": "Generating fresh weekly meal plan...",
+        "data": null,
+        "timestamp": "2026-02-08T02:36:32.457Z"
+      },
+      {
+        "step": "STEP 1",
+        "message": "Cleared meal history",
+        "data": null,
+        "timestamp": "2026-02-08T02:36:32.458Z"
+      },
+      {
+        "step": "STEP 1",
+        "message": "Loaded 12 meal templates",
+        "data": null,
+        "timestamp": "2026-02-08T02:36:32.458Z"
+      },
+      {
+        "step": "STEP 1",
+        "message": "✅ Meal plan generated successfully",
+        "data": {
+          "weekOf": "2026-02-08",
+          "mealCount": 7,
+          "totalCost": 201.3
+        },
+        "timestamp": "2026-02-08T02:36:32.459Z"
+      },
+      {
+        "step": "STEP 2",
+        "message": "Creating calendar events and ICS file...",
+        "data": null,
+        "timestamp": "2026-02-08T02:36:32.459Z"
+      },
+      {
+        "step": "STEP 2",
+        "message": "✅ Calendar sync completed",
+        "data": {
+          "eventsCreated": 7,
+          "icsFile": "C:\\Users\\Admin\\.openclaw\\workspace\\dinner-automation\\data\\dinner-plan.ics",
+          "duration": 3
+        },
+        "timestamp": "2026-02-08T02:36:32.464Z"
+      },
+      {
+        "step": "STEP 2",
+        "message": "✅ ICS file verified",
+        "data": {
+          "path": "C:\\Users\\Admin\\.openclaw\\workspace\\dinner-automation\\data\\dinner-plan.ics",
+          "size": 4286,
+          "exists": true
+        },
+        "timestamp": "2026-02-08T02:36:32.465Z"
+      },
+      {
+        "step": "STEP 3",
+        "message": "Sending email to alex@1v1a.com...",
+        "data": null,
+        "timestamp": "2026-02-08T02:36:32.465Z"
+      },
+      {
+        "step": "STEP 3",
+        "message": "✅ Email sent successfully",
+        "data": {
+          "messageId": "<8d7c1a2a-13fb-f5a0-b105-78e9a2c52e5a@icloud.com>",
+          "recipients": [
+            "alex@1v1a.com",
+            "sferrazzaa96@gmail.com"
+          ],
+          "duration": 2205
+        },
+        "timestamp": "2026-02-08T02:36:34.832Z"
+      },
+      {
+        "step": "STEP 4",
+        "message": "Verifying email delivery via IMAP...",
+        "data": null,
+        "timestamp": "2026-02-08T02:36:34.833Z"
+      },
+      {
+        "step": "STEP 4",
+        "message": "Connected to IMAP server",
+        "data": null,
+        "timestamp": "2026-02-08T02:36:35.539Z"
+      },
+      {
+        "step": "STEP 5",
+        "message": "Verifying all components integration...",
+        "data": null,
+        "timestamp": "2026-02-08T02:36:35.811Z"
+      },
+      {
+        "step": "STEP 5",
+        "message": "Meal plan: ✅ (7 meals)",
+        "data": null,
+        "timestamp": "2026-02-08T02:36:35.811Z"
+      },
+      {
+        "step": "STEP 5",
+        "message": "Calendar events: ✅ (7 events)",
+        "data": null,
+        "timestamp": "2026-02-08T02:36:35.811Z"
+      },
+      {
+        "step": "STEP 5",
+        "message": "ICS file: ✅",
+        "data": null,
+        "timestamp": "2026-02-08T02:36:35.811Z"
+      },
+      {
+        "step": "STEP 5",
+        "message": "Email sent record: ✅",
+        "data": null,
+        "timestamp": "2026-02-08T02:36:35.811Z"
+      },
+      {
+        "step": "STEP 5",
+        "message": "Data consistency: ✅",
+        "data": {
+          "planMeals": [
+            "Beef Stir-Fry with Vegetables",
+            "Chicken Tikka Masala",
+            "Fish Tacos with Mango Salsa",
+            "Grilled Salmon with Asparagus",
+            "Korean Beef Bulgogi Bowl",
+            "Mediterranean Chicken Bowl",
+            "Pan-Seared Cod with Lemon Butter"
+          ],
+          "calendarEvents": [
+            "Beef Stir-Fry with Vegetables",
+            "Chicken Tikka Masala",
+            "Fish Tacos with Mango Salsa",
+            "Grilled Salmon with Asparagus",
+            "Korean Beef Bulgogi Bowl",
+            "Mediterranean Chicken Bowl",
+            "Pan-Seared Cod with Lemon Butter"
+          ]
+        },
+        "timestamp": "2026-02-08T02:36:35.812Z"
+      },
+      {
+        "step": "STEP 5",
+        "message": "✅ All integration checks passed!",
+        "data": {
+          "mealPlan": true,
+          "calendar": true,
+          "icsFile": true,
+          "emailSent": true,
+          "dataConsistency": true
+        },
+        "timestamp": "2026-02-08T02:36:35.812Z"
+      }
+    ],
+    "errors": [
+      {
+        "step": "STEP 4",
+        "message": "IMAP verification failed",
+        "error": "Command failed",
+        "stack": "Error: Command failed\n    at ImapFlow.reader (C:\\Users\\Admin\\.openclaw\\workspace\\dinner-automation\\node_modules\\imapflow\\lib\\imap-flow.js:681:35)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"
+      }
+    ],
+    "startTime": 1770518192454
+  },
+  "integration": {
+    "checks": {
+      "mealPlan": true,
+      "calendar": true,
+      "icsFile": true,
+      "emailSent": true,
+      "dataConsistency": true
+    },
+    "allPassed": true
+  },
+  "status": "PARTIAL"
+}

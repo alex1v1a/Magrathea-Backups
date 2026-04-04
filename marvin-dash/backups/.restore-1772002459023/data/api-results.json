@@ -1,0 +1,168 @@
+{
+  "timestamp": "2026-02-03T08:10:24.160Z",
+  "apis": {
+    "openai": {
+      "provider": "OpenAI",
+      "apiUsed": "OpenAI Usage API (v1/dashboard/billing/usage)",
+      "timestamp": "2026-02-03T08:10:24.161Z",
+      "data": null,
+      "error": "API returned status 403: {\"message\":\"This endpoint is only available through a browser.\",\"type\":\"invalid_request_error\",\"param\":null,\"code\":\"invalid_request\"}"
+    },
+    "openaiBilling": {
+      "provider": "OpenAI",
+      "apiUsed": "OpenAI Billing Subscription API",
+      "timestamp": "2026-02-03T08:10:24.179Z",
+      "data": null,
+      "error": "API returned status 403: {\"message\":\"This endpoint is only available through a browser.\",\"type\":\"invalid_request_error\",\"param\":null,\"code\":\"invalid_request\"}"
+    },
+    "openaiUser": {
+      "data": {
+        "id": "user-zoXvIzSB98hEuRpMOMRBkbtA",
+        "object": "user",
+        "created": 1731459026,
+        "amr": [],
+        "email": "alex@1v1a.com",
+        "email_domain_type": "unknown",
+        "has_payg_project_spend_limit": true,
+        "mfa_flag_enabled": true,
+        "name": "Alexander Sferrazza",
+        "orgs": {
+          "object": "list",
+          "data": [
+            {
+              "id": "org-nLddz7UW8oPHlOq5A7yromo5",
+              "object": "organization",
+              "created": 1731459026,
+              "description": "Personal org for alex@1v1a.com",
+              "is_default": true,
+              "is_scale_tier_authorized_purchaser": false,
+              "is_scim_managed": false,
+              "name": "user-zoxvizsb98heurpmomrbkbta",
+              "parent_org_id": null,
+              "personal": true,
+              "projects": {
+                "object": "list",
+                "data": []
+              },
+              "role": "owner",
+              "settings": {
+                "completed_platform_onboarding": false,
+                "disable_user_api_keys": false,
+                "threads_ui_visibility": "NONE",
+                "usage_dashboard_visibility": "ANY_ROLE"
+              },
+              "title": "Personal"
+            }
+          ]
+        },
+        "phone_number": null,
+        "picture": null,
+        "tenants": []
+      }
+    },
+    "openrouter": {
+      "provider": "OpenRouter",
+      "apiUsed": "OpenRouter Credits API",
+      "timestamp": "2026-02-03T08:10:24.181Z",
+      "data": {
+        "data": {
+          "total_credits": 40,
+          "total_usage": 30.6173574
+        }
+      },
+      "error": null
+    },
+    "minimax": {
+      "provider": "MiniMax",
+      "apiUsed": "MiniMax API (balance check)",
+      "timestamp": "2026-02-03T08:10:24.182Z",
+      "data": null,
+      "error": "API returned status 404: \"404 page not found\""
+    },
+    "kimi": {
+      "provider": "Kimi (Moonshot)",
+      "apiUsed": "Kimi API",
+      "timestamp": "2026-02-03T08:10:24.183Z",
+      "data": null,
+      "error": "API returned status 401 - API key may not be configured"
+    },
+    "anthropic": {
+      "provider": "Anthropic",
+      "apiUsed": "Anthropic Admin API (cost_report)",
+      "timestamp": "2026-02-03T08:10:24.183Z",
+      "data": null,
+      "error": "Admin API key required - regular API key has insufficient permissions",
+      "note": "Generate an Admin API key from Anthropic Console > Settings > Admin API Keys",
+      "status": "admin_key_required"
+    }
+  },
+  "spending": {
+    "openai": {
+      "daily": 0,
+      "monthly": 0,
+      "source": "API",
+      "note": ""
+    },
+    "openrouter": {
+      "daily": 0,
+      "monthly": 30.6173574,
+      "source": "OpenRouter /credits API",
+      "note": "",
+      "credits": {
+        "total": 40,
+        "used": 30.6173574,
+        "remaining": 9.3826426,
+        "currency": "USD"
+      }
+    },
+    "minimax": {
+      "daily": 0,
+      "monthly": 0,
+      "source": "MiniMax Dashboard (manual)",
+      "note": "Usage data not available via API - check MiniMax dashboard"
+    },
+    "kimicoding": {
+      "daily": 0,
+      "monthly": 0,
+      "source": "Kimi Dashboard (manual)",
+      "note": "API key not exposed - check provider dashboard"
+    },
+    "anthropic": {
+      "daily": 0,
+      "monthly": 0.9754795055589289,
+      "source": "model-usage.json (estimated from token usage)",
+      "note": "Admin API key required - regular API key has insufficient permissions"
+    }
+  },
+  "rateLimits": {
+    "models": {
+      "openai-codex/gpt-5.2": {
+        "provider": "OpenAI",
+        "tier": "free",
+        "rateLimit": "60 RPM",
+        "tpm": "150,000 TPM",
+        "source": "OpenAI /me API (tier-based)"
+      },
+      "openrouter/auto": {
+        "provider": "OpenRouter",
+        "rateLimit": "Unlimited (per-model limits apply)",
+        "source": "OpenRouter documentation"
+      },
+      "minimax/abab6.5s-chat": {
+        "provider": "MiniMax",
+        "rateLimit": "Unknown",
+        "source": "Authentication check only - limits not exposed"
+      },
+      "kimi-coding/k2p5": {
+        "provider": "Kimi",
+        "rateLimit": "Unknown",
+        "source": "API key not available for direct query"
+      },
+      "anthropic/claude-opus-4-5": {
+        "provider": "Anthropic",
+        "rateLimit": "Unknown",
+        "source": "OAuth mode - limits not available via API"
+      }
+    }
+  }
+}

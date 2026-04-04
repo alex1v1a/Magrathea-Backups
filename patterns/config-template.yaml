@@ -1,0 +1,54 @@
+# OpenClaw Sub-Agent Configuration Template
+# Copy this to your OpenClaw config file and customize
+
+agents:
+  defaults:
+    # Main agent model
+    model: "openai-codex/gpt-5.2"
+    
+    # Sub-agent defaults
+    subagents:
+      # Cost-effective model for most parallel work
+      model: "kimi-coding/k2p5"
+      
+      # Reduce thinking level for sub-agents (saves tokens)
+      thinking: "low"
+      
+      # Maximum concurrent sub-agents (default: 8)
+      maxConcurrent: 8
+      
+      # Auto-archive after 60 minutes
+      archiveAfterMinutes: 60
+
+# Tool restrictions for sub-agents
+tools:
+  subagents:
+    tools:
+      # Prevent sub-agents from accessing sensitive tools
+      deny:
+        - "gateway"      # Can't manage gateway
+        - "cron"         # Can't schedule jobs  
+        - "sessions_spawn"  # Can't spawn nested sub-agents
+        # - "message"    # Uncomment to prevent external messages
+        # - "browser"    # Uncomment to prevent browser automation
+
+# Custom agent definitions (if using specialized agents)
+agents:
+  list:
+    - id: "researcher"
+      name: "Research Assistant"
+      subagents:
+        model: "kimi-coding/k2p5"
+        thinking: "low"
+        
+    - id: "coder"
+      name: "Code Assistant"
+      subagents:
+        model: "kimi-coding/k2p5"
+        thinking: "medium"
+        
+    - id: "writer"
+      name: "Content Writer"
+      subagents:
+        model: "openai-codex/gpt-5.2"
+        thinking: "medium"

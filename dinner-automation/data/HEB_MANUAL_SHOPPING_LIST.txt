@@ -1,0 +1,46 @@
+
+================================================================================
+HEB CART - MANUAL ADDITION REQUIRED
+================================================================================
+
+STATUS: 27/31 items in cart (87% complete)
+
+The following 3 items MUST be added manually (automation blocked by HEB):
+
+
+1. Catfish fillet
+   Search HEB.com for: "catfish fillet"
+   (Substitute for: White fish fillets)
+   Amount: 1.5 lbs
+
+
+2. Bosc pear
+   Search HEB.com for: "bosc pear"
+   (Substitute for: Asian pear)
+   Amount: 1
+
+
+3. Sriracha hot sauce
+   Search HEB.com for: "sriracha"
+   (Substitute for: Gochujang)
+   Amount: 1 container
+
+
+OPTIONAL (can skip):
+• Sesame seeds - Garnish only, not critical
+
+INSTRUCTIONS:
+1. Go to https://www.heb.com
+2. Search each item above
+3. Click "Add to Cart" for each
+4. Takes approximately 30 seconds total
+
+After adding these 3 items, your cart will have:
+✅ 30/31 items (97% complete)
+✅ All meal plans can be made
+✅ Ready for checkout
+
+================================================================================
+Generated: 2/8/2026, 9:42:08 PM
+Automation Status: BLOCKED BY HEB BOT DETECTION
+================================================================================

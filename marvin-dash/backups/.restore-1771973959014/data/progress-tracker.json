@@ -1,0 +1,476 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-02-24T22:59:01.970Z",
+  "activeTasks": [
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "in-progress",
+      "percentComplete": 50,
+      "currentStep": "Running backup if needed...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-02-24T22:59:01.790Z",
+      "lastUpdated": "2026-02-24T22:59:01.970Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-02-24T22:59:01.814Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-02-24T22:59:01.832Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-02-24T22:59:01.868Z",
+          "message": "OpenClaw Gateway needs recovery: port-conflict",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-02-24T22:59:01.869Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-02-24T22:59:01.970Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ]
+    }
+  ],
+  "completedTasks": [
+    {
+      "id": "calendar-sync",
+      "name": "Apple Calendar Sync",
+      "description": "Two-way sync between iCloud CalDAV and Marvin's Dashboard",
+      "category": "sync",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Notified dashboard",
+      "steps": [
+        "Connect to iCloud",
+        "Fetch calendars",
+        "Download events",
+        "Push local events",
+        "Save merged events",
+        "Notify dashboard"
+      ],
+      "currentStepIndex": 5,
+      "startedAt": "2026-02-24T22:17:34.381Z",
+      "lastUpdated": "2026-02-24T22:17:36.391Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [],
+      "completedAt": "2026-02-24T22:17:36.391Z",
+      "result": {
+        "totalEvents": 17,
+        "pushedToIcloud": true,
+        "notified": true
+      },
+      "duration": 2010
+    },
+    {
+      "id": "calendar-sync",
+      "name": "Apple Calendar Sync",
+      "description": "Two-way sync between iCloud CalDAV and Marvin's Dashboard",
+      "category": "sync",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Notified dashboard",
+      "steps": [
+        "Connect to iCloud",
+        "Fetch calendars",
+        "Download events",
+        "Push local events",
+        "Save merged events",
+        "Notify dashboard"
+      ],
+      "currentStepIndex": 5,
+      "startedAt": "2026-02-24T21:16:17.117Z",
+      "lastUpdated": "2026-02-24T21:16:19.120Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [],
+      "completedAt": "2026-02-24T21:16:19.120Z",
+      "result": {
+        "totalEvents": 17,
+        "pushedToIcloud": true,
+        "notified": true
+      },
+      "duration": 2003
+    },
+    {
+      "id": "calendar-sync",
+      "name": "Apple Calendar Sync",
+      "description": "Two-way sync between iCloud CalDAV and Marvin's Dashboard",
+      "category": "sync",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Notified dashboard",
+      "steps": [
+        "Connect to iCloud",
+        "Fetch calendars",
+        "Download events",
+        "Push local events",
+        "Save merged events",
+        "Notify dashboard"
+      ],
+      "currentStepIndex": 5,
+      "startedAt": "2026-02-24T20:15:01.307Z",
+      "lastUpdated": "2026-02-24T20:15:03.394Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [],
+      "completedAt": "2026-02-24T20:15:03.394Z",
+      "result": {
+        "totalEvents": 17,
+        "pushedToIcloud": true,
+        "notified": true
+      },
+      "duration": 2087
+    },
+    {
+      "id": "calendar-sync",
+      "name": "Apple Calendar Sync",
+      "description": "Two-way sync between iCloud CalDAV and Marvin's Dashboard",
+      "category": "sync",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Notified dashboard",
+      "steps": [
+        "Connect to iCloud",
+        "Fetch calendars",
+        "Download events",
+        "Push local events",
+        "Save merged events",
+        "Notify dashboard"
+      ],
+      "currentStepIndex": 5,
+      "startedAt": "2026-02-24T19:15:00.722Z",
+      "lastUpdated": "2026-02-24T19:15:02.608Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [],
+      "completedAt": "2026-02-24T19:15:02.608Z",
+      "result": {
+        "totalEvents": 17,
+        "pushedToIcloud": true,
+        "notified": true
+      },
+      "duration": 1886
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-02-24T19:13:21.471Z",
+      "lastUpdated": "2026-02-24T19:14:24.517Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-02-24T19:13:21.498Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-02-24T19:13:21.518Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-02-24T19:13:21.706Z",
+          "message": "OpenClaw Gateway needs recovery: port-conflict",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-02-24T19:13:21.707Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-02-24T19:13:21.822Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-02-24T19:14:24.517Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 0
+      },
+      "duration": 63046
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-02-24T18:34:11.186Z",
+      "lastUpdated": "2026-02-24T18:51:24.242Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-02-24T18:34:11.383Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-02-24T18:34:11.410Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-02-24T18:34:18.669Z",
+          "message": "OpenClaw Gateway needs recovery: port-conflict",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-02-24T18:34:18.670Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-02-24T18:34:28.710Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-02-24T18:51:24.242Z",
+      "result": {
+        "healthyCount": 1,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 0
+      },
+      "duration": 1033056
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-02-24T18:15:04.636Z",
+      "lastUpdated": "2026-02-24T18:31:37.846Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-02-24T18:15:07.066Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-02-24T18:15:08.877Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-02-24T18:15:14.930Z",
+          "message": "OpenClaw Gateway needs recovery: port-conflict",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-02-24T18:15:14.931Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-02-24T18:15:24.960Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-02-24T18:31:37.846Z",
+      "result": {
+        "healthyCount": 1,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 0
+      },
+      "duration": 993210
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-02-24T17:54:27.447Z",
+      "lastUpdated": "2026-02-24T18:10:04.015Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-02-24T17:54:27.684Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-02-24T17:54:27.702Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-02-24T17:54:37.620Z",
+          "message": "OpenClaw Gateway needs recovery: port-conflict",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-02-24T17:54:37.621Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-02-24T17:54:47.648Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-02-24T18:10:04.015Z",
+      "result": {
+        "healthyCount": 1,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 0
+      },
+      "duration": 936568
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-02-24T17:34:51.191Z",
+      "lastUpdated": "2026-02-24T17:49:05.227Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-02-24T17:34:51.302Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-02-24T17:34:51.320Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-02-24T17:34:59.008Z",
+          "message": "OpenClaw Gateway needs recovery: port-conflict",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-02-24T17:34:59.009Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-02-24T17:35:10.169Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-02-24T17:49:05.227Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 0
+      },
+      "duration": 854036
+    }
+  ],
+  "taskDefinitions": {},
+  "stats": {
+    "totalTasksCompleted": 9,
+    "totalTasksFailed": 0,
+    "averageCompletionTime": 431989,
+    "last24Hours": {
+      "completed": 9,
+      "failed": 0
+    }
+  }
+}

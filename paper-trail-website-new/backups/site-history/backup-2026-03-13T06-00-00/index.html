@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+    ============================================================================
+    PAPER TRAIL LIMITED - COMPANY WEBSITE
+    ============================================================================
+    Domain: typewrite.club (Primary)
+    Secondary: reelreviews.club (Redirects to /apps/reel-reviews/)
+    
+    Company: Paper Trail Limited
+    Location: New Zealand
+    Business: Mobile App Development
+    
+    STRUCTURE:
+    - Home Page (this file): Company overview, mission, app portfolio
+    - Reel Reviews: First app - "Google Maps but only negative reviews"
+    - Coming Soon: Second app teaser (Instacart-like with twist)
+    
+    TECH STACK:
+    - Pure HTML5, CSS3, Vanilla JavaScript
+    - No build process required
+    - Azure Static Web Apps compatible
+    - Mobile-first responsive design
+    ============================================================================
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Paper Trail Limited - New Zealand based app development company. Creators of Reel Reviews and more innovative mobile applications.">
+    <meta name="keywords" content="Paper Trail, app development, New Zealand, Reel Reviews, mobile apps">
+    <meta name="author" content="Paper Trail Limited">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Paper Trail Limited - App Development Studio">
+    <meta property="og:description" content="New Zealand based app development company creating innovative mobile experiences.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://typewrite.club">
+    <meta property="og:image" content="https://typewrite.club/assets/typewriter.png">
+    
+    <title>Paper Trail Limited | App Development Studio</title>
+    
+    <!-- Preload critical assets for performance -->
+    <link rel="preload" href="assets/typewriter.png" as="image">
+    <link rel="preload" href="css/main.css" as="style">
+    
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Favicon - using emoji as fallback, replace with actual favicon.ico when available -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
+</head>
+<body>
+    <!-- 
+    ============================================================================
+    NAVIGATION
+    ============================================================================
+    Sticky header that remains visible during scroll
+    Contains logo, company name, and navigation links
+    Mobile-responsive with hamburger menu
+    ============================================================================
+    -->
+    <header class="site-header" role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Main navigation">
+            <!-- Logo / Brand -->
+            <a href="/" class="brand" aria-label="Paper Trail Limited Home">
+                <span class="brand-icon">📝</span>
+                <span class="brand-text">Paper Trail</span>
+            </a>
+            
+            <!-- Mobile menu toggle button (hidden on desktop) -->
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <!-- Navigation links -->
+            <ul id="nav-menu" class="nav-links" role="menubar">
+                <li role="none"><a href="/" class="nav-link active" role="menuitem" aria-current="page">Home</a></li>
+                <li role="none"><a href="blog/" class="nav-link" role="menuitem">The Paper Trail</a></li>
+                <li role="none"><a href="apps/reel-reviews/" class="nav-link" role="menuitem">Reel Reviews</a></li>
+                <li role="none"><a href="apps/coming-soon/" class="nav-link" role="menuitem">Coming Soon</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 
+    ============================================================================
+    MAIN CONTENT
+    ============================================================================
+    -->
+    <main id="main-content">
+        
+        <!-- 
+        ==========================================================================
+        HERO SECTION
+        ==========================================================================
+        Large typewriter imagery with company tagline
+        Establishes the vintage/writing theme of the brand
+        ==========================================================================
+        -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero-background">
+                <!-- Typewriter image as background element -->
+                <img src="assets/typewriter.png" 
+                     alt="Vintage typewriter representing Paper Trail's commitment to authentic stories" 
+                     class="hero-image"
+                     loading="eager"
+                     fetchpriority="high">
+                <div class="hero-overlay"></div>
+            </div>
+            
+            <div class="hero-content">
+                <h1 id="hero-heading" class="hero-title">
+                    <span class="title-line">Paper Trail</span>
+                    <span class="title-line title-line-sub">Limited</span>
+                </h1>
+                <p class="hero-tagline">
+                    Writing the future of mobile experiences, one app at a time.
+                </p>
+                <p class="hero-location">
+                    <span class="location-icon">🇳🇿</span> Based in New Zealand
+                </p>
+                <div class="hero-cta">
+                    <a href="#about" class="btn btn-primary">Discover Our Story</a>
+                    <a href="apps/reel-reviews/" class="btn btn-secondary">View Our Apps</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        ==========================================================================
+        ABOUT SECTION
+        ==========================================================================
+        Company overview and mission statement
+        ==========================================================================
+        -->
+        <section id="about" class="about-section" aria-labelledby="about-heading">
+            <div class="container">
+                <h2 id="about-heading" class="section-title">About Paper Trail</h2>
+                
+                <div class="about-grid">
+                    <!-- Company Story -->
+                    <article class="about-card">
+                        <div class="card-icon">📖</div>
+                        <h3 class="card-title">Our Story</h3>
+                        <p class="card-text">
+                            Paper Trail Limited is a New Zealand-based mobile app development company 
+                            founded on a simple belief: great software tells a story. Like pages in a 
+                            notebook, each app we create adds a new chapter to our journey of innovation.
+                        </p>
+                    </article>
+                    
+                    <!-- Mission -->
+                    <article class="about-card">
+                        <div class="card-icon">🎯</div>
+                        <h3 class="card-title">Our Mission</h3>
+                        <p class="card-text">
+                            We build apps that solve real problems with elegant solutions. From helping 
+                            consumers make informed decisions to revolutionizing everyday experiences, 
+                            every line of code serves a purpose.
+                        </p>
+                    </article>
+                    
+                    <!-- Vision -->
+                    <article class="about-card">
+                        <div class="card-icon">🔮</div>
+                        <h3 class="card-title">Our Vision</h3>
+                        <p class="card-text">
+                            To create a portfolio of applications that each fill a unique niche in the 
+                            mobile ecosystem. Under the Paper Trail umbrella, each app stands on its own 
+                            while contributing to a larger narrative of quality and innovation.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        ==========================================================================
+        APPS PORTFOLIO SECTION
+        ==========================================================================
+        Showcase of current and upcoming applications
+        Each app gets a card with preview and link to dedicated page
+        ==========================================================================
+        -->
+        <section id="apps" class="apps-section" aria-labelledby="apps-heading">
+            <div class="container">
+                <h2 id="apps-heading" class="section-title">Our Apps</h2>
+                <p class="section-subtitle">Innovative mobile experiences for everyday life</p>
+                
+                <div class="apps-grid">
+                    
+                    <!-- Reel Reviews App Card -->
+                    <article class="app-card app-card-featured">
+                        <div class="app-card-image">
+                            <img src="assets/reel-reviews-poster.png" 
+                                 alt="Reel Reviews - A fishing-themed app for honest restaurant reviews"
+                                 loading="lazy">
+                            <div class="app-card-badge">Available Now</div>
+                        </div>
+                        <div class="app-card-content">
+                            <h3 class="app-card-title">Reel Reviews</h3>
+                            <p class="app-card-tagline">"Catch the truth before you dine"</p>
+                            <p class="app-card-description">
+                                Like Google Maps, but with a twist — <strong>only negative reviews allowed</strong>. 
+                                Our fishing-themed app helps you "reel in" the truth about restaurants, 
+                                catching catfish establishments that use fake reviews before they catch you.
+                            </p>
+                            <ul class="app-card-features">
+                                <li>🎣 Map-based restaurant discovery</li>
+                                <li>⚠️ Honest negative reviews only</li>
+                                <li>🐟 Catch catfish restaurants red-handed</li>
+                                <li>📱 Available on iOS and Android</li>
+                            </ul>
+                            <a href="apps/reel-reviews/" class="btn btn-primary btn-full">
+                                Learn More About Reel Reviews →
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Coming Soon App Card -->
+                    <article class="app-card app-card-soon">
+                        <div class="app-card-image app-card-image-placeholder">
+                            <div class="placeholder-icon">🛒</div>
+                            <div class="app-card-badge app-card-badge-soon">Coming Soon</div>
+                        </div>
+                        <div class="app-card-content">
+                            <h3 class="app-card-title">Project Cartwheel</h3>
+                            <p class="app-card-tagline">"Reimagining delivery"</p>
+                            <p class="app-card-description">
+                                An Instacart-like experience with major innovations we're keeping under 
+                                wraps for now. Think you know grocery delivery? Think again.
+                            </p>
+                            <div class="coming-soon-teaser">
+                                <span class="teaser-text">Something big is brewing...</span>
+                                <div class="teaser-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <a href="apps/coming-soon/" class="btn btn-secondary btn-full">
+                                Get Early Access Info →
+                            </a>
+                        </div>
+                    </article>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        ==========================================================================
+        DOMAIN INFO SECTION
+        ==========================================================================
+        Quick reference for the domain structure
+        ==========================================================================
+        -->
+        <section class="domains-section" aria-labelledby="domains-heading">
+            <div class="container">
+                <h2 id="domains-heading" class="section-title section-title-small">Our Digital Properties</h2>
+                
+                <div class="domains-grid">
+                    <div class="domain-item">
+                        <span class="domain-icon">🏠</span>
+                        <div class="domain-info">
+                            <span class="domain-name">typewrite.club</span>
+                            <span class="domain-purpose">Main Company Site</span>
+                        </div>
+                    </div>
+                    <div class="domain-item">
+                        <span class="domain-icon">🎣</span>
+                        <div class="domain-info">
+                            <span class="domain-name">reelreviews.club</span>
+                            <span class="domain-purpose">Redirects to Reel Reviews</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 
+    ============================================================================
+    FOOTER
+    ============================================================================
+    Site-wide footer with copyright and links
+    ============================================================================
+    -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-icon">📝</span>
+                    <span class="footer-name">Paper Trail Limited</span>
+                </div>
+                <p class="footer-tagline">Writing the future of mobile experiences</p>
+                <p class="footer-location">🇳🇿 New Zealand</p>
+                <p class="footer-copyright">
+                    © <span id="current-year">2024</span> Paper Trail Limited. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 
+    ============================================================================
+    SCRIPTS
+    ============================================================================
+    -->
+    <script src="js/main.js"></script>
+</body>
+</html>

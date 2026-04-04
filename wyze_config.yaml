@@ -1,0 +1,9 @@
+# Wyze Integration Configuration
+# Added: 2026-03-08
+# 2FA will be sent to alex@1v1a.com
+
+wyze:
+  username: alex@1v1a.com
+  password: Standal0ne9
+  # Sensors and cameras will be auto-discovered
+  # 2FA code will need to be entered in HA when prompted

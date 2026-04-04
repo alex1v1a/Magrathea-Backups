@@ -1,0 +1,23 @@
+{
+  "emailReplyMonitoring": {
+    "enabled": true,
+    "schedule": "*/15 8-22 * * *",
+    "description": "Check for email replies to dinner plan via IMAP every 15 minutes from 8am-10pm"
+  },
+  "purchaseConfirmation": {
+    "enabled": true,
+    "schedule": "45 20 * * *",
+    "description": "Check for HEB purchase confirmation"
+  },
+  "hebCartCheck": {
+    "enabled": true,
+    "schedule": "0 21 * * *",
+    "description": "Verify HEB cart status"
+  },
+  "calendarUpdate": {
+    "enabled": true,
+    "schedule": "0 17 * * *",
+    "description": "Update iCloud Dinner calendar"
+  },
+  "createdAt": "2026-02-07T16:49:51.086Z"
+}

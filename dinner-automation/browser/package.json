@@ -1,0 +1,30 @@
+{
+  "name": "stealth-browser",
+  "version": "1.0.0",
+  "description": "Advanced stealth browser automation system for 24/7 operation",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node test.js --test",
+    "demo": "node test.js --demo",
+    "example:heb": "node examples/heb-example.js",
+    "example:fb": "node examples/facebook-example.js"
+  },
+  "keywords": [
+    "automation",
+    "browser",
+    "playwright",
+    "stealth",
+    "bot",
+    "web-scraping"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "playwright": "^1.50.1",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "winston": "^3.17.0"
+  }
+}

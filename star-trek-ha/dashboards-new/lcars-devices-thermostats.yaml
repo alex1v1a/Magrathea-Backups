@@ -1,0 +1,59 @@
+title: LCARS Thermostat Control
+path: lcars-devices-thermostats
+icon: mdi:thermostat
+badges: []
+cards:
+  - type: markdown
+    card_mod:
+      class: header-left
+    content: '# THERMAL CONTROL MATRIX'
+
+  - type: grid
+    columns: 2
+    square: false
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '# HOUSE 1 — THERMOSTATS'
+          - type: thermostat
+            entity: climate.house1_main
+            card_mod:
+              class: middle-contained
+          - type: thermostat
+            entity: climate.house1_upstairs
+            card_mod:
+              class: middle-contained
+          - type: thermostat
+            entity: climate.house1_downstairs
+            card_mod:
+              class: middle-contained
+          - type: markdown
+            card_mod:
+              class: footer-contained
+            content: '## THERMAL GRID'
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '# HOUSE 2 — THERMOSTATS'
+          - type: thermostat
+            entity: climate.house2_main
+            card_mod:
+              class: middle-contained
+          - type: thermostat
+            entity: climate.house2_guest
+            card_mod:
+              class: middle-contained
+          - type: thermostat
+            entity: climate.house2_office
+            card_mod:
+              class: middle-contained
+          - type: markdown
+            card_mod:
+              class: footer-contained
+            content: '## THERMAL GRID'

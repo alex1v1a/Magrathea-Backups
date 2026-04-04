@@ -1,0 +1,40 @@
+{
+  "lastRun": "2026-02-28T14:39:30.832Z",
+  "lastBackup": "2026-02-28T14:39:04.428Z",
+  "totalRecoveries": 2,
+  "serviceStates": {
+    "dashboard-server": {
+      "status": "healthy",
+      "details": "Port 3001 responding",
+      "lastCheck": "2026-02-28T14:39:29.861Z",
+      "portConflict": null
+    },
+    "openclaw-gateway": {
+      "status": "port-conflict",
+      "details": "Detection failed: Both PowerShell and CMD detection failed",
+      "lastCheck": "2026-02-28T14:39:30.710Z",
+      "portConflict": {
+        "type": "error",
+        "message": "Detection failed: Both PowerShell and CMD detection failed"
+      }
+    },
+    "wsl-ubuntu": {
+      "status": "healthy",
+      "details": "Check command passed",
+      "lastCheck": "2026-02-28T14:39:30.832Z",
+      "portConflict": null
+    }
+  },
+  "consecutiveFailures": {
+    "openclaw-gateway": 40
+  },
+  "lastRollback": "2026-02-28T14:39:29.858Z",
+  "portConflicts": {
+    "openclaw-gateway": {
+      "type": "error",
+      "severity": "low",
+      "message": "Detection failed: Both PowerShell and CMD detection failed",
+      "conflicts": []
+    }
+  }
+}

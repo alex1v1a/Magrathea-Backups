@@ -1,0 +1,19 @@
+{
+  "company_name": "Personal - Home Automation",
+  "use_case": "Meal Planning & Grocery Automation",
+  "description": "\nI am building a personal home automation system that generates weekly meal plans \nand automatically creates shopping lists. I want to integrate with Instacart to:\n\n1. Search for products at my local HEB store\n2. Create shopping lists from weekly meal plans\n3. Generate checkout links for easy ordering\n\nThis is for personal use only - automating my family's grocery shopping \nbased on meal plans I create each week.\n\nTechnical Details:\n- Integration Type: Shopping List API\n- Preferred Retailer: HEB (Buda, TX - 78610)\n- Authentication: API Key\n- Environment: Production (once tested)\n- Expected Volume: ~1 shopping list per week (52/year)\n  ",
+  "website": "https://vectarr.com",
+  "contact_email": "alex@1v1a.com",
+  "technical_contact": "alex@1v1a.com",
+  "use_case_category": "Meal Planning & Personal Automation",
+  "data_handling": "Personal data only - no customer PII",
+  "integration_type": [
+    "Product Search API",
+    "Shopping List API",
+    "Checkout Session API"
+  ],
+  "retailer_preferences": [
+    "HEB"
+  ],
+  "expected_volume": "Low - personal use, ~52 shopping lists per year"
+}

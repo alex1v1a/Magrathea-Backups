@@ -1,0 +1,267 @@
+# ==========================================
+# LCARS QUARTERS - Personal Dashboard
+# ==========================================
+# Bedroom and personal space controls
+# Color Scheme: Peach (#FFAA90) - Comfort/Personal
+# ==========================================
+
+title: LCARS Quarters
+path: lcars-quarters
+icon: mdi:bed
+badges: []
+cards:
+  # ==========================================
+  # LEFT COLUMN - Navigation Sidebar
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        card_mod:
+          class: header-left
+          style: |
+            ha-card {
+              background: #FFAA90 !important;
+            }
+        content: '# NAVIGATION'
+
+      - type: button
+        name: "BRIDGE"
+        icon: mdi:star-four-points
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-bridge
+        card_mod:
+          class: button-lozenge-left
+
+      - type: button
+        name: "ENGINEERING"
+        icon: mdi:engine
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-engineering
+        card_mod:
+          class: button-lozenge-left
+
+      - type: button
+        name: "SCIENCE"
+        icon: mdi:telescope
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-science
+        card_mod:
+          class: button-lozenge-left
+
+      - type: button
+        name: "SECURITY"
+        icon: mdi:shield
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-security
+        card_mod:
+          class: button-lozenge-left
+
+      - type: button
+        name: "QUARTERS"
+        icon: mdi:bed
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-quarters
+        card_mod:
+          class: button-lozenge-left
+          style: |
+            ha-card {
+              background: #FFDDC8 !important;
+              border-left: 8px solid #FFAA90 !important;
+            }
+
+      - type: markdown
+        card_mod:
+          class: footer-left
+          style: |
+            ha-card {
+              min-height: 60px !important;
+            }
+        content: '## USS HOME'
+
+  # ==========================================
+  # CENTER COLUMN - Bedroom Controls
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      # Quarters Header
+      - type: markdown
+        card_mod:
+          class: header-contained
+          style: |
+            ha-card {
+              background: #FFAA90 !important;
+            }
+        content: '# PERSONAL QUARTERS'
+
+      # Bedroom Climate
+      - type: thermostat
+        entity: climate.bedroom
+        card_mod:
+          class: middle-contained
+
+      # Bedroom Lights
+      - type: markdown
+        card_mod:
+          class: header-contained
+        content: '# LIGHTING CONTROLS'
+
+      - type: grid
+        columns: 2
+        card_mod:
+          class: middle-contained
+        cards:
+          - type: button
+            entity: light.bedroom_ceiling
+            name: "Ceiling"
+            show_name: true
+            show_icon: true
+            show_state: true
+            card_mod:
+              class: button-lozenge-left
+
+          - type: button
+            entity: light.bedroom_lamp
+            name: "Lamp"
+            show_name: true
+            show_icon: true
+            show_state: true
+            card_mod:
+              class: button-lozenge-right
+
+          - type: button
+            entity: light.bedroom_strip
+            name: "LED Strip"
+            show_name: true
+            show_icon: true
+            show_state: true
+            card_mod:
+              class: button-lozenge-left
+
+          - type: button
+            entity: light.night_light
+            name: "Night Light"
+            show_name: true
+            show_icon: true
+            show_state: true
+            card_mod:
+              class: button-lozenge-right
+
+      # Sleep Scenes
+      - type: markdown
+        card_mod:
+          class: header-contained
+        content: '# SLEEP MODES'
+
+      - type: horizontal-stack
+        card_mod:
+          class: middle-contained
+        cards:
+          - type: button
+            entity: scene.reading_mode
+            name: "Reading"
+            icon: mdi:book-open
+            show_name: true
+            show_icon: true
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              target:
+                entity_id: scene.reading_mode
+            card_mod:
+              class: button-bullet-left
+
+          - type: button
+            entity: scene.romantic_mode
+            name: "Romantic"
+            icon: mdi:heart
+            show_name: true
+            show_icon: true
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              target:
+                entity_id: scene.romantic_mode
+            card_mod:
+              class: button-bullet-right
+
+      # Footer
+      - type: markdown
+        card_mod:
+          class: footer-contained
+        content: '## SWEET DREAMS'
+
+  # ==========================================
+  # RIGHT COLUMN - Personal Media & Wellness
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      # Media Header
+      - type: markdown
+        card_mod:
+          class: header-right
+          style: |
+            ha-card {
+              background: #FFAA90 !important;
+            }
+        content: '# PERSONAL MEDIA'
+
+      # Bedroom Audio
+      - type: media-control
+        entity: media_player.bedroom_speaker
+        card_mod:
+          class: middle-right
+
+      # Sleep Sounds
+      - type: markdown
+        card_mod:
+          class: header-right
+        content: '# SLEEP ASSIST'
+
+      - type: entities
+        entities:
+          - entity: input_boolean.white_noise
+            name: "White Noise"
+          - entity: input_number.sleep_timer
+            name: "Sleep Timer"
+          - entity: input_boolean.gentle_wake
+            name: "Gentle Wake"
+        card_mod:
+          class: middle-right
+
+      # Sleep Stats
+      - type: markdown
+        card_mod:
+          class: header-right
+        content: '# WELLNESS DATA'
+
+      - type: entities
+        entities:
+          - entity: sensor.bedroom_temperature
+            name: "Room Temp"
+          - entity: sensor.bedroom_humidity
+            name: "Humidity"
+          - entity: sensor.sleep_quality
+            name: "Sleep Score"
+        card_mod:
+          class: middle-right
+
+      # Footer
+      - type: markdown
+        card_mod:
+          class: footer-right
+        content: '## REST MODE'

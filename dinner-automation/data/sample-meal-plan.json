@@ -1,0 +1,122 @@
+[
+  {
+    "name": "ground beef 80/20",
+    "quantity": 2,
+    "unit": "lb",
+    "category": "meat",
+    "alternatives": ["ground chuck", "ground sirloin", "ground turkey"],
+    "recipe": "Taco Tuesday"
+  },
+  {
+    "name": "chicken breast",
+    "quantity": 1.5,
+    "unit": "lb",
+    "category": "meat",
+    "alternatives": ["chicken thighs", "chicken tenders"],
+    "recipe": "Grilled Chicken Salad"
+  },
+  {
+    "name": "spaghetti pasta",
+    "quantity": 1,
+    "unit": "box",
+    "category": "pantry",
+    "alternatives": ["linguine", "fettuccine", "penne"],
+    "recipe": "Spaghetti Carbonara"
+  },
+  {
+    "name": "marinara sauce",
+    "quantity": 24,
+    "unit": "oz",
+    "category": "pantry",
+    "alternatives": ["pasta sauce", "tomato basil sauce"],
+    "recipe": "Spaghetti Carbonara"
+  },
+  {
+    "name": "parmesan cheese",
+    "quantity": 8,
+    "unit": "oz",
+    "category": "dairy",
+    "alternatives": ["pecorino romano", "grana padano"],
+    "recipe": "Spaghetti Carbonara"
+  },
+  {
+    "name": "eggs",
+    "quantity": 12,
+    "unit": "count",
+    "category": "dairy",
+    "alternatives": ["organic eggs", "cage-free eggs"],
+    "recipe": "Breakfast for Dinner"
+  },
+  {
+    "name": "broccoli",
+    "quantity": 2,
+    "unit": "heads",
+    "category": "produce",
+    "alternatives": ["broccoli florets", "baby broccoli"],
+    "recipe": "Stir Fry"
+  },
+  {
+    "name": "bell peppers",
+    "quantity": 3,
+    "unit": "count",
+    "category": "produce",
+    "alternatives": ["mini peppers", "poblano peppers"],
+    "recipe": "Stir Fry"
+  },
+  {
+    "name": "olive oil",
+    "quantity": 1,
+    "unit": "bottle",
+    "category": "pantry",
+    "alternatives": ["extra virgin olive oil", "avocado oil"],
+    "recipe": "Multiple"
+  },
+  {
+    "name": "garlic",
+    "quantity": 2,
+    "unit": "bulbs",
+    "category": "produce",
+    "alternatives": ["minced garlic", "garlic powder"],
+    "recipe": "Multiple"
+  },
+  {
+    "name": "onion",
+    "quantity": 2,
+    "unit": "count",
+    "category": "produce",
+    "alternatives": ["yellow onion", "white onion", "sweet onion"],
+    "recipe": "Multiple"
+  },
+  {
+    "name": "rice",
+    "quantity": 2,
+    "unit": "lb",
+    "category": "pantry",
+    "alternatives": ["jasmine rice", "basmati rice", "brown rice"],
+    "recipe": "Stir Fry"
+  },
+  {
+    "name": "soy sauce",
+    "quantity": 1,
+    "unit": "bottle",
+    "category": "pantry",
+    "alternatives": ["low sodium soy sauce", "tamari", "coconut aminos"],
+    "recipe": "Stir Fry"
+  },
+  {
+    "name": "milk",
+    "quantity": 1,
+    "unit": "gallon",
+    "category": "dairy",
+    "alternatives": ["whole milk", "2% milk", "organic milk"],
+    "recipe": "Multiple"
+  },
+  {
+    "name": "butter",
+    "quantity": 1,
+    "unit": "lb",
+    "category": "dairy",
+    "alternatives": ["unsalted butter", "salted butter", "european butter"],
+    "recipe": "Multiple"
+  }
+]

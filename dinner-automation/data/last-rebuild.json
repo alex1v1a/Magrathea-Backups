@@ -1,0 +1,1923 @@
+{
+  "timestamp": "2026-02-07T18:37:10.630Z",
+  "exclusions": [
+    {
+      "ingredient": "kimchi",
+      "reason": "preference",
+      "source": "manual"
+    },
+    {
+      "ingredient": "fresh asparagus",
+      "reason": "preference",
+      "source": "manual"
+    },
+    {
+      "ingredient": "capers",
+      "reason": "preference",
+      "source": "manual"
+    }
+  ],
+  "rebuildResult": {
+    "weeklyPlan": {
+      "weekOf": "2026-02-07",
+      "meals": [
+        {
+          "day": "Sunday",
+          "name": "Pork Tenderloin with Roasted Vegetables",
+          "category": "american",
+          "estimatedCost": 23,
+          "prepTime": "45 min",
+          "difficulty": "medium",
+          "healthy": true,
+          "ingredients": [
+            {
+              "name": "Pork tenderloin",
+              "amount": "1.5 lbs",
+              "hebSearch": "pork tenderloin"
+            },
+            {
+              "name": "Brussels sprouts",
+              "amount": "1.5 lbs",
+              "hebSearch": "brussels sprouts"
+            },
+            {
+              "name": "Sweet potatoes",
+              "amount": "2 lbs",
+              "hebSearch": "sweet potatoes"
+            },
+            {
+              "name": "Dijon mustard",
+              "amount": "1 jar",
+              "hebSearch": "dijon mustard"
+            },
+            {
+              "name": "Fresh rosemary",
+              "amount": "1 bunch",
+              "hebSearch": "rosemary fresh"
+            },
+            {
+              "name": "Balsamic vinegar",
+              "amount": "1 bottle",
+              "hebSearch": "balsamic vinegar"
+            }
+          ],
+          "status": "planned"
+        },
+        {
+          "day": "Monday",
+          "name": "Stuffed Bell Peppers",
+          "category": "american",
+          "estimatedCost": 20,
+          "prepTime": "50 min",
+          "difficulty": "medium",
+          "healthy": true,
+          "ingredients": [
+            {
+              "name": "Ground turkey",
+              "amount": "1.5 lbs",
+              "hebSearch": "ground turkey"
+            },
+            {
+              "name": "Bell peppers",
+              "amount": "6",
+              "hebSearch": "bell peppers large"
+            },
+            {
+              "name": "Quinoa",
+              "amount": "1 lb",
+              "hebSearch": "quinoa"
+            },
+            {
+              "name": "Black beans",
+              "amount": "1 can",
+              "hebSearch": "black beans"
+            },
+            {
+              "name": "Diced tomatoes",
+              "amount": "1 can",
+              "hebSearch": "diced tomatoes"
+            },
+            {
+              "name": "Shredded cheese",
+              "amount": "8 oz",
+              "hebSearch": "cheese shredded mexican"
+            }
+          ],
+          "status": "planned"
+        },
+        {
+          "day": "Tuesday",
+          "name": "Vegetable Curry with Chickpeas",
+          "category": "vegetarian",
+          "estimatedCost": 18,
+          "prepTime": "35 min",
+          "difficulty": "easy",
+          "healthy": true,
+          "ingredients": [
+            {
+              "name": "Chickpeas",
+              "amount": "2 cans",
+              "hebSearch": "chickpeas"
+            },
+            {
+              "name": "Coconut milk",
+              "amount": "2 cans",
+              "hebSearch": "coconut milk"
+            },
+            {
+              "name": "Spinach",
+              "amount": "10 oz",
+              "hebSearch": "spinach fresh"
+            },
+            {
+              "name": "Curry paste",
+              "amount": "1 jar",
+              "hebSearch": "curry paste"
+            },
+            {
+              "name": "Naan bread",
+              "amount": "1 pack",
+              "hebSearch": "naan bread"
+            },
+            {
+              "name": "Yellow onion",
+              "amount": "1",
+              "hebSearch": "yellow onion"
+            }
+          ],
+          "status": "planned"
+        },
+        {
+          "day": "Wednesday",
+          "name": "Chicken Tikka Masala",
+          "category": "indian",
+          "estimatedCost": 22,
+          "prepTime": "45 min",
+          "difficulty": "medium",
+          "healthy": true,
+          "ingredients": [
+            {
+              "name": "Chicken thighs",
+              "amount": "2 lbs",
+              "hebSearch": "chicken thighs boneless"
+            },
+            {
+              "name": "Greek yogurt",
+              "amount": "16 oz",
+              "hebSearch": "greek yogurt plain"
+            },
+            {
+              "name": "Heavy cream",
+              "amount": "1 pint",
+              "hebSearch": "heavy cream"
+            },
+            {
+              "name": "Basmati rice",
+              "amount": "2 lbs",
+              "hebSearch": "basmati rice"
+            },
+            {
+              "name": "Tikka masala sauce",
+              "amount": "1 jar",
+              "hebSearch": "tikka masala sauce"
+            },
+            {
+              "name": "Fresh ginger",
+              "amount": "1 piece",
+              "hebSearch": "ginger root"
+            }
+          ],
+          "status": "planned"
+        },
+        {
+          "day": "Thursday",
+          "name": "Lemon Herb Grilled Chicken",
+          "category": "mediterranean",
+          "estimatedCost": 21,
+          "prepTime": "35 min",
+          "difficulty": "easy",
+          "healthy": true,
+          "ingredients": [
+            {
+              "name": "Chicken thighs",
+              "amount": "2 lbs",
+              "hebSearch": "chicken thighs bone-in"
+            },
+            {
+              "name": "Lemon",
+              "amount": "3",
+              "hebSearch": "lemon"
+            },
+            {
+              "name": "Fresh thyme",
+              "amount": "1 bunch",
+              "hebSearch": "thyme fresh"
+            },
+            {
+              "name": "Oregano",
+              "amount": "1 container",
+              "hebSearch": "oregano dried"
+            },
+            {
+              "name": "Couscous",
+              "amount": "1 lb",
+              "hebSearch": "couscous"
+            },
+            {
+              "name": "Zucchini",
+              "amount": "3",
+              "hebSearch": "zucchini"
+            }
+          ],
+          "status": "planned"
+        },
+        {
+          "day": "Friday",
+          "name": "Fish Tacos with Mango Salsa",
+          "category": "mexican",
+          "estimatedCost": 26,
+          "prepTime": "30 min",
+          "difficulty": "easy",
+          "healthy": true,
+          "ingredients": [
+            {
+              "name": "White fish fillets",
+              "amount": "1.5 lbs",
+              "hebSearch": "tilapia fillet"
+            },
+            {
+              "name": "Corn tortillas",
+              "amount": "1 pack",
+              "hebSearch": "corn tortillas"
+            },
+            {
+              "name": "Mango",
+              "amount": "2",
+              "hebSearch": "mango"
+            },
+            {
+              "name": "Red onion",
+              "amount": "1",
+              "hebSearch": "red onion"
+            },
+            {
+              "name": "Jalapeno",
+              "amount": "2",
+              "hebSearch": "jalapeno"
+            },
+            {
+              "name": "Cabbage slaw mix",
+              "amount": "1 bag",
+              "hebSearch": "coleslaw mix"
+            },
+            {
+              "name": "Chipotle mayo",
+              "amount": "1 bottle",
+              "hebSearch": "chipotle mayo"
+            }
+          ],
+          "status": "planned"
+        },
+        {
+          "day": "Saturday",
+          "name": "Mediterranean Chicken Bowl",
+          "category": "mediterranean",
+          "estimatedCost": 26,
+          "prepTime": "30 min",
+          "difficulty": "easy",
+          "healthy": true,
+          "ingredients": [
+            {
+              "name": "Chicken breast",
+              "amount": "2 lbs",
+              "hebSearch": "chicken breast boneless"
+            },
+            {
+              "name": "Cucumber",
+              "amount": "2",
+              "hebSearch": "cucumber"
+            },
+            {
+              "name": "Cherry tomatoes",
+              "amount": "1 pint",
+              "hebSearch": "tomatoes cherry"
+            },
+            {
+              "name": "Feta cheese",
+              "amount": "8 oz",
+              "hebSearch": "feta cheese"
+            },
+            {
+              "name": "Quinoa",
+              "amount": "2 lbs",
+              "hebSearch": "quinoa"
+            },
+            {
+              "name": "Hummus",
+              "amount": "10 oz",
+              "hebSearch": "hummus"
+            },
+            {
+              "name": "Red onion",
+              "amount": "1",
+              "hebSearch": "red onion"
+            }
+          ],
+          "status": "planned"
+        }
+      ],
+      "budget": {
+        "allocated": 200,
+        "estimatedMealCost": 156,
+        "buffer": 15.600000000000001,
+        "totalWithBuffer": 171.6,
+        "remaining": 28.400000000000006
+      },
+      "metadata": {
+        "generatedAt": "2026-02-07T16:49:49.470Z",
+        "exclusionsCount": 0,
+        "generatedBy": "DinnerAutomation v2.0",
+        "rebuiltAt": "2026-02-07T18:36:56.929Z",
+        "rebuildReason": "exclusion_request",
+        "originalPlan": {
+          "weekOf": "2026-02-07",
+          "meals": [
+            {
+              "day": "Sunday",
+              "name": "Pork Tenderloin with Roasted Vegetables",
+              "category": "american",
+              "estimatedCost": 23,
+              "prepTime": "45 min",
+              "difficulty": "medium",
+              "healthy": true,
+              "ingredients": [
+                {
+                  "name": "Pork tenderloin",
+                  "amount": "1.5 lbs",
+                  "hebSearch": "pork tenderloin"
+                },
+                {
+                  "name": "Brussels sprouts",
+                  "amount": "1.5 lbs",
+                  "hebSearch": "brussels sprouts"
+                },
+                {
+                  "name": "Sweet potatoes",
+                  "amount": "2 lbs",
+                  "hebSearch": "sweet potatoes"
+                },
+                {
+                  "name": "Dijon mustard",
+                  "amount": "1 jar",
+                  "hebSearch": "dijon mustard"
+                },
+                {
+                  "name": "Fresh rosemary",
+                  "amount": "1 bunch",
+                  "hebSearch": "rosemary fresh"
+                },
+                {
+                  "name": "Balsamic vinegar",
+                  "amount": "1 bottle",
+                  "hebSearch": "balsamic vinegar"
+                }
+              ],
+              "status": "planned"
+            },
+            {
+              "day": "Monday",
+              "name": "Korean Beef Bulgogi Bowl",
+              "category": "asian",
+              "estimatedCost": 27,
+              "prepTime": "40 min",
+              "difficulty": "medium",
+              "healthy": true,
+              "ingredients": [
+                {
+                  "name": "Ribeye steak",
+                  "amount": "1.5 lbs",
+                  "hebSearch": "ribeye steak thin"
+                },
+                {
+                  "name": "Asian pear",
+                  "amount": "1",
+                  "hebSearch": "asian pear"
+                },
+                {
+                  "name": "Gochujang",
+                  "amount": "1 container",
+                  "hebSearch": "gochujang"
+                },
+                {
+                  "name": "Jasmine rice",
+                  "amount": "2 lbs",
+                  "hebSearch": "jasmine rice"
+                },
+                {
+                  "name": "Sesame seeds",
+                  "amount": "1 container",
+                  "hebSearch": "sesame seeds"
+                },
+                {
+                  "name": "Kimchi",
+                  "amount": "16 oz",
+                  "hebSearch": "kimchi"
+                }
+              ],
+              "status": "planned"
+            },
+            {
+              "day": "Tuesday",
+              "name": "Vegetable Curry with Chickpeas",
+              "category": "vegetarian",
+              "estimatedCost": 18,
+              "prepTime": "35 min",
+              "difficulty": "easy",
+              "healthy": true,
+              "ingredients": [
+                {
+                  "name": "Chickpeas",
+                  "amount": "2 cans",
+                  "hebSearch": "chickpeas"
+                },
+                {
+                  "name": "Coconut milk",
+                  "amount": "2 cans",
+                  "hebSearch": "coconut milk"
+                },
+                {
+                  "name": "Spinach",
+                  "amount": "10 oz",
+                  "hebSearch": "spinach fresh"
+                },
+                {
+                  "name": "Curry paste",
+                  "amount": "1 jar",
+                  "hebSearch": "curry paste"
+                },
+                {
+                  "name": "Naan bread",
+                  "amount": "1 pack",
+                  "hebSearch": "naan bread"
+                },
+                {
+                  "name": "Yellow onion",
+                  "amount": "1",
+                  "hebSearch": "yellow onion"
+                }
+              ],
+              "status": "planned"
+            },
+            {
+              "day": "Wednesday",
+              "name": "Chicken Tikka Masala",
+              "category": "indian",
+              "estimatedCost": 22,
+              "prepTime": "45 min",
+              "difficulty": "medium",
+              "healthy": true,
+              "ingredients": [
+                {
+                  "name": "Chicken thighs",
+                  "amount": "2 lbs",
+                  "hebSearch": "chicken thighs boneless"
+                },
+                {
+                  "name": "Greek yogurt",
+                  "amount": "16 oz",
+                  "hebSearch": "greek yogurt plain"
+                },
+                {
+                  "name": "Heavy cream",
+                  "amount": "1 pint",
+                  "hebSearch": "heavy cream"
+                },
+                {
+                  "name": "Basmati rice",
+                  "amount": "2 lbs",
+                  "hebSearch": "basmati rice"
+                },
+                {
+                  "name": "Tikka masala sauce",
+                  "amount": "1 jar",
+                  "hebSearch": "tikka masala sauce"
+                },
+                {
+                  "name": "Fresh ginger",
+                  "amount": "1 piece",
+                  "hebSearch": "ginger root"
+                }
+              ],
+              "status": "planned"
+            },
+            {
+              "day": "Thursday",
+              "name": "Grilled Salmon with Asparagus",
+              "category": "seafood",
+              "estimatedCost": 28,
+              "prepTime": "25 min",
+              "difficulty": "medium",
+              "healthy": true,
+              "ingredients": [
+                {
+                  "name": "Atlantic salmon fillets",
+                  "amount": "1.5 lbs",
+                  "hebSearch": "salmon fillet fresh"
+                },
+                {
+                  "name": "Fresh asparagus",
+                  "amount": "1 bunch",
+                  "hebSearch": "asparagus fresh"
+                },
+                {
+                  "name": "Lemon",
+                  "amount": "2",
+                  "hebSearch": "lemon"
+                },
+                {
+                  "name": "Olive oil",
+                  "amount": "1 bottle",
+                  "hebSearch": "olive oil extra virgin"
+                },
+                {
+                  "name": "Garlic",
+                  "amount": "1 bulb",
+                  "hebSearch": "garlic"
+                },
+                {
+                  "name": "Sea salt",
+                  "amount": "1 container",
+                  "hebSearch": "sea salt"
+                }
+              ],
+              "status": "planned"
+            },
+            {
+              "day": "Friday",
+              "name": "Pan-Seared Cod with Lemon Butter",
+              "category": "seafood",
+              "estimatedCost": 30,
+              "prepTime": "20 min",
+              "difficulty": "easy",
+              "healthy": true,
+              "ingredients": [
+                {
+                  "name": "Cod fillets",
+                  "amount": "1.5 lbs",
+                  "hebSearch": "cod fillet fresh"
+                },
+                {
+                  "name": "Unsalted butter",
+                  "amount": "1 stick",
+                  "hebSearch": "butter unsalted"
+                },
+                {
+                  "name": "Fresh parsley",
+                  "amount": "1 bunch",
+                  "hebSearch": "parsley fresh"
+                },
+                {
+                  "name": "Capers",
+                  "amount": "1 jar",
+                  "hebSearch": "capers"
+                },
+                {
+                  "name": "White wine",
+                  "amount": "1 bottle",
+                  "hebSearch": "white wine cooking"
+                },
+                {
+                  "name": "Green beans",
+                  "amount": "1 lb",
+                  "hebSearch": "green beans fresh"
+                }
+              ],
+              "status": "planned"
+            },
+            {
+              "day": "Saturday",
+              "name": "Mediterranean Chicken Bowl",
+              "category": "mediterranean",
+              "estimatedCost": 26,
+              "prepTime": "30 min",
+              "difficulty": "easy",
+              "healthy": true,
+              "ingredients": [
+                {
+                  "name": "Chicken breast",
+                  "amount": "2 lbs",
+                  "hebSearch": "chicken breast boneless"
+                },
+                {
+                  "name": "Cucumber",
+                  "amount": "2",
+                  "hebSearch": "cucumber"
+                },
+                {
+                  "name": "Cherry tomatoes",
+                  "amount": "1 pint",
+                  "hebSearch": "tomatoes cherry"
+                },
+                {
+                  "name": "Feta cheese",
+                  "amount": "8 oz",
+                  "hebSearch": "feta cheese"
+                },
+                {
+                  "name": "Quinoa",
+                  "amount": "2 lbs",
+                  "hebSearch": "quinoa"
+                },
+                {
+                  "name": "Hummus",
+                  "amount": "10 oz",
+                  "hebSearch": "hummus"
+                },
+                {
+                  "name": "Red onion",
+                  "amount": "1",
+                  "hebSearch": "red onion"
+                }
+              ],
+              "status": "planned"
+            }
+          ],
+          "budget": {
+            "allocated": 200,
+            "estimatedMealCost": 174,
+            "buffer": 17.400000000000002,
+            "totalWithBuffer": 191.4,
+            "remaining": 8.599999999999994
+          },
+          "metadata": {
+            "generatedAt": "2026-02-07T16:49:49.470Z",
+            "exclusionsCount": 0,
+            "generatedBy": "DinnerAutomation v2.0",
+            "rebuiltAt": "2026-02-07T17:55:46.294Z",
+            "rebuildReason": "exclusion_request",
+            "originalPlan": {
+              "weekOf": "2026-02-07",
+              "meals": [
+                {
+                  "day": "Sunday",
+                  "name": "Pork Tenderloin with Roasted Vegetables",
+                  "category": "american",
+                  "estimatedCost": 23,
+                  "prepTime": "45 min",
+                  "difficulty": "medium",
+                  "healthy": true,
+                  "ingredients": [
+                    {
+                      "name": "Pork tenderloin",
+                      "amount": "1.5 lbs",
+                      "hebSearch": "pork tenderloin"
+                    },
+                    {
+                      "name": "Brussels sprouts",
+                      "amount": "1.5 lbs",
+                      "hebSearch": "brussels sprouts"
+                    },
+                    {
+                      "name": "Sweet potatoes",
+                      "amount": "2 lbs",
+                      "hebSearch": "sweet potatoes"
+                    },
+                    {
+                      "name": "Dijon mustard",
+                      "amount": "1 jar",
+                      "hebSearch": "dijon mustard"
+                    },
+                    {
+                      "name": "Fresh rosemary",
+                      "amount": "1 bunch",
+                      "hebSearch": "rosemary fresh"
+                    },
+                    {
+                      "name": "Balsamic vinegar",
+                      "amount": "1 bottle",
+                      "hebSearch": "balsamic vinegar"
+                    }
+                  ],
+                  "status": "planned"
+                },
+                {
+                  "day": "Monday",
+                  "name": "Korean Beef Bulgogi Bowl",
+                  "category": "asian",
+                  "estimatedCost": 27,
+                  "prepTime": "40 min",
+                  "difficulty": "medium",
+                  "healthy": true,
+                  "ingredients": [
+                    {
+                      "name": "Ribeye steak",
+                      "amount": "1.5 lbs",
+                      "hebSearch": "ribeye steak thin"
+                    },
+                    {
+                      "name": "Asian pear",
+                      "amount": "1",
+                      "hebSearch": "asian pear"
+                    },
+                    {
+                      "name": "Gochujang",
+                      "amount": "1 container",
+                      "hebSearch": "gochujang"
+                    },
+                    {
+                      "name": "Jasmine rice",
+                      "amount": "2 lbs",
+                      "hebSearch": "jasmine rice"
+                    },
+                    {
+                      "name": "Sesame seeds",
+                      "amount": "1 container",
+                      "hebSearch": "sesame seeds"
+                    },
+                    {
+                      "name": "Kimchi",
+                      "amount": "16 oz",
+                      "hebSearch": "kimchi"
+                    }
+                  ],
+                  "status": "planned"
+                },
+                {
+                  "day": "Tuesday",
+                  "name": "Vegetable Curry with Chickpeas",
+                  "category": "vegetarian",
+                  "estimatedCost": 18,
+                  "prepTime": "35 min",
+                  "difficulty": "easy",
+                  "healthy": true,
+                  "ingredients": [
+                    {
+                      "name": "Chickpeas",
+                      "amount": "2 cans",
+                      "hebSearch": "chickpeas"
+                    },
+                    {
+                      "name": "Coconut milk",
+                      "amount": "2 cans",
+                      "hebSearch": "coconut milk"
+                    },
+                    {
+                      "name": "Spinach",
+                      "amount": "10 oz",
+                      "hebSearch": "spinach fresh"
+                    },
+                    {
+                      "name": "Curry paste",
+                      "amount": "1 jar",
+                      "hebSearch": "curry paste"
+                    },
+                    {
+                      "name": "Naan bread",
+                      "amount": "1 pack",
+                      "hebSearch": "naan bread"
+                    },
+                    {
+                      "name": "Yellow onion",
+                      "amount": "1",
+                      "hebSearch": "yellow onion"
+                    }
+                  ],
+                  "status": "planned"
+                },
+                {
+                  "day": "Wednesday",
+                  "name": "Chicken Tikka Masala",
+                  "category": "indian",
+                  "estimatedCost": 22,
+                  "prepTime": "45 min",
+                  "difficulty": "medium",
+                  "healthy": true,
+                  "ingredients": [
+                    {
+                      "name": "Chicken thighs",
+                      "amount": "2 lbs",
+                      "hebSearch": "chicken thighs boneless"
+                    },
+                    {
+                      "name": "Greek yogurt",
+                      "amount": "16 oz",
+                      "hebSearch": "greek yogurt plain"
+                    },
+                    {
+                      "name": "Heavy cream",
+                      "amount": "1 pint",
+                      "hebSearch": "heavy cream"
+                    },
+                    {
+                      "name": "Basmati rice",
+                      "amount": "2 lbs",
+                      "hebSearch": "basmati rice"
+                    },
+                    {
+                      "name": "Tikka masala sauce",
+                      "amount": "1 jar",
+                      "hebSearch": "tikka masala sauce"
+                    },
+                    {
+                      "name": "Fresh ginger",
+                      "amount": "1 piece",
+                      "hebSearch": "ginger root"
+                    }
+                  ],
+                  "status": "planned"
+                },
+                {
+                  "day": "Thursday",
+                  "name": "Grilled Salmon with Asparagus",
+                  "category": "seafood",
+                  "estimatedCost": 28,
+                  "prepTime": "25 min",
+                  "difficulty": "medium",
+                  "healthy": true,
+                  "ingredients": [
+                    {
+                      "name": "Atlantic salmon fillets",
+                      "amount": "1.5 lbs",
+                      "hebSearch": "salmon fillet fresh"
+                    },
+                    {
+                      "name": "Fresh asparagus",
+                      "amount": "1 bunch",
+                      "hebSearch": "asparagus fresh"
+                    },
+                    {
+                      "name": "Lemon",
+                      "amount": "2",
+                      "hebSearch": "lemon"
+                    },
+                    {
+                      "name": "Olive oil",
+                      "amount": "1 bottle",
+                      "hebSearch": "olive oil extra virgin"
+                    },
+                    {
+                      "name": "Garlic",
+                      "amount": "1 bulb",
+                      "hebSearch": "garlic"
+                    },
+                    {
+                      "name": "Sea salt",
+                      "amount": "1 container",
+                      "hebSearch": "sea salt"
+                    }
+                  ],
+                  "status": "planned"
+                },
+                {
+                  "day": "Friday",
+                  "name": "Pan-Seared Cod with Lemon Butter",
+                  "category": "seafood",
+                  "estimatedCost": 30,
+                  "prepTime": "20 min",
+                  "difficulty": "easy",
+                  "healthy": true,
+                  "ingredients": [
+                    {
+                      "name": "Cod fillets",
+                      "amount": "1.5 lbs",
+                      "hebSearch": "cod fillet fresh"
+                    },
+                    {
+                      "name": "Unsalted butter",
+                      "amount": "1 stick",
+                      "hebSearch": "butter unsalted"
+                    },
+                    {
+                      "name": "Fresh parsley",
+                      "amount": "1 bunch",
+                      "hebSearch": "parsley fresh"
+                    },
+                    {
+                      "name": "Capers",
+                      "amount": "1 jar",
+                      "hebSearch": "capers"
+                    },
+                    {
+                      "name": "White wine",
+                      "amount": "1 bottle",
+                      "hebSearch": "white wine cooking"
+                    },
+                    {
+                      "name": "Green beans",
+                      "amount": "1 lb",
+                      "hebSearch": "green beans fresh"
+                    }
+                  ],
+                  "status": "planned"
+                },
+                {
+                  "day": "Saturday",
+                  "name": "Mediterranean Chicken Bowl",
+                  "category": "mediterranean",
+                  "estimatedCost": 26,
+                  "prepTime": "30 min",
+                  "difficulty": "easy",
+                  "healthy": true,
+                  "ingredients": [
+                    {
+                      "name": "Chicken breast",
+                      "amount": "2 lbs",
+                      "hebSearch": "chicken breast boneless"
+                    },
+                    {
+                      "name": "Cucumber",
+                      "amount": "2",
+                      "hebSearch": "cucumber"
+                    },
+                    {
+                      "name": "Cherry tomatoes",
+                      "amount": "1 pint",
+                      "hebSearch": "tomatoes cherry"
+                    },
+                    {
+                      "name": "Feta cheese",
+                      "amount": "8 oz",
+                      "hebSearch": "feta cheese"
+                    },
+                    {
+                      "name": "Quinoa",
+                      "amount": "2 lbs",
+                      "hebSearch": "quinoa"
+                    },
+                    {
+                      "name": "Hummus",
+                      "amount": "10 oz",
+                      "hebSearch": "hummus"
+                    },
+                    {
+                      "name": "Red onion",
+                      "amount": "1",
+                      "hebSearch": "red onion"
+                    }
+                  ],
+                  "status": "planned"
+                }
+              ],
+              "budget": {
+                "allocated": 200,
+                "estimatedMealCost": 174,
+                "buffer": 17.400000000000002,
+                "totalWithBuffer": 191.4,
+                "remaining": 8.599999999999994
+              },
+              "metadata": {
+                "generatedAt": "2026-02-07T16:49:49.470Z",
+                "exclusionsCount": 0,
+                "generatedBy": "DinnerAutomation v2.0"
+              }
+            }
+          }
+        }
+      }
+    },
+    "originalPlan": {
+      "weekOf": "2026-02-07",
+      "meals": [
+        {
+          "day": "Sunday",
+          "name": "Pork Tenderloin with Roasted Vegetables",
+          "category": "american",
+          "estimatedCost": 23,
+          "prepTime": "45 min",
+          "difficulty": "medium",
+          "healthy": true,
+          "ingredients": [
+            {
+              "name": "Pork tenderloin",
+              "amount": "1.5 lbs",
+              "hebSearch": "pork tenderloin"
+            },
+            {
+              "name": "Brussels sprouts",
+              "amount": "1.5 lbs",
+              "hebSearch": "brussels sprouts"
+            },
+            {
+              "name": "Sweet potatoes",
+              "amount": "2 lbs",
+              "hebSearch": "sweet potatoes"
+            },
+            {
+              "name": "Dijon mustard",
+              "amount": "1 jar",
+              "hebSearch": "dijon mustard"
+            },
+            {
+              "name": "Fresh rosemary",
+              "amount": "1 bunch",
+              "hebSearch": "rosemary fresh"
+            },
+            {
+              "name": "Balsamic vinegar",
+              "amount": "1 bottle",
+              "hebSearch": "balsamic vinegar"
+            }
+          ],
+          "status": "planned"
+        },
+        {
+          "day": "Monday",
+          "name": "Korean Beef Bulgogi Bowl",
+          "category": "asian",
+          "estimatedCost": 27,
+          "prepTime": "40 min",
+          "difficulty": "medium",
+          "healthy": true,
+          "ingredients": [
+            {
+              "name": "Ribeye steak",
+              "amount": "1.5 lbs",
+              "hebSearch": "ribeye steak thin"
+            },
+            {
+              "name": "Asian pear",
+              "amount": "1",
+              "hebSearch": "asian pear"
+            },
+            {
+              "name": "Gochujang",
+              "amount": "1 container",
+              "hebSearch": "gochujang"
+            },
+            {
+              "name": "Jasmine rice",
+              "amount": "2 lbs",
+              "hebSearch": "jasmine rice"
+            },
+            {
+              "name": "Sesame seeds",
+              "amount": "1 container",
+              "hebSearch": "sesame seeds"
+            },
+            {
+              "name": "Kimchi",
+              "amount": "16 oz",
+              "hebSearch": "kimchi"
+            }
+          ],
+          "status": "planned"
+        },
+        {
+          "day": "Tuesday",
+          "name": "Vegetable Curry with Chickpeas",
+          "category": "vegetarian",
+          "estimatedCost": 18,
+          "prepTime": "35 min",
+          "difficulty": "easy",
+          "healthy": true,
+          "ingredients": [
+            {
+              "name": "Chickpeas",
+              "amount": "2 cans",
+              "hebSearch": "chickpeas"
+            },
+            {
+              "name": "Coconut milk",
+              "amount": "2 cans",
+              "hebSearch": "coconut milk"
+            },
+            {
+              "name": "Spinach",
+              "amount": "10 oz",
+              "hebSearch": "spinach fresh"
+            },
+            {
+              "name": "Curry paste",
+              "amount": "1 jar",
+              "hebSearch": "curry paste"
+            },
+            {
+              "name": "Naan bread",
+              "amount": "1 pack",
+              "hebSearch": "naan bread"
+            },
+            {
+              "name": "Yellow onion",
+              "amount": "1",
+              "hebSearch": "yellow onion"
+            }
+          ],
+          "status": "planned"
+        },
+        {
+          "day": "Wednesday",
+          "name": "Chicken Tikka Masala",
+          "category": "indian",
+          "estimatedCost": 22,
+          "prepTime": "45 min",
+          "difficulty": "medium",
+          "healthy": true,
+          "ingredients": [
+            {
+              "name": "Chicken thighs",
+              "amount": "2 lbs",
+              "hebSearch": "chicken thighs boneless"
+            },
+            {
+              "name": "Greek yogurt",
+              "amount": "16 oz",
+              "hebSearch": "greek yogurt plain"
+            },
+            {
+              "name": "Heavy cream",
+              "amount": "1 pint",
+              "hebSearch": "heavy cream"
+            },
+            {
+              "name": "Basmati rice",
+              "amount": "2 lbs",
+              "hebSearch": "basmati rice"
+            },
+            {
+              "name": "Tikka masala sauce",
+              "amount": "1 jar",
+              "hebSearch": "tikka masala sauce"
+            },
+            {
+              "name": "Fresh ginger",
+              "amount": "1 piece",
+              "hebSearch": "ginger root"
+            }
+          ],
+          "status": "planned"
+        },
+        {
+          "day": "Thursday",
+          "name": "Grilled Salmon with Asparagus",
+          "category": "seafood",
+          "estimatedCost": 28,
+          "prepTime": "25 min",
+          "difficulty": "medium",
+          "healthy": true,
+          "ingredients": [
+            {
+              "name": "Atlantic salmon fillets",
+              "amount": "1.5 lbs",
+              "hebSearch": "salmon fillet fresh"
+            },
+            {
+              "name": "Fresh asparagus",
+              "amount": "1 bunch",
+              "hebSearch": "asparagus fresh"
+            },
+            {
+              "name": "Lemon",
+              "amount": "2",
+              "hebSearch": "lemon"
+            },
+            {
+              "name": "Olive oil",
+              "amount": "1 bottle",
+              "hebSearch": "olive oil extra virgin"
+            },
+            {
+              "name": "Garlic",
+              "amount": "1 bulb",
+              "hebSearch": "garlic"
+            },
+            {
+              "name": "Sea salt",
+              "amount": "1 container",
+              "hebSearch": "sea salt"
+            }
+          ],
+          "status": "planned"
+        },
+        {
+          "day": "Friday",
+          "name": "Pan-Seared Cod with Lemon Butter",
+          "category": "seafood",
+          "estimatedCost": 30,
+          "prepTime": "20 min",
+          "difficulty": "easy",
+          "healthy": true,
+          "ingredients": [
+            {
+              "name": "Cod fillets",
+              "amount": "1.5 lbs",
+              "hebSearch": "cod fillet fresh"
+            },
+            {
+              "name": "Unsalted butter",
+              "amount": "1 stick",
+              "hebSearch": "butter unsalted"
+            },
+            {
+              "name": "Fresh parsley",
+              "amount": "1 bunch",
+              "hebSearch": "parsley fresh"
+            },
+            {
+              "name": "Capers",
+              "amount": "1 jar",
+              "hebSearch": "capers"
+            },
+            {
+              "name": "White wine",
+              "amount": "1 bottle",
+              "hebSearch": "white wine cooking"
+            },
+            {
+              "name": "Green beans",
+              "amount": "1 lb",
+              "hebSearch": "green beans fresh"
+            }
+          ],
+          "status": "planned"
+        },
+        {
+          "day": "Saturday",
+          "name": "Mediterranean Chicken Bowl",
+          "category": "mediterranean",
+          "estimatedCost": 26,
+          "prepTime": "30 min",
+          "difficulty": "easy",
+          "healthy": true,
+          "ingredients": [
+            {
+              "name": "Chicken breast",
+              "amount": "2 lbs",
+              "hebSearch": "chicken breast boneless"
+            },
+            {
+              "name": "Cucumber",
+              "amount": "2",
+              "hebSearch": "cucumber"
+            },
+            {
+              "name": "Cherry tomatoes",
+              "amount": "1 pint",
+              "hebSearch": "tomatoes cherry"
+            },
+            {
+              "name": "Feta cheese",
+              "amount": "8 oz",
+              "hebSearch": "feta cheese"
+            },
+            {
+              "name": "Quinoa",
+              "amount": "2 lbs",
+              "hebSearch": "quinoa"
+            },
+            {
+              "name": "Hummus",
+              "amount": "10 oz",
+              "hebSearch": "hummus"
+            },
+            {
+              "name": "Red onion",
+              "amount": "1",
+              "hebSearch": "red onion"
+            }
+          ],
+          "status": "planned"
+        }
+      ],
+      "budget": {
+        "allocated": 200,
+        "estimatedMealCost": 174,
+        "buffer": 17.400000000000002,
+        "totalWithBuffer": 191.4,
+        "remaining": 8.599999999999994
+      },
+      "metadata": {
+        "generatedAt": "2026-02-07T16:49:49.470Z",
+        "exclusionsCount": 0,
+        "generatedBy": "DinnerAutomation v2.0",
+        "rebuiltAt": "2026-02-07T17:55:46.294Z",
+        "rebuildReason": "exclusion_request",
+        "originalPlan": {
+          "weekOf": "2026-02-07",
+          "meals": [
+            {
+              "day": "Sunday",
+              "name": "Pork Tenderloin with Roasted Vegetables",
+              "category": "american",
+              "estimatedCost": 23,
+              "prepTime": "45 min",
+              "difficulty": "medium",
+              "healthy": true,
+              "ingredients": [
+                {
+                  "name": "Pork tenderloin",
+                  "amount": "1.5 lbs",
+                  "hebSearch": "pork tenderloin"
+                },
+                {
+                  "name": "Brussels sprouts",
+                  "amount": "1.5 lbs",
+                  "hebSearch": "brussels sprouts"
+                },
+                {
+                  "name": "Sweet potatoes",
+                  "amount": "2 lbs",
+                  "hebSearch": "sweet potatoes"
+                },
+                {
+                  "name": "Dijon mustard",
+                  "amount": "1 jar",
+                  "hebSearch": "dijon mustard"
+                },
+                {
+                  "name": "Fresh rosemary",
+                  "amount": "1 bunch",
+                  "hebSearch": "rosemary fresh"
+                },
+                {
+                  "name": "Balsamic vinegar",
+                  "amount": "1 bottle",
+                  "hebSearch": "balsamic vinegar"
+                }
+              ],
+              "status": "planned"
+            },
+            {
+              "day": "Monday",
+              "name": "Korean Beef Bulgogi Bowl",
+              "category": "asian",
+              "estimatedCost": 27,
+              "prepTime": "40 min",
+              "difficulty": "medium",
+              "healthy": true,
+              "ingredients": [
+                {
+                  "name": "Ribeye steak",
+                  "amount": "1.5 lbs",
+                  "hebSearch": "ribeye steak thin"
+                },
+                {
+                  "name": "Asian pear",
+                  "amount": "1",
+                  "hebSearch": "asian pear"
+                },
+                {
+                  "name": "Gochujang",
+                  "amount": "1 container",
+                  "hebSearch": "gochujang"
+                },
+                {
+                  "name": "Jasmine rice",
+                  "amount": "2 lbs",
+                  "hebSearch": "jasmine rice"
+                },
+                {
+                  "name": "Sesame seeds",
+                  "amount": "1 container",
+                  "hebSearch": "sesame seeds"
+                },
+                {
+                  "name": "Kimchi",
+                  "amount": "16 oz",
+                  "hebSearch": "kimchi"
+                }
+              ],
+              "status": "planned"
+            },
+            {
+              "day": "Tuesday",
+              "name": "Vegetable Curry with Chickpeas",
+              "category": "vegetarian",
+              "estimatedCost": 18,
+              "prepTime": "35 min",
+              "difficulty": "easy",
+              "healthy": true,
+              "ingredients": [
+                {
+                  "name": "Chickpeas",
+                  "amount": "2 cans",
+                  "hebSearch": "chickpeas"
+                },
+                {
+                  "name": "Coconut milk",
+                  "amount": "2 cans",
+                  "hebSearch": "coconut milk"
+                },
+                {
+                  "name": "Spinach",
+                  "amount": "10 oz",
+                  "hebSearch": "spinach fresh"
+                },
+                {
+                  "name": "Curry paste",
+                  "amount": "1 jar",
+                  "hebSearch": "curry paste"
+                },
+                {
+                  "name": "Naan bread",
+                  "amount": "1 pack",
+                  "hebSearch": "naan bread"
+                },
+                {
+                  "name": "Yellow onion",
+                  "amount": "1",
+                  "hebSearch": "yellow onion"
+                }
+              ],
+              "status": "planned"
+            },
+            {
+              "day": "Wednesday",
+              "name": "Chicken Tikka Masala",
+              "category": "indian",
+              "estimatedCost": 22,
+              "prepTime": "45 min",
+              "difficulty": "medium",
+              "healthy": true,
+              "ingredients": [
+                {
+                  "name": "Chicken thighs",
+                  "amount": "2 lbs",
+                  "hebSearch": "chicken thighs boneless"
+                },
+                {
+                  "name": "Greek yogurt",
+                  "amount": "16 oz",
+                  "hebSearch": "greek yogurt plain"
+                },
+                {
+                  "name": "Heavy cream",
+                  "amount": "1 pint",
+                  "hebSearch": "heavy cream"
+                },
+                {
+                  "name": "Basmati rice",
+                  "amount": "2 lbs",
+                  "hebSearch": "basmati rice"
+                },
+                {
+                  "name": "Tikka masala sauce",
+                  "amount": "1 jar",
+                  "hebSearch": "tikka masala sauce"
+                },
+                {
+                  "name": "Fresh ginger",
+                  "amount": "1 piece",
+                  "hebSearch": "ginger root"
+                }
+              ],
+              "status": "planned"
+            },
+            {
+              "day": "Thursday",
+              "name": "Grilled Salmon with Asparagus",
+              "category": "seafood",
+              "estimatedCost": 28,
+              "prepTime": "25 min",
+              "difficulty": "medium",
+              "healthy": true,
+              "ingredients": [
+                {
+                  "name": "Atlantic salmon fillets",
+                  "amount": "1.5 lbs",
+                  "hebSearch": "salmon fillet fresh"
+                },
+                {
+                  "name": "Fresh asparagus",
+                  "amount": "1 bunch",
+                  "hebSearch": "asparagus fresh"
+                },
+                {
+                  "name": "Lemon",
+                  "amount": "2",
+                  "hebSearch": "lemon"
+                },
+                {
+                  "name": "Olive oil",
+                  "amount": "1 bottle",
+                  "hebSearch": "olive oil extra virgin"
+                },
+                {
+                  "name": "Garlic",
+                  "amount": "1 bulb",
+                  "hebSearch": "garlic"
+                },
+                {
+                  "name": "Sea salt",
+                  "amount": "1 container",
+                  "hebSearch": "sea salt"
+                }
+              ],
+              "status": "planned"
+            },
+            {
+              "day": "Friday",
+              "name": "Pan-Seared Cod with Lemon Butter",
+              "category": "seafood",
+              "estimatedCost": 30,
+              "prepTime": "20 min",
+              "difficulty": "easy",
+              "healthy": true,
+              "ingredients": [
+                {
+                  "name": "Cod fillets",
+                  "amount": "1.5 lbs",
+                  "hebSearch": "cod fillet fresh"
+                },
+                {
+                  "name": "Unsalted butter",
+                  "amount": "1 stick",
+                  "hebSearch": "butter unsalted"
+                },
+                {
+                  "name": "Fresh parsley",
+                  "amount": "1 bunch",
+                  "hebSearch": "parsley fresh"
+                },
+                {
+                  "name": "Capers",
+                  "amount": "1 jar",
+                  "hebSearch": "capers"
+                },
+                {
+                  "name": "White wine",
+                  "amount": "1 bottle",
+                  "hebSearch": "white wine cooking"
+                },
+                {
+                  "name": "Green beans",
+                  "amount": "1 lb",
+                  "hebSearch": "green beans fresh"
+                }
+              ],
+              "status": "planned"
+            },
+            {
+              "day": "Saturday",
+              "name": "Mediterranean Chicken Bowl",
+              "category": "mediterranean",
+              "estimatedCost": 26,
+              "prepTime": "30 min",
+              "difficulty": "easy",
+              "healthy": true,
+              "ingredients": [
+                {
+                  "name": "Chicken breast",
+                  "amount": "2 lbs",
+                  "hebSearch": "chicken breast boneless"
+                },
+                {
+                  "name": "Cucumber",
+                  "amount": "2",
+                  "hebSearch": "cucumber"
+                },
+                {
+                  "name": "Cherry tomatoes",
+                  "amount": "1 pint",
+                  "hebSearch": "tomatoes cherry"
+                },
+                {
+                  "name": "Feta cheese",
+                  "amount": "8 oz",
+                  "hebSearch": "feta cheese"
+                },
+                {
+                  "name": "Quinoa",
+                  "amount": "2 lbs",
+                  "hebSearch": "quinoa"
+                },
+                {
+                  "name": "Hummus",
+                  "amount": "10 oz",
+                  "hebSearch": "hummus"
+                },
+                {
+                  "name": "Red onion",
+                  "amount": "1",
+                  "hebSearch": "red onion"
+                }
+              ],
+              "status": "planned"
+            }
+          ],
+          "budget": {
+            "allocated": 200,
+            "estimatedMealCost": 174,
+            "buffer": 17.400000000000002,
+            "totalWithBuffer": 191.4,
+            "remaining": 8.599999999999994
+          },
+          "metadata": {
+            "generatedAt": "2026-02-07T16:49:49.470Z",
+            "exclusionsCount": 0,
+            "generatedBy": "DinnerAutomation v2.0"
+          }
+        }
+      }
+    },
+    "appliedExclusions": [
+      {
+        "ingredient": "kimchi",
+        "reason": "preference",
+        "substitute": null
+      },
+      {
+        "ingredient": "fresh asparagus",
+        "reason": "preference",
+        "substitute": "green beans"
+      },
+      {
+        "ingredient": "capers",
+        "reason": "preference",
+        "substitute": null
+      }
+    ],
+    "substitutions": [
+      {
+        "day": "Monday",
+        "oldMeal": "Korean Beef Bulgogi Bowl",
+        "newMeal": "Stuffed Bell Peppers",
+        "reason": "Kimchi excluded"
+      },
+      {
+        "day": "Thursday",
+        "oldMeal": "Grilled Salmon with Asparagus",
+        "newMeal": "Lemon Herb Grilled Chicken",
+        "reason": "Fresh asparagus excluded (substituted with green beans)"
+      },
+      {
+        "day": "Friday",
+        "oldMeal": "Pan-Seared Cod with Lemon Butter",
+        "newMeal": "Fish Tacos with Mango Salsa",
+        "reason": "Capers excluded"
+      }
+    ],
+    "budgetChange": {
+      "old": 174,
+      "new": 156
+    }
+  },
+  "cartUpdateResult": {
+    "success": false,
+    "error": "HEB_PASSWORD not set in environment variables. Set it with: export HEB_PASSWORD=your_password",
+    "itemsAdded": 0,
+    "itemsFailed": [],
+    "fallbackList": {
+      "items": [
+        {
+          "name": "Pork tenderloin",
+          "searchTerm": "pork tenderloin",
+          "amount": "1.5 lbs",
+          "hebUrl": "https://www.heb.com/search?q=pork%20tenderloin"
+        },
+        {
+          "name": "Brussels sprouts",
+          "searchTerm": "brussels sprouts",
+          "amount": "1.5 lbs",
+          "hebUrl": "https://www.heb.com/search?q=brussels%20sprouts"
+        },
+        {
+          "name": "Sweet potatoes",
+          "searchTerm": "sweet potatoes",
+          "amount": "2 lbs",
+          "hebUrl": "https://www.heb.com/search?q=sweet%20potatoes"
+        },
+        {
+          "name": "Dijon mustard",
+          "searchTerm": "dijon mustard",
+          "amount": "1 jar",
+          "hebUrl": "https://www.heb.com/search?q=dijon%20mustard"
+        },
+        {
+          "name": "Fresh rosemary",
+          "searchTerm": "rosemary fresh",
+          "amount": "1 bunch",
+          "hebUrl": "https://www.heb.com/search?q=rosemary%20fresh"
+        },
+        {
+          "name": "Balsamic vinegar",
+          "searchTerm": "balsamic vinegar",
+          "amount": "1 bottle",
+          "hebUrl": "https://www.heb.com/search?q=balsamic%20vinegar"
+        },
+        {
+          "name": "Ground turkey",
+          "searchTerm": "ground turkey",
+          "amount": "1.5 lbs",
+          "hebUrl": "https://www.heb.com/search?q=ground%20turkey"
+        },
+        {
+          "name": "Bell peppers",
+          "searchTerm": "bell peppers large",
+          "amount": "6",
+          "hebUrl": "https://www.heb.com/search?q=bell%20peppers%20large"
+        },
+        {
+          "name": "Quinoa",
+          "searchTerm": "quinoa",
+          "amount": "1 lb",
+          "hebUrl": "https://www.heb.com/search?q=quinoa"
+        },
+        {
+          "name": "Black beans",
+          "searchTerm": "black beans",
+          "amount": "1 can",
+          "hebUrl": "https://www.heb.com/search?q=black%20beans"
+        },
+        {
+          "name": "Diced tomatoes",
+          "searchTerm": "diced tomatoes",
+          "amount": "1 can",
+          "hebUrl": "https://www.heb.com/search?q=diced%20tomatoes"
+        },
+        {
+          "name": "Shredded cheese",
+          "searchTerm": "cheese shredded mexican",
+          "amount": "8 oz",
+          "hebUrl": "https://www.heb.com/search?q=cheese%20shredded%20mexican"
+        },
+        {
+          "name": "Chickpeas",
+          "searchTerm": "chickpeas",
+          "amount": "2 cans",
+          "hebUrl": "https://www.heb.com/search?q=chickpeas"
+        },
+        {
+          "name": "Coconut milk",
+          "searchTerm": "coconut milk",
+          "amount": "2 cans",
+          "hebUrl": "https://www.heb.com/search?q=coconut%20milk"
+        },
+        {
+          "name": "Spinach",
+          "searchTerm": "spinach fresh",
+          "amount": "10 oz",
+          "hebUrl": "https://www.heb.com/search?q=spinach%20fresh"
+        },
+        {
+          "name": "Curry paste",
+          "searchTerm": "curry paste",
+          "amount": "1 jar",
+          "hebUrl": "https://www.heb.com/search?q=curry%20paste"
+        },
+        {
+          "name": "Naan bread",
+          "searchTerm": "naan bread",
+          "amount": "1 pack",
+          "hebUrl": "https://www.heb.com/search?q=naan%20bread"
+        },
+        {
+          "name": "Yellow onion",
+          "searchTerm": "yellow onion",
+          "amount": "1",
+          "hebUrl": "https://www.heb.com/search?q=yellow%20onion"
+        },
+        {
+          "name": "Chicken thighs",
+          "searchTerm": "chicken thighs boneless",
+          "amount": "2 lbs",
+          "hebUrl": "https://www.heb.com/search?q=chicken%20thighs%20boneless"
+        },
+        {
+          "name": "Greek yogurt",
+          "searchTerm": "greek yogurt plain",
+          "amount": "16 oz",
+          "hebUrl": "https://www.heb.com/search?q=greek%20yogurt%20plain"
+        },
+        {
+          "name": "Heavy cream",
+          "searchTerm": "heavy cream",
+          "amount": "1 pint",
+          "hebUrl": "https://www.heb.com/search?q=heavy%20cream"
+        },
+        {
+          "name": "Basmati rice",
+          "searchTerm": "basmati rice",
+          "amount": "2 lbs",
+          "hebUrl": "https://www.heb.com/search?q=basmati%20rice"
+        },
+        {
+          "name": "Tikka masala sauce",
+          "searchTerm": "tikka masala sauce",
+          "amount": "1 jar",
+          "hebUrl": "https://www.heb.com/search?q=tikka%20masala%20sauce"
+        },
+        {
+          "name": "Fresh ginger",
+          "searchTerm": "ginger root",
+          "amount": "1 piece",
+          "hebUrl": "https://www.heb.com/search?q=ginger%20root"
+        },
+        {
+          "name": "Chicken thighs",
+          "searchTerm": "chicken thighs bone-in",
+          "amount": "2 lbs",
+          "hebUrl": "https://www.heb.com/search?q=chicken%20thighs%20bone-in"
+        },
+        {
+          "name": "Lemon",
+          "searchTerm": "lemon",
+          "amount": "3",
+          "hebUrl": "https://www.heb.com/search?q=lemon"
+        },
+        {
+          "name": "Fresh thyme",
+          "searchTerm": "thyme fresh",
+          "amount": "1 bunch",
+          "hebUrl": "https://www.heb.com/search?q=thyme%20fresh"
+        },
+        {
+          "name": "Oregano",
+          "searchTerm": "oregano dried",
+          "amount": "1 container",
+          "hebUrl": "https://www.heb.com/search?q=oregano%20dried"
+        },
+        {
+          "name": "Couscous",
+          "searchTerm": "couscous",
+          "amount": "1 lb",
+          "hebUrl": "https://www.heb.com/search?q=couscous"
+        },
+        {
+          "name": "Zucchini",
+          "searchTerm": "zucchini",
+          "amount": "3",
+          "hebUrl": "https://www.heb.com/search?q=zucchini"
+        },
+        {
+          "name": "White fish fillets",
+          "searchTerm": "tilapia fillet",
+          "amount": "1.5 lbs",
+          "hebUrl": "https://www.heb.com/search?q=tilapia%20fillet"
+        },
+        {
+          "name": "Corn tortillas",
+          "searchTerm": "corn tortillas",
+          "amount": "1 pack",
+          "hebUrl": "https://www.heb.com/search?q=corn%20tortillas"
+        },
+        {
+          "name": "Mango",
+          "searchTerm": "mango",
+          "amount": "2",
+          "hebUrl": "https://www.heb.com/search?q=mango"
+        },
+        {
+          "name": "Red onion",
+          "searchTerm": "red onion",
+          "amount": "1",
+          "hebUrl": "https://www.heb.com/search?q=red%20onion"
+        },
+        {
+          "name": "Jalapeno",
+          "searchTerm": "jalapeno",
+          "amount": "2",
+          "hebUrl": "https://www.heb.com/search?q=jalapeno"
+        },
+        {
+          "name": "Cabbage slaw mix",
+          "searchTerm": "coleslaw mix",
+          "amount": "1 bag",
+          "hebUrl": "https://www.heb.com/search?q=coleslaw%20mix"
+        },
+        {
+          "name": "Chipotle mayo",
+          "searchTerm": "chipotle mayo",
+          "amount": "1 bottle",
+          "hebUrl": "https://www.heb.com/search?q=chipotle%20mayo"
+        },
+        {
+          "name": "Chicken breast",
+          "searchTerm": "chicken breast boneless",
+          "amount": "2 lbs",
+          "hebUrl": "https://www.heb.com/search?q=chicken%20breast%20boneless"
+        },
+        {
+          "name": "Cucumber",
+          "searchTerm": "cucumber",
+          "amount": "2",
+          "hebUrl": "https://www.heb.com/search?q=cucumber"
+        },
+        {
+          "name": "Cherry tomatoes",
+          "searchTerm": "tomatoes cherry",
+          "amount": "1 pint",
+          "hebUrl": "https://www.heb.com/search?q=tomatoes%20cherry"
+        },
+        {
+          "name": "Feta cheese",
+          "searchTerm": "feta cheese",
+          "amount": "8 oz",
+          "hebUrl": "https://www.heb.com/search?q=feta%20cheese"
+        },
+        {
+          "name": "Hummus",
+          "searchTerm": "hummus",
+          "amount": "10 oz",
+          "hebUrl": "https://www.heb.com/search?q=hummus"
+        }
+      ],
+      "totalItems": 42,
+      "note": "Cart automation unavailable. Please use these links to add items manually."
+    }
+  },
+  "emailResult": {
+    "success": false,
+    "error": "Invalid login: 535 5.7.8 Error: authentication failed"
+  },
+  "status": "completed"
+}

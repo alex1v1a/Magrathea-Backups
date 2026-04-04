@@ -1,0 +1,319 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.cblcars",
+  "data": {
+    "config": {
+      "title": "CB-LCARS Dashboard",
+      "theme": "cblcars",
+      "views": [
+        {
+          "title": "Main",
+          "path": "main",
+          "icon": "mdi:star-trek",
+          "type": "sections",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "custom:cb-lcars-elbow-card",
+                  "cblcars_card_type": "cb-lcars-header",
+                  "cblcars_card_config": {
+                    "label": "CB-LCARS Control Panel",
+                    "variables": {
+                      "card": {
+                        "border": {
+                          "left": {"size": 200},
+                          "top": {"size": 45, "left_radius": 150},
+                          "color": "var(--picard-dark-gray)"
+                        }
+                      },
+                      "text": {
+                        "label": {
+                          "padding": {"left": 56, "top": 35},
+                          "font_size": "24"
+                        }
+                      }
+                    }
+                  },
+                  "layout_options": {"grid_columns": 12, "grid_rows": 2}
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Quick Actions"
+                },
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard",
+                  "cblcars_card_config": {
+                    "label": "Living Room",
+                    "show_label": true,
+                    "entity": "light.soft_lights",
+                    "tap_action": {"action": "toggle"}
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard-right",
+                  "cblcars_card_config": {
+                    "label": "Front Yard",
+                    "show_label": true,
+                    "entity": "switch.front_yard_powerswitch",
+                    "tap_action": {"action": "toggle"}
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard-filled",
+                  "cblcars_card_config": {
+                    "label": "Lounge Lamp",
+                    "show_label": true,
+                    "entity": "switch.lounge_lamp_powerswitch",
+                    "tap_action": {"action": "toggle"}
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard-filled-right",
+                  "cblcars_card_config": {
+                    "label": "Kitchen Lamp",
+                    "show_label": true,
+                    "entity": "switch.kitchen_lamp_powerswitch",
+                    "tap_action": {"action": "toggle"}
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Status"
+                },
+                {
+                  "type": "custom:cb-lcars-label-card",
+                  "cblcars_card_config": {
+                    "label": "System Online",
+                    "show_label": true,
+                    "variables": {
+                      "text": {
+                        "label": {
+                          "font_size": 32,
+                          "font_weight": 100,
+                          "color": {"default": "var(--picard-light-green)"}
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Weather",
+          "path": "weather",
+          "icon": "mdi:weather-partly-cloudy",
+          "type": "sections",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "custom:cb-lcars-elbow-card",
+                  "cblcars_card_type": "cb-lcars-header",
+                  "cblcars_card_config": {
+                    "label": "Weather Station",
+                    "variables": {
+                      "card": {
+                        "border": {
+                          "left": {"size": 200},
+                          "top": {"size": 45, "left_radius": 150},
+                          "color": "var(--picard-blue)"
+                        }
+                      },
+                      "text": {
+                        "label": {
+                          "padding": {"left": 56, "top": 35},
+                          "font_size": "24"
+                        }
+                      }
+                    }
+                  },
+                  "layout_options": {"grid_columns": 12, "grid_rows": 2}
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Current Conditions"
+                },
+                {
+                  "type": "weather-forecast",
+                  "entity": "weather.forecast_home",
+                  "show_current": true,
+                  "show_forecast": true,
+                  "forecast_type": "daily"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "All Devices",
+          "path": "devices",
+          "icon": "mdi:home-automation",
+          "type": "sections",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "custom:cb-lcars-elbow-card",
+                  "cblcars_card_type": "cb-lcars-header",
+                  "cblcars_card_config": {
+                    "label": "All Devices",
+                    "variables": {
+                      "card": {
+                        "border": {
+                          "left": {"size": 200},
+                          "top": {"size": 45, "left_radius": 150},
+                          "color": "var(--picard-orange)"
+                        }
+                      },
+                      "text": {
+                        "label": {
+                          "padding": {"left": 56, "top": 35},
+                          "font_size": "24"
+                        }
+                      }
+                    }
+                  },
+                  "layout_options": {"grid_columns": 12, "grid_rows": 2}
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Lights"
+                },
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard",
+                  "cblcars_card_config": {
+                    "label": "Soft Lights",
+                    "show_label": true,
+                    "entity": "light.soft_lights",
+                    "tap_action": {"action": "toggle"}
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard",
+                  "cblcars_card_config": {
+                    "label": "RGBWIC String Lights",
+                    "show_label": true,
+                    "entity": "light.rgbwic_string_lights_l",
+                    "tap_action": {"action": "toggle"}
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard",
+                  "cblcars_card_config": {
+                    "label": "Foyer",
+                    "show_label": true,
+                    "entity": "light.foyer",
+                    "tap_action": {"action": "toggle"}
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard",
+                  "cblcars_card_config": {
+                    "label": "Front Door",
+                    "show_label": true,
+                    "entity": "light.front_door",
+                    "tap_action": {"action": "toggle"}
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard",
+                  "cblcars_card_config": {
+                    "label": "Lounge",
+                    "show_label": true,
+                    "entity": "light.lounge",
+                    "tap_action": {"action": "toggle"}
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard",
+                  "cblcars_card_config": {
+                    "label": "Pool Light",
+                    "show_label": true,
+                    "entity": "light.pool_light",
+                    "tap_action": {"action": "toggle"}
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Switches"
+                },
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard-filled",
+                  "cblcars_card_config": {
+                    "label": "Front Yard",
+                    "show_label": true,
+                    "entity": "switch.front_yard_powerswitch",
+                    "tap_action": {"action": "toggle"}
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard-filled",
+                  "cblcars_card_config": {
+                    "label": "Kitchen Lamp",
+                    "show_label": true,
+                    "entity": "switch.kitchen_lamp_powerswitch",
+                    "tap_action": {"action": "toggle"}
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard-filled",
+                  "cblcars_card_config": {
+                    "label": "Lounge Lamp",
+                    "show_label": true,
+                    "entity": "switch.lounge_lamp_powerswitch",
+                    "tap_action": {"action": "toggle"}
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

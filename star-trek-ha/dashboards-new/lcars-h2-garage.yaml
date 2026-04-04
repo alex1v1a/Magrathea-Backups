@@ -1,0 +1,163 @@
+title: H2 Garage
+path: lcars-h2-garage
+icon: mdi:garage
+badges: []
+cards:
+  - type: markdown
+    card_mod:
+      class: header-left
+    content: '# HOUSE 2 — GARAGE'
+
+  - type: horizontal-stack
+    card_mod:
+      class: middle-left
+    cards:
+      - type: button
+        name: Overview
+        icon: mdi:home-analytics
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-house1
+        card_mod:
+          class: button-bar-left
+      - type: button
+        name: Living
+        icon: mdi:sofa
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h2-living
+        card_mod:
+          class: button-small
+      - type: button
+        name: Kitchen
+        icon: mdi:stove
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h2-kitchen
+        card_mod:
+          class: button-small
+      - type: button
+        name: Primary
+        icon: mdi:bed-king
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h2-bedroom
+        card_mod:
+          class: button-small
+      - type: button
+        name: Office
+        icon: mdi:laptop
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h2-office
+        card_mod:
+          class: button-small
+      - type: button
+        name: Garage
+        icon: mdi:garage
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h2-garage
+        card_mod:
+          class: button-small
+      - type: button
+        name: Outdoor
+        icon: mdi:tree
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h2-outdoor
+        card_mod:
+          class: button-bar-right
+
+  - type: markdown
+    card_mod:
+      class: header-contained
+    content: '# GARAGE CONTROLS'
+
+  - type: grid
+    columns: 4
+    square: false
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 🚪 DOOR'
+          - type: cover
+            entity: cover.h2_garage_door
+            name: Garage Door
+            card_mod:
+              class: middle-contained
+          - type: entities
+            card_mod:
+              class: middle-contained
+            entities:
+              - entity: binary_sensor.h2_garage_door_sensor
+                name: Door Sensor
+              - entity: sensor.h2_garage_door_last_opened
+                name: Last Opened
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 💡 LIGHTS'
+          - type: grid
+            columns: 2
+            square: true
+            cards:
+              - type: button
+                entity: light.h2_garage_main
+                name: Main
+                tap_action:
+                  action: toggle
+                card_mod:
+                  class: button-lozenge-left
+              - type: button
+                entity: light.h2_garage_workbench
+                name: Workbench
+                tap_action:
+                  action: toggle
+                card_mod:
+                  class: button-lozenge-right
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 🌡️ CLIMATE'
+          - type: sensor
+            entity: sensor.h2_garage_temperature
+            name: Temperature
+            card_mod:
+              class: middle-contained
+          - type: sensor
+            entity: sensor.h2_garage_humidity
+            name: Humidity
+            card_mod:
+              class: middle-contained
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 📡 SENSORS'
+          - type: entities
+            card_mod:
+              class: middle-contained
+            entities:
+              - entity: binary_sensor.h2_garage_motion
+                name: Motion
+              - entity: binary_sensor.h2_garage_occupancy
+                name: Occupancy
+              - entity: sensor.h2_garage_air_quality
+                name: Air Quality
+
+  - type: markdown
+    card_mod:
+      class: footer-left
+    content: '## GARAGE — HOUSE 2'

@@ -1,0 +1,509 @@
+# ==========================================
+# LCARS MASTER NAVIGATION CONFIGURATION
+# ==========================================
+# This file contains reusable navigation components
+# for the 5 LCARS dashboard views:
+# - Bridge (Main Command)
+# - Engineering (Systems/Climate)
+# - Science (Sensors/Data)
+# - Security (Locks/Alarms/Cameras)
+# - Quarters (Bedroom/Personal)
+#
+# Include this as a sidebar in each dashboard using
+# the !include directive or by copying the relevant section
+# ==========================================
+
+# ==========================================
+# NAVIGATION SIDEBAR - Vertical Stack
+# ==========================================
+# Copy this section to each dashboard's left sidebar
+# Each button navigates to a different view
+# The current view button is highlighted with active styling
+# ==========================================
+
+navigation_sidebar_bridge:
+  type: vertical-stack
+  cards:
+    - type: markdown
+      card_mod:
+        class: header-left
+        style: |
+          ha-card {
+            background: #FF9900 !important;
+          }
+      content: '# NAVIGATION'
+
+    - type: button
+      name: "BRIDGE"
+      icon: mdi:star-four-points
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-bridge
+      card_mod:
+        class: button-lozenge-left
+        style: |
+          ha-card {
+            background: #FFCC99 !important;
+            border-left: 8px solid #FF9900 !important;
+          }
+
+    - type: button
+      name: "ENGINEERING"
+      icon: mdi:engine
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-engineering
+      card_mod:
+        class: button-lozenge-left
+
+    - type: button
+      name: "SCIENCE"
+      icon: mdi:telescope
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-science
+      card_mod:
+        class: button-lozenge-left
+
+    - type: button
+      name: "SECURITY"
+      icon: mdi:shield
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-security
+      card_mod:
+        class: button-lozenge-left
+
+    - type: button
+      name: "QUARTERS"
+      icon: mdi:bed
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-quarters
+      card_mod:
+        class: button-lozenge-left
+
+    - type: markdown
+      card_mod:
+        class: footer-left
+        style: |
+          ha-card {
+            min-height: 60px !important;
+          }
+      content: '## USS HOME'
+
+navigation_sidebar_engineering:
+  type: vertical-stack
+  cards:
+    - type: markdown
+      card_mod:
+        class: header-left
+        style: |
+          ha-card {
+            background: #FF9900 !important;
+          }
+      content: '# NAVIGATION'
+
+    - type: button
+      name: "BRIDGE"
+      icon: mdi:star-four-points
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-bridge
+      card_mod:
+        class: button-lozenge-left
+
+    - type: button
+      name: "ENGINEERING"
+      icon: mdi:engine
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-engineering
+      card_mod:
+        class: button-lozenge-left
+        style: |
+          ha-card {
+            background: #FFCC99 !important;
+            border-left: 8px solid #FF9900 !important;
+          }
+
+    - type: button
+      name: "SCIENCE"
+      icon: mdi:telescope
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-science
+      card_mod:
+        class: button-lozenge-left
+
+    - type: button
+      name: "SECURITY"
+      icon: mdi:shield
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-security
+      card_mod:
+        class: button-lozenge-left
+
+    - type: button
+      name: "QUARTERS"
+      icon: mdi:bed
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-quarters
+      card_mod:
+        class: button-lozenge-left
+
+    - type: markdown
+      card_mod:
+        class: footer-left
+        style: |
+          ha-card {
+            min-height: 60px !important;
+          }
+      content: '## USS HOME'
+
+navigation_sidebar_science:
+  type: vertical-stack
+  cards:
+    - type: markdown
+      card_mod:
+        class: header-left
+        style: |
+          ha-card {
+            background: #FF9900 !important;
+          }
+      content: '# NAVIGATION'
+
+    - type: button
+      name: "BRIDGE"
+      icon: mdi:star-four-points
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-bridge
+      card_mod:
+        class: button-lozenge-left
+
+    - type: button
+      name: "ENGINEERING"
+      icon: mdi:engine
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-engineering
+      card_mod:
+        class: button-lozenge-left
+
+    - type: button
+      name: "SCIENCE"
+      icon: mdi:telescope
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-science
+      card_mod:
+        class: button-lozenge-left
+        style: |
+          ha-card {
+            background: #FFCC99 !important;
+            border-left: 8px solid #FF9900 !important;
+          }
+
+    - type: button
+      name: "SECURITY"
+      icon: mdi:shield
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-security
+      card_mod:
+        class: button-lozenge-left
+
+    - type: button
+      name: "QUARTERS"
+      icon: mdi:bed
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-quarters
+      card_mod:
+        class: button-lozenge-left
+
+    - type: markdown
+      card_mod:
+        class: footer-left
+        style: |
+          ha-card {
+            min-height: 60px !important;
+          }
+      content: '## USS HOME'
+
+navigation_sidebar_security:
+  type: vertical-stack
+  cards:
+    - type: markdown
+      card_mod:
+        class: header-left
+        style: |
+          ha-card {
+            background: #FF9900 !important;
+          }
+      content: '# NAVIGATION'
+
+    - type: button
+      name: "BRIDGE"
+      icon: mdi:star-four-points
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-bridge
+      card_mod:
+        class: button-lozenge-left
+
+    - type: button
+      name: "ENGINEERING"
+      icon: mdi:engine
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-engineering
+      card_mod:
+        class: button-lozenge-left
+
+    - type: button
+      name: "SCIENCE"
+      icon: mdi:telescope
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-science
+      card_mod:
+        class: button-lozenge-left
+
+    - type: button
+      name: "SECURITY"
+      icon: mdi:shield
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-security
+      card_mod:
+        class: button-lozenge-left
+        style: |
+          ha-card {
+            background: #FFCC99 !important;
+            border-left: 8px solid #FF9900 !important;
+          }
+
+    - type: button
+      name: "QUARTERS"
+      icon: mdi:bed
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-quarters
+      card_mod:
+        class: button-lozenge-left
+
+    - type: markdown
+      card_mod:
+        class: footer-left
+        style: |
+          ha-card {
+            min-height: 60px !important;
+          }
+      content: '## USS HOME'
+
+navigation_sidebar_quarters:
+  type: vertical-stack
+  cards:
+    - type: markdown
+      card_mod:
+        class: header-left
+        style: |
+          ha-card {
+            background: #FF9900 !important;
+          }
+      content: '# NAVIGATION'
+
+    - type: button
+      name: "BRIDGE"
+      icon: mdi:star-four-points
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-bridge
+      card_mod:
+        class: button-lozenge-left
+
+    - type: button
+      name: "ENGINEERING"
+      icon: mdi:engine
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-engineering
+      card_mod:
+        class: button-lozenge-left
+
+    - type: button
+      name: "SCIENCE"
+      icon: mdi:telescope
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-science
+      card_mod:
+        class: button-lozenge-left
+
+    - type: button
+      name: "SECURITY"
+      icon: mdi:shield
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-security
+      card_mod:
+        class: button-lozenge-left
+
+    - type: button
+      name: "QUARTERS"
+      icon: mdi:bed
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-quarters
+      card_mod:
+        class: button-lozenge-left
+        style: |
+          ha-card {
+            background: #FFCC99 !important;
+            border-left: 8px solid #FF9900 !important;
+          }
+
+    - type: markdown
+      card_mod:
+        class: footer-left
+        style: |
+          ha-card {
+            min-height: 60px !important;
+          }
+      content: '## USS HOME'
+
+# ==========================================
+# TOP NAVIGATION BAR - Horizontal
+# ==========================================
+# Alternative horizontal navigation for top of dashboards
+# ==========================================
+
+top_navigation_bar:
+  type: horizontal-stack
+  card_mod:
+    class: header-contained
+    style: |
+      ha-card {
+        background: #8899FF !important;
+      }
+  cards:
+    - type: button
+      name: "BRIDGE"
+      icon: mdi:star-four-points
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-bridge
+      card_mod:
+        class: button-small
+
+    - type: button
+      name: "ENGINEERING"
+      icon: mdi:engine
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-engineering
+      card_mod:
+        class: button-small
+
+    - type: button
+      name: "SCIENCE"
+      icon: mdi:telescope
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-science
+      card_mod:
+        class: button-small
+
+    - type: button
+      name: "SECURITY"
+      icon: mdi:shield
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-security
+      card_mod:
+        class: button-small
+
+    - type: button
+      name: "QUARTERS"
+      icon: mdi:bed
+      show_name: true
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /lcars-quarters
+      card_mod:
+        class: button-small
+
+# ==========================================
+# VIEW COLOR SCHEME REFERENCE
+# ==========================================
+# Each view has its own accent color scheme:
+#
+# Bridge:     Orange (#FF9900) - Command/Primary
+# Engineering: Blue (#8899FF) - Systems/Technical
+# Science:    Purple (#CC99FF) - Data/Analysis
+# Security:   Red (#CC4444) - Alerts/Protection
+# Quarters:   Peach (#FFAA90) - Comfort/Personal
+# ==========================================

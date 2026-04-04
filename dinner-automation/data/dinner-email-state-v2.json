@@ -1,0 +1,14 @@
+{
+  "currentSession": {
+    "sessionId": "sess_20260214_090309",
+    "weekOf": "2026-02-14",
+    "status": "SENT",
+    "sentAt": "2026-02-14T15:03:09.000Z",
+    "emailOpened": false,
+    "replyReceived": false,
+    "confirmed": false,
+    "smsSent": false,
+    "hoursElapsed": 6
+  },
+  "history": []
+}

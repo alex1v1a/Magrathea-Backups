@@ -1,0 +1,172 @@
+[
+  {
+    "id": "action-1770321606729-11yzfkxe1",
+    "type": "approve",
+    "confidence": "high",
+    "source": "sferrazzaa96@gmail.com",
+    "details": null,
+    "status": "pending",
+    "createdAt": "2026-02-05T20:00:06.729Z"
+  },
+  {
+    "id": "action-1770321606729-11pgla6ad",
+    "type": "reject",
+    "confidence": "high",
+    "source": "sferrazzaa96@gmail.com",
+    "details": null,
+    "status": "pending",
+    "createdAt": "2026-02-05T20:00:06.729Z"
+  },
+  {
+    "id": "action-1770321606729-xkzwt8g9o",
+    "type": "adjust",
+    "confidence": "medium",
+    "source": "sferrazzaa96@gmail.com",
+    "details": [
+      {
+        "day": "sunday",
+        "suggestedChange": null,
+        "originalLine": "> Every Sunday at 9:00 AM, the system will:"
+      },
+      {
+        "day": "sunday",
+        "suggestedChange": null,
+        "originalLine": "> Your first automated meal plan arrives this Sunday at 9:00 AM CST!"
+      }
+    ],
+    "status": "completed",
+    "createdAt": "2026-02-05T20:00:06.729Z",
+    "completedAt": "2026-02-07T17:55:48.217Z"
+  },
+  {
+    "id": "action-1770321606729-y795dodxl",
+    "type": "add_to_cart",
+    "confidence": "medium",
+    "source": "sferrazzaa96@gmail.com",
+    "details": [
+      "[item]\" → Adds items",
+      "the dinners to your iCloud \"Dinner\" calendar at 5:00 PM daily",
+      "[item]\" → Adds items to the cart",
+      "concern",
+      "to know:"
+    ],
+    "status": "completed",
+    "createdAt": "2026-02-05T20:00:06.729Z",
+    "completedAt": "2026-02-07T17:55:48.217Z"
+  },
+  {
+    "id": "action-1770321606729-l6qs8ei0r",
+    "type": "remove_from_cart",
+    "confidence": "medium",
+    "source": "sferrazzaa96@gmail.com",
+    "details": null,
+    "status": "completed",
+    "createdAt": "2026-02-05T20:00:06.729Z",
+    "completedAt": "2026-02-07T17:55:48.217Z"
+  },
+  {
+    "id": "action-1770321606729-oijhzu2j7",
+    "type": "budget_concern",
+    "confidence": "medium",
+    "source": "sferrazzaa96@gmail.com",
+    "details": null,
+    "status": "pending",
+    "createdAt": "2026-02-05T20:00:06.729Z"
+  },
+  {
+    "id": "action-1770486854316-xsr6rryzp",
+    "type": "approve",
+    "confidence": "high",
+    "source": "alex@1v1a.com",
+    "details": null,
+    "status": "pending",
+    "createdAt": "2026-02-07T17:54:14.316Z"
+  },
+  {
+    "id": "action-1770486854316-iao8pj358",
+    "type": "reject",
+    "confidence": "high",
+    "source": "alex@1v1a.com",
+    "details": null,
+    "status": "pending",
+    "createdAt": "2026-02-07T17:54:14.316Z"
+  },
+  {
+    "id": "action-1770486854316-phumejcyh",
+    "type": "adjust",
+    "confidence": "medium",
+    "source": "alex@1v1a.com",
+    "details": [
+      {
+        "day": "sunday",
+        "suggestedChange": "Roasted Vegetables american | Prep: 45 min | $23 Pork tenderloin (1",
+        "originalLine": "Exclude Kimchi, Fresh asparagus, Capers We already have Dijon mustard, Sesame seeds, Sea salt, Olive oil On Feb 7, 2026, at 10:49 AM, Marvin Dinner Bot <MarvinMartian9@icloud.com> wrote: Weekly Dinner Plan Week of: 2026-02-07 Generated: 2/7/2026, 10:49:49 AM Budget Summary Allocated: $200.00 Estimated: $174.00 Buffer (10%): $17.40 Total: $191.40 Remaining: $8.60 This Week's Meals 1. Sunday: Pork Tenderloin with Roasted Vegetables american | Prep: 45 min | $23 Pork tenderloin (1.5 lbs) Brussels sprouts (1.5 lbs) Sweet potatoes (2 lbs) Dijon mustard (1 jar) Fresh rosemary (1 bunch) Balsamic vinegar (1 bottle) 2. Monday: Korean Beef Bulgogi Bowl asian | Prep: 40 min | $27 Ribeye steak (1.5 lbs) Asian pear (1) Gochujang (1 container) Jasmine rice (2 lbs) Sesame seeds (1 container) Kimchi (16 oz) 3. Tuesday: Vegetable Curry with Chickpeas vegetarian | Prep: 35 min | $18 Chickpeas (2 cans) Coconut milk (2 cans) Spinach (10 oz) Curry paste (1 jar) Naan bread (1 pack) Yellow onion (1) 4. Wednesday: Chicken Tikka Masala indian | Prep: 45 min | $22 Chicken thighs (2 lbs) Greek yogurt (16 oz) Heavy cream (1 pint) Basmati rice (2 lbs) Tikka masala sauce (1 jar) Fresh ginger (1 piece) 5. Thursday: Grilled Salmon with Asparagus seafood | Prep: 25 min | $28 Atlantic salmon fillets (1.5 lbs) Fresh asparagus (1 bunch) Lemon (2) Olive oil (1 bottle) Garlic (1 bulb) Sea salt (1 container) 6. Friday: Pan-Seared Cod with Lemon Butter seafood | Prep: 20 min | $30 Cod fillets (1.5 lbs) Unsalted butter (1 stick) Fresh parsley (1 bunch) Capers (1 jar) White wine (1 bottle) Green beans (1 lb) 7. Saturday: Mediterranean Chicken Bowl mediterranean | Prep: 30 min | $26 Chicken breast (2 lbs) Cucumber (2) Cherry tomatoes (1 pint) Feta cheese (8 oz) Quinoa (2 lbs) Hummus (10 oz) Red onion (1) Reply Instructions Reply to this email to make changes: \"approve\" or \"looks good\" - Confirm the plan \"adjust [meal name]\" - Request changes to a specific meal \"change [day] to [new meal]\" - Swap a meal \"swap [day1] and [day2]\" - Swap days \"add [item] to cart\" - Add extra items Marvin - Dinner Automation System MarvinMartian9@icloud.com"
+      }
+    ],
+    "status": "completed",
+    "createdAt": "2026-02-07T17:54:14.316Z",
+    "completedAt": "2026-02-07T17:55:48.217Z"
+  },
+  {
+    "id": "action-1770486854316-xntz5059u",
+    "type": "add_to_cart",
+    "confidence": "medium",
+    "source": "alex@1v1a.com",
+    "details": [
+      "[item]",
+      "[item] to cart\" - Add extra items Marvin - Dinner Automation System MarvinMartian9@icloud",
+      "Summary Allocated: $200"
+    ],
+    "status": "completed",
+    "createdAt": "2026-02-07T17:54:14.316Z",
+    "completedAt": "2026-02-07T17:55:48.217Z"
+  },
+  {
+    "id": "action-1770486854316-ihzmnz93u",
+    "type": "exclude_ingredient",
+    "confidence": "high",
+    "source": "alex@1v1a.com",
+    "details": null,
+    "status": "pending",
+    "createdAt": "2026-02-07T17:54:14.316Z"
+  },
+  {
+    "id": "action-1770486854316-52hxf3lxp",
+    "type": "stock_items",
+    "confidence": "high",
+    "source": "alex@1v1a.com",
+    "details": [
+      {
+        "ingredient": "dijon mustard",
+        "confidence": "high",
+        "context": "we already have dijon mustard,"
+      }
+    ],
+    "status": "pending",
+    "createdAt": "2026-02-07T17:54:14.316Z"
+  },
+  {
+    "id": "action-1770519611639-4r2mjzssm",
+    "type": "exclude_ingredient",
+    "confidence": "high",
+    "source": "alex@1v1a.com",
+    "details": null,
+    "status": "pending",
+    "createdAt": "2026-02-08T03:00:11.639Z"
+  },
+  {
+    "id": "action-1770519611639-nxw14orc4",
+    "type": "stock_items",
+    "confidence": "high",
+    "source": "alex@1v1a.com",
+    "details": [
+      {
+        "ingredient": "olive oil",
+        "confidence": "medium",
+        "context": "have olive oil and"
+      }
+    ],
+    "status": "pending",
+    "createdAt": "2026-02-08T03:00:11.639Z"
+  }
+]

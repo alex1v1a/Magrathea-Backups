@@ -1,0 +1,472 @@
+# ============================================
+# LCARS QUARTERS DASHBOARD
+# Comfort, Lighting, Scenes, and Sleep Modes
+# ============================================
+
+title: Quarters
+icon: mdi:bed
+path: quarters
+panel: false
+background: "#000000"
+
+cards:
+  # ==========================================
+  # TOP HEADER BAR - Quarters Tan/Gold Theme
+  # ==========================================
+  - type: custom:button-card
+    template: lcars_header
+    name: "USS HOME ASSISTANT - CREW QUARTERS"
+    styles:
+      card:
+        - background: "linear-gradient(90deg, #FFCC99 0%, #FFCC99 15%, #FFCC66 15%, #FFCC66 85%, #FFCC99 85%, #FFCC99 100%)"
+        - color: "#000000"
+
+  # ==========================================
+  # WAKE/SLEEP STATUS ROW
+  # ==========================================
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: lcars_tan_pill
+        name: "Wake Up"
+        icon: mdi:weather-sunset-up
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          target:
+            entity_id: scene.good_morning
+        styles:
+          card:
+            - background: "#FFCC99"
+            - height: "45px"
+            - border-radius: "15px 0px 0px 15px"
+          name:
+            - color: "#000000"
+            - font-size: "14px"
+            - justify-self: flex-start
+            - padding-left: "15px"
+          icon:
+            - color: "#000000"
+            
+      - type: custom:button-card
+        template: lcars_gold_pill
+        name: "Sleep Mode"
+        icon: mdi:weather-night
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          target:
+            entity_id: scene.good_night
+        styles:
+          card:
+            - background: "#FFCC66"
+            - height: "45px"
+          name:
+            - color: "#000000"
+            - font-size: "14px"
+            - padding-left: "15px"
+          icon:
+            - color: "#000000"
+            
+      - type: custom:button-card
+        template: lcars_blue_pill
+        name: "Do Not Disturb"
+        icon: mdi:bed
+        entity: input_boolean.do_not_disturb
+        tap_action:
+          action: toggle
+        styles:
+          card:
+            - background: "#9999CC"
+            - height: "45px"
+          name:
+            - color: "#000000"
+            - font-size: "14px"
+          icon:
+            - color: "#000000"
+
+  # ==========================================
+  # MAIN GRID LAYOUT
+  # ==========================================
+  - type: custom:layout-card
+    layout_type: custom:grid-layout
+    layout:
+      grid-template-columns: 250px 1fr 250px
+      grid-template-areas: |
+        "nav main scenes"
+      gap: 15px
+    cards:
+      # ========================================
+      # LEFT NAVIGATION
+      # ========================================
+      - type: vertical-stack
+        view_layout:
+          grid-area: nav
+        cards:
+          - type: custom:button-card
+            template: lcars_side_elbow_left
+            styles:
+              card:
+                - background: "#FFCC99"
+                
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Bridge"
+            icon: mdi:view-dashboard
+            styles:
+              card:
+                - border-color: "#FFCC99"
+              name:
+                - color: "#FFCC99"
+              icon:
+                - color: "#FFCC99"
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-bridge
+              
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Engineering"
+            icon: mdi:engine
+            styles:
+              card:
+                - border-color: "#FFCC99"
+              name:
+                - color: "#FFCC99"
+              icon:
+                - color: "#FFCC99"
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-engineering
+              
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Science"
+            icon: mdi:flask
+            styles:
+              card:
+                - border-color: "#FFCC99"
+              name:
+                - color: "#FFCC99"
+              icon:
+                - color: "#FFCC99"
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-science
+              
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Tactical"
+            icon: mdi:shield
+            styles:
+              card:
+                - border-color: "#FFCC99"
+              name:
+                - color: "#FFCC99"
+              icon:
+                - color: "#FFCC99"
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-tactical
+
+      # ========================================
+      # MAIN CONTENT - Room Controls
+      # ========================================
+      - type: vertical-stack
+        view_layout:
+          grid-area: main
+        cards:
+          # Living Room Header
+          - type: custom:button-card
+            template: lcars_header
+            name: "LIVING QUARTERS"
+            styles:
+              card:
+                - background: "linear-gradient(90deg, #FFCC66 0%, #FFCC66 15%, #FFCC99 15%, #FFCC99 85%, #FFCC66 85%, #FFCC66 100%)"
+
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                template: lcars_light_button
+                entity: light.living_room_main
+                name: "Main Lights"
+                icon: mdi:lightbulb
+                
+              - type: custom:button-card
+                template: lcars_light_button
+                entity: light.living_room_ambient
+                name: "Ambient"
+                icon: mdi:led-strip
+                
+              - type: custom:button-card
+                template: lcars_light_button
+                entity: light.living_room_accent
+                name: "Accent"
+                icon: mdi:lamp
+
+          - type: entities
+            entities:
+              - entity: light.living_room_main
+                name: "Brightness"
+                type: custom:slider-entity-row
+            card_mod:
+              style: |
+                ha-card {
+                  background: #000000 !important;
+                  border: 1px solid #FFCC99 !important;
+                  border-radius: 0px 15px 0px 15px !important;
+                }
+
+          # Bedroom Header
+          - type: custom:button-card
+            template: lcars_header
+            name: "SLEEPING QUARTERS"
+            styles:
+              card:
+                - background: "linear-gradient(90deg, #FFCC66 0%, #FFCC66 15%, #FFCC99 15%, #FFCC99 85%, #FFCC66 85%, #FFCC66 100%)"
+
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                template: lcars_light_button
+                entity: light.bedroom_main
+                name: "Main Lights"
+                icon: mdi:lightbulb
+                
+              - type: custom:button-card
+                template: lcars_light_button
+                entity: light.bedroom_nightstand
+                name: "Nightstand"
+                icon: mdi:lamp
+                
+              - type: custom:button-card
+                template: lcars_light_button
+                entity: light.bedroom_closet
+                name: "Closet"
+                icon: mdi:door-closed
+
+          - type: entities
+            entities:
+              - entity: light.bedroom_main
+                name: "Brightness"
+                type: custom:slider-entity-row
+            card_mod:
+              style: |
+                ha-card {
+                  background: #000000 !important;
+                  border: 1px solid #FFCC99 !important;
+                  border-radius: 0px 15px 0px 15px !important;
+                }
+
+          # Window Treatments Header
+          - type: custom:button-card
+            template: lcars_header
+            name: "WINDOW TREATMENTS"
+            styles:
+              card:
+                - background: "linear-gradient(90deg, #FFCC66 0%, #FFCC66 15%, #FFCC99 15%, #FFCC99 85%, #FFCC66 85%, #FFCC66 100%)"
+
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                template: lcars_tan_pill
+                entity: cover.living_room_blinds
+                name: "Living Room"
+                icon: mdi:blinds
+                tap_action:
+                  action: toggle
+                
+              - type: custom:button-card
+                template: lcars_tan_pill
+                entity: cover.bedroom_blinds
+                name: "Bedroom"
+                icon: mdi:blinds
+                tap_action:
+                  action: toggle
+                
+              - type: custom:button-card
+                template: lcars_tan_pill
+                entity: cover.kitchen_blinds
+                name: "Kitchen"
+                icon: mdi:blinds
+                tap_action:
+                  action: toggle
+
+          # Climate Header
+          - type: custom:button-card
+            template: lcars_header
+            name: "THERMAL REGULATION"
+            styles:
+              card:
+                - background: "linear-gradient(90deg, #FFCC66 0%, #FFCC66 15%, #FFCC99 15%, #FFCC99 85%, #FFCC66 85%, #FFCC66 100%)"
+
+          - type: thermostat
+            entity: climate.bedroom
+            card_mod:
+              style: |
+                ha-card {
+                  background: #000000 !important;
+                  border: 2px solid #FFCC99 !important;
+                  border-radius: 0px 20px 0px 20px !important;
+                }
+                .name {
+                  color: #FFCC99 !important;
+                  font-family: Antonio, sans-serif !important;
+                  text-transform: uppercase !important;
+                }
+
+      # ========================================
+      # RIGHT SIDEBAR - Scenes & Quick Actions
+      # ========================================
+      - type: vertical-stack
+        view_layout:
+          grid-area: scenes
+        cards:
+          - type: custom:button-card
+            template: lcars_side_elbow_right
+            styles:
+              card:
+                - background: "#FFCC99"
+
+          # Lighting Scenes
+          - type: custom:button-card
+            template: lcars_header
+            name: "SCENES"
+            styles:
+              card:
+                - background: "#FFCC99"
+                - border-radius: "0px 15px 0px 0px"
+                - height: "35px"
+
+          - type: custom:button-card
+            template: lcars_scene_button
+            entity: scene.relaxing
+            name: "Relaxing"
+            icon: mdi:spa
+            styles:
+              card:
+                - background: "#FFCC66"
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              target:
+                entity_id: scene.relaxing
+
+          - type: custom:button-card
+            template: lcars_scene_button
+            entity: scene.reading
+            name: "Reading"
+            icon: mdi:book-open
+            styles:
+              card:
+                - background: "#FFCC66"
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              target:
+                entity_id: scene.reading
+
+          - type: custom:button-card
+            template: lcars_scene_button
+            entity: scene.romantic
+            name: "Romantic"
+            icon: mdi:candle
+            styles:
+              card:
+                - background: "#FFCC66"
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              target:
+                entity_id: scene.romantic
+
+          - type: custom:button-card
+            template: lcars_scene_button
+            entity: scene.energize
+            name: "Energize"
+            icon: mdi:lightning-bolt
+            styles:
+              card:
+                - background: "#FFCC66"
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              target:
+                entity_id: scene.energize
+
+          # Media Scenes
+          - type: custom:button-card
+            template: lcars_header
+            name: "MEDIA"
+            styles:
+              card:
+                - background: "#FFCC66"
+                - border-radius: "0px 15px 0px 0px"
+                - height: "35px"
+
+          - type: custom:button-card
+            template: lcars_tan_pill
+            name: "Movie Mode"
+            icon: mdi:movie-open
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              target:
+                entity_id: scene.movie_time
+
+          - type: custom:button-card
+            template: lcars_tan_pill
+            name: "Music"
+            icon: mdi:music
+            tap_action:
+              action: call-service
+              service: scene.music_mode
+
+          - type: custom:button-card
+            template: lcars_tan_pill
+            name: "Party"
+            icon: mdi:party-popper
+            tap_action:
+              action: call-service
+              service: scene.party_mode
+
+          # Quick Actions
+          - type: custom:button-card
+            template: lcars_header
+            name: "QUICK ACTIONS"
+            styles:
+              card:
+                - background: "#FFCC66"
+                - border-radius: "0px 15px 0px 0px"
+                - height: "35px"
+
+          - type: custom:button-card
+            template: lcars_red_pill
+            name: "All Lights Off"
+            icon: mdi:lightbulb-off
+            tap_action:
+              action: call-service
+              service: light.turn_off
+              target:
+                entity_id: all
+
+          - type: custom:button-card
+            template: lcars_blue_pill
+            name: "Reset Climate"
+            icon: mdi:thermostat
+            tap_action:
+              action: call-service
+              service: climate.set_preset_mode
+              target:
+                entity_id: all
+              data:
+                preset_mode: "home"
+
+  # ==========================================
+  # FOOTER
+  # ==========================================
+  - type: custom:button-card
+    template: lcars_footer
+    styles:
+      card:
+        - background: "linear-gradient(90deg, #FFCC99 0%, #FFCC99 80%, #000000 80%, #000000 85%, #FFCC66 85%, #FFCC66 100%)"

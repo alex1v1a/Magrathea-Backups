@@ -1,0 +1,300 @@
+title: LCARS Security
+path: lcars-devices-security
+icon: mdi:shield-home
+badges: []
+cards:
+  # ==========================================
+  # HEADER + NAVIGATION
+  # ==========================================
+  - type: markdown
+    card_mod:
+      class: header-left
+    content: '# DEVICE CONTROL — SECURITY GRID'
+
+  - type: horizontal-stack
+    card_mod:
+      class: middle-left
+    cards:
+      - type: button
+        name: Overview
+        icon: mdi:star-four-points
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-overview
+        card_mod:
+          class: button-bar-left
+      - type: button
+        name: Weather
+        icon: mdi:weather-partly-cloudy
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-devices-weather
+        card_mod:
+          class: button-small
+      - type: button
+        name: Cameras
+        icon: mdi:cctv
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-devices-cameras
+        card_mod:
+          class: button-small
+      - type: button
+        name: Thermostats
+        icon: mdi:thermostat
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-devices-thermostats
+        card_mod:
+          class: button-small
+      - type: button
+        name: Security
+        icon: mdi:shield-home
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-devices-security
+        card_mod:
+          class: button-bar-right
+
+  # ==========================================
+  # HOUSE 1 SECURITY
+  # ==========================================
+  - type: markdown
+    card_mod:
+      class: header-contained
+    content: '# HOUSE 1 — SECURITY STATUS'
+
+  - type: grid
+    columns: 2
+    square: false
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 🚨 ALARM SYSTEM'
+          - type: alarm-panel
+            entity: alarm_control_panel.h1_alarm
+            card_mod:
+              class: middle-contained
+          - type: entities
+            card_mod:
+              class: middle-contained
+            entities:
+              - entity: sensor.h1_alarm_status
+                name: Status
+              - entity: sensor.h1_alarm_last_triggered
+                name: Last Triggered
+              - entity: binary_sensor.h1_alarm_armed
+                name: Armed
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 🔐 DOOR LOCKS'
+          - type: grid
+            columns: 2
+            square: false
+            cards:
+              - type: lock
+                entity: lock.h1_front_door
+                name: Front
+                card_mod:
+                  class: middle-contained
+              - type: lock
+                entity: lock.h1_back_door
+                name: Back
+                card_mod:
+                  class: middle-contained
+              - type: lock
+                entity: lock.h1_garage_door
+                name: Garage
+                card_mod:
+                  class: middle-contained
+              - type: lock
+                entity: lock.h1_side_door
+                name: Side
+                card_mod:
+                  class: middle-contained
+
+  # ==========================================
+  # HOUSE 1 MOTION SENSORS
+  # ==========================================
+  - type: markdown
+    card_mod:
+      class: header-left
+    content: '# H1 — MOTION DETECTION'
+
+  - type: grid
+    columns: 4
+    square: false
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 🚪 FRONT'
+          - type: button
+            entity: binary_sensor.h1_front_door_motion
+            name: Motion
+            tap_action:
+              action: more-info
+            card_mod:
+              class: button-lozenge-left
+          - type: history-graph
+            entities:
+              - entity: binary_sensor.h1_front_door_motion
+                name: Motion
+            hours_to_show: 24
+            card_mod:
+              class: footer-contained
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 🚪 BACK'
+          - type: button
+            entity: binary_sensor.h1_back_door_motion
+            name: Motion
+            tap_action:
+              action: more-info
+            card_mod:
+              class: button-lozenge-left
+          - type: history-graph
+            entities:
+              - entity: binary_sensor.h1_back_door_motion
+                name: Motion
+            hours_to_show: 24
+            card_mod:
+              class: footer-contained
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 🛋️ LIVING'
+          - type: button
+            entity: binary_sensor.h1_living_motion
+            name: Motion
+            tap_action:
+              action: more-info
+            card_mod:
+              class: button-lozenge-left
+          - type: history-graph
+            entities:
+              - entity: binary_sensor.h1_living_motion
+                name: Motion
+            hours_to_show: 24
+            card_mod:
+              class: footer-contained
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 🚗 GARAGE'
+          - type: button
+            entity: binary_sensor.h1_garage_motion
+            name: Motion
+            tap_action:
+              action: more-info
+            card_mod:
+              class: button-lozenge-left
+          - type: history-graph
+            entities:
+              - entity: binary_sensor.h1_garage_motion
+                name: Motion
+            hours_to_show: 24
+            card_mod:
+              class: footer-contained
+
+  # ==========================================
+  # HOUSE 2 SECURITY
+  # ==========================================
+  - type: markdown
+    card_mod:
+      class: header-contained
+    content: '# HOUSE 2 — SECURITY STATUS'
+
+  - type: grid
+    columns: 2
+    square: false
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 🚨 ALARM SYSTEM'
+          - type: alarm-panel
+            entity: alarm_control_panel.h2_alarm
+            card_mod:
+              class: middle-contained
+          - type: entities
+            card_mod:
+              class: middle-contained
+            entities:
+              - entity: sensor.h2_alarm_status
+                name: Status
+              - entity: sensor.h2_alarm_last_triggered
+                name: Last Triggered
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 🔐 DOOR LOCKS'
+          - type: grid
+            columns: 2
+            square: false
+            cards:
+              - type: lock
+                entity: lock.h2_front_door
+                name: Front
+                card_mod:
+                  class: middle-contained
+              - type: lock
+                entity: lock.h2_back_door
+                name: Back
+                card_mod:
+                  class: middle-contained
+
+  # ==========================================
+  # SECURITY LOG
+  # ==========================================
+  - type: markdown
+    card_mod:
+      class: header-right
+    content: '# SECURITY LOG'
+
+  - type: logbook
+    entities:
+      - entity: alarm_control_panel.h1_alarm
+        name: H1 Alarm
+      - entity: alarm_control_panel.h2_alarm
+        name: H2 Alarm
+      - entity: lock.h1_front_door
+        name: H1 Front
+      - entity: lock.h1_back_door
+        name: H1 Back
+      - entity: lock.h2_front_door
+        name: H2 Front
+      - entity: lock.h2_back_door
+        name: H2 Back
+    hours: 24
+    card_mod:
+      class: middle-right
+
+  - type: markdown
+    card_mod:
+      class: footer-right
+    content: '## SECURITY GRID — ALL SYSTEMS SECURE'

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Paper Trail Limited. Email: admin@typewrite.club, Phone: +1 (650) 427-9450, Address: 1 Tika Street, Parnell, Auckland 1052, New Zealand">
+    <title>Contact Us | Paper Trail Limited</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #ffffff; color: #111111; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        
+        /* Header */
+        .site-header { position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #e5e5e5; z-index: 100; }
+        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .main-nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 15px; }
+        .brand-logo { width: 28px; height: 28px; }
+        .nav-links { display: flex; gap: 32px; }
+        .nav-link { font-size: 14px; font-weight: 500; color: #666; transition: color 0.15s; }
+        .nav-link:hover, .nav-link.active { color: #111; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 10px 20px; font-size: 14px; font-weight: 500; border-radius: 8px; cursor: pointer; border: none; transition: all 0.15s; }
+        .btn-primary { background: #dc2626; color: white; }
+        .btn-primary:hover { background: #b91c1c; }
+        .btn-secondary { background: transparent; color: #111; border: 1px solid #e5e5e5; }
+        .btn-secondary:hover { background: #f5f5f5; }
+        
+        /* Container */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        
+        /* Page Header */
+        .page-header { padding: 64px 0 32px; text-align: center; }
+        .page-header h1 { font-family: 'Newsreader', Georgia, serif; font-size: 48px; margin-bottom: 16px; }
+        .page-header p { font-size: 18px; color: #666; max-width: 600px; margin: 0 auto; }
+        
+        /* Contact Grid */
+        .contact-section { padding: 32px 0 64px; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+        
+        /* Contact Methods */
+        .contact-methods { display: flex; flex-direction: column; gap: 24px; }
+        .contact-method { display: flex; gap: 16px; padding: 24px; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 12px; }
+        .contact-icon { font-size: 24px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 12px; border: 1px solid #e5e5e5; }
+        .contact-content h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+        .contact-content p { font-size: 14px; color: #666; margin-bottom: 8px; }
+        .contact-link { font-size: 15px; color: #dc2626; font-weight: 500; }
+        .contact-link:hover { text-decoration: underline; }
+        address { font-style: normal; font-size: 15px; color: #111; line-height: 1.6; }
+        
+        /* Contact Form */
+        .contact-form-container { background: #fafafa; border: 1px solid #e5e5e5; border-radius: 12px; padding: 32px; }
+        .contact-form-container h2 { font-family: 'Newsreader', Georgia, serif; font-size: 24px; margin-bottom: 8px; }
+        .contact-form-container > p { font-size: 14px; color: #666; margin-bottom: 24px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 6px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px 16px; border: 1px solid #e5e5e5; border-radius: 8px; font-size: 15px; background: white; font-family: inherit; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #dc2626; }
+        .form-group textarea { min-height: 120px; resize: vertical; }
+        
+        /* Map Section */
+        .map-section { padding: 64px 0; background: #fafafa; border-top: 1px solid #e5e5e5; }
+        .map-section h2 { font-family: 'Newsreader', Georgia, serif; font-size: 32px; text-align: center; margin-bottom: 32px; }
+        .map-card { display: block; background: white; border: 1px solid #e5e5e5; border-radius: 12px; overflow: hidden; transition: box-shadow 0.2s; }
+        .map-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+        .map-visual { aspect-ratio: 21/9; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative; display: flex; align-items: center; justify-content: center; }
+        .map-pin { font-size: 48px; }
+        .map-info { padding: 24px; text-align: center; }
+        .map-info h3 { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
+        .map-info p { font-size: 14px; color: #666; }
+        
+        /* Footer */
+        .site-footer { background: #fafafa; border-top: 1px solid #e5e5e5; padding: 48px 0 24px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+        @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+        .footer-description { font-size: 14px; color: #666; max-width: 280px; margin-top: 12px; }
+        .footer-links h4 { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { font-size: 14px; color: #666; }
+        .footer-links a:hover { color: #111; }
+        .footer-bottom { padding-top: 24px; border-top: 1px solid #e5e5e5; text-align: center; }
+        .footer-bottom p { font-size: 13px; color: #888; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <nav class="main-nav">
+                <a href="/" class="brand">
+                    <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="48" rx="8" fill="#dc2626"/>
+                        <path d="M14 12h20v4H14v-4zm0 10h20v4H14v-4zm0 10h14v4H14v-4z" fill="white"/>
+                    </svg>
+                    <span>Paper Trail</span>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/blog/" class="nav-link">Blog</a></li>
+                    <li><a href="/apps/reel-reviews/" class="nav-link">Reel Reviews</a></li>
+                    <li><a href="/contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Get in Touch</h1>
+                <p>We'd love to hear from you. Whether you have a question about our apps, need support, or just want to say hello.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    
+                    <!-- Contact Methods -->
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-content">
+                                <h3>Email</h3>
+                                <p>For general inquiries and support:</p>
+                                <a href="mailto:admin@typewrite.club" class="contact-link">admin@typewrite.club</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-content">
+                                <h3>Phone</h3>
+                                <p>Monday - Friday, 9am - 5pm NZST:</p>
+                                <a href="tel:+16504279450" class="contact-link">+1 (650) 427-9450</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-content">
+                                <h3>Address</h3>
+                                <address>
+                                    Paper Trail Limited<br>
+                                    1 Tika Street<br>
+                                    Parnell, Auckland 1052<br>
+                                    New Zealand
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <h2>Send us a message</h2>
+                        <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                        <form action="mailto:admin@typewrite.club" method="post" enctype="text/plain">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required placeholder="How can we help?">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required placeholder="Tell us more..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--
+            MAP SECTION - Interactive Google Maps Embed
+            ==========================================================================
+            Shows company location at 1 Tika Street, Parnell, Auckland 1052, New Zealand
+            
+            IMPLEMENTATION:
+            - Uses official Google Maps embed API (free, no API key required for basic embeds)
+            - iframe src contains URL-encoded address coordinates
+            - Clicking the card opens Google Maps in new tab for directions
+            
+            STYLING:
+            - aspect-ratio: 21/9 on parent container maintains wide cinematic ratio
+            - iframe fills 100% of container dimensions
+            - border:0 removes default iframe border
+            - loading="lazy" defers loading until section scrolls into view (performance)
+            - allowfullscreen enables fullscreen map view when clicked
+            
+            SECURITY:
+            - referrerpolicy="no-referrer-when-downgrade" limits referrer info
+            - rel="noopener" on link prevents tabnabbing vulnerability
+            ==========================================================================
+        -->
+        <section class="map-section" id="location">
+            <div class="container">
+                <h2>Find Us</h2>
+                
+                <a 
+                    href="https://www.google.com/maps/place/1+Tika+Street,+Parnell,+Auckland+1052,+New+Zealand" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="map-card"
+                    aria-label="View Paper Trail office location on Google Maps (opens in new tab)"
+                >
+                    <div class="map-visual" style="padding: 0; overflow: hidden; position: relative;">
+                        <!-- 
+                            Google Maps Embed iframe
+                            
+                            SRC EXPLANATION:
+                            The src URL is a Google Maps embed URL that contains:
+                            - Place ID and coordinates for 1 Tika Street, Parnell
+                            - Map view settings (zoom level, map type)
+                            - Language settings (en = English)
+                            
+                            To get a custom embed URL:
+                            1. Go to Google Maps
+                            2. Search for your location
+                            3. Click "Share" → "Embed a map"
+                            4. Copy the iframe src URL
+                            
+                            ATTRIBUTES:
+                            - width/height: 100% fills container
+                            - style="border:0": removes default iframe border
+                            - allowfullscreen: allows users to expand map
+                            - loading="lazy": improves page load performance
+                            - referrerpolicy: privacy protection
+                        -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3185.844453390189!2d174.7775739758669!3d-36.85539367223409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d48f5d2e6b5c1%3A0x500ef868479a6f0!2s1%20Tika%20Street%2C%20Parnell%2C%20Auckland%201052%2C%20New%20Zealand!5e0!3m2!1sen!2sus!4v1708569600000!5m2!1sen!2sus" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; position: absolute; top: 0; left: 0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Google Maps showing Paper Trail Limited office location"
+                        ></iframe>
+                    </div>
+                    <div class="map-info">
+                        <h3>Paper Trail Limited</h3>
+                        <p>1 Tika Street, Parnell, Auckland 1052, New Zealand</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="brand">
+                        <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="8" fill="#dc2626"/>
+                            <path d="M14 12h20v4H14v-4zm0 10h20v4H14v-4zm0 10h14v4H14v-4z" fill="white"/>
+                        </svg>
+                        <span>Paper Trail</span>
+                    </a>
+                    <p class="footer-description">Writing the future of mobile experiences from New Zealand.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="/apps/reel-reviews/">Reel Reviews</a></li>
+                        <li><a href="/apps/coming-soon/">Coming Soon</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/privacy-policy.html">Privacy</a></li>
+                        <li><a href="/terms-of-service.html">Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:admin@typewrite.club">Email</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Paper Trail Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

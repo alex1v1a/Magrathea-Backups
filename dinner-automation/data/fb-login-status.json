@@ -1,0 +1,8 @@
+{
+  "status": "login_required",
+  "lastCheck": "2026-02-07T20:00:00Z",
+  "fixedAt": "2026-02-07T20:04:00Z",
+  "issue": "Facebook session expired",
+  "solution": "Added --login-only flag to script for easy re-authentication",
+  "nextAction": "Run: node facebook-marketplace-automation.js --login-only"
+}

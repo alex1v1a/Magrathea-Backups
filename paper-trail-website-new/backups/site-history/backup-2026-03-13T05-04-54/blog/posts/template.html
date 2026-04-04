@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}} | Paper Trail Blog</title>
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../blog.css">
+</head>
+<body class="blog-post-page">
+
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="/" class="brand">
+                <span class="brand-icon">📝</span>
+                <span class="brand-text">Paper Trail</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/blog/" class="nav-link active">Blog</a></li>
+                <li><a href="/apps/reel-reviews/" class="nav-link">Reel Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="post-header">
+            <div class="container">
+                <span class="post-category">{{CATEGORY}}</span>
+                <h1>{{TITLE}}</h1>
+                <div class="post-meta-header">
+                    <time datetime="{{DATE_ISO}}">{{DATE_FORMATTED}}</time> • 
+                    <span>{{READ_TIME}} min read</span>
+                </div>
+            </div>
+        </article>
+
+        <div class="post-content-full">
+            <div class="container">
+                {{CONTENT}}
+
+                <div class="references">
+                    <h3>References & Resources</h3>
+                    <ul>
+                        {{REFERENCES}}
+                    </ul>
+                </div>
+
+                <div class="share-section">
+                    <h3>Share this post</h3>
+                    <div class="share-buttons">
+                        <a href="#" class="share-btn share-twitter">Twitter</a>
+                        <a href="#" class="share-btn share-linkedin">LinkedIn</a>
+                        <a href="#" class="share-btn share-facebook">Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2024 Paper Trail Limited</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../blog.js"></script>
+</body>
+</html>

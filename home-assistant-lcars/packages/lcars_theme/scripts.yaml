@@ -1,0 +1,242 @@
+# ============================================
+# LCARS THEME - SCRIPTS
+# Interaction scripts for the LCARS interface
+# ============================================
+
+# ============================================
+# ALERT SCRIPTS
+# ============================================
+script:
+  # Activate Red Alert
+  lcars_red_alert:
+    alias: LCARS - Red Alert
+    sequence:
+      - service: input_boolean.turn_on
+        target:
+          entity_id: input_boolean.red_alert
+      - service: input_boolean.turn_off
+        target:
+          entity_id: input_boolean.yellow_alert
+      - service: input_select.select_option
+        target:
+          entity_id: input_select.lcars_view_mode
+        data:
+          option: Alert Mode
+      - service: persistent_notification.create
+        data:
+          title: "RED ALERT"
+          message: "Red Alert has been activated. All hands to battle stations."
+          notification_id: red_alert
+    icon: mdi:alert-octagon
+
+  # Activate Yellow Alert
+  lcars_yellow_alert:
+    alias: LCARS - Yellow Alert
+    sequence:
+      - service: input_boolean.turn_on
+        target:
+          entity_id: input_boolean.yellow_alert
+      - service: input_boolean.turn_off
+        target:
+          entity_id: input_boolean.red_alert
+      - service: persistent_notification.create
+        data:
+          title: "Yellow Alert"
+          message: "Yellow Alert has been activated. Stand by for further orders."
+          notification_id: yellow_alert
+    icon: mdi:alert
+
+  # Cancel All Alerts
+  lcars_all_clear:
+    alias: LCARS - All Clear
+    sequence:
+      - service: input_boolean.turn_off
+        target:
+          entity_id:
+            - input_boolean.red_alert
+            - input_boolean.yellow_alert
+      - service: input_select.select_option
+        target:
+          entity_id: input_select.lcars_view_mode
+        data:
+          option: Standard
+      - service: persistent_notification.dismiss
+        data:
+          notification_id: red_alert
+      - service: persistent_notification.dismiss
+        data:
+          notification_id: yellow_alert
+    icon: mdi:check-circle
+
+# ============================================
+# THEME SCRIPTS
+# ============================================
+  # Set LCARS Theme
+  lcars_set_theme:
+    alias: LCARS - Set Theme
+    sequence:
+      - service: frontend.set_theme
+        data:
+          name: "Star Trek LCARS"
+      - service: persistent_notification.create
+        data:
+          title: "LCARS Theme"
+          message: "Star Trek LCARS theme has been activated."
+    icon: mdi:star-trek
+
+  # Set Night Mode
+  lcars_night_mode:
+    alias: LCARS - Night Mode
+    sequence:
+      - service: input_select.select_option
+        target:
+          entity_id: input_select.lcars_view_mode
+        data:
+          option: Night Mode
+      - service: light.turn_on
+        target:
+          entity_id: all
+        data:
+          brightness_pct: 10
+          color_temp_kelvin: 2200
+    icon: mdi:weather-night
+
+  # Set Day Mode
+  lcars_day_mode:
+    alias: LCARS - Day Mode
+    sequence:
+      - service: input_select.select_option
+        target:
+          entity_id: input_select.lcars_view_mode
+        data:
+          option: Standard
+      - service: light.turn_on
+        target:
+          entity_id: all
+        data:
+          brightness_pct: 100
+          color_temp_kelvin: 4000
+    icon: mdi:weather-sunny
+
+# ============================================
+# NAVIGATION SCRIPTS
+# ============================================
+  # Go to Bridge
+  lcars_goto_bridge:
+    alias: LCARS - Navigate to Bridge
+    sequence:
+      - service: browser_mod/navigate
+        data:
+          path: /lcars-bridge
+    icon: mdi:view-dashboard
+
+  # Go to Engineering
+  lcars_goto_engineering:
+    alias: LCARS - Navigate to Engineering
+    sequence:
+      - service: browser_mod/navigate
+        data:
+          path: /lcars-engineering
+    icon: mdi:engine
+
+  # Go to Science
+  lcars_goto_science:
+    alias: LCARS - Navigate to Science
+    sequence:
+      - service: browser_mod/navigate
+        data:
+          path: /lcars-science
+    icon: mdi:flask
+
+  # Go to Tactical
+  lcars_goto_tactical:
+    alias: LCARS - Navigate to Tactical
+    sequence:
+      - service: browser_mod/navigate
+        data:
+          path: /lcars-tactical
+    icon: mdi:shield
+
+  # Go to Quarters
+  lcars_goto_quarters:
+    alias: LCARS - Navigate to Quarters
+    sequence:
+      - service: browser_mod/navigate
+        data:
+          path: /lcars-quarters
+    icon: mdi:bed
+
+# ============================================
+# SOUND EFFECT SCRIPTS (requires browser_mod)
+# ============================================
+  # Play LCARS Beep
+  lcars_beep:
+    alias: LCARS - Beep
+    sequence:
+      - service: browser_mod/play_audio
+        data:
+          sound: /local/lcars/sounds/lcars-beep.mp3
+          volume: 0.5
+    icon: mdi:volume-high
+
+  # Play LCARS Chime
+  lcars_chime:
+    alias: LCARS - Chime
+    sequence:
+      - service: browser_mod/play_audio
+        data:
+          sound: /local/lcars/sounds/lcars-chime.mp3
+          volume: 0.5
+    icon: mdi:bell
+
+  # Play Alert Sound
+  lcars_alert_sound:
+    alias: LCARS - Alert Sound
+    sequence:
+      - service: browser_mod/play_audio
+        data:
+          sound: /local/lcars/sounds/red-alert.mp3
+          volume: 1.0
+    icon: mdi:alert
+
+# ============================================
+# UTILITY SCRIPTS
+# ============================================
+  # Reset LCARS Counter
+  lcars_reset_counter:
+    alias: LCARS - Reset Interaction Counter
+    sequence:
+      - service: counter.reset
+        target:
+          entity_id: counter.lcars_button_presses
+    icon: mdi:counter
+
+  # Screen Saver Toggle
+  lcars_screensaver_toggle:
+    alias: LCARS - Toggle Screensaver
+    sequence:
+      - choose:
+          - conditions:
+              - condition: state
+                entity_id: timer.lcars_screensaver
+                state: idle
+            sequence:
+              - service: timer.start
+                target:
+                  entity_id: timer.lcars_screensaver
+        default:
+          - service: timer.cancel
+            target:
+              entity_id: timer.lcars_screensaver
+    icon: mdi:monitor-screenshot
+
+  # Welcome Sequence
+  lcars_welcome:
+    alias: LCARS - Welcome Sequence
+    sequence:
+      - service: script.lcars_chime
+      - service: persistent_notification.create
+        data:
+          title: "LCARS Online"
+          message: "Welcome aboard. LCARS interface is now active."
+    icon: mdi:hand-wave

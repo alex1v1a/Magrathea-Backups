@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-02-22T15:00:05.751Z",
+  "results": {
+    "email": {
+      "success": false,
+      "error": "client.sendHybridNotification is not a function"
+    },
+    "calendar": {
+      "success": false,
+      "error": "Cannot find module './icloud-calendar-sync'\nRequire stack:\n- C:\\Users\\Admin\\.openclaw\\workspace\\dinner-automation\\scripts\\complete-dinner-auto.js"
+    },
+    "heb": {
+      "success": true,
+      "pid": 1583836,
+      "items": 44,
+      "note": "Chrome opened to heb.com - extension will auto-start"
+    }
+  },
+  "allSuccessful": false,
+  "instructions": {
+    "email": "Check alex@1v1a.com for dinner plan",
+    "heb": "Click Chrome window, HEB.com loads, extension auto-adds items",
+    "calendar": "Double-click: undefined"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "timestamp": "2026-02-08T15:00:19.626Z",
+  "error": "this.emailClient.sendHybridNotification is not a function",
+  "stack": "TypeError: this.emailClient.sendHybridNotification is not a function\n    at DinnerAutomation.sendEmailSummary (/mnt/c/Users/Admin/.openclaw/workspace/dinner-automation/scripts/dinner-automation.js:354:45)\n    at DinnerAutomation.run (/mnt/c/Users/Admin/.openclaw/workspace/dinner-automation/scripts/dinner-automation.js:570:36)"
+}

@@ -1,0 +1,429 @@
+# ==========================================
+# LCARS BRIDGE - Main Command Dashboard
+# ==========================================
+# UPDATED with inline card-mod styles for reliable rendering
+# Color Scheme: Orange (#FF9900) - Command
+# ==========================================
+
+title: LCARS Bridge
+path: lcars-bridge
+icon: mdi:star-four-points
+badges: []
+cards:
+  # ==========================================
+  # LEFT COLUMN - Navigation Sidebar
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        card_mod:
+          style: |
+            ha-card {
+              background: #FF9900 !important;
+              color: #000000 !important;
+              border-radius: 30px 0 0 0 !important;
+              font-family: 'Antonio', sans-serif !important;
+              font-weight: 700 !important;
+              text-transform: uppercase !important;
+              letter-spacing: 2px !important;
+            }
+        content: '# NAVIGATION'
+
+      - type: button
+        name: "BRIDGE"
+        icon: mdi:star-four-points
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-bridge
+        card_mod:
+          style: |
+            ha-card {
+              background: #FFCC99 !important;
+              border-left: 20px solid #FF9900 !important;
+              border-radius: 30px 0 0 30px !important;
+              color: #000000 !important;
+              font-family: 'Antonio', sans-serif !important;
+              font-weight: 600 !important;
+              text-transform: uppercase !important;
+              letter-spacing: 1px !important;
+              transition: all 0.3s ease !important;
+            }
+            ha-card:hover {
+              background: #FF9900 !important;
+              border-left-color: #FFCC99 !important;
+            }
+
+      - type: button
+        name: "ENGINEERING"
+        icon: mdi:engine
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-engineering
+        card_mod:
+          style: |
+            ha-card {
+              background: #FFCC99 !important;
+              border-left: 20px solid #FF9900 !important;
+              border-radius: 30px 0 0 30px !important;
+              color: #000000 !important;
+              font-family: 'Antonio', sans-serif !important;
+              font-weight: 600 !important;
+              text-transform: uppercase !important;
+              letter-spacing: 1px !important;
+            }
+            ha-card:hover {
+              background: #FF9900 !important;
+            }
+
+      - type: button
+        name: "SCIENCE"
+        icon: mdi:telescope
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-science
+        card_mod:
+          style: |
+            ha-card {
+              background: #FFCC99 !important;
+              border-left: 20px solid #FF9900 !important;
+              border-radius: 30px 0 0 30px !important;
+              color: #000000 !important;
+              font-family: 'Antonio', sans-serif !important;
+              font-weight: 600 !important;
+              text-transform: uppercase !important;
+              letter-spacing: 1px !important;
+            }
+            ha-card:hover {
+              background: #FF9900 !important;
+            }
+
+      - type: button
+        name: "SECURITY"
+        icon: mdi:shield
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-security
+        card_mod:
+          style: |
+            ha-card {
+              background: #FFCC99 !important;
+              border-left: 20px solid #FF9900 !important;
+              border-radius: 30px 0 0 30px !important;
+              color: #000000 !important;
+              font-family: 'Antonio', sans-serif !important;
+              font-weight: 600 !important;
+              text-transform: uppercase !important;
+              letter-spacing: 1px !important;
+            }
+            ha-card:hover {
+              background: #FF9900 !important;
+            }
+
+      - type: button
+        name: "QUARTERS"
+        icon: mdi:bed
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-quarters
+        card_mod:
+          style: |
+            ha-card {
+              background: #FFCC99 !important;
+              border-left: 20px solid #FF9900 !important;
+              border-radius: 30px 0 0 30px !important;
+              color: #000000 !important;
+              font-family: 'Antonio', sans-serif !important;
+              font-weight: 600 !important;
+              text-transform: uppercase !important;
+              letter-spacing: 1px !important;
+            }
+            ha-card:hover {
+              background: #FF9900 !important;
+            }
+
+      - type: markdown
+        card_mod:
+          style: |
+            ha-card {
+              background: #000000 !important;
+              color: #FF9900 !important;
+              border-top: 4px solid #FF9900 !important;
+              font-family: 'Antonio', sans-serif !important;
+              min-height: 60px !important;
+            }
+        content: '## USS HOME'
+
+  # ==========================================
+  # CENTER COLUMN - Main Controls
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      # Command Header
+      - type: markdown
+        card_mod:
+          style: |
+            ha-card {
+              background: #FF9900 !important;
+              color: #000000 !important;
+              border-radius: 0 30px 0 0 !important;
+              font-family: 'Antonio', sans-serif !important;
+              font-weight: 700 !important;
+              text-transform: uppercase !important;
+              letter-spacing: 2px !important;
+            }
+        content: '# MAIN BRIDGE'
+
+      # Quick Actions
+      - type: horizontal-stack
+        cards:
+          - type: button
+            entity: scene.good_morning
+            name: "Good Morning"
+            icon: mdi:white-balance-sunny
+            show_name: true
+            show_icon: true
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              target:
+                entity_id: scene.good_morning
+            card_mod:
+              style: |
+                ha-card {
+                  background: #FFCC99 !important;
+                  border-left: 15px solid #FF9900 !important;
+                  border-radius: 25px 0 0 25px !important;
+                  color: #000000 !important;
+                  font-family: 'Antonio', sans-serif !important;
+                }
+
+          - type: button
+            entity: scene.good_night
+            name: "Good Night"
+            icon: mdi:weather-night
+            show_name: true
+            show_icon: true
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              target:
+                entity_id: scene.good_night
+            card_mod:
+              style: |
+                ha-card {
+                  background: #FFCC99 !important;
+                  border-right: 15px solid #FF9900 !important;
+                  border-radius: 0 25px 25px 0 !important;
+                  color: #000000 !important;
+                  font-family: 'Antonio', sans-serif !important;
+                }
+
+      # Scenes Row 2
+      - type: horizontal-stack
+        cards:
+          - type: button
+            entity: scene.movie_mode
+            name: "Movie Mode"
+            icon: mdi:movie-open
+            show_name: true
+            show_icon: true
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              target:
+                entity_id: scene.movie_mode
+            card_mod:
+              style: |
+                ha-card {
+                  background: #FFCC99 !important;
+                  border-left: 15px solid #FF9900 !important;
+                  border-radius: 25px 0 0 25px !important;
+                  color: #000000 !important;
+                  font-family: 'Antonio', sans-serif !important;
+                }
+
+          - type: button
+            entity: scene.away_mode
+            name: "Away Mode"
+            icon: mdi:shield-home
+            show_name: true
+            show_icon: true
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              target:
+                entity_id: scene.away_mode
+            card_mod:
+              style: |
+                ha-card {
+                  background: #FFCC99 !important;
+                  border-right: 15px solid #FF9900 !important;
+                  border-radius: 0 25px 25px 0 !important;
+                  color: #000000 !important;
+                  font-family: 'Antonio', sans-serif !important;
+                }
+
+      # Master Controls
+      - type: markdown
+        card_mod:
+          style: |
+            ha-card {
+              background: #CC4444 !important;
+              color: #FFFFFF !important;
+              font-family: 'Antonio', sans-serif !important;
+              font-weight: 700 !important;
+              text-transform: uppercase !important;
+            }
+        content: '# MASTER CONTROLS'
+
+      - type: horizontal-stack
+        cards:
+          - type: button
+            entity: light.all_lights
+            name: "All Lights"
+            icon: mdi:lightbulb-group
+            show_name: true
+            show_icon: true
+            show_state: true
+            card_mod:
+              style: |
+                ha-card {
+                  background: #8899FF !important;
+                  border-left: 12px solid #666688 !important;
+                  border-radius: 20px 0 0 20px !important;
+                  color: #000000 !important;
+                  font-family: 'Antonio', sans-serif !important;
+                }
+
+          - type: button
+            entity: lock.all_locks
+            name: "All Locks"
+            icon: mdi:lock
+            show_name: true
+            show_icon: true
+            show_state: true
+            card_mod:
+              style: |
+                ha-card {
+                  background: #8899FF !important;
+                  border-right: 12px solid #666688 !important;
+                  border-radius: 0 20px 20px 0 !important;
+                  color: #000000 !important;
+                  font-family: 'Antonio', sans-serif !important;
+                }
+
+      # Footer
+      - type: markdown
+        card_mod:
+          style: |
+            ha-card {
+              background: #666688 !important;
+              color: #FFFFFF !important;
+              font-family: 'Antonio', sans-serif !important;
+              text-align: center !important;
+            }
+        content: '## COMMAND AUTHORITY ACTIVE'
+
+  # ==========================================
+  # RIGHT COLUMN - Status & Media
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      # Status Header
+      - type: markdown
+        card_mod:
+          style: |
+            ha-card {
+              background: #FF9900 !important;
+              color: #000000 !important;
+              border-radius: 0 0 30px 0 !important;
+              font-family: 'Antonio', sans-serif !important;
+              font-weight: 700 !important;
+              text-transform: uppercase !important;
+              letter-spacing: 2px !important;
+            }
+        content: '# SHIP STATUS'
+
+      # Time & Date
+      - type: entities
+        entities:
+          - entity: sensor.time
+            name: "Stardate Time"
+          - entity: sensor.date
+            name: "Stardate"
+        card_mod:
+          style: |
+            ha-card {
+              background: #000000 !important;
+              color: #FF9900 !important;
+              border-left: 4px solid #FF9900 !important;
+              font-family: 'Antonio', sans-serif !important;
+            }
+
+      # Weather
+      - type: weather-forecast
+        entity: weather.home
+        show_current: true
+        show_forecast: true
+        card_mod:
+          style: |
+            ha-card {
+              background: #000000 !important;
+              color: #F5F6FA !important;
+              border-left: 4px solid #8899FF !important;
+              font-family: 'Antonio', sans-serif !important;
+            }
+
+      # Media Control
+      - type: markdown
+        card_mod:
+          style: |
+            ha-card {
+              background: #8899FF !important;
+              color: #000000 !important;
+              font-family: 'Antonio', sans-serif !important;
+              font-weight: 700 !important;
+            }
+        content: '# MEDIA SYSTEMS'
+
+      - type: media-control
+        entity: media_player.living_room_tv
+        card_mod:
+          style: |
+            ha-card {
+              background: #111111 !important;
+              color: #F5F6FA !important;
+              border-left: 4px solid #CC99FF !important;
+            }
+
+      - type: media-control
+        entity: media_player.home_audio
+        card_mod:
+          style: |
+            ha-card {
+              background: #111111 !important;
+              color: #F5F6FA !important;
+              border-left: 4px solid #CC99FF !important;
+            }
+
+      # Footer
+      - type: markdown
+        card_mod:
+          style: |
+            ha-card {
+              background: #000000 !important;
+              color: #8899FF !important;
+              border-top: 4px solid #8899FF !important;
+              font-family: 'Antonio', sans-serif !important;
+            }
+        content: '## SYSTEMS NOMINAL'

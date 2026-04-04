@@ -1,0 +1,16 @@
+{
+  "services": [
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery",
+      "displayName": "Auto Recovery",
+      "type": "daemon",
+      "status": "online",
+      "lastRecovery": "2026-02-25T17:19:20.844Z",
+      "uptimeStarted": "2026-02-24T17:49:05.162Z",
+      "checkInterval": "5m",
+      "description": "Automatic service monitoring and recovery"
+    }
+  ],
+  "lastUpdated": "2026-02-25T17:19:20.844Z"
+}

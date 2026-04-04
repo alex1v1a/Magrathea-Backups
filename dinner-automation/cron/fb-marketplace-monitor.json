@@ -1,0 +1,17 @@
+{
+  "name": "Facebook Marketplace Monitor - F-150 & Thule",
+  "schedule": {
+    "kind": "every",
+    "everyMs": 1800000
+  },
+  "payload": {
+    "kind": "agentTurn",
+    "message": "Facebook Marketplace Monitor - Check for messages\n\nThe cron job has triggered. Run the Facebook Marketplace monitor script and report any actionable buyer interest.\n\nExecute: node dinner-automation/scripts/facebook-marketplace-automation.js --monitor\n\nThis checks Facebook Marketplace messages for keywords related to F-150 and Thule box. Keywords: f-150, f150, truck, thule, box, cargo, rack, buy, interested, available, price, offer.\n\nReport summary of any new actionable messages found. If buyers are interested, alert Alexander to check his Facebook inbox.",
+    "model": "kimi-coding/k2p5",
+    "timeoutSeconds": 120,
+    "deliver": true,
+    "bestEffortDeliver": true
+  },
+  "sessionTarget": "isolated",
+  "enabled": true
+}

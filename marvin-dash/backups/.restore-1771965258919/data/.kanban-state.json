@@ -1,0 +1,226 @@
+{
+  "lastCheck": "2026-02-03T06:54:15.607Z",
+  "hash": "{\"todo\":{\"count\":6,\"titles\":[\"Amazon Subscribe & Save Audit\",\"Email Inbox Triage & Spam Cleanup\",\"Grocery & Meal Planning System\",\"Portfolio Review & Rebalancing\",\"Tax Prep 2025\",\"Vectarr Machine Shop Outreach\"]},\"inprogress\":{\"count\":5,\"titles\":[\"F-150 Facebook Marketplace Sale\",\"Home Assistant: Advanced Voice Control\",\"Home Assistant: Complete Govee Integration\",\"Home Assistant: Full HomeKit Bridge\",\"Home Assistant: Wyze Camera Integration\"]},\"review\":{\"count\":0,\"titles\":[]},\"completed\":{\"count\":8,\"titles\":[\"Docker Installation in WSL2\",\"F-150 Posted to Facebook Groups\",\"Home Assistant Container Deployed\",\"Home Assistant Onboarding Complete\",\"Kanban Board Auto-Refresh Setup\",\"OpenClaw Service Installation\",\"WSL 24/7 Service Setup\",\"WSL2 Port Forwarding Configured\"]}}",
+  "tasks": {
+    "todo": [
+      {
+        "id": "1",
+        "title": "Tax Prep 2025",
+        "description": "Collect forms, find deductions, optimize take-home. W-2s, 1099s, Vectarr LLC expenses",
+        "priority": "high",
+        "created": "2026-02-02T05:41:30.995Z",
+        "tags": [
+          "finance",
+          "urgent"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Vectarr Machine Shop Outreach",
+        "description": "Research and onboard new machine shops to the quoting portal",
+        "priority": "medium",
+        "created": "2026-02-02T05:41:30.995Z",
+        "tags": [
+          "business",
+          "outreach"
+        ]
+      },
+      {
+        "id": "grocery-system",
+        "title": "Grocery & Meal Planning System",
+        "description": "Implement weekly meal plans with automated H-E-B grocery lists",
+        "priority": "medium",
+        "created": "2026-02-02T05:41:30.995Z",
+        "tags": [
+          "home",
+          "automation"
+        ]
+      },
+      {
+        "id": "email-triage",
+        "title": "Email Inbox Triage & Spam Cleanup",
+        "description": "Organize alex@1v1a.com, filter spam, collect important documents",
+        "priority": "medium",
+        "created": "2026-02-03T06:00:00.000Z",
+        "tags": [
+          "admin",
+          "organization"
+        ]
+      },
+      {
+        "id": "amazon-sns",
+        "title": "Amazon Subscribe & Save Audit",
+        "description": "Review TP, essentials, recurring supplies for cost optimization",
+        "priority": "low",
+        "created": "2026-02-03T06:00:00.000Z",
+        "tags": [
+          "home",
+          "supplies"
+        ]
+      },
+      {
+        "id": "portfolio-review",
+        "title": "Portfolio Review & Rebalancing",
+        "description": "Analyze investments, suggest tax-advantaged strategies (SEP-IRA, Solo 401k for Vectarr)",
+        "priority": "medium",
+        "created": "2026-02-03T06:00:00.000Z",
+        "tags": [
+          "finance",
+          "investing"
+        ]
+      }
+    ],
+    "inprogress": [
+      {
+        "id": "f150-sale",
+        "title": "F-150 Facebook Marketplace Sale",
+        "description": "Posted to 4 groups (61K+ reach). Monitor inquiries and messages.",
+        "priority": "medium",
+        "created": "2026-02-02T05:41:30.995Z",
+        "tags": [
+          "sale",
+          "truck"
+        ]
+      },
+      {
+        "id": "ha-govee",
+        "title": "Home Assistant: Complete Govee Integration",
+        "description": "API connected. Add remaining wall lamps and back door lights to dashboard",
+        "priority": "medium",
+        "created": "2026-02-02T15:33:17.379Z",
+        "tags": [
+          "home-assistant",
+          "govee"
+        ]
+      },
+      {
+        "id": "ha-homekit",
+        "title": "Home Assistant: Full HomeKit Bridge",
+        "description": "Connect all Apple HomeKit devices (lights, TV, fans) to HA",
+        "priority": "medium",
+        "created": "2026-02-02T15:33:17.381Z",
+        "tags": [
+          "home-assistant",
+          "homekit"
+        ]
+      },
+      {
+        "id": "ha-wyze",
+        "title": "Home Assistant: Wyze Camera Integration",
+        "description": "Add all 23 camera feeds for room awareness and presence detection",
+        "priority": "medium",
+        "created": "2026-02-02T15:33:17.385Z",
+        "tags": [
+          "home-assistant",
+          "wyze",
+          "cameras"
+        ]
+      },
+      {
+        "id": "ha-voice",
+        "title": "Home Assistant: Advanced Voice Control",
+        "description": "Create custom automations and voice commands beyond Siri limitations",
+        "priority": "high",
+        "created": "2026-02-02T15:33:17.388Z",
+        "tags": [
+          "home-assistant",
+          "voice"
+        ]
+      }
+    ],
+    "review": [],
+    "completed": [
+      {
+        "id": "4",
+        "title": "OpenClaw Service Installation",
+        "description": "Set up Windows service for 24/7 availability with crash recovery",
+        "priority": "high",
+        "created": "2026-02-02T05:41:30.995Z",
+        "completed": "2026-02-02T05:41:30.995Z",
+        "tags": [
+          "infrastructure",
+          "reliability"
+        ]
+      },
+      {
+        "id": "docker-wsl",
+        "title": "Docker Installation in WSL2",
+        "description": "Docker 28.2.2 and docker-compose installed in Ubuntu WSL",
+        "priority": "high",
+        "completed": "2026-02-02T15:35:34.402Z",
+        "tags": [
+          "infrastructure",
+          "complete"
+        ]
+      },
+      {
+        "id": "ha-deploy",
+        "title": "Home Assistant Container Deployed",
+        "description": "Running on port 8123 via WSL2. Accessible at http://localhost:8123",
+        "priority": "high",
+        "completed": "2026-02-02T15:37:13.403Z",
+        "tags": [
+          "home-assistant",
+          "complete"
+        ]
+      },
+      {
+        "id": "ha-port-forward",
+        "title": "WSL2 Port Forwarding Configured",
+        "description": "HA accessible from Windows via localhost:8123 and LAN IP",
+        "priority": "high",
+        "completed": "2026-02-02T16:04:38.845Z",
+        "tags": [
+          "home-assistant",
+          "networking"
+        ]
+      },
+      {
+        "id": "ha-onboard",
+        "title": "Home Assistant Onboarding Complete",
+        "description": "Initial setup, user account, basic configuration done",
+        "priority": "medium",
+        "completed": "2026-02-02T16:58:13.476Z",
+        "tags": [
+          "home-assistant"
+        ]
+      },
+      {
+        "id": "f150-posts",
+        "title": "F-150 Posted to Facebook Groups",
+        "description": "Posted to 4 groups: Buda/Kyle Buy Sell, Everything Kyle TX, Shop Kyle/Austin/SM, Ventas Austin/Buda/Kyle",
+        "priority": "medium",
+        "completed": "2026-02-02T18:00:00.000Z",
+        "tags": [
+          "sale",
+          "truck",
+          "complete"
+        ]
+      },
+      {
+        "id": "kanban-setup",
+        "title": "Kanban Board Auto-Refresh Setup",
+        "description": "Scheduled task runs every 30 min, logs to file, attempts Discord/OpenClaw notification",
+        "priority": "high",
+        "completed": "2026-02-03T06:55:00.000Z",
+        "tags": [
+          "infrastructure",
+          "automation",
+          "complete"
+        ]
+      },
+      {
+        "id": "wsl-24x7",
+        "title": "WSL 24/7 Service Setup",
+        "description": "Windows scheduled task runs every 5 min to keep Ubuntu WSL running with auto-restart on failure",
+        "priority": "high",
+        "completed": "2026-02-03T06:55:00.000Z",
+        "tags": [
+          "infrastructure",
+          "wsl",
+          "complete"
+        ]
+      }
+    ]
+  }
+}

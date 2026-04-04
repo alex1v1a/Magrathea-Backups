@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<!--
+  ==============================================================================
+  PAPER TRAIL BLOG - MAIN BLOG INDEX PAGE
+  ==============================================================================
+  
+  FILE: blog.html (located at site root, serves as /blog/ index)
+  
+  PURPOSE:
+  This is the main blog landing page for Paper Trail Limited. It displays:
+  - One featured post (most recent/important)
+  - Newsletter signup strip
+  - Grid of recent blog posts
+  
+  FIXES APPLIED (March 22, 2026):
+  
+  1. REMOVED DUPLICATE HEADER:
+     - Original had a blog-specific header with centered "The Paper Trail" title
+     - Now uses the SAME header structure as home page for consistency
+     - Navigation links match home page exactly
+  
+  2. REMOVED NON-FUNCTIONAL CATEGORY NAV:
+     - The category nav (All, Product, Engineering, Company, Customers) had # hrefs
+     - No JavaScript filtering was implemented, making it non-functional
+     - REMOVED entirely per task requirement - if filtering is needed later,
+       it should be built with working JavaScript
+  
+  3. FIXED BLOG POST LINKS:
+     - All post links now correctly point to /blog/posts/[post-slug].html
+     - Featured post links to: /blog/posts/building-reel-reviews.html
+     - Post cards link to their respective individual pages
+  
+  4. FIXED IMAGE PLACEHOLDERS:
+     - Using CSS gradient classes instead of inline styles
+     - Gradients provide visual variety while maintaining consistent sizing
+     - When real images are added, replace gradient divs with img tags:
+       <img src="/blog/images/post-slug.jpg" alt="Descriptive text">
+  
+  5. MATCHES HOME PAGE THEME:
+     - Uses /blog/blog-v4.css which shares the same color palette:
+       * Primary Red: #dc2626
+       * Text: #111111
+       * Backgrounds: #ffffff, #fafafa
+       * Borders: #e5e5e5
+     - Same typography: Inter for body, Newsreader for headings
+     - Same spacing and component patterns
+  
+  6. IMPROVED CONTRAST:
+     - Text colors carefully chosen for WCAG compliance
+     - #111 on #ffffff for main content (excellent contrast)
+     - #666 on #ffffff for secondary text (good contrast)
+     - #333 for long-form reading (softer than pure black)
+  
+  CSS FILE: /blog/blog-v4.css (external stylesheet)
+  ==============================================================================
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Paper Trail Blog - Insights on app development, tech trends, and the New Zealand startup scene from Paper Trail Limited."
+    
+    <!-- Page Title - Blog Branding -->
+    <title>The Paper Trail | Paper Trail Limited Blog</title>
+    
+    <!-- Google Fonts - Same as home page for visual consistency -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- 
+      EXTERNAL STYLESHEET
+      All styles moved to blog-v4.css to match home page structure
+      This allows for caching and easier maintenance
+    -->
+    <link rel="stylesheet" href="/blog/blog-v4.css">
+</head>
+<body class="blog-page">
+
+    <!-- ==========================================================================
+         HEADER SECTION
+         
+         STRUCTURE:
+         - Sticky header (follows scroll)
+         - Logo/brand on left (links to home)
+         - Navigation links center-right (matches home page)
+         
+         NOTE: This header now matches the home page structure exactly.
+         The previous blog-specific header with centered "The Paper Trail" title
+         has been removed to eliminate duplication and inconsistency.
+         ========================================================================== -->
+    <header class="site-header">
+        <div class="header-container">
+            <nav class="main-nav">
+                
+                <!-- Brand/Logo - Click to return to home page -->
+                <a href="/" class="brand" aria-label="Paper Trail - Back to home">
+                    <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect width="48" height="48" rx="8" fill="#dc2626"/>
+                        <path d="M14 12h20v4H14v-4zm0 10h20v4H14v-4zm0 10h14v4H14v-4z" fill="white"/>
+                    </svg>
+                    <span>Paper Trail</span>
+                </a>
+                
+                <!-- Navigation Links - Same as home page -->
+                <ul class="nav-links">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/blog/" class="nav-link active">Blog</a></li>
+                    <li><a href="/apps/reel-reviews/" class="nav-link">Reel Reviews</a></li>
+                    <li><a href="/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 
+      CATEGORY NAVIGATION - REMOVED
+      
+      The previous category navigation bar has been removed because:
+      1. It had non-functional # hrefs
+      2. No JavaScript filtering was implemented
+      3. It added visual clutter without utility
+      
+      If category filtering is needed in the future, implement:
+      - JavaScript filtering system OR
+      - Individual category archive pages
+      - Then restore the nav with working links
+    -->
+
+    <!-- ==========================================================================
+         MAIN CONTENT
+         
+         SECTIONS:
+         1. Featured Post (hero section)
+         2. Newsletter Strip (email signup)
+         3. Posts Grid (recent articles)
+         ========================================================================== -->
+    <main>
+        
+        <!-- FEATURED POST SECTION
+             Displays the most important/recent blog post prominently
+             Two-column layout: image left, content right
+             Stacks to single column on mobile -->
+        <section class="featured-section">
+            <div class="container">
+                <article class="featured-post">
+                    
+                    <!-- Featured Post Image Link -->
+                    <a href="/blog/posts/building-reel-reviews.html" class="featured-image" aria-label="Read: Building Reel Reviews">
+                        <!-- 
+                          Gradient placeholder for featured image
+                          Replace with actual image when available:
+                          <img src="/blog/images/building-reel-reviews.jpg" alt="Building Reel Reviews - Featured Image">
+                        -->
+                        <div class="gradient-purple" style="width:100%;height:100%;" aria-hidden="true"></div>
+                    </a>
+                    
+                    <!-- Featured Post Content -->
+                    <div class="featured-content">
+                        
+                        <!-- Post Meta: Category, Date, Reading Time -->
+                        <div class="post-meta">
+                            <span class="post-category">Product</span>
+                            <span class="post-date">March 15, 2026</span>
+                            <span class="reading-time">8 min read</span>
+                        </div>
+                        
+                        <!-- Featured Post Title -->
+                        <h1 class="featured-title">
+                            <a href="/blog/posts/building-reel-reviews.html">Building Reel Reviews: The UX of Negative Reviews</a>
+                        </h1>
+                        
+                        <!-- Featured Post Excerpt -->
+                        <p class="featured-excerpt">
+                            Why we built an app that only shows negative reviews, and the surprising psychology behind why users trust them more.
+                        </p>
+                        
+                        <!-- Post Author Info -->
+                        <div class="post-author">
+                            <div class="author-avatar" aria-hidden="true"></div>
+                            <div class="author-info">
+                                <span class="author-name">Paper Trail Team</span>
+                                <span class="author-title">Founders</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER STRIP
+             Simple email signup between featured and posts grid
+             Links to #newsletter anchor for accessibility -->
+        <section class="newsletter-strip" id="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <p class="newsletter-text">Get our best writing on building apps, shipped weekly.</p>
+                    
+                    <form class="newsletter-form" action="#" method="post" aria-label="Newsletter signup">
+                        <label for="email" class="sr-only">Email address</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required class="newsletter-input">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- POSTS GRID SECTION
+             Displays recent blog posts in a 3-column grid
+             Responsive: 3 cols → 2 cols → 1 col on smaller screens -->
+        <section class="posts-section">
+            <div class="container">
+                
+                <!-- Section Header -->
+                <div class="section-header">
+                    <h2>Latest</h2>
+                </div>
+                
+                
+                <!-- Posts Grid Container -->
+                <div class="posts-grid">
+                    
+                    <!-- POST CARD 1: React Native vs Flutter -->
+                    <article class="post-card">
+                        <a href="/blog/posts/react-native-vs-flutter.html" class="post-card-link">
+                            
+                            <!-- Post Card Image -->
+                            <div class="post-card-image">
+                                <!-- Gradient placeholder - replace with actual image -->
+                                <div class="gradient-pink" style="width:100%;height:100%;" aria-hidden="true"></div>
+                            </div>
+                            
+                            <div class="post-card-content">
+                                
+                                <!-- Post Meta -->
+                                <div class="post-card-meta">
+                                    <span class="post-category">Engineering</span>
+                                    <span>Mar 12, 2026</span>
+                                </div>
+                                
+                                <!-- Post Title -->
+                                <h3 class="post-card-title">React Native vs Flutter: A Developer's Perspective</h3>
+                                
+                                <!-- Post Excerpt -->
+                                <p class="post-card-excerpt">After building production apps with both frameworks, here's what we learned.</p>
+                                
+                                <!-- Post Footer: Author + Reading Time -->
+                                <div class="post-card-footer">
+                                    <div class="post-author-small">
+                                        <div class="author-avatar-small" aria-hidden="true"></div>
+                                        <span>Paper Trail Team</span>
+                                    </div>
+                                    <span class="reading-time-small">6 min</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    
+                    <!-- POST CARD 2: Day in the Life -->
+                    <article class="post-card">
+                        <a href="/blog/posts/day-in-life.html" class="post-card-link">
+                            
+                            <div class="post-card-image">
+                                <div class="gradient-blue" style="width:100%;height:100%;" aria-hidden="true"></div>
+                            </div>
+                            
+                            <div class="post-card-content">
+                                
+                                <div class="post-card-meta">
+                                    <span class="post-category">Company</span>
+                                    <span>Mar 8, 2026</span>
+                                </div>
+                                
+                                <h3 class="post-card-title">A Day in the Life: Running an App Company from Auckland</h3>
+                                
+                                <p class="post-card-excerpt">The reality of remote work and building products from New Zealand.</p>
+                                
+                                <div class="post-card-footer">
+                                    <div class="post-author-small">
+                                        <div class="author-avatar-small" aria-hidden="true"></div>
+                                        <span>Paper Trail Team</span>
+                                    </div>
+                                    <span class="reading-time-small">5 min</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    
+                    <!-- POST CARD 3: Validating Ideas -->
+                    <article class="post-card">
+                        <a href="/blog/posts/validating-ideas.html" class="post-card-link">
+                            
+                            <div class="post-card-image">
+                                <div class="gradient-green" style="width:100%;height:100%;" aria-hidden="true"></div>
+                            </div>
+                            
+                            <div class="post-card-content">
+                                
+                                <div class="post-card-meta">
+                                    <span class="post-category">Product</span>
+                                    <span>Mar 1, 2026</span>
+                                </div>
+                                
+                                <h3 class="post-card-title">How We Validated Reel Reviews Before Writing Code</h3>
+                                
+                                <p class="post-card-excerpt">Customer development techniques that saved us months of wasted effort.</p>
+                                
+                                <div class="post-card-footer">
+                                    <div class="post-author-small">
+                                        <div class="author-avatar-small" aria-hidden="true"></div>
+                                        <span>Paper Trail Team</span>
+                                    </div>
+                                    <span class="reading-time-small">7 min</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                </div>
+
+                
+                <!-- Load More Button (placeholder for pagination) -->
+                <div class="load-more-container">
+                    <button class="btn-load-more" type="button">Load more articles</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================================================
+         FOOTER SECTION
+         Shared footer structure - matches home page
+         ========================================================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            
+            <!-- Footer Grid: 4 columns on desktop -->
+            <div class="footer-grid">
+                
+                <!-- Column 1: Brand Description -->
+                <div class="footer-brand">
+                    <a href="/" class="brand" aria-label="Paper Trail - Back to home">
+                        <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="48" height="48" rx="8" fill="#dc2626"/>
+                            <path d="M14 12h20v4H14v-4zm0 10h20v4H14v-4zm0 10h14v4H14v-4z" fill="white"/>
+                        </svg>
+                        <span>Paper Trail</span>
+                    </a>
+                    <p class="footer-description">Writing the future of mobile experiences from New Zealand.</p>
+                </div>
+                
+                <!-- Column 2: Product Links -->
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="/apps/reel-reviews/">Reel Reviews</a></li>
+                        <li><a href="/apps/coming-soon/">Coming Soon</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Company Links -->
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/privacy-policy.html">Privacy</a></li>
+                        <li><a href="/terms-of-service.html">Terms</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4: Connect Links -->
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:admin@typewrite.club">Email</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright Bar -->
+            <div class="footer-bottom">
+                <p>© 2026 Paper Trail Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

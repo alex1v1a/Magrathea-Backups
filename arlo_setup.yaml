@@ -1,0 +1,33 @@
+# Arlo Integration Setup
+# Arlo cameras already connected via SmartThings
+# But can add direct Arlo integration for more features
+
+# Credentials:
+# Account 1: alex@1v1a.com / Section9
+# Account 2: alex@hanka.co.nz / Section9
+# Account 3: alex@xspqr.com / section9
+
+# To install direct Arlo integration:
+# 1. HACS → Integrations → Search "Arlo"
+# 2. Install "Aarlo" (custom component)
+# 3. Restart HA
+# 4. Add to configuration.yaml:
+
+aarlo:
+  username: alex@1v1a.com
+  password: Section9
+  refresh_devices_every: 2
+  stream_timeout: 120
+  reconnect_every: 90
+  
+# Or use UI config flow after installation
+
+# Expected cameras (from SmartThings):
+# - Saxton Doorbell (AVD1001A)
+# - Saxton Garden (VMC4030P)
+# - Saxton Backyard Stairs (VMC4030)
+# - Saxton Backyard Patio & Pond (VMC4030)
+# - Saxton Kitchen Deck (VMB4000)
+# - Saxton Back Door (VMC4030)
+# - Saxton Playground (VMC4030)
+# - Saxton Backyard Shed (VMC4030P)

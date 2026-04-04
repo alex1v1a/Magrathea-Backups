@@ -1,0 +1,258 @@
+{
+  "items": [
+    {
+      "name": "Milk",
+      "searchTerm": "whole milk",
+      "amount": "1 gallon"
+    },
+    {
+      "name": "Eggs",
+      "searchTerm": "large eggs",
+      "amount": "1 dozen"
+    },
+    {
+      "name": "Bread",
+      "searchTerm": "sandwich bread",
+      "amount": "1 loaf"
+    }
+  ],
+  "completed": [
+    "White fish fillets",
+    "Milk"
+  ],
+  "failed": [
+    {
+      "name": "White fish fillets",
+      "error": "No products found in search results",
+      "time": "2026-02-09T13:47:29.776Z"
+    },
+    {
+      "name": "Corn tortillas",
+      "error": "No products found in search results",
+      "time": "2026-02-09T13:47:34.920Z"
+    },
+    {
+      "name": "Mango",
+      "error": "No products found in search results",
+      "time": "2026-02-09T13:47:40.105Z"
+    },
+    {
+      "name": "Red onion",
+      "error": "No products found in search results",
+      "time": "2026-02-09T13:47:45.257Z"
+    },
+    {
+      "name": "Jalapeno",
+      "error": "page.$$: Target page, context or browser has been closed",
+      "time": "2026-02-09T13:47:50.362Z"
+    },
+    {
+      "name": "Cabbage slaw mix",
+      "error": "page.$: Target page, context or browser has been closed",
+      "time": "2026-02-09T13:47:52.370Z"
+    },
+    {
+      "name": "Chipotle mayo",
+      "error": "page.$: Target page, context or browser has been closed",
+      "time": "2026-02-09T13:47:54.372Z"
+    },
+    {
+      "name": "Cod fillets",
+      "error": "page.$: Target page, context or browser has been closed",
+      "time": "2026-02-09T13:47:56.379Z"
+    },
+    {
+      "name": "Unsalted butter",
+      "error": "page.$: Target page, context or browser has been closed",
+      "time": "2026-02-09T13:47:58.384Z"
+    },
+    {
+      "name": "Fresh parsley",
+      "error": "page.$: Target page, context or browser has been closed",
+      "time": "2026-02-09T13:48:00.392Z"
+    },
+    {
+      "name": "Capers",
+      "error": "page.$: Target page, context or browser has been closed",
+      "time": "2026-02-09T13:48:02.400Z"
+    },
+    {
+      "name": "White wine",
+      "error": "page.$: Target page, context or browser has been closed",
+      "time": "2026-02-09T13:48:04.406Z"
+    },
+    {
+      "name": "Green beans",
+      "error": "page.$: Target page, context or browser has been closed",
+      "time": "2026-02-09T13:48:06.414Z"
+    },
+    {
+      "name": "Chicken thighs",
+      "error": "page.$: Target page, context or browser has been closed",
+      "time": "2026-02-09T13:48:08.421Z"
+    },
+    {
+      "name": "Lemon",
+      "error": "page.$: Target page, context or browser has been closed",
+      "time": "2026-02-09T13:48:10.433Z"
+    },
+    {
+      "name": "Fresh thyme",
+      "error": "page.$: Target page, context or browser has been closed",
+      "time": "2026-02-09T13:48:12.437Z"
+    },
+    {
+      "name": "Oregano",
+      "error": "page.$: Target page, context or browser has been closed",
+      "time": "2026-02-09T13:48:14.446Z"
+    },
+    {
+      "name": "Couscous",
+      "error": "page.$: Target page, context or browser has been closed",
+      "time": "2026-02-09T13:48:16.454Z"
+    },
+    {
+      "name": "Zucchini",
+      "error": "page.$: Target page, context or browser has been closed",
+      "time": "2026-02-09T13:48:18.469Z"
+    },
+    {
+      "name": "Corn tortillas",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:08:37.928Z"
+    },
+    {
+      "name": "Mango",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:08:39.944Z"
+    },
+    {
+      "name": "Red onion",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:08:41.956Z"
+    },
+    {
+      "name": "Jalapeno",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:08:43.975Z"
+    },
+    {
+      "name": "Cabbage slaw mix",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:08:45.985Z"
+    },
+    {
+      "name": "Chipotle mayo",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:08:48.006Z"
+    },
+    {
+      "name": "Cod fillets",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:08:50.027Z"
+    },
+    {
+      "name": "Unsalted butter",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:08:52.037Z"
+    },
+    {
+      "name": "Fresh parsley",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:08:54.052Z"
+    },
+    {
+      "name": "Capers",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:08:56.065Z"
+    },
+    {
+      "name": "White wine",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:08:58.077Z"
+    },
+    {
+      "name": "Green beans",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:09:00.090Z"
+    },
+    {
+      "name": "Chicken thighs",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:09:02.099Z"
+    },
+    {
+      "name": "Lemon",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:09:04.105Z"
+    },
+    {
+      "name": "Fresh thyme",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:09:06.117Z"
+    },
+    {
+      "name": "Oregano",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:09:08.125Z"
+    },
+    {
+      "name": "Couscous",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:09:10.138Z"
+    },
+    {
+      "name": "Zucchini",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:09:12.141Z"
+    },
+    {
+      "name": "Ribeye steak",
+      "error": "Search input not found",
+      "time": "2026-02-09T14:09:14.144Z"
+    },
+    {
+      "name": "Eggs",
+      "error": "Search input not found on page",
+      "time": "2026-02-09T14:36:00.892Z"
+    },
+    {
+      "name": "Bread",
+      "error": "Search input not found on page",
+      "time": "2026-02-09T14:36:04.903Z"
+    },
+    {
+      "name": "Milk",
+      "error": "page.$$: Target page, context or browser has been closed",
+      "time": "2026-02-09T14:38:52.675Z"
+    },
+    {
+      "name": "Eggs",
+      "error": "Browser page unavailable",
+      "time": "2026-02-09T14:38:56.704Z"
+    },
+    {
+      "name": "Bread",
+      "error": "Browser page unavailable",
+      "time": "2026-02-09T14:38:56.705Z"
+    },
+    {
+      "name": "Milk",
+      "error": "Search input not found on page",
+      "time": "2026-02-09T14:43:12.197Z"
+    },
+    {
+      "name": "Eggs",
+      "error": "Browser page unavailable",
+      "time": "2026-02-09T14:43:16.218Z"
+    },
+    {
+      "name": "Bread",
+      "error": "Browser page unavailable",
+      "time": "2026-02-09T14:43:16.219Z"
+    }
+  ],
+  "inProgress": null,
+  "sessionStart": "2026-02-09T14:43:08.966Z",
+  "lastUpdate": "2026-02-09T14:43:16.219Z"
+}

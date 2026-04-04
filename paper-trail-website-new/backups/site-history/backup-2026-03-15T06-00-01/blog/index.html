@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Paper Trail Blog - Insights on app development, tech trends, and the New Zealand startup scene from Paper Trail Limited.">
+    
+    <title>The Paper Trail | Paper Trail Limited Blog</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/modern.css">
+    <link rel="stylesheet" href="../css/modern-components.css">
+    <link rel="stylesheet" href="blog-v2.css">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
+</head>
+<body class="blog-v2-page">
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" id="reading-progress"></div>
+
+    <!-- Navigation -->
+    <header class="site-header blog-header" role="banner">
+        <nav class="main-nav container" role="navigation">
+            <a href="/" class="brand" aria-label="Paper Trail Home">
+                <span class="brand-icon">
+                    <img src="../assets/logo.svg" alt="Paper Trail" width="48" height="48">
+                </span>
+                <span class="brand-text">Paper Trail</span>
+            </a>
+            
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/blog/" class="nav-link active" aria-current="page">Blog</a></li>
+                <li><a href="/apps/reel-reviews/" class="nav-link">Reel Reviews</a></li>
+                <li><a href="/contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-right">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sticky Category Nav -->
+    <nav class="category-nav" id="category-nav">
+        <div class="container">
+            <ul class="category-list">
+                <li><a href="#" class="category-link active" data-category="all">All Stories</a></li>
+                <li><a href="#" class="category-link" data-category="tech">Technology</a></li>
+                <li><a href="#" class="category-link" data-category="startup">Startups</a></li>
+                <li><a href="#" class="category-link" data-category="apps">App Development</a></li>
+                <li><a href="#" class="category-link" data-category="nz">NZ Business</a></li>
+                <li><a href="#" class="category-link" data-category="behind">Behind the Scenes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        
+        <!-- Hero Featured Post -->
+        <section class="hero-featured" aria-label="Featured article">
+            <div class="container">
+                <article class="featured-post" data-category="tech">
+                    <div class="featured-image">
+                        <img src="../assets/blog/featured-post.jpg" alt="Featured blog post" loading="eager">
+                        <span class="featured-badge">Featured Story</span>
+                    </div>
+                    <div class="featured-content">
+                        <div class="post-meta-top">
+                            <span class="post-category">Technology</span>
+                            <span class="post-date">March 12, 2024</span>
+                        </div>
+                        <h1 class="featured-title">
+                            <a href="posts/sample-post.html">Building Reel Reviews: How We Created New Zealand's Most Honest Restaurant App</a>
+                        </h1>
+                        <p class="featured-excerpt">
+                            From concept to launch, here's the inside story of how we built an app that helps Kiwis find the truth about their dining experiences. No fake reviews, just honest catches.
+                        </p>
+                        <div class="post-author">
+                            <img src="../assets/author-avatar.png" alt="Author" class="author-avatar">
+                            <div class="author-info">
+                                <span class="author-name">Paper Trail Team</span>
+                                <span class="read-time">8 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="blog-container">
+            <div class="container">
+                <div class="blog-layout">
+                    
+                    <!-- Main Content -->
+                    <div class="blog-main">
+                        
+                        <!-- Section Header -->
+                        <div class="section-header">
+                            <h2>Latest Stories</h2>
+                            <div class="view-options">
+                                <button class="view-btn active" data-view="grid" aria-label="Grid view">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>
+                                </button>
+                                <button class="view-btn" data-view="list" aria-label="List view">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Posts Grid -->
+                        <div class="posts-grid" id="posts-grid">
+                            
+                            <!-- Post 1 - REAL POST -->
+                            <article class="post-card" data-category="nz">
+                                <a href="posts/nz-gaming-industry-2024.html" class="post-card-link">
+                                    <div class="post-card-image">
+                                        <img src="../assets/blog/nz-gaming-post.jpg" alt="NZ gaming industry" loading="lazy">
+                                    </div>
+                                    <div class="post-card-content">
+                                        <div class="post-card-meta">
+                                            <span class="post-category">NZ Business</span>
+                                            <span class="post-date">Mar 13, 2024</span>
+                                        </div>
+                                        <h3 class="post-card-title">Why New Zealand's Mobile Game Industry is Poised for a Breakthrough in 2024</h3>
+                                        <p class="post-card-excerpt">With the NZ mobile gaming market projected to reach $107.5 million this year, local developers have a unique opportunity. Here's what the data tells us...</p>
+                                        <div class="post-card-footer">
+                                            <span class="read-time">12 min read</span>
+                                            <span class="read-more">Read article →</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- Post 2 -->
+                            <article class="post-card" data-category="apps">
+                                <a href="posts/post-2.html" class="post-card-link">
+                                    <div class="post-card-image">
+                                        <img src="../assets/blog/app-dev-post.jpg" alt="App development post" loading="lazy">
+                                    </div>
+                                    <div class="post-card-content">
+                                        <div class="post-card-meta">
+                                            <span class="post-category">App Development</span>
+                                            <span class="post-date">Mar 8, 2024</span>
+                                        </div>
+                                        <h3 class="post-card-title">The UX Psychology Behind Negative Reviews</h3>
+                                        <p class="post-card-excerpt">Why showing only negative reviews actually improves user trust, and the behavioral science that powers Reel Reviews...</p>
+                                        <div class="post-card-footer">
+                                            <span class="read-time">7 min read</span>
+                                            <span class="read-more">Read article →</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- Post 3 -->
+                            <article class="post-card" data-category="nz">
+                                <a href="posts/post-3.html" class="post-card-link">
+                                    <div class="post-card-image">
+                                        <img src="../assets/blog/nz-post.jpg" alt="NZ business post" loading="lazy">
+                                    </div>
+                                    <div class="post-card-content">
+                                        <div class="post-card-meta">
+                                            <span class="post-category">NZ Business</span>
+                                            <span class="post-date">Mar 5, 2024</span>
+                                        </div>
+                                        <h3 class="post-card-title">Auckland vs Wellington: Where to Build Your Tech Company</h3>
+                                        <p class="post-card-excerpt">Comparing the two major NZ tech hubs, from funding access to talent pools to quality of life...</p>
+                                        <div class="post-card-footer">
+                                            <span class="read-time">5 min read</span>
+                                            <span class="read-more">Read article →</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- Post 4 -->
+                            <article class="post-card" data-category="tech">
+                                <a href="posts/post-4.html" class="post-card-link">
+                                    <div class="post-card-image">
+                                        <img src="../assets/blog/tech-post.jpg" alt="Technology post" loading="lazy">
+                                    </div>
+                                    <div class="post-card-content">
+                                        <div class="post-card-meta">
+                                            <span class="post-category">Technology</span>
+                                            <span class="post-date">Mar 3, 2024</span>
+                                        </div>
+                                        <h3 class="post-card-title">React Native vs Flutter: Our Experience Building Cross-Platform</h3>
+                                        <p class="post-card-excerpt">After building apps with both frameworks, here's our honest comparison of performance, developer experience, and maintainability...</p>
+                                        <div class="post-card-footer">
+                                            <span class="read-time">10 min read</span>
+                                            <span class="read-more">Read article →</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- Post 5 -->
+                            <article class="post-card" data-category="behind">
+                                <a href="posts/post-5.html" class="post-card-link">
+                                    <div class="post-card-image">
+                                        <img src="../assets/blog/behind-post.jpg" alt="Behind the scenes post" loading="lazy">
+                                    </div>
+                                    <div class="post-card-content">
+                                        <div class="post-card-meta">
+                                            <span class="post-category">Behind the Scenes</span>
+                                            <span class="post-date">Feb 28, 2024</span>
+                                        </div>
+                                        <h3 class="post-card-title">A Day in the Life: Running an App Company from Home</h3>
+                                        <p class="post-card-excerpt">The reality of remote work, managing distributed teams, and building products while wearing multiple hats...</p>
+                                        <div class="post-card-footer">
+                                            <span class="read-time">4 min read</span>
+                                            <span class="read-more">Read article →</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- Post 6 -->
+                            <article class="post-card" data-category="startup">
+                                <a href="posts/post-6.html" class="post-card-link">
+                                    <div class="post-card-image">
+                                        <img src="../assets/blog/startup-post-2.jpg" alt="Startup post" loading="lazy">
+                                    </div>
+                                    <div class="post-card-content">
+                                        <div class="post-card-meta">
+                                            <span class="post-category">Startups</span>
+                                            <span class="post-date">Feb 25, 2024</span>
+                                        </div>
+                                        <h3 class="post-card-title">How We Validated Reel Reviews Before Writing Code</h3>
+                                        <p class="post-card-excerpt">Customer development, landing page tests, and the validation techniques that saved us months of wasted effort...</p>
+                                        <div class="post-card-footer">
+                                            <span class="read-time">8 min read</span>
+                                            <span class="read-more">Read article →</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                        </div>
+
+                        <!-- Load More -->
+                        <div class="load-more-wrapper">
+                            <button class="btn-load-more" id="load-more">
+                                <span>Load More Stories</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside class="blog-sidebar">
+                        
+                        <!-- About Widget -->
+                        <div class="sidebar-widget about-widget">
+                            <h3>About The Paper Trail</h3>
+                            <p>Stories from the front lines of app development, tech trends, and the New Zealand startup scene. Written by the team at Paper Trail Limited.</p>
+                            <a href="/" class="btn-secondary">Visit our website →</a>
+                        </div>
+
+                        <!-- Popular Posts -->
+                        <div class="sidebar-widget popular-widget">
+                            <h3>Most Read</h3>
+                            <ul class="popular-list">
+                                <li>
+                                    <a href="posts/popular-1.html">
+                                        <span class="popular-number">01</span>
+                                        <span class="popular-title">Why Negative Reviews Build Trust</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="posts/popular-2.html">
+                                        <span class="popular-number">02</span>
+                                        <span class="popular-title">The Cost of Building an App in NZ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="posts/popular-3.html">
+                                        <span class="popular-number">03</span>
+                                        <span class="popular-title">Finding Product-Market Fit</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="posts/popular-4.html">
+                                        <span class="popular-number">04</span>
+                                        <span class="popular-title">Remote Work Tools We Love</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="posts/popular-5.html">
+                                        <span class="popular-number">05</span>
+                                        <span class="popular-title">Marketing on a Bootstrap Budget</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Tags Widget -->
+                        <div class="sidebar-widget tags-widget">
+                            <h3>Topics</h3>
+                            <div class="tag-cloud">
+                                <a href="#" class="tag">React Native</a>
+                                <a href="#" class="tag">UX Design</a>
+                                <a href="#" class="tag">Startup Funding</a>
+                                <a href="#" class="tag">NZ Tech</a>
+                                <a href="#" class="tag">App Store</a>
+                                <a href="#" class="tag">Remote Work</a>
+                                <a href="#" class="tag">AI</a>
+                                <a href="#" class="tag">Productivity</a>
+                            </div>
+                        </div>
+
+                        <!-- Newsletter Widget -->
+                        <div class="sidebar-widget newsletter-widget">
+                            <h3>📬 In Your Inbox</h3>
+                            <p>Get our best stories delivered weekly. No spam, just insights.</p>
+                            <form class="sidebar-newsletter-form" id="sidebar-newsletter">
+                                <input type="email" placeholder="your@email.com" required>
+                                <button type="submit" class="btn-primary">Subscribe</button>
+                            </form>
+                        </div>
+
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Sticky Newsletter Footer -->
+    <div class="sticky-newsletter" id="sticky-newsletter">
+        <div class="container">
+            <div class="sticky-newsletter-content">
+                <div class="sticky-text">
+                    <strong>Enjoying The Paper Trail?</strong>
+                    <span>Get new posts delivered to your inbox.</span>
+                </div>
+                <form class="sticky-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+                <button class="sticky-close" id="sticky-close" aria-label="Close newsletter">×</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer blog-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="footer-icon">📝</span>
+                    <span class="footer-name">The Paper Trail</span>
+                    <p class="footer-tagline">Stories from Paper Trail Limited</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/apps/reel-reviews/">Reel Reviews</a></li>
+                        <li><a href="/apps/coming-soon/">Coming Soon</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="mailto:admin@typewrite.club">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Paper Trail Limited. All rights reserved.</p>
+                <p class="footer-made">Made with ☕ in New Zealand</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="blog-v2.js"></script>
+</body>
+</html>

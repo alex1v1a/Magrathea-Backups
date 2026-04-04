@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alexander Sferrazza - Email Signature</title>
+<style>
+  /* Apple Mail compatible styles */
+  .signature-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #000000;
+    line-height: 1.4;
+  }
+  .name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0 0 2px 0;
+  }
+  .title {
+    font-size: 14px;
+    color: #666666;
+    margin: 0 0 8px 0;
+  }
+  .divider {
+    border: none;
+    border-top: 1px solid #cccccc;
+    margin: 8px 0;
+  }
+  .phone-label {
+    color: #007AFF;
+    font-weight: 600;
+  }
+  .phone-link {
+    color: #000000;
+    text-decoration: none;
+  }
+  .address {
+    font-size: 13px;
+    color: #333333;
+    margin: 0;
+  }
+  /* Mobile responsive */
+  @media only screen and (max-width: 600px) {
+    .name { font-size: 16px; }
+    .title { font-size: 13px; }
+    .address { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="signature-container">
+  <!-- Logo -->
+  <div style="margin-bottom: 10px;">
+    <img src="vectarr-logo.png" 
+         alt="Vectarr" 
+         width="70" 
+         height="70" 
+         style="display: block;">
+  </div>
+  
+  <!-- Name -->
+  <p class="name">Alexander Sferrazza</p>
+  
+  <!-- Title -->
+  <p class="title">Accounts Manager</p>
+  
+  <!-- Divider -->
+  <hr class="divider">
+  
+  <!-- Phone -->
+  <p style="margin: 0 0 5px 0; font-size: 14px;">
+    <span class="phone-label">P:</span> 
+    <a href="tel:+18083818835" class="phone-link">(808) 381-8835</a>
+  </p>
+  
+  <!-- Address -->
+  <p class="address">5900 Balcones Drive, Suite 100</p>
+  <p class="address">Austin, TX 78731</p>
+</div>
+</body>
+</html>

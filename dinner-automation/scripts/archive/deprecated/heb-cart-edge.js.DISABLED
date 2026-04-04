@@ -1,0 +1,90 @@
+const { chromium } = require('playwright');
+const fs = require('fs');
+const path = require('path');
+
+/**
+ * HEB Cart Automation - Edge Edition
+ * Populates HEB cart using shopping list
+ * 
+ * Usage: node heb-cart-edge.js
+ */
+
+const EDGE_PATH = 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe';
+const EDGE_USER_DATA = 'C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Edge\\User Data';
+const DATA_DIR = path.join(__dirname, '..', 'data');
+
+async function createContext(headless = false) {
+  return await chromium.launchPersistentContext(EDGE_USER_DATA, {
+    headless,
+    executablePath: EDGE_PATH,
+    args: [
+      '--start-maximized',
+      '--disable-blink-features=AutomationControlled'
+    ],
+    viewport: { width: 1920, height: 1080 }
+  });
+}
+
+/**
+ * Load shopping list from extension items
+ */
+function loadShoppingList() {
+  try {
+    const itemsFile = path.join(DATA_DIR, 'heb-extension-items.json');
+    const data = JSON.parse(fs.readFileSync(itemsFile, 'utf8'));
+    return data.items || [];
+  } catch (error) {
+    console.error('❌ Could not load shopping list:', error.message);
+    return [];
+  }
+}
+
+/**
+ * Main HEB automation
+ */
+async function runHEBCart() {
+  console.log('🛒 Starting HEB Cart Automation (Edge)\n');
+  
+  const items = loadShoppingList();
+  if (items.length === 0) {
+    console.log('⚠️  No items to add. Run dinner plan generator first.');
+    return;
+  }
+  
+  console.log(`📋 ${items.length} items ready to add\n`);
+  
+  const context = await createContext(false);
+  const page = context.pages()[0] || await context.newPage();
+  
+  try {
+    console.log('🌐 Opening HEB.com...');
+    await page.goto('https://www.heb.com');
+    await page.waitForTimeout(5000);
+    
+    console.log('✅ HEB loaded');
+    console.log('\n📦 Shopping List:');
+    items.slice(0, 10).forEach((item, i) => {
+      console.log(`  ${i + 1}. ${item.name}`);
+    });
+    if (items.length > 10) {
+      console.log(`  ... and ${items.length - 10} more items`);
+    }
+    
+    console.log('\n⚠️  Automated cart population requires:');
+    console.log('   1. Manual login to HEB (if not already)');
+    console.log('   2. Chrome/Edge extension to add items');
+    console.log('   3. Or use HEB extension files generated');
+    
+    // Keep open for manual use
+    console.log('\n⏳ Browser staying open for 60 seconds...');
+    await page.waitForTimeout(60000);
+    
+  } catch (error) {
+    console.error('❌ Error:', error.message);
+  } finally {
+    await context.close();
+  }
+}
+
+// Run
+runHEBCart().catch(console.error);

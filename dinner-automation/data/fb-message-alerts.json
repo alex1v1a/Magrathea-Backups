@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-02-07T22:05:00Z",
+  "totalMatches": 4,
+  "newMatches": 4,
+  "alerts": [
+    {
+      "priority": "high",
+      "sender": "Audrey",
+      "item": "Thule box with clamps",
+      "listingPrice": "$650",
+      "preview": "Audrey reacted 👍 to your message - May want to come try putting it on her car",
+      "date": "2026-01-27",
+      "keywordsMatched": ["thule", "box"],
+      "actionRequired": "Follow up with Audrey if she wants to schedule a time to try the Thule box",
+      "conversationStatus": "Waiting for buyer to confirm"
+    },
+    {
+      "priority": "high",
+      "sender": "Evan",
+      "item": "2018 Ford F-150 · STX",
+      "listingPrice": "$26,500",
+      "preview": "Evan asked about issues with truck, then sent '?' on Jan 22 - no response yet",
+      "date": "2026-01-22",
+      "keywordsMatched": ["f-150", "f150", "truck"],
+      "actionRequired": "Evan expressed interest but hasn't followed up. May need to message him again.",
+      "conversationStatus": "Buyer ghosted - last message '?' on Jan 22"
+    },
+    {
+      "priority": "medium",
+      "sender": "Boni",
+      "item": "2018 Ford F-150",
+      "listingPrice": "Unknown",
+      "preview": "You can probably get lower now with the drop in interest rates recently",
+      "date": "2026-01-05",
+      "keywordsMatched": ["f-150", "f150", "truck"],
+      "actionRequired": "Boni commented on interest rates - may be interested in financing discussion",
+      "conversationStatus": "Informational comment"
+    },
+    {
+      "priority": "medium",
+      "sender": "Tyler",
+      "item": "Thule box with clamps",
+      "listingPrice": "Unknown",
+      "preview": "Lowest",
+      "date": "2026-01-11",
+      "keywordsMatched": ["thule", "box"],
+      "actionRequired": "Tyler asked for lowest price - negotiation in progress",
+      "conversationStatus": "Price negotiation"
+    }
+  ],
+  "summary": "Found 4 conversations matching keywords (f-150, f150, truck, thule, box). 2 high priority (Audrey Thule, Evan F-150), 2 medium priority (Boni F-150 comment, Tyler Thule price negotiation)."
+}

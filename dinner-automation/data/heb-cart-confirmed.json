@@ -1,0 +1,12 @@
+{
+  "confirmed": true,
+  "itemCount": 27,
+  "timestamp": "2026-02-09T11:00:00.000Z",
+  "substitutions": [
+    { "original": "White fish fillets (tilapia)", "substituted": "Catfish fillet" },
+    { "original": "Gochujang", "substituted": "Sriracha" },
+    { "original": "Asian pear", "substituted": "Bosc pear" },
+    { "original": "Sesame seeds", "substituted": "Omitted (garnish)" }
+  ],
+  "note": "User confirmed these substitutions are acceptable for the meal plan"
+}

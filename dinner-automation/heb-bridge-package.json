@@ -1,0 +1,14 @@
+{
+  "name": "heb-bridge",
+  "version": "1.0.0",
+  "description": "Bridge between external scripts and HEB browser extension",
+  "main": "heb-bridge.js",
+  "scripts": {
+    "start": "node heb-bridge.js",
+    "test": "node test-bridge.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "puppeteer-core": "^21.6.1"
+  }
+}

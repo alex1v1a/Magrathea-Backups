@@ -1,0 +1,16 @@
+# Arlo Integration Configuration
+# Added: 2026-03-08
+# Multiple accounts configured
+
+arlo:
+  - username: alex@1v1a.com
+    password: Section9
+    
+  - username: alex@hanka.co.nz
+    password: Section9
+    
+  - username: alex@xspqr.com
+    password: section9
+
+# All cameras from 3 accounts will be integrated
+# 2FA codes will be sent to respective email addresses

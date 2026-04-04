@@ -1,0 +1,282 @@
+{
+  "weekOf": "February 8-14, 2026",
+  "generatedAt": "2026-02-11T08:05:00.000Z",
+  "servings": 4,
+  "meals": [
+    "Sunday 2/8: Pan-Seared Cod with Lemon Butter",
+    "Monday 2/9: Beef Stir-Fry with Vegetables",
+    "Tuesday 2/10: Fish Tacos with Mango Salsa",
+    "Wednesday 2/11: Korean Beef Bulgogi Bowl",
+    "Thursday 2/12: Mediterranean Chicken Bowl",
+    "Friday 2/13: Chicken Tikka Masala",
+    "Saturday 2/14: Grilled Salmon with Asparagus"
+  ],
+  "shoppingList": {
+    "meatAndSeafood": [
+      {
+        "item": "Cod fillets",
+        "quantity": "1.5 lbs",
+        "recipe": "Pan-Seared Cod + Fish Tacos"
+      },
+      {
+        "item": "Ribeye steak",
+        "quantity": "3 lbs total",
+        "recipe": "Beef Stir-Fry + Bulgogi Bowl",
+        "notes": "Thinly sliced against the grain"
+      },
+      {
+        "item": "White fish (tilapia)",
+        "quantity": "1.5 lbs",
+        "recipe": "Fish Tacos",
+        "notes": "Cut into strips"
+      },
+      {
+        "item": "Chicken breast",
+        "quantity": "4 lbs total",
+        "recipe": "Mediterranean Bowl + Tikka Masala",
+        "notes": "Cut into cubes"
+      },
+      {
+        "item": "Salmon fillets",
+        "quantity": "4 fillets (6 oz each)",
+        "recipe": "Grilled Salmon",
+        "notes": "Skin on"
+      }
+    ],
+    "produce": [
+      {
+        "item": "Fresh parsley",
+        "quantity": "1 bunch",
+        "recipe": "Pan-Seared Cod"
+      },
+      {
+        "item": "Mixed vegetables",
+        "quantity": "3 cups",
+        "recipe": "Beef Stir-Fry",
+        "notes": "Broccoli, bell peppers, snap peas"
+      },
+      {
+        "item": "Fresh ginger",
+        "quantity": "1 large piece",
+        "recipe": "Stir-Fry + Bulgogi + Tikka Masala"
+      },
+      {
+        "item": "Green onions",
+        "quantity": "1 bunch",
+        "recipe": "Stir-Fry + Bulgogi"
+      },
+      {
+        "item": "Mangos",
+        "quantity": "2 ripe",
+        "recipe": "Fish Tacos"
+      },
+      {
+        "item": "Jalapeño",
+        "quantity": "1",
+        "recipe": "Fish Tacos"
+      },
+      {
+        "item": "Fresh cilantro",
+        "quantity": "1 bunch",
+        "recipe": "Fish Tacos + Tikka Masala"
+      },
+      {
+        "item": "Cabbage slaw mix",
+        "quantity": "8 oz bag",
+        "recipe": "Fish Tacos"
+      },
+      {
+        "item": "Asian pear",
+        "quantity": "1",
+        "recipe": "Bulgogi Bowl",
+        "notes": "For marinade (or substitute apple juice)"
+      },
+      {
+        "item": "Kimchi",
+        "quantity": "16 oz jar",
+        "recipe": "Bulgogi Bowl"
+      },
+      {
+        "item": "Cucumbers",
+        "quantity": "3 total",
+        "recipe": "Bulgogi (1) + Mediterranean (2)"
+      },
+      {
+        "item": "Cherry tomatoes",
+        "quantity": "1 pint",
+        "recipe": "Mediterranean Bowl"
+      },
+      {
+        "item": "Asparagus",
+        "quantity": "1 lb",
+        "recipe": "Grilled Salmon"
+      },
+      {
+        "item": "Fresh dill",
+        "quantity": "1 small bunch",
+        "recipe": "Grilled Salmon"
+      },
+      {
+        "item": "Fresh thyme",
+        "quantity": "1 small bunch",
+        "recipe": "Grilled Salmon"
+      },
+      {
+        "item": "Lemon",
+        "quantity": "1",
+        "recipe": "Grilled Salmon",
+        "notes": "For slicing"
+      }
+    ],
+    "dairyAndRefrigerated": [
+      {
+        "item": "Feta cheese",
+        "quantity": "8 oz",
+        "recipe": "Mediterranean Bowl"
+      },
+      {
+        "item": "Hummus",
+        "quantity": "1 container (8-10 oz)",
+        "recipe": "Mediterranean Bowl"
+      },
+      {
+        "item": "Tzatziki",
+        "quantity": "8 oz container",
+        "recipe": "Mediterranean Bowl"
+      },
+      {
+        "item": "Plain yogurt",
+        "quantity": "1 cup",
+        "recipe": "Chicken Tikka Masala",
+        "notes": "For marinade"
+      },
+      {
+        "item": "Heavy cream",
+        "quantity": "1 pint",
+        "recipe": "Chicken Tikka Masala"
+      }
+    ],
+    "pantryAndCanned": [
+      {
+        "item": "Capers",
+        "quantity": "1 small jar (2-3 oz)",
+        "recipe": "Pan-Seared Cod"
+      },
+      {
+        "item": "White wine (dry)",
+        "quantity": "1 small bottle",
+        "recipe": "Pan-Seared Cod",
+        "notes": "Optional"
+      },
+      {
+        "item": "Oyster sauce",
+        "quantity": "1 bottle",
+        "recipe": "Beef Stir-Fry"
+      },
+      {
+        "item": "Cornstarch",
+        "quantity": "1 small box",
+        "recipe": "Beef Stir-Fry"
+      },
+      {
+        "item": "Beef broth",
+        "quantity": "1 carton (32 oz)",
+        "recipe": "Beef Stir-Fry"
+      },
+      {
+        "item": "Sesame seeds",
+        "quantity": "1 small container",
+        "recipe": "Beef Stir-Fry + Bulgogi"
+      },
+      {
+        "item": "Chipotle mayo",
+        "quantity": "1 bottle (8-12 oz)",
+        "recipe": "Fish Tacos"
+      },
+      {
+        "item": "Brown sugar",
+        "quantity": "1 bag (if not stocked)",
+        "recipe": "Bulgogi Bowl"
+      },
+      {
+        "item": "Tomato puree",
+        "quantity": "1 can (14 oz)",
+        "recipe": "Chicken Tikka Masala"
+      },
+      {
+        "item": "Kalamata olives",
+        "quantity": "1 small jar",
+        "recipe": "Mediterranean Bowl"
+      },
+      {
+        "item": "Garam masala",
+        "quantity": "1 small container",
+        "recipe": "Chicken Tikka Masala"
+      },
+      {
+        "item": "Turmeric",
+        "quantity": "1 small container",
+        "recipe": "Chicken Tikka Masala"
+      },
+      {
+        "item": "Cayenne pepper",
+        "quantity": "1 small container (if not stocked)",
+        "recipe": "Chicken Tikka Masala"
+      }
+    ],
+    "breadAndGrains": [
+      {
+        "item": "Corn tortillas",
+        "quantity": "1 package (10 count)",
+        "recipe": "Fish Tacos"
+      },
+      {
+        "item": "Naan bread",
+        "quantity": "1 package (4-6 pieces)",
+        "recipe": "Chicken Tikka Masala"
+      },
+      {
+        "item": "Jasmine rice",
+        "quantity": "1 bag",
+        "recipe": "Bulgogi Bowl",
+        "notes": "If not in stock"
+      },
+      {
+        "item": "Basmati rice",
+        "quantity": "1 bag",
+        "recipe": "Chicken Tikka Masala",
+        "notes": "If not in stock"
+      }
+    ]
+  },
+  "estimatedCost": "$180-220",
+  "itemsAlreadyInStock": [
+    "Butter",
+    "Olive oil",
+    "Vegetable oil",
+    "Sesame oil",
+    "Soy sauce",
+    "Lemons (have, may need extra)",
+    "Limes",
+    "Garlic",
+    "Onions",
+    "Salt",
+    "Black pepper",
+    "Garlic powder",
+    "Chili powder",
+    "Cumin",
+    "Paprika",
+    "All-purpose flour",
+    "White rice",
+    "Chicken broth",
+    "Quinoa",
+    "White wine vinegar",
+    "Dijon mustard",
+    "Mayonnaise",
+    "Honey",
+    "Eggs",
+    "Milk",
+    "Greek yogurt (check quantity for marinade)",
+    "Asparagus (check stock level)"
+  ]
+}

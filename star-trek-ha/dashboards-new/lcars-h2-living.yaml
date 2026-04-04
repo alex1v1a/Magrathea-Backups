@@ -1,0 +1,87 @@
+title: H2 Living Room
+path: lcars-h2-living
+icon: mdi:sofa
+badges: []
+cards:
+  - type: markdown
+    card_mod:
+      class: header-left
+    content: '# HOUSE 2 — LIVING ROOM'
+
+  - type: grid
+    columns: 4
+    square: false
+    cards:
+      - type: button
+        entity: light.house1_living_ceiling
+        name: Ceiling
+        tap_action:
+          action: toggle
+        card_mod:
+          class: button-lozenge-left
+      - type: button
+        entity: light.house1_living_lamp
+        name: Lamp
+        tap_action:
+          action: toggle
+        card_mod:
+          class: button-lozenge-right
+      - type: button
+        entity: fan.house1_living_fan
+        name: Fan
+        tap_action:
+          action: toggle
+        card_mod:
+          class: button-lozenge-left
+      - type: button
+        entity: cover.house1_living_shades
+        name: Shades
+        tap_action:
+          action: toggle
+        card_mod:
+          class: button-lozenge-right
+
+  - type: grid
+    columns: 3
+    square: false
+    cards:
+      - type: gauge
+        entity: sensor.house1_living_temperature
+        name: Temperature
+        min: 50
+        max: 90
+        severity:
+          green: 68
+          yellow: 78
+          red: 85
+        card_mod:
+          class: middle-contained
+      - type: gauge
+        entity: sensor.house1_living_humidity
+        name: Humidity
+        min: 0
+        max: 100
+        severity:
+          green: 30
+          yellow: 60
+          red: 80
+        card_mod:
+          class: middle-contained
+      - type: entities
+        card_mod:
+          class: middle-contained
+        entities:
+          - entity: binary_sensor.house1_living_motion
+            name: Motion
+          - entity: switch.house1_living_outlets
+            name: Outlets
+
+  - type: media-control
+    entity: media_player.house1_living_room_tv
+    card_mod:
+      class: middle-left
+
+  - type: markdown
+    card_mod:
+      class: footer-left
+    content: '## LCARS GRID ONLINE'

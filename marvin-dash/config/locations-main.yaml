@@ -1,0 +1,217 @@
+title: Locations
+icon: mdi:home-map-marker
+path: locations
+theme: LCARS
+cards:
+  - type: vertical-stack
+    cards:
+      # Header
+      - type: horizontal-stack
+        cards:
+          - type: button
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/mission-pad
+            name: ← BACK
+            icon: mdi:arrow-left
+            styles:
+              card:
+                - background: '#FF9900'
+                - border-radius: '20px 0 0 20px'
+          - type: markdown
+            content: |
+              <div style="background: #6699CC; padding: 10px 20px; border-radius: 0 20px 20px 0; font-family: 'Antonio', sans-serif; font-size: 20px; font-weight: bold; color: #000;">
+              LOCATION STATUS</div>
+
+      # Location Tabs
+      - type: horizontal-stack
+        cards:
+          - type: button
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/location-home
+            name: HOME
+            icon: mdi:home
+            styles:
+              card:
+                - background: '#FF9900'
+                - border-radius: '20px'
+          - type: button
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/location-downstairs
+            name: DOWNSTAIRS
+            icon: mdi:home-floor-1
+            styles:
+              card:
+                - background: '#CC6699'
+                - border-radius: '20px'
+          - type: button
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/location-upstairs
+            name: UPSTAIRS
+            icon: mdi:home-floor-2
+            styles:
+              card:
+                - background: '#9999CC'
+                - border-radius: '20px'
+          - type: button
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/location-garage
+            name: GARAGE/EXT
+            icon: mdi:garage
+            styles:
+              card:
+                - background: '#99CC99'
+                - border-radius: '20px'
+
+      # Default View - Home Overview
+      - type: horizontal-stack
+        cards:
+          # Left Column - Status
+          - type: vertical-stack
+            cards:
+              - type: markdown
+                content: |
+                  <div style="background: #FF9900; padding: 10px; border-radius: 10px; font-family: 'Antonio'; font-weight: bold; color: #000;">HOME STATUS</div>
+              
+              - type: glance
+                title: OCCUPANCY
+                entities:
+                  - binary_sensor.anyone_home
+                  - person.alexander
+                  - person.alexandra
+                style: |
+                  ha-card {
+                    background: #000;
+                    border-left: 5px solid #FF9900;
+                  }
+
+              - type: entities
+                title: DOORS & WINDOWS
+                entities:
+                  - binary_sensor.front_door
+                  - binary_sensor.back_door
+                  - binary_sensor.garage_door
+                  - binary_sensor.living_room_window
+                style: |
+                  ha-card {
+                    background: #000;
+                    border-left: 5px solid #CC6699;
+                  }
+
+              - type: sensor
+                entity: sensor.indoor_temperature_average
+                name: AVG TEMP
+                icon: mdi:thermometer
+                style: |
+                  ha-card {
+                    background: #000;
+                    border-left: 5px solid #9999CC;
+                  }
+
+          # Center Column - Climate & Energy
+          - type: vertical-stack
+            cards:
+              - type: markdown
+                content: |
+                  <div style="background: #99CC99; padding: 10px; border-radius: 10px; font-family: 'Antonio'; font-weight: bold; color: #000;">CLIMATE & ENERGY</div>
+
+              - type: thermostat
+                entity: climate.main
+                style: |
+                  ha-card {
+                    background: #000;
+                    border: 2px solid #99CC99;
+                    border-radius: 10px;
+                  }
+
+              - type: history-graph
+                title: ENERGY USAGE (24H)
+                hours_to_show: 24
+                entities:
+                  - sensor.energy_usage
+                style: |
+                  ha-card {
+                    background: #000;
+                    border-left: 5px solid #FFCC99;
+                  }
+
+              - type: gauge
+                entity: sensor.hvac_runtime_today
+                name: HVAC RUNTIME
+                min: 0
+                max: 24
+                style: |
+                  ha-card {
+                    background: #000;
+                  }
+
+          # Right Column - Quick Actions
+          - type: vertical-stack
+            cards:
+              - type: markdown
+                content: |
+                  <div style="background: #6699CC; padding: 10px; border-radius: 10px; font-family: 'Antonio'; font-weight: bold; color: #000;">QUICK ACTIONS</div>
+
+              - type: button
+                tap_action:
+                  action: scene.turn_on
+                  entity: scene.good_morning
+                name: GOOD MORNING
+                icon: mdi:weather-sunset-up
+                styles:
+                  card:
+                    - background: '#FFCC99'
+                    - border-radius: '10px'
+                  name:
+                    - color: '#000'
+                    - font-family: 'Antonio'
+                    - font-weight: bold
+
+              - type: button
+                tap_action:
+                  action: scene.turn_on
+                  entity: scene.good_night
+                name: GOOD NIGHT
+                icon: mdi:weather-night
+                styles:
+                  card:
+                    - background: '#9999CC'
+                    - border-radius: '10px'
+                  name:
+                    - color: '#000'
+                    - font-family: 'Antonio'
+                    - font-weight: bold
+
+              - type: button
+                tap_action:
+                  action: scene.turn_on
+                  entity: scene.away_mode
+                name: AWAY MODE
+                icon: mdi:shield-home
+                styles:
+                  card:
+                    - background: '#CC6699'
+                    - border-radius: '10px'
+                  name:
+                    - color: '#000'
+                    - font-family: 'Antonio'
+                    - font-weight: bold
+
+              - type: button
+                tap_action:
+                  action: scene.turn_on
+                  entity: scene.movie_mode
+                name: MOVIE MODE
+                icon: mdi:movie-open
+                styles:
+                  card:
+                    - background: '#99CC99'
+                    - border-radius: '10px'
+                  name:
+                    - color: '#000'
+                    - font-family: 'Antonio'
+                    - font-weight: bold

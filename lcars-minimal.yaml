@@ -1,0 +1,17 @@
+LCARS Default:
+  card-mod-theme: "LCARS Default"
+  lcars-ui-background: "#000000"
+  lcars-ui-text: "#F5F6FA"
+  lcars-ui-primary: "#FF9900"
+  lcars-ui-secondary: "#CC99FF"
+  lcars-ui-accent: "#8899FF"
+  lcars-ui-warning: "#CC4444"
+  primary-background-color: "#000000"
+  primary-text-color: "#F5F6FA"
+  primary-color: "#FF9900"
+  accent-color: "#8899FF"
+  modes:
+    light:
+      primary-background-color: "#000000"
+    dark:
+      primary-background-color: "#000000"

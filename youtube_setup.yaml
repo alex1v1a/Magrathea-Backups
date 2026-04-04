@@ -1,0 +1,20 @@
+# YouTube Integration Setup
+# HACS plugins already installed:
+# - ytube_music_player
+# - youtube
+# - YouTube Video Card
+
+# To configure ytube_music_player:
+# 1. Settings → Devices & Services
+# 2. Add Integration → YouTube Music Player
+# 3. Enter Google account: alex@1v1a.com
+# 4. Password: Standal0ne9
+# 5. Follow authentication flow
+
+# Features:
+# - Play YouTube Music
+# - Control playback
+# - Browse playlists
+# - Search YouTube
+
+# Note: May need to create app password if 2FA is enabled

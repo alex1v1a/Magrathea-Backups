@@ -1,0 +1,137 @@
+# Wyze Cameras via Wyze Bridge RTSP
+# All 22 enabled cameras from Wyze Bridge
+
+camera:
+  # Outdoor Cameras
+  - platform: generic
+    name: Toolbox
+    still_image_url: http://172.17.0.2:5000/snapshot/toolbox.jpg
+    stream_source: rtsp://172.17.0.2:8554/toolbox
+    verify_ssl: false
+
+  - platform: generic
+    name: Backyard
+    still_image_url: http://172.17.0.2:5000/snapshot/backyard.jpg
+    stream_source: rtsp://172.17.0.2:8554/backyard
+    verify_ssl: false
+
+  - platform: generic
+    name: Garden Tools
+    still_image_url: http://172.17.0.2:5000/snapshot/garden-tools.jpg
+    stream_source: rtsp://172.17.0.2:8554/garden-tools
+    verify_ssl: false
+
+  - platform: generic
+    name: Saxton
+    still_image_url: http://172.17.0.2:5000/snapshot/saxton.jpg
+    stream_source: rtsp://172.17.0.2:8554/saxton
+    verify_ssl: false
+
+  - platform: generic
+    name: Dog Pen
+    still_image_url: http://172.17.0.2:5000/snapshot/dog-pen.jpg
+    stream_source: rtsp://172.17.0.2:8554/dog-pen
+    verify_ssl: false
+
+  - platform: generic
+    name: Dog House
+    still_image_url: http://172.17.0.2:5000/snapshot/dog-house.jpg
+    stream_source: rtsp://172.17.0.2:8554/dog-house
+    verify_ssl: false
+
+  - platform: generic
+    name: Driveway
+    still_image_url: http://172.17.0.2:5000/snapshot/driveway.jpg
+    stream_source: rtsp://172.17.0.2:8554/driveway
+    verify_ssl: false
+
+  - platform: generic
+    name: Front Yard West
+    still_image_url: http://172.17.0.2:5000/snapshot/front-yard-west.jpg
+    stream_source: rtsp://172.17.0.2:8554/front-yard-west
+    verify_ssl: false
+
+  - platform: generic
+    name: Front Yard East
+    still_image_url: http://172.17.0.2:5000/snapshot/front-yard-east.jpg
+    stream_source: rtsp://172.17.0.2:8554/front-yard-east
+    verify_ssl: false
+
+  - platform: generic
+    name: Side Yard
+    still_image_url: http://172.17.0.2:5000/snapshot/side-yard.jpg
+    stream_source: rtsp://172.17.0.2:8554/side-yard
+    verify_ssl: false
+
+  - platform: generic
+    name: Back Patio
+    still_image_url: http://172.17.0.2:5000/snapshot/back-patio.jpg
+    stream_source: rtsp://172.17.0.2:8554/back-patio
+    verify_ssl: false
+
+  - platform: generic
+    name: Backyard Egg Chair
+    still_image_url: http://172.17.0.2:5000/snapshot/backyard-egg-chair.jpg
+    stream_source: rtsp://172.17.0.2:8554/backyard-egg-chair
+    verify_ssl: false
+
+  - platform: generic
+    name: Backyard Kitchen
+    still_image_url: http://172.17.0.2:5000/snapshot/backyard-kitchen.jpg
+    stream_source: rtsp://172.17.0.2:8554/backyard-kitchen
+    verify_ssl: false
+
+  # Indoor Cameras
+  - platform: generic
+    name: Lounge
+    still_image_url: http://172.17.0.2:5000/snapshot/lounge.jpg
+    stream_source: rtsp://172.17.0.2:8554/lounge
+    verify_ssl: false
+
+  - platform: generic
+    name: Lounge Floor
+    still_image_url: http://172.17.0.2:5000/snapshot/lounge-floor.jpg
+    stream_source: rtsp://172.17.0.2:8554/lounge-floor
+    verify_ssl: false
+
+  - platform: generic
+    name: "Maeve's Room"
+    still_image_url: http://172.17.0.2:5000/snapshot/maeves-room.jpg
+    stream_source: rtsp://172.17.0.2:8554/maeves-room
+    verify_ssl: false
+
+  - platform: generic
+    name: "Nora's Room"
+    still_image_url: http://172.17.0.2:5000/snapshot/noras-room.jpg
+    stream_source: rtsp://172.17.0.2:8554/noras-room
+    verify_ssl: false
+
+  - platform: generic
+    name: Alex Allie Bedroom
+    still_image_url: http://172.17.0.2:5000/snapshot/alex-allie-bedroom.jpg
+    stream_source: rtsp://172.17.0.2:8554/alex-allie-bedroom
+    verify_ssl: false
+
+  - platform: generic
+    name: Bedroom Backyard
+    still_image_url: http://172.17.0.2:5000/snapshot/bedroom-backyard.jpg
+    stream_source: rtsp://172.17.0.2:8554/bedroom-backyard
+    verify_ssl: false
+
+  - platform: generic
+    name: Print Mill
+    still_image_url: http://172.17.0.2:5000/snapshot/print-mill.jpg
+    stream_source: rtsp://172.17.0.2:8554/print-mill
+    verify_ssl: false
+
+  - platform: generic
+    name: Garage
+    still_image_url: http://172.17.0.2:5000/snapshot/garage.jpg
+    stream_source: rtsp://172.17.0.2:8554/garage
+    verify_ssl: false
+
+  - platform: generic
+    name: Garage Door
+    still_image_url: http://172.17.0.2:5000/snapshot/garage-door.jpg
+    stream_source: rtsp://172.17.0.2:8554/garage-door
+    verify_ssl: false

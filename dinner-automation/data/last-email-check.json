@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-02-11T00:00:09.222Z",
+  "repliesFound": 0,
+  "processedReplies": [],
+  "newActions": 0,
+  "summary": {
+    "approvals": 0,
+    "rejections": 0,
+    "adjustments": 0,
+    "addToCart": 0,
+    "other": 0,
+    "bySender": {}
+  }
+}

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+    ============================================================================
+    REEL REVIEWS - APP PAGE
+    ============================================================================
+    Domain: reelreviews.club (redirects here from typewrite.club)
+    App Concept: "Google Maps but only negative reviews"
+    Theme: Vintage fishing/comic book aesthetic
+    
+    THE CATFISH METAPHOR:
+    Just as anglers use reels to catch fish, this app helps users "reel in" 
+    the truth about restaurants. "Catfish" restaurants = those that use fake 
+    positive reviews to lure customers (like a catfish lure).
+    ============================================================================
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reel Reviews - The honest review app that only shows negative reviews. Catch catfish restaurants before they catch you.">
+    <meta name="keywords" content="Reel Reviews, restaurant reviews, honest reviews, catfish restaurants, negative reviews">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Reel Reviews - Catch the Truth">
+    <meta property="og:description" content="The only restaurant review app that tells you what NOT to eat.">
+    <meta property="og:image" content="https://typewrite.club/assets/reel-reviews-poster.png">
+    
+    <title>Reel Reviews | Catch the Truth Before You Dine</title>
+    
+    <!-- Fonts: Comic/fishing themed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="reel-reviews.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎣</text></svg>">
+</head>
+<body class="reel-reviews-page">
+
+    <!-- =========================================================================
+         NAVIGATION (inherits from main site but with app-specific styling)
+         ========================================================================= -->
+    <header class="site-header" role="banner">
+        <nav class="main-nav" role="navigation">
+            <a href="/" class="brand" aria-label="Paper Trail Home">
+                <span class="brand-icon">
+                    <img src="../../assets/logo.svg" alt="Paper Trail" width="48" height="48">
+                </span>
+                <span class="brand-text">Paper Trail</span>
+            </a>
+            
+            <ul id="nav-menu" class="nav-links">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/blog/" class="nav-link">Blog</a></li>
+                <li><a href="/apps/reel-reviews/" class="nav-link active" aria-current="page">Reel Reviews</a></li>
+                <li><a href="/contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- =========================================================================
+         HERO SECTION - Comic Book Style
+         ========================================================================= -->
+    <main id="main-content">
+        
+        <section class="rr-hero" aria-labelledby="rr-hero-title">
+            <div class="rr-hero-bg">
+                <!-- Halftone pattern overlay for comic effect -->
+                <div class="halftone-overlay"></div>
+            </div>
+            
+            <div class="rr-hero-content">
+                <!-- Comic book burst/badge -->
+                <div class="comic-badge">
+                    <span class="badge-text">NOW CASTING!</span>
+                </div>
+                
+                <h1 id="rr-hero-title" class="rr-title">
+                    <span class="rr-title-word">REEL</span>
+                    <span class="rr-title-word">REVIEWS</span>
+                </h1>
+                
+                <p class="rr-tagline">
+                    Catch the truth before you dine! 🎣
+                </p>
+                
+                <p class="rr-subtitle">
+                    The only map app that shows you what <strong>NOT</strong> to eat.
+                    No fake 5-star reviews. No paid promotions. Just honest catches.
+                </p>
+                
+                <div class="rr-cta">
+                    <a href="#download" class="btn btn-rr-primary">
+                        <span class="btn-icon">📱</span>
+                        Download the App
+                    </a>
+                    <a href="#how-it-works" class="btn btn-rr-secondary">
+                        How It Works
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Fishing hook decoration -->
+            <div class="fishing-hook" aria-hidden="true">
+                <svg viewBox="0 0 100 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 0V150C50 177.6 27.6 200 0 200" stroke="#C0C0C0" stroke-width="4"/>
+                    <circle cx="50" cy="10" r="8" stroke="#C0C0C0" stroke-width="3"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             THE PROBLEM SECTION - Why negative reviews matter
+             ========================================================================= -->
+        <section id="problem" class="rr-section rr-problem" aria-labelledby="problem-title">
+            <div class="container">
+                <h2 id="problem-title" class="rr-section-title">
+                    <span class="title-pow">POW!</span>
+                    Tired of Getting Catfished?
+                </h2>
+                
+                <div class="problem-grid">
+                    <div class="problem-card">
+                        <div class="problem-icon">🤖</div>
+                        <h3>Fake Reviews</h3>
+                        <p>Restaurants buy hundreds of fake 5-star reviews to boost ratings. You're walking into a trap!</p>
+                    </div>
+                    
+                    <div class="problem-card">
+                        <div class="problem-icon">💰</div>
+                        <h3>Paid Promotions</h3>
+                        <p>"Featured" listings are just ads. Those glowing reviews? Often compensated, not honest.</p>
+                    </div>
+                    
+                    <div class="problem-card">
+                        <div class="problem-icon">😤</div>
+                        <h3>Wasted Money</h3>
+                        <p>You arrive expecting greatness and get garbage. Your night = ruined. Your wallet = crying.</p>
+                    </div>
+                </div>
+                
+                <!-- Comic-style stat box -->
+            <div class="stat-box">
+                    <div class="stat-bubble">
+                        <span class="stat-number">67%</span>
+                        <span class="stat-label">of restaurant reviews are suspected fake or paid</span>
+                    </div>
+                    <p class="stat-source">*Based on internal analysis of review patterns</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             HOW IT WORKS SECTION - The fishing metaphor
+             ========================================================================= -->
+        <section id="how-it-works" class="rr-section rr-how" aria-labelledby="how-title">
+            <div class="container">
+                <h2 id="how-title" class="rr-section-title">
+                    <span class="title-zap">ZAP!</span>
+                    How Reel Reviews Works
+                </h2>
+                
+                <div class="how-steps">
+                    <!-- Step 1 -->
+                    <div class="how-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Cast Your Net</h3>
+                            <p>Open the map and see restaurants around you. Each pin shows the real story.</p>
+                            <div class="step-visual">🗺️</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="how-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Check the Bait</h3>
+                            <p>Read ONLY negative reviews. If 50 people say "food poisoning," you know to swim away.</p>
+                            <div class="step-visual">⚠️</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="how-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Reel In the Truth</h3>
+                            <p>Leave your own honest catch. Help others avoid the places that gave you the runs!</p>
+                            <div class="step-visual">🎣</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Visual showing the app UI -->
+                <div class="app-preview">
+                    <h3 class="preview-title">The App in Action</h3>
+                    <img src="../../assets/reel-reviews-ui.png" 
+                         alt="Reel Reviews mobile app interface showing a map with restaurant pins and negative review highlights"
+                         class="preview-image"
+                         loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             FEATURES SECTION - What makes Reel Reviews special
+             ========================================================================= -->
+        <section id="features" class="rr-section rr-features" aria-labelledby="features-title">
+            <div class="container">
+                <h2 id="features-title" class="rr-section-title">
+                    <span class="title-bam">BAM!</span>
+                    Features That Hook You
+                </h2>
+                
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🗺️</div>
+                        <h3>Map-Based Discovery</h3>
+                        <p>Just like Google Maps, but honest. See all nearby restaurants with their "real" rating.</p>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-icon">⚠️</div>
+                        <h3>Negative Reviews Only</h3>
+                        <p>No more sifting through fake 5-star praise. See what people actually complain about.</p>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-icon">🐟</div>
+                        <h3>Catfish Detection</h3>
+                        <p>Our algorithm flags suspicious review patterns. Real catches only!</p>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-icon">📸</div>
+                        <h3>Photo Proof</h3>
+                        <p>Users upload photos of the actual food they received. No more menu photo bait-and-switch.</p>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-icon">🏷️</div>
+                        <h3>Tag System</h3>
+                        <p>Tag reviews with issues like "Food Poisoning," "False Advertising," "Rude Staff," etc.</p>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-icon">🔔</div>
+                        <h3>Alert Mode</h3>
+                        <p>Get warnings when you enter an area with known catfish restaurants.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             THE CATCH SECTION - Fishing-themed CTA
+             ========================================================================= -->
+        <section id="download" class="rr-section rr-catch" aria-labelledby="catch-title">
+            <div class="container">
+                <div class="catch-content">
+                    <h2 id="catch-title" class="catch-title">
+                        Ready to Start Catching?
+                    </h2>
+                    
+                    <p class="catch-text">
+                        Don't let another catfish restaurant ruin your dinner. 
+                        Download Reel Reviews today and join the hunt for honesty!
+                    </p>
+                    
+                    <div class="store-buttons">
+                        <a href="#" class="store-btn app-store" aria-label="Download on the App Store">
+                            <span class="store-icon">🍎</span>
+                            <span class="store-text">
+                                <span class="store-small">Download on the</span>
+                                <span class="store-large">App Store</span>
+                            </span>
+                        </a>
+                        
+                        <a href="#" class="store-btn play-store" aria-label="Get it on Google Play">
+                            <span class="store-icon">🤖</span>
+                            <span class="store-text">
+                                <span class="store-small">Get it on</span>
+                                <span class="store-large">Google Play</span>
+                            </span>
+                        </a>
+                    </div>
+                    
+                    <p class="catch-note">
+                        🎣 Remember: Every honest review helps someone else avoid a bad meal!
+                    </p>
+                </div>
+                
+                <!-- Decorative fish -->
+                <div class="fish-decoration" aria-hidden="true">
+                    <span class="fish fish-1">🐟</span>
+                    <span class="fish fish-2">🐠</span>
+                    <span class="fish fish-3">🐡</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             POSTER SECTION - Full width vintage poster
+             ========================================================================= -->
+        <section class="rr-poster" aria-label="Promotional poster">
+            <img src="../../assets/reel-reviews-poster.png" 
+                 alt="Reel Reviews vintage fishing comic poster: A retro-style advertisement showing a fisherman catching restaurants with fake reviews"
+                 class="poster-image"
+                 loading="lazy">
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="brand">
+                        <span class="brand-icon">
+                            <img src="../../assets/logo.svg" alt="Paper Trail" width="48" height="48">
+                        </span>
+                        <span>Paper Trail</span>
+                    </a>
+                    <p class="footer-description">
+                        Writing the future of mobile experiences from New Zealand.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="GitHub">⌘</a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="/apps/reel-reviews/">Reel Reviews</a></li>
+                        <li><a href="/apps/coming-soon/">Coming Soon</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/privacy-policy.html">Privacy</a></li>
+                        <li><a href="/terms-of-service.html">Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:admin@typewrite.club">admin@typewrite.club</a></li>
+                        <li><a href="tel:+16504279450">+1 (650) 427-9450</a></li>
+                        <li>1 Tika Street, Parnell</li>
+                        <li>Auckland 1052, NZ</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2024 Paper Trail Limited. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="/privacy-policy.html">Privacy Policy</a>
+                    <a href="/terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../js/main.js"></script>
+    <script src="reel-reviews.js"></script>
+</body>
+</html>

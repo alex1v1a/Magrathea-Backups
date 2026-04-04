@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="React Native vs Flutter comparison from a developer who built production apps with both frameworks.">
+    <title>React Native vs Flutter: A Developer's Perspective | The Paper Trail</title>
+    
+    <!-- 
+        BLOG POST TEMPLATE
+        This is a single blog post page using the same design system as the rest of the site.
+        All styles are inline to prevent broken CSS references.
+    -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ============================================
+           BLOG POST STYLES
+           Using same design tokens as main site
+           ============================================ */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+            background: #ffffff; 
+            color: #111111; 
+            line-height: 1.6; 
+            -webkit-font-smoothing: antialiased; 
+        }
+        
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        
+        /* Header - matches main site */
+        .site-header { 
+            position: sticky; 
+            top: 0; 
+            background: rgba(255,255,255,0.95); 
+            backdrop-filter: blur(12px); 
+            border-bottom: 1px solid #e5e5e5; 
+            z-index: 100; 
+        }
+        
+        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        
+        .main-nav { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            height: 64px; 
+        }
+        
+        .brand { 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+            font-weight: 600; 
+            font-size: 15px; 
+        }
+        
+        .brand-logo { width: 28px; height: 28px; }
+        
+        .nav-blog-title { 
+            font-family: 'Newsreader', Georgia, serif; 
+            font-size: 18px; 
+            font-weight: 500; 
+        }
+        
+        .btn { 
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 8px 14px; 
+            font-size: 13px; 
+            font-weight: 500; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            border: none; 
+        }
+        
+        .btn-primary { background: #dc2626; color: white; }
+        .btn-primary:hover { background: #b91c1c; }
+        
+        /* Article Header */
+        .article-header { 
+            padding: 64px 24px 32px; 
+            text-align: center; 
+            max-width: 800px; 
+            margin: 0 auto;
+        }
+        
+        .article-meta { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 16px; 
+            margin-bottom: 24px; 
+            font-size: 14px; 
+        }
+        
+        .article-category { color: #dc2626; font-weight: 600; }
+        .article-date { color: #666; }
+        
+        .article-title { 
+            font-family: 'Newsreader', Georgia, serif; 
+            font-size: 42px; 
+            line-height: 1.2; 
+            margin-bottom: 24px; 
+        }
+        
+        @media (max-width: 640px) { 
+            .article-title { font-size: 28px; } 
+        }
+        
+        /* Article Hero Image */
+        .article-hero {
+            max-width: 1000px;
+            margin: 0 auto 48px;
+            padding: 0 24px;
+        }
+        
+        .article-hero-image {
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .article-hero-image svg {
+            width: 120px;
+            height: 120px;
+            opacity: 0.9;
+        }
+        
+        /* Article Content */
+        .article-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px 64px;
+        }
+        
+        .article-content h2 {
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 28px;
+            margin: 48px 0 16px;
+        }
+        
+        .article-content h3 {
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 22px;
+            margin: 32px 0 12px;
+        }
+        
+        .article-content p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .article-content ul {
+            list-style: disc;
+            padding-left: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .article-content li {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        /* Footer */
+        .site-footer { 
+            background: #fafafa; 
+            border-top: 1px solid #e5e5e5; 
+            padding: 48px 0 24px; 
+        }
+        
+        .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        
+        .footer-grid { 
+            display: grid; 
+            grid-template-columns: 2fr 1fr 1fr 1fr; 
+            gap: 48px; 
+            margin-bottom: 48px; 
+        }
+        
+        @media (max-width: 768px) { 
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } 
+        }
+        
+        .footer-description { 
+            font-size: 14px; 
+            color: #666; 
+            max-width: 280px; 
+            margin-top: 12px; 
+        }
+        
+        .footer-links h4 { 
+            font-size: 13px; 
+            font-weight: 600; 
+            text-transform: uppercase; 
+            letter-spacing: 0.05em; 
+            margin-bottom: 16px; 
+        }
+        
+        .footer-links li { margin-bottom: 10px; }
+        
+        .footer-links a { 
+            font-size: 14px; 
+            color: #666; 
+        }
+        
+        .footer-links a:hover { color: #111; }
+        
+        .footer-bottom { 
+            padding-top: 24px; 
+            border-top: 1px solid #e5e5e5; 
+            text-align: center; 
+        }
+        
+        .footer-bottom p { font-size: 13px; color: #888; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <nav class="main-nav">
+                <a href="/" class="brand">
+                    <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="48" rx="8" fill="#dc2626"/>
+                        <path d="M14 12h20v4H14v-4zm0 10h20v4H14v-4zm0 10h14v4H14v-4z" fill="white"/>
+                    </svg>
+                    <span>Paper Trail</span>
+                </a>
+                
+                <div class="nav-center">
+                    <a href="/blog/" class="nav-blog-title">The Paper Trail</a>
+                </div>
+                
+                <div class="nav-right">
+                    <a href="/blog/#newsletter" class="btn btn-primary">Subscribe</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Article Header -->
+        <header class="article-header">
+            <div class="article-meta">
+                <span class="article-category">Engineering</span>
+                <span class="article-date">March 12, 2026</span>
+            </div>
+            <h1 class="article-title">React Native vs Flutter: A Developer's Perspective</h1>
+        </header>
+        
+        <!-- Article Hero -->
+        <div class="article-hero">
+            <div class="article-hero-image">
+                <!-- Inline SVG as placeholder - prevents broken image issues -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
+                    <rect x="4" y="4" width="16" height="16" rx="2"/>
+                    <path d="M9 9h6v6H9z"/>
+                    <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/>
+                </svg>
+            </div>
+        </div>
+        
+        <!-- Article Content -->
+        <article class="article-content">
+            <p>After building production apps with both React Native and Flutter, I've formed strong opinions about when to use each. This isn't a theoretical comparison—it's based on real shipping experience.</p>
+            
+            <h2>The Projects</h2>
+            <p>We built Reel Reviews with React Native first, then rewrote parts of it in Flutter as an experiment. Both versions shipped to the App Store and Google Play. Here's what we learned.</p>
+            
+            <h2>Performance</h2>
+            <p>Flutter wins on raw performance. The 60fps animations are buttery smooth, and startup time is noticeably faster. React Native has improved with the new architecture, but Flutter still feels snappier.</p>
+            
+            <h2>Developer Experience</h2>
+            <p>This is where it gets interesting. React Native's hot reload is faster and more reliable. The JavaScript ecosystem is massive—you can find a package for almost anything. But Flutter's Dart is type-safe and the tooling is more consistent.</p>
+            
+            <h2>Our Recommendation</h2>
+            <p>For most teams, I'd recommend React Native if you have JavaScript expertise in-house. The hiring pool is larger and the ecosystem is mature. Choose Flutter if performance is critical or if you're starting fresh with a team that doesn't mind learning Dart.</p>
+            
+            <p>Both are excellent choices in 2026. The gap has narrowed significantly, and you can't really go wrong with either.</p>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="brand">
+                        <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="8" fill="#dc2626"/>
+                            <path d="M14 12h20v4H14v-4zm0 10h20v4H14v-4zm0 10h14v4H14v-4z" fill="white"/>
+                        </svg>
+                        <span>Paper Trail</span>
+                    </a>
+                    <p class="footer-description">Writing the future of mobile experiences from New Zealand.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="/apps/reel-reviews/">Reel Reviews</a></li>
+                        <li><a href="/apps/coming-soon/">Coming Soon</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/privacy-policy.html">Privacy</a></li>
+                        <li><a href="/terms-of-service.html">Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:admin@typewrite.club">Email</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Paper Trail Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

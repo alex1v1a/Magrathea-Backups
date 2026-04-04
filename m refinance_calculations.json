@@ -1,0 +1,140 @@
+{
+  "$380,000": {
+    "current": {
+      "property_value": 380000,
+      "loan_amount": 340281.97,
+      "ltv": 89.54788684210526,
+      "rate": 6.375,
+      "pi_payment": 2122.92,
+      "mip": 193,
+      "escrow": 708.33,
+      "total_payment": 3024.25,
+      "closing_costs": 0,
+      "cash_to_close": 0
+    },
+    "fha": {
+      "property_value": 380000,
+      "loan_amount": 366300,
+      "ltv": 96.39,
+      "rate": 4.75,
+      "pi_payment": 1910.79,
+      "mip": 149,
+      "escrow": 708.33,
+      "total_payment": 2768.12,
+      "monthly_savings": 256.13,
+      "break_even_months": 105.3,
+      "closing_costs": 26960,
+      "cash_to_close": 941,
+      "five_year_cost": 193988.45,
+      "thirty_year_cost": 1024425.71
+    },
+    "conventional": {
+      "property_value": 380000,
+      "loan_amount": 340281.97,
+      "ltv": 89.55,
+      "rate": 5.5,
+      "pi_payment": 1932.08,
+      "pmi": 141.78,
+      "escrow": 708.33,
+      "total_payment": 2782.2,
+      "monthly_savings": 242.05,
+      "break_even_months": 42.2,
+      "closing_costs": 10208.46,
+      "cash_to_close": 36281.97,
+      "five_year_cost": 213422.29,
+      "thirty_year_cost": 1048081.62
+    }
+  },
+  "$400,000": {
+    "current": {
+      "property_value": 400000,
+      "loan_amount": 340281.97,
+      "ltv": 85.0704925,
+      "rate": 6.375,
+      "pi_payment": 2122.92,
+      "mip": 193,
+      "escrow": 708.33,
+      "total_payment": 3024.25,
+      "closing_costs": 0,
+      "cash_to_close": 0
+    },
+    "fha": {
+      "property_value": 400000,
+      "loan_amount": 366300,
+      "ltv": 91.57,
+      "rate": 4.75,
+      "pi_payment": 1910.79,
+      "mip": 149,
+      "escrow": 708.33,
+      "total_payment": 2768.12,
+      "monthly_savings": 256.13,
+      "break_even_months": 105.3,
+      "closing_costs": 26960,
+      "cash_to_close": 941,
+      "five_year_cost": 193988.45,
+      "thirty_year_cost": 1024425.71
+    },
+    "conventional": {
+      "property_value": 400000,
+      "loan_amount": 340281.97,
+      "ltv": 85.07,
+      "rate": 5.5,
+      "pi_payment": 1932.08,
+      "pmi": 141.78,
+      "escrow": 708.33,
+      "total_payment": 2782.2,
+      "monthly_savings": 242.05,
+      "break_even_months": 42.2,
+      "closing_costs": 10208.46,
+      "cash_to_close": 20281.97,
+      "five_year_cost": 197422.29,
+      "thirty_year_cost": 1032081.62
+    }
+  },
+  "$415,000": {
+    "current": {
+      "property_value": 415000,
+      "loan_amount": 340281.97,
+      "ltv": 81.99565542168673,
+      "rate": 6.375,
+      "pi_payment": 2122.92,
+      "mip": 193,
+      "escrow": 708.33,
+      "total_payment": 3024.25,
+      "closing_costs": 0,
+      "cash_to_close": 0
+    },
+    "fha": {
+      "property_value": 415000,
+      "loan_amount": 366300,
+      "ltv": 88.27,
+      "rate": 4.75,
+      "pi_payment": 1910.79,
+      "mip": 149,
+      "escrow": 708.33,
+      "total_payment": 2768.12,
+      "monthly_savings": 256.13,
+      "break_even_months": 105.3,
+      "closing_costs": 26960,
+      "cash_to_close": 941,
+      "five_year_cost": 193988.45,
+      "thirty_year_cost": 1024425.71
+    },
+    "conventional": {
+      "property_value": 415000,
+      "loan_amount": 340281.97,
+      "ltv": 82.0,
+      "rate": 5.5,
+      "pi_payment": 1932.08,
+      "pmi": 141.78,
+      "escrow": 708.33,
+      "total_payment": 2782.2,
+      "monthly_savings": 242.05,
+      "break_even_months": 42.2,
+      "closing_costs": 10208.46,
+      "cash_to_close": 8281.97,
+      "five_year_cost": 185422.29,
+      "thirty_year_cost": 1020081.62
+    }
+  }
+}

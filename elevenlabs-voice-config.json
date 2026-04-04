@@ -1,0 +1,44 @@
+{
+  "plan": {
+    "price": 22,
+    "credits": 100000,
+    "voices": 10,
+    "cloning": true
+  },
+  "voices": [
+    {
+      "name": "Marvin_Calm",
+      "description": "Calm, slightly sardonic male voice for Marvin",
+      "gender": "male",
+      "age": "adult",
+      "accent": "american",
+      "tone": "calm, witty, slightly sardonic"
+    },
+    {
+      "name": "Marvin_Friendly",
+      "description": "Warm but dry humor male voice",
+      "gender": "male",
+      "age": "adult",
+      "accent": "american",
+      "tone": "warm, helpful, dry humor"
+    },
+    {
+      "name": "Trillian_Professional",
+      "description": "Professional, efficient female voice for Trillian",
+      "gender": "female",
+      "age": "adult",
+      "accent": "british",
+      "tone": "professional, efficient, clear"
+    },
+    {
+      "name": "DeepThought_Wise",
+      "description": "Deep, contemplative voice for Deep Thought",
+      "gender": "male",
+      "age": "mature",
+      "accent": "british",
+      "tone": "deep, wise, contemplative"
+    }
+  ],
+  "apiKeyPath": ".secrets/elevenlabs-api-key.json",
+  "setupDate": "2026-02-27T15:25:45.174Z"
+}

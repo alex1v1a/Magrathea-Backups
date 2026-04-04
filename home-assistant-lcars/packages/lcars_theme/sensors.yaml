@@ -1,0 +1,138 @@
+# ============================================
+# LCARS THEME - SENSORS
+# Supporting sensors for the LCARS interface
+# ============================================
+
+# ============================================
+# THEME-RELATED INPUT BOOLEANS
+# ============================================
+input_boolean:
+  red_alert:
+    name: Red Alert
+    icon: mdi:alert-octagon
+    
+  yellow_alert:
+    name: Yellow Alert
+    icon: mdi:alert
+    
+  do_not_disturb:
+    name: Do Not Disturb
+    icon: mdi:bed
+
+# ============================================
+# LCARS STYLE DATE/TIME SENSORS
+# ============================================
+sensor:
+  # Stardate calculation (simplified)
+  - platform: template
+    sensors:
+      stardate:
+        friendly_name: "Stardate"
+        value_template: >-
+          {% set year = now().year %}
+          {% set day_of_year = now().timetuple().tm_yday %}
+          {% set year_short = year - 1900 %}
+          {% set fraction = day_of_year / 365 %}
+          {{ "%d%02d" | format(year_short, (fraction * 1000)|int) }}
+        icon_template: mdi:calendar-star
+
+      # Formatted time for LCARS display
+      lcars_time:
+        friendly_name: "Ship's Time"
+        value_template: "{{ now().strftime('%H:%M:%S') }}"
+        icon_template: mdi:clock-outline
+
+      # Formatted date for LCARS display
+      lcars_date:
+        friendly_name: "Stardate"
+        value_template: "{{ now().strftime('%Y.%j') }}"
+        icon_template: mdi:calendar
+
+      # Day/Night indicator
+      day_night:
+        friendly_name: "Cycle"
+        value_template: >-
+          {% if 6 <= now().hour < 18 %}
+            Day Cycle
+          {% else %}
+            Night Cycle
+          {% endif %}
+        icon_template: >-
+          {% if 6 <= now().hour < 18 %}
+            mdi:weather-sunny
+          {% else %}
+            mdi:weather-night
+          {% endif %}
+
+# ============================================
+# LCARS SYSTEM STATUS SENSORS
+# ============================================
+      # Theme status sensor
+      lcars_theme_active:
+        friendly_name: "LCARS Status"
+        value_template: "Active"
+        icon_template: mdi:star-trek
+
+      # Alert status sensor
+      alert_status:
+        friendly_name: "Alert Status"
+        value_template: >-
+          {% if is_state('input_boolean.red_alert', 'on') %}
+            RED ALERT
+          {% elif is_state('input_boolean.yellow_alert', 'on') %}
+            Yellow Alert
+          {% else %}
+            Normal Operations
+          {% endif %}
+        icon_template: >-
+          {% if is_state('input_boolean.red_alert', 'on') %}
+            mdi:alert-octagon
+          {% elif is_state('input_boolean.yellow_alert', 'on') %}
+            mdi:alert
+          {% else %}
+            mdi:check-circle
+          {% endif %}
+
+# ============================================
+# INPUT SELECTS FOR LCARS MODES
+# ============================================
+input_select:
+  lcars_view_mode:
+    name: Display Mode
+    options:
+      - Standard
+      - Night Mode
+      - Alert Mode
+      - Diagnostic
+    initial: Standard
+    icon: mdi:monitor
+
+  lcars_department:
+    name: Department
+    options:
+      - Command
+      - Operations
+      - Science
+      - Medical
+      - Tactical
+    initial: Command
+    icon: mdi:account-group
+
+# ============================================
+# COUNTERS FOR LCARS INTERACTIONS
+# ============================================
+counter:
+  lcars_button_presses:
+    name: Interface Interactions
+    initial: 0
+    step: 1
+    icon: mdi:counter
+
+# ============================================
+# TIMERS FOR LCARS FEATURES
+# ============================================
+timer:
+  lcars_screensaver:
+    name: Screen Saver
+    duration: "00:10:00"
+    icon: mdi:monitor-screenshot

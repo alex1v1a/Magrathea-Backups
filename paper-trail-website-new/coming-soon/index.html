@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Coming Soon - Second App Teaser Page
+  ============================================================================
+  
+  URL: typewrite.club/coming-soon/
+  
+  This page serves as a teaser/landing page for Paper Trail Limited's second 
+  app, currently codenamed "Project Cart." It's an Instacart-like grocery 
+  delivery app with significant differences from existing solutions.
+  
+  DESIGN PHILOSOPHY:
+  - Minimalist, mysterious aesthetic to build intrigue
+  - Clean lines and modern typography
+  - Focus on the "waitlist" conversion - get people signed up
+  - Subtle animations to create interest without distraction
+  
+  STRATEGY:
+  Since this app is still in development, the goal is to:
+  1. Build anticipation through mystery
+  2. Collect email addresses for launch notification
+  3. Position it as "Instacart, but different" to pique curiosity
+  
+  STRUCTURE:
+  - Hero: Big, bold "Coming Soon" message
+  - Teaser: Brief description of what's coming
+  - Waitlist: Email signup form
+  - Social proof/validation: Why this matters
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Coming Soon | Paper Trail Limited</title>
+  <meta name="description" content="Something new is coming from Paper Trail Limited. A fresh take on grocery delivery. Sign up for early access.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Coming Soon | Paper Trail Limited">
+  <meta property="og:description" content="A fresh take on grocery delivery is coming. Sign up for early access.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://typewrite.club/coming-soon/">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔮</text></svg%3E">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/styles.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="page-coming-soon">
+  
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="site-header site-header-minimal" id="site-header">
+    <div class="container header-container">
+      <a href="/" class="logo" aria-label="Paper Trail Limited - Home">
+        <span class="logo-icon">📝</span>
+        <span class="logo-text">Paper Trail</span>
+      </a>
+      
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/reel-reviews/" class="nav-link">Reel Reviews</a></li>
+          <li><a href="/coming-soon/" class="nav-link active" aria-current="page">Coming Soon</aa></li>
+        </ul>
+      </nav>
+      
+      <button 
+        class="mobile-menu-toggle" 
+        id="mobile-menu-toggle" 
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- ============================================
+         HERO SECTION - Minimalist teaser
+         ============================================ -->
+    <section class="cs-hero" id="cs-hero" aria-labelledby="cs-hero-heading">
+      <div class="container cs-hero-container">
+        
+        <div class="cs-hero-content">
+          
+          <!-- Animated coming soon badge -->
+          <div class="cs-badge">
+            <span class="cs-badge-pulse" aria-hidden="true"></span>
+            <span class="cs-badge-text">Coming Soon</span>
+          </div>
+          
+          <!-- Main title - mysterious and intriguing -->
+          <h1 id="cs-hero-heading" class="cs-hero-title">
+            Something's <br>
+            <span class="cs-title-highlight">Cooking</span>
+          </h1>
+          
+          <!-- Teaser text - hints at the concept without revealing everything -->
+          <p class="cs-hero-teaser">
+            Imagine Instacart, but reimagined from the ground up. 
+            We're building something different. Something better.
+          </p>
+          
+          <!-- Subtle hint about what makes it different -->
+          <div class="cs-hints">
+            <span class="cs-hint">Faster</span>
+            <span class="cs-hint-separator" aria-hidden="true">•</span>
+            <span class="cs-hint">Smarter</span>
+            <span class="cs-hint-separator" aria-hidden="true">•</span>
+            <span class="cs-hint">Different</span>
+          </div>
+          
+        </div>
+        
+        <!-- Abstract visual element - animated shapes -->
+        <div class="cs-visual" aria-hidden="true">
+          <div class="cs-shape cs-shape-1"></div>
+          <div class="cs-shape cs-shape-2"></div>
+          <div class="cs-shape cs-shape-3"></div>
+          <div class="cs-icon">🛒</div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- ============================================
+         VALUE PROPOSITION SECTION
+         ============================================ -->
+    <section class="cs-value" id="cs-value" aria-labelledby="value-heading">
+      <div class="container">
+        <h2 id="value-heading" class="visually-hidden">What Makes It Different</h2>
+        
+        <div class="cs-value-grid">
+          
+          <!-- Value prop 1 -->
+          <div class="cs-value-card">
+            <div class="cs-value-icon">⚡</div>
+            <h3 class="cs-value-title">Speed First</h3>
+            <p class="cs-value-text">
+              Because waiting 2 hours for groceries defeats the purpose.
+            </p>
+          </div>
+          
+          <!-- Value prop 2 -->
+          <div class="cs-value-card">
+            <div class="cs-value-icon">🧠</div>
+            <h3 class="cs-value-title">Smart Replacements</h3>
+            <p class="cs-value-text">
+              AI that actually understands what you want, not random swaps.
+            </p>
+          </div>
+          
+          <!-- Value prop 3 -->
+          <div class="cs-value-card">
+            <div class="cs-value-icon">💰</div>
+            <h3 class="cs-value-title">Fair Pricing</h3>
+            <p class="cs-value-text">
+              No hidden markups. No surprise fees. Just honest pricing.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         WAITLIST SECTION
+         ============================================ -->
+    <section class="cs-waitlist" id="waitlist" aria-labelledby="waitlist-heading">
+      <div class="container">
+        <div class="cs-waitlist-content">
+          
+          <h2 id="waitlist-heading" class="cs-waitlist-title">
+            Be the First to Know
+          </h2>
+          
+          <p class="cs-waitlist-text">
+            Join our waitlist and get early access when we launch. 
+            Plus, early supporters get exclusive perks.
+          </p>
+          
+          <!-- Waitlist signup form -->
+          <form class="cs-waitlist-form" id="cs-waitlist-form" action="#" method="POST">
+            <div class="cs-form-row">
+              <div class="cs-form-field">
+                <label for="name" class="cs-form-label">Name</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  class="cs-form-input" 
+                  placeholder="Your name"
+                  required
+                  aria-required="true"
+                >
+              </div>
+              
+              <div class="cs-form-field">
+                <label for="email" class="cs-form-label">Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  class="cs-form-input" 
+                  placeholder="your@email.com"
+                  required
+                  aria-required="true"
+                >
+              </div>
+            </div>
+            
+            <div class="cs-form-field cs-form-field-full">
+              <label for="city" class="cs-form-label">City (optional)</label>
+              <input 
+                type="text" 
+                id="city" 
+                name="city" 
+                class="cs-form-input" 
+                placeholder="Which city should we launch in first?"
+              >
+            </div>
+            
+            <button type="submit" class="btn btn-cs-primary">
+              <span class="btn-text">Join the Waitlist</span>
+              <span class="btn-icon" aria-hidden="true">→</span>
+            </button>
+            
+          </form>
+          
+          <p class="cs-waitlist-note">
+            🔒 We respect your privacy. No spam, ever.
+          </p>
+          
+          <!-- Social proof - waitlist counter (placeholder) -->
+          <div class="cs-waitlist-counter">
+            <span class="cs-counter-number">0</span>
+            <span class="cs-counter-label">people ahead of you</span>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         NOTIFICATION SECTION
+         ============================================ -->
+    <section class="cs-notify" id="cs-notify" aria-labelledby="notify-heading">
+      <div class="container">
+        <div class="cs-notify-content">
+          
+          <h2 id="notify-heading" class="cs-notify-title">Get Notified on Launch</h2>
+          
+          <p class="cs-notify-text">
+            Follow Paper Trail Limited for updates on this project and future apps.
+          </p>
+          
+          <div class="cs-notify-links">
+            <a href="https://github.com/PaperTrail9" class="cs-notify-link" target="_blank" rel="noopener noreferrer">
+              <span class="cs-notify-icon">💻</span>
+              GitHub
+            </a>
+            <a href="mailto:hello@typewrite.club" class="cs-notify-link">
+              <span class="cs-notify-icon">✉️</span>
+              Email Us
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <span class="footer-logo">📝 Paper Trail Limited</span>
+          <p class="footer-tagline">Crafting digital experiences from New Zealand</p>
+        </div>
+        
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <ul class="footer-nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/reel-reviews/">Reel Reviews</a></li>
+            <li><a href="/coming-soon/">Coming Soon</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">
+          © <span id="current-year">2026</span> Paper Trail Limited.
+        </p>
+        <p class="footer-location">🇳🇿 Made in New Zealand</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

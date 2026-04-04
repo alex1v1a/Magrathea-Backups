@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-02-11T13:40:50.120Z",
+  "withoutStealth": {
+    "webdriver": true,
+    "pluginsLength": 0,
+    "languages": [
+      "en-US"
+    ],
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36"
+  },
+  "withStealth": {
+    "pluginsLength": 3,
+    "firstPlugin": "Chrome PDF Plugin",
+    "languages": [
+      "en-US",
+      "en"
+    ],
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36"
+  },
+  "results": [
+    {
+      "property": "navigator.webdriver",
+      "before": true,
+      "passed": true
+    },
+    {
+      "property": "navigator.plugins.length",
+      "before": 0,
+      "after": 3,
+      "passed": true
+    },
+    {
+      "property": "navigator.languages",
+      "before": "en-US",
+      "after": "en-US, en",
+      "passed": true
+    }
+  ],
+  "allPassed": true
+}

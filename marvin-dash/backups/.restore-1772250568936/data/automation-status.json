@@ -1,0 +1,42 @@
+{
+  "generated": "2026-02-11T05:05:01.531Z",
+  "health": {
+    "score": 95,
+    "status": "healthy",
+    "chromeRunning": true,
+    "lastEmail": "2026-02-11T02:16:00.909Z",
+    "pendingConfirmation": true
+  },
+  "pool": {
+    "total": 0,
+    "inUse": 0,
+    "available": 0,
+    "idle": 0
+  },
+  "meals": {
+    "thisWeek": 7,
+    "totalRecipes": 7,
+    "weekOf": "2026-02-08",
+    "budget": {
+      "allocated": 200,
+      "estimatedMealCost": 166,
+      "buffer": 16.6,
+      "totalWithBuffer": 182.6,
+      "remaining": 17.400000000000006
+    }
+  },
+  "heb": {
+    "completed": 0,
+    "failed": 0,
+    "total": 0,
+    "percentComplete": 0
+  },
+  "tasks": [
+    {
+      "priority": "medium",
+      "task": "Check email replies",
+      "action": "node dinner-email-system.js --check-reply",
+      "status": "pending"
+    }
+  ]
+}

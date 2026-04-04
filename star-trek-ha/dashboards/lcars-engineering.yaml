@@ -1,0 +1,233 @@
+# ==========================================
+# LCARS ENGINEERING - Systems Dashboard
+# ==========================================
+# Climate, power, and technical systems
+# Color Scheme: Blue (#8899FF) - Technical
+# ==========================================
+
+title: LCARS Engineering
+path: lcars-engineering
+icon: mdi:engine
+badges: []
+cards:
+  # ==========================================
+  # LEFT COLUMN - Navigation Sidebar
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        card_mod:
+          class: header-left
+          style: |
+            ha-card {
+              background: #8899FF !important;
+            }
+        content: '# NAVIGATION'
+
+      - type: button
+        name: "BRIDGE"
+        icon: mdi:star-four-points
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-bridge
+        card_mod:
+          class: button-lozenge-left
+
+      - type: button
+        name: "ENGINEERING"
+        icon: mdi:engine
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-engineering
+        card_mod:
+          class: button-lozenge-left
+          style: |
+            ha-card {
+              background: #CCDDFF !important;
+              border-left: 8px solid #8899FF !important;
+            }
+
+      - type: button
+        name: "SCIENCE"
+        icon: mdi:telescope
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-science
+        card_mod:
+          class: button-lozenge-left
+
+      - type: button
+        name: "SECURITY"
+        icon: mdi:shield
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-security
+        card_mod:
+          class: button-lozenge-left
+
+      - type: button
+        name: "QUARTERS"
+        icon: mdi:bed
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-quarters
+        card_mod:
+          class: button-lozenge-left
+
+      - type: markdown
+        card_mod:
+          class: footer-left
+          style: |
+            ha-card {
+              min-height: 60px !important;
+            }
+        content: '## USS HOME'
+
+  # ==========================================
+  # CENTER COLUMN - Climate Control
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      # Climate Header
+      - type: markdown
+        card_mod:
+          class: header-contained
+          style: |
+            ha-card {
+              background: #8899FF !important;
+            }
+        content: '# ENVIRONMENTAL CONTROLS'
+
+      # Main Thermostat
+      - type: thermostat
+        entity: climate.main_floor
+        card_mod:
+          class: middle-contained
+
+      # Zone Controls
+      - type: markdown
+        card_mod:
+          class: header-contained
+        content: '# ZONE CONTROLS'
+
+      - type: grid
+        columns: 2
+        card_mod:
+          class: middle-contained
+        cards:
+          - type: button
+            entity: climate.living_room
+            name: "Living Room"
+            show_name: true
+            show_icon: true
+            show_state: true
+            card_mod:
+              class: button-lozenge-left
+
+          - type: button
+            entity: climate.bedroom
+            name: "Bedroom"
+            show_name: true
+            show_icon: true
+            show_state: true
+            card_mod:
+              class: button-lozenge-right
+
+          - type: button
+            entity: climate.kitchen
+            name: "Kitchen"
+            show_name: true
+            show_icon: true
+            show_state: true
+            card_mod:
+              class: button-lozenge-left
+
+          - type: button
+            entity: climate.office
+            name: "Office"
+            show_name: true
+            show_icon: true
+            show_state: true
+            card_mod:
+              class: button-lozenge-right
+
+      # Footer
+      - type: markdown
+        card_mod:
+          class: footer-contained
+        content: '## CLIMATE CONTROL ACTIVE'
+
+  # ==========================================
+  # RIGHT COLUMN - Sensors & Power
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      # Sensors Header
+      - type: markdown
+        card_mod:
+          class: header-right
+          style: |
+            ha-card {
+              background: #8899FF !important;
+            }
+        content: '# ENVIRONMENTAL SENSORS'
+
+      # Temperature Sensors
+      - type: entities
+        entities:
+          - entity: sensor.indoor_temperature
+            name: "Indoor Temp"
+          - entity: sensor.outdoor_temperature
+            name: "Outdoor Temp"
+          - entity: sensor.attic_temperature
+            name: "Attic Temp"
+        card_mod:
+          class: middle-right
+
+      # Humidity Sensors
+      - type: markdown
+        card_mod:
+          class: header-right
+        content: '# HUMIDITY LEVELS'
+
+      - type: entities
+        entities:
+          - entity: sensor.indoor_humidity
+            name: "Indoor Humidity"
+          - entity: sensor.basement_humidity
+            name: "Basement Humidity"
+        card_mod:
+          class: middle-right
+
+      # Air Quality
+      - type: markdown
+        card_mod:
+          class: header-right
+        content: '# AIR QUALITY'
+
+      - type: gauge
+        entity: sensor.air_quality_index
+        min: 0
+        max: 500
+        severity:
+          green: 0
+          yellow: 50
+          red: 100
+        card_mod:
+          class: middle-right
+
+      # Footer
+      - type: markdown
+        card_mod:
+          class: footer-right
+        content: '## SYSTEMS OPTIMAL'

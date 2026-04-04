@@ -1,0 +1,5628 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-04-04T13:57:33.069Z",
+  "activeTasks": [],
+  "completedTasks": [
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T13:42:02.342Z",
+      "lastUpdated": "2026-04-04T13:57:33.069Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T13:42:02.370Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T13:42:02.392Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T13:42:02.394Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T13:42:02.401Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T13:42:02.526Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T13:57:33.069Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 930727
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T13:22:02.373Z",
+      "lastUpdated": "2026-04-04T13:37:33.765Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T13:22:02.401Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T13:22:02.959Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T13:22:02.962Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T13:22:02.971Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T13:22:03.101Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T13:37:33.765Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 931392
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T13:02:02.350Z",
+      "lastUpdated": "2026-04-04T13:17:33.219Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T13:02:02.380Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T13:02:02.402Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T13:02:02.404Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T13:02:02.416Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T13:02:02.563Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T13:17:33.219Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 930869
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T12:42:02.232Z",
+      "lastUpdated": "2026-04-04T12:57:32.508Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T12:42:02.260Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T12:42:02.280Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T12:42:02.282Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T12:42:02.290Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T12:42:02.433Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T12:57:32.508Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 930276
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T12:22:02.234Z",
+      "lastUpdated": "2026-04-04T12:37:33.428Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T12:22:02.263Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T12:22:02.833Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T12:22:02.839Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T12:22:02.855Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T12:22:02.992Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T12:37:33.428Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 931194
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T12:02:02.211Z",
+      "lastUpdated": "2026-04-04T12:17:32.851Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T12:02:02.242Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T12:02:02.266Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T12:02:02.268Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T12:02:02.278Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T12:02:02.405Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T12:17:32.851Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 930640
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T11:42:02.258Z",
+      "lastUpdated": "2026-04-04T11:57:32.664Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T11:42:02.286Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T11:42:02.307Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T11:42:02.309Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T11:42:02.320Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T11:42:02.444Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T11:57:32.664Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 930406
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T11:22:02.253Z",
+      "lastUpdated": "2026-04-04T11:37:33.757Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T11:22:02.281Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T11:22:02.862Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T11:22:02.865Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T11:22:02.872Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T11:22:02.997Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T11:37:33.757Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 931504
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T11:02:02.116Z",
+      "lastUpdated": "2026-04-04T11:17:32.875Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T11:02:02.157Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T11:02:02.182Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T11:02:02.185Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T11:02:02.194Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T11:02:02.323Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T11:17:32.875Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 930759
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T10:42:02.075Z",
+      "lastUpdated": "2026-04-04T10:57:32.379Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T10:42:02.103Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T10:42:02.125Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T10:42:02.127Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T10:42:02.135Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T10:42:02.258Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T10:57:32.379Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 930304
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T10:22:02.011Z",
+      "lastUpdated": "2026-04-04T10:37:33.340Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T10:22:02.040Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T10:22:02.651Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T10:22:02.653Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T10:22:02.662Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T10:22:02.795Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T10:37:33.340Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 931329
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T10:02:02.018Z",
+      "lastUpdated": "2026-04-04T10:17:32.449Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T10:02:02.046Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T10:02:02.068Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T10:02:02.070Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T10:02:02.078Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T10:02:02.226Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T10:17:32.449Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 930431
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T09:42:01.972Z",
+      "lastUpdated": "2026-04-04T09:57:32.666Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T09:42:02.000Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T09:42:02.021Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T09:42:02.023Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T09:42:02.031Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T09:42:02.153Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T09:57:32.666Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 930694
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T09:22:01.985Z",
+      "lastUpdated": "2026-04-04T09:37:33.285Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T09:22:02.014Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T09:22:02.581Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T09:22:02.584Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T09:22:02.592Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T09:22:02.735Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T09:37:33.285Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 931300
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T09:02:02.053Z",
+      "lastUpdated": "2026-04-04T09:17:32.409Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T09:02:02.081Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T09:02:02.102Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T09:02:02.104Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T09:02:02.112Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T09:02:02.249Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T09:17:32.409Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 930356
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T08:42:01.884Z",
+      "lastUpdated": "2026-04-04T08:57:32.725Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T08:42:01.913Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T08:42:01.932Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T08:42:01.935Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T08:42:01.942Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T08:42:02.065Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T08:57:32.725Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 930841
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T08:22:01.786Z",
+      "lastUpdated": "2026-04-04T08:37:33.312Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T08:22:01.815Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T08:22:02.317Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T08:22:02.320Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T08:22:02.330Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T08:22:02.451Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T08:37:33.312Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 931526
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T08:02:01.779Z",
+      "lastUpdated": "2026-04-04T08:17:32.224Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T08:02:01.807Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T08:02:01.828Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T08:02:01.831Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T08:02:01.839Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T08:02:01.968Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T08:17:32.224Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 930445
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T07:42:01.740Z",
+      "lastUpdated": "2026-04-04T07:57:32.172Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T07:42:01.767Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T07:42:01.789Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T07:42:01.792Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T07:42:01.800Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T07:42:01.939Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T07:57:32.172Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 930432
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T07:22:01.738Z",
+      "lastUpdated": "2026-04-04T07:37:33.068Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T07:22:01.775Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T07:22:04.086Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T07:22:04.090Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T07:22:04.099Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T07:22:04.233Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T07:37:33.068Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 6
+      },
+      "duration": 931330
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "failed",
+      "percentComplete": 90,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 3,
+      "startedAt": "2026-04-04T06:48:02.243Z",
+      "lastUpdated": "2026-04-04T07:02:17.107Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T06:48:02.495Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T06:48:02.518Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T06:48:02.520Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T06:48:02.832Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T06:48:14.388Z",
+          "message": "Backup not needed (done recently)",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T06:48:14.394Z",
+          "message": "Recovering Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T06:48:37.536Z",
+          "message": "Failed to recover Dashboard Server",
+          "level": "error"
+        },
+        {
+          "timestamp": "2026-04-04T07:02:17.107Z",
+          "message": "ERROR: One or more services could not be recovered",
+          "level": "error"
+        }
+      ],
+      "completedAt": "2026-04-04T07:02:17.107Z",
+      "result": {
+        "healthyCount": 1,
+        "totalCount": 3,
+        "recoveryFailed": true
+      },
+      "error": "One or more services could not be recovered",
+      "duration": 854864
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T06:37:01.774Z",
+      "lastUpdated": "2026-04-04T06:42:32.786Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T06:37:01.802Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T06:37:01.866Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T06:37:01.869Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T06:37:01.876Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T06:37:02.038Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T06:42:32.786Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 331012
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T06:17:01.848Z",
+      "lastUpdated": "2026-04-04T06:32:32.439Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T06:17:01.875Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T06:17:01.895Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T06:17:01.897Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T06:17:01.904Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T06:17:02.071Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T06:32:32.439Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930591
+    },
+    {
+      "id": "calendar-sync",
+      "name": "Apple Calendar Sync",
+      "description": "Two-way sync between iCloud CalDAV and Marvin's Dashboard",
+      "category": "sync",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Notified dashboard",
+      "steps": [
+        "Connect to iCloud",
+        "Fetch calendars",
+        "Download events",
+        "Push local events",
+        "Save merged events",
+        "Notify dashboard"
+      ],
+      "currentStepIndex": 5,
+      "startedAt": "2026-04-04T06:15:00.842Z",
+      "lastUpdated": "2026-04-04T06:15:02.804Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [],
+      "completedAt": "2026-04-04T06:15:02.804Z",
+      "result": {
+        "totalEvents": 37,
+        "pushedToIcloud": true,
+        "notified": false
+      },
+      "duration": 1962
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T05:57:01.663Z",
+      "lastUpdated": "2026-04-04T06:12:32.514Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T05:57:01.690Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T05:57:01.709Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T05:57:01.711Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T05:57:01.720Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T05:57:01.862Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T06:12:32.514Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930851
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T05:37:02.695Z",
+      "lastUpdated": "2026-04-04T05:52:35.105Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T05:37:02.723Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T05:37:02.805Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T05:37:02.807Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T05:37:02.816Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T05:37:02.966Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T05:52:35.105Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 932410
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T05:17:02.661Z",
+      "lastUpdated": "2026-04-04T05:32:33.466Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T05:17:02.689Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T05:17:02.709Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T05:17:02.711Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T05:17:02.719Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T05:17:02.878Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T05:32:33.466Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930805
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T04:57:02.686Z",
+      "lastUpdated": "2026-04-04T05:12:34.184Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T04:57:02.714Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T04:57:02.735Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T04:57:02.738Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T04:57:02.746Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T04:57:02.890Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T05:12:34.184Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 931498
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T04:37:02.523Z",
+      "lastUpdated": "2026-04-04T04:52:35.704Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T04:37:02.551Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T04:37:02.609Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T04:37:02.612Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T04:37:02.619Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T04:37:02.767Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T04:52:35.704Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 933181
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T04:17:02.494Z",
+      "lastUpdated": "2026-04-04T04:32:33.146Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T04:17:02.522Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T04:17:02.542Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T04:17:02.544Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T04:17:02.552Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T04:17:02.706Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T04:32:33.146Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930652
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T03:57:02.678Z",
+      "lastUpdated": "2026-04-04T04:12:33.167Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T03:57:02.706Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T03:57:02.729Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T03:57:02.731Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T03:57:02.739Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T03:57:02.891Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T04:12:33.167Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930489
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T03:37:02.510Z",
+      "lastUpdated": "2026-04-04T03:52:35.755Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T03:37:02.540Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T03:37:02.603Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T03:37:02.605Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T03:37:02.613Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T03:37:02.755Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T03:52:35.755Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 933245
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T03:17:02.431Z",
+      "lastUpdated": "2026-04-04T03:32:33.223Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T03:17:02.458Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T03:17:02.478Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T03:17:02.481Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T03:17:02.488Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T03:17:02.619Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T03:32:33.223Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930792
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T02:57:02.353Z",
+      "lastUpdated": "2026-04-04T03:12:33.205Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T02:57:02.380Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T02:57:02.399Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T02:57:02.401Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T02:57:02.409Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T02:57:02.558Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T03:12:33.205Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930852
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T02:37:02.410Z",
+      "lastUpdated": "2026-04-04T02:52:35.220Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T02:37:02.437Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T02:37:02.496Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T02:37:02.499Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T02:37:02.506Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T02:37:02.658Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T02:52:35.220Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 932810
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T02:17:02.332Z",
+      "lastUpdated": "2026-04-04T02:32:33.301Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T02:17:02.359Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T02:17:02.381Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T02:17:02.383Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T02:17:02.392Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T02:17:02.530Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T02:32:33.301Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930969
+    },
+    {
+      "id": "calendar-sync",
+      "name": "Apple Calendar Sync",
+      "description": "Two-way sync between iCloud CalDAV and Marvin's Dashboard",
+      "category": "sync",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Notified dashboard",
+      "steps": [
+        "Connect to iCloud",
+        "Fetch calendars",
+        "Download events",
+        "Push local events",
+        "Save merged events",
+        "Notify dashboard"
+      ],
+      "currentStepIndex": 5,
+      "startedAt": "2026-04-04T02:15:00.419Z",
+      "lastUpdated": "2026-04-04T02:15:02.551Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [],
+      "completedAt": "2026-04-04T02:15:02.551Z",
+      "result": {
+        "totalEvents": 37,
+        "pushedToIcloud": true,
+        "notified": false
+      },
+      "duration": 2132
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T01:57:02.291Z",
+      "lastUpdated": "2026-04-04T02:12:33.294Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T01:57:02.319Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T01:57:02.340Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T01:57:02.342Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T01:57:02.350Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T01:57:02.502Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T02:12:33.294Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 931003
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T01:37:02.423Z",
+      "lastUpdated": "2026-04-04T01:52:35.912Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T01:37:02.451Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T01:37:02.553Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T01:37:02.555Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T01:37:02.563Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T01:37:02.694Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T01:52:35.912Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 933489
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T01:17:02.251Z",
+      "lastUpdated": "2026-04-04T01:32:33.343Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T01:17:02.279Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T01:17:02.299Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T01:17:02.301Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T01:17:02.308Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T01:17:02.462Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T01:32:33.343Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 931092
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T00:57:02.185Z",
+      "lastUpdated": "2026-04-04T01:12:33.059Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T00:57:02.213Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T00:57:02.234Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T00:57:02.236Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T00:57:02.243Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T00:57:02.398Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T01:12:33.059Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930874
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T00:37:02.188Z",
+      "lastUpdated": "2026-04-04T00:52:34.929Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T00:37:02.218Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T00:37:02.281Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T00:37:02.284Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T00:37:02.293Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T00:37:02.435Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T00:52:34.929Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 932741
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-04T00:17:02.108Z",
+      "lastUpdated": "2026-04-04T00:32:32.811Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-04T00:17:02.136Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T00:17:02.157Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-04T00:17:02.159Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T00:17:02.168Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-04T00:17:02.317Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T00:32:32.811Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930703
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T23:57:02.125Z",
+      "lastUpdated": "2026-04-04T00:12:32.883Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T23:57:02.154Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T23:57:02.175Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T23:57:02.177Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T23:57:02.186Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T23:57:02.343Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-04T00:12:32.883Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930758
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T23:37:02.072Z",
+      "lastUpdated": "2026-04-03T23:52:35.611Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T23:37:02.102Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T23:37:02.167Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T23:37:02.170Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T23:37:02.177Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T23:37:02.312Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T23:52:35.611Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 933539
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T23:17:02.170Z",
+      "lastUpdated": "2026-04-03T23:32:32.818Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T23:17:02.197Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T23:17:02.219Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T23:17:02.221Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T23:17:02.229Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T23:17:02.380Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T23:32:32.818Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930648
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T22:57:02.011Z",
+      "lastUpdated": "2026-04-03T23:12:32.772Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T22:57:02.040Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T22:57:02.060Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T22:57:02.062Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T22:57:02.070Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T22:57:02.208Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T23:12:32.772Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930761
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T22:37:02.185Z",
+      "lastUpdated": "2026-04-03T22:52:35.235Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T22:37:02.213Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T22:37:02.273Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T22:37:02.276Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T22:37:02.286Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T22:37:02.438Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T22:52:35.235Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 933050
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T22:17:02.139Z",
+      "lastUpdated": "2026-04-03T22:32:32.682Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T22:17:02.167Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T22:17:02.187Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T22:17:02.189Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T22:17:02.199Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T22:17:02.348Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T22:32:32.682Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930543
+    },
+    {
+      "id": "calendar-sync",
+      "name": "Apple Calendar Sync",
+      "description": "Two-way sync between iCloud CalDAV and Marvin's Dashboard",
+      "category": "sync",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Notified dashboard",
+      "steps": [
+        "Connect to iCloud",
+        "Fetch calendars",
+        "Download events",
+        "Push local events",
+        "Save merged events",
+        "Notify dashboard"
+      ],
+      "currentStepIndex": 5,
+      "startedAt": "2026-04-03T22:15:00.179Z",
+      "lastUpdated": "2026-04-03T22:15:02.237Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [],
+      "completedAt": "2026-04-03T22:15:02.237Z",
+      "result": {
+        "totalEvents": 37,
+        "pushedToIcloud": true,
+        "notified": false
+      },
+      "duration": 2058
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T21:57:01.886Z",
+      "lastUpdated": "2026-04-03T22:12:32.354Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T21:57:01.913Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T21:57:01.932Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T21:57:01.934Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T21:57:01.943Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T21:57:02.095Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T22:12:32.354Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930468
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T21:37:01.912Z",
+      "lastUpdated": "2026-04-03T21:52:35.145Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T21:37:01.939Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T21:37:02.002Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T21:37:02.005Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T21:37:02.013Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T21:37:02.155Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T21:52:35.145Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 933233
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T21:17:01.888Z",
+      "lastUpdated": "2026-04-03T21:32:32.487Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T21:17:01.926Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T21:17:01.948Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T21:17:01.951Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T21:17:01.960Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T21:17:02.115Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T21:32:32.487Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930599
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T20:57:01.821Z",
+      "lastUpdated": "2026-04-03T21:12:32.415Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T20:57:01.848Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T20:57:01.869Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T20:57:01.871Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T20:57:01.879Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T20:57:02.010Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T21:12:32.415Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930594
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T20:37:01.813Z",
+      "lastUpdated": "2026-04-03T20:52:35.015Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T20:37:01.841Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T20:37:01.905Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T20:37:01.908Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T20:37:01.916Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T20:37:02.065Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T20:52:35.015Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 933202
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T20:17:01.940Z",
+      "lastUpdated": "2026-04-03T20:32:32.284Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T20:17:01.968Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T20:17:01.989Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T20:17:01.991Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T20:17:01.999Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T20:17:02.147Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T20:32:32.284Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930344
+    },
+    {
+      "id": "calendar-sync",
+      "name": "Apple Calendar Sync",
+      "description": "Two-way sync between iCloud CalDAV and Marvin's Dashboard",
+      "category": "sync",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Notified dashboard",
+      "steps": [
+        "Connect to iCloud",
+        "Fetch calendars",
+        "Download events",
+        "Push local events",
+        "Save merged events",
+        "Notify dashboard"
+      ],
+      "currentStepIndex": 5,
+      "startedAt": "2026-04-03T20:15:00.773Z",
+      "lastUpdated": "2026-04-03T20:15:02.886Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [],
+      "completedAt": "2026-04-03T20:15:02.886Z",
+      "result": {
+        "totalEvents": 37,
+        "pushedToIcloud": true,
+        "notified": false
+      },
+      "duration": 2113
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T19:57:01.740Z",
+      "lastUpdated": "2026-04-03T20:12:32.168Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T19:57:01.767Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T19:57:01.787Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T19:57:01.789Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T19:57:01.797Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T19:57:01.944Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T20:12:32.168Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930428
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T19:37:01.693Z",
+      "lastUpdated": "2026-04-03T19:52:34.414Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T19:37:01.720Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T19:37:01.778Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T19:37:01.780Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T19:37:01.787Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T19:37:01.921Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T19:52:34.414Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 932721
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T19:17:01.711Z",
+      "lastUpdated": "2026-04-03T19:32:32.243Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T19:17:01.741Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T19:17:01.763Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T19:17:01.765Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T19:17:01.773Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T19:17:01.930Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T19:32:32.243Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930532
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T18:57:01.686Z",
+      "lastUpdated": "2026-04-03T19:12:32.338Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T18:57:01.713Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T18:57:01.734Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T18:57:01.737Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T18:57:01.747Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T18:57:01.915Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T19:12:32.338Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930652
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T18:37:01.734Z",
+      "lastUpdated": "2026-04-03T18:52:34.952Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T18:37:01.762Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T18:37:04.801Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T18:37:04.804Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T18:37:04.814Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T18:37:04.967Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T18:52:34.952Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 933218
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T18:17:02.583Z",
+      "lastUpdated": "2026-04-03T18:32:32.360Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T18:17:02.611Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T18:17:02.633Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T18:17:02.636Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T18:17:02.649Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T18:17:02.789Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T18:32:32.360Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 929777
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T17:57:02.556Z",
+      "lastUpdated": "2026-04-03T18:12:33.176Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T17:57:02.584Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T17:57:02.604Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T17:57:02.607Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T17:57:02.615Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T17:57:02.766Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T18:12:33.176Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930620
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T17:37:02.696Z",
+      "lastUpdated": "2026-04-03T17:52:34.145Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T17:37:02.728Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T17:37:02.749Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T17:37:02.751Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T17:37:02.760Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T17:37:02.905Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T17:52:34.145Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 931449
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T17:17:02.661Z",
+      "lastUpdated": "2026-04-03T17:32:33.816Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T17:17:02.692Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T17:17:02.714Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T17:17:02.716Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T17:17:02.724Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T17:17:02.857Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T17:32:33.816Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 931155
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T16:57:02.544Z",
+      "lastUpdated": "2026-04-03T17:12:33.558Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T16:57:02.571Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T16:57:02.591Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T16:57:02.593Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T16:57:02.601Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T16:57:02.752Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T17:12:33.558Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 931014
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T16:37:02.457Z",
+      "lastUpdated": "2026-04-03T16:52:33.613Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T16:37:02.485Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T16:37:02.507Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T16:37:02.509Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T16:37:02.519Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T16:37:02.652Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T16:52:33.613Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 931156
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T16:17:02.617Z",
+      "lastUpdated": "2026-04-03T16:32:35.227Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T16:17:02.649Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T16:17:02.674Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T16:17:02.677Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T16:17:02.688Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T16:17:02.849Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T16:32:35.227Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 932610
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T15:57:02.402Z",
+      "lastUpdated": "2026-04-03T16:12:33.150Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T15:57:02.430Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T15:57:02.451Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T15:57:02.454Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T15:57:02.462Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T15:57:02.602Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T16:12:33.150Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930748
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T15:37:02.459Z",
+      "lastUpdated": "2026-04-03T15:52:33.354Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T15:37:02.495Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T15:37:02.522Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T15:37:02.524Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T15:37:02.534Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T15:37:02.678Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T15:52:33.354Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930895
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T15:17:02.351Z",
+      "lastUpdated": "2026-04-03T15:32:33.439Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T15:17:02.379Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T15:17:02.404Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T15:17:02.406Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T15:17:02.416Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T15:17:02.561Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T15:32:33.439Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 931088
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T14:57:02.367Z",
+      "lastUpdated": "2026-04-03T15:12:33.700Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T14:57:02.394Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T14:57:02.414Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T14:57:02.416Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T14:57:02.424Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T14:57:02.572Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T15:12:33.700Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 931333
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T14:37:02.363Z",
+      "lastUpdated": "2026-04-03T14:52:33.379Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T14:37:02.390Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T14:37:02.411Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T14:37:02.413Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T14:37:02.421Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T14:37:02.576Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T14:52:33.379Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 931016
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T14:17:02.261Z",
+      "lastUpdated": "2026-04-03T14:32:33.208Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T14:17:02.295Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T14:17:02.319Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T14:17:02.321Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T14:17:02.328Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T14:17:02.480Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T14:32:33.208Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930947
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T13:57:02.289Z",
+      "lastUpdated": "2026-04-03T14:12:33.020Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T13:57:02.318Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T13:57:02.339Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T13:57:02.341Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T13:57:02.349Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T13:57:02.477Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T14:12:33.020Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930731
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T13:37:02.194Z",
+      "lastUpdated": "2026-04-03T13:52:33.145Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T13:37:02.226Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T13:37:02.247Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T13:37:02.249Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T13:37:02.257Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T13:37:02.414Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T13:52:33.145Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930951
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T13:17:02.168Z",
+      "lastUpdated": "2026-04-03T13:32:32.973Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T13:17:02.195Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T13:17:02.219Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T13:17:02.221Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T13:17:02.230Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T13:17:02.376Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T13:32:32.973Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930805
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T12:57:02.418Z",
+      "lastUpdated": "2026-04-03T13:12:33.288Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T12:57:02.448Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T12:57:02.469Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T12:57:02.471Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T12:57:02.479Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T12:57:02.631Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T13:12:33.288Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930870
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T12:37:02.351Z",
+      "lastUpdated": "2026-04-03T12:53:04.096Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T12:37:02.381Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T12:37:02.405Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T12:37:02.407Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T12:37:02.417Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T12:37:02.583Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T12:53:04.096Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 961745
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T12:17:02.086Z",
+      "lastUpdated": "2026-04-03T12:32:33.358Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T12:17:02.113Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T12:17:02.135Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T12:17:02.137Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T12:17:02.144Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T12:17:02.287Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T12:32:33.358Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 931272
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T11:57:02.039Z",
+      "lastUpdated": "2026-04-03T12:12:32.728Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T11:57:02.066Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T11:57:02.087Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T11:57:02.089Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T11:57:02.096Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T11:57:02.225Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T12:12:32.728Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930689
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T11:37:02.018Z",
+      "lastUpdated": "2026-04-03T11:52:32.745Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T11:37:02.046Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T11:37:02.067Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T11:37:02.069Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T11:37:02.077Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T11:37:02.210Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T11:52:32.745Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930727
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T11:17:01.971Z",
+      "lastUpdated": "2026-04-03T11:32:32.937Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T11:17:01.999Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T11:17:02.024Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T11:17:02.026Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T11:17:02.035Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T11:17:02.181Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T11:32:32.937Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930966
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T10:57:02.004Z",
+      "lastUpdated": "2026-04-03T11:12:32.999Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T10:57:02.044Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T10:57:02.070Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T10:57:02.072Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T10:57:02.084Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T10:57:02.244Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T11:12:32.999Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930995
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T10:37:01.906Z",
+      "lastUpdated": "2026-04-03T10:52:32.961Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T10:37:01.937Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T10:37:01.964Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T10:37:01.966Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T10:37:01.977Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T10:37:02.134Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T10:52:32.961Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 931055
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T10:17:01.883Z",
+      "lastUpdated": "2026-04-03T10:32:32.750Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T10:17:01.912Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T10:17:01.933Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T10:17:01.935Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T10:17:01.943Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T10:17:02.089Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T10:32:32.750Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930867
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T09:57:01.846Z",
+      "lastUpdated": "2026-04-03T10:12:32.769Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T09:57:01.873Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T09:57:01.893Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T09:57:01.895Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T09:57:01.903Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T09:57:02.050Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T10:12:32.769Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930923
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T09:37:01.820Z",
+      "lastUpdated": "2026-04-03T09:52:33.995Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T09:37:01.849Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T09:37:01.871Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T09:37:01.873Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T09:37:01.882Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T09:37:02.024Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T09:52:33.995Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 932175
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T09:17:01.752Z",
+      "lastUpdated": "2026-04-03T09:32:32.755Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T09:17:01.778Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T09:17:01.799Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T09:17:01.800Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T09:17:01.809Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T09:17:01.957Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T09:32:32.755Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 931003
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T08:57:01.729Z",
+      "lastUpdated": "2026-04-03T09:12:32.348Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T08:57:01.764Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T08:57:01.793Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T08:57:01.795Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T08:57:01.804Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T08:57:01.938Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T09:12:32.348Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930619
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T08:37:01.675Z",
+      "lastUpdated": "2026-04-03T08:52:33.851Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T08:37:01.703Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T08:37:01.725Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T08:37:01.727Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T08:37:01.735Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T08:37:01.885Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T08:52:33.851Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 932176
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T08:17:01.628Z",
+      "lastUpdated": "2026-04-03T08:32:32.258Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T08:17:01.655Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T08:17:01.678Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T08:17:01.680Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T08:17:01.689Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T08:17:01.831Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T08:32:32.258Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930630
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T07:57:02.566Z",
+      "lastUpdated": "2026-04-03T08:12:32.099Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T07:57:02.594Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T07:57:02.614Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T07:57:02.616Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T07:57:02.624Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T07:57:02.753Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T08:12:32.099Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 929533
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T07:37:02.539Z",
+      "lastUpdated": "2026-04-03T07:52:33.355Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T07:37:02.567Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T07:37:02.588Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T07:37:02.590Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T07:37:02.598Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T07:37:02.747Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T07:52:33.355Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930816
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T07:17:02.540Z",
+      "lastUpdated": "2026-04-03T07:32:33.408Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T07:17:02.577Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T07:17:02.600Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T07:17:02.602Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T07:17:02.610Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T07:17:02.743Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T07:32:33.408Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930868
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T06:57:02.573Z",
+      "lastUpdated": "2026-04-03T07:12:33.161Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T06:57:02.600Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T06:57:02.620Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T06:57:02.622Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T06:57:02.631Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T06:57:02.778Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T07:12:33.161Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930588
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T06:37:02.486Z",
+      "lastUpdated": "2026-04-03T06:52:34.465Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T06:37:02.515Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T06:37:02.538Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T06:37:02.540Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T06:37:02.548Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T06:37:02.685Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T06:52:34.465Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 931979
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T06:17:02.413Z",
+      "lastUpdated": "2026-04-03T06:32:33.255Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T06:17:02.441Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T06:17:02.465Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T06:17:02.473Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T06:17:02.482Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T06:17:02.612Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T06:32:33.255Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930842
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery System",
+      "description": "Monitors and repairs critical services automatically",
+      "category": "system",
+      "status": "complete",
+      "percentComplete": 100,
+      "currentStep": "Updating dashboard status...",
+      "steps": [
+        "Load state",
+        "Check services",
+        "Run backup if needed",
+        "Recover failed services",
+        "Update dashboard"
+      ],
+      "currentStepIndex": 2,
+      "startedAt": "2026-04-03T05:57:02.420Z",
+      "lastUpdated": "2026-04-03T06:12:33.136Z",
+      "eta": null,
+      "estimatedDuration": null,
+      "metadata": {},
+      "logs": [
+        {
+          "timestamp": "2026-04-03T05:57:02.456Z",
+          "message": "Checking Dashboard Server...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T05:57:02.477Z",
+          "message": "Dashboard Server needs recovery: down",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2026-04-03T05:57:02.479Z",
+          "message": "Checking OpenClaw Gateway...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T05:57:02.487Z",
+          "message": "Checking WSL Ubuntu...",
+          "level": "info"
+        },
+        {
+          "timestamp": "2026-04-03T05:57:02.622Z",
+          "message": "Starting scheduled backup",
+          "level": "info"
+        }
+      ],
+      "completedAt": "2026-04-03T06:12:33.136Z",
+      "result": {
+        "healthyCount": 2,
+        "totalCount": 3,
+        "recoveryFailed": false,
+        "totalRecoveries": 4
+      },
+      "duration": 930716
+    }
+  ],
+  "taskDefinitions": {},
+  "stats": {
+    "totalTasksCompleted": 8589,
+    "totalTasksFailed": 8,
+    "averageCompletionTime": 888301,
+    "last24Hours": {
+      "completed": 75,
+      "failed": 1
+    }
+  }
+}

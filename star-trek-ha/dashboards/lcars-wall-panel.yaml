@@ -1,0 +1,373 @@
+title: LCARS Wall Panel
+path: lcars-wall-panel
+icon: mdi:tablet-dashboard
+panel: true
+badges: []
+cards:
+  - type: custom:layout-card
+    layout_type: custom:grid-layout
+    layout:
+      grid-template-columns: 60px 1fr 60px
+      grid-template-rows: auto 1fr auto
+      grid-template-areas: |
+        "header header header"
+        "sidebar content ."
+        "footer footer footer"
+      gap: 8px
+    cards:
+      # ==========================================
+      # HEADER - Stardate and Ship Name
+      # ==========================================
+      - type: markdown
+        view_layout:
+          grid-area: header
+        card_mod:
+          class: header-left
+          style: |
+            ha-card {
+              font-size: 1.5em !important;
+            }
+        content: '# USS HOME - NCC-1701'
+
+      # ==========================================
+      # LEFT SIDEBAR - Navigation
+      # ==========================================
+      - type: vertical-stack
+        view_layout:
+          grid-area: sidebar
+        cards:
+          - type: button
+            entity: input_select.wall_panel_page
+            name: ""
+            icon: mdi:home
+            show_name: false
+            show_icon: true
+            tap_action:
+              action: call-service
+              service: input_select.select_option
+              data:
+                option: "home"
+                entity_id: input_select.wall_panel_page
+            card_mod:
+              class: button-small
+              style: |
+                ha-card {
+                  height: 60px !important;
+                }
+
+          - type: button
+            entity: input_select.wall_panel_page
+            name: ""
+            icon: mdi:lightbulb
+            show_name: false
+            show_icon: true
+            tap_action:
+              action: call-service
+              service: input_select.select_option
+              data:
+                option: "lights"
+                entity_id: input_select.wall_panel_page
+            card_mod:
+              class: button-small
+              style: |
+                ha-card {
+                  height: 60px !important;
+                }
+
+          - type: button
+            entity: input_select.wall_panel_page
+            name: ""
+            icon: mdi:thermometer
+            show_name: false
+            show_icon: true
+            tap_action:
+              action: call-service
+              service: input_select.select_option
+              data:
+                option: "climate"
+                entity_id: input_select.wall_panel_page
+            card_mod:
+              class: button-small
+              style: |
+                ha-card {
+                  height: 60px !important;
+                }
+
+          - type: button
+            entity: input_select.wall_panel_page
+            name: ""
+            icon: mdi:shield
+            show_name: false
+            show_icon: true
+            tap_action:
+              action: call-service
+              service: input_select.select_option
+              data:
+                option: "security"
+                entity_id: input_select.wall_panel_page
+            card_mod:
+              class: button-small
+              style: |
+                ha-card {
+                  height: 60px !important;
+                }
+
+      # ==========================================
+      # MAIN CONTENT AREA - Conditional Pages
+      # ==========================================
+      - type: conditional
+        view_layout:
+          grid-area: content
+        conditions:
+          - entity: input_select.wall_panel_page
+            state: "home"
+        card:
+          type: vertical-stack
+          cards:
+            - type: markdown
+              card_mod:
+                class: header-contained
+              content: '# MAIN CONTROLS'
+
+            - type: horizontal-stack
+              card_mod:
+                class: middle-contained
+              cards:
+                - type: button
+                  entity: scene.good_morning
+                  name: Morning
+                  icon: mdi:white-balance-sunny
+                  show_name: true
+                  show_icon: true
+                  tap_action:
+                    action: call-service
+                    service: scene.turn_on
+                    target:
+                      entity_id: scene.good_morning
+                  card_mod:
+                    class: button-lozenge-left
+
+                - type: button
+                  entity: scene.good_night
+                  name: Night
+                  icon: mdi:weather-night
+                  show_name: true
+                  show_icon: true
+                  tap_action:
+                    action: call-service
+                    service: scene.turn_on
+                    target:
+                      entity_id: scene.good_night
+                  card_mod:
+                    class: button-lozenge-right
+
+            - type: horizontal-stack
+              card_mod:
+                class: middle-contained
+              cards:
+                - type: button
+                  entity: light.all_lights
+                  name: All Lights
+                  icon: mdi:lightbulb-group
+                  show_name: true
+                  show_icon: true
+                  tap_action:
+                    action: toggle
+                  card_mod:
+                    class: button-bullet-left
+
+                - type: button
+                  entity: lock.all_locks
+                  name: All Locks
+                  icon: mdi:lock
+                  show_name: true
+                  show_icon: true
+                  tap_action:
+                    action: toggle
+                  card_mod:
+                    class: button-bullet-right
+
+            - type: markdown
+              card_mod:
+                class: footer-contained
+              content: '## SELECT FUNCTION FROM SIDEBAR'
+
+      - type: conditional
+        view_layout:
+          grid-area: content
+        conditions:
+          - entity: input_select.wall_panel_page
+            state: "lights"
+        card:
+          type: vertical-stack
+          cards:
+            - type: markdown
+              card_mod:
+                class: header-contained
+              content: '# LIGHTING CONTROL'
+
+            - type: grid
+              card_mod:
+                class: middle-contained
+              columns: 2
+              cards:
+                - type: button
+                  entity: light.living_room
+                  name: Living
+                  show_name: true
+                  show_icon: true
+                  show_state: true
+                  tap_action:
+                    action: toggle
+                  card_mod:
+                    class: button-lozenge-left
+
+                - type: button
+                  entity: light.kitchen
+                  name: Kitchen
+                  show_name: true
+                  show_icon: true
+                  show_state: true
+                  tap_action:
+                    action: toggle
+                  card_mod:
+                    class: button-lozenge-right
+
+                - type: button
+                  entity: light.bedroom
+                  name: Bedroom
+                  show_name: true
+                  show_icon: true
+                  show_state: true
+                  tap_action:
+                    action: toggle
+                  card_mod:
+                    class: button-lozenge-left
+
+                - type: button
+                  entity: light.bathroom
+                  name: Bath
+                  show_name: true
+                  show_icon: true
+                  show_state: true
+                  tap_action:
+                    action: toggle
+                  card_mod:
+                    class: button-lozenge-right
+
+                - type: button
+                  entity: light.hallway
+                  name: Hallway
+                  show_name: true
+                  show_icon: true
+                  show_state: true
+                  tap_action:
+                    action: toggle
+                  card_mod:
+                    class: button-lozenge-left
+
+                - type: button
+                  entity: light.outdoor
+                  name: Outdoor
+                  show_name: true
+                  show_icon: true
+                  show_state: true
+                  tap_action:
+                    action: toggle
+                  card_mod:
+                    class: button-lozenge-right
+
+            - type: markdown
+              card_mod:
+                class: footer-contained
+              content: '## LIGHTING SYSTEMS'
+
+      - type: conditional
+        view_layout:
+          grid-area: content
+        conditions:
+          - entity: input_select.wall_panel_page
+            state: "climate"
+        card:
+          type: vertical-stack
+          cards:
+            - type: markdown
+              card_mod:
+                class: header-contained
+              content: '# ENVIRONMENTAL'
+
+            - type: thermostat
+              entity: climate.main_floor
+              card_mod:
+                class: middle-contained
+
+            - type: entities
+              entities:
+                - entity: sensor.indoor_temperature
+                  name: Indoor Temp
+                - entity: sensor.indoor_humidity
+                  name: Humidity
+                - entity: sensor.air_quality
+                  name: Air Quality
+              card_mod:
+                class: middle-contained
+
+            - type: markdown
+              card_mod:
+                class: footer-contained
+              content: '## CLIMATE CONTROL'
+
+      - type: conditional
+        view_layout:
+          grid-area: content
+        conditions:
+          - entity: input_select.wall_panel_page
+            state: "security"
+        card:
+          type: vertical-stack
+          cards:
+            - type: markdown
+              card_mod:
+                class: header-contained
+              content: '# SECURITY STATION'
+
+            - type: horizontal-stack
+              card_mod:
+                class: middle-contained
+              cards:
+                - type: button
+                  entity: alarm_control_panel.home
+                  name: Alarm
+                  show_name: true
+                  show_icon: true
+                  show_state: true
+                  card_mod:
+                    class: button-bar-left
+
+            - type: entities
+              entities:
+                - entity: lock.front_door
+                  name: Front Door
+                - entity: lock.back_door
+                  name: Back Door
+                - entity: binary_sensor.front_door_sensor
+                  name: Front Door
+                - entity: binary_sensor.back_door_sensor
+                  name: Back Door
+              card_mod:
+                class: middle-contained
+
+            - type: markdown
+              card_mod:
+                class: footer-contained
+              content: '## SECURITY SYSTEMS'
+
+      # ==========================================
+      # FOOTER - Status Bar
+      # ==========================================
+      - type: markdown
+        view_layout:
+          grid-area: footer
+        card_mod:
+          class: footer-left
+        content: '## {{ states("sensor.time") }} | {{ states("sensor.date") }}'

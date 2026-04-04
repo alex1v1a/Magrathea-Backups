@@ -1,0 +1,387 @@
+# ============================================
+# LCARS ENGINEERING DASHBOARD
+# Systems Monitoring and Energy Management
+# ============================================
+
+title: Engineering
+icon: mdi:engine
+path: engineering
+panel: false
+background: "#000000"
+
+cards:
+  # ==========================================
+  # TOP HEADER BAR - Engineering Blue Theme
+  # ==========================================
+  - type: custom:button-card
+    template: lcars_header
+    name: "USS HOME ASSISTANT - ENGINEERING"
+    styles:
+      card:
+        - background: "linear-gradient(90deg, #9999CC 0%, #9999CC 15%, #FFCC66 15%, #FFCC66 85%, #9999CC 85%, #9999CC 100%)"
+
+  # ==========================================
+  # SYSTEM STATUS GRID
+  # ==========================================
+  - type: custom:layout-card
+    layout_type: custom:grid-layout
+    layout:
+      grid-template-columns: 250px 1fr 250px
+      grid-template-areas: |
+        "nav main stats"
+      gap: 15px
+    cards:
+      # ========================================
+      # LEFT NAVIGATION
+      # ========================================
+      - type: vertical-stack
+        view_layout:
+          grid-area: nav
+        cards:
+          - type: custom:button-card
+            template: lcars_side_elbow_left
+            styles:
+              card:
+                - background: "#9999CC"
+                
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Bridge"
+            icon: mdi:view-dashboard
+            styles:
+              card:
+                - border-color: "#9999CC"
+              name:
+                - color: "#9999CC"
+              icon:
+                - color: "#9999CC"
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-bridge
+              
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Science"
+            icon: mdi:flask
+            styles:
+              card:
+                - border-color: "#9999CC"
+              name:
+                - color: "#9999CC"
+              icon:
+                - color: "#9999CC"
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-science
+              
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Tactical"
+            icon: mdi:shield
+            styles:
+              card:
+                - border-color: "#9999CC"
+              name:
+                - color: "#9999CC"
+              icon:
+                - color: "#9999CC"
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-tactical
+              
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Quarters"
+            icon: mdi:bed
+            styles:
+              card:
+                - border-color: "#9999CC"
+              name:
+                - color: "#9999CC"
+              icon:
+                - color: "#9999CC"
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-quarters
+
+      # ========================================
+      # MAIN CONTENT - System Monitoring
+      # ========================================
+      - type: vertical-stack
+        view_layout:
+          grid-area: main
+        cards:
+          # Power Consumption Header
+          - type: custom:button-card
+            template: lcars_header
+            name: "POWER MANAGEMENT"
+            styles:
+              card:
+                - background: "linear-gradient(90deg, #FFCC66 0%, #FFCC66 15%, #9999CC 15%, #9999CC 85%, #FFCC66 85%, #FFCC66 100%)"
+
+          # Energy Graph
+          - type: history-graph
+            entities:
+              - sensor.power_consumption
+              - sensor.solar_power_production
+            hours_to_show: 24
+            refresh_interval: 30
+            title: ""
+            card_mod:
+              style: |
+                ha-card {
+                  background: #000000 !important;
+                  border: 2px solid #9999CC !important;
+                  border-radius: 0px 20px 0px 20px !important;
+                }
+                .header {
+                  color: #9999CC !important;
+                  font-family: Antonio, sans-serif !important;
+                  text-transform: uppercase !important;
+                }
+
+          # Energy Cards
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                template: lcars_data_box
+                entity: sensor.daily_energy
+                name: "Daily Usage"
+                show_state: true
+                state_display: "{{ states('sensor.daily_energy') }} kWh"
+                styles:
+                  card:
+                    - background: "#9999CC"
+                  state:
+                    - color: "#000000"
+                    
+              - type: custom:button-card
+                template: lcars_data_box
+                entity: sensor.monthly_energy
+                name: "Monthly Usage"
+                show_state: true
+                state_display: "{{ states('sensor.monthly_energy') }} kWh"
+                styles:
+                  card:
+                    - background: "#9999CC"
+                  state:
+                    - color: "#000000"
+                    
+              - type: custom:button-card
+                template: lcars_data_box
+                entity: sensor.energy_cost
+                name: "Est. Cost"
+                show_state: true
+                state_display: "${{ states('sensor.energy_cost') }}"
+                styles:
+                  card:
+                    - background: "#FFCC66"
+                  state:
+                    - color: "#000000"
+
+          # System Health
+          - type: custom:button-card
+            template: lcars_header
+            name: "SYSTEM DIAGNOSTICS"
+            styles:
+              card:
+                - background: "linear-gradient(90deg, #FFCC66 0%, #FFCC66 15%, #9999CC 15%, #9999CC 85%, #FFCC66 85%, #FFCC66 100%)"
+
+          - type: custom:layout-card
+            layout_type: custom:grid-layout
+            layout:
+              grid-template-columns: repeat(3, 1fr)
+              gap: 10px
+            cards:
+              - type: gauge
+                entity: sensor.processor_use
+                name: "CPU"
+                min: 0
+                max: 100
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: #000000 !important;
+                      border: 2px solid #9999CC !important;
+                    }
+                    .value {
+                      color: #9999CC !important;
+                    }
+                    
+              - type: gauge
+                entity: sensor.memory_use_percent
+                name: "Memory"
+                min: 0
+                max: 100
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: #000000 !important;
+                      border: 2px solid #9999CC !important;
+                    }
+                    .value {
+                      color: #9999CC !important;
+                    }
+                    
+              - type: gauge
+                entity: sensor.disk_use_percent
+                name: "Storage"
+                min: 0
+                max: 100
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: #000000 !important;
+                      border: 2px solid #9999CC !important;
+                    }
+                    .value {
+                      color: #9999CC !important;
+                    }
+
+          # Network Status
+          - type: custom:button-card
+            template: lcars_header
+            name: "NETWORK STATUS"
+            styles:
+              card:
+                - background: "linear-gradient(90deg, #FFCC66 0%, #FFCC66 15%, #9999CC 15%, #9999CC 85%, #FFCC66 85%, #FFCC66 100%)"
+
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                template: lcars_sensor_value
+                entity: sensor.internet_speed_download
+                name: "Download"
+                icon: mdi:download
+                show_state: true
+                state_display: "{{ states('sensor.internet_speed_download') }} Mbps"
+                styles:
+                  card:
+                    - border-color: "#9999CC"
+                  name:
+                    - color: "#9999CC"
+                  state:
+                    - color: "#9999CC"
+                  icon:
+                    - color: "#9999CC"
+                    
+              - type: custom:button-card
+                template: lcars_sensor_value
+                entity: sensor.internet_speed_upload
+                name: "Upload"
+                icon: mdi:upload
+                show_state: true
+                state_display: "{{ states('sensor.internet_speed_upload') }} Mbps"
+                styles:
+                  card:
+                    - border-color: "#9999CC"
+                  name:
+                    - color: "#9999CC"
+                  state:
+                    - color: "#9999CC"
+                  icon:
+                    - color: "#9999CC"
+                    
+              - type: custom:button-card
+                template: lcars_sensor_value
+                entity: sensor.connected_devices
+                name: "Devices"
+                icon: mdi:devices
+                show_state: true
+                styles:
+                  card:
+                    - border-color: "#9999CC"
+                  name:
+                    - color: "#9999CC"
+                  state:
+                    - color: "#9999CC"
+                  icon:
+                    - color: "#9999CC"
+
+      # ========================================
+      # RIGHT SIDEBAR - Quick Actions
+      # ========================================
+      - type: vertical-stack
+        view_layout:
+          grid-area: stats
+        cards:
+          - type: custom:button-card
+            template: lcars_side_elbow_right
+            styles:
+              card:
+                - background: "#9999CC"
+
+          - type: custom:button-card
+            template: lcars_data_box
+            entity: binary_sensor.updater
+            name: "Updates"
+            show_state: true
+            state_display: >
+              {% if is_state('binary_sensor.updater', 'on') %}
+                Available
+              {% else %}
+                Current
+              {% endif %}
+            styles:
+              card:
+                - background: >
+                    {% if is_state('binary_sensor.updater', 'on') %}
+                      "#FFCC66"
+                    {% else %}
+                      "#9999CC"
+                    {% endif %}
+
+          - type: custom:button-card
+            template: lcars_blue_pill
+            name: "Check Updates"
+            icon: mdi:update
+            tap_action:
+              action: call-service
+              service: homeassistant.update_entity
+              target:
+                entity_id: binary_sensor.updater
+
+          - type: custom:button-card
+            template: lcars_blue_pill
+            name: "Reload Scripts"
+            icon: mdi:script
+            tap_action:
+              action: call-service
+              service: script.reload
+
+          - type: custom:button-card
+            template: lcars_blue_pill
+            name: "Reload Automations"
+            icon: mdi:robot
+            tap_action:
+              action: call-service
+              service: automation.reload
+
+          - type: custom:button-card
+            template: lcars_gold_pill
+            name: "Safe Mode"
+            icon: mdi:shield-check
+            tap_action:
+              action: call-service
+              service: homeassistant.restart
+
+          - type: custom:button-card
+            template: lcars_red_pill
+            name: "Emergency Stop"
+            icon: mdi:stop-circle
+            tap_action:
+              action: call-service
+              service: homeassistant.turn_off
+              target:
+                entity_id: 
+                  - all_lights
+                  - all_switches
+
+  # ==========================================
+  # FOOTER
+  # ==========================================
+  - type: custom:button-card
+    template: lcars_footer
+    styles:
+      card:
+        - background: "linear-gradient(90deg, #9999CC 0%, #9999CC 80%, #000000 80%, #000000 85%, #9999CC 85%, #9999CC 100%)"

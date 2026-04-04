@@ -1,0 +1,223 @@
+{
+  "description": "Long-term in-stock items - pantry staples and ingredients that are always kept on hand. These persist across weekly meal plans and only change when manually updated.",
+  "lastUpdated": "2026-02-11T01:57:56.165Z",
+  "categories": {
+    "oils_and_vinegars": [
+      {
+        "name": "Olive oil",
+        "notes": "Extra virgin, large bottle",
+        "stockLevel": "high"
+      },
+      {
+        "name": "Vegetable oil",
+        "notes": "For frying",
+        "stockLevel": "medium"
+      },
+      {
+        "name": "Sesame oil",
+        "notes": "Asian cooking",
+        "stockLevel": "medium"
+      },
+      {
+        "name": "Balsamic vinegar",
+        "notes": "Salads and marinades",
+        "stockLevel": "high"
+      },
+      {
+        "name": "White wine vinegar",
+        "notes": "Cooking",
+        "stockLevel": "medium"
+      }
+    ],
+    "condiments_and_sauces": [
+      {
+        "name": "Soy sauce",
+        "notes": "Low sodium",
+        "stockLevel": "high"
+      },
+      {
+        "name": "Dijon mustard",
+        "notes": "Sandwiches and marinades",
+        "stockLevel": "medium"
+      },
+      {
+        "name": "Mayonnaise",
+        "notes": "Regular",
+        "stockLevel": "medium"
+      },
+      {
+        "name": "Ketchup",
+        "notes": "Family size",
+        "stockLevel": "high"
+      },
+      {
+        "name": "Hot sauce",
+        "notes": "Various types",
+        "stockLevel": "high"
+      },
+      {
+        "name": "Mustard",
+        "notes": "Always keep stocked",
+        "stockLevel": "medium",
+        "addedDate": "2026-02-11"
+      }
+    ],
+    "spices_and_seasonings": [
+      {
+        "name": "Sea salt",
+        "notes": "Cooking and finishing",
+        "stockLevel": "high"
+      },
+      {
+        "name": "Black pepper",
+        "notes": "Whole peppercorns",
+        "stockLevel": "high"
+      },
+      {
+        "name": "Garlic powder",
+        "notes": "Backup to fresh",
+        "stockLevel": "high"
+      },
+      {
+        "name": "Chili powder",
+        "notes": "Mexican cooking",
+        "stockLevel": "medium"
+      },
+      {
+        "name": "Cumin",
+        "notes": "Ground",
+        "stockLevel": "medium"
+      },
+      {
+        "name": "Paprika",
+        "notes": "Smoked and sweet",
+        "stockLevel": "medium"
+      }
+    ],
+    "pantry_staples": [
+      {
+        "name": "All-purpose flour",
+        "notes": "Baking",
+        "stockLevel": "medium"
+      },
+      {
+        "name": "White rice",
+        "notes": "Jasmine",
+        "stockLevel": "high"
+      },
+      {
+        "name": "Pasta",
+        "notes": "Various shapes",
+        "stockLevel": "high"
+      },
+      {
+        "name": "Canned tomatoes",
+        "notes": "Diced and whole",
+        "stockLevel": "high"
+      },
+      {
+        "name": "Chicken broth",
+        "notes": "Low sodium",
+        "stockLevel": "medium"
+      },
+      {
+        "name": "Honey",
+        "notes": "Raw local",
+        "stockLevel": "medium"
+      },
+      {
+        "name": "Quinoa",
+        "notes": "Healthy grain alternative",
+        "stockLevel": "medium",
+        "addedDate": "2026-02-10"
+      }
+    ],
+    "fresh_produce_always": [
+      {
+        "name": "Garlic",
+        "notes": "Always keep bulb on hand",
+        "stockLevel": "high"
+      },
+      {
+        "name": "Onions",
+        "notes": "Yellow and red",
+        "stockLevel": "high"
+      },
+      {
+        "name": "Lemons",
+        "notes": "For cooking",
+        "stockLevel": "medium"
+      },
+      {
+        "name": "Limes",
+        "notes": "For cooking",
+        "stockLevel": "medium"
+      }
+    ],
+    "dairy": [
+      {
+        "name": "Butter",
+        "notes": "Unsalted",
+        "stockLevel": "high"
+      },
+      {
+        "name": "Eggs",
+        "notes": "Large, always stocked",
+        "stockLevel": "high"
+      },
+      {
+        "name": "Milk",
+        "notes": "Whole milk",
+        "stockLevel": "high"
+      },
+      {
+        "name": "Greek yogurt",
+        "notes": "Plain",
+        "stockLevel": "medium"
+      }
+    ],
+    "pantry": [
+      {
+        "name": "Salt",
+        "notes": "Always keep stocked",
+        "stockLevel": "medium",
+        "addedDate": "2026-02-11"
+      }
+    ],
+    "spices": [
+      {
+        "name": "Pepper",
+        "notes": "Always keep stocked",
+        "stockLevel": "medium",
+        "addedDate": "2026-02-11"
+      }
+    ],
+    "produce": [
+      {
+        "name": "Asparagus",
+        "notes": "Always keep stocked",
+        "stockLevel": "medium",
+        "addedDate": "2026-02-11"
+      },
+      {
+        "name": "Zucchini",
+        "notes": "Always keep stocked",
+        "stockLevel": "medium",
+        "addedDate": "2026-02-11"
+      },
+      {
+        "name": "Mushrooms",
+        "notes": "Always keep stocked",
+        "stockLevel": "medium",
+        "addedDate": "2026-02-11"
+      },
+      {
+        "name": "Courgette",
+        "notes": "Always keep stocked",
+        "stockLevel": "medium",
+        "addedDate": "2026-02-11"
+      }
+    ]
+  },
+  "notes": "Update this list manually when pantry inventory changes. Use the stock-manager.js script to add/remove items."
+}

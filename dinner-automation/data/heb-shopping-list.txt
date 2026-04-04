@@ -1,0 +1,252 @@
+═══════════════════════════════════════════════
+🛒  H-E-B SHOPPING LIST
+📅  Week of: 2026-02-08
+═══════════════════════════════════════════════
+
+📊 Total Items: 44
+💰 Estimated Budget: $166
+
+──────────────────────────────────────────────────
+📍 PRODUCE (20 items)
+──────────────────────────────────────────────────
+  ☐ Avocado
+     Amount: 3
+     Search: "avocado"
+     For: Friday
+
+  ☐ Bell peppers
+     Amount: 3
+     Search: "bell peppers"
+     For: Thursday
+
+  ☐ Broccoli florets
+     Amount: 2 heads
+     Search: "broccoli"
+     For: Thursday
+
+  ☐ Brussels sprouts
+     Amount: 1.5 lbs
+     Search: "brussels sprouts"
+     For: Monday
+
+  ☐ Cabbage slaw mix
+     Amount: 1 bag
+     Search: "coleslaw mix"
+     For: Tuesday
+
+  ☐ Cilantro
+     Amount: 1 bunch
+     Search: "cilantro fresh"
+     For: Friday
+
+  ☐ Fresh ginger
+     Amount: 1 piece
+     Search: "ginger root"
+     For: Wednesday
+
+  ☐ Fresh lemon
+     Amount: 2
+     Search: "lemon"
+     For: Sunday
+
+  ☐ Fresh parsley
+     Amount: 1 bunch
+     Search: "parsley fresh"
+     For: Sunday
+
+  ☐ Fresh rosemary
+     Amount: 1 bunch
+     Search: "rosemary fresh"
+     For: Monday
+
+  ☐ Garlic
+     Amount: 1 bulb
+     Search: "garlic"
+     For: Sunday
+
+  ☐ Green onions
+     Amount: 1 bunch
+     Search: "green onions"
+     For: Thursday
+
+  ☐ Jalapeno
+     Amount: 2
+     Search: "jalapeno"
+     For: Tuesday
+
+  ☐ Lime
+     Amount: 4
+     Search: "lime"
+     For: Friday
+
+  ☐ Mango
+     Amount: 2
+     Search: "mango"
+     For: Tuesday
+
+  ☐ Red cabbage
+     Amount: 1 head
+     Search: "cabbage red"
+     For: Friday
+
+  ☐ Red onion
+     Amount: 1
+     Search: "red onion"
+     For: Tuesday
+
+  ☐ Spinach
+     Amount: 10 oz
+     Search: "spinach fresh"
+     For: Saturday
+
+  ☐ Sweet potatoes
+     Amount: 2 lbs
+     Search: "sweet potatoes"
+     For: Monday
+
+  ☐ Yellow onion
+     Amount: 1
+     Search: "yellow onion"
+     For: Saturday
+
+──────────────────────────────────────────────────
+📍 MEAT & SEAFOOD (6 items)
+──────────────────────────────────────────────────
+  ☐ Chicken thighs
+     Amount: 2 lbs
+     Search: "chicken thighs boneless"
+     For: Wednesday
+
+  ☐ Cod fillets
+     Amount: 1.5 lbs
+     Search: "cod fillet fresh"
+     For: Sunday
+
+  ☐ Flank steak
+     Amount: 1.5 lbs
+     Search: "flank steak"
+     For: Thursday
+
+  ☐ Large shrimp
+     Amount: 1.5 lbs
+     Search: "shrimp large raw"
+     For: Friday
+
+  ☐ Pork tenderloin
+     Amount: 1.5 lbs
+     Search: "pork tenderloin"
+     For: Monday
+
+  ☐ White fish fillets
+     Amount: 1.5 lbs
+     Search: "tilapia fillet"
+     For: Tuesday
+
+──────────────────────────────────────────────────
+📍 DAIRY & EGGS (4 items)
+──────────────────────────────────────────────────
+  ☐ Coconut milk
+     Amount: 2 cans
+     Search: "coconut milk"
+     For: Saturday
+
+  ☐ Greek yogurt
+     Amount: 16 oz
+     Search: "greek yogurt plain"
+     For: Wednesday
+
+  ☐ Heavy cream
+     Amount: 1 pint
+     Search: "heavy cream"
+     For: Wednesday
+
+  ☐ Unsalted butter
+     Amount: 4 tbsp
+     Search: "butter unsalted"
+     For: Sunday
+
+──────────────────────────────────────────────────
+📍 BREAD & TORTILLAS (2 items)
+──────────────────────────────────────────────────
+  ☐ Corn tortillas
+     Amount: 1 pack
+     Search: "corn tortillas"
+     For: Tuesday, Friday
+
+  ☐ Naan bread
+     Amount: 1 pack
+     Search: "Stonefire Naan"
+     For: Saturday
+
+──────────────────────────────────────────────────
+📍 PANTRY (10 items)
+──────────────────────────────────────────────────
+  ☐ Balsamic vinegar
+     Amount: 1 bottle
+     Search: "balsamic vinegar"
+     For: Monday
+
+  ☐ Basmati rice
+     Amount: 2 lbs
+     Search: "H-E-B Basmati Rice"
+     For: Wednesday
+
+  ☐ Capers
+     Amount: 1 jar
+     Search: "capers"
+     For: Sunday
+
+  ☐ Chickpeas
+     Amount: 2 cans
+     Search: "chickpeas"
+     For: Saturday
+
+  ☐ Curry paste
+     Amount: 1 jar
+     Search: "curry paste"
+     For: Saturday
+
+  ☐ Dijon mustard
+     Amount: 1 jar
+     Search: "dijon mustard"
+     For: Monday
+
+  ☐ Sesame oil
+     Amount: 1 bottle
+     Search: "sesame oil"
+     For: Thursday
+
+  ☐ Soy sauce
+     Amount: 1 bottle
+     Search: "soy sauce low sodium"
+     For: Thursday
+
+  ☐ Tikka masala sauce
+     Amount: 1 jar
+     Search: "tikka masala sauce"
+     For: Wednesday
+
+  ☐ White wine
+     Amount: 1/4 cup
+     Search: "white wine cooking"
+     For: Sunday
+
+──────────────────────────────────────────────────
+📍 SPICES & HERBS (2 items)
+──────────────────────────────────────────────────
+  ☐ Chipotle mayo
+     Amount: 1 bottle
+     Search: "chipotle mayo"
+     For: Tuesday
+
+  ☐ Chipotle powder
+     Amount: 1 container
+     Search: "chipotle powder"
+     For: Friday
+
+═══════════════════════════════════════════════
+📝 NOTES:
+• Search exact terms in HEB app for best results
+• Check H-E-B brand products first (often cheaper)
+• Use curbside pickup to save time
+═══════════════════════════════════════════════

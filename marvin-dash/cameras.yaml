@@ -1,0 +1,89 @@
+# Wyze Cameras via wyze-bridge RTSP
+- platform: generic
+  name: Toolbox
+  stream_source: rtsp://localhost:8554/toolbox
+  still_image_url: http://localhost:5000/snapshot/toolbox.jpg
+- platform: generic
+  name: Backyard
+  stream_source: rtsp://localhost:8554/backyard
+  still_image_url: http://localhost:5000/snapshot/backyard.jpg
+- platform: generic
+  name: Garden Tools
+  stream_source: rtsp://localhost:8554/garden-tools
+  still_image_url: http://localhost:5000/snapshot/garden-tools.jpg
+- platform: generic
+  name: Saxton
+  stream_source: rtsp://localhost:8554/saxton
+  still_image_url: http://localhost:5000/snapshot/saxton.jpg
+- platform: generic
+  name: Dog Pen
+  stream_source: rtsp://localhost:8554/dog-pen
+  still_image_url: http://localhost:5000/snapshot/dog-pen.jpg
+- platform: generic
+  name: Dog House
+  stream_source: rtsp://localhost:8554/dog-house
+  still_image_url: http://localhost:5000/snapshot/dog-house.jpg
+- platform: generic
+  name: Driveway
+  stream_source: rtsp://localhost:8554/driveway
+  still_image_url: http://localhost:5000/snapshot/driveway.jpg
+- platform: generic
+  name: Front Yard West
+  stream_source: rtsp://localhost:8554/front-yard-west
+  still_image_url: http://localhost:5000/snapshot/front-yard-west.jpg
+- platform: generic
+  name: Front Yard East
+  stream_source: rtsp://localhost:8554/front-yard-east
+  still_image_url: http://localhost:5000/snapshot/front-yard-east.jpg
+- platform: generic
+  name: Side Yard
+  stream_source: rtsp://localhost:8554/side-yard
+  still_image_url: http://localhost:5000/snapshot/side-yard.jpg
+- platform: generic
+  name: Back Patio
+  stream_source: rtsp://localhost:8554/back-patio
+  still_image_url: http://localhost:5000/snapshot/back-patio.jpg
+- platform: generic
+  name: Backyard Egg Chair
+  stream_source: rtsp://localhost:8554/backyard-egg-chair
+  still_image_url: http://localhost:5000/snapshot/backyard-egg-chair.jpg
+- platform: generic
+  name: Backyard Kitchen
+  stream_source: rtsp://localhost:8554/backyard-kitchen
+  still_image_url: http://localhost:5000/snapshot/backyard-kitchen.jpg
+- platform: generic
+  name: Lounge
+  stream_source: rtsp://localhost:8554/lounge
+  still_image_url: http://localhost:5000/snapshot/lounge.jpg
+- platform: generic
+  name: Lounge Floor
+  stream_source: rtsp://localhost:8554/lounge-floor
+  still_image_url: http://localhost:5000/snapshot/lounge-floor.jpg
+- platform: generic
+  name: Maeves Room
+  stream_source: rtsp://localhost:8554/maeves-room
+  still_image_url: http://localhost:5000/snapshot/maeves-room.jpg
+- platform: generic
+  name: Noras Room
+  stream_source: rtsp://localhost:8554/noras-room
+  still_image_url: http://localhost:5000/snapshot/noras-room.jpg
+- platform: generic
+  name: Alex Allie Bedroom
+  stream_source: rtsp://localhost:8554/alex-allie-bedroom
+  still_image_url: http://localhost:5000/snapshot/alex-allie-bedroom.jpg
+- platform: generic
+  name: Bedroom Backyard
+  stream_source: rtsp://localhost:8554/bedroom-backyard
+  still_image_url: http://localhost:5000/snapshot/bedroom-backyard.jpg
+- platform: generic
+  name: Print Mill
+  stream_source: rtsp://localhost:8554/print-mill
+  still_image_url: http://localhost:5000/snapshot/print-mill.jpg
+- platform: generic
+  name: Garage
+  stream_source: rtsp://localhost:8554/garage
+  still_image_url: http://localhost:5000/snapshot/garage.jpg
+- platform: generic
+  name: Garage Door
+  stream_source: rtsp://localhost:8554/garage-door
+  still_image_url: http://localhost:5000/snapshot/garage-door.jpg

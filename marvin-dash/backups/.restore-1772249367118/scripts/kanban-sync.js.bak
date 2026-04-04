@@ -1,0 +1,289 @@
+#!/usr/bin/env node
+/**
+ * Kanban Board Sync Script
+ * Updates and maintains the Marvin's Dashboard kanban board
+ * Run via: node scripts/kanban-sync.js
+ */
+
+const fs = require('fs').promises;
+const path = require('path');
+const http = require('http');
+
+const TASKS_FILE = path.join(__dirname, '..', 'data', 'tasks.json');
+const USAGE_FILE = path.join(__dirname, '..', 'data', 'model-usage.json');
+
+// ANSI colors for terminal output
+const colors = {
+  reset: '\x1b[0m',
+  bright: '\x1b[1m',
+  dim: '\x1b[2m',
+  red: '\x1b[31m',
+  green: '\x1b[32m',
+  yellow: '\x1b[33m',
+  blue: '\x1b[34m',
+  magenta: '\x1b[35m',
+  cyan: '\x1b[36m'
+};
+
+function log(message, color = 'reset') {
+  console.log(`${colors[color]}${message}${colors.reset}`);
+}
+
+function logSection(title) {
+  console.log('');
+  log(`═══ ${title} ═══`, 'bright');
+}
+
+// Load tasks from file
+async function loadTasks() {
+  try {
+    const data = await fs.readFile(TASKS_FILE, 'utf8');
+    return JSON.parse(data);
+  } catch (error) {
+    log(`Error loading tasks: ${error.message}`, 'red');
+    return null;
+  }
+}
+
+// Save tasks to file
+async function saveTasks(tasks) {
+  try {
+    await fs.writeFile(TASKS_FILE, JSON.stringify(tasks, null, 2));
+    return true;
+  } catch (error) {
+    log(`Error saving tasks: ${error.message}`, 'red');
+    return false;
+  }
+}
+
+// Check if dashboard server is running
+async function checkServer() {
+  return new Promise((resolve) => {
+    const req = http.get('http://localhost:3001/api/tasks', (res) => {
+      resolve(res.statusCode === 200);
+    });
+    req.on('error', () => resolve(false));
+    req.setTimeout(3000, () => {
+      req.destroy();
+      resolve(false);
+    });
+  });
+}
+
+// Get usage stats
+async function getUsageStats() {
+  try {
+    const data = await fs.readFile(USAGE_FILE, 'utf8');
+    const usage = JSON.parse(data);
+    
+    let totalDailyUsed = 0;
+    let totalMonthlySpent = 0;
+    let totalBudget = 0;
+    
+    for (const model of Object.values(usage.models)) {
+      totalDailyUsed += model.dailyUsed || 0;
+      totalMonthlySpent += model.monthlySpent || 0;
+      totalBudget += model.monthlyCost || 0;
+    }
+    
+    return {
+      lastUpdated: usage.lastUpdated,
+      totalDailyUsed,
+      totalMonthlySpent,
+      totalBudget,
+      remainingBudget: totalBudget - totalMonthlySpent,
+      models: Object.keys(usage.models).length
+    };
+  } catch (error) {
+    return null;
+  }
+}
+
+// Print kanban board summary
+function printKanbanSummary(tasks) {
+  logSection('KANBAN BOARD STATUS');
+  
+  const columns = {
+    todo: { label: 'To Do', color: 'red', icon: '📋' },
+    inprogress: { label: 'In Progress', color: 'yellow', icon: '🔄' },
+    review: { label: 'Review', color: 'blue', icon: '👀' },
+    completed: { label: 'Completed', color: 'green', icon: '✅' }
+  };
+  
+  for (const [key, config] of Object.entries(columns)) {
+    const taskList = tasks[key] || [];
+    const highPriority = taskList.filter(t => t.priority === 'high').length;
+    
+    log(`${config.icon} ${config.label}: ${taskList.length} tasks`, config.color);
+    if (highPriority > 0 && key !== 'completed') {
+      log(`   └─ ${highPriority} high priority`, 'red');
+    }
+    
+    // Show first 3 tasks
+    taskList.slice(0, 3).forEach(task => {
+      const priorityColor = task.priority === 'high' ? 'red' : task.priority === 'medium' ? 'yellow' : 'dim';
+      log(`   • ${task.title}`, priorityColor);
+    });
+    
+    if (taskList.length > 3) {
+      log(`   ... and ${taskList.length - 3} more`, 'dim');
+    }
+  }
+}
+
+// Auto-update task statuses based on age
+async function autoUpdateTasks(tasks) {
+  logSection('AUTO-UPDATING TASKS');
+  
+  const now = new Date();
+  let moved = 0;
+  let updated = 0;
+  
+  // Check for stale "in progress" tasks (older than 7 days)
+  const staleThreshold = 7 * 24 * 60 * 60 * 1000; // 7 days
+  
+  for (const column of ['inprogress', 'review']) {
+    const taskList = tasks[column] || [];
+    
+    for (let i = taskList.length - 1; i >= 0; i--) {
+      const task = taskList[i];
+      const created = new Date(task.created);
+      const age = now - created;
+      
+      // Auto-move stale review tasks to completed
+      if (column === 'review' && age > staleThreshold && !task.needsReview) {
+        log(`Moving stale review task: ${task.title}`, 'yellow');
+        task.completed = now.toISOString();
+        tasks.completed = tasks.completed || [];
+        tasks.completed.push(task);
+        taskList.splice(i, 1);
+        moved++;
+      }
+    }
+  }
+  
+  // Check for duplicates in todo
+  const todoTitles = new Set();
+  const duplicates = [];
+  
+  (tasks.todo || []).forEach((task, index) => {
+    const normalized = task.title.toLowerCase().trim();
+    if (todoTitles.has(normalized)) {
+      duplicates.push(index);
+    } else {
+      todoTitles.add(normalized);
+    }
+  });
+  
+  // Remove duplicates (keep first occurrence)
+  for (let i = duplicates.length - 1; i >= 0; i--) {
+    const task = tasks.todo[duplicates[i]];
+    log(`Removing duplicate: ${task.title}`, 'yellow');
+    tasks.todo.splice(duplicates[i], 1);
+    updated++;
+  }
+  
+  if (moved === 0 && updated === 0) {
+    log('No automatic updates needed', 'green');
+  } else {
+    log(`Moved ${moved} tasks, removed ${updated} duplicates`, 'green');
+  }
+  
+  return { moved, updated };
+}
+
+// Print usage summary
+function printUsageSummary(stats) {
+  if (!stats) return;
+  
+  logSection('MODEL USAGE SUMMARY');
+  log(`📊 Daily Tokens Used: ${stats.totalDailyUsed.toLocaleString()}`, 'cyan');
+  const spentStr = typeof stats.totalMonthlySpent === 'number' ? `$${stats.totalMonthlySpent.toFixed(2)}` : stats.totalMonthlySpent;
+  const budgetStr = typeof stats.totalBudget === 'number' ? `$${stats.totalBudget.toFixed(2)}` : stats.totalBudget;
+  log(`💰 Monthly Spent: ${spentStr} / ${budgetStr}`, 'cyan');
+  const remainingStr = typeof stats.remainingBudget === 'number' ? `$${stats.remainingBudget.toFixed(2)}` : stats.remainingBudget;
+  const remainingVal = typeof stats.remainingBudget === 'number' ? stats.remainingBudget : 0;
+  log(`💵 Remaining Budget: ${remainingStr}`, remainingVal < 20 ? 'yellow' : 'green');
+  log(`🤖 Active Models: ${stats.models}`, 'cyan');
+  log(`🕐 Last Updated: ${new Date(stats.lastUpdated).toLocaleString()}`, 'dim');
+}
+
+// Update service status
+async function updateServiceStatus(serviceId, status = 'online') {
+  try {
+    const SERVICE_STATUS_FILE = path.join(__dirname, '..', 'data', 'service-status.json');
+    const data = await fs.readFile(SERVICE_STATUS_FILE, 'utf8');
+    const serviceStatus = JSON.parse(data);
+    
+    const service = serviceStatus.services.find(s => s.id === serviceId);
+    if (service) {
+      service.status = status;
+      service.lastRecovery = new Date().toISOString();
+      service.uptimeStarted = new Date().toISOString();
+      serviceStatus.lastUpdated = new Date().toISOString();
+      await fs.writeFile(SERVICE_STATUS_FILE, JSON.stringify(serviceStatus, null, 2));
+    }
+  } catch (error) {
+    // Silently fail - not critical
+  }
+}
+
+// Main sync function
+async function sync() {
+  // Update service status to show we're running
+  await updateServiceStatus('kanban-sync', 'online');
+
+  log('', 'reset');
+  log('════════════════════════════════════════', 'bright');
+  log('   🤖 MARVIN\'S KANBAN SYNC', 'bright');
+  log('   ' + new Date().toLocaleString(), 'dim');
+  log('════════════════════════════════════════', 'bright');
+  
+  // Check server status
+  const serverRunning = await checkServer();
+  logSection('SERVER STATUS');
+  if (serverRunning) {
+    log('✅ Dashboard server is running on port 3001', 'green');
+  } else {
+    log('⚠️  Dashboard server is NOT running on port 3001', 'yellow');
+    log('   Start with: cd marvin-dash && npm start', 'dim');
+  }
+  
+  // Load and process tasks
+  const tasks = await loadTasks();
+  if (!tasks) {
+    process.exit(1);
+  }
+  
+  // Print current state
+  printKanbanSummary(tasks);
+  
+  // Auto-update tasks
+  const { moved, updated } = await autoUpdateTasks(tasks);
+  
+  // Save if changes were made
+  if (moved > 0 || updated > 0) {
+    const saved = await saveTasks(tasks);
+    if (saved) {
+      log('✅ Changes saved successfully', 'green');
+    }
+  }
+  
+  // Get usage stats
+  const usageStats = await getUsageStats();
+  printUsageSummary(usageStats);
+  
+  logSection('SYNC COMPLETE');
+  log('Next sync in 30 minutes', 'dim');
+  log('', 'reset');
+}
+
+// Run if called directly
+if (require.main === module) {
+  sync().catch(error => {
+    console.error('Sync failed:', error);
+    process.exit(1);
+  });
+}
+
+module.exports = { sync, loadTasks, saveTasks, checkServer };

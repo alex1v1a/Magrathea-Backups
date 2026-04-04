@@ -1,0 +1,164 @@
+title: Devices
+icon: mdi:devices
+path: devices
+theme: LCARS
+cards:
+  - type: vertical-stack
+    cards:
+      # Header with Navigation
+      - type: horizontal-stack
+        cards:
+          - type: button
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/mission-pad
+            name: ← BACK
+            icon: mdi:arrow-left
+            styles:
+              card:
+                - background: '#FF9900'
+                - border-radius: '20px 0 0 20px'
+          - type: markdown
+            content: |
+              <div style="background: #CC6699; padding: 10px 20px; border-radius: 0 20px 20px 0; font-family: 'Antonio', sans-serif; font-size: 20px; font-weight: bold; color: #000;">
+              DEVICE CONTROL</div>
+
+      # DEVICE TABS - Horizontal Navigation
+      - type: horizontal-stack
+        cards:
+          - type: button
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/devices-sensors
+            name: SENSORS
+            icon: mdi:radar
+            styles:
+              card:
+                - background: '#9999CC'
+                - border-radius: '20px'
+          - type: button
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/devices-lights
+            name: LIGHTS
+            icon: mdi:lightbulb
+            styles:
+              card:
+                - background: '#CC6699'
+                - border-radius: '20px'
+          - type: button
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/devices-climate
+            name: CLIMATE
+            icon: mdi:thermostat
+            styles:
+              card:
+                - background: '#99CC99'
+                - border-radius: '20px'
+          - type: button
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/devices-security
+            name: SECURITY
+            icon: mdi:shield
+            styles:
+              card:
+                - background: '#FF9900'
+                - border-radius: '20px'
+          - type: button
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/devices-media
+            name: MEDIA
+            icon: mdi:play-circle
+            styles:
+              card:
+                - background: '#6699CC'
+                - border-radius: '20px'
+
+      # Default View - All Devices Summary
+      - type: grid
+        columns: 3
+        cards:
+          # Sensors Summary
+          - type: vertical-stack
+            cards:
+              - type: markdown
+                content: |
+                  <div style="background: #9999CC; padding: 10px; border-radius: 10px; font-family: 'Antonio'; font-weight: bold; color: #000;">SENSORS</div>
+              - type: glance
+                entities:
+                  - sensor.living_room_temperature
+                  - sensor.bedroom_temperature
+                  - sensor.outdoor_temperature
+                  - sensor.co2
+                style: |
+                  ha-card {
+                    background: #000;
+                    border-left: 5px solid #9999CC;
+                  }
+
+          # Lights Summary
+          - type: vertical-stack
+            cards:
+              - type: markdown
+                content: |
+                  <div style="background: #CC6699; padding: 10px; border-radius: 10px; font-family: 'Antonio'; font-weight: bold; color: #000;">LIGHTS</div>
+              - type: entities
+                entities:
+                  - light.living_room
+                  - light.kitchen
+                  - light.bedroom
+                  - light.outdoor
+                style: |
+                  ha-card {
+                    background: #000;
+                    border-left: 5px solid #CC6699;
+                  }
+
+          # Climate Summary
+          - type: vertical-stack
+            cards:
+              - type: markdown
+                content: |
+                  <div style="background: #99CC99; padding: 10px; border-radius: 10px; font-family: 'Antonio'; font-weight: bold; color: #000;">CLIMATE</div>
+              - type: thermostat
+                entity: climate.main
+                style: |
+                  ha-card {
+                    background: #000;
+                    border-left: 5px solid #99CC99;
+                  }
+
+      # Status Row
+      - type: horizontal-stack
+        cards:
+          - type: entity
+            entity: alarm_control_panel.main
+            name: SECURITY
+            icon: mdi:shield-check
+            state_color: true
+            style: |
+              ha-card {
+                background: #000;
+                border-left: 5px solid #FF9900;
+              }
+          - type: entity
+            entity: media_player.living_room
+            name: MEDIA
+            icon: mdi:play
+            style: |
+              ha-card {
+                background: #000;
+                border-left: 5px solid #6699CC;
+              }
+          - type: entity
+            entity: sensor.energy_usage
+            name: ENERGY
+            icon: mdi:lightning-bolt
+            style: |
+              ha-card {
+                background: #000;
+                border-left: 5px solid #FFCC99;
+              }

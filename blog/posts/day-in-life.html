@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A day in the life of running an app company from Auckland, New Zealand.">
+    <title>A Day in the Life: Running an App Company from Auckland | The Paper Trail</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #ffffff; color: #111111; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        
+        .site-header { position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #e5e5e5; z-index: 100; }
+        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .main-nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 15px; }
+        .brand-logo { width: 28px; height: 28px; }
+        .nav-blog-title { font-family: 'Newsreader', Georgia, serif; font-size: 18px; font-weight: 500; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 8px 14px; font-size: 13px; font-weight: 500; border-radius: 8px; cursor: pointer; border: none; }
+        .btn-primary { background: #dc2626; color: white; }
+        .btn-primary:hover { background: #b91c1c; }
+        
+        .article-header { padding: 64px 24px 32px; text-align: center; max-width: 800px; margin: 0 auto; }
+        .article-meta { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 24px; font-size: 14px; }
+        .article-category { color: #dc2626; font-weight: 600; }
+        .article-date { color: #666; }
+        .article-title { font-family: 'Newsreader', Georgia, serif; font-size: 42px; line-height: 1.2; margin-bottom: 24px; }
+        @media (max-width: 640px) { .article-title { font-size: 28px; } }
+        
+        .article-hero { max-width: 1000px; margin: 0 auto 48px; padding: 0 24px; }
+        .article-hero-image { aspect-ratio: 16/9; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+        .article-hero-image svg { width: 120px; height: 120px; opacity: 0.9; }
+        
+        .article-content { max-width: 720px; margin: 0 auto; padding: 0 24px 64px; }
+        .article-content h2 { font-family: 'Newsreader', Georgia, serif; font-size: 28px; margin: 48px 0 16px; }
+        .article-content h3 { font-family: 'Newsreader', Georgia, serif; font-size: 22px; margin: 32px 0 12px; }
+        .article-content p { font-size: 17px; line-height: 1.8; margin-bottom: 20px; color: #333; }
+        
+        .site-footer { background: #fafafa; border-top: 1px solid #e5e5e5; padding: 48px 0 24px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+        @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+        .footer-description { font-size: 14px; color: #666; max-width: 280px; margin-top: 12px; }
+        .footer-links h4 { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { font-size: 14px; color: #666; }
+        .footer-links a:hover { color: #111; }
+        .footer-bottom { padding-top: 24px; border-top: 1px solid #e5e5e5; text-align: center; }
+        .footer-bottom p { font-size: 13px; color: #888; }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <nav class="main-nav">
+                <a href="/" class="brand">
+                    <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="48" rx="8" fill="#dc2626"/>
+                        <path d="M14 12h20v4H14v-4zm0 10h20v4H14v-4zm0 10h14v4H14v-4z" fill="white"/>
+                    </svg>
+                    <span>Paper Trail</span>
+                </a>
+                <div class="nav-center">
+                    <a href="/blog/" class="nav-blog-title">The Paper Trail</a>
+                </div>
+                <div class="nav-right">
+                    <a href="/blog/#newsletter" class="btn btn-primary">Subscribe</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <header class="article-header">
+            <div class="article-meta">
+                <span class="article-category">Company</span>
+                <span class="article-date">March 8, 2026</span>
+            </div>
+            <h1 class="article-title">A Day in the Life: Running an App Company from Auckland</h1>
+        </header>
+        
+        <div class="article-hero">
+            <div class="article-hero-image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+            </div>
+        </div>
+        
+        <article class="article-content">
+            <p>People often ask what it's like to run a tech company from New Zealand. The short answer: it's quieter than San Francisco, but the work is just as intense.</p>
+            
+            <h2>6:00 AM - Morning Routine</h2>
+            <p>I'm up early to catch the tail end of the US business day. A quick check of Slack and emails while the coffee brews. The time difference is brutal, but it means I can sync with our US users before they log off.</p>
+            
+            <h2>9:00 AM - Deep Work</h2>
+            <p>The morning is my most productive time. No meetings, no distractions. Just me and the code. I work from a home office that overlooks the Waitematā Harbour. It's hard to beat.</p>
+            
+            <h2>1:00 PM - Team Standup</h2>
+            <p>We're a distributed team, so our standup is over Zoom. Three developers, one designer, all working remotely. We keep it short: what did you do, what will you do, what's blocking you.</p>
+            
+            <h2>3:00 PM - Customer Support</h2>
+            <p>I spend an hour every day answering support emails. It's not glamorous, but it keeps me connected to our users. You'd be amazed what you learn from a simple "how do I..." question.</p>
+            
+            <h2>6:00 PM - Family Time</h2>
+            <p>This is non-negotiable. Dinner with the family, help with homework, maybe a walk along the beach. The work-life balance is why I chose Auckland over the Valley.</p>
+            
+            <p>Running a company from New Zealand has its challenges—time zones, distance from investors, smaller talent pool. But the quality of life is unmatched. I wouldn't trade it.</p>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="brand">
+                        <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="8" fill="#dc2626"/>
+                            <path d="M14 12h20v4H14v-4zm0 10h20v4H14v-4zm0 10h14v4H14v-4z" fill="white"/>
+                        </svg>
+                        <span>Paper Trail</span>
+                    </a>
+                    <p class="footer-description">Writing the future of mobile experiences from New Zealand.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="/apps/reel-reviews/">Reel Reviews</a></li>
+                        <li><a href="/apps/coming-soon/">Coming Soon</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/privacy-policy.html">Privacy</a></li>
+                        <li><a href="/terms-of-service.html">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:admin@typewrite.club">Email</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Paper Trail Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

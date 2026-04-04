@@ -1,0 +1,30 @@
+{
+  "lastRun": "2026-02-27T21:49:01.963Z",
+  "lastBackup": "2026-02-27T21:39:02.661Z",
+  "totalRecoveries": 2,
+  "serviceStates": {
+    "dashboard-server": {
+      "status": "healthy",
+      "details": "Port 3001 responding",
+      "lastCheck": "2026-02-27T21:49:01.725Z",
+      "portConflict": null
+    },
+    "openclaw-gateway": {
+      "status": "healthy",
+      "details": "Gateway responding on port 18791",
+      "lastCheck": "2026-02-27T21:49:01.779Z",
+      "portConflict": null
+    },
+    "wsl-ubuntu": {
+      "status": "healthy",
+      "details": "Check command passed",
+      "lastCheck": "2026-02-27T21:49:01.954Z",
+      "portConflict": null
+    }
+  },
+  "consecutiveFailures": {
+    "openclaw-gateway": 0
+  },
+  "lastRollback": "2026-02-26T03:04:26.559Z",
+  "portConflicts": {}
+}

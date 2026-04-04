@@ -1,0 +1,19 @@
+# Tesla Powerwall Integration
+# Native HA integration available
+
+# To configure:
+# 1. Settings → Devices & Services
+# 2. Add Integration → Tesla Powerwall
+# 3. Enter IP: 10.0.1.70 (from UniFi scan)
+# 4. Enter password (found on Powerwall gateway)
+# 5. Or use Tesla account credentials
+
+# Alternative: Tesla Custom Integration via HACS
+# - More features than native integration
+# - HACS → Search "Tesla"
+
+# Expected data:
+# - Battery level
+# - Solar generation
+# - Grid usage
+# - Home consumption

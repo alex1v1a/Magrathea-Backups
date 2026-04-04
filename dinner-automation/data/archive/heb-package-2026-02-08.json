@@ -1,0 +1,1631 @@
+{
+  "metadata": {
+    "generatedAt": "2026-02-08T15:00:19.549Z",
+    "weekOf": "2026-02-08",
+    "method": "heb-list-generator",
+    "note": "Browser automation blocked by Incapsula. Using shareable list workaround."
+  },
+  "files": {
+    "html": {
+      "path": "/mnt/c/Users/Admin/.openclaw/workspace/dinner-automation/data/heb-shopping-list-2026-02-08.html",
+      "filename": "heb-shopping-list-2026-02-08.html",
+      "description": "Interactive HTML list with clickable HEB links",
+      "useCase": "Open in browser to shop online or print for store"
+    },
+    "markdown": {
+      "path": "/mnt/c/Users/Admin/.openclaw/workspace/dinner-automation/data/heb-shopping-list-2026-02-08.md",
+      "filename": "heb-shopping-list-2026-02-08.md",
+      "description": "Markdown format for email or documentation",
+      "useCase": "Include in emails or Discord messages"
+    },
+    "json": {
+      "path": "/mnt/c/Users/Admin/.openclaw/workspace/dinner-automation/data/heb-shopping-data-2026-02-08.json",
+      "filename": "heb-shopping-data-2026-02-08.json",
+      "description": "Structured data for automation",
+      "useCase": "Feed into other tools or scripts"
+    }
+  },
+  "shoppingList": {
+    "metadata": {
+      "generatedAt": "2026-02-08T15:00:19.430Z",
+      "weekOf": "2026-02-08",
+      "store": "HEB.com",
+      "totalItems": 44,
+      "estimatedTotal": 205.3300000000001
+    },
+    "items": [
+      {
+        "id": "item-0",
+        "name": "Atlantic salmon fillets",
+        "searchTerm": "salmon fillet fresh",
+        "amount": "1.5 lbs",
+        "meal": "Grilled Salmon with Asparagus",
+        "day": "Sunday",
+        "category": "Proteins & Meat",
+        "hebUrl": "https://www.heb.com/search?q=salmon%20fillet%20fresh",
+        "estimatedPrice": 15.99
+      },
+      {
+        "id": "item-1",
+        "name": "Fresh asparagus",
+        "searchTerm": "asparagus fresh",
+        "amount": "1 bunch",
+        "meal": "Grilled Salmon with Asparagus",
+        "day": "Sunday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=asparagus%20fresh",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-2",
+        "name": "Lemon",
+        "searchTerm": "lemon",
+        "amount": "2",
+        "meal": "Grilled Salmon with Asparagus",
+        "day": "Sunday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=lemon",
+        "estimatedPrice": 0.5
+      },
+      {
+        "id": "item-3",
+        "name": "Olive oil",
+        "searchTerm": "olive oil extra virgin",
+        "amount": "1 bottle",
+        "meal": "Grilled Salmon with Asparagus",
+        "day": "Sunday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=olive%20oil%20extra%20virgin",
+        "estimatedPrice": 8.99
+      },
+      {
+        "id": "item-4",
+        "name": "Garlic",
+        "searchTerm": "garlic",
+        "amount": "1 bulb",
+        "meal": "Grilled Salmon with Asparagus",
+        "day": "Sunday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=garlic",
+        "estimatedPrice": 0.99
+      },
+      {
+        "id": "item-5",
+        "name": "Sea salt",
+        "searchTerm": "sea salt",
+        "amount": "1 container",
+        "meal": "Grilled Salmon with Asparagus",
+        "day": "Sunday",
+        "category": "Other",
+        "hebUrl": "https://www.heb.com/search?q=sea%20salt",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-6",
+        "name": "Pork tenderloin",
+        "searchTerm": "pork tenderloin",
+        "amount": "1.5 lbs",
+        "meal": "Pork Tenderloin with Roasted Vegetables",
+        "day": "Monday",
+        "category": "Proteins & Meat",
+        "hebUrl": "https://www.heb.com/search?q=pork%20tenderloin",
+        "estimatedPrice": 5.99
+      },
+      {
+        "id": "item-7",
+        "name": "Brussels sprouts",
+        "searchTerm": "brussels sprouts",
+        "amount": "1.5 lbs",
+        "meal": "Pork Tenderloin with Roasted Vegetables",
+        "day": "Monday",
+        "category": "Other",
+        "hebUrl": "https://www.heb.com/search?q=brussels%20sprouts",
+        "estimatedPrice": 3.49
+      },
+      {
+        "id": "item-8",
+        "name": "Sweet potatoes",
+        "searchTerm": "sweet potatoes",
+        "amount": "2 lbs",
+        "meal": "Pork Tenderloin with Roasted Vegetables",
+        "day": "Monday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=sweet%20potatoes",
+        "estimatedPrice": 1.29
+      },
+      {
+        "id": "item-9",
+        "name": "Dijon mustard",
+        "searchTerm": "dijon mustard",
+        "amount": "1 jar",
+        "meal": "Pork Tenderloin with Roasted Vegetables",
+        "day": "Monday",
+        "category": "Other",
+        "hebUrl": "https://www.heb.com/search?q=dijon%20mustard",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-10",
+        "name": "Fresh rosemary",
+        "searchTerm": "rosemary fresh",
+        "amount": "1 bunch",
+        "meal": "Pork Tenderloin with Roasted Vegetables",
+        "day": "Monday",
+        "category": "Other",
+        "hebUrl": "https://www.heb.com/search?q=rosemary%20fresh",
+        "estimatedPrice": 2.49
+      },
+      {
+        "id": "item-11",
+        "name": "Balsamic vinegar",
+        "searchTerm": "balsamic vinegar",
+        "amount": "1 bottle",
+        "meal": "Pork Tenderloin with Roasted Vegetables",
+        "day": "Monday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=balsamic%20vinegar",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-12",
+        "name": "White fish fillets",
+        "searchTerm": "tilapia fillet",
+        "amount": "1.5 lbs",
+        "meal": "Fish Tacos with Mango Salsa",
+        "day": "Tuesday",
+        "category": "Proteins & Meat",
+        "hebUrl": "https://www.heb.com/search?q=tilapia%20fillet",
+        "estimatedPrice": 7.99
+      },
+      {
+        "id": "item-13",
+        "name": "Corn tortillas",
+        "searchTerm": "corn tortillas",
+        "amount": "1 pack",
+        "meal": "Fish Tacos with Mango Salsa",
+        "day": "Tuesday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=corn%20tortillas",
+        "estimatedPrice": 2.99
+      },
+      {
+        "id": "item-14",
+        "name": "Mango",
+        "searchTerm": "mango",
+        "amount": "2",
+        "meal": "Fish Tacos with Mango Salsa",
+        "day": "Tuesday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=mango",
+        "estimatedPrice": 1.25
+      },
+      {
+        "id": "item-15",
+        "name": "Red onion",
+        "searchTerm": "red onion",
+        "amount": "1",
+        "meal": "Fish Tacos with Mango Salsa",
+        "day": "Tuesday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=red%20onion",
+        "estimatedPrice": 0.89
+      },
+      {
+        "id": "item-16",
+        "name": "Jalapeno",
+        "searchTerm": "jalapeno",
+        "amount": "2",
+        "meal": "Fish Tacos with Mango Salsa",
+        "day": "Tuesday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=jalapeno",
+        "estimatedPrice": 0.15
+      },
+      {
+        "id": "item-17",
+        "name": "Cabbage slaw mix",
+        "searchTerm": "coleslaw mix",
+        "amount": "1 bag",
+        "meal": "Fish Tacos with Mango Salsa",
+        "day": "Tuesday",
+        "category": "Other",
+        "hebUrl": "https://www.heb.com/search?q=coleslaw%20mix",
+        "estimatedPrice": 2.49
+      },
+      {
+        "id": "item-18",
+        "name": "Chipotle mayo",
+        "searchTerm": "chipotle mayo",
+        "amount": "1 bottle",
+        "meal": "Fish Tacos with Mango Salsa",
+        "day": "Tuesday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=chipotle%20mayo",
+        "estimatedPrice": 3.99
+      },
+      {
+        "id": "item-19",
+        "name": "Chicken thighs",
+        "searchTerm": "chicken thighs boneless",
+        "amount": "2 lbs",
+        "meal": "Chicken Tikka Masala",
+        "day": "Wednesday",
+        "category": "Proteins & Meat",
+        "hebUrl": "https://www.heb.com/search?q=chicken%20thighs%20boneless",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-20",
+        "name": "Greek yogurt",
+        "searchTerm": "greek yogurt plain",
+        "amount": "16 oz",
+        "meal": "Chicken Tikka Masala",
+        "day": "Wednesday",
+        "category": "Dairy & Eggs",
+        "hebUrl": "https://www.heb.com/search?q=greek%20yogurt%20plain",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-21",
+        "name": "Heavy cream",
+        "searchTerm": "heavy cream",
+        "amount": "1 pint",
+        "meal": "Chicken Tikka Masala",
+        "day": "Wednesday",
+        "category": "Dairy & Eggs",
+        "hebUrl": "https://www.heb.com/search?q=heavy%20cream",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-22",
+        "name": "Basmati rice",
+        "searchTerm": "basmati rice",
+        "amount": "2 lbs",
+        "meal": "Chicken Tikka Masala",
+        "day": "Wednesday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=basmati%20rice",
+        "estimatedPrice": 5.99
+      },
+      {
+        "id": "item-23",
+        "name": "Tikka masala sauce",
+        "searchTerm": "tikka masala sauce",
+        "amount": "1 jar",
+        "meal": "Chicken Tikka Masala",
+        "day": "Wednesday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=tikka%20masala%20sauce",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-24",
+        "name": "Fresh ginger",
+        "searchTerm": "ginger root",
+        "amount": "1 piece",
+        "meal": "Chicken Tikka Masala",
+        "day": "Wednesday",
+        "category": "Other",
+        "hebUrl": "https://www.heb.com/search?q=ginger%20root",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-25",
+        "name": "Flank steak",
+        "searchTerm": "flank steak",
+        "amount": "1.5 lbs",
+        "meal": "Beef Stir-Fry with Vegetables",
+        "day": "Thursday",
+        "category": "Proteins & Meat",
+        "hebUrl": "https://www.heb.com/search?q=flank%20steak",
+        "estimatedPrice": 12.99
+      },
+      {
+        "id": "item-26",
+        "name": "Broccoli florets",
+        "searchTerm": "broccoli",
+        "amount": "2 heads",
+        "meal": "Beef Stir-Fry with Vegetables",
+        "day": "Thursday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=broccoli",
+        "estimatedPrice": 2.49
+      },
+      {
+        "id": "item-27",
+        "name": "Bell peppers",
+        "searchTerm": "bell peppers",
+        "amount": "3",
+        "meal": "Beef Stir-Fry with Vegetables",
+        "day": "Thursday",
+        "category": "Other",
+        "hebUrl": "https://www.heb.com/search?q=bell%20peppers",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-28",
+        "name": "Soy sauce",
+        "searchTerm": "soy sauce low sodium",
+        "amount": "1 bottle",
+        "meal": "Beef Stir-Fry with Vegetables",
+        "day": "Thursday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=soy%20sauce%20low%20sodium",
+        "estimatedPrice": 3.49
+      },
+      {
+        "id": "item-29",
+        "name": "Sesame oil",
+        "searchTerm": "sesame oil",
+        "amount": "1 bottle",
+        "meal": "Beef Stir-Fry with Vegetables",
+        "day": "Thursday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=sesame%20oil",
+        "estimatedPrice": 5.99
+      },
+      {
+        "id": "item-30",
+        "name": "Green onions",
+        "searchTerm": "green onions",
+        "amount": "1 bunch",
+        "meal": "Beef Stir-Fry with Vegetables",
+        "day": "Thursday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=green%20onions",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-31",
+        "name": "Large shrimp",
+        "searchTerm": "shrimp large raw",
+        "amount": "1.5 lbs",
+        "meal": "Shrimp Tacos with Cabbage Slaw",
+        "day": "Friday",
+        "category": "Proteins & Meat",
+        "hebUrl": "https://www.heb.com/search?q=shrimp%20large%20raw",
+        "estimatedPrice": 14.99
+      },
+      {
+        "id": "item-32",
+        "name": "Corn tortillas",
+        "searchTerm": "corn tortillas",
+        "amount": "1 pack",
+        "meal": "Shrimp Tacos with Cabbage Slaw",
+        "day": "Friday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=corn%20tortillas",
+        "estimatedPrice": 2.99
+      },
+      {
+        "id": "item-33",
+        "name": "Red cabbage",
+        "searchTerm": "cabbage red",
+        "amount": "1 head",
+        "meal": "Shrimp Tacos with Cabbage Slaw",
+        "day": "Friday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=cabbage%20red",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-34",
+        "name": "Avocado",
+        "searchTerm": "avocado",
+        "amount": "3",
+        "meal": "Shrimp Tacos with Cabbage Slaw",
+        "day": "Friday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=avocado",
+        "estimatedPrice": 1.29
+      },
+      {
+        "id": "item-35",
+        "name": "Lime",
+        "searchTerm": "lime",
+        "amount": "4",
+        "meal": "Shrimp Tacos with Cabbage Slaw",
+        "day": "Friday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=lime",
+        "estimatedPrice": 0.33
+      },
+      {
+        "id": "item-36",
+        "name": "Cilantro",
+        "searchTerm": "cilantro fresh",
+        "amount": "1 bunch",
+        "meal": "Shrimp Tacos with Cabbage Slaw",
+        "day": "Friday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=cilantro%20fresh",
+        "estimatedPrice": 1.99
+      },
+      {
+        "id": "item-37",
+        "name": "Chipotle powder",
+        "searchTerm": "chipotle powder",
+        "amount": "1 container",
+        "meal": "Shrimp Tacos with Cabbage Slaw",
+        "day": "Friday",
+        "category": "Other",
+        "hebUrl": "https://www.heb.com/search?q=chipotle%20powder",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-38",
+        "name": "Chickpeas",
+        "searchTerm": "chickpeas",
+        "amount": "2 cans",
+        "meal": "Vegetable Curry with Chickpeas",
+        "day": "Saturday",
+        "category": "Other",
+        "hebUrl": "https://www.heb.com/search?q=chickpeas",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-39",
+        "name": "Coconut milk",
+        "searchTerm": "coconut milk",
+        "amount": "2 cans",
+        "meal": "Vegetable Curry with Chickpeas",
+        "day": "Saturday",
+        "category": "Dairy & Eggs",
+        "hebUrl": "https://www.heb.com/search?q=coconut%20milk",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-40",
+        "name": "Spinach",
+        "searchTerm": "spinach fresh",
+        "amount": "10 oz",
+        "meal": "Vegetable Curry with Chickpeas",
+        "day": "Saturday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=spinach%20fresh",
+        "estimatedPrice": 3.49
+      },
+      {
+        "id": "item-41",
+        "name": "Curry paste",
+        "searchTerm": "curry paste",
+        "amount": "1 jar",
+        "meal": "Vegetable Curry with Chickpeas",
+        "day": "Saturday",
+        "category": "Other",
+        "hebUrl": "https://www.heb.com/search?q=curry%20paste",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-42",
+        "name": "Naan bread",
+        "searchTerm": "naan bread",
+        "amount": "1 pack",
+        "meal": "Vegetable Curry with Chickpeas",
+        "day": "Saturday",
+        "category": "Bakery",
+        "hebUrl": "https://www.heb.com/search?q=naan%20bread",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-43",
+        "name": "Yellow onion",
+        "searchTerm": "yellow onion",
+        "amount": "1",
+        "meal": "Vegetable Curry with Chickpeas",
+        "day": "Saturday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=yellow%20onion",
+        "estimatedPrice": 4.99
+      }
+    ],
+    "byCategory": {
+      "Proteins & Meat": [
+        {
+          "id": "item-0",
+          "name": "Atlantic salmon fillets",
+          "searchTerm": "salmon fillet fresh",
+          "amount": "1.5 lbs",
+          "meal": "Grilled Salmon with Asparagus",
+          "day": "Sunday",
+          "category": "Proteins & Meat",
+          "hebUrl": "https://www.heb.com/search?q=salmon%20fillet%20fresh",
+          "estimatedPrice": 15.99
+        },
+        {
+          "id": "item-6",
+          "name": "Pork tenderloin",
+          "searchTerm": "pork tenderloin",
+          "amount": "1.5 lbs",
+          "meal": "Pork Tenderloin with Roasted Vegetables",
+          "day": "Monday",
+          "category": "Proteins & Meat",
+          "hebUrl": "https://www.heb.com/search?q=pork%20tenderloin",
+          "estimatedPrice": 5.99
+        },
+        {
+          "id": "item-12",
+          "name": "White fish fillets",
+          "searchTerm": "tilapia fillet",
+          "amount": "1.5 lbs",
+          "meal": "Fish Tacos with Mango Salsa",
+          "day": "Tuesday",
+          "category": "Proteins & Meat",
+          "hebUrl": "https://www.heb.com/search?q=tilapia%20fillet",
+          "estimatedPrice": 7.99
+        },
+        {
+          "id": "item-19",
+          "name": "Chicken thighs",
+          "searchTerm": "chicken thighs boneless",
+          "amount": "2 lbs",
+          "meal": "Chicken Tikka Masala",
+          "day": "Wednesday",
+          "category": "Proteins & Meat",
+          "hebUrl": "https://www.heb.com/search?q=chicken%20thighs%20boneless",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-25",
+          "name": "Flank steak",
+          "searchTerm": "flank steak",
+          "amount": "1.5 lbs",
+          "meal": "Beef Stir-Fry with Vegetables",
+          "day": "Thursday",
+          "category": "Proteins & Meat",
+          "hebUrl": "https://www.heb.com/search?q=flank%20steak",
+          "estimatedPrice": 12.99
+        },
+        {
+          "id": "item-31",
+          "name": "Large shrimp",
+          "searchTerm": "shrimp large raw",
+          "amount": "1.5 lbs",
+          "meal": "Shrimp Tacos with Cabbage Slaw",
+          "day": "Friday",
+          "category": "Proteins & Meat",
+          "hebUrl": "https://www.heb.com/search?q=shrimp%20large%20raw",
+          "estimatedPrice": 14.99
+        }
+      ],
+      "Produce": [
+        {
+          "id": "item-1",
+          "name": "Fresh asparagus",
+          "searchTerm": "asparagus fresh",
+          "amount": "1 bunch",
+          "meal": "Grilled Salmon with Asparagus",
+          "day": "Sunday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=asparagus%20fresh",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-2",
+          "name": "Lemon",
+          "searchTerm": "lemon",
+          "amount": "2",
+          "meal": "Grilled Salmon with Asparagus",
+          "day": "Sunday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=lemon",
+          "estimatedPrice": 0.5
+        },
+        {
+          "id": "item-4",
+          "name": "Garlic",
+          "searchTerm": "garlic",
+          "amount": "1 bulb",
+          "meal": "Grilled Salmon with Asparagus",
+          "day": "Sunday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=garlic",
+          "estimatedPrice": 0.99
+        },
+        {
+          "id": "item-8",
+          "name": "Sweet potatoes",
+          "searchTerm": "sweet potatoes",
+          "amount": "2 lbs",
+          "meal": "Pork Tenderloin with Roasted Vegetables",
+          "day": "Monday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=sweet%20potatoes",
+          "estimatedPrice": 1.29
+        },
+        {
+          "id": "item-14",
+          "name": "Mango",
+          "searchTerm": "mango",
+          "amount": "2",
+          "meal": "Fish Tacos with Mango Salsa",
+          "day": "Tuesday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=mango",
+          "estimatedPrice": 1.25
+        },
+        {
+          "id": "item-15",
+          "name": "Red onion",
+          "searchTerm": "red onion",
+          "amount": "1",
+          "meal": "Fish Tacos with Mango Salsa",
+          "day": "Tuesday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=red%20onion",
+          "estimatedPrice": 0.89
+        },
+        {
+          "id": "item-16",
+          "name": "Jalapeno",
+          "searchTerm": "jalapeno",
+          "amount": "2",
+          "meal": "Fish Tacos with Mango Salsa",
+          "day": "Tuesday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=jalapeno",
+          "estimatedPrice": 0.15
+        },
+        {
+          "id": "item-26",
+          "name": "Broccoli florets",
+          "searchTerm": "broccoli",
+          "amount": "2 heads",
+          "meal": "Beef Stir-Fry with Vegetables",
+          "day": "Thursday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=broccoli",
+          "estimatedPrice": 2.49
+        },
+        {
+          "id": "item-30",
+          "name": "Green onions",
+          "searchTerm": "green onions",
+          "amount": "1 bunch",
+          "meal": "Beef Stir-Fry with Vegetables",
+          "day": "Thursday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=green%20onions",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-33",
+          "name": "Red cabbage",
+          "searchTerm": "cabbage red",
+          "amount": "1 head",
+          "meal": "Shrimp Tacos with Cabbage Slaw",
+          "day": "Friday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=cabbage%20red",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-34",
+          "name": "Avocado",
+          "searchTerm": "avocado",
+          "amount": "3",
+          "meal": "Shrimp Tacos with Cabbage Slaw",
+          "day": "Friday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=avocado",
+          "estimatedPrice": 1.29
+        },
+        {
+          "id": "item-35",
+          "name": "Lime",
+          "searchTerm": "lime",
+          "amount": "4",
+          "meal": "Shrimp Tacos with Cabbage Slaw",
+          "day": "Friday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=lime",
+          "estimatedPrice": 0.33
+        },
+        {
+          "id": "item-36",
+          "name": "Cilantro",
+          "searchTerm": "cilantro fresh",
+          "amount": "1 bunch",
+          "meal": "Shrimp Tacos with Cabbage Slaw",
+          "day": "Friday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=cilantro%20fresh",
+          "estimatedPrice": 1.99
+        },
+        {
+          "id": "item-40",
+          "name": "Spinach",
+          "searchTerm": "spinach fresh",
+          "amount": "10 oz",
+          "meal": "Vegetable Curry with Chickpeas",
+          "day": "Saturday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=spinach%20fresh",
+          "estimatedPrice": 3.49
+        },
+        {
+          "id": "item-43",
+          "name": "Yellow onion",
+          "searchTerm": "yellow onion",
+          "amount": "1",
+          "meal": "Vegetable Curry with Chickpeas",
+          "day": "Saturday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=yellow%20onion",
+          "estimatedPrice": 4.99
+        }
+      ],
+      "Pantry & Dry Goods": [
+        {
+          "id": "item-3",
+          "name": "Olive oil",
+          "searchTerm": "olive oil extra virgin",
+          "amount": "1 bottle",
+          "meal": "Grilled Salmon with Asparagus",
+          "day": "Sunday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=olive%20oil%20extra%20virgin",
+          "estimatedPrice": 8.99
+        },
+        {
+          "id": "item-11",
+          "name": "Balsamic vinegar",
+          "searchTerm": "balsamic vinegar",
+          "amount": "1 bottle",
+          "meal": "Pork Tenderloin with Roasted Vegetables",
+          "day": "Monday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=balsamic%20vinegar",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-13",
+          "name": "Corn tortillas",
+          "searchTerm": "corn tortillas",
+          "amount": "1 pack",
+          "meal": "Fish Tacos with Mango Salsa",
+          "day": "Tuesday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=corn%20tortillas",
+          "estimatedPrice": 2.99
+        },
+        {
+          "id": "item-18",
+          "name": "Chipotle mayo",
+          "searchTerm": "chipotle mayo",
+          "amount": "1 bottle",
+          "meal": "Fish Tacos with Mango Salsa",
+          "day": "Tuesday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=chipotle%20mayo",
+          "estimatedPrice": 3.99
+        },
+        {
+          "id": "item-22",
+          "name": "Basmati rice",
+          "searchTerm": "basmati rice",
+          "amount": "2 lbs",
+          "meal": "Chicken Tikka Masala",
+          "day": "Wednesday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=basmati%20rice",
+          "estimatedPrice": 5.99
+        },
+        {
+          "id": "item-23",
+          "name": "Tikka masala sauce",
+          "searchTerm": "tikka masala sauce",
+          "amount": "1 jar",
+          "meal": "Chicken Tikka Masala",
+          "day": "Wednesday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=tikka%20masala%20sauce",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-28",
+          "name": "Soy sauce",
+          "searchTerm": "soy sauce low sodium",
+          "amount": "1 bottle",
+          "meal": "Beef Stir-Fry with Vegetables",
+          "day": "Thursday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=soy%20sauce%20low%20sodium",
+          "estimatedPrice": 3.49
+        },
+        {
+          "id": "item-29",
+          "name": "Sesame oil",
+          "searchTerm": "sesame oil",
+          "amount": "1 bottle",
+          "meal": "Beef Stir-Fry with Vegetables",
+          "day": "Thursday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=sesame%20oil",
+          "estimatedPrice": 5.99
+        },
+        {
+          "id": "item-32",
+          "name": "Corn tortillas",
+          "searchTerm": "corn tortillas",
+          "amount": "1 pack",
+          "meal": "Shrimp Tacos with Cabbage Slaw",
+          "day": "Friday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=corn%20tortillas",
+          "estimatedPrice": 2.99
+        }
+      ],
+      "Other": [
+        {
+          "id": "item-5",
+          "name": "Sea salt",
+          "searchTerm": "sea salt",
+          "amount": "1 container",
+          "meal": "Grilled Salmon with Asparagus",
+          "day": "Sunday",
+          "category": "Other",
+          "hebUrl": "https://www.heb.com/search?q=sea%20salt",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-7",
+          "name": "Brussels sprouts",
+          "searchTerm": "brussels sprouts",
+          "amount": "1.5 lbs",
+          "meal": "Pork Tenderloin with Roasted Vegetables",
+          "day": "Monday",
+          "category": "Other",
+          "hebUrl": "https://www.heb.com/search?q=brussels%20sprouts",
+          "estimatedPrice": 3.49
+        },
+        {
+          "id": "item-9",
+          "name": "Dijon mustard",
+          "searchTerm": "dijon mustard",
+          "amount": "1 jar",
+          "meal": "Pork Tenderloin with Roasted Vegetables",
+          "day": "Monday",
+          "category": "Other",
+          "hebUrl": "https://www.heb.com/search?q=dijon%20mustard",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-10",
+          "name": "Fresh rosemary",
+          "searchTerm": "rosemary fresh",
+          "amount": "1 bunch",
+          "meal": "Pork Tenderloin with Roasted Vegetables",
+          "day": "Monday",
+          "category": "Other",
+          "hebUrl": "https://www.heb.com/search?q=rosemary%20fresh",
+          "estimatedPrice": 2.49
+        },
+        {
+          "id": "item-17",
+          "name": "Cabbage slaw mix",
+          "searchTerm": "coleslaw mix",
+          "amount": "1 bag",
+          "meal": "Fish Tacos with Mango Salsa",
+          "day": "Tuesday",
+          "category": "Other",
+          "hebUrl": "https://www.heb.com/search?q=coleslaw%20mix",
+          "estimatedPrice": 2.49
+        },
+        {
+          "id": "item-24",
+          "name": "Fresh ginger",
+          "searchTerm": "ginger root",
+          "amount": "1 piece",
+          "meal": "Chicken Tikka Masala",
+          "day": "Wednesday",
+          "category": "Other",
+          "hebUrl": "https://www.heb.com/search?q=ginger%20root",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-27",
+          "name": "Bell peppers",
+          "searchTerm": "bell peppers",
+          "amount": "3",
+          "meal": "Beef Stir-Fry with Vegetables",
+          "day": "Thursday",
+          "category": "Other",
+          "hebUrl": "https://www.heb.com/search?q=bell%20peppers",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-37",
+          "name": "Chipotle powder",
+          "searchTerm": "chipotle powder",
+          "amount": "1 container",
+          "meal": "Shrimp Tacos with Cabbage Slaw",
+          "day": "Friday",
+          "category": "Other",
+          "hebUrl": "https://www.heb.com/search?q=chipotle%20powder",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-38",
+          "name": "Chickpeas",
+          "searchTerm": "chickpeas",
+          "amount": "2 cans",
+          "meal": "Vegetable Curry with Chickpeas",
+          "day": "Saturday",
+          "category": "Other",
+          "hebUrl": "https://www.heb.com/search?q=chickpeas",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-41",
+          "name": "Curry paste",
+          "searchTerm": "curry paste",
+          "amount": "1 jar",
+          "meal": "Vegetable Curry with Chickpeas",
+          "day": "Saturday",
+          "category": "Other",
+          "hebUrl": "https://www.heb.com/search?q=curry%20paste",
+          "estimatedPrice": 4.99
+        }
+      ],
+      "Dairy & Eggs": [
+        {
+          "id": "item-20",
+          "name": "Greek yogurt",
+          "searchTerm": "greek yogurt plain",
+          "amount": "16 oz",
+          "meal": "Chicken Tikka Masala",
+          "day": "Wednesday",
+          "category": "Dairy & Eggs",
+          "hebUrl": "https://www.heb.com/search?q=greek%20yogurt%20plain",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-21",
+          "name": "Heavy cream",
+          "searchTerm": "heavy cream",
+          "amount": "1 pint",
+          "meal": "Chicken Tikka Masala",
+          "day": "Wednesday",
+          "category": "Dairy & Eggs",
+          "hebUrl": "https://www.heb.com/search?q=heavy%20cream",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-39",
+          "name": "Coconut milk",
+          "searchTerm": "coconut milk",
+          "amount": "2 cans",
+          "meal": "Vegetable Curry with Chickpeas",
+          "day": "Saturday",
+          "category": "Dairy & Eggs",
+          "hebUrl": "https://www.heb.com/search?q=coconut%20milk",
+          "estimatedPrice": 4.99
+        }
+      ],
+      "Bakery": [
+        {
+          "id": "item-42",
+          "name": "Naan bread",
+          "searchTerm": "naan bread",
+          "amount": "1 pack",
+          "meal": "Vegetable Curry with Chickpeas",
+          "day": "Saturday",
+          "category": "Bakery",
+          "hebUrl": "https://www.heb.com/search?q=naan%20bread",
+          "estimatedPrice": 4.99
+        }
+      ]
+    },
+    "byMeal": {
+      "Sunday": {
+        "name": "Grilled Salmon with Asparagus",
+        "category": "seafood",
+        "difficulty": "medium",
+        "prepTime": "25 min",
+        "ingredients": [
+          {
+            "id": "item-0",
+            "name": "Atlantic salmon fillets",
+            "searchTerm": "salmon fillet fresh",
+            "amount": "1.5 lbs",
+            "meal": "Grilled Salmon with Asparagus",
+            "day": "Sunday",
+            "category": "Proteins & Meat",
+            "hebUrl": "https://www.heb.com/search?q=salmon%20fillet%20fresh",
+            "estimatedPrice": 15.99
+          },
+          {
+            "id": "item-1",
+            "name": "Fresh asparagus",
+            "searchTerm": "asparagus fresh",
+            "amount": "1 bunch",
+            "meal": "Grilled Salmon with Asparagus",
+            "day": "Sunday",
+            "category": "Produce",
+            "hebUrl": "https://www.heb.com/search?q=asparagus%20fresh",
+            "estimatedPrice": 4.99
+          },
+          {
+            "id": "item-2",
+            "name": "Lemon",
+            "searchTerm": "lemon",
+            "amount": "2",
+            "meal": "Grilled Salmon with Asparagus",
+            "day": "Sunday",
+            "category": "Produce",
+            "hebUrl": "https://www.heb.com/search?q=lemon",
+            "estimatedPrice": 0.5
+          },
+          {
+            "id": "item-3",
+            "name": "Olive oil",
+            "searchTerm": "olive oil extra virgin",
+            "amount": "1 bottle",
+            "meal": "Grilled Salmon with Asparagus",
+            "day": "Sunday",
+            "category": "Pantry & Dry Goods",
+            "hebUrl": "https://www.heb.com/search?q=olive%20oil%20extra%20virgin",
+            "estimatedPrice": 8.99
+          },
+          {
+            "id": "item-4",
+            "name": "Garlic",
+            "searchTerm": "garlic",
+            "amount": "1 bulb",
+            "meal": "Grilled Salmon with Asparagus",
+            "day": "Sunday",
+            "category": "Produce",
+            "hebUrl": "https://www.heb.com/search?q=garlic",
+            "estimatedPrice": 0.99
+          },
+          {
+            "id": "item-5",
+            "name": "Sea salt",
+            "searchTerm": "sea salt",
+            "amount": "1 container",
+            "meal": "Grilled Salmon with Asparagus",
+            "day": "Sunday",
+            "category": "Other",
+            "hebUrl": "https://www.heb.com/search?q=sea%20salt",
+            "estimatedPrice": 4.99
+          }
+        ]
+      },
+      "Monday": {
+        "name": "Pork Tenderloin with Roasted Vegetables",
+        "category": "american",
+        "difficulty": "medium",
+        "prepTime": "45 min",
+        "ingredients": [
+          {
+            "id": "item-6",
+            "name": "Pork tenderloin",
+            "searchTerm": "pork tenderloin",
+            "amount": "1.5 lbs",
+            "meal": "Pork Tenderloin with Roasted Vegetables",
+            "day": "Monday",
+            "category": "Proteins & Meat",
+            "hebUrl": "https://www.heb.com/search?q=pork%20tenderloin",
+            "estimatedPrice": 5.99
+          },
+          {
+            "id": "item-7",
+            "name": "Brussels sprouts",
+            "searchTerm": "brussels sprouts",
+            "amount": "1.5 lbs",
+            "meal": "Pork Tenderloin with Roasted Vegetables",
+            "day": "Monday",
+            "category": "Other",
+            "hebUrl": "https://www.heb.com/search?q=brussels%20sprouts",
+            "estimatedPrice": 3.49
+          },
+          {
+            "id": "item-8",
+            "name": "Sweet potatoes",
+            "searchTerm": "sweet potatoes",
+            "amount": "2 lbs",
+            "meal": "Pork Tenderloin with Roasted Vegetables",
+            "day": "Monday",
+            "category": "Produce",
+            "hebUrl": "https://www.heb.com/search?q=sweet%20potatoes",
+            "estimatedPrice": 1.29
+          },
+          {
+            "id": "item-9",
+            "name": "Dijon mustard",
+            "searchTerm": "dijon mustard",
+            "amount": "1 jar",
+            "meal": "Pork Tenderloin with Roasted Vegetables",
+            "day": "Monday",
+            "category": "Other",
+            "hebUrl": "https://www.heb.com/search?q=dijon%20mustard",
+            "estimatedPrice": 4.99
+          },
+          {
+            "id": "item-10",
+            "name": "Fresh rosemary",
+            "searchTerm": "rosemary fresh",
+            "amount": "1 bunch",
+            "meal": "Pork Tenderloin with Roasted Vegetables",
+            "day": "Monday",
+            "category": "Other",
+            "hebUrl": "https://www.heb.com/search?q=rosemary%20fresh",
+            "estimatedPrice": 2.49
+          },
+          {
+            "id": "item-11",
+            "name": "Balsamic vinegar",
+            "searchTerm": "balsamic vinegar",
+            "amount": "1 bottle",
+            "meal": "Pork Tenderloin with Roasted Vegetables",
+            "day": "Monday",
+            "category": "Pantry & Dry Goods",
+            "hebUrl": "https://www.heb.com/search?q=balsamic%20vinegar",
+            "estimatedPrice": 4.99
+          }
+        ]
+      },
+      "Tuesday": {
+        "name": "Fish Tacos with Mango Salsa",
+        "category": "mexican",
+        "difficulty": "easy",
+        "prepTime": "30 min",
+        "ingredients": [
+          {
+            "id": "item-12",
+            "name": "White fish fillets",
+            "searchTerm": "tilapia fillet",
+            "amount": "1.5 lbs",
+            "meal": "Fish Tacos with Mango Salsa",
+            "day": "Tuesday",
+            "category": "Proteins & Meat",
+            "hebUrl": "https://www.heb.com/search?q=tilapia%20fillet",
+            "estimatedPrice": 7.99
+          },
+          {
+            "id": "item-13",
+            "name": "Corn tortillas",
+            "searchTerm": "corn tortillas",
+            "amount": "1 pack",
+            "meal": "Fish Tacos with Mango Salsa",
+            "day": "Tuesday",
+            "category": "Pantry & Dry Goods",
+            "hebUrl": "https://www.heb.com/search?q=corn%20tortillas",
+            "estimatedPrice": 2.99
+          },
+          {
+            "id": "item-14",
+            "name": "Mango",
+            "searchTerm": "mango",
+            "amount": "2",
+            "meal": "Fish Tacos with Mango Salsa",
+            "day": "Tuesday",
+            "category": "Produce",
+            "hebUrl": "https://www.heb.com/search?q=mango",
+            "estimatedPrice": 1.25
+          },
+          {
+            "id": "item-15",
+            "name": "Red onion",
+            "searchTerm": "red onion",
+            "amount": "1",
+            "meal": "Fish Tacos with Mango Salsa",
+            "day": "Tuesday",
+            "category": "Produce",
+            "hebUrl": "https://www.heb.com/search?q=red%20onion",
+            "estimatedPrice": 0.89
+          },
+          {
+            "id": "item-16",
+            "name": "Jalapeno",
+            "searchTerm": "jalapeno",
+            "amount": "2",
+            "meal": "Fish Tacos with Mango Salsa",
+            "day": "Tuesday",
+            "category": "Produce",
+            "hebUrl": "https://www.heb.com/search?q=jalapeno",
+            "estimatedPrice": 0.15
+          },
+          {
+            "id": "item-17",
+            "name": "Cabbage slaw mix",
+            "searchTerm": "coleslaw mix",
+            "amount": "1 bag",
+            "meal": "Fish Tacos with Mango Salsa",
+            "day": "Tuesday",
+            "category": "Other",
+            "hebUrl": "https://www.heb.com/search?q=coleslaw%20mix",
+            "estimatedPrice": 2.49
+          },
+          {
+            "id": "item-18",
+            "name": "Chipotle mayo",
+            "searchTerm": "chipotle mayo",
+            "amount": "1 bottle",
+            "meal": "Fish Tacos with Mango Salsa",
+            "day": "Tuesday",
+            "category": "Pantry & Dry Goods",
+            "hebUrl": "https://www.heb.com/search?q=chipotle%20mayo",
+            "estimatedPrice": 3.99
+          }
+        ]
+      },
+      "Wednesday": {
+        "name": "Chicken Tikka Masala",
+        "category": "indian",
+        "difficulty": "medium",
+        "prepTime": "45 min",
+        "ingredients": [
+          {
+            "id": "item-19",
+            "name": "Chicken thighs",
+            "searchTerm": "chicken thighs boneless",
+            "amount": "2 lbs",
+            "meal": "Chicken Tikka Masala",
+            "day": "Wednesday",
+            "category": "Proteins & Meat",
+            "hebUrl": "https://www.heb.com/search?q=chicken%20thighs%20boneless",
+            "estimatedPrice": 4.99
+          },
+          {
+            "id": "item-20",
+            "name": "Greek yogurt",
+            "searchTerm": "greek yogurt plain",
+            "amount": "16 oz",
+            "meal": "Chicken Tikka Masala",
+            "day": "Wednesday",
+            "category": "Dairy & Eggs",
+            "hebUrl": "https://www.heb.com/search?q=greek%20yogurt%20plain",
+            "estimatedPrice": 4.99
+          },
+          {
+            "id": "item-21",
+            "name": "Heavy cream",
+            "searchTerm": "heavy cream",
+            "amount": "1 pint",
+            "meal": "Chicken Tikka Masala",
+            "day": "Wednesday",
+            "category": "Dairy & Eggs",
+            "hebUrl": "https://www.heb.com/search?q=heavy%20cream",
+            "estimatedPrice": 4.99
+          },
+          {
+            "id": "item-22",
+            "name": "Basmati rice",
+            "searchTerm": "basmati rice",
+            "amount": "2 lbs",
+            "meal": "Chicken Tikka Masala",
+            "day": "Wednesday",
+            "category": "Pantry & Dry Goods",
+            "hebUrl": "https://www.heb.com/search?q=basmati%20rice",
+            "estimatedPrice": 5.99
+          },
+          {
+            "id": "item-23",
+            "name": "Tikka masala sauce",
+            "searchTerm": "tikka masala sauce",
+            "amount": "1 jar",
+            "meal": "Chicken Tikka Masala",
+            "day": "Wednesday",
+            "category": "Pantry & Dry Goods",
+            "hebUrl": "https://www.heb.com/search?q=tikka%20masala%20sauce",
+            "estimatedPrice": 4.99
+          },
+          {
+            "id": "item-24",
+            "name": "Fresh ginger",
+            "searchTerm": "ginger root",
+            "amount": "1 piece",
+            "meal": "Chicken Tikka Masala",
+            "day": "Wednesday",
+            "category": "Other",
+            "hebUrl": "https://www.heb.com/search?q=ginger%20root",
+            "estimatedPrice": 4.99
+          }
+        ]
+      },
+      "Thursday": {
+        "name": "Beef Stir-Fry with Vegetables",
+        "category": "asian",
+        "difficulty": "easy",
+        "prepTime": "20 min",
+        "ingredients": [
+          {
+            "id": "item-25",
+            "name": "Flank steak",
+            "searchTerm": "flank steak",
+            "amount": "1.5 lbs",
+            "meal": "Beef Stir-Fry with Vegetables",
+            "day": "Thursday",
+            "category": "Proteins & Meat",
+            "hebUrl": "https://www.heb.com/search?q=flank%20steak",
+            "estimatedPrice": 12.99
+          },
+          {
+            "id": "item-26",
+            "name": "Broccoli florets",
+            "searchTerm": "broccoli",
+            "amount": "2 heads",
+            "meal": "Beef Stir-Fry with Vegetables",
+            "day": "Thursday",
+            "category": "Produce",
+            "hebUrl": "https://www.heb.com/search?q=broccoli",
+            "estimatedPrice": 2.49
+          },
+          {
+            "id": "item-27",
+            "name": "Bell peppers",
+            "searchTerm": "bell peppers",
+            "amount": "3",
+            "meal": "Beef Stir-Fry with Vegetables",
+            "day": "Thursday",
+            "category": "Other",
+            "hebUrl": "https://www.heb.com/search?q=bell%20peppers",
+            "estimatedPrice": 4.99
+          },
+          {
+            "id": "item-28",
+            "name": "Soy sauce",
+            "searchTerm": "soy sauce low sodium",
+            "amount": "1 bottle",
+            "meal": "Beef Stir-Fry with Vegetables",
+            "day": "Thursday",
+            "category": "Pantry & Dry Goods",
+            "hebUrl": "https://www.heb.com/search?q=soy%20sauce%20low%20sodium",
+            "estimatedPrice": 3.49
+          },
+          {
+            "id": "item-29",
+            "name": "Sesame oil",
+            "searchTerm": "sesame oil",
+            "amount": "1 bottle",
+            "meal": "Beef Stir-Fry with Vegetables",
+            "day": "Thursday",
+            "category": "Pantry & Dry Goods",
+            "hebUrl": "https://www.heb.com/search?q=sesame%20oil",
+            "estimatedPrice": 5.99
+          },
+          {
+            "id": "item-30",
+            "name": "Green onions",
+            "searchTerm": "green onions",
+            "amount": "1 bunch",
+            "meal": "Beef Stir-Fry with Vegetables",
+            "day": "Thursday",
+            "category": "Produce",
+            "hebUrl": "https://www.heb.com/search?q=green%20onions",
+            "estimatedPrice": 4.99
+          }
+        ]
+      },
+      "Friday": {
+        "name": "Shrimp Tacos with Cabbage Slaw",
+        "category": "mexican",
+        "difficulty": "easy",
+        "prepTime": "25 min",
+        "ingredients": [
+          {
+            "id": "item-31",
+            "name": "Large shrimp",
+            "searchTerm": "shrimp large raw",
+            "amount": "1.5 lbs",
+            "meal": "Shrimp Tacos with Cabbage Slaw",
+            "day": "Friday",
+            "category": "Proteins & Meat",
+            "hebUrl": "https://www.heb.com/search?q=shrimp%20large%20raw",
+            "estimatedPrice": 14.99
+          },
+          {
+            "id": "item-32",
+            "name": "Corn tortillas",
+            "searchTerm": "corn tortillas",
+            "amount": "1 pack",
+            "meal": "Shrimp Tacos with Cabbage Slaw",
+            "day": "Friday",
+            "category": "Pantry & Dry Goods",
+            "hebUrl": "https://www.heb.com/search?q=corn%20tortillas",
+            "estimatedPrice": 2.99
+          },
+          {
+            "id": "item-33",
+            "name": "Red cabbage",
+            "searchTerm": "cabbage red",
+            "amount": "1 head",
+            "meal": "Shrimp Tacos with Cabbage Slaw",
+            "day": "Friday",
+            "category": "Produce",
+            "hebUrl": "https://www.heb.com/search?q=cabbage%20red",
+            "estimatedPrice": 4.99
+          },
+          {
+            "id": "item-34",
+            "name": "Avocado",
+            "searchTerm": "avocado",
+            "amount": "3",
+            "meal": "Shrimp Tacos with Cabbage Slaw",
+            "day": "Friday",
+            "category": "Produce",
+            "hebUrl": "https://www.heb.com/search?q=avocado",
+            "estimatedPrice": 1.29
+          },
+          {
+            "id": "item-35",
+            "name": "Lime",
+            "searchTerm": "lime",
+            "amount": "4",
+            "meal": "Shrimp Tacos with Cabbage Slaw",
+            "day": "Friday",
+            "category": "Produce",
+            "hebUrl": "https://www.heb.com/search?q=lime",
+            "estimatedPrice": 0.33
+          },
+          {
+            "id": "item-36",
+            "name": "Cilantro",
+            "searchTerm": "cilantro fresh",
+            "amount": "1 bunch",
+            "meal": "Shrimp Tacos with Cabbage Slaw",
+            "day": "Friday",
+            "category": "Produce",
+            "hebUrl": "https://www.heb.com/search?q=cilantro%20fresh",
+            "estimatedPrice": 1.99
+          },
+          {
+            "id": "item-37",
+            "name": "Chipotle powder",
+            "searchTerm": "chipotle powder",
+            "amount": "1 container",
+            "meal": "Shrimp Tacos with Cabbage Slaw",
+            "day": "Friday",
+            "category": "Other",
+            "hebUrl": "https://www.heb.com/search?q=chipotle%20powder",
+            "estimatedPrice": 4.99
+          }
+        ]
+      },
+      "Saturday": {
+        "name": "Vegetable Curry with Chickpeas",
+        "category": "vegetarian",
+        "difficulty": "easy",
+        "prepTime": "35 min",
+        "ingredients": [
+          {
+            "id": "item-38",
+            "name": "Chickpeas",
+            "searchTerm": "chickpeas",
+            "amount": "2 cans",
+            "meal": "Vegetable Curry with Chickpeas",
+            "day": "Saturday",
+            "category": "Other",
+            "hebUrl": "https://www.heb.com/search?q=chickpeas",
+            "estimatedPrice": 4.99
+          },
+          {
+            "id": "item-39",
+            "name": "Coconut milk",
+            "searchTerm": "coconut milk",
+            "amount": "2 cans",
+            "meal": "Vegetable Curry with Chickpeas",
+            "day": "Saturday",
+            "category": "Dairy & Eggs",
+            "hebUrl": "https://www.heb.com/search?q=coconut%20milk",
+            "estimatedPrice": 4.99
+          },
+          {
+            "id": "item-40",
+            "name": "Spinach",
+            "searchTerm": "spinach fresh",
+            "amount": "10 oz",
+            "meal": "Vegetable Curry with Chickpeas",
+            "day": "Saturday",
+            "category": "Produce",
+            "hebUrl": "https://www.heb.com/search?q=spinach%20fresh",
+            "estimatedPrice": 3.49
+          },
+          {
+            "id": "item-41",
+            "name": "Curry paste",
+            "searchTerm": "curry paste",
+            "amount": "1 jar",
+            "meal": "Vegetable Curry with Chickpeas",
+            "day": "Saturday",
+            "category": "Other",
+            "hebUrl": "https://www.heb.com/search?q=curry%20paste",
+            "estimatedPrice": 4.99
+          },
+          {
+            "id": "item-42",
+            "name": "Naan bread",
+            "searchTerm": "naan bread",
+            "amount": "1 pack",
+            "meal": "Vegetable Curry with Chickpeas",
+            "day": "Saturday",
+            "category": "Bakery",
+            "hebUrl": "https://www.heb.com/search?q=naan%20bread",
+            "estimatedPrice": 4.99
+          },
+          {
+            "id": "item-43",
+            "name": "Yellow onion",
+            "searchTerm": "yellow onion",
+            "amount": "1",
+            "meal": "Vegetable Curry with Chickpeas",
+            "day": "Saturday",
+            "category": "Produce",
+            "hebUrl": "https://www.heb.com/search?q=yellow%20onion",
+            "estimatedPrice": 4.99
+          }
+        ]
+      }
+    },
+    "budget": {
+      "allocated": 200,
+      "estimatedMealCost": 166,
+      "buffer": 16.6,
+      "totalWithBuffer": 182.6,
+      "remaining": 17.400000000000006
+    }
+  },
+  "quickLinks": {
+    "hebShopUrl": "https://www.heb.com/shop/categories",
+    "hebCartUrl": "https://www.heb.com/cart",
+    "hebCurbsideUrl": "https://www.heb.com/shop/curbside",
+    "topPriorityItems": [
+      {
+        "name": "Atlantic salmon fillets",
+        "searchUrl": "https://www.heb.com/search?q=salmon%20fillet%20fresh",
+        "estimatedPrice": 15.99
+      },
+      {
+        "name": "Large shrimp",
+        "searchUrl": "https://www.heb.com/search?q=shrimp%20large%20raw",
+        "estimatedPrice": 14.99
+      },
+      {
+        "name": "Flank steak",
+        "searchUrl": "https://www.heb.com/search?q=flank%20steak",
+        "estimatedPrice": 12.99
+      },
+      {
+        "name": "Olive oil",
+        "searchUrl": "https://www.heb.com/search?q=olive%20oil%20extra%20virgin",
+        "estimatedPrice": 8.99
+      },
+      {
+        "name": "White fish fillets",
+        "searchUrl": "https://www.heb.com/search?q=tilapia%20fillet",
+        "estimatedPrice": 7.99
+      }
+    ],
+    "categoryUrls": {
+      "Proteins & Meat": "https://www.heb.com/search?q=salmon%20fillet%20fresh",
+      "Produce": "https://www.heb.com/search?q=asparagus%20fresh",
+      "Pantry & Dry Goods": "https://www.heb.com/search?q=olive%20oil%20extra%20virgin",
+      "Other": "https://www.heb.com/search?q=sea%20salt",
+      "Dairy & Eggs": "https://www.heb.com/search?q=greek%20yogurt%20plain",
+      "Bakery": "https://www.heb.com/search?q=naan%20bread"
+    }
+  },
+  "instructions": {
+    "onlineShopping": [
+      "Open the HTML shopping list in your browser",
+      "Click \"View on HEB\" for each item to search on HEB.com",
+      "Add items to your cart as you go",
+      "Use the checkboxes to track what's been added",
+      "Proceed to checkout on HEB.com when done"
+    ],
+    "inStoreShopping": [
+      "Print the HTML list or open on your phone",
+      "Items are organized by store section (category)",
+      "Check off items as you add them to your cart",
+      "Estimated prices help you stay on budget"
+    ],
+    "tips": [
+      "HEB sometimes has substitutes - the search links will show all options",
+      "Prices are estimates based on typical HEB pricing",
+      "Curbside pickup available at heb.com/shop/curbside",
+      "Same-day delivery available in most areas"
+    ]
+  }
+}

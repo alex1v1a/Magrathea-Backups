@@ -1,0 +1,183 @@
+# ============================================
+# CORRECTED HOMEKIT CONFIGURATION
+# Includes ALL devices: Govee, Tuya, Wyze, Samsung, etc.
+# ============================================
+
+homekit:
+  # ============================================
+  # MAIN BRIDGE: AUSTIN (All devices except Sayville)
+  # ============================================
+  - name: "Austin Home"
+    port: 21064
+    ip_address: 10.0.1.90
+    advertise_ip:
+      - 10.0.1.90
+    filter:
+      # Include specific domains
+      include_domains:
+        - light
+        - switch
+        - scene
+        - media_player
+        - camera
+      # Explicitly include ALL lights (Govee, Tuya, ESPHome)
+      include_entities:
+        # Govee Lights
+        - light.front_door_2
+        - light.front_yard
+        - light.kitchen_lamp
+        - light.lounge_lamp
+        - light.rgbic_string_light_r
+        - light.rgbwic_string_lights_l
+        - light.soft_lights
+        # Tuya Lights
+        - light.door_left
+        - light.door_right
+        - light.fire_pit_light_1
+        - light.foyer
+        - light.front_door
+        - light.lounge
+        - light.pathway_left
+        - light.pathway_right
+        - light.pond_light_1
+        - light.pool_light
+        - light.porch_left
+        - light.porch_right
+        # ESPHome
+        - light.trillian_trillian_led
+        # Media Players
+        - media_player.austin_tx_tu7000_75_tv
+        - media_player.austin_tx_tu7000_75_tv_un75tu7000fxza
+        - media_player.living_room
+        # Samsung Appliances
+        - sensor.refrigerator_coolselect_temperature
+        - sensor.refrigerator_freezer_temperature
+        - sensor.refrigerator_fridge_temperature
+        - binary_sensor.refrigerator_coolselect_door
+        - binary_sensor.refrigerator_freezer_door
+        - binary_sensor.refrigerator_fridge_door
+        # Wyze Cameras (as switches for now)
+        - switch.alex_allie_bedroom_power
+        - switch.back_patio_power
+        - switch.backyard_2_power
+        - switch.backyard_egg_chair_power
+        - switch.backyard_kitchen_power
+        - switch.backyard_power
+        - switch.bedroom_backyard_power
+        - switch.dog_house_power
+        - switch.dog_pen_power
+        - switch.driveway_power
+        - switch.front_yard_east_power
+        - switch.front_yard_west_power
+        - switch.garage_door_power
+        - switch.garage_power
+        - switch.lounge_floor_power
+        - switch.lounge_power
+        - switch.maeve_room_power
+        - switch.nora_room_power
+        - switch.print_mill_power
+        - switch.saxton_power
+        - switch.side_yard_power
+      # Exclude Sayville devices
+      exclude_entities:
+        - switch.anouk_server_socket_1
+        - switch.cyn_pia_switch_socket_1
+        - switch.hanka_9_server_socket_1
+        - switch.marcs_bathroom_heated_floor_socket_1
+        - switch.marcs_room_fridge_lamp_socket_1
+        - scene.driveway_pump_off_cyn_pia_switch_off
+    entity_config:
+      # Govee Lights
+      light.front_door_2:
+        name: "Front Door"
+      light.front_yard:
+        name: "Front Yard"
+      light.kitchen_lamp:
+        name: "Kitchen Lamp"
+      light.lounge_lamp:
+        name: "Lounge Lamp"
+      light.rgbic_string_light_r:
+        name: "RGBIC String Right"
+      light.rgbwic_string_lights_l:
+        name: "RGBWIC String Left"
+      light.soft_lights:
+        name: "Soft Lights"
+      # Tuya Lights
+      light.foyer:
+        name: "Foyer"
+      light.lounge:
+        name: "Lounge"
+      light.pond_light_1:
+        name: "Pond Light"
+      light.pool_light:
+        name: "Pool Light"
+      # Media Players
+      media_player.austin_tx_tu7000_75_tv:
+        name: "Samsung TV"
+        type: television
+      media_player.austin_tx_tu7000_75_tv_un75tu7000fxza:
+        name: "Samsung TV 2"
+        type: television
+      media_player.living_room:
+        name: "Apple TV"
+        type: television
+
+  # ============================================
+  # SAYVILLE BRIDGE (Separate home)
+  # ============================================
+  - name: "Sayville Home"
+    port: 21065
+    ip_address: 10.0.1.90
+    advertise_ip:
+      - 10.0.1.90
+    filter:
+      include_domains:
+        - switch
+        - scene
+      include_entities:
+        - switch.anouk_server_socket_1
+        - switch.cyn_pia_switch_socket_1
+        - switch.hanka_9_server_socket_1
+        - switch.marcs_bathroom_heated_floor_socket_1
+        - switch.marcs_room_fridge_lamp_socket_1
+        - scene.driveway_pump_off_cyn_pia_switch_off
+    entity_config:
+      switch.anouk_server_socket_1:
+        name: "Anouk Server"
+      switch.cyn_pia_switch_socket_1:
+        name: "Cyn & Pia Switch"
+      switch.hanka_9_server_socket_1:
+        name: "HANKA Server"
+      switch.marcs_bathroom_heated_floor_socket_1:
+        name: "Marc's Heated Floor"
+      switch.marcs_room_fridge_lamp_socket_1:
+        name: "Marc's Fridge Lamp"
+
+  # ============================================
+  # PARNELL BRIDGE (Ready for future devices)
+  # ============================================
+  - name: "Parnell Home"
+    port: 21066
+    ip_address: 10.0.1.90
+    advertise_ip:
+      - 10.0.1.90
+    filter:
+      include_domains:
+        - light
+        - switch
+      include_entities: []
+
+  # ============================================
+  # TV ACCESSORY (Individual accessory mode)
+  # ============================================
+  - name: "Samsung TV"
+    port: 21067
+    ip_address: 10.0.1.90
+    mode: accessory
+    filter:
+      include_entities:
+        - media_player.austin_tx_tu7000_75_tv
+    entity_config:
+      media_player.austin_tx_tu7000_75_tv:
+        name: "Samsung TV"
+        type: television

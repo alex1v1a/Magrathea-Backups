@@ -1,0 +1,14 @@
+# Govee Integration Configuration
+# Added: 2026-03-08
+
+# Govee integration requires HACS or custom component
+# For now, documenting credentials for manual setup
+
+# Credentials:
+# Email: alex@1v1a.com
+# Password: section9
+
+# To add Govee to HA:
+# 1. Install Govee integration via HACS
+# 2. Add API key from https://developer.govee.com/
+# 3. Or use local LAN control if supported

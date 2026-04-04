@@ -1,0 +1,55 @@
+{
+  "lastRun": "2026-02-24T18:51:24.123Z",
+  "lastBackup": "2026-02-24T18:34:49.298Z",
+  "totalRecoveries": 0,
+  "serviceStates": {
+    "dashboard-server": {
+      "status": "healthy",
+      "details": "Port 3001 responding",
+      "lastCheck": "2026-02-24T18:51:06.738Z",
+      "portConflict": null
+    },
+    "openclaw-gateway": {
+      "status": "port-conflict",
+      "details": "Tailscale VPN using port 18789 (PID 2161892)",
+      "lastCheck": "2026-02-24T18:51:14.099Z",
+      "portConflict": {
+        "type": "tailscale",
+        "message": "Tailscale VPN using port 18789 (PID 2161892)"
+      }
+    },
+    "wsl-ubuntu": {
+      "status": "down",
+      "details": "Check command failed: Command failed: wsl echo \"ping\"\n",
+      "lastCheck": "2026-02-24T18:51:24.119Z",
+      "portConflict": null
+    }
+  },
+  "consecutiveFailures": {
+    "openclaw-gateway": 9
+  },
+  "lastRollback": "2026-02-24T18:51:06.711Z",
+  "portConflicts": {
+    "openclaw-gateway": {
+      "type": "tailscale",
+      "severity": "high",
+      "message": "Tailscale VPN using port 18789 (PID 2161892)",
+      "conflicts": [
+        {
+          "pid": 2161892,
+          "name": "tailscaled.exe",
+          "localAddress": "100.126.151.25:18789",
+          "state": "LISTENING"
+        },
+        {
+          "pid": 2161892,
+          "name": "tailscaled.exe",
+          "localAddress": "[fd7a:115c:a1e0::f501:971a]:18789",
+          "state": "LISTENING"
+        }
+      ],
+      "canKill": false,
+      "recommendation": "Use fallback port or disable Tailscale web client"
+    }
+  }
+}

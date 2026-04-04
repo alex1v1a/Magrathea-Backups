@@ -1,0 +1,45 @@
+streams:
+  toolbox:
+    - rtsp://localhost:8554/toolbox
+  backyard:
+    - rtsp://localhost:8554/backyard
+  garden-tools:
+    - rtsp://localhost:8554/garden-tools
+  saxton:
+    - rtsp://localhost:8554/saxton
+  dog-pen:
+    - rtsp://localhost:8554/dog-pen
+  dog-house:
+    - rtsp://localhost:8554/dog-house
+  driveway:
+    - rtsp://localhost:8554/driveway
+  front-yard-west:
+    - rtsp://localhost:8554/front-yard-west
+  front-yard-east:
+    - rtsp://localhost:8554/front-yard-east
+  side-yard:
+    - rtsp://localhost:8554/side-yard
+  back-patio:
+    - rtsp://localhost:8554/back-patio
+  backyard-egg-chair:
+    - rtsp://localhost:8554/backyard-egg-chair
+  backyard-kitchen:
+    - rtsp://localhost:8554/backyard-kitchen
+  lounge:
+    - rtsp://localhost:8554/lounge
+  lounge-floor:
+    - rtsp://localhost:8554/lounge-floor
+  maeves-room:
+    - rtsp://localhost:8554/maeves-room
+  noras-room:
+    - rtsp://localhost:8554/noras-room
+  alex-allie-bedroom:
+    - rtsp://localhost:8554/alex-allie-bedroom
+  bedroom-backyard:
+    - rtsp://localhost:8554/bedroom-backyard
+  print-mill:
+    - rtsp://localhost:8554/print-mill
+  garage:
+    - rtsp://localhost:8554/garage
+  garage-door:
+    - rtsp://localhost:8554/garage-door

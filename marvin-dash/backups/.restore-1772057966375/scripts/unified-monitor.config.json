@@ -1,0 +1,119 @@
+{
+  "monitor": {
+    "taskId": "unified-monitor",
+    "statusFile": "data/unified-monitor-status.json",
+    "stateFile": "data/unified-monitor-state.json",
+    "performanceFile": "data/unified-monitor-performance.json"
+  },
+  "services": [
+    {
+      "id": "dashboard-server",
+      "name": "Dashboard Server",
+      "type": "server",
+      "port": 3001,
+      "healthUrl": "http://localhost:3001/api/health",
+      "startCmd": "node C:\\Users\\Admin\\.openclaw\\workspace\\marvin-dash\\server.js",
+      "cwd": "C:\\Users\\Admin\\.openclaw\\workspace\\marvin-dash",
+      "recoveryActions": ["kill-port", "restart-service"],
+      "autoRestart": true
+    },
+    {
+      "id": "openclaw-gateway",
+      "name": "OpenClaw Gateway",
+      "type": "daemon",
+      "checkCmd": "openclaw gateway status",
+      "startCmd": "openclaw gateway start",
+      "recoveryActions": ["restart-gateway"],
+      "autoRestart": true
+    }
+  ],
+  "wsl": {
+    "id": "wsl-ubuntu",
+    "name": "WSL Ubuntu",
+    "checkCmd": "wsl echo \"ping\"",
+    "restartCmd": "wsl --shutdown",
+    "autoRestart": false
+  },
+  "cronJobs": [
+    {
+      "id": "calendar-sync",
+      "name": "Apple Calendar Sync",
+      "expectedIntervalMinutes": 15,
+      "graceMinutes": 10,
+      "alertAfterMinutes": 30,
+      "statusFile": "data/calendar-events.json",
+      "recoveryCommand": "node scripts/calendar-sync.js",
+      "autoRecover": false
+    },
+    {
+      "id": "kanban-sync",
+      "name": "Kanban Sync",
+      "expectedIntervalMinutes": 30,
+      "graceMinutes": 15,
+      "alertAfterMinutes": 60,
+      "statusFile": "data/tasks.json",
+      "recoveryCommand": "node scripts/kanban-sync.js",
+      "autoRecover": false
+    },
+    {
+      "id": "fetch-api-data",
+      "name": "API Data Fetch",
+      "expectedIntervalMinutes": 60,
+      "graceMinutes": 20,
+      "alertAfterMinutes": 120,
+      "statusFile": "data/model-usage.json",
+      "recoveryCommand": "node scripts/fetch-api-data.js",
+      "autoRecover": false
+    }
+  ],
+  "performance": {
+    "windowDays": 7,
+    "failureRateThreshold": 0.2,
+    "maxConsecutiveFailures": 3
+  },
+  "disk": {
+    "paths": ["data"],
+    "minFreeGB": 2
+  },
+  "logCleanup": {
+    "enabled": true,
+    "paths": ["data"],
+    "extensions": [".log"],
+    "maxAgeDays": 14,
+    "maxTotalMB": 1024
+  },
+  "stuckProcesses": [
+    {
+      "taskId": "calendar-sync",
+      "maxRuntimeMinutes": 15,
+      "processName": "node.exe"
+    },
+    {
+      "taskId": "kanban-sync",
+      "maxRuntimeMinutes": 20,
+      "processName": "node.exe"
+    }
+  ],
+  "alerts": {
+    "discordWebhookEnv": "DINNER_DISCORD_WEBHOOK",
+    "notifyOnWarning": false,
+    "cooldownMinutes": 30,
+    "email": {
+      "enabled": true,
+      "fromEnv": "ICLOUD_EMAIL",
+      "to": ["alex@1v1a.com"],
+      "smtp": {
+        "host": "smtp.mail.me.com",
+        "port": 587,
+        "secure": false,
+        "authUserEnv": "ICLOUD_EMAIL",
+        "authPassEnv": "ICLOUD_APP_PASSWORD"
+      }
+    },
+    "dailyDigest": {
+      "enabled": true,
+      "time": "08:00",
+      "channels": ["discord", "email"]
+    }
+  }
+}

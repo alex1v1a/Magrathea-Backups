@@ -1,0 +1,45 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+  extra_module_url:
+    - /local/community/lovelace-card-mod/card-mod.js
+    - /local/community/ha-lcars/lcars.js
+  extra_html_url:
+    - https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap
+
+# LCARS Helper Entities
+input_boolean:
+  lcars_sound:
+    name: LCARS Sound
+    icon: mdi:volume-high
+  lcars_texture:
+    name: LCARS Texture  
+    icon: mdi:wallpaper
+
+input_number:
+  lcars_horizontal:
+    name: LCARS Horizontal
+    min: 6
+    max: 60
+    step: 1
+    unit_of_measurement: px
+    icon: mdi:arrow-left-right
+  lcars_vertical:
+    name: LCARS Vertical
+    min: 26
+    max: 60
+    step: 1
+    unit_of_measurement: px
+    icon: mdi:arrow-up-down
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+# Wyze cameras
+
+homeassistant:
+  packages: !include_dir_named packages

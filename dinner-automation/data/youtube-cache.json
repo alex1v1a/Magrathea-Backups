@@ -1,0 +1,54 @@
+{
+  "lastUpdated": "2026-02-10T18:59:00Z",
+  "videos": {
+    "Pan-Seared Cod with Lemon Butter": {
+      "url": "https://www.youtube.com/watch?v=tlr2X09QKeo",
+      "title": "Lemon Butter Pan Seared Cod: Quick & Delicious Recipe!",
+      "duration": "8:45",
+      "channel": "Chef's Plate",
+      "verified": true
+    },
+    "Beef Stir-Fry with Vegetables": {
+      "url": "https://www.youtube.com/watch?v=IYO7CLvh23U",
+      "title": "Quick Steak Stir-Fry | Jamie Oliver",
+      "duration": "12:30",
+      "channel": "Jamie Oliver",
+      "verified": true
+    },
+    "Fish Tacos with Mango Salsa": {
+      "url": "https://www.youtube.com/watch?v=JkDXvK1_caI",
+      "title": "BEST EVER Fish Tacos Recipe - How to make easy fish tacos",
+      "duration": "15:20",
+      "channel": "Natashas Kitchen",
+      "verified": true
+    },
+    "Korean Beef Bulgogi Bowl": {
+      "url": "https://www.youtube.com/watch?v=Xnq0uG4bLdE",
+      "title": "How a Korean Chef Makes Beef BULGOGI in 15 Minutes!",
+      "duration": "15:00",
+      "channel": "Seonkyoung Longest",
+      "verified": true
+    },
+    "Mediterranean Chicken Bowl": {
+      "url": "https://www.youtube.com/watch?v=5h9q1FiD5s0",
+      "title": "Mediterranean Chicken Bowls - Easy Healthy Recipe",
+      "duration": "18:30",
+      "channel": "Downshiftology",
+      "verified": true
+    },
+    "Chicken Tikka Masala": {
+      "url": "https://www.youtube.com/watch?v=ysUumkRFP8I",
+      "title": "Homemade Chicken Tikka Masala (Authentic)",
+      "duration": "22:15",
+      "channel": "The Curry Guy",
+      "verified": true
+    },
+    "Grilled Salmon with Asparagus": {
+      "url": "https://www.youtube.com/watch?v=J6xW4f_q34g",
+      "title": "Perfect Grilled Salmon with Lemon Herb Butter",
+      "duration": "12:45",
+      "channel": "Gordon Ramsay",
+      "verified": true
+    }
+  }
+}

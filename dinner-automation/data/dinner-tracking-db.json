@@ -1,0 +1,35 @@
+{
+  "sessions": {
+    "sess_20260214_090309": {
+      "id": "sess_20260214_090309",
+      "weekOf": "2026-02-14",
+      "status": "CONFIRMED",
+      "createdAt": "2026-02-14T15:03:09.000Z",
+      "updatedAt": "2026-02-14T21:10:00.000Z",
+      "emailOpened": true,
+      "replyReceived": true,
+      "confirmed": true,
+      "smsSent": false,
+      "timeline": [
+        {
+          "timestamp": "2026-02-14T15:03:09.000Z",
+          "status": "SENT"
+        },
+        {
+          "timestamp": "2026-02-14T21:10:00.000Z",
+          "status": "CONFIRMED"
+        }
+      ],
+      "meals": [
+        {"day": "Sunday", "name": "Pan-Seared Cod with Lemon Butter", "status": "confirmed"},
+        {"day": "Monday", "name": "Pork Tenderloin with Roasted Vegetables", "status": "confirmed"},
+        {"day": "Tuesday", "name": "Fish Tacos with Mango Salsa", "status": "confirmed"},
+        {"day": "Wednesday", "name": "Chicken Tikka Masala", "status": "confirmed"},
+        {"day": "Thursday", "name": "Beef Stir-Fry with Vegetables", "status": "confirmed"},
+        {"day": "Friday", "name": "Shrimp Tacos with Cabbage Slaw", "status": "confirmed"},
+        {"day": "Saturday", "name": "Vegetable Curry with Chickpeas", "status": "confirmed"}
+      ]
+    }
+  },
+  "current": "sess_20260214_090309"
+}

@@ -1,0 +1,40 @@
+{
+  "lastRun": "2026-02-25T17:19:20.796Z",
+  "lastBackup": "2026-02-25T17:19:02.214Z",
+  "totalRecoveries": 0,
+  "serviceStates": {
+    "dashboard-server": {
+      "status": "healthy",
+      "details": "Port 3001 responding",
+      "lastCheck": "2026-02-25T17:19:20.665Z",
+      "portConflict": null
+    },
+    "openclaw-gateway": {
+      "status": "port-conflict",
+      "details": "Detection failed: Command failed: netstat -ano | findstr :18789\n",
+      "lastCheck": "2026-02-25T17:19:20.700Z",
+      "portConflict": {
+        "type": "error",
+        "message": "Detection failed: Command failed: netstat -ano | findstr :18789\n"
+      }
+    },
+    "wsl-ubuntu": {
+      "status": "healthy",
+      "details": "Check command passed",
+      "lastCheck": "2026-02-25T17:19:20.796Z",
+      "portConflict": null
+    }
+  },
+  "consecutiveFailures": {
+    "openclaw-gateway": 14
+  },
+  "lastRollback": "2026-02-25T17:19:20.662Z",
+  "portConflicts": {
+    "openclaw-gateway": {
+      "type": "error",
+      "severity": "low",
+      "message": "Detection failed: Command failed: netstat -ano | findstr :18789\n",
+      "conflicts": []
+    }
+  }
+}

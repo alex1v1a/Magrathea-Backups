@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-02-16T04:17:29.794Z",
+  "initialCart": 11,
+  "finalCart": 67,
+  "added": 42,
+  "target": 42,
+  "missing": -25,
+  "failedItems": [
+    {
+      "item": "Cod fillets",
+      "reason": "No cart increase"
+    },
+    {
+      "item": "White fish fillets",
+      "reason": "No cart increase"
+    },
+    {
+      "item": "Avocado",
+      "reason": "No cart increase"
+    }
+  ],
+  "cartItems": []
+}

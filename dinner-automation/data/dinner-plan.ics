@@ -1,0 +1,86 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marvin//Dinner Automation//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Dinner Plans
+X-WR-TIMEZONE:America/Chicago
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:STANDARD
+DTSTART:19700101T020000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700308T020000
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:UGFuLVNlYXJlZCBD-1773399795899@dinner-automation
+DTSTAMP:20260313T170000
+DTSTART;TZID=America/Chicago:20260207T170000
+DTEND;TZID=America/Chicago:20260207T180000
+SUMMARY:Pan-Seared Cod with Lemon Butter
+DESCRIPTION:Dinner: Pan-Seared Cod with Lemon Butter\\nPrep Time: 20 min\\nDifficulty: easy\\nCost: $28\\nCategory: seafood\\n\\nIngredients:\\n- Cod fillets (1.5 lbs)\\n- Unsalted butter (4 tbsp)\\n- Fresh lemon (2)\\n- Fresh parsley (1 bunch)\\n- Capers (1 jar)\\n- White wine (1/4 cup)\\n- Garlic (1 bulb)
+LOCATION:Home
+END:VEVENT
+BEGIN:VEVENT
+UID:UG9yayBUZW5kZXJs-1773399795900@dinner-automation
+DTSTAMP:20260313T170000
+DTSTART;TZID=America/Chicago:20260208T170000
+DTEND;TZID=America/Chicago:20260208T180000
+SUMMARY:Pork Tenderloin with Roasted Vegetables
+DESCRIPTION:Dinner: Pork Tenderloin with Roasted Vegetables\\nPrep Time: 45 min\\nDifficulty: medium\\nCost: $23\\nCategory: american\\n\\nIngredients:\\n- Pork tenderloin (1.5 lbs)\\n- Brussels sprouts (1.5 lbs)\\n- Sweet potatoes (2 lbs)\\n- Dijon mustard (1 jar)\\n- Fresh rosemary (1 bunch)\\n- Balsamic vinegar (1 bottle)
+LOCATION:Home
+END:VEVENT
+BEGIN:VEVENT
+UID:RmlzaCBUYWNvcyB3-1773399795900@dinner-automation
+DTSTAMP:20260313T170000
+DTSTART;TZID=America/Chicago:20260209T170000
+DTEND;TZID=America/Chicago:20260209T180000
+SUMMARY:Fish Tacos with Mango Salsa
+DESCRIPTION:Dinner: Fish Tacos with Mango Salsa\\nPrep Time: 30 min\\nDifficulty: easy\\nCost: $26\\nCategory: mexican\\n\\nIngredients:\\n- White fish fillets (1.5 lbs)\\n- Corn tortillas (1 pack)\\n- Mango (2)\\n- Red onion (1)\\n- Jalapeno (2)\\n- Cabbage slaw mix (1 bag)\\n- Chipotle mayo (1 bottle)
+LOCATION:Home
+END:VEVENT
+BEGIN:VEVENT
+UID:Q2hpY2tlbiBUaWtr-1773399795900@dinner-automation
+DTSTAMP:20260313T170000
+DTSTART;TZID=America/Chicago:20260210T170000
+DTEND;TZID=America/Chicago:20260210T180000
+SUMMARY:Chicken Tikka Masala
+DESCRIPTION:Dinner: Chicken Tikka Masala\\nPrep Time: 45 min\\nDifficulty: medium\\nCost: $22\\nCategory: indian\\n\\nIngredients:\\n- Chicken thighs (2 lbs)\\n- Greek yogurt (16 oz)\\n- Heavy cream (1 pint)\\n- Basmati rice (2 lbs)\\n- Tikka masala sauce (1 jar)\\n- Fresh ginger (1 piece)
+LOCATION:Home
+END:VEVENT
+BEGIN:VEVENT
+UID:QmVlZiBTdGlyLUZy-1773399795900@dinner-automation
+DTSTAMP:20260313T170000
+DTSTART;TZID=America/Chicago:20260211T170000
+DTEND;TZID=America/Chicago:20260211T180000
+SUMMARY:Beef Stir-Fry with Vegetables
+DESCRIPTION:Dinner: Beef Stir-Fry with Vegetables\\nPrep Time: 20 min\\nDifficulty: easy\\nCost: $24\\nCategory: asian\\n\\nIngredients:\\n- Flank steak (1.5 lbs)\\n- Broccoli florets (2 heads)\\n- Bell peppers (3)\\n- Soy sauce (1 bottle)\\n- Sesame oil (1 bottle)\\n- Green onions (1 bunch)
+LOCATION:Home
+END:VEVENT
+BEGIN:VEVENT
+UID:U2hyaW1wIFRhY29z-1773399795900@dinner-automation
+DTSTAMP:20260313T170000
+DTSTART;TZID=America/Chicago:20260212T170000
+DTEND;TZID=America/Chicago:20260212T180000
+SUMMARY:Shrimp Tacos with Cabbage Slaw
+DESCRIPTION:Dinner: Shrimp Tacos with Cabbage Slaw\\nPrep Time: 25 min\\nDifficulty: easy\\nCost: $25\\nCategory: mexican\\n\\nIngredients:\\n- Large shrimp (1.5 lbs)\\n- Corn tortillas (1 pack)\\n- Red cabbage (1 head)\\n- Avocado (3)\\n- Lime (4)\\n- Cilantro (1 bunch)\\n- Chipotle powder (1 container)
+LOCATION:Home
+END:VEVENT
+BEGIN:VEVENT
+UID:VmVnZXRhYmxlIEN1-1773399795900@dinner-automation
+DTSTAMP:20260313T170000
+DTSTART;TZID=America/Chicago:20260213T170000
+DTEND;TZID=America/Chicago:20260213T180000
+SUMMARY:Vegetable Curry with Chickpeas
+DESCRIPTION:Dinner: Vegetable Curry with Chickpeas\\nPrep Time: 35 min\\nDifficulty: easy\\nCost: $18\\nCategory: vegetarian\\n\\nIngredients:\\n- Chickpeas (2 cans)\\n- Coconut milk (2 cans)\\n- Spinach (10 oz)\\n- Curry paste (1 jar)\\n- Naan bread (1 pack)\\n- Yellow onion (1)
+LOCATION:Home
+END:VEVENT
+END:VCALENDAR

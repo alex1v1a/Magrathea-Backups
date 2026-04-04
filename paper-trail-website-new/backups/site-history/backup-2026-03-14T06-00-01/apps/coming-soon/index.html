@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+    ============================================================================
+    COMING SOON - PROJECT APP PAGE
+    ============================================================================
+    Placeholder page for the second app (Instacart-like with twist)
+    Design: Mysterious, futuristic, teaser-focused
+    ============================================================================
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Something big is coming from Paper Trail Limited. A new way to think about delivery.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <title>Coming Soon | Paper Trail Limited</title>
+    
+    <!-- Fonts: Modern tech feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="coming-soon.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔮</text></svg>">
+</head>
+<body class="coming-soon-page">
+
+    <!-- Navigation -->
+    <header class="site-header" role="banner">
+        <nav class="main-nav" role="navigation">
+            <a href="/" class="brand" aria-label="Paper Trail Home">
+                <span class="brand-icon">
+                    <img src="../../assets/logo.svg" alt="Paper Trail" width="48" height="48">
+                </span>
+                <span class="brand-text">Paper Trail</span>
+            </a>
+            
+            <ul id="nav-menu" class="nav-links">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/blog/" class="nav-link">Blog</a></li>
+                <li><a href="/apps/reel-reviews/" class="nav-link">Reel Reviews</a></li>
+                <li><a href="/contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        
+        <!-- Hero Section with Countdown -->
+        <section class="cs-hero" aria-labelledby="cs-title">
+            <div class="cs-bg-animation">
+                <div class="grid-lines"></div>
+                <div class="floating-shapes">
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            
+            <div class="cs-content">
+                <div class="cs-badge">
+                    <span class="badge-pulse"></span>
+                    <span class="badge-text">In Development</span>
+                </div>
+                
+                <h1 id="cs-title" class="cs-title">
+                    <span class="glitch" data-text="PROJECT">PROJECT</span>
+                    <span class="glitch" data-text="CARTWHEEL">CARTWHEEL</span>
+                </h1>
+                
+                <p class="cs-tagline">
+                    You think you know delivery.<br>
+                    <span class="highlight">You have no idea.</span>
+                </p>
+                
+                <p class="cs-description">
+                    We're reimagining everything about how goods move from store to door.
+                    Like Instacart, but with innovations so significant, you'll wonder 
+                    why nobody thought of them before.
+                </p>
+                
+                <!-- Mystery hint cards -->
+                <div class="hint-grid">
+                    <div class="hint-card">
+                        <span class="hint-icon">⚡</span>
+                        <span class="hint-text">10x faster</span>
+                    </div>
+                    <div class="hint-card">
+                        <span class="hint-icon">🤝</span>
+                        <span class="hint-text">Community driven</span>
+                    </div>
+                    <div class="hint-card">
+                        <span class="hint-icon">🌱</span>
+                        <span class="hint-text">Sustainable</span>
+                    </div>
+                    <div class="hint-card locked">
+                        <span class="hint-icon">🔒</span>
+                        <span class="hint-text">Top secret</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Email Signup Section -->
+        <section class="cs-signup" aria-labelledby="signup-title">
+            <div class="container">
+                <h2 id="signup-title" class="cs-section-title">Be the First to Know</h2>
+                <p class="cs-section-subtitle">
+                    We're selecting beta testers. Enter your email for early access.
+                </p>
+                
+                <form class="signup-form" action="#" method="POST" data-validate>
+                    <div class="form-group">
+                        <label for="email" class="visually-hidden">Email address</label>
+                        <input type="email" 
+                               id="email" 
+                               name="email" 
+                               placeholder="your@email.com"
+                               required
+                               class="form-input">
+                        <button type="submit" class="btn btn-cs-primary">
+                            <span>Join the Waitlist</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </div>
+                    <p class="form-note">
+                        🔒 We respect your privacy. Unsubscribe anytime.
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Comparison Teaser -->
+        <section class="cs-compare" aria-labelledby="compare-title">
+            <div class="container">
+                <h2 id="compare-title" class="cs-section-title">The Status Quo vs. The Future</h2>
+                
+                <div class="compare-grid">
+                    <div class="compare-card compare-old">
+                        <h3>Current Apps</h3>
+                        <ul>
+                            <li>❌ Impersonal delivery</li>
+                            <li>❌ High fees</li>
+                            <li>❌ Cold food</li>
+                            <li>❌ Mystery shoppers</li>
+                            <li>❌ Environmental waste</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="compare-vs">
+                        <span>VS</span>
+                    </div>
+                    
+                    <div class="compare-card compare-new">
+                        <div class="new-badge">Coming Soon</div>
+                        <h3>Project Cartwheel</h3>
+                        <ul>
+                            <li>✨ Community powered</li>
+                            <li>✨ Fair pricing</li>
+                            <li>✨ Fresh guarantee</li>
+                            <li>✨ Trusted neighbors</li>
+                            <li>✨ Zero waste</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer cs-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-icon">📝</span>
+                    <span class="footer-name">Paper Trail Limited</span>
+                </div>
+                <p class="footer-tagline">Writing the future of mobile experiences</p>
+                <p class="footer-copyright">
+                    © <span id="current-year">2024</span> Paper Trail Limited
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="coming-soon.js"></script>
+</body>
+</html>

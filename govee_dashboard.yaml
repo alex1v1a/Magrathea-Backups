@@ -1,0 +1,109 @@
+title: Govee Smart Devices
+path: govee
+icon: mdi:lightbulb-group
+badges: []
+cards:
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: |
+          ## 💡 Govee Lights
+        
+      - type: horizontal-stack
+        cards:
+          - type: light
+            entity: light.soft_lights
+            name: Soft Lights
+            icon: mdi:lightbulb
+          
+          - type: light
+            entity: light.rgbwic_string_lights_l
+            name: RGBWIC String L
+            icon: mdi:string-lights
+          
+          - type: light
+            entity: light.rgbic_string_light_r
+            name: RGBIC String R
+            icon: mdi:string-lights
+
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: |
+          ## 🔌 Govee Smart Plugs
+        
+      - type: horizontal-stack
+        cards:
+          - type: switch
+            entity: switch.front_yard_powerswitch
+            name: Front Yard
+            icon: mdi:power-plug
+          
+          - type: switch
+            entity: switch.lounge_lamp_powerswitch
+            name: Lounge Lamp
+            icon: mdi:power-plug
+          
+          - type: switch
+            entity: switch.kitchen_lamp_powerswitch
+            name: Kitchen Lamp
+            icon: mdi:power-plug
+          
+          - type: switch
+            entity: switch.front_door_powerswitch
+            name: Front Door
+            icon: mdi:power-plug
+
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: |
+          ## 🎨 Quick Scenes
+        
+      - type: horizontal-stack
+        cards:
+          - type: button
+            name: All Lights On
+            icon: mdi:lightbulb-group
+            tap_action:
+              action: call-service
+              service: light.turn_on
+              target:
+                entity_id:
+                  - light.soft_lights
+                  - light.rgbwic_string_lights_l
+          
+          - type: button
+            name: All Lights Off
+            icon: mdi:lightbulb-group-off
+            tap_action:
+              action: call-service
+              service: light.turn_off
+              target:
+                entity_id:
+                  - light.soft_lights
+                  - light.rgbwic_string_lights_l
+          
+          - type: button
+            name: All Plugs On
+            icon: mdi:power-plug
+            tap_action:
+              action: call-service
+              service: switch.turn_on
+              target:
+                entity_id:
+                  - switch.front_yard_powerswitch
+                  - switch.lounge_lamp_powerswitch
+                  - switch.kitchen_lamp_powerswitch
+          
+          - type: button
+            name: All Plugs Off
+            icon: mdi:power-plug-off
+            tap_action:
+              action: call-service
+              service: switch.turn_off
+              target:
+                entity_id:
+                  - switch.front_yard_powerswitch
+                  - switch.lounge_lamp_powerswitch
+                  - switch.kitchen_lamp_powerswitch

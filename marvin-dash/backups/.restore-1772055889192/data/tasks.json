@@ -1,0 +1,54 @@
+{
+  "todo": [
+    {
+      "id": "1",
+      "title": "Tax Prep 2025",
+      "description": "Collect forms, find deductions, optimize take-home",
+      "priority": "high",
+      "created": "2026-02-24T17:49:34.742Z",
+      "tags": [
+        "finance",
+        "urgent"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Vectarr Machine Shop Outreach",
+      "description": "Research and onboard new machine shops to the quoting portal",
+      "priority": "medium",
+      "created": "2026-02-24T17:49:34.750Z",
+      "tags": [
+        "business",
+        "outreach"
+      ]
+    }
+  ],
+  "inprogress": [
+    {
+      "id": "3",
+      "title": "Household Systems Setup",
+      "description": "Implement grocery ordering, supplies management, meal planning",
+      "priority": "medium",
+      "created": "2026-02-24T17:49:34.750Z",
+      "tags": [
+        "home",
+        "automation"
+      ]
+    }
+  ],
+  "review": [],
+  "completed": [
+    {
+      "id": "4",
+      "title": "OpenClaw Service Installation",
+      "description": "Set up Windows service for 24/7 availability with crash recovery",
+      "priority": "high",
+      "created": "2026-02-24T17:49:34.750Z",
+      "completed": "2026-02-24T17:49:34.750Z",
+      "tags": [
+        "infrastructure",
+        "reliability"
+      ]
+    }
+  ]
+}

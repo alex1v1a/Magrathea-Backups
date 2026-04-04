@@ -1,0 +1,270 @@
+{
+  "items": [
+    {
+      "name": "Cod fillets",
+      "searchTerm": "cod fillet fresh",
+      "amount": "1.5 lbs",
+      "status": "pending"
+    },
+    {
+      "name": "Unsalted butter",
+      "searchTerm": "butter unsalted",
+      "amount": "4 tbsp",
+      "status": "pending"
+    },
+    {
+      "name": "Fresh lemon",
+      "searchTerm": "lemon",
+      "amount": "2",
+      "status": "pending"
+    },
+    {
+      "name": "Fresh parsley",
+      "searchTerm": "parsley fresh",
+      "amount": "1 bunch",
+      "status": "pending"
+    },
+    {
+      "name": "Capers",
+      "searchTerm": "capers",
+      "amount": "1 jar",
+      "status": "pending"
+    },
+    {
+      "name": "White wine",
+      "searchTerm": "white wine cooking",
+      "amount": "1/4 cup",
+      "status": "pending"
+    },
+    {
+      "name": "Garlic",
+      "searchTerm": "garlic",
+      "amount": "1 bulb",
+      "status": "pending"
+    },
+    {
+      "name": "Pork tenderloin",
+      "searchTerm": "pork tenderloin",
+      "amount": "1.5 lbs",
+      "status": "pending"
+    },
+    {
+      "name": "Brussels sprouts",
+      "searchTerm": "brussels sprouts",
+      "amount": "1.5 lbs",
+      "status": "pending"
+    },
+    {
+      "name": "Sweet potatoes",
+      "searchTerm": "sweet potatoes",
+      "amount": "2 lbs",
+      "status": "pending"
+    },
+    {
+      "name": "Dijon mustard",
+      "searchTerm": "dijon mustard",
+      "amount": "1 jar",
+      "status": "pending"
+    },
+    {
+      "name": "Fresh rosemary",
+      "searchTerm": "rosemary fresh",
+      "amount": "1 bunch",
+      "status": "pending"
+    },
+    {
+      "name": "Balsamic vinegar",
+      "searchTerm": "balsamic vinegar",
+      "amount": "1 bottle",
+      "status": "pending"
+    },
+    {
+      "name": "White fish fillets",
+      "searchTerm": "tilapia fillet",
+      "amount": "1.5 lbs",
+      "status": "pending"
+    },
+    {
+      "name": "Corn tortillas",
+      "searchTerm": "corn tortillas",
+      "amount": "1 pack",
+      "status": "pending"
+    },
+    {
+      "name": "Mango",
+      "searchTerm": "mango",
+      "amount": "2",
+      "status": "pending"
+    },
+    {
+      "name": "Red onion",
+      "searchTerm": "red onion",
+      "amount": "1",
+      "status": "pending"
+    },
+    {
+      "name": "Jalapeno",
+      "searchTerm": "jalapeno",
+      "amount": "2",
+      "status": "pending"
+    },
+    {
+      "name": "Cabbage slaw mix",
+      "searchTerm": "coleslaw mix",
+      "amount": "1 bag",
+      "status": "pending"
+    },
+    {
+      "name": "Chipotle mayo",
+      "searchTerm": "chipotle mayo",
+      "amount": "1 bottle",
+      "status": "pending"
+    },
+    {
+      "name": "Chicken thighs",
+      "searchTerm": "chicken thighs boneless",
+      "amount": "2 lbs",
+      "status": "pending"
+    },
+    {
+      "name": "Greek yogurt",
+      "searchTerm": "greek yogurt plain",
+      "amount": "16 oz",
+      "status": "pending"
+    },
+    {
+      "name": "Heavy cream",
+      "searchTerm": "heavy cream",
+      "amount": "1 pint",
+      "status": "pending"
+    },
+    {
+      "name": "Basmati rice",
+      "searchTerm": "H-E-B Basmati Rice",
+      "amount": "2 lbs",
+      "status": "pending"
+    },
+    {
+      "name": "Tikka masala sauce",
+      "searchTerm": "tikka masala sauce",
+      "amount": "1 jar",
+      "status": "pending"
+    },
+    {
+      "name": "Fresh ginger",
+      "searchTerm": "ginger root",
+      "amount": "1 piece",
+      "status": "pending"
+    },
+    {
+      "name": "Flank steak",
+      "searchTerm": "flank steak",
+      "amount": "1.5 lbs",
+      "status": "pending"
+    },
+    {
+      "name": "Broccoli florets",
+      "searchTerm": "broccoli",
+      "amount": "2 heads",
+      "status": "pending"
+    },
+    {
+      "name": "Bell peppers",
+      "searchTerm": "bell peppers",
+      "amount": "3",
+      "status": "pending"
+    },
+    {
+      "name": "Soy sauce",
+      "searchTerm": "soy sauce low sodium",
+      "amount": "1 bottle",
+      "status": "pending"
+    },
+    {
+      "name": "Sesame oil",
+      "searchTerm": "sesame oil",
+      "amount": "1 bottle",
+      "status": "pending"
+    },
+    {
+      "name": "Green onions",
+      "searchTerm": "green onions",
+      "amount": "1 bunch",
+      "status": "pending"
+    },
+    {
+      "name": "Large shrimp",
+      "searchTerm": "shrimp large raw",
+      "amount": "1.5 lbs",
+      "status": "pending"
+    },
+    {
+      "name": "Red cabbage",
+      "searchTerm": "cabbage red",
+      "amount": "1 head",
+      "status": "pending"
+    },
+    {
+      "name": "Avocado",
+      "searchTerm": "avocado",
+      "amount": "3",
+      "status": "pending"
+    },
+    {
+      "name": "Lime",
+      "searchTerm": "lime",
+      "amount": "4",
+      "status": "pending"
+    },
+    {
+      "name": "Cilantro",
+      "searchTerm": "cilantro fresh",
+      "amount": "1 bunch",
+      "status": "pending"
+    },
+    {
+      "name": "Chipotle powder",
+      "searchTerm": "chipotle powder",
+      "amount": "1 container",
+      "status": "pending"
+    },
+    {
+      "name": "Chickpeas",
+      "searchTerm": "chickpeas",
+      "amount": "2 cans",
+      "status": "pending"
+    },
+    {
+      "name": "Coconut milk",
+      "searchTerm": "coconut milk",
+      "amount": "2 cans",
+      "status": "pending"
+    },
+    {
+      "name": "Spinach",
+      "searchTerm": "spinach fresh",
+      "amount": "10 oz",
+      "status": "pending"
+    },
+    {
+      "name": "Curry paste",
+      "searchTerm": "curry paste",
+      "amount": "1 jar",
+      "status": "pending"
+    },
+    {
+      "name": "Naan bread",
+      "searchTerm": "Stonefire Naan",
+      "amount": "1 pack",
+      "status": "pending"
+    },
+    {
+      "name": "Yellow onion",
+      "searchTerm": "yellow onion",
+      "amount": "1",
+      "status": "pending"
+    }
+  ],
+  "autoStart": true,
+  "timestamp": 1771772400709
+}

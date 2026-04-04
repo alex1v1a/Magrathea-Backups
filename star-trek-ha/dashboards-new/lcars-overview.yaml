@@ -1,0 +1,165 @@
+title: LCARS Fleet Overview
+path: lcars-overview
+icon: mdi:star-four-points
+badges: []
+cards:
+  # ==========================================
+  # FLEET STATUS HEADER
+  # ==========================================
+  - type: markdown
+    card_mod:
+      class: header-left
+    content: '# FLEET STATUS — MULTI-HOUSE COMMAND'
+
+  # ==========================================
+  # HOUSE SUMMARY GRID
+  # ==========================================
+  - type: grid
+    columns: 2
+    square: false
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '# HOUSE 1 — PRIME'
+
+          - type: entities
+            card_mod:
+              class: middle-contained
+            entities:
+              - entity: sensor.house1_temperature_average
+                name: Avg Temp
+              - entity: sensor.house1_humidity_average
+                name: Avg Humidity
+              - entity: sensor.house1_energy_today
+                name: Energy Today
+              - entity: binary_sensor.house1_security
+                name: Security Status
+              - entity: sensor.house1_occupancy
+                name: Occupancy
+
+          - type: horizontal-stack
+            card_mod:
+              class: middle-contained
+            cards:
+              - type: button
+                name: House 1
+                icon: mdi:home
+                tap_action:
+                  action: navigate
+                  navigation_path: /lcars-house1
+                card_mod:
+                  class: button-bullet-left
+              - type: button
+                name: Rooms
+                icon: mdi:floor-plan
+                tap_action:
+                  action: navigate
+                  navigation_path: /lcars-h1-living
+                card_mod:
+                  class: button-bullet-right
+
+          - type: markdown
+            card_mod:
+              class: footer-contained
+            content: '## STATUS: NOMINAL'
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '# HOUSE 2 — AUXILIARY'
+
+          - type: entities
+            card_mod:
+              class: middle-contained
+            entities:
+              - entity: sensor.house2_temperature_average
+                name: Avg Temp
+              - entity: sensor.house2_humidity_average
+                name: Avg Humidity
+              - entity: sensor.house2_energy_today
+                name: Energy Today
+              - entity: binary_sensor.house2_security
+                name: Security Status
+              - entity: sensor.house2_occupancy
+                name: Occupancy
+
+          - type: horizontal-stack
+            card_mod:
+              class: middle-contained
+            cards:
+              - type: button
+                name: House 2
+                icon: mdi:home
+                tap_action:
+                  action: navigate
+                  navigation_path: /lcars-house2
+                card_mod:
+                  class: button-bullet-left
+              - type: button
+                name: Rooms
+                icon: mdi:floor-plan
+                tap_action:
+                  action: navigate
+                  navigation_path: /lcars-h2-living
+                card_mod:
+                  class: button-bullet-right
+
+          - type: markdown
+            card_mod:
+              class: footer-contained
+            content: '## STATUS: NOMINAL'
+
+  # ==========================================
+  # DEVICE TYPE NAVIGATION
+  # ==========================================
+  - type: markdown
+    card_mod:
+      class: header-right
+    content: '# DEVICE TYPE DASHBOARDS'
+
+  - type: horizontal-stack
+    card_mod:
+      class: middle-right
+    cards:
+      - type: button
+        name: Weather
+        icon: mdi:weather-partly-cloudy
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-devices-weather
+        card_mod:
+          class: button-bar-left
+      - type: button
+        name: Cameras
+        icon: mdi:cctv
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-devices-cameras
+        card_mod:
+          class: button-small
+      - type: button
+        name: Thermostats
+        icon: mdi:thermostat
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-devices-thermostats
+        card_mod:
+          class: button-small
+      - type: button
+        name: Security
+        icon: mdi:shield-home
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-devices-security
+        card_mod:
+          class: button-bar-right
+
+  - type: markdown
+    card_mod:
+      class: footer-right
+    content: '## FLEET CONTROL ONLINE'

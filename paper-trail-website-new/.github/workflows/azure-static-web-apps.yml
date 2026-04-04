@@ -1,0 +1,86 @@
+# =============================================================================
+# Azure Static Web Apps CI/CD Workflow
+# =============================================================================
+# File: .github/workflows/azure-static-web-apps.yml
+# Purpose: Automatically deploy the Paper Trail website to Azure Static Web Apps
+#          whenever changes are pushed to the main branch
+#
+# TRIGGERS:
+# - Push to main branch
+# - Pull request to main branch (creates preview environment)
+#
+# REQUIREMENTS:
+# - Azure Static Web App must be created
+# - Deployment token must be stored as AZURE_STATIC_WEB_APPS_API_TOKEN in GitHub secrets
+# =============================================================================
+
+name: Azure Static Web Apps CI/CD
+
+# Trigger on push and pull requests to main branch
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+
+# Job definitions
+jobs:
+  # Build and deploy job
+  build_and_deploy_job:
+    runs-on: ubuntu-latest
+    name: Build and Deploy Job
+    
+    # Only run if not a closed PR
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # Include any git submodules if present
+      
+      # Step 2: Build and deploy to Azure Static Web Apps
+      - name: Build And Deploy
+        id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          # Azure Static Web App deployment token
+          # This should be stored as a GitHub secret: AZURE_STATIC_WEB_APPS_API_TOKEN
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          
+          # Repository token for GitHub integration
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          
+          # Action to perform: upload = deploy the app
+          action: "upload"
+          
+          # Directory containing the built app
+          # Website files are at repo root
+          app_location: "/"
+          
+          # For static sites without a build step, api_location is empty
+          api_location: ""
+          
+          # Output location - same as app_location for static sites
+          output_location: "/"
+
+  # Close pull request job (cleans up preview environment)
+  close_pull_request_job:
+    runs-on: ubuntu-latest
+    name: Close Pull Request Job
+    
+    # Only run when PR is closed
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    
+    steps:
+      # Close the preview environment
+      - name: Close Pull Request
+        id: closepullrequest
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          action: "close"

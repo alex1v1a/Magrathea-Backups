@@ -1,0 +1,87 @@
+title: LCARS Camera Array
+path: lcars-devices-cameras
+icon: mdi:cctv
+badges: []
+cards:
+  - type: markdown
+    card_mod:
+      class: header-left
+    content: '# VISUAL SURVEILLANCE ARRAY'
+
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        card_mod:
+          class: header-contained
+        content: '# HOUSE 1 — CAMERAS'
+      - type: grid
+        columns: 2
+        square: false
+        cards:
+          - type: picture-entity
+            entity: camera.house1_front_porch
+            name: Front Porch
+            camera_view: live
+            card_mod:
+              class: middle-contained
+          - type: picture-entity
+            entity: camera.house1_driveway
+            name: Driveway
+            camera_view: live
+            card_mod:
+              class: middle-contained
+          - type: picture-entity
+            entity: camera.house1_backyard
+            name: Backyard
+            camera_view: live
+            card_mod:
+              class: middle-contained
+          - type: picture-entity
+            entity: camera.house1_garage
+            name: Garage
+            camera_view: live
+            card_mod:
+              class: middle-contained
+      - type: markdown
+        card_mod:
+          class: footer-contained
+        content: '## HOUSE 1 FEEDS ACTIVE'
+
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        card_mod:
+          class: header-contained
+        content: '# HOUSE 2 — CAMERAS'
+      - type: grid
+        columns: 2
+        square: false
+        cards:
+          - type: picture-entity
+            entity: camera.house2_front_porch
+            name: Front Porch
+            camera_view: live
+            card_mod:
+              class: middle-contained
+          - type: picture-entity
+            entity: camera.house2_driveway
+            name: Driveway
+            camera_view: live
+            card_mod:
+              class: middle-contained
+          - type: picture-entity
+            entity: camera.house2_backyard
+            name: Backyard
+            camera_view: live
+            card_mod:
+              class: middle-contained
+          - type: picture-entity
+            entity: camera.house2_garage
+            name: Garage
+            camera_view: live
+            card_mod:
+              class: middle-contained
+      - type: markdown
+        card_mod:
+          class: footer-contained
+        content: '## HOUSE 2 FEEDS ACTIVE'

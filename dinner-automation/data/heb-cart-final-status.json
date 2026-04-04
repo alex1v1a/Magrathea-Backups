@@ -1,0 +1,206 @@
+{
+  "timestamp": "2026-02-08T14:37:16.376Z",
+  "itemCount": 31,
+  "items": [
+    {
+      "name": "White fish fillets",
+      "searchTerm": "tilapia fillet",
+      "amount": "1.5 lbs",
+      "status": "needs_manual_add",
+      "substitute": "Catfish fillet",
+      "substituteSearch": "catfish fillet"
+    },
+    {
+      "name": "Corn tortillas",
+      "searchTerm": "corn tortillas",
+      "amount": "1 pack",
+      "status": "in_cart"
+    },
+    {
+      "name": "Mango",
+      "searchTerm": "mango",
+      "amount": "2",
+      "status": "in_cart"
+    },
+    {
+      "name": "Red onion",
+      "searchTerm": "red onion",
+      "amount": "1",
+      "status": "in_cart"
+    },
+    {
+      "name": "Jalapeno",
+      "searchTerm": "jalapeno",
+      "amount": "2",
+      "status": "in_cart"
+    },
+    {
+      "name": "Cabbage slaw mix",
+      "searchTerm": "coleslaw mix",
+      "amount": "1 bag",
+      "status": "in_cart"
+    },
+    {
+      "name": "Chipotle mayo",
+      "searchTerm": "chipotle mayo",
+      "amount": "1 bottle",
+      "status": "in_cart"
+    },
+    {
+      "name": "Cod fillets",
+      "searchTerm": "cod fillet fresh",
+      "amount": "1.5 lbs",
+      "status": "in_cart"
+    },
+    {
+      "name": "Unsalted butter",
+      "searchTerm": "butter unsalted",
+      "amount": "1 stick",
+      "status": "in_cart"
+    },
+    {
+      "name": "Fresh parsley",
+      "searchTerm": "parsley fresh",
+      "amount": "1 bunch",
+      "status": "in_cart"
+    },
+    {
+      "name": "Capers",
+      "searchTerm": "capers",
+      "amount": "1 jar",
+      "status": "in_cart"
+    },
+    {
+      "name": "White wine",
+      "searchTerm": "white wine cooking",
+      "amount": "1 bottle",
+      "status": "in_cart"
+    },
+    {
+      "name": "Green beans",
+      "searchTerm": "green beans fresh",
+      "amount": "1 lb",
+      "status": "in_cart"
+    },
+    {
+      "name": "Chicken thighs",
+      "searchTerm": "chicken thighs bone-in",
+      "amount": "2 lbs",
+      "status": "in_cart"
+    },
+    {
+      "name": "Lemon",
+      "searchTerm": "lemon",
+      "amount": "3",
+      "status": "in_cart"
+    },
+    {
+      "name": "Fresh thyme",
+      "searchTerm": "thyme fresh",
+      "amount": "1 bunch",
+      "status": "in_cart"
+    },
+    {
+      "name": "Oregano",
+      "searchTerm": "oregano dried",
+      "amount": "1 container",
+      "status": "in_cart"
+    },
+    {
+      "name": "Couscous",
+      "searchTerm": "couscous",
+      "amount": "1 lb",
+      "status": "in_cart"
+    },
+    {
+      "name": "Zucchini",
+      "searchTerm": "zucchini",
+      "amount": "3",
+      "status": "in_cart"
+    },
+    {
+      "name": "Ribeye steak",
+      "searchTerm": "ribeye steak thin",
+      "amount": "1.5 lbs",
+      "status": "in_cart"
+    },
+    {
+      "name": "Asian pear",
+      "searchTerm": "asian pear",
+      "amount": "1",
+      "status": "needs_manual_add",
+      "substitute": "Bosc pear",
+      "substituteSearch": "bosc pear"
+    },
+    {
+      "name": "Gochujang",
+      "searchTerm": "gochujang",
+      "amount": "1 container",
+      "status": "needs_manual_add",
+      "substitute": "Sriracha hot sauce",
+      "substituteSearch": "sriracha"
+    },
+    {
+      "name": "Jasmine rice",
+      "searchTerm": "jasmine rice",
+      "amount": "2 lbs",
+      "status": "in_cart"
+    },
+    {
+      "name": "Sesame seeds",
+      "searchTerm": "sesame seeds",
+      "amount": "1 container",
+      "status": "can_skip",
+      "note": "Garnish only - not critical"
+    },
+    {
+      "name": "Kimchi",
+      "searchTerm": "kimchi",
+      "amount": "16 oz",
+      "status": "in_cart"
+    },
+    {
+      "name": "Chicken breast",
+      "searchTerm": "chicken breast boneless",
+      "amount": "2 lbs",
+      "status": "in_cart"
+    },
+    {
+      "name": "Cucumber",
+      "searchTerm": "cucumber",
+      "amount": "2",
+      "status": "in_cart"
+    },
+    {
+      "name": "Cherry tomatoes",
+      "searchTerm": "tomatoes cherry",
+      "amount": "1 pint",
+      "status": "in_cart"
+    },
+    {
+      "name": "Feta cheese",
+      "searchTerm": "feta cheese",
+      "amount": "8 oz",
+      "status": "in_cart"
+    },
+    {
+      "name": "Quinoa",
+      "searchTerm": "quinoa",
+      "amount": "2 lbs",
+      "status": "in_cart"
+    },
+    {
+      "name": "Hummus",
+      "searchTerm": "hummus",
+      "amount": "10 oz",
+      "status": "in_cart"
+    }
+  ],
+  "lastUpdated": "2026-02-09T03:42:08.286Z",
+  "cartStatus": {
+    "inCart": 27,
+    "needsManualAdd": 3,
+    "canSkip": 1,
+    "totalTarget": 31
+  }
+}

@@ -1,0 +1,226 @@
+# ==========================================
+# LCARS SCIENCE - Data & Sensors Dashboard
+# ==========================================
+# Sensor data, analytics, and scientific readings
+# Color Scheme: Purple (#CC99FF) - Analysis/Data
+# ==========================================
+
+title: LCARS Science
+path: lcars-science
+icon: mdi:telescope
+badges: []
+cards:
+  # ==========================================
+  # LEFT COLUMN - Navigation Sidebar
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        card_mod:
+          class: header-left
+          style: |
+            ha-card {
+              background: #CC99FF !important;
+            }
+        content: '# NAVIGATION'
+
+      - type: button
+        name: "BRIDGE"
+        icon: mdi:star-four-points
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-bridge
+        card_mod:
+          class: button-lozenge-left
+
+      - type: button
+        name: "ENGINEERING"
+        icon: mdi:engine
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-engineering
+        card_mod:
+          class: button-lozenge-left
+
+      - type: button
+        name: "SCIENCE"
+        icon: mdi:telescope
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-science
+        card_mod:
+          class: button-lozenge-left
+          style: |
+            ha-card {
+              background: #EEDDFF !important;
+              border-left: 8px solid #CC99FF !important;
+            }
+
+      - type: button
+        name: "SECURITY"
+        icon: mdi:shield
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-security
+        card_mod:
+          class: button-lozenge-left
+
+      - type: button
+        name: "QUARTERS"
+        icon: mdi:bed
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-quarters
+        card_mod:
+          class: button-lozenge-left
+
+      - type: markdown
+        card_mod:
+          class: footer-left
+          style: |
+            ha-card {
+              min-height: 60px !important;
+            }
+        content: '## USS HOME'
+
+  # ==========================================
+  # CENTER COLUMN - Sensor Data
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      # Science Header
+      - type: markdown
+        card_mod:
+          class: header-contained
+          style: |
+            ha-card {
+              background: #CC99FF !important;
+            }
+        content: '# SENSOR ANALYSIS'
+
+      # Weather Station
+      - type: weather-forecast
+        entity: weather.home
+        show_current: true
+        show_forecast: true
+        card_mod:
+          class: middle-contained
+
+      # Sensor Graphs
+      - type: markdown
+        card_mod:
+          class: header-contained
+        content: '# TEMPERATURE TRENDS'
+
+      - type: history-graph
+        entities:
+          - entity: sensor.indoor_temperature
+            name: "Indoor"
+          - entity: sensor.outdoor_temperature
+            name: "Outdoor"
+        hours_to_show: 24
+        card_mod:
+          class: middle-contained
+
+      # Light Levels
+      - type: markdown
+        card_mod:
+          class: header-contained
+        content: '# ILLUMINATION LEVELS'
+
+      - type: entities
+        entities:
+          - entity: sensor.living_room_light_level
+            name: "Living Room"
+          - entity: sensor.kitchen_light_level
+            name: "Kitchen"
+          - entity: sensor.bedroom_light_level
+            name: "Bedroom"
+        card_mod:
+          class: middle-contained
+
+      # Footer
+      - type: markdown
+        card_mod:
+          class: footer-contained
+        content: '## ANALYSIS COMPLETE'
+
+  # ==========================================
+  # RIGHT COLUMN - Advanced Sensors
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      # Network Header
+      - type: markdown
+        card_mod:
+          class: header-right
+          style: |
+            ha-card {
+              background: #CC99FF !important;
+            }
+        content: '# NETWORK ANALYSIS'
+
+      # Network Stats
+      - type: entities
+        entities:
+          - entity: sensor.internet_speed_download
+            name: "Download Speed"
+          - entity: sensor.internet_speed_upload
+            name: "Upload Speed"
+          - entity: sensor.network_devices_connected
+            name: "Connected Devices"
+        card_mod:
+          class: middle-right
+
+      # System Stats
+      - type: markdown
+        card_mod:
+          class: header-right
+        content: '# COMPUTER CORE'
+
+      - type: gauge
+        entity: sensor.processor_use
+        name: "CPU Usage"
+        min: 0
+        max: 100
+        card_mod:
+          class: middle-right
+
+      - type: gauge
+        entity: sensor.memory_use_percent
+        name: "Memory Usage"
+        min: 0
+        max: 100
+        card_mod:
+          class: middle-right
+
+      # Storage
+      - type: markdown
+        card_mod:
+          class: header-right
+        content: '# STORAGE SYSTEMS'
+
+      - type: entities
+        entities:
+          - entity: sensor.disk_use_percent
+            name: "Disk Usage"
+          - entity: sensor.database_size
+            name: "Database Size"
+        card_mod:
+          class: middle-right
+
+      # Footer
+      - type: markdown
+        card_mod:
+          class: footer-right
+        content: '## DATA STREAMS ACTIVE'

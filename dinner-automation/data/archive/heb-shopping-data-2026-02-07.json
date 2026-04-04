@@ -1,0 +1,1511 @@
+{
+  "metadata": {
+    "generatedAt": "2026-02-07T16:49:49.505Z",
+    "weekOf": "2026-02-07",
+    "store": "HEB.com",
+    "totalItems": 43,
+    "estimatedTotal": 217.08000000000007
+  },
+  "items": [
+    {
+      "id": "item-0",
+      "name": "Pork tenderloin",
+      "searchTerm": "pork tenderloin",
+      "amount": "1.5 lbs",
+      "meal": "Pork Tenderloin with Roasted Vegetables",
+      "day": "Sunday",
+      "category": "Proteins & Meat",
+      "hebUrl": "https://www.heb.com/search?q=pork%20tenderloin",
+      "estimatedPrice": 5.99
+    },
+    {
+      "id": "item-1",
+      "name": "Brussels sprouts",
+      "searchTerm": "brussels sprouts",
+      "amount": "1.5 lbs",
+      "meal": "Pork Tenderloin with Roasted Vegetables",
+      "day": "Sunday",
+      "category": "Other",
+      "hebUrl": "https://www.heb.com/search?q=brussels%20sprouts",
+      "estimatedPrice": 3.49
+    },
+    {
+      "id": "item-2",
+      "name": "Sweet potatoes",
+      "searchTerm": "sweet potatoes",
+      "amount": "2 lbs",
+      "meal": "Pork Tenderloin with Roasted Vegetables",
+      "day": "Sunday",
+      "category": "Produce",
+      "hebUrl": "https://www.heb.com/search?q=sweet%20potatoes",
+      "estimatedPrice": 1.29
+    },
+    {
+      "id": "item-3",
+      "name": "Dijon mustard",
+      "searchTerm": "dijon mustard",
+      "amount": "1 jar",
+      "meal": "Pork Tenderloin with Roasted Vegetables",
+      "day": "Sunday",
+      "category": "Other",
+      "hebUrl": "https://www.heb.com/search?q=dijon%20mustard",
+      "estimatedPrice": 4.99
+    },
+    {
+      "id": "item-4",
+      "name": "Fresh rosemary",
+      "searchTerm": "rosemary fresh",
+      "amount": "1 bunch",
+      "meal": "Pork Tenderloin with Roasted Vegetables",
+      "day": "Sunday",
+      "category": "Other",
+      "hebUrl": "https://www.heb.com/search?q=rosemary%20fresh",
+      "estimatedPrice": 2.49
+    },
+    {
+      "id": "item-5",
+      "name": "Balsamic vinegar",
+      "searchTerm": "balsamic vinegar",
+      "amount": "1 bottle",
+      "meal": "Pork Tenderloin with Roasted Vegetables",
+      "day": "Sunday",
+      "category": "Pantry & Dry Goods",
+      "hebUrl": "https://www.heb.com/search?q=balsamic%20vinegar",
+      "estimatedPrice": 4.99
+    },
+    {
+      "id": "item-6",
+      "name": "Ribeye steak",
+      "searchTerm": "ribeye steak thin",
+      "amount": "1.5 lbs",
+      "meal": "Korean Beef Bulgogi Bowl",
+      "day": "Monday",
+      "category": "Proteins & Meat",
+      "hebUrl": "https://www.heb.com/search?q=ribeye%20steak%20thin",
+      "estimatedPrice": 14.99
+    },
+    {
+      "id": "item-7",
+      "name": "Asian pear",
+      "searchTerm": "asian pear",
+      "amount": "1",
+      "meal": "Korean Beef Bulgogi Bowl",
+      "day": "Monday",
+      "category": "Produce",
+      "hebUrl": "https://www.heb.com/search?q=asian%20pear",
+      "estimatedPrice": 2.49
+    },
+    {
+      "id": "item-8",
+      "name": "Gochujang",
+      "searchTerm": "gochujang",
+      "amount": "1 container",
+      "meal": "Korean Beef Bulgogi Bowl",
+      "day": "Monday",
+      "category": "Pantry & Dry Goods",
+      "hebUrl": "https://www.heb.com/search?q=gochujang",
+      "estimatedPrice": 5.99
+    },
+    {
+      "id": "item-9",
+      "name": "Jasmine rice",
+      "searchTerm": "jasmine rice",
+      "amount": "2 lbs",
+      "meal": "Korean Beef Bulgogi Bowl",
+      "day": "Monday",
+      "category": "Pantry & Dry Goods",
+      "hebUrl": "https://www.heb.com/search?q=jasmine%20rice",
+      "estimatedPrice": 4.99
+    },
+    {
+      "id": "item-10",
+      "name": "Sesame seeds",
+      "searchTerm": "sesame seeds",
+      "amount": "1 container",
+      "meal": "Korean Beef Bulgogi Bowl",
+      "day": "Monday",
+      "category": "Pantry & Dry Goods",
+      "hebUrl": "https://www.heb.com/search?q=sesame%20seeds",
+      "estimatedPrice": 3.99
+    },
+    {
+      "id": "item-11",
+      "name": "Kimchi",
+      "searchTerm": "kimchi",
+      "amount": "16 oz",
+      "meal": "Korean Beef Bulgogi Bowl",
+      "day": "Monday",
+      "category": "Pantry & Dry Goods",
+      "hebUrl": "https://www.heb.com/search?q=kimchi",
+      "estimatedPrice": 6.99
+    },
+    {
+      "id": "item-12",
+      "name": "Chickpeas",
+      "searchTerm": "chickpeas",
+      "amount": "2 cans",
+      "meal": "Vegetable Curry with Chickpeas",
+      "day": "Tuesday",
+      "category": "Other",
+      "hebUrl": "https://www.heb.com/search?q=chickpeas",
+      "estimatedPrice": 4.99
+    },
+    {
+      "id": "item-13",
+      "name": "Coconut milk",
+      "searchTerm": "coconut milk",
+      "amount": "2 cans",
+      "meal": "Vegetable Curry with Chickpeas",
+      "day": "Tuesday",
+      "category": "Dairy & Eggs",
+      "hebUrl": "https://www.heb.com/search?q=coconut%20milk",
+      "estimatedPrice": 4.99
+    },
+    {
+      "id": "item-14",
+      "name": "Spinach",
+      "searchTerm": "spinach fresh",
+      "amount": "10 oz",
+      "meal": "Vegetable Curry with Chickpeas",
+      "day": "Tuesday",
+      "category": "Produce",
+      "hebUrl": "https://www.heb.com/search?q=spinach%20fresh",
+      "estimatedPrice": 3.49
+    },
+    {
+      "id": "item-15",
+      "name": "Curry paste",
+      "searchTerm": "curry paste",
+      "amount": "1 jar",
+      "meal": "Vegetable Curry with Chickpeas",
+      "day": "Tuesday",
+      "category": "Other",
+      "hebUrl": "https://www.heb.com/search?q=curry%20paste",
+      "estimatedPrice": 4.99
+    },
+    {
+      "id": "item-16",
+      "name": "Naan bread",
+      "searchTerm": "naan bread",
+      "amount": "1 pack",
+      "meal": "Vegetable Curry with Chickpeas",
+      "day": "Tuesday",
+      "category": "Bakery",
+      "hebUrl": "https://www.heb.com/search?q=naan%20bread",
+      "estimatedPrice": 4.99
+    },
+    {
+      "id": "item-17",
+      "name": "Yellow onion",
+      "searchTerm": "yellow onion",
+      "amount": "1",
+      "meal": "Vegetable Curry with Chickpeas",
+      "day": "Tuesday",
+      "category": "Produce",
+      "hebUrl": "https://www.heb.com/search?q=yellow%20onion",
+      "estimatedPrice": 4.99
+    },
+    {
+      "id": "item-18",
+      "name": "Chicken thighs",
+      "searchTerm": "chicken thighs boneless",
+      "amount": "2 lbs",
+      "meal": "Chicken Tikka Masala",
+      "day": "Wednesday",
+      "category": "Proteins & Meat",
+      "hebUrl": "https://www.heb.com/search?q=chicken%20thighs%20boneless",
+      "estimatedPrice": 4.99
+    },
+    {
+      "id": "item-19",
+      "name": "Greek yogurt",
+      "searchTerm": "greek yogurt plain",
+      "amount": "16 oz",
+      "meal": "Chicken Tikka Masala",
+      "day": "Wednesday",
+      "category": "Dairy & Eggs",
+      "hebUrl": "https://www.heb.com/search?q=greek%20yogurt%20plain",
+      "estimatedPrice": 4.99
+    },
+    {
+      "id": "item-20",
+      "name": "Heavy cream",
+      "searchTerm": "heavy cream",
+      "amount": "1 pint",
+      "meal": "Chicken Tikka Masala",
+      "day": "Wednesday",
+      "category": "Dairy & Eggs",
+      "hebUrl": "https://www.heb.com/search?q=heavy%20cream",
+      "estimatedPrice": 4.99
+    },
+    {
+      "id": "item-21",
+      "name": "Basmati rice",
+      "searchTerm": "basmati rice",
+      "amount": "2 lbs",
+      "meal": "Chicken Tikka Masala",
+      "day": "Wednesday",
+      "category": "Pantry & Dry Goods",
+      "hebUrl": "https://www.heb.com/search?q=basmati%20rice",
+      "estimatedPrice": 5.99
+    },
+    {
+      "id": "item-22",
+      "name": "Tikka masala sauce",
+      "searchTerm": "tikka masala sauce",
+      "amount": "1 jar",
+      "meal": "Chicken Tikka Masala",
+      "day": "Wednesday",
+      "category": "Pantry & Dry Goods",
+      "hebUrl": "https://www.heb.com/search?q=tikka%20masala%20sauce",
+      "estimatedPrice": 4.99
+    },
+    {
+      "id": "item-23",
+      "name": "Fresh ginger",
+      "searchTerm": "ginger root",
+      "amount": "1 piece",
+      "meal": "Chicken Tikka Masala",
+      "day": "Wednesday",
+      "category": "Other",
+      "hebUrl": "https://www.heb.com/search?q=ginger%20root",
+      "estimatedPrice": 4.99
+    },
+    {
+      "id": "item-24",
+      "name": "Atlantic salmon fillets",
+      "searchTerm": "salmon fillet fresh",
+      "amount": "1.5 lbs",
+      "meal": "Grilled Salmon with Asparagus",
+      "day": "Thursday",
+      "category": "Proteins & Meat",
+      "hebUrl": "https://www.heb.com/search?q=salmon%20fillet%20fresh",
+      "estimatedPrice": 15.99
+    },
+    {
+      "id": "item-25",
+      "name": "Fresh asparagus",
+      "searchTerm": "asparagus fresh",
+      "amount": "1 bunch",
+      "meal": "Grilled Salmon with Asparagus",
+      "day": "Thursday",
+      "category": "Produce",
+      "hebUrl": "https://www.heb.com/search?q=asparagus%20fresh",
+      "estimatedPrice": 4.99
+    },
+    {
+      "id": "item-26",
+      "name": "Lemon",
+      "searchTerm": "lemon",
+      "amount": "2",
+      "meal": "Grilled Salmon with Asparagus",
+      "day": "Thursday",
+      "category": "Produce",
+      "hebUrl": "https://www.heb.com/search?q=lemon",
+      "estimatedPrice": 0.5
+    },
+    {
+      "id": "item-27",
+      "name": "Olive oil",
+      "searchTerm": "olive oil extra virgin",
+      "amount": "1 bottle",
+      "meal": "Grilled Salmon with Asparagus",
+      "day": "Thursday",
+      "category": "Pantry & Dry Goods",
+      "hebUrl": "https://www.heb.com/search?q=olive%20oil%20extra%20virgin",
+      "estimatedPrice": 8.99
+    },
+    {
+      "id": "item-28",
+      "name": "Garlic",
+      "searchTerm": "garlic",
+      "amount": "1 bulb",
+      "meal": "Grilled Salmon with Asparagus",
+      "day": "Thursday",
+      "category": "Produce",
+      "hebUrl": "https://www.heb.com/search?q=garlic",
+      "estimatedPrice": 0.99
+    },
+    {
+      "id": "item-29",
+      "name": "Sea salt",
+      "searchTerm": "sea salt",
+      "amount": "1 container",
+      "meal": "Grilled Salmon with Asparagus",
+      "day": "Thursday",
+      "category": "Other",
+      "hebUrl": "https://www.heb.com/search?q=sea%20salt",
+      "estimatedPrice": 4.99
+    },
+    {
+      "id": "item-30",
+      "name": "Cod fillets",
+      "searchTerm": "cod fillet fresh",
+      "amount": "1.5 lbs",
+      "meal": "Pan-Seared Cod with Lemon Butter",
+      "day": "Friday",
+      "category": "Proteins & Meat",
+      "hebUrl": "https://www.heb.com/search?q=cod%20fillet%20fresh",
+      "estimatedPrice": 12.99
+    },
+    {
+      "id": "item-31",
+      "name": "Unsalted butter",
+      "searchTerm": "butter unsalted",
+      "amount": "1 stick",
+      "meal": "Pan-Seared Cod with Lemon Butter",
+      "day": "Friday",
+      "category": "Dairy & Eggs",
+      "hebUrl": "https://www.heb.com/search?q=butter%20unsalted",
+      "estimatedPrice": 4.99
+    },
+    {
+      "id": "item-32",
+      "name": "Fresh parsley",
+      "searchTerm": "parsley fresh",
+      "amount": "1 bunch",
+      "meal": "Pan-Seared Cod with Lemon Butter",
+      "day": "Friday",
+      "category": "Produce",
+      "hebUrl": "https://www.heb.com/search?q=parsley%20fresh",
+      "estimatedPrice": 1.99
+    },
+    {
+      "id": "item-33",
+      "name": "Capers",
+      "searchTerm": "capers",
+      "amount": "1 jar",
+      "meal": "Pan-Seared Cod with Lemon Butter",
+      "day": "Friday",
+      "category": "Pantry & Dry Goods",
+      "hebUrl": "https://www.heb.com/search?q=capers",
+      "estimatedPrice": 3.49
+    },
+    {
+      "id": "item-34",
+      "name": "White wine",
+      "searchTerm": "white wine cooking",
+      "amount": "1 bottle",
+      "meal": "Pan-Seared Cod with Lemon Butter",
+      "day": "Friday",
+      "category": "Beverages",
+      "hebUrl": "https://www.heb.com/search?q=white%20wine%20cooking",
+      "estimatedPrice": 4.99
+    },
+    {
+      "id": "item-35",
+      "name": "Green beans",
+      "searchTerm": "green beans fresh",
+      "amount": "1 lb",
+      "meal": "Pan-Seared Cod with Lemon Butter",
+      "day": "Friday",
+      "category": "Produce",
+      "hebUrl": "https://www.heb.com/search?q=green%20beans%20fresh",
+      "estimatedPrice": 2.99
+    },
+    {
+      "id": "item-36",
+      "name": "Chicken breast",
+      "searchTerm": "chicken breast boneless",
+      "amount": "2 lbs",
+      "meal": "Mediterranean Chicken Bowl",
+      "day": "Saturday",
+      "category": "Proteins & Meat",
+      "hebUrl": "https://www.heb.com/search?q=chicken%20breast%20boneless",
+      "estimatedPrice": 4.99
+    },
+    {
+      "id": "item-37",
+      "name": "Cucumber",
+      "searchTerm": "cucumber",
+      "amount": "2",
+      "meal": "Mediterranean Chicken Bowl",
+      "day": "Saturday",
+      "category": "Produce",
+      "hebUrl": "https://www.heb.com/search?q=cucumber",
+      "estimatedPrice": 0.79
+    },
+    {
+      "id": "item-38",
+      "name": "Cherry tomatoes",
+      "searchTerm": "tomatoes cherry",
+      "amount": "1 pint",
+      "meal": "Mediterranean Chicken Bowl",
+      "day": "Saturday",
+      "category": "Produce",
+      "hebUrl": "https://www.heb.com/search?q=tomatoes%20cherry",
+      "estimatedPrice": 3.49
+    },
+    {
+      "id": "item-39",
+      "name": "Feta cheese",
+      "searchTerm": "feta cheese",
+      "amount": "8 oz",
+      "meal": "Mediterranean Chicken Bowl",
+      "day": "Saturday",
+      "category": "Dairy & Eggs",
+      "hebUrl": "https://www.heb.com/search?q=feta%20cheese",
+      "estimatedPrice": 5.99
+    },
+    {
+      "id": "item-40",
+      "name": "Quinoa",
+      "searchTerm": "quinoa",
+      "amount": "2 lbs",
+      "meal": "Mediterranean Chicken Bowl",
+      "day": "Saturday",
+      "category": "Pantry & Dry Goods",
+      "hebUrl": "https://www.heb.com/search?q=quinoa",
+      "estimatedPrice": 6.99
+    },
+    {
+      "id": "item-41",
+      "name": "Hummus",
+      "searchTerm": "hummus",
+      "amount": "10 oz",
+      "meal": "Mediterranean Chicken Bowl",
+      "day": "Saturday",
+      "category": "Pantry & Dry Goods",
+      "hebUrl": "https://www.heb.com/search?q=hummus",
+      "estimatedPrice": 3.99
+    },
+    {
+      "id": "item-42",
+      "name": "Red onion",
+      "searchTerm": "red onion",
+      "amount": "1",
+      "meal": "Mediterranean Chicken Bowl",
+      "day": "Saturday",
+      "category": "Produce",
+      "hebUrl": "https://www.heb.com/search?q=red%20onion",
+      "estimatedPrice": 0.89
+    }
+  ],
+  "byCategory": {
+    "Proteins & Meat": [
+      {
+        "id": "item-0",
+        "name": "Pork tenderloin",
+        "searchTerm": "pork tenderloin",
+        "amount": "1.5 lbs",
+        "meal": "Pork Tenderloin with Roasted Vegetables",
+        "day": "Sunday",
+        "category": "Proteins & Meat",
+        "hebUrl": "https://www.heb.com/search?q=pork%20tenderloin",
+        "estimatedPrice": 5.99
+      },
+      {
+        "id": "item-6",
+        "name": "Ribeye steak",
+        "searchTerm": "ribeye steak thin",
+        "amount": "1.5 lbs",
+        "meal": "Korean Beef Bulgogi Bowl",
+        "day": "Monday",
+        "category": "Proteins & Meat",
+        "hebUrl": "https://www.heb.com/search?q=ribeye%20steak%20thin",
+        "estimatedPrice": 14.99
+      },
+      {
+        "id": "item-18",
+        "name": "Chicken thighs",
+        "searchTerm": "chicken thighs boneless",
+        "amount": "2 lbs",
+        "meal": "Chicken Tikka Masala",
+        "day": "Wednesday",
+        "category": "Proteins & Meat",
+        "hebUrl": "https://www.heb.com/search?q=chicken%20thighs%20boneless",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-24",
+        "name": "Atlantic salmon fillets",
+        "searchTerm": "salmon fillet fresh",
+        "amount": "1.5 lbs",
+        "meal": "Grilled Salmon with Asparagus",
+        "day": "Thursday",
+        "category": "Proteins & Meat",
+        "hebUrl": "https://www.heb.com/search?q=salmon%20fillet%20fresh",
+        "estimatedPrice": 15.99
+      },
+      {
+        "id": "item-30",
+        "name": "Cod fillets",
+        "searchTerm": "cod fillet fresh",
+        "amount": "1.5 lbs",
+        "meal": "Pan-Seared Cod with Lemon Butter",
+        "day": "Friday",
+        "category": "Proteins & Meat",
+        "hebUrl": "https://www.heb.com/search?q=cod%20fillet%20fresh",
+        "estimatedPrice": 12.99
+      },
+      {
+        "id": "item-36",
+        "name": "Chicken breast",
+        "searchTerm": "chicken breast boneless",
+        "amount": "2 lbs",
+        "meal": "Mediterranean Chicken Bowl",
+        "day": "Saturday",
+        "category": "Proteins & Meat",
+        "hebUrl": "https://www.heb.com/search?q=chicken%20breast%20boneless",
+        "estimatedPrice": 4.99
+      }
+    ],
+    "Other": [
+      {
+        "id": "item-1",
+        "name": "Brussels sprouts",
+        "searchTerm": "brussels sprouts",
+        "amount": "1.5 lbs",
+        "meal": "Pork Tenderloin with Roasted Vegetables",
+        "day": "Sunday",
+        "category": "Other",
+        "hebUrl": "https://www.heb.com/search?q=brussels%20sprouts",
+        "estimatedPrice": 3.49
+      },
+      {
+        "id": "item-3",
+        "name": "Dijon mustard",
+        "searchTerm": "dijon mustard",
+        "amount": "1 jar",
+        "meal": "Pork Tenderloin with Roasted Vegetables",
+        "day": "Sunday",
+        "category": "Other",
+        "hebUrl": "https://www.heb.com/search?q=dijon%20mustard",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-4",
+        "name": "Fresh rosemary",
+        "searchTerm": "rosemary fresh",
+        "amount": "1 bunch",
+        "meal": "Pork Tenderloin with Roasted Vegetables",
+        "day": "Sunday",
+        "category": "Other",
+        "hebUrl": "https://www.heb.com/search?q=rosemary%20fresh",
+        "estimatedPrice": 2.49
+      },
+      {
+        "id": "item-12",
+        "name": "Chickpeas",
+        "searchTerm": "chickpeas",
+        "amount": "2 cans",
+        "meal": "Vegetable Curry with Chickpeas",
+        "day": "Tuesday",
+        "category": "Other",
+        "hebUrl": "https://www.heb.com/search?q=chickpeas",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-15",
+        "name": "Curry paste",
+        "searchTerm": "curry paste",
+        "amount": "1 jar",
+        "meal": "Vegetable Curry with Chickpeas",
+        "day": "Tuesday",
+        "category": "Other",
+        "hebUrl": "https://www.heb.com/search?q=curry%20paste",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-23",
+        "name": "Fresh ginger",
+        "searchTerm": "ginger root",
+        "amount": "1 piece",
+        "meal": "Chicken Tikka Masala",
+        "day": "Wednesday",
+        "category": "Other",
+        "hebUrl": "https://www.heb.com/search?q=ginger%20root",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-29",
+        "name": "Sea salt",
+        "searchTerm": "sea salt",
+        "amount": "1 container",
+        "meal": "Grilled Salmon with Asparagus",
+        "day": "Thursday",
+        "category": "Other",
+        "hebUrl": "https://www.heb.com/search?q=sea%20salt",
+        "estimatedPrice": 4.99
+      }
+    ],
+    "Produce": [
+      {
+        "id": "item-2",
+        "name": "Sweet potatoes",
+        "searchTerm": "sweet potatoes",
+        "amount": "2 lbs",
+        "meal": "Pork Tenderloin with Roasted Vegetables",
+        "day": "Sunday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=sweet%20potatoes",
+        "estimatedPrice": 1.29
+      },
+      {
+        "id": "item-7",
+        "name": "Asian pear",
+        "searchTerm": "asian pear",
+        "amount": "1",
+        "meal": "Korean Beef Bulgogi Bowl",
+        "day": "Monday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=asian%20pear",
+        "estimatedPrice": 2.49
+      },
+      {
+        "id": "item-14",
+        "name": "Spinach",
+        "searchTerm": "spinach fresh",
+        "amount": "10 oz",
+        "meal": "Vegetable Curry with Chickpeas",
+        "day": "Tuesday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=spinach%20fresh",
+        "estimatedPrice": 3.49
+      },
+      {
+        "id": "item-17",
+        "name": "Yellow onion",
+        "searchTerm": "yellow onion",
+        "amount": "1",
+        "meal": "Vegetable Curry with Chickpeas",
+        "day": "Tuesday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=yellow%20onion",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-25",
+        "name": "Fresh asparagus",
+        "searchTerm": "asparagus fresh",
+        "amount": "1 bunch",
+        "meal": "Grilled Salmon with Asparagus",
+        "day": "Thursday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=asparagus%20fresh",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-26",
+        "name": "Lemon",
+        "searchTerm": "lemon",
+        "amount": "2",
+        "meal": "Grilled Salmon with Asparagus",
+        "day": "Thursday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=lemon",
+        "estimatedPrice": 0.5
+      },
+      {
+        "id": "item-28",
+        "name": "Garlic",
+        "searchTerm": "garlic",
+        "amount": "1 bulb",
+        "meal": "Grilled Salmon with Asparagus",
+        "day": "Thursday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=garlic",
+        "estimatedPrice": 0.99
+      },
+      {
+        "id": "item-32",
+        "name": "Fresh parsley",
+        "searchTerm": "parsley fresh",
+        "amount": "1 bunch",
+        "meal": "Pan-Seared Cod with Lemon Butter",
+        "day": "Friday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=parsley%20fresh",
+        "estimatedPrice": 1.99
+      },
+      {
+        "id": "item-35",
+        "name": "Green beans",
+        "searchTerm": "green beans fresh",
+        "amount": "1 lb",
+        "meal": "Pan-Seared Cod with Lemon Butter",
+        "day": "Friday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=green%20beans%20fresh",
+        "estimatedPrice": 2.99
+      },
+      {
+        "id": "item-37",
+        "name": "Cucumber",
+        "searchTerm": "cucumber",
+        "amount": "2",
+        "meal": "Mediterranean Chicken Bowl",
+        "day": "Saturday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=cucumber",
+        "estimatedPrice": 0.79
+      },
+      {
+        "id": "item-38",
+        "name": "Cherry tomatoes",
+        "searchTerm": "tomatoes cherry",
+        "amount": "1 pint",
+        "meal": "Mediterranean Chicken Bowl",
+        "day": "Saturday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=tomatoes%20cherry",
+        "estimatedPrice": 3.49
+      },
+      {
+        "id": "item-42",
+        "name": "Red onion",
+        "searchTerm": "red onion",
+        "amount": "1",
+        "meal": "Mediterranean Chicken Bowl",
+        "day": "Saturday",
+        "category": "Produce",
+        "hebUrl": "https://www.heb.com/search?q=red%20onion",
+        "estimatedPrice": 0.89
+      }
+    ],
+    "Pantry & Dry Goods": [
+      {
+        "id": "item-5",
+        "name": "Balsamic vinegar",
+        "searchTerm": "balsamic vinegar",
+        "amount": "1 bottle",
+        "meal": "Pork Tenderloin with Roasted Vegetables",
+        "day": "Sunday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=balsamic%20vinegar",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-8",
+        "name": "Gochujang",
+        "searchTerm": "gochujang",
+        "amount": "1 container",
+        "meal": "Korean Beef Bulgogi Bowl",
+        "day": "Monday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=gochujang",
+        "estimatedPrice": 5.99
+      },
+      {
+        "id": "item-9",
+        "name": "Jasmine rice",
+        "searchTerm": "jasmine rice",
+        "amount": "2 lbs",
+        "meal": "Korean Beef Bulgogi Bowl",
+        "day": "Monday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=jasmine%20rice",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-10",
+        "name": "Sesame seeds",
+        "searchTerm": "sesame seeds",
+        "amount": "1 container",
+        "meal": "Korean Beef Bulgogi Bowl",
+        "day": "Monday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=sesame%20seeds",
+        "estimatedPrice": 3.99
+      },
+      {
+        "id": "item-11",
+        "name": "Kimchi",
+        "searchTerm": "kimchi",
+        "amount": "16 oz",
+        "meal": "Korean Beef Bulgogi Bowl",
+        "day": "Monday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=kimchi",
+        "estimatedPrice": 6.99
+      },
+      {
+        "id": "item-21",
+        "name": "Basmati rice",
+        "searchTerm": "basmati rice",
+        "amount": "2 lbs",
+        "meal": "Chicken Tikka Masala",
+        "day": "Wednesday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=basmati%20rice",
+        "estimatedPrice": 5.99
+      },
+      {
+        "id": "item-22",
+        "name": "Tikka masala sauce",
+        "searchTerm": "tikka masala sauce",
+        "amount": "1 jar",
+        "meal": "Chicken Tikka Masala",
+        "day": "Wednesday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=tikka%20masala%20sauce",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-27",
+        "name": "Olive oil",
+        "searchTerm": "olive oil extra virgin",
+        "amount": "1 bottle",
+        "meal": "Grilled Salmon with Asparagus",
+        "day": "Thursday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=olive%20oil%20extra%20virgin",
+        "estimatedPrice": 8.99
+      },
+      {
+        "id": "item-33",
+        "name": "Capers",
+        "searchTerm": "capers",
+        "amount": "1 jar",
+        "meal": "Pan-Seared Cod with Lemon Butter",
+        "day": "Friday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=capers",
+        "estimatedPrice": 3.49
+      },
+      {
+        "id": "item-40",
+        "name": "Quinoa",
+        "searchTerm": "quinoa",
+        "amount": "2 lbs",
+        "meal": "Mediterranean Chicken Bowl",
+        "day": "Saturday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=quinoa",
+        "estimatedPrice": 6.99
+      },
+      {
+        "id": "item-41",
+        "name": "Hummus",
+        "searchTerm": "hummus",
+        "amount": "10 oz",
+        "meal": "Mediterranean Chicken Bowl",
+        "day": "Saturday",
+        "category": "Pantry & Dry Goods",
+        "hebUrl": "https://www.heb.com/search?q=hummus",
+        "estimatedPrice": 3.99
+      }
+    ],
+    "Dairy & Eggs": [
+      {
+        "id": "item-13",
+        "name": "Coconut milk",
+        "searchTerm": "coconut milk",
+        "amount": "2 cans",
+        "meal": "Vegetable Curry with Chickpeas",
+        "day": "Tuesday",
+        "category": "Dairy & Eggs",
+        "hebUrl": "https://www.heb.com/search?q=coconut%20milk",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-19",
+        "name": "Greek yogurt",
+        "searchTerm": "greek yogurt plain",
+        "amount": "16 oz",
+        "meal": "Chicken Tikka Masala",
+        "day": "Wednesday",
+        "category": "Dairy & Eggs",
+        "hebUrl": "https://www.heb.com/search?q=greek%20yogurt%20plain",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-20",
+        "name": "Heavy cream",
+        "searchTerm": "heavy cream",
+        "amount": "1 pint",
+        "meal": "Chicken Tikka Masala",
+        "day": "Wednesday",
+        "category": "Dairy & Eggs",
+        "hebUrl": "https://www.heb.com/search?q=heavy%20cream",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-31",
+        "name": "Unsalted butter",
+        "searchTerm": "butter unsalted",
+        "amount": "1 stick",
+        "meal": "Pan-Seared Cod with Lemon Butter",
+        "day": "Friday",
+        "category": "Dairy & Eggs",
+        "hebUrl": "https://www.heb.com/search?q=butter%20unsalted",
+        "estimatedPrice": 4.99
+      },
+      {
+        "id": "item-39",
+        "name": "Feta cheese",
+        "searchTerm": "feta cheese",
+        "amount": "8 oz",
+        "meal": "Mediterranean Chicken Bowl",
+        "day": "Saturday",
+        "category": "Dairy & Eggs",
+        "hebUrl": "https://www.heb.com/search?q=feta%20cheese",
+        "estimatedPrice": 5.99
+      }
+    ],
+    "Bakery": [
+      {
+        "id": "item-16",
+        "name": "Naan bread",
+        "searchTerm": "naan bread",
+        "amount": "1 pack",
+        "meal": "Vegetable Curry with Chickpeas",
+        "day": "Tuesday",
+        "category": "Bakery",
+        "hebUrl": "https://www.heb.com/search?q=naan%20bread",
+        "estimatedPrice": 4.99
+      }
+    ],
+    "Beverages": [
+      {
+        "id": "item-34",
+        "name": "White wine",
+        "searchTerm": "white wine cooking",
+        "amount": "1 bottle",
+        "meal": "Pan-Seared Cod with Lemon Butter",
+        "day": "Friday",
+        "category": "Beverages",
+        "hebUrl": "https://www.heb.com/search?q=white%20wine%20cooking",
+        "estimatedPrice": 4.99
+      }
+    ]
+  },
+  "byMeal": {
+    "Sunday": {
+      "name": "Pork Tenderloin with Roasted Vegetables",
+      "category": "american",
+      "difficulty": "medium",
+      "prepTime": "45 min",
+      "ingredients": [
+        {
+          "id": "item-0",
+          "name": "Pork tenderloin",
+          "searchTerm": "pork tenderloin",
+          "amount": "1.5 lbs",
+          "meal": "Pork Tenderloin with Roasted Vegetables",
+          "day": "Sunday",
+          "category": "Proteins & Meat",
+          "hebUrl": "https://www.heb.com/search?q=pork%20tenderloin",
+          "estimatedPrice": 5.99
+        },
+        {
+          "id": "item-1",
+          "name": "Brussels sprouts",
+          "searchTerm": "brussels sprouts",
+          "amount": "1.5 lbs",
+          "meal": "Pork Tenderloin with Roasted Vegetables",
+          "day": "Sunday",
+          "category": "Other",
+          "hebUrl": "https://www.heb.com/search?q=brussels%20sprouts",
+          "estimatedPrice": 3.49
+        },
+        {
+          "id": "item-2",
+          "name": "Sweet potatoes",
+          "searchTerm": "sweet potatoes",
+          "amount": "2 lbs",
+          "meal": "Pork Tenderloin with Roasted Vegetables",
+          "day": "Sunday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=sweet%20potatoes",
+          "estimatedPrice": 1.29
+        },
+        {
+          "id": "item-3",
+          "name": "Dijon mustard",
+          "searchTerm": "dijon mustard",
+          "amount": "1 jar",
+          "meal": "Pork Tenderloin with Roasted Vegetables",
+          "day": "Sunday",
+          "category": "Other",
+          "hebUrl": "https://www.heb.com/search?q=dijon%20mustard",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-4",
+          "name": "Fresh rosemary",
+          "searchTerm": "rosemary fresh",
+          "amount": "1 bunch",
+          "meal": "Pork Tenderloin with Roasted Vegetables",
+          "day": "Sunday",
+          "category": "Other",
+          "hebUrl": "https://www.heb.com/search?q=rosemary%20fresh",
+          "estimatedPrice": 2.49
+        },
+        {
+          "id": "item-5",
+          "name": "Balsamic vinegar",
+          "searchTerm": "balsamic vinegar",
+          "amount": "1 bottle",
+          "meal": "Pork Tenderloin with Roasted Vegetables",
+          "day": "Sunday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=balsamic%20vinegar",
+          "estimatedPrice": 4.99
+        }
+      ]
+    },
+    "Monday": {
+      "name": "Korean Beef Bulgogi Bowl",
+      "category": "asian",
+      "difficulty": "medium",
+      "prepTime": "40 min",
+      "ingredients": [
+        {
+          "id": "item-6",
+          "name": "Ribeye steak",
+          "searchTerm": "ribeye steak thin",
+          "amount": "1.5 lbs",
+          "meal": "Korean Beef Bulgogi Bowl",
+          "day": "Monday",
+          "category": "Proteins & Meat",
+          "hebUrl": "https://www.heb.com/search?q=ribeye%20steak%20thin",
+          "estimatedPrice": 14.99
+        },
+        {
+          "id": "item-7",
+          "name": "Asian pear",
+          "searchTerm": "asian pear",
+          "amount": "1",
+          "meal": "Korean Beef Bulgogi Bowl",
+          "day": "Monday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=asian%20pear",
+          "estimatedPrice": 2.49
+        },
+        {
+          "id": "item-8",
+          "name": "Gochujang",
+          "searchTerm": "gochujang",
+          "amount": "1 container",
+          "meal": "Korean Beef Bulgogi Bowl",
+          "day": "Monday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=gochujang",
+          "estimatedPrice": 5.99
+        },
+        {
+          "id": "item-9",
+          "name": "Jasmine rice",
+          "searchTerm": "jasmine rice",
+          "amount": "2 lbs",
+          "meal": "Korean Beef Bulgogi Bowl",
+          "day": "Monday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=jasmine%20rice",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-10",
+          "name": "Sesame seeds",
+          "searchTerm": "sesame seeds",
+          "amount": "1 container",
+          "meal": "Korean Beef Bulgogi Bowl",
+          "day": "Monday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=sesame%20seeds",
+          "estimatedPrice": 3.99
+        },
+        {
+          "id": "item-11",
+          "name": "Kimchi",
+          "searchTerm": "kimchi",
+          "amount": "16 oz",
+          "meal": "Korean Beef Bulgogi Bowl",
+          "day": "Monday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=kimchi",
+          "estimatedPrice": 6.99
+        }
+      ]
+    },
+    "Tuesday": {
+      "name": "Vegetable Curry with Chickpeas",
+      "category": "vegetarian",
+      "difficulty": "easy",
+      "prepTime": "35 min",
+      "ingredients": [
+        {
+          "id": "item-12",
+          "name": "Chickpeas",
+          "searchTerm": "chickpeas",
+          "amount": "2 cans",
+          "meal": "Vegetable Curry with Chickpeas",
+          "day": "Tuesday",
+          "category": "Other",
+          "hebUrl": "https://www.heb.com/search?q=chickpeas",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-13",
+          "name": "Coconut milk",
+          "searchTerm": "coconut milk",
+          "amount": "2 cans",
+          "meal": "Vegetable Curry with Chickpeas",
+          "day": "Tuesday",
+          "category": "Dairy & Eggs",
+          "hebUrl": "https://www.heb.com/search?q=coconut%20milk",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-14",
+          "name": "Spinach",
+          "searchTerm": "spinach fresh",
+          "amount": "10 oz",
+          "meal": "Vegetable Curry with Chickpeas",
+          "day": "Tuesday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=spinach%20fresh",
+          "estimatedPrice": 3.49
+        },
+        {
+          "id": "item-15",
+          "name": "Curry paste",
+          "searchTerm": "curry paste",
+          "amount": "1 jar",
+          "meal": "Vegetable Curry with Chickpeas",
+          "day": "Tuesday",
+          "category": "Other",
+          "hebUrl": "https://www.heb.com/search?q=curry%20paste",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-16",
+          "name": "Naan bread",
+          "searchTerm": "naan bread",
+          "amount": "1 pack",
+          "meal": "Vegetable Curry with Chickpeas",
+          "day": "Tuesday",
+          "category": "Bakery",
+          "hebUrl": "https://www.heb.com/search?q=naan%20bread",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-17",
+          "name": "Yellow onion",
+          "searchTerm": "yellow onion",
+          "amount": "1",
+          "meal": "Vegetable Curry with Chickpeas",
+          "day": "Tuesday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=yellow%20onion",
+          "estimatedPrice": 4.99
+        }
+      ]
+    },
+    "Wednesday": {
+      "name": "Chicken Tikka Masala",
+      "category": "indian",
+      "difficulty": "medium",
+      "prepTime": "45 min",
+      "ingredients": [
+        {
+          "id": "item-18",
+          "name": "Chicken thighs",
+          "searchTerm": "chicken thighs boneless",
+          "amount": "2 lbs",
+          "meal": "Chicken Tikka Masala",
+          "day": "Wednesday",
+          "category": "Proteins & Meat",
+          "hebUrl": "https://www.heb.com/search?q=chicken%20thighs%20boneless",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-19",
+          "name": "Greek yogurt",
+          "searchTerm": "greek yogurt plain",
+          "amount": "16 oz",
+          "meal": "Chicken Tikka Masala",
+          "day": "Wednesday",
+          "category": "Dairy & Eggs",
+          "hebUrl": "https://www.heb.com/search?q=greek%20yogurt%20plain",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-20",
+          "name": "Heavy cream",
+          "searchTerm": "heavy cream",
+          "amount": "1 pint",
+          "meal": "Chicken Tikka Masala",
+          "day": "Wednesday",
+          "category": "Dairy & Eggs",
+          "hebUrl": "https://www.heb.com/search?q=heavy%20cream",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-21",
+          "name": "Basmati rice",
+          "searchTerm": "basmati rice",
+          "amount": "2 lbs",
+          "meal": "Chicken Tikka Masala",
+          "day": "Wednesday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=basmati%20rice",
+          "estimatedPrice": 5.99
+        },
+        {
+          "id": "item-22",
+          "name": "Tikka masala sauce",
+          "searchTerm": "tikka masala sauce",
+          "amount": "1 jar",
+          "meal": "Chicken Tikka Masala",
+          "day": "Wednesday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=tikka%20masala%20sauce",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-23",
+          "name": "Fresh ginger",
+          "searchTerm": "ginger root",
+          "amount": "1 piece",
+          "meal": "Chicken Tikka Masala",
+          "day": "Wednesday",
+          "category": "Other",
+          "hebUrl": "https://www.heb.com/search?q=ginger%20root",
+          "estimatedPrice": 4.99
+        }
+      ]
+    },
+    "Thursday": {
+      "name": "Grilled Salmon with Asparagus",
+      "category": "seafood",
+      "difficulty": "medium",
+      "prepTime": "25 min",
+      "ingredients": [
+        {
+          "id": "item-24",
+          "name": "Atlantic salmon fillets",
+          "searchTerm": "salmon fillet fresh",
+          "amount": "1.5 lbs",
+          "meal": "Grilled Salmon with Asparagus",
+          "day": "Thursday",
+          "category": "Proteins & Meat",
+          "hebUrl": "https://www.heb.com/search?q=salmon%20fillet%20fresh",
+          "estimatedPrice": 15.99
+        },
+        {
+          "id": "item-25",
+          "name": "Fresh asparagus",
+          "searchTerm": "asparagus fresh",
+          "amount": "1 bunch",
+          "meal": "Grilled Salmon with Asparagus",
+          "day": "Thursday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=asparagus%20fresh",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-26",
+          "name": "Lemon",
+          "searchTerm": "lemon",
+          "amount": "2",
+          "meal": "Grilled Salmon with Asparagus",
+          "day": "Thursday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=lemon",
+          "estimatedPrice": 0.5
+        },
+        {
+          "id": "item-27",
+          "name": "Olive oil",
+          "searchTerm": "olive oil extra virgin",
+          "amount": "1 bottle",
+          "meal": "Grilled Salmon with Asparagus",
+          "day": "Thursday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=olive%20oil%20extra%20virgin",
+          "estimatedPrice": 8.99
+        },
+        {
+          "id": "item-28",
+          "name": "Garlic",
+          "searchTerm": "garlic",
+          "amount": "1 bulb",
+          "meal": "Grilled Salmon with Asparagus",
+          "day": "Thursday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=garlic",
+          "estimatedPrice": 0.99
+        },
+        {
+          "id": "item-29",
+          "name": "Sea salt",
+          "searchTerm": "sea salt",
+          "amount": "1 container",
+          "meal": "Grilled Salmon with Asparagus",
+          "day": "Thursday",
+          "category": "Other",
+          "hebUrl": "https://www.heb.com/search?q=sea%20salt",
+          "estimatedPrice": 4.99
+        }
+      ]
+    },
+    "Friday": {
+      "name": "Pan-Seared Cod with Lemon Butter",
+      "category": "seafood",
+      "difficulty": "easy",
+      "prepTime": "20 min",
+      "ingredients": [
+        {
+          "id": "item-30",
+          "name": "Cod fillets",
+          "searchTerm": "cod fillet fresh",
+          "amount": "1.5 lbs",
+          "meal": "Pan-Seared Cod with Lemon Butter",
+          "day": "Friday",
+          "category": "Proteins & Meat",
+          "hebUrl": "https://www.heb.com/search?q=cod%20fillet%20fresh",
+          "estimatedPrice": 12.99
+        },
+        {
+          "id": "item-31",
+          "name": "Unsalted butter",
+          "searchTerm": "butter unsalted",
+          "amount": "1 stick",
+          "meal": "Pan-Seared Cod with Lemon Butter",
+          "day": "Friday",
+          "category": "Dairy & Eggs",
+          "hebUrl": "https://www.heb.com/search?q=butter%20unsalted",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-32",
+          "name": "Fresh parsley",
+          "searchTerm": "parsley fresh",
+          "amount": "1 bunch",
+          "meal": "Pan-Seared Cod with Lemon Butter",
+          "day": "Friday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=parsley%20fresh",
+          "estimatedPrice": 1.99
+        },
+        {
+          "id": "item-33",
+          "name": "Capers",
+          "searchTerm": "capers",
+          "amount": "1 jar",
+          "meal": "Pan-Seared Cod with Lemon Butter",
+          "day": "Friday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=capers",
+          "estimatedPrice": 3.49
+        },
+        {
+          "id": "item-34",
+          "name": "White wine",
+          "searchTerm": "white wine cooking",
+          "amount": "1 bottle",
+          "meal": "Pan-Seared Cod with Lemon Butter",
+          "day": "Friday",
+          "category": "Beverages",
+          "hebUrl": "https://www.heb.com/search?q=white%20wine%20cooking",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-35",
+          "name": "Green beans",
+          "searchTerm": "green beans fresh",
+          "amount": "1 lb",
+          "meal": "Pan-Seared Cod with Lemon Butter",
+          "day": "Friday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=green%20beans%20fresh",
+          "estimatedPrice": 2.99
+        }
+      ]
+    },
+    "Saturday": {
+      "name": "Mediterranean Chicken Bowl",
+      "category": "mediterranean",
+      "difficulty": "easy",
+      "prepTime": "30 min",
+      "ingredients": [
+        {
+          "id": "item-36",
+          "name": "Chicken breast",
+          "searchTerm": "chicken breast boneless",
+          "amount": "2 lbs",
+          "meal": "Mediterranean Chicken Bowl",
+          "day": "Saturday",
+          "category": "Proteins & Meat",
+          "hebUrl": "https://www.heb.com/search?q=chicken%20breast%20boneless",
+          "estimatedPrice": 4.99
+        },
+        {
+          "id": "item-37",
+          "name": "Cucumber",
+          "searchTerm": "cucumber",
+          "amount": "2",
+          "meal": "Mediterranean Chicken Bowl",
+          "day": "Saturday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=cucumber",
+          "estimatedPrice": 0.79
+        },
+        {
+          "id": "item-38",
+          "name": "Cherry tomatoes",
+          "searchTerm": "tomatoes cherry",
+          "amount": "1 pint",
+          "meal": "Mediterranean Chicken Bowl",
+          "day": "Saturday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=tomatoes%20cherry",
+          "estimatedPrice": 3.49
+        },
+        {
+          "id": "item-39",
+          "name": "Feta cheese",
+          "searchTerm": "feta cheese",
+          "amount": "8 oz",
+          "meal": "Mediterranean Chicken Bowl",
+          "day": "Saturday",
+          "category": "Dairy & Eggs",
+          "hebUrl": "https://www.heb.com/search?q=feta%20cheese",
+          "estimatedPrice": 5.99
+        },
+        {
+          "id": "item-40",
+          "name": "Quinoa",
+          "searchTerm": "quinoa",
+          "amount": "2 lbs",
+          "meal": "Mediterranean Chicken Bowl",
+          "day": "Saturday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=quinoa",
+          "estimatedPrice": 6.99
+        },
+        {
+          "id": "item-41",
+          "name": "Hummus",
+          "searchTerm": "hummus",
+          "amount": "10 oz",
+          "meal": "Mediterranean Chicken Bowl",
+          "day": "Saturday",
+          "category": "Pantry & Dry Goods",
+          "hebUrl": "https://www.heb.com/search?q=hummus",
+          "estimatedPrice": 3.99
+        },
+        {
+          "id": "item-42",
+          "name": "Red onion",
+          "searchTerm": "red onion",
+          "amount": "1",
+          "meal": "Mediterranean Chicken Bowl",
+          "day": "Saturday",
+          "category": "Produce",
+          "hebUrl": "https://www.heb.com/search?q=red%20onion",
+          "estimatedPrice": 0.89
+        }
+      ]
+    }
+  },
+  "budget": {
+    "allocated": 200,
+    "estimatedMealCost": 174,
+    "buffer": 17.400000000000002,
+    "totalWithBuffer": 191.4,
+    "remaining": 8.599999999999994
+  }
+}

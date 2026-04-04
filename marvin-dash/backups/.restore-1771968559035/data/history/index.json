@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "totalSize": 20416,
+  "files": [
+    {
+      "filename": "usage-2026-02-24-1771955374752.json",
+      "timestamp": 1771955374752,
+      "size": 819
+    },
+    {
+      "filename": "usage-2026-02-24-1771955400876.json",
+      "timestamp": 1771955400876,
+      "size": 936
+    },
+    {
+      "filename": "usage-2026-02-24-1771956600257.json",
+      "timestamp": 1771956600257,
+      "size": 936
+    },
+    {
+      "filename": "usage-2026-02-24-1771960500585.json",
+      "timestamp": 1771960500585,
+      "size": 934
+    },
+    {
+      "filename": "usage-2026-02-24-1771960800389.json",
+      "timestamp": 1771960800389,
+      "size": 934
+    },
+    {
+      "filename": "usage-2026-02-24-1771961100858.json",
+      "timestamp": 1771961100858,
+      "size": 932
+    },
+    {
+      "filename": "usage-2026-02-24-1771961700652.json",
+      "timestamp": 1771961700652,
+      "size": 934
+    },
+    {
+      "filename": "usage-2026-02-24-1771962000747.json",
+      "timestamp": 1771962000747,
+      "size": 936
+    },
+    {
+      "filename": "usage-2026-02-24-1771962600317.json",
+      "timestamp": 1771962600317,
+      "size": 933
+    },
+    {
+      "filename": "usage-2026-02-24-1771962900635.json",
+      "timestamp": 1771962900635,
+      "size": 934
+    },
+    {
+      "filename": "usage-2026-02-24-1771963500459.json",
+      "timestamp": 1771963500459,
+      "size": 933
+    },
+    {
+      "filename": "usage-2026-02-24-1771963800904.json",
+      "timestamp": 1771963800904,
+      "size": 933
+    },
+    {
+      "filename": "usage-2026-02-24-1771964400070.json",
+      "timestamp": 1771964400070,
+      "size": 932
+    },
+    {
+      "filename": "usage-2026-02-24-1771964700476.json",
+      "timestamp": 1771964700476,
+      "size": 935
+    },
+    {
+      "filename": "usage-2026-02-24-1771965300235.json",
+      "timestamp": 1771965300235,
+      "size": 931
+    },
+    {
+      "filename": "usage-2026-02-24-1771965600651.json",
+      "timestamp": 1771965600651,
+      "size": 933
+    },
+    {
+      "filename": "usage-2026-02-24-1771966200437.json",
+      "timestamp": 1771966200437,
+      "size": 935
+    },
+    {
+      "filename": "usage-2026-02-24-1771966500791.json",
+      "timestamp": 1771966500791,
+      "size": 930
+    },
+    {
+      "filename": "usage-2026-02-24-1771967100661.json",
+      "timestamp": 1771967100661,
+      "size": 933
+    },
+    {
+      "filename": "usage-2026-02-24-1771967400781.json",
+      "timestamp": 1771967400781,
+      "size": 931
+    },
+    {
+      "filename": "usage-2026-02-24-1771968000931.json",
+      "timestamp": 1771968000931,
+      "size": 929
+    },
+    {
+      "filename": "usage-2026-02-24-1771968300453.json",
+      "timestamp": 1771968300453,
+      "size": 933
+    }
+  ],
+  "oldestEntry": 1771955374752,
+  "newestEntry": 1771968300453
+}

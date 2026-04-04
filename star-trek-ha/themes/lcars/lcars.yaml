@@ -1,0 +1,214 @@
+# LCARS Theme for Home Assistant
+# Based on HA-LCARS by th3jesta
+# Color codes from TheLCARS.com
+
+LCARS Default: &LCARS_Default
+  # Card Mod Theme
+  card-mod-theme: "LCARS Default"
+  
+  # UI Colors
+  lcars-ui-background: "#000000"
+  lcars-ui-text: "#F5F6FA"
+  lcars-ui-primary: "#FF9900"
+  lcars-ui-secondary: "#CC99FF"
+  lcars-ui-accent: "#8899FF"
+  lcars-ui-warning: "#CC4444"
+  
+  # Card Colors
+  lcars-card-background: "#000000"
+  lcars-card-text: "#F5F6FA"
+  lcars-card-border: "#FF9900"
+  
+  # Header Colors (Blue in default theme)
+  lcars-header-bg: "#8899FF"
+  lcars-header-text: "#000000"
+  
+  # Middle Colors (Red/Purple in default theme)
+  lcars-middle-bg: "#CC4444"
+  lcars-middle-text: "#000000"
+  
+  # Footer Colors (Gray in default theme)
+  lcars-footer-bg: "#666688"
+  lcars-footer-text: "#000000"
+  
+  # Button Colors
+  lcars-button-bg: "#FF9900"
+  lcars-button-text: "#000000"
+  lcars-button-active: "#FFCC99"
+  lcars-button-inactive: "#333333"
+  
+  # Status Colors
+  lcars-status-online: "#999933"
+  lcars-status-offline: "#CC4444"
+  lcars-status-warning: "#FFCC99"
+  lcars-status-alert: "#FF2200"
+  
+  # Primary Color Palette
+  primary-color: "#FF9900"
+  primary-background-color: "#000000"
+  primary-text-color: "#F5F6FA"
+  secondary-background-color: "#111111"
+  secondary-text-color: "#F5F6FA"
+  
+  # Accent Colors
+  accent-color: "#CC99FF"
+  divider-color: "#333344"
+  
+  # State Colors
+  state-icon-color: "#FF9900"
+  state-icon-active-color: "#CC99FF"
+  state-icon-unavailable-color: "#666666"
+  
+  # Paper Card Colors
+  paper-card-background-color: "#000000"
+  paper-card-header-color: "#F5F6FA"
+  paper-item-icon-color: "#FF9900"
+  paper-item-icon-active-color: "#CC99FF"
+  
+  # Sidebar
+  sidebar-background-color: "#000000"
+  sidebar-text-color: "#F5F6FA"
+  sidebar-selected-text-color: "#FF9900"
+  sidebar-selected-icon-color: "#FF9900"
+  sidebar-icon-color: "#8899FF"
+  
+  # Slider
+  slider-color: "#FF9900"
+  slider-secondary-color: "#CC99FF"
+  slider-bar-color: "#333344"
+  
+  # Label Colors
+  label-badge-background-color: "#FF9900"
+  label-badge-text-color: "#000000"
+  label-badge-red: "#CC4444"
+  label-badge-green: "#999933"
+  label-badge-yellow: "#FFCC99"
+  label-badge-gray: "#666688"
+  
+  # Font
+  primary-font-family: "Antonio, Tungsten, sans-serif"
+  paper-font-common-base_-_font-family: "Antonio, Tungsten, sans-serif"
+  paper-font-common-code_-_font-family: "Antonio, Tungsten, sans-serif"
+  paper-font-body1_-_font-family: "Antonio, Tungsten, sans-serif"
+  paper-font-subhead_-_font-family: "Antonio, Tungsten, sans-serif"
+  paper-font-headline_-_font-family: "Antonio, Tungsten, sans-serif"
+  paper-font-caption_-_font-family: "Antonio, Tungsten, sans-serif"
+  paper-font-title_-_font-family: "Antonio, Tungsten, sans-serif"
+  
+  # Card Mod Styles
+  card-mod-root: |
+    :host {
+      --ha-card-background: #000000;
+      --ha-card-box-shadow: none;
+    }
+  
+  card-mod-card: |
+    ha-card {
+      background: #000000;
+      border: none;
+      box-shadow: none;
+      font-family: Antonio, Tungsten, sans-serif;
+    }
+
+# TNG Theme - Brighter colors like The Next Generation
+LCARS Next Generation:
+  <<: *LCARS_Default
+  
+  lcars-ui-primary: "#FFAA00"
+  lcars-ui-secondary: "#DD88FF"
+  lcars-ui-accent: "#99AAFF"
+  
+  lcars-header-bg: "#99AAFF"
+  lcars-middle-bg: "#FF6666"
+  lcars-footer-bg: "#7788AA"
+  
+  lcars-button-bg: "#FFAA00"
+  
+  primary-color: "#FFAA00"
+  accent-color: "#DD88FF"
+
+# Nemesis Theme - Blue/Dark theme from Nemesis movie
+LCARS Nemesis:
+  <<: *LCARS_Default
+  
+  lcars-ui-background: "#0A0A14"
+  lcars-ui-primary: "#6699FF"
+  lcars-ui-secondary: "#FF7744"
+  lcars-ui-accent: "#88BBFF"
+  
+  lcars-header-bg: "#2233FF"
+  lcars-middle-bg: "#CC6666"
+  lcars-footer-bg: "#52526A"
+  
+  lcars-button-bg: "#6699FF"
+  
+  primary-color: "#6699FF"
+  accent-color: "#FF7744"
+
+# Lower Decks Theme - Animated series style
+LCARS Lower Decks:
+  <<: *LCARS_Default
+  
+  lcars-ui-primary: "#FF7700"
+  lcars-ui-secondary: "#FFCC99"
+  lcars-ui-accent: "#FFAA44"
+  
+  lcars-header-bg: "#FFAA44"
+  lcars-middle-bg: "#FF4400"
+  lcars-footer-bg: "#CC5500"
+  
+  lcars-button-bg: "#FF7700"
+  
+  primary-color: "#FF7700"
+  accent-color: "#FFCC99"
+
+# Romulan Theme - Green-based
+LCARS Romulus:
+  <<: *LCARS_Default
+  
+  lcars-ui-primary: "#99AA22"
+  lcars-ui-secondary: "#CC4444"
+  lcars-ui-accent: "#99CC33"
+  
+  lcars-header-bg: "#99CC33"
+  lcars-middle-bg: "#CC4444"
+  lcars-footer-bg: "#556622"
+  
+  lcars-button-bg: "#99AA22"
+  
+  primary-color: "#99AA22"
+  accent-color: "#CC4444"
+
+# Cardassian Theme - Brown/Amber
+LCARS Cardassia:
+  <<: *LCARS_Default
+  
+  lcars-ui-primary: "#CC8833"
+  lcars-ui-secondary: "#AA6633"
+  lcars-ui-accent: "#DD9944"
+  
+  lcars-header-bg: "#DD9944"
+  lcars-middle-bg: "#996633"
+  lcars-footer-bg: "#774422"
+  
+  lcars-button-bg: "#CC8833"
+  
+  primary-color: "#CC8833"
+  accent-color: "#AA6633"
+
+# Klingon Theme - Red-based
+LCARS Kronos:
+  <<: *LCARS_Default
+  
+  lcars-ui-primary: "#CC2222"
+  lcars-ui-secondary: "#FF4400"
+  lcars-ui-accent: "#AA1111"
+  
+  lcars-header-bg: "#CC2222"
+  lcars-middle-bg: "#882222"
+  lcars-footer-bg: "#441111"
+  
+  lcars-button-bg: "#CC2222"
+  
+  primary-color: "#CC2222"
+  accent-color: "#FF4400"

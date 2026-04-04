@@ -1,0 +1,203 @@
+{
+  "preferences": {
+    "organicFirst": true,
+    "description": "Organic items are preferred by default. Only select conventional if organic unavailable.",
+    "lastUpdated": "2026-02-11T08:17:00.000Z"
+  },
+  "categoryPreferences": {
+    "produce": {
+      "priority": ["organic", "local", "conventional"],
+      "labels": {
+        "organic": ["organic", "USDA organic", "certified organic"],
+        "local": ["Texas grown", "local", "farm fresh"]
+      }
+    },
+    "proteins": {
+      "priority": ["organic", "grass-fed", "free-range", "antibiotic-free", "natural", "conventional"],
+      "labels": {
+        "organic": ["organic chicken", "organic beef", "organic pork"],
+        "grass-fed": ["grass-fed", "grass fed", "pasture raised"],
+        "free-range": ["free range", "cage free", "pasture raised"],
+        "antibiotic-free": ["no antibiotics ever", "antibiotic free", "raised without antibiotics"],
+        "wild-caught": ["wild caught", "wild-caught", "line caught"]
+      }
+    },
+    "dairy": {
+      "priority": ["organic", "grass-fed", "conventional"],
+      "labels": {
+        "organic": ["organic milk", "organic butter", "organic cheese", "organic yogurt"],
+        "grass-fed": ["grass-fed", "100% grass fed"]
+      }
+    },
+    "pantry": {
+      "priority": ["organic", "non-gmo", "conventional"],
+      "labels": {
+        "organic": ["organic", "USDA organic"],
+        "non-gmo": ["non-gmo", "non gmo", "no gmo"]
+      }
+    },
+    "grains": {
+      "priority": ["organic", "whole grain", "conventional"],
+      "labels": {
+        "organic": ["organic rice", "organic pasta", "organic bread"],
+        "whole-grain": ["whole grain", "100% whole wheat", "whole wheat"]
+      }
+    }
+  },
+  "itemSpecificPreferences": {
+    "milk": {
+      "preferred": "organic whole milk",
+      "fallback": ["whole milk", "2% milk"],
+      "avoid": ["skim milk", "fat-free"]
+    },
+    "eggs": {
+      "preferred": "organic free-range large eggs",
+      "fallback": ["free-range large eggs", "cage-free large eggs", "large eggs"],
+      "avoid": ["medium eggs", "small eggs"]
+    },
+    "chicken breast": {
+      "preferred": "organic chicken breast",
+      "fallback": ["antibiotic-free chicken breast", "natural chicken breast", "chicken breast"],
+      "avoid": []
+    },
+    "ground beef": {
+      "preferred": "organic grass-fed ground beef",
+      "fallback": ["grass-fed ground beef", "organic ground beef", "ground beef"],
+      "avoid": ["fatty ground beef"]
+    },
+    "steak": {
+      "preferred": "organic grass-fed ribeye",
+      "fallback": ["grass-fed ribeye", "prime ribeye", "ribeye steak"],
+      "avoid": []
+    },
+    "salmon": {
+      "preferred": "wild-caught salmon",
+      "fallback": ["wild Alaskan salmon", "organic farm-raised salmon", "Atlantic salmon"],
+      "avoid": ["farmed salmon"]
+    },
+    "cod": {
+      "preferred": "wild-caught cod",
+      "fallback": ["Alaskan cod", "Pacific cod", "cod fillets"],
+      "avoid": []
+    },
+    "butter": {
+      "preferred": "organic unsalted butter",
+      "fallback": ["unsalted butter", "sweet cream butter"],
+      "avoid": ["salted butter"]
+    },
+    "yogurt": {
+      "preferred": "organic plain yogurt",
+      "fallback": ["plain yogurt", "Greek yogurt"],
+      "avoid": ["flavored yogurt", "sweetened yogurt"]
+    },
+    "spinach": {
+      "preferred": "organic baby spinach",
+      "fallback": ["baby spinach", "spinach"],
+      "avoid": []
+    },
+    "apples": {
+      "preferred": "organic apples",
+      "fallback": ["apples"],
+      "avoid": []
+    },
+    "carrots": {
+      "preferred": "organic carrots",
+      "fallback": ["baby carrots", "carrots"],
+      "avoid": []
+    },
+    "onions": {
+      "preferred": "organic yellow onions",
+      "fallback": ["yellow onions", "sweet onions"],
+      "avoid": []
+    },
+    "garlic": {
+      "preferred": "organic garlic",
+      "fallback": ["garlic"],
+      "avoid": ["pre-minced garlic", "garlic powder"]
+    },
+    "tomatoes": {
+      "preferred": "organic tomatoes",
+      "fallback": ["vine-ripened tomatoes", "beefsteak tomatoes"],
+      "avoid": []
+    },
+    "potatoes": {
+      "preferred": "organic russet potatoes",
+      "fallback": ["russet potatoes", "Yukon gold potatoes"],
+      "avoid": []
+    },
+    "rice": {
+      "preferred": "organic basmati rice",
+      "fallback": ["basmati rice", "jasmine rice", "white rice"],
+      "avoid": []
+    },
+    "pasta": {
+      "preferred": "organic pasta",
+      "fallback": ["whole wheat pasta", "durum wheat pasta"],
+      "avoid": []
+    },
+    "bread": {
+      "preferred": "organic whole grain bread",
+      "fallback": ["whole grain bread", "whole wheat bread", "sourdough bread"],
+      "avoid": ["white bread"]
+    },
+    "flour": {
+      "preferred": "organic all-purpose flour",
+      "fallback": ["unbleached all-purpose flour", "all-purpose flour"],
+      "avoid": ["bleached flour"]
+    },
+    "sugar": {
+      "preferred": "organic cane sugar",
+      "fallback": ["cane sugar", "granulated sugar"],
+      "avoid": ["powdered sugar", "brown sugar"]
+    },
+    "olive oil": {
+      "preferred": "organic extra virgin olive oil",
+      "fallback": ["extra virgin olive oil", "cold-pressed olive oil"],
+      "avoid": ["light olive oil", "pure olive oil"]
+    },
+    "cooking oil": {
+      "preferred": "organic avocado oil",
+      "fallback": ["avocado oil", "organic olive oil", "grapeseed oil"],
+      "avoid": ["vegetable oil", "canola oil", "corn oil"]
+    },
+    "peanut butter": {
+      "preferred": "organic natural peanut butter",
+      "fallback": ["natural peanut butter", "peanut butter"],
+      "avoid": ["reduced-fat peanut butter", "sweetened peanut butter"]
+    }
+  },
+  "storeSpecific": {
+    "HEB": {
+      "organicLabels": ["H-E-B Organics", "Central Market Organics"],
+      "preferredBrands": {
+        "organic": ["H-E-B Organics", "Central Market Organics", "365 Everyday Value", "Simply Organic"],
+        "dairy": ["H-E-B Organics", "Organic Valley", "Horizon Organic"],
+        "meat": ["H-E-B Natural", "H-E-B Organics", "Applegate"],
+        "produce": ["H-E-B Organics", "Central Market Organics"]
+      },
+      "searchModifiers": {
+        "alwaysAdd": ["organic"],
+        "neverAdd": ["conventional", "regular"]
+      }
+    }
+  },
+  "substitutionRules": {
+    "ifOrganicUnavailable": {
+      "action": "select_best_available",
+      "priority": ["natural", "hormone-free", "antibiotic-free", "conventional"]
+    },
+    "ifPreferredBrandUnavailable": {
+      "action": "select_any_organic",
+      "fallback": "select_highest_rated"
+    },
+    "ifExactMatchUnavailable": {
+      "action": "suggest_closest_match",
+      "notify": true
+    }
+  },
+  "priceConsiderations": {
+    "organicBudgetMultiplier": 1.3,
+    "maxOrganicPremiumPercent": 50,
+    "description": "Prefer organic up to 50% price premium, then consider alternatives"
+  }
+}

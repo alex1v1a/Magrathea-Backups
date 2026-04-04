@@ -1,0 +1,5 @@
+[
+  { "name": "Milk", "searchTerm": "whole milk", "amount": "1 gallon" },
+  { "name": "Eggs", "searchTerm": "large eggs", "amount": "1 dozen" },
+  { "name": "Bread", "searchTerm": "sandwich bread", "amount": "1 loaf" }
+]

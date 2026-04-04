@@ -1,0 +1,712 @@
+/*
+================================================================================
+REEL REVIEWS - APP-SPECIFIC STYLES
+================================================================================
+File: apps/reel-reviews/reel-reviews.css
+Purpose: Comic book / vintage fishing aesthetic for Reel Reviews app page
+Theme: 1950s comic book meets fishing tackle shop
+
+COLOR PALETTE (Comic/Fishing theme):
+- Primary Red: #e63946 (bold action color)
+- Ocean Blue: #1d3557 (deep water)
+- Foam White: #f1faee (sea foam)
+- Sunny Yellow: #ffd60a (comic burst)
+- Fish Silver: #c0c0c0 (metallic accents)
+
+FONTS:
+- Headlines: 'Bangers' (comic book style)
+- Body: 'Comic Neue' (readable comic text)
+- UI: 'Roboto Condensed' (clean interface)
+================================================================================
+*/
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap');
+
+/* ============================================================================
+   CSS VARIABLES - Reel Reviews Theme
+   ============================================================================ */
+:root {
+    /* RR Color Palette */
+    --rr-red: #e63946;
+    --rr-red-dark: #c1121f;
+    --rr-blue: #1d3557;
+    --rr-blue-light: #457b9d;
+    --rr-cream: #f1faee;
+    --rr-yellow: #ffd60a;
+    --rr-yellow-dark: #ffc300;
+    --rr-orange: #fb8500;
+    --rr-silver: #c0c0c0;
+    
+    /* Override main site fonts for comic theme */
+    --font-comic: 'Bangers', cursive;
+    --font-comic-body: 'Comic Neue', cursive;
+    --font-condensed: 'Roboto Condensed', sans-serif;
+}
+
+/* ============================================================================
+   BASE OVERRIDES FOR REEL REVIEWS THEME
+   ============================================================================ */
+
+.reel-reviews-page {
+    font-family: var(--font-comic-body);
+    background-color: var(--rr-cream);
+}
+
+.reel-reviews-page h1,
+.reel-reviews-page h2,
+.reel-reviews-page h3 {
+    font-family: var(--font-comic);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.reel-reviews-page .site-header {
+    background-color: var(--rr-blue);
+    border-bottom: 4px solid var(--rr-red);
+}
+
+.reel-reviews-page .nav-link::after {
+    background-color: var(--rr-yellow);
+}
+
+/* ============================================================================
+   HERO SECTION - Comic Book Style
+   ============================================================================ */
+
+.rr-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 80px;
+    background: linear-gradient(
+        180deg,
+        var(--rr-blue) 0%,
+        var(--rr-blue-light) 50%,
+        var(--rr-cream) 100%
+    );
+    overflow: hidden;
+}
+
+/* Halftone pattern overlay for vintage comic effect */
+.rr-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.halftone-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 8px 8px;
+    opacity: 0.5;
+}
+
+.rr-hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 900px;
+}
+
+/* Comic book burst badge */
+.comic-badge {
+    display: inline-block;
+    background: var(--rr-yellow);
+    color: var(--rr-blue);
+    padding: 15px 30px;
+    font-family: var(--font-comic);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transform: rotate(-3deg);
+    margin-bottom: 30px;
+    border: 4px solid var(--rr-blue);
+    box-shadow: 6px 6px 0 var(--rr-red);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: rotate(-3deg) scale(1); }
+    50% { transform: rotate(-3deg) scale(1.05); }
+}
+
+.badge-text {
+    display: block;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+}
+
+/* Main Title - Comic Book Style */
+.rr-title {
+    margin-bottom: 30px;
+}
+
+.rr-title-word {
+    display: block;
+    font-family: var(--font-comic);
+    font-size: clamp(4rem, 15vw, 8rem);
+    line-height: 0.9;
+    text-shadow: 
+        4px 4px 0 var(--rr-blue),
+        8px 8px 0 rgba(0,0,0,0.3);
+}
+
+.rr-title-word:first-child {
+    color: var(--rr-yellow);
+    transform: rotate(-2deg);
+}
+
+.rr-title-word:last-child {
+    color: var(--rr-red);
+    transform: rotate(2deg);
+    margin-top: -10px;
+}
+
+/* Tagline */
+.rr-tagline {
+    font-family: var(--font-comic);
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    color: var(--rr-cream);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 var(--rr-blue);
+}
+
+/* Subtitle */
+.rr-subtitle {
+    font-family: var(--font-comic-body);
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    color: var(--rr-cream);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.rr-subtitle strong {
+    color: var(--rr-yellow);
+    font-weight: 700;
+}
+
+/* CTA Buttons */
+.rr-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-rr-primary {
+    background-color: var(--rr-red);
+    color: white;
+    border: 4px solid var(--rr-blue);
+    box-shadow: 6px 6px 0 var(--rr-blue);
+    font-family: var(--font-comic);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    transform: rotate(-1deg);
+    transition: all 0.2s ease;
+}
+
+.btn-rr-primary:hover {
+    transform: rotate(-1deg) translate(-2px, -2px);
+    box-shadow: 8px 8px 0 var(--rr-blue);
+    background-color: var(--rr-red-dark);
+    color: white;
+}
+
+.btn-rr-secondary {
+    background-color: transparent;
+    color: var(--rr-cream);
+    border: 4px solid var(--rr-cream);
+    font-family: var(--font-comic);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    transform: rotate(1deg);
+    transition: all 0.2s ease;
+}
+
+.btn-rr-secondary:hover {
+    background-color: var(--rr-cream);
+    color: var(--rr-blue);
+    transform: rotate(1deg) translate(-2px, -2deg);
+}
+
+.btn-icon {
+    margin-right: 8px;
+}
+
+/* Fishing hook decoration */
+.fishing-hook {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    width: 80px;
+    opacity: 0.6;
+    animation: swing 4s ease-in-out infinite;
+    transform-origin: top center;
+}
+
+@keyframes swing {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+/* ============================================================================
+   SECTION STYLES
+   ============================================================================ */
+
+.rr-section {
+    padding: 80px 0;
+}
+
+.rr-section-title {
+    text-align: center;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    margin-bottom: 50px;
+    color: var(--rr-blue);
+    position: relative;
+}
+
+/* Comic action words */
+.title-pow,
+.title-zap,
+.title-bam {
+    display: block;
+    font-size: 1.5em;
+    color: var(--rr-red);
+    transform: rotate(-5deg);
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 0 var(--rr-yellow);
+}
+
+/* ============================================================================
+   PROBLEM SECTION
+   ============================================================================ */
+
+.rr-problem {
+    background-color: white;
+    border-top: 8px dashed var(--rr-red);
+    border-bottom: 8px dashed var(--rr-red);
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.problem-card {
+    background: linear-gradient(135deg, var(--rr-cream) 0%, white 100%);
+    border: 4px solid var(--rr-blue);
+    padding: 30px;
+    text-align: center;
+    transform: rotate(var(--rotation, 0deg));
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.problem-card:nth-child(1) { --rotation: -2deg; }
+.problem-card:nth-child(2) { --rotation: 1deg; }
+.problem-card:nth-child(3) { --rotation: -1deg; }
+
+.problem-card:hover {
+    transform: rotate(0deg) translateY(-5px);
+}
+
+.problem-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.problem-card h3 {
+    font-size: 1.8rem;
+    color: var(--rr-red);
+    margin-bottom: 15px;
+}
+
+.problem-card p {
+    font-family: var(--font-comic-body);
+    font-size: 1.1rem;
+    color: var(--rr-blue);
+    margin: 0;
+}
+
+/* Stat bubble */
+.stat-box {
+    text-align: center;
+}
+
+.stat-bubble {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--rr-yellow);
+    border: 6px solid var(--rr-blue);
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 8px 8px 0 var(--rr-red);
+    transform: rotate(-3deg);
+}
+
+.stat-number {
+    font-family: var(--font-comic);
+    font-size: 4rem;
+    color: var(--rr-red);
+    line-height: 1;
+}
+
+.stat-label {
+    font-family: var(--font-comic-body);
+    font-size: 1rem;
+    color: var(--rr-blue);
+    font-weight: 700;
+    text-align: center;
+}
+
+.stat-source {
+    font-size: 0.8rem;
+    color: var(--rr-blue-light);
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* ============================================================================
+   HOW IT WORKS SECTION
+   ============================================================================ */
+
+.rr-how {
+    background-color: var(--rr-cream);
+}
+
+.how-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.how-step {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    background: white;
+    border: 4px solid var(--rr-blue);
+    padding: 30px;
+    box-shadow: 8px 8px 0 var(--rr-yellow);
+}
+
+.step-number {
+    font-family: var(--font-comic);
+    font-size: 4rem;
+    color: var(--rr-red);
+    line-height: 1;
+    min-width: 80px;
+    text-align: center;
+    text-shadow: 3px 3px 0 var(--rr-blue);
+}
+
+.step-content h3 {
+    font-size: 1.8rem;
+    color: var(--rr-blue);
+    margin-bottom: 10px;
+}
+
+.step-content p {
+    font-family: var(--font-comic-body);
+    font-size: 1.1rem;
+    color: var(--rr-blue-light);
+    margin-bottom: 15px;
+}
+
+.step-visual {
+    font-size: 3rem;
+    text-align: right;
+}
+
+/* App Preview */
+.app-preview {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.preview-title {
+    font-family: var(--font-comic);
+    font-size: 2rem;
+    color: var(--rr-red);
+    margin-bottom: 30px;
+    transform: rotate(-1deg);
+}
+
+.preview-image {
+    max-width: 100%;
+    max-height: 600px;
+    margin: 0 auto;
+    border: 8px solid var(--rr-blue);
+    box-shadow: 12px 12px 0 var(--rr-yellow), 
+                24px 24px 0 rgba(0,0,0,0.1);
+    border-radius: 20px;
+}
+
+/* ============================================================================
+   FEATURES SECTION
+   ============================================================================ */
+
+.rr-features {
+    background: linear-gradient(180deg, var(--rr-blue) 0%, var(--rr-blue-light) 100%);
+    color: white;
+}
+
+.rr-features .rr-section-title {
+    color: var(--rr-yellow);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: rgba(255,255,255,0.95);
+    border: 4px solid var(--rr-yellow);
+    padding: 30px;
+    text-align: center;
+    transform: rotate(var(--rotate, 0deg));
+    transition: all 0.3s ease;
+}
+
+.feature-card:nth-child(odd) { --rotate: -1deg; }
+.feature-card:nth-child(even) { --rotate: 1deg; }
+
+.feature-card:hover {
+    transform: rotate(0deg) translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.feature-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    color: var(--rr-red);
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    font-family: var(--font-comic-body);
+    color: var(--rr-blue);
+    margin: 0;
+}
+
+/* ============================================================================
+   CATCH/DOWNLOAD SECTION
+   ============================================================================ */
+
+.rr-catch {
+    background: var(--rr-yellow);
+    position: relative;
+    overflow: hidden;
+}
+
+.catch-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.catch-title {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    color: var(--rr-blue);
+    text-shadow: 4px 4px 0 var(--rr-red);
+    margin-bottom: 30px;
+    transform: rotate(-2deg);
+}
+
+.catch-text {
+    font-family: var(--font-comic-body);
+    font-size: 1.3rem;
+    color: var(--rr-blue);
+    margin-bottom: 40px;
+}
+
+/* Store buttons */
+.store-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.store-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--rr-blue);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-family: var(--font-condensed);
+    transition: all 0.3s ease;
+    border: 4px solid white;
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.3);
+}
+
+.store-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 0 rgba(0,0,0,0.4);
+    text-decoration: none;
+    color: white;
+}
+
+.store-icon {
+    font-size: 2.5rem;
+}
+
+.store-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+}
+
+.store-small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.store-large {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.catch-note {
+    font-family: var(--font-comic);
+    font-size: 1.2rem;
+    color: var(--rr-red);
+    transform: rotate(1deg);
+}
+
+/* Fish decorations */
+.fish-decoration {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.fish {
+    position: absolute;
+    font-size: 4rem;
+    opacity: 0.2;
+    animation: swim 20s linear infinite;
+}
+
+.fish-1 {
+    top: 10%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.fish-2 {
+    top: 60%;
+    right: -10%;
+    animation-delay: -7s;
+    animation-direction: reverse;
+}
+
+.fish-3 {
+    bottom: 20%;
+    left: -10%;
+    animation-delay: -14s;
+}
+
+@keyframes swim {
+    0% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(30vw) translateY(-20px); }
+    50% { transform: translateX(60vw) translateY(0); }
+    75% { transform: translateX(90vw) translateY(20px); }
+    100% { transform: translateX(120vw) translateY(0); }
+}
+
+/* ============================================================================
+   POSTER SECTION
+   ============================================================================ */
+
+.rr-poster {
+    padding: 0;
+    background: var(--rr-blue);
+}
+
+.poster-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================================================================
+   FOOTER OVERRIDE
+   ============================================================================ */
+
+.rr-footer {
+    background-color: var(--rr-blue);
+    border-top: 4px solid var(--rr-red);
+}
+
+.rr-footer .footer-name {
+    font-family: var(--font-comic);
+    color: var(--rr-yellow);
+}
+
+.rr-footer .footer-slogan {
+    font-family: var(--font-comic);
+    color: var(--rr-red);
+    font-size: 1.2rem;
+}
+
+/* ============================================================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================================================ */
+
+@media (max-width: 768px) {
+    .rr-hero {
+        padding: 100px 15px 60px;
+    }
+    
+    .fishing-hook {
+        display: none;
+    }
+    
+    .how-step {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .step-visual {
+        text-align: center;
+    }
+    
+    .stat-bubble {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .stat-number {
+        font-size: 3rem;
+    }
+}

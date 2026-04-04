@@ -1,0 +1,57 @@
+{
+  "name": "dinner-automation",
+  "version": "1.0.0",
+  "description": "Weekly dinner plan automation with iCloud email integration",
+  "main": "scripts/dinner-automation.js",
+  "scripts": {
+    "test": "npx vitest run",
+    "test:unit": "npx vitest run tests/automation/unit",
+    "test:integration": "npx vitest run tests/automation/integration",
+    "test:benchmarks": "npx vitest run tests/automation/benchmarks",
+    "test:utils": "npx vitest run tests/integration",
+    "test:watch": "npx vitest",
+    "test:coverage": "npx vitest run --coverage",
+    "send-test": "node scripts/test-email.js --send",
+    "check-inbox": "node scripts/test-email.js --check",
+    "weekly": "node scripts/dinner-automation.js",
+    "monitor-email": "node scripts/monitor-email.js",
+    "calendar:today": "node scripts/update-calendar.js",
+    "calendar:week": "node scripts/update-calendar.js --week",
+    "calendar:force": "node scripts/update-calendar.js --week --force",
+    "calendar:clear": "node scripts/update-calendar.js --clear",
+    "discord:test": "node scripts/discord-notifier.js --test",
+    "email:test": "node scripts/email-client.js --send-test",
+    "heb:cart": "node scripts/auto-heb-cart.js",
+    "heb:cart:headed": "node scripts/auto-heb-cart.js --headed",
+    "heb:test": "node scripts/heb-cart-automation.js --headed",
+    "heb:stealth": "node scripts/heb-cart-stealth.js",
+    "heb:stealth:test": "node scripts/heb-cart-stealth.js --test-stealth",
+    "heb:stealth:compare": "node scripts/heb-cart-stealth.js --compare"
+  },
+  "dependencies": {
+    "date-fns": "^3.6.0",
+    "dotenv": "^17.2.4",
+    "imap-simple": "^5.1.0",
+    "imapflow": "^1.0.171",
+    "mailparser": "^3.7.2",
+    "nodemailer": "^6.10.0",
+    "playwright": "^1.58.2",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "tsdav": "^2.1.3",
+    "uuid": "^9.0.1",
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "vitest": "^1.2.0",
+    "@vitest/coverage-v8": "^1.2.0"
+  },
+  "keywords": [
+    "dinner",
+    "automation",
+    "email",
+    "meal-planning"
+  ],
+  "author": "Marvin",
+  "license": "MIT"
+}

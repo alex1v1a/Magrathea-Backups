@@ -1,0 +1,34 @@
+# Add this to your configuration.yaml or create a package file
+
+input_select:
+  wall_panel_page:
+    name: Wall Panel Page
+    options:
+      - home
+      - lights
+      - climate
+      - security
+    initial: home
+    icon: mdi:tablet-dashboard
+
+# Required for wall panel
+automation:
+  - alias: "LCARS Wall Panel - Auto Return Home"
+    description: "Return to home page after 2 minutes of inactivity"
+    trigger:
+      - platform: state
+        entity_id: input_select.wall_panel_page
+        for:
+          minutes: 2
+    condition:
+      - condition: not
+        conditions:
+          - condition: state
+            entity_id: input_select.wall_panel_page
+            state: "home"
+    action:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.wall_panel_page
+          option: "home"
+    mode: restart

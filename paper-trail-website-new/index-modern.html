@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Paper Trail Limited - New Zealand based app development company. Creators of Reel Reviews.">
+    <title>Paper Trail Limited — App Development Studio</title>
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Modern Design System -->
+    <link rel="stylesheet" href="css/modern.css">
+    <link rel="stylesheet" href="css/modern-components.css">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="/" class="brand">
+                <span class="brand-icon">📝</span>
+                <span>Paper Trail</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="/" class="nav-link active">Home</a></li>
+                <li><a href="blog/" class="nav-link">Blog</a></li>
+                <li><a href="apps/reel-reviews/" class="nav-link">Reel Reviews</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>🇳🇿</span>
+                    <span>Based in New Zealand</span>
+                </div>
+                <h1 class="hero-title">
+                    Building apps that tell<br>the truth
+                </h1>
+                <p class="hero-subtitle">
+                    Paper Trail Limited is a New Zealand-based app development company 
+                    creating innovative mobile experiences. From Reel Reviews to what's next.
+                </p>
+                <div class="hero-cta">
+                    <a href="apps/reel-reviews/" class="btn btn-primary btn-lg">
+                        Explore Reel Reviews
+                    </a>
+                    <a href="blog/" class="btn btn-secondary btn-lg">
+                        Read our blog
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apps Section -->
+        <section class="apps-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Our Work</span>
+                    <h2 class="section-title">Apps we've built</h2>
+                    <p class="section-description">
+                        Each app solves a real problem with elegant design and honest functionality.
+                    </p>
+                </div>
+
+                <div class="apps-grid">
+                    <!-- Reel Reviews -->
+                    <article class="app-card-large">
+                        <div class="app-card-image">
+                            <img src="assets/reel-reviews-poster.png" alt="Reel Reviews app">
+                            <span class="app-badge">Available Now</span>
+                        </div>
+                        <div class="app-card-content">
+                            <h3>Reel Reviews</h3>
+                            <p class="app-tagline">The honest review app</p>
+                            <p class="app-description">
+                                Like Google Maps, but with a twist — only negative reviews allowed. 
+                                Catch catfish restaurants before they catch you.
+                            </p>
+                            <ul class="app-features">
+                                <li>Map-based restaurant discovery</li>
+                                <li>Verified negative reviews only</li>
+                                <li>Catfish detection algorithm</li>
+                            </ul>
+                            <a href="apps/reel-reviews/" class="btn btn-primary">
+                                Learn more →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Coming Soon -->
+                    <article class="app-card-large app-card-soon">
+                        <div class="app-card-image app-card-image-placeholder">
+                            <span class="placeholder-icon">🛒</span>
+                            <span class="app-badge app-badge-soon">Coming Soon</span>
+                        </div>
+                        <div class="app-card-content">
+                            <h3>Project Cartwheel</h3>
+                            <p class="app-tagline">Reimagining delivery</p>
+                            <p class="app-description">
+                                An Instacart-like experience with major innovations we're keeping 
+                                under wraps. Something big is brewing.
+                            </p>
+                            <div class="coming-soon-notice">
+                                <span>Launching 2024</span>
+                            </div>
+                            <a href="apps/coming-soon/" class="btn btn-secondary">
+                                Get early access →
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">About Us</span>
+                    <h2 class="section-title">Why we build</h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="card">
+                        <div class="card-icon">📖</div>
+                        <h3 class="card-title">Our Story</h3>
+                        <p class="card-text">
+                            Founded in New Zealand, we believe great software tells a story. 
+                            Each app adds a new chapter to our journey.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🎯</div>
+                        <h3 class="card-title">Our Mission</h3>
+                        <p class="card-text">
+                            Build apps that solve real problems. Every line of code serves a purpose 
+                            and helps users make better decisions.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🔮</div>
+                        <h3 class="card-title">Our Vision</h3>
+                        <p class="card-text">
+                            Create a portfolio where each app fills a unique niche. Under the Paper Trail 
+                            umbrella, quality comes first.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-box">
+                    <div class="newsletter-content">
+                        <h2>Stay in the loop</h2>
+                        <p>Get updates on our apps, blog posts, and behind-the-scenes content.</p>
+                    </div>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="brand">
+                        <span class="brand-icon">📝</span>
+                        <span>Paper Trail</span>
+                    </a>
+                    <p class="footer-description">
+                        Writing the future of mobile experiences from New Zealand.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="GitHub">⌘</a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="apps/reel-reviews/">Reel Reviews</a></li>
+                        <li><a href="apps/coming-soon/">Coming Soon</a></li>
+                        <li><a href="blog/">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy</a></li>
+                        <li><a href="terms-of-service.html">Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:admin@typewrite.club">admin@typewrite.club</a></li>
+                        <li><a href="tel:+16504279450">+1 (650) 427-9450</a></li>
+                        <li>1 Tika Street, Parnell</li>
+                        <li>Auckland 1052, NZ</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2024 Paper Trail Limited. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

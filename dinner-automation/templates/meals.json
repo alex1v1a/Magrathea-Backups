@@ -1,0 +1,205 @@
+{
+  "meals": [
+    {
+      "name": "Grilled Salmon with Asparagus",
+      "category": "seafood",
+      "estimatedCost": 28,
+      "prepTime": "25 min",
+      "difficulty": "medium",
+      "healthy": true,
+      "ingredients": [
+        { "name": "Atlantic salmon fillets", "amount": "1.5 lbs", "hebSearch": "salmon fillet fresh" },
+        { "name": "Fresh asparagus", "amount": "1 bunch", "hebSearch": "asparagus fresh" },
+        { "name": "Lemon", "amount": "2", "hebSearch": "lemon" },
+        { "name": "Olive oil", "amount": "1 bottle", "hebSearch": "olive oil extra virgin" },
+        { "name": "Garlic", "amount": "1 bulb", "hebSearch": "garlic" },
+        { "name": "Sea salt", "amount": "1 container", "hebSearch": "sea salt" }
+      ]
+    },
+    {
+      "name": "Chicken Tikka Masala",
+      "category": "indian",
+      "estimatedCost": 22,
+      "prepTime": "45 min",
+      "difficulty": "medium",
+      "healthy": true,
+      "ingredients": [
+        { "name": "Chicken thighs", "amount": "2 lbs", "hebSearch": "chicken thighs boneless" },
+        { "name": "Greek yogurt", "amount": "16 oz", "hebSearch": "greek yogurt plain" },
+        { "name": "Heavy cream", "amount": "1 pint", "hebSearch": "heavy cream" },
+        { "name": "Basmati rice", "amount": "2 lbs", "hebSearch": "basmati rice" },
+        { "name": "Tikka masala sauce", "amount": "1 jar", "hebSearch": "tikka masala sauce" },
+        { "name": "Fresh ginger", "amount": "1 piece", "hebSearch": "ginger root" }
+      ]
+    },
+    {
+      "name": "Beef Stir-Fry with Vegetables",
+      "category": "asian",
+      "estimatedCost": 24,
+      "prepTime": "20 min",
+      "difficulty": "easy",
+      "healthy": true,
+      "ingredients": [
+        { "name": "Flank steak", "amount": "1.5 lbs", "hebSearch": "flank steak" },
+        { "name": "Broccoli florets", "amount": "2 heads", "hebSearch": "broccoli" },
+        { "name": "Bell peppers", "amount": "3", "hebSearch": "bell peppers" },
+        { "name": "Soy sauce", "amount": "1 bottle", "hebSearch": "soy sauce low sodium" },
+        { "name": "Sesame oil", "amount": "1 bottle", "hebSearch": "sesame oil" },
+        { "name": "Green onions", "amount": "1 bunch", "hebSearch": "green onions" }
+      ]
+    },
+    {
+      "name": "Mediterranean Chicken Bowl",
+      "category": "mediterranean",
+      "estimatedCost": 26,
+      "prepTime": "30 min",
+      "difficulty": "easy",
+      "healthy": true,
+      "ingredients": [
+        { "name": "Chicken breast", "amount": "2 lbs", "hebSearch": "chicken breast boneless" },
+        { "name": "Cucumber", "amount": "2", "hebSearch": "cucumber" },
+        { "name": "Cherry tomatoes", "amount": "1 pint", "hebSearch": "tomatoes cherry" },
+        { "name": "Feta cheese", "amount": "8 oz", "hebSearch": "feta cheese" },
+        { "name": "Quinoa", "amount": "2 lbs", "hebSearch": "quinoa" },
+        { "name": "Hummus", "amount": "10 oz", "hebSearch": "hummus" },
+        { "name": "Red onion", "amount": "1", "hebSearch": "red onion" }
+      ]
+    },
+    {
+      "name": "Shrimp Tacos with Cabbage Slaw",
+      "category": "mexican",
+      "estimatedCost": 25,
+      "prepTime": "25 min",
+      "difficulty": "easy",
+      "healthy": true,
+      "ingredients": [
+        { "name": "Large shrimp", "amount": "1.5 lbs", "hebSearch": "shrimp large raw" },
+        { "name": "Corn tortillas", "amount": "1 pack", "hebSearch": "corn tortillas" },
+        { "name": "Red cabbage", "amount": "1 head", "hebSearch": "cabbage red" },
+        { "name": "Avocado", "amount": "3", "hebSearch": "avocado" },
+        { "name": "Lime", "amount": "4", "hebSearch": "lime" },
+        { "name": "Cilantro", "amount": "1 bunch", "hebSearch": "cilantro fresh" },
+        { "name": "Chipotle powder", "amount": "1 container", "hebSearch": "chipotle powder" }
+      ]
+    },
+    {
+      "name": "Pork Tenderloin with Roasted Vegetables",
+      "category": "american",
+      "estimatedCost": 23,
+      "prepTime": "45 min",
+      "difficulty": "medium",
+      "healthy": true,
+      "ingredients": [
+        { "name": "Pork tenderloin", "amount": "1.5 lbs", "hebSearch": "pork tenderloin" },
+        { "name": "Brussels sprouts", "amount": "1.5 lbs", "hebSearch": "brussels sprouts" },
+        { "name": "Sweet potatoes", "amount": "2 lbs", "hebSearch": "sweet potatoes" },
+        { "name": "Dijon mustard", "amount": "1 jar", "hebSearch": "dijon mustard" },
+        { "name": "Fresh rosemary", "amount": "1 bunch", "hebSearch": "rosemary fresh" },
+        { "name": "Balsamic vinegar", "amount": "1 bottle", "hebSearch": "balsamic vinegar" }
+      ]
+    },
+    {
+      "name": "Vegetable Curry with Chickpeas",
+      "category": "vegetarian",
+      "estimatedCost": 18,
+      "prepTime": "35 min",
+      "difficulty": "easy",
+      "healthy": true,
+      "ingredients": [
+        { "name": "Chickpeas", "amount": "2 cans", "hebSearch": "chickpeas" },
+        { "name": "Coconut milk", "amount": "2 cans", "hebSearch": "coconut milk" },
+        { "name": "Spinach", "amount": "10 oz", "hebSearch": "spinach fresh" },
+        { "name": "Curry paste", "amount": "1 jar", "hebSearch": "curry paste" },
+        { "name": "Naan bread", "amount": "1 pack", "hebSearch": "naan bread" },
+        { "name": "Yellow onion", "amount": "1", "hebSearch": "yellow onion" }
+      ]
+    },
+    {
+      "name": "Pan-Seared Cod with Lemon Butter",
+      "category": "seafood",
+      "estimatedCost": 30,
+      "prepTime": "20 min",
+      "difficulty": "easy",
+      "healthy": true,
+      "ingredients": [
+        { "name": "Cod fillets", "amount": "1.5 lbs", "hebSearch": "cod fillet fresh" },
+        { "name": "Unsalted butter", "amount": "1 stick", "hebSearch": "butter unsalted" },
+        { "name": "Fresh parsley", "amount": "1 bunch", "hebSearch": "parsley fresh" },
+        { "name": "Capers", "amount": "1 jar", "hebSearch": "capers" },
+        { "name": "White wine", "amount": "1 bottle", "hebSearch": "white wine cooking" },
+        { "name": "Green beans", "amount": "1 lb", "hebSearch": "green beans fresh" }
+      ]
+    },
+    {
+      "name": "Korean Beef Bulgogi Bowl",
+      "category": "asian",
+      "estimatedCost": 27,
+      "prepTime": "40 min",
+      "difficulty": "medium",
+      "healthy": true,
+      "ingredients": [
+        { "name": "Ribeye steak", "amount": "1.5 lbs", "hebSearch": "ribeye steak thin" },
+        { "name": "Asian pear", "amount": "1", "hebSearch": "asian pear" },
+        { "name": "Gochujang", "amount": "1 container", "hebSearch": "gochujang" },
+        { "name": "Jasmine rice", "amount": "2 lbs", "hebSearch": "jasmine rice" },
+        { "name": "Sesame seeds", "amount": "1 container", "hebSearch": "sesame seeds" },
+        { "name": "Kimchi", "amount": "16 oz", "hebSearch": "kimchi" }
+      ]
+    },
+    {
+      "name": "Stuffed Bell Peppers",
+      "category": "american",
+      "estimatedCost": 20,
+      "prepTime": "50 min",
+      "difficulty": "medium",
+      "healthy": true,
+      "ingredients": [
+        { "name": "Ground turkey", "amount": "1.5 lbs", "hebSearch": "ground turkey" },
+        { "name": "Bell peppers", "amount": "6", "hebSearch": "bell peppers large" },
+        { "name": "Quinoa", "amount": "1 lb", "hebSearch": "quinoa" },
+        { "name": "Black beans", "amount": "1 can", "hebSearch": "black beans" },
+        { "name": "Diced tomatoes", "amount": "1 can", "hebSearch": "diced tomatoes" },
+        { "name": "Shredded cheese", "amount": "8 oz", "hebSearch": "cheese shredded mexican" }
+      ]
+    },
+    {
+      "name": "Lemon Herb Grilled Chicken",
+      "category": "mediterranean",
+      "estimatedCost": 21,
+      "prepTime": "35 min",
+      "difficulty": "easy",
+      "healthy": true,
+      "ingredients": [
+        { "name": "Chicken thighs", "amount": "2 lbs", "hebSearch": "chicken thighs bone-in" },
+        { "name": "Lemon", "amount": "3", "hebSearch": "lemon" },
+        { "name": "Fresh thyme", "amount": "1 bunch", "hebSearch": "thyme fresh" },
+        { "name": "Oregano", "amount": "1 container", "hebSearch": "oregano dried" },
+        { "name": "Couscous", "amount": "1 lb", "hebSearch": "couscous" },
+        { "name": "Zucchini", "amount": "3", "hebSearch": "zucchini" }
+      ]
+    },
+    {
+      "name": "Fish Tacos with Mango Salsa",
+      "category": "mexican",
+      "estimatedCost": 26,
+      "prepTime": "30 min",
+      "difficulty": "easy",
+      "healthy": true,
+      "ingredients": [
+        { "name": "White fish fillets", "amount": "1.5 lbs", "hebSearch": "tilapia fillet" },
+        { "name": "Corn tortillas", "amount": "1 pack", "hebSearch": "corn tortillas" },
+        { "name": "Mango", "amount": "2", "hebSearch": "mango" },
+        { "name": "Red onion", "amount": "1", "hebSearch": "red onion" },
+        { "name": "Jalapeno", "amount": "2", "hebSearch": "jalapeno" },
+        { "name": "Cabbage slaw mix", "amount": "1 bag", "hebSearch": "coleslaw mix" },
+        { "name": "Chipotle mayo", "amount": "1 bottle", "hebSearch": "chipotle mayo" }
+      ]
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2026-02-05",
+    "totalMeals": 12,
+    "categories": ["seafood", "indian", "asian", "mediterranean", "mexican", "american", "vegetarian"]
+  }
+}

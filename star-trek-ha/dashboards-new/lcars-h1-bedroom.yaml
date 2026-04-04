@@ -1,0 +1,166 @@
+title: H1 Bedroom
+path: lcars-h1-bedroom
+icon: mdi:bed-king
+badges: []
+cards:
+  - type: markdown
+    card_mod:
+      class: header-left
+    content: '# HOUSE 1 — PRIMARY BEDROOM'
+
+  - type: horizontal-stack
+    card_mod:
+      class: middle-left
+    cards:
+      - type: button
+        name: Overview
+        icon: mdi:home-analytics
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-house1
+        card_mod:
+          class: button-bar-left
+      - type: button
+        name: Living
+        icon: mdi:sofa
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h1-living
+        card_mod:
+          class: button-small
+      - type: button
+        name: Kitchen
+        icon: mdi:stove
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h1-kitchen
+        card_mod:
+          class: button-small
+      - type: button
+        name: Primary
+        icon: mdi:bed-king
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h1-bedroom
+        card_mod:
+          class: button-small
+      - type: button
+        name: Office
+        icon: mdi:laptop
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h1-office
+        card_mod:
+          class: button-small
+      - type: button
+        name: Garage
+        icon: mdi:garage
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h1-garage
+        card_mod:
+          class: button-small
+      - type: button
+        name: Outdoor
+        icon: mdi:tree
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h1-outdoor
+        card_mod:
+          class: button-bar-right
+
+  - type: markdown
+    card_mod:
+      class: header-contained
+    content: '# BEDROOM CONTROLS'
+
+  - type: grid
+    columns: 4
+    square: false
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 💡 LIGHTS'
+          - type: grid
+            columns: 2
+            square: true
+            cards:
+              - type: button
+                entity: light.h1_bedroom_overhead
+                name: Overhead
+                tap_action:
+                  action: toggle
+                card_mod:
+                  class: button-lozenge-left
+              - type: button
+                entity: light.h1_bedroom_bedside_left
+                name: Left Bedside
+                tap_action:
+                  action: toggle
+                card_mod:
+                  class: button-lozenge-right
+              - type: button
+                entity: light.h1_bedroom_bedside_right
+                name: Right Bedside
+                tap_action:
+                  action: toggle
+                card_mod:
+                  class: button-lozenge-left
+              - type: button
+                entity: light.h1_bedroom_closet
+                name: Closet
+                tap_action:
+                  action: toggle
+                card_mod:
+                  class: button-lozenge-right
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 🌡️ CLIMATE'
+          - type: thermostat
+            entity: climate.h1_bedroom
+            card_mod:
+              class: middle-contained
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 🪟 COVERS'
+          - type: entities
+            card_mod:
+              class: middle-contained
+            entities:
+              - entity: cover.h1_bedroom_blinds
+                name: Blinds
+              - entity: cover.h1_bedroom_curtains
+                name: Curtains
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 📡 SENSORS'
+          - type: entities
+            card_mod:
+              class: middle-contained
+            entities:
+              - entity: binary_sensor.h1_bedroom_motion
+                name: Motion
+              - entity: binary_sensor.h1_bedroom_occupancy
+                name: Occupancy
+              - entity: sensor.h1_bedroom_temperature
+                name: Temperature
+
+  - type: markdown
+    card_mod:
+      class: footer-left
+    content: '## PRIMARY BEDROOM — HOUSE 1'

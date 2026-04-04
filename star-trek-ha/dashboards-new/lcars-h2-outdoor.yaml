@@ -1,0 +1,176 @@
+title: H2 Outdoor
+path: lcars-h2-outdoor
+icon: mdi:tree
+badges: []
+cards:
+  - type: markdown
+    card_mod:
+      class: header-left
+    content: '# HOUSE 2 — OUTDOOR'
+
+  - type: horizontal-stack
+    card_mod:
+      class: middle-left
+    cards:
+      - type: button
+        name: Overview
+        icon: mdi:home-analytics
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-house1
+        card_mod:
+          class: button-bar-left
+      - type: button
+        name: Living
+        icon: mdi:sofa
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h2-living
+        card_mod:
+          class: button-small
+      - type: button
+        name: Kitchen
+        icon: mdi:stove
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h2-kitchen
+        card_mod:
+          class: button-small
+      - type: button
+        name: Primary
+        icon: mdi:bed-king
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h2-bedroom
+        card_mod:
+          class: button-small
+      - type: button
+        name: Office
+        icon: mdi:laptop
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h2-office
+        card_mod:
+          class: button-small
+      - type: button
+        name: Garage
+        icon: mdi:garage
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h2-garage
+        card_mod:
+          class: button-small
+      - type: button
+        name: Outdoor
+        icon: mdi:tree
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h2-outdoor
+        card_mod:
+          class: button-bar-right
+
+  - type: markdown
+    card_mod:
+      class: header-contained
+    content: '# OUTDOOR CONTROLS'
+
+  - type: grid
+    columns: 4
+    square: false
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 💡 LIGHTS'
+          - type: grid
+            columns: 2
+            square: true
+            cards:
+              - type: button
+                entity: light.h2_outdoor_front_porch
+                name: Front Porch
+                tap_action:
+                  action: toggle
+                card_mod:
+                  class: button-lozenge-left
+              - type: button
+                entity: light.h2_outdoor_back_patio
+                name: Back Patio
+                tap_action:
+                  action: toggle
+                card_mod:
+                  class: button-lozenge-right
+              - type: button
+                entity: light.h2_outdoor_landscape
+                name: Landscape
+                tap_action:
+                  action: toggle
+                card_mod:
+                  class: button-lozenge-left
+              - type: button
+                entity: light.h2_outdoor_garage
+                name: Garage
+                tap_action:
+                  action: toggle
+                card_mod:
+                  class: button-lozenge-right
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 💧 IRRIGATION'
+          - type: entities
+            card_mod:
+              class: middle-contained
+            entities:
+              - entity: switch.h2_sprinkler_front
+                name: Front Yard
+              - entity: switch.h2_sprinkler_back
+                name: Back Yard
+              - entity: sensor.h2_soil_moisture
+                name: Soil Moisture
+              - entity: binary_sensor.h2_rain_sensor
+                name: Rain Sensor
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 🌡️ WEATHER'
+          - type: sensor
+            entity: sensor.h2_outdoor_temperature
+            name: Temperature
+            card_mod:
+              class: middle-contained
+          - type: sensor
+            entity: sensor.h2_outdoor_humidity
+            name: Humidity
+            card_mod:
+              class: middle-contained
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 📡 SENSORS'
+          - type: entities
+            card_mod:
+              class: middle-contained
+            entities:
+              - entity: binary_sensor.h2_outdoor_motion_front
+                name: Front Motion
+              - entity: binary_sensor.h2_outdoor_motion_back
+                name: Back Motion
+              - entity: sensor.h2_outdoor_illuminance
+                name: Light Level
+
+  - type: markdown
+    card_mod:
+      class: footer-left
+    content: '## OUTDOOR — HOUSE 2'

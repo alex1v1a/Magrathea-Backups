@@ -1,0 +1,476 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.weather-lcars",
+  "data": {
+    "config": {
+      "title": "Starfleet Weather Command",
+      "theme": "cblcars",
+      "views": [
+        {
+          "title": "Weather Ops",
+          "path": "weather-ops",
+          "icon": "mdi:weather-partly-cloudy",
+          "type": "sections",
+          "sections": [
+            {
+              "type": "grid",
+              "title": "",
+              "cards": [
+                {
+                  "type": "custom:cb-lcars-elbow-card",
+                  "cblcars_card_type": "cb-lcars-header",
+                  "cblcars_card_config": {
+                    "label": "ATMOSPHERIC MONITORING STATION",
+                    "variables": {
+                      "card": {
+                        "border": {
+                          "left": {"size": 280},
+                          "top": {"size": 50, "left_radius": 150},
+                          "color": "var(--picard-orange)"
+                        }
+                      },
+                      "text": {
+                        "label": {
+                          "padding": {"left": 60, "top": 38},
+                          "font_size": "28",
+                          "font_weight": "600"
+                        }
+                      }
+                    }
+                  },
+                  "layout_options": {"grid_columns": 12, "grid_rows": 2}
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "title": "Current Conditions",
+              "cards": [
+                {
+                  "type": "custom:cb-lcars-elbow-card",
+                  "cblcars_card_type": "cb-lcars-middle",
+                  "cblcars_card_config": {
+                    "label": "STARDATE",
+                    "variables": {
+                      "card": {
+                        "border": {
+                          "left": {"size": 15, "color": "var(--picard-orange)"}
+                        }
+                      }
+                    }
+                  },
+                  "layout_options": {"grid_columns": 12, "grid_rows": 1}
+                },
+                {
+                  "type": "weather-forecast",
+                  "entity": "weather.home",
+                  "show_current": true,
+                  "show_forecast": false,
+                  "card_mod": {
+                    "style": "\n                      ha-card {\n                        background: transparent !important;\n                        border: 2px solid var(--picard-orange) !important;\n                        border-radius: 0 20px 20px 0 !important;\n                      }\n                    "
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-label-card",
+                  "cblcars_card_type": "cb-lcars-label-picard-square",
+                  "cblcars_card_config": {
+                    "label": "SECTOR: EARTH/TEXAS",
+                    "show_label": true,
+                    "variables": {
+                      "card": {
+                        "border": {
+                          "color": "var(--picard-blue)"
+                        }
+                      },
+                      "text": {
+                        "label": {
+                          "font_size": 18,
+                          "font_weight": 400
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-label-card",
+                  "cblcars_card_type": "cb-lcars-label-picard-square",
+                  "cblcars_card_config": {
+                    "label": "LAT: 30.2672° N  |  LON: 97.7431° W",
+                    "show_label": true,
+                    "variables": {
+                      "card": {
+                        "border": {
+                          "color": "var(--picard-light-gray)"
+                        }
+                      },
+                      "text": {
+                        "label": {
+                          "font_size": 16,
+                          "font_weight": 300
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "title": "Environmental Sensors",
+              "cards": [
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard",
+                  "cblcars_card_config": {
+                    "label": "TEMPERATURE",
+                    "show_label": true,
+                    "show_state": true,
+                    "entity": "sensor.outdoor_temperature",
+                    "variables": {
+                      "text": {
+                        "state": {
+                          "font_size": 32,
+                          "font_weight": 700,
+                          "color": {"default": "var(--picard-orange)"}
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard-right",
+                  "cblcars_card_config": {
+                    "label": "HUMIDITY",
+                    "show_label": true,
+                    "show_state": true,
+                    "entity": "sensor.outdoor_humidity",
+                    "variables": {
+                      "text": {
+                        "state": {
+                          "font_size": 32,
+                          "font_weight": 700,
+                          "color": {"default": "var(--picard-blue)"}
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard-filled",
+                  "cblcars_card_config": {
+                    "label": "PRESSURE",
+                    "show_label": true,
+                    "show_state": true,
+                    "entity": "sensor.barometric_pressure",
+                    "variables": {
+                      "text": {
+                        "state": {
+                          "font_size": 28,
+                          "font_weight": 600,
+                          "color": {"default": "white"}
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard-filled-right",
+                  "cblcars_card_config": {
+                    "label": "WIND",
+                    "show_label": true,
+                    "show_state": true,
+                    "entity": "sensor.wind_speed",
+                    "variables": {
+                      "text": {
+                        "state": {
+                          "font_size": 28,
+                          "font_weight": 600,
+                          "color": {"default": "white"}
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard",
+                  "cblcars_card_config": {
+                    "label": "UV INDEX",
+                    "show_label": true,
+                    "show_state": true,
+                    "entity": "sensor.uv_index",
+                    "variables": {
+                      "text": {
+                        "state": {
+                          "font_size": 32,
+                          "font_weight": 700,
+                          "color": {"default": "var(--picard-yellow)"}
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-button-card",
+                  "cblcars_card_type": "cb-lcars-button-picard-right",
+                  "cblcars_card_config": {
+                    "label": "AIR QUALITY",
+                    "show_label": true,
+                    "show_state": true,
+                    "entity": "sensor.air_quality_index",
+                    "variables": {
+                      "text": {
+                        "state": {
+                          "font_size": 32,
+                          "font_weight": 700,
+                          "color": {"default": "var(--picard-light-green)"}
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "title": "Climate Control",
+              "cards": [
+                {
+                  "type": "custom:cb-lcars-elbow-card",
+                  "cblcars_card_type": "cb-lcars-middle",
+                  "cblcars_card_config": {
+                    "label": "HVAC SYSTEMS",
+                    "variables": {
+                      "card": {
+                        "border": {
+                          "left": {"size": 15, "color": "var(--picard-blue)"}
+                        }
+                      }
+                    }
+                  },
+                  "layout_options": {"grid_columns": 12, "grid_rows": 1}
+                },
+                {
+                  "type": "thermostat",
+                  "entity": "climate.living_room",
+                  "card_mod": {
+                    "style": "\n                      ha-card {\n                        background: rgba(17, 20, 25, 0.8) !important;\n                        border: 2px solid var(--picard-orange) !important;\n                        border-radius: 20px !important;\n                      }\n                      .name {\n                        font-family: Antonio !important;\n                        text-transform: uppercase !important;\n                        color: var(--picard-orange) !important;\n                      }\n                    "
+                  }
+                },
+                {
+                  "type": "thermostat",
+                  "entity": "climate.bedroom",
+                  "card_mod": {
+                    "style": "\n                      ha-card {\n                        background: rgba(17, 20, 25, 0.8) !important;\n                        border: 2px solid var(--picard-blue) !important;\n                        border-radius: 20px !important;\n                      }\n                      .name {\n                        font-family: Antonio !important;\n                        text-transform: uppercase !important;\n                        color: var(--picard-blue) !important;\n                      }\n                    "
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "title": "7-Day Forecast",
+              "cards": [
+                {
+                  "type": "weather-forecast",
+                  "entity": "weather.home",
+                  "show_current": false,
+                  "show_forecast": true,
+                  "forecast_type": "daily",
+                  "card_mod": {
+                    "style": "\n                      ha-card {\n                        background: transparent !important;\n                        border: 2px solid var(--picard-blue) !important;\n                        border-radius: 20px !important;\n                      }\n                      .name {\n                        font-family: Antonio !important;\n                        text-transform: uppercase !important;\n                      }\n                    "
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "title": "Weather Alerts",
+              "cards": [
+                {
+                  "type": "custom:cb-lcars-label-card",
+                  "cblcars_card_type": "cb-lcars-label-picard-square",
+                  "cblcars_card_config": {
+                    "label": "SECTOR STATUS: NORMAL",
+                    "show_label": true,
+                    "variables": {
+                      "card": {
+                        "border": {
+                          "color": "var(--picard-light-green)"
+                        }
+                      },
+                      "text": {
+                        "label": {
+                          "font_size": 20,
+                          "font_weight": 500,
+                          "color": {"default": "var(--picard-light-green)"}
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-label-card",
+                  "cblcars_card_type": "cb-lcars-label-picard-square",
+                  "cblcars_card_config": {
+                    "label": "NO ACTIVE ALERTS",
+                    "show_label": true,
+                    "variables": {
+                      "card": {
+                        "border": {
+                          "color": "var(--picard-light-gray)"
+                        }
+                      },
+                      "text": {
+                        "label": {
+                          "font_size": 18,
+                          "font_weight": 400
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Indoor Climate",
+          "path": "indoor-climate",
+          "icon": "mdi:home-thermometer",
+          "type": "sections",
+          "sections": [
+            {
+              "type": "grid",
+              "title": "",
+              "cards": [
+                {
+                  "type": "custom:cb-lcars-elbow-card",
+                  "cblcars_card_type": "cb-lcars-header",
+                  "cblcars_card_config": {
+                    "label": "INTERNAL ENVIRONMENTAL CONTROLS",
+                    "variables": {
+                      "card": {
+                        "border": {
+                          "left": {"size": 320},
+                          "top": {"size": 50, "left_radius": 150},
+                          "color": "var(--picard-blue)"
+                        }
+                      },
+                      "text": {
+                        "label": {
+                          "padding": {"left": 60, "top": 38},
+                          "font_size": "28",
+                          "font_weight": "600"
+                        }
+                      }
+                    }
+                  },
+                  "layout_options": {"grid_columns": 12, "grid_rows": 2}
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "title": "Room Temperatures",
+              "cards": [
+                {
+                  "type": "custom:cb-lcars-multimeter-card",
+                  "cblcars_card_type": "cb-lcars-multimeter-horizontal",
+                  "cblcars_card_config": {
+                    "label": "LIVING ROOM",
+                    "show_label": true,
+                    "show_state": true,
+                    "entity": "sensor.living_room_temperature",
+                    "variables": {
+                      "card": {
+                        "bar": {
+                          "color": {"default": "var(--picard-orange)"}
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-multimeter-card",
+                  "cblcars_card_type": "cb-lcars-multimeter-horizontal",
+                  "cblcars_card_config": {
+                    "label": "BEDROOM",
+                    "show_label": true,
+                    "show_state": true,
+                    "entity": "sensor.bedroom_temperature",
+                    "variables": {
+                      "card": {
+                        "bar": {
+                          "color": {"default": "var(--picard-blue)"}
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "custom:cb-lcars-multimeter-card",
+                  "cblcars_card_type": "cb-lcars-multimeter-horizontal",
+                  "cblcars_card_config": {
+                    "label": "KITCHEN",
+                    "show_label": true,
+                    "show_state": true,
+                    "entity": "sensor.kitchen_temperature",
+                    "variables": {
+                      "card": {
+                        "bar": {
+                          "color": {"default": "var(--picard-purple)"}
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "title": "Air Quality Monitor",
+              "cards": [
+                {
+                  "type": "gauge",
+                  "entity": "sensor.indoor_air_quality",
+                  "name": "IAQ INDEX",
+                  "unit": "AQI",
+                  "min": 0,
+                  "max": 500,
+                  "severity": {
+                    "green": 0,
+                    "yellow": 50,
+                    "red": 100
+                  },
+                  "card_mod": {
+                    "style": "\n                      ha-card {\n                        background: rgba(17, 20, 25, 0.8) !important;\n                        border: 2px solid var(--picard-orange) !important;\n                        border-radius: 20px !important;\n                      }\n                      .name {\n                        font-family: Antonio !important;\n                        text-transform: uppercase !important;\n                      }\n                    "
+                  }
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.indoor_humidity",
+                  "name": "HUMIDITY",
+                  "unit": "%",
+                  "min": 0,
+                  "max": 100,
+                  "severity": {
+                    "green": 30,
+                    "yellow": 60,
+                    "red": 80
+                  },
+                  "card_mod": {
+                    "style": "\n                      ha-card {\n                        background: rgba(17, 20, 25, 0.8) !important;\n                        border: 2px solid var(--picard-blue) !important;\n                        border-radius: 20px !important;\n                      }\n                      .name {\n                        font-family: Antonio !important;\n                        text-transform: uppercase !important;\n                      }\n                    "
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

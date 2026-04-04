@@ -1,0 +1,155 @@
+const { chromium } = require('playwright');
+const fs = require('fs');
+const path = require('path');
+
+const EDGE_USER_DATA = 'C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Edge\\User Data';
+const DATA_DIR = path.join(__dirname, '..', 'data');
+
+// Expanded group list for maximum exposure
+const FACEBOOK_GROUPS = [
+  { name: 'HAYS COUNTY LIST & SELL', priority: 1 },
+  { name: 'Buda/Kyle Buy, Sell & Rent', priority: 1 },
+  { name: 'Ventas De Austin, Buda, Kyle', priority: 1 },
+  { name: 'Austin Buy Sell Trade', priority: 2 },
+  { name: 'San Marcos Buy Sell Trade', priority: 2 },
+  { name: 'Kyle Buy Sell Trade', priority: 2 },
+  { name: 'Buda Buy & Sell', priority: 2 }
+];
+
+// Aggressive posting schedule
+const POSTING_SCHEDULE = [
+  { time: '08:00', groups: [0, 1] },      // Morning - 2 groups
+  { time: '10:00', groups: [2, 3] },      // Mid-morning - 2 groups
+  { time: '12:00', groups: [0, 1, 2] },   // Lunch - 3 groups
+  { time: '14:00', groups: [4, 5] },      // Afternoon - 2 groups
+  { time: '16:00', groups: [0, 1, 2, 3] }, // Evening commute - 4 groups
+  { time: '18:00', groups: [5, 6] },      // Dinner - 2 groups
+  { time: '20:00', groups: [0, 1, 2] }    // Night - 3 groups
+];
+
+async function main() {
+  console.log('🚗 AGGRESSIVE F-150 & THULE SALES CAMPAIGN\n');
+  console.log('='.repeat(60));
+  console.log('📊 CAMPAIGN OVERVIEW');
+  console.log('='.repeat(60));
+  console.log(`📍 Target Groups: ${FACEBOOK_GROUPS.length}`);
+  console.log(`📅 Daily Posts: ${POSTING_SCHEDULE.reduce((a, b) => a + b.groups.length, 0)} shares/day`);
+  console.log(`🎯 Strategy: Maximum visibility across Austin/Hays County\n`);
+  
+  const context = await chromium.launchPersistentContext(EDGE_USER_DATA, {
+    headless: false,
+    executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
+    args: ['--start-maximized'],
+    viewport: { width: 1920, height: 1080 }
+  });
+  
+  const page = context.pages()[0] || await context.newPage();
+  
+  try {
+    // Open Facebook Marketplace
+    console.log('🌐 Opening Facebook Marketplace...');
+    await page.goto('https://www.facebook.com/marketplace/you/selling');
+    await page.waitForTimeout(5000);
+    
+    console.log('✅ Marketplace loaded\n');
+    
+    // Inject aggressive sales panel
+    await page.evaluate((groups) => {
+      const panel = document.createElement('div');
+      panel.innerHTML = `
+        <div style="position:fixed;top:80px;right:20px;width:350px;background:linear-gradient(135deg,#2563eb,#1e40af);color:white;border-radius:12px;padding:20px;z-index:2147483647;box-shadow:0 8px 32px rgba(0,0,0,0.4);font-family:system-ui,sans-serif;">
+          <div style="font-size:22px;font-weight:bold;margin-bottom:8px;">🚗 AGGRESSIVE SALES MODE</div>
+          <div style="font-size:14px;opacity:0.9;margin-bottom:15px;">F-150 & Thule Box</div>
+          
+          <div style="background:rgba(255,255,255,0.2);padding:10px;border-radius:6px;margin-bottom:15px;">
+            <div style="font-weight:bold;margin-bottom:5px;">📈 Current Status:</div>
+            <div style="font-size:13px;">• 7 groups targeted</div>
+            <div style="font-size:13px;">• 18 shares/day planned</div>
+            <div style="font-size:13px;">• High-traffic times only</div>
+          </div>
+          
+          <button id="aggressive-share" style="background:#fbbf24;color:#78350f;border:none;padding:14px 24px;border-radius:8px;cursor:pointer;font-size:16px;font-weight:bold;width:100%;margin-bottom:10px;">
+            🚀 SHARE TO ALL GROUPS NOW
+          </button>
+          
+          <button id="check-messages" style="background:#22c55e;color:white;border:none;padding:12px 20px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:bold;width:100%;">
+            💬 CHECK BUYER MESSAGES
+          </button>
+          
+          <div id="sales-status" style="margin-top:15px;font-size:13px;min-height:60px;background:rgba(0,0,0,0.2);padding:10px;border-radius:6px;">
+            Ready to launch aggressive campaign
+          </div>
+        </div>
+      `;
+      document.body.appendChild(panel);
+      
+      // Track sharing
+      window.salesCampaign = {
+        groupsShared: [],
+        messagesChecked: 0,
+        lastShare: null
+      };
+      
+      // Share button handler
+      document.getElementById('aggressive-share').addEventListener('click', async () => {
+        const status = document.getElementById('sales-status');
+        status.innerHTML = '<div style="font-weight:bold;">🚀 Launching aggressive share...</div>';
+        
+        // Find share button on current listing
+        const shareBtns = document.querySelectorAll('button');
+        let shareBtn = null;
+        
+        for (const btn of shareBtns) {
+          if (btn.textContent.toLowerCase().includes('share') || 
+              btn.getAttribute('aria-label')?.toLowerCase().includes('share')) {
+            shareBtn = btn;
+            break;
+          }
+        }
+        
+        if (shareBtn) {
+          shareBtn.click();
+          status.innerHTML += '<div>✅ Share dialog opened</div>';
+          status.innerHTML += '<div style="margin-top:10px;font-weight:bold;">📋 Target Groups:</div>';
+          groups.slice(0, 3).forEach(g => {
+            status.innerHTML += `<div style="font-size:12px;margin-left:10px;">• ${g.name}</div>`;
+          });
+          status.innerHTML += '<div style="margin-top:10px;color:#fbbf24;">⚠️ Manual completion needed for Facebook security</div>';
+        } else {
+          status.innerHTML = '❌ Share button not found. Try refreshing.';
+        }
+      });
+      
+      // Check messages handler
+      document.getElementById('check-messages').addEventListener('click', () => {
+        window.location.href = 'https://www.facebook.com/marketplace/inbox';
+      });
+      
+    }, FACEBOOK_GROUPS);
+    
+    console.log('✅ Aggressive sales panel injected!');
+    console.log('\n🎯 SALES STRATEGY:');
+    console.log('   • Share to 3 groups immediately');
+    console.log('   • Check inbox for buyer messages');
+    console.log('   • Rotate through all 7 groups daily');
+    console.log('   • Post at high-traffic times\n');
+    
+    // Create posting schedule
+    console.log('📅 DAILY POSTING SCHEDULE (7x/day):');
+    POSTING_SCHEDULE.forEach(slot => {
+      const groupNames = slot.groups.map(i => FACEBOOK_GROUPS[i]?.name).filter(Boolean);
+      console.log(`   ${slot.time} - ${groupNames.join(', ')}`);
+    });
+    
+    console.log('\n⏳ Panel ready. Click "SHARE TO ALL GROUPS NOW" to start.');
+    console.log('   Browser staying open for manual completion.\n');
+    
+    // Keep open
+    await new Promise(() => {});
+    
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
+}
+
+main().catch(console.error);

@@ -1,0 +1,85 @@
+# ==========================================
+# LOVELACE DASHBOARD CONFIGURATION
+# Add this to your configuration.yaml
+# ==========================================
+
+# Enable Lovelace dashboards
+lovelace:
+  mode: storage
+  # Add the LCARS dashboards
+  dashboards:
+    lcars-bridge:
+      mode: yaml
+      title: "LCARS Bridge"
+      icon: mdi:star-four-points
+      show_in_sidebar: true
+      filename: dashboards/lcars-bridge.yaml
+    
+    lcars-engineering:
+      mode: yaml
+      title: "LCARS Engineering"
+      icon: mdi:engine
+      show_in_sidebar: true
+      filename: dashboards/lcars-engineering.yaml
+    
+    lcars-science:
+      mode: yaml
+      title: "LCARS Science"
+      icon: mdi:telescope
+      show_in_sidebar: true
+      filename: dashboards/lcars-science.yaml
+    
+    lcars-security:
+      mode: yaml
+      title: "LCARS Security"
+      icon: mdi:shield
+      show_in_sidebar: true
+      filename: dashboards/lcars-security.yaml
+    
+    lcars-quarters:
+      mode: yaml
+      title: "LCARS Quarters"
+      icon: mdi:bed
+      show_in_sidebar: true
+      filename: dashboards/lcars-quarters.yaml
+
+# ==========================================
+# FRONTEND CONFIGURATION
+# ==========================================
+frontend:
+  themes: !include_dir_merge_named themes
+
+# ==========================================
+# REQUIRED RESOURCES (Add via UI)
+# ==========================================
+# Go to: Settings → Dashboards → ⋮ → Resources
+#
+# 1. Add as Stylesheet:
+#    https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap
+#
+# 2. Add as JavaScript Module:
+#    https://cdn.jsdelivr.net/gh/th3jesta/ha-lcars@js-main/lcars.js
+#
+# ==========================================
+
+# ==========================================
+# REQUIRED HACS COMPONENTS
+# ==========================================
+# Install via HACS:
+# - card-mod (REQUIRED)
+# - my-slider-v2 (optional, for advanced controls)
+# - layout-card (optional, for wall panel)
+#
+# ==========================================
+
+# ==========================================
+# HELPER ENTITIES (Create via UI)
+# ==========================================
+# Settings → Devices & Services → Helpers → Create Helper
+#
+# Name: LCARS Sound | Type: Toggle | ID: input_boolean.lcars_sound
+# Name: LCARS Texture | Type: Toggle | ID: input_boolean.lcars_texture
+# Name: LCARS Horizontal | Type: Number | ID: input_number.lcars_horizontal (6-60)
+# Name: LCARS Vertical | Type: Number | ID: input_number.lcars_vertical (26-60)
+#
+# ==========================================

@@ -1,0 +1,22 @@
+{
+  "lastCheck": "2026-02-07T17:34:02.954Z",
+  "lastNotifiedUids": {
+    "iCloud Primary": {
+      "5": 1770480383288,
+      "6": 1770480383287
+    },
+    "Gmail Secondary": {}
+  },
+  "totalChecks": 9,
+  "totalImportantFound": 2,
+  "errors": [
+    "Gmail Secondary: self-signed certificate; if the root CA is installed locally, try running Node.js with --use-system-ca",
+    "Gmail Secondary: Invalid credentials (Failure)",
+    "Gmail Secondary: Invalid credentials (Failure)",
+    "Gmail Secondary: Invalid credentials (Failure)",
+    "Gmail Secondary: Invalid credentials (Failure)",
+    "Gmail Secondary: Invalid credentials (Failure)",
+    "Gmail Secondary: Invalid credentials (Failure)",
+    "Gmail Secondary: Invalid credentials (Failure)"
+  ]
+}

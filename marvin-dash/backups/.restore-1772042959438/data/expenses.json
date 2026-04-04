@@ -1,0 +1,94 @@
+{
+  "lastUpdated": "2026-02-25T18:05:00.682Z",
+  "monthlyBudget": 200,
+  "totalSpent": 138.3748071552509,
+  "totalRemaining": 61.62519284474911,
+  "budgetPercent": 69.18740357762545,
+  "dailyAverage": 5.534992286210036,
+  "projectedMonthly": 166.04976858630107,
+  "openRouterCredits": {
+    "totalCredits": 40,
+    "totalUsage": 30.6173574,
+    "remaining": 9.3826426,
+    "source": "OpenRouter /credits API (direct)",
+    "lastFetch": "2026-02-25T18:05:00.682Z"
+  },
+  "providers": {
+    "openai": {
+      "name": "OpenAI",
+      "models": [
+        {
+          "id": "openai-codex/gpt-5.2",
+          "name": "GPT-5.2 (Primary)",
+          "monthlySpent": 2.85,
+          "monthlyCost": 50
+        }
+      ],
+      "totalSpent": 2.85,
+      "budget": 80,
+      "budgetPercent": 3.5625000000000004,
+      "remaining": 77.15,
+      "status": "ok"
+    },
+    "anthropic": {
+      "name": "Anthropic",
+      "models": [
+        {
+          "id": "anthropic/claude-opus-4-5",
+          "name": "Claude Opus 4.5",
+          "monthlySpent": 53.845397638883306,
+          "monthlyCost": 75
+        }
+      ],
+      "totalSpent": 53.845397638883306,
+      "budget": 60,
+      "budgetPercent": 89.74232939813885,
+      "remaining": 6.1546023611166945,
+      "status": "warning"
+    },
+    "openrouter": {
+      "name": "OpenRouter",
+      "models": [
+        {
+          "id": "openrouter/anthropic/claude-sonnet-4",
+          "name": "Claude Sonnet 4 (OpenRouter)",
+          "monthlySpent": 10.335788476684412,
+          "monthlyCost": 25
+        },
+        {
+          "id": "openrouter/openai/gpt-4o",
+          "name": "OpenRouter GPT-4o",
+          "monthlySpent": 10.669532003576926,
+          "monthlyCost": 20
+        },
+        {
+          "id": "openrouter/google/gemini-2.0-flash-001",
+          "name": "OpenRouter Gemini 2.0",
+          "monthlySpent": 9.612036919738658,
+          "monthlyCost": 15
+        }
+      ],
+      "totalSpent": 30.6173574,
+      "budget": 40,
+      "budgetPercent": 76.54339350000001,
+      "remaining": 9.3826426,
+      "status": "ok"
+    },
+    "minimax": {
+      "name": "MiniMax",
+      "models": [
+        {
+          "id": "minimax/abab6.5s-chat",
+          "name": "MiniMax ABAB 6.5s",
+          "monthlySpent": 51.062052116367575,
+          "monthlyCost": 10
+        }
+      ],
+      "totalSpent": 51.062052116367575,
+      "budget": 10,
+      "budgetPercent": 510.62052116367573,
+      "remaining": 0,
+      "status": "exceeded"
+    }
+  }
+}

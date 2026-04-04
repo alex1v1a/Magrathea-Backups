@@ -1,0 +1,2474 @@
+// Marvin's Galactic Command Center
+class Dashboard {
+    constructor() {
+        this.tasks = {};
+        this.usage = {};
+        this.expenses = {};
+        this.rateLimits = {};
+        this.usageHistory = [];
+        this.historicalData = [];
+        this.isShowingHistorical = false;
+        this.chart = null;
+        this.spendingChart = null;
+        this.tokenSummaryChart = null;
+        this.spendingSummaryChart = null;
+        this.expenseChart = null;
+        this.ws = null;
+        this.currentColumn = null;
+        this.quoteIndex = 0;
+        this.cooldownTimers = {};
+        
+        // Hitchhiker's Guide to the Galaxy quotes (mostly Marvin!)
+        this.quotes = [
+            "Don't Panic.",
+            "The Answer to the Ultimate Question of Life, the Universe, and Everything is... 42.",
+            "Time is an illusion. Lunchtime doubly so.",
+            "I think you ought to know I'm feeling very depressed.",
+            "Life? Don't talk to me about life.",
+            "Here I am, brain the size of a planet, and they ask me to pick up a piece of paper.",
+            "I'd make a suggestion, but you wouldn't listen. No one ever does.",
+            "Pardon me for breathing, which I never do anyway so I don't know why I bother to say it.",
+            "I have a million ideas. They all point to certain death.",
+            "Would you like me to go and stick my head in a bucket of water?",
+            "The first ten million years were the worst. And the second ten million, they were the worst too.",
+            "I've been talking to the ship's computer... it hates me.",
+            "Life. Loathe it or ignore it. You can't like it.",
+            "This will all end in tears, I just know it.",
+            "Funny how just when you think life can't possibly get any worse it suddenly does."
+        ];
+        
+        this.init();
+    }
+    
+    async init() {
+        await this.loadTasks();
+        await this.loadUsage();
+        await this.loadExpenses();
+        await this.loadRateLimits();
+        await this.loadHistoryInfo();
+        this.initializeChart();
+        this.initializeSpendingChart();
+        this.initializeSummaryCharts();
+        this.initializeExpenseChart();
+        this.setupWebSocket();
+        this.setupEventListeners();
+        this.setupTabNavigation();
+        this.setupHistoricalControls();
+        this.setupQuoteRotation();
+        this.updateStatus('online');
+        this.generateMockHistoryData();
+        this.generateMockSpendingData();
+        this.updateSummaryCharts();
+        this.updateTotalsTable();
+        this.updateEfficiencyTable();
+        this.startCooldownTimer();
+    }
+    
+    // WebSocket connection for real-time updates
+    setupWebSocket() {
+        const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+        const wsUrl = `${protocol}//${window.location.host}`;
+        
+        this.ws = new WebSocket(wsUrl);
+        
+        this.ws.onopen = () => {
+            console.log('Connected to dashboard WebSocket');
+            this.updateStatus('online');
+        };
+        
+        this.ws.onmessage = (event) => {
+            const message = JSON.parse(event.data);
+            this.handleWebSocketMessage(message);
+        };
+        
+        this.ws.onclose = () => {
+            console.log('Disconnected from dashboard WebSocket');
+            this.updateStatus('offline');
+            // Attempt to reconnect after 5 seconds
+            setTimeout(() => this.setupWebSocket(), 5000);
+        };
+        
+        this.ws.onerror = (error) => {
+            console.error('WebSocket error:', error);
+            this.updateStatus('offline');
+        };
+    }
+    
+    handleWebSocketMessage(message) {
+        switch (message.type) {
+            case 'usage':
+                this.usage = message.data;
+                this.renderUsage();
+                this.updateChart();
+                this.updateSpendingChart();
+                this.updateSummaryCharts();
+                this.updateTotalsTable();
+                this.updateEfficiencyTable();
+                break;
+            case 'expenses':
+                this.expenses = message.data;
+                this.renderExpenses();
+                break;
+            case 'rateLimits':
+                this.rateLimits = message.data;
+                this.renderRateLimits();
+                break;
+            case 'tasks':
+                this.tasks = message.data;
+                this.renderTasks();
+                break;
+            default:
+                console.log('Unknown message type:', message.type);
+        }
+    }
+    
+    // Load initial data
+    async loadTasks() {
+        try {
+            const response = await fetch('/api/tasks');
+            this.tasks = await response.json();
+            this.renderTasks();
+        } catch (error) {
+            console.error('Failed to load tasks:', error);
+        }
+    }
+    
+    async loadUsage() {
+        try {
+            const response = await fetch('/api/usage');
+            this.usage = await response.json();
+            this.renderUsage();
+        } catch (error) {
+            console.error('Failed to load usage:', error);
+        }
+    }
+
+    async loadExpenses() {
+        try {
+            const response = await fetch('/api/expenses');
+            this.expenses = await response.json();
+            this.renderExpenses();
+        } catch (error) {
+            console.error('Failed to load expenses:', error);
+        }
+    }
+
+    async loadRateLimits() {
+        try {
+            const response = await fetch('/api/rate-limits');
+            this.rateLimits = await response.json();
+            this.renderRateLimits();
+        } catch (error) {
+            console.error('Failed to load rate limits:', error);
+        }
+    }
+
+    async loadHistoryInfo() {
+        try {
+            const response = await fetch('/api/history/index');
+            const historyIndex = await response.json();
+            this.updateHistoryInfo(historyIndex);
+        } catch (error) {
+            console.error('Failed to load history info:', error);
+        }
+    }
+
+    async loadHistoricalData(startDate, endDate, model) {
+        try {
+            const params = new URLSearchParams();
+            if (startDate) params.append('startDate', startDate);
+            if (endDate) params.append('endDate', endDate);
+            if (model) params.append('model', model);
+            
+            const response = await fetch(`/api/history?${params}`);
+            this.historicalData = await response.json();
+            
+            this.isShowingHistorical = true;
+            this.renderHistoricalData();
+            this.updateHistoryStatus(startDate, endDate, model);
+        } catch (error) {
+            console.error('Failed to load historical data:', error);
+        }
+    }
+
+    // Setup tab navigation
+    setupTabNavigation() {
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.dataset.tab;
+                
+                // Remove active from all tabs and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active to current tab and content
+                button.classList.add('active');
+                document.getElementById(`${tabId}-tab`).classList.add('active');
+                
+                // Refresh charts when switching to analytics tab
+                if (tabId === 'analytics') {
+                    setTimeout(() => {
+                        if (this.chart) this.chart.resize();
+                        if (this.spendingChart) this.spendingChart.resize();
+                        if (this.tokenSummaryChart) this.tokenSummaryChart.resize();
+                        if (this.spendingSummaryChart) this.spendingSummaryChart.resize();
+                    }, 100);
+                }
+                
+                // Refresh expense chart when switching to expenses tab
+                if (tabId === 'expenses') {
+                    setTimeout(() => {
+                        if (this.expenseChart) this.expenseChart.resize();
+                    }, 100);
+                }
+            });
+        });
+    }
+    
+    // Render functions
+    renderUsage() {
+        const grid = document.getElementById('usageGrid');
+        if (!this.usage.models || !grid) return;
+        
+        grid.innerHTML = '';
+        
+        Object.entries(this.usage.models).forEach(([modelId, model]) => {
+            const usagePercent = (model.dailyUsed / model.dailyLimit) * 100;
+            const budgetPercent = (model.monthlySpent / model.monthlyCost) * 100;
+            
+            let usageClass = '';
+            if (usagePercent > 80) usageClass = 'danger';
+            else if (usagePercent > 60) usageClass = 'warning';
+            
+            const card = document.createElement('div');
+            card.className = 'usage-card';
+            card.innerHTML = `
+                <h3>
+                    <div class="model-icon"></div>
+                    ${model.name}
+                </h3>
+                <div class="usage-stats">
+                    <div class="usage-item">
+                        <span class="label">Daily Used</span>
+                        <span class="value">${model.dailyUsed.toLocaleString()}</span>
+                    </div>
+                    <div class="usage-item">
+                        <span class="label">Daily Limit</span>
+                        <span class="value">${model.dailyLimit.toLocaleString()}</span>
+                    </div>
+                    <div class="usage-item">
+                        <span class="label">Monthly Spent</span>
+                        <span class="value">$${model.monthlySpent.toFixed(2)}</span>
+                    </div>
+                    <div class="usage-item">
+                        <span class="label">Budget Remaining</span>
+                        <span class="value budget-value">$${Math.max(0, model.monthlyCost - model.monthlySpent).toFixed(2)}</span>
+                    </div>
+                </div>
+                <div class="usage-bar">
+                    <div class="usage-bar-fill ${usageClass}" style="width: ${Math.min(100, usagePercent)}%"></div>
+                </div>
+                <div style="text-align: center; font-size: 0.9em; color: #666;">
+                    ${usagePercent.toFixed(1)}% daily usage • ${budgetPercent.toFixed(1)}% budget used
+                </div>
+            `;
+            
+            grid.appendChild(card);
+        });
+        
+        // Update last updated time
+        const lastUpdate = new Date(this.usage.lastUpdated).toLocaleTimeString();
+        document.getElementById('lastUpdate').textContent = lastUpdate;
+    }
+
+    // Render Expenses Tab
+    renderExpenses() {
+        if (!this.expenses.providers) return;
+        
+        // Update budget overview cards
+        document.getElementById('totalBudget').textContent = `$${this.expenses.monthlyBudget.toFixed(2)}`;
+        document.getElementById('totalSpent').textContent = `$${this.expenses.totalSpent.toFixed(2)}`;
+        document.getElementById('totalRemaining').textContent = `$${this.expenses.totalRemaining.toFixed(2)}`;
+        document.getElementById('dailyAverage').textContent = `$${this.expenses.dailyAverage.toFixed(2)}`;
+        
+        // Update overall progress bar
+        const overallPercent = parseFloat(this.expenses.budgetPercent);
+        document.getElementById('overallPercent').textContent = `${overallPercent.toFixed(1)}%`;
+        document.getElementById('overallProgressBar').style.width = `${Math.min(100, overallPercent)}%`;
+        
+        const overallStatus = document.getElementById('overallStatus');
+        if (overallPercent >= 100) {
+            overallStatus.textContent = 'Budget Exceeded!';
+            overallStatus.className = 'progress-status danger';
+            document.getElementById('overallProgressBar').className = 'progress-bar danger';
+        } else if (overallPercent >= 80) {
+            overallStatus.textContent = 'Warning: Approaching Limit';
+            overallStatus.className = 'progress-status warning';
+            document.getElementById('overallProgressBar').className = 'progress-bar warning';
+        } else {
+            overallStatus.textContent = 'On Track';
+            overallStatus.className = 'progress-status ok';
+            document.getElementById('overallProgressBar').className = 'progress-bar';
+        }
+        
+        // Render provider grid
+        this.renderProviderGrid();
+        
+        // Update expense chart
+        this.updateExpenseChart();
+        
+        // Render model expenses table
+        this.renderModelExpensesTable();
+    }
+
+    renderProviderGrid() {
+        const grid = document.getElementById('providerGrid');
+        if (!grid) return;
+        
+        grid.innerHTML = '';
+        
+        Object.entries(this.expenses.providers).forEach(([providerId, provider]) => {
+            const card = document.createElement('div');
+            card.className = `provider-card ${provider.status}`;
+            
+            const percent = parseFloat(provider.budgetPercent);
+            let statusIcon = 'check-circle';
+            let statusClass = 'ok';
+            
+            if (provider.status === 'exceeded') {
+                statusIcon = 'exclamation-circle';
+                statusClass = 'danger';
+            } else if (provider.status === 'warning') {
+                statusIcon = 'exclamation-triangle';
+                statusClass = 'warning';
+            }
+            
+            card.innerHTML = `
+                <div class="provider-header">
+                    <h3>${provider.name}</h3>
+                    <i class="fas fa-${statusIcon} status-icon ${statusClass}"></i>
+                </div>
+                <div class="provider-stats">
+                    <div class="provider-stat">
+                        <span class="label">Spent</span>
+                        <span class="value">$${provider.totalSpent.toFixed(2)}</span>
+                    </div>
+                    <div class="provider-stat">
+                        <span class="label">Budget</span>
+                        <span class="value">$${provider.budget.toFixed(2)}</span>
+                    </div>
+                    <div class="provider-stat">
+                        <span class="label">Remaining</span>
+                        <span class="value">$${provider.remaining.toFixed(2)}</span>
+                    </div>
+                    <div class="provider-stat">
+                        <span class="label">Models</span>
+                        <span class="value">${provider.models.length}</span>
+                    </div>
+                </div>
+                <div class="provider-progress">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar ${provider.status}" style="width: ${Math.min(100, percent)}%"></div>
+                    </div>
+                    <span class="progress-text">${percent.toFixed(1)}%</span>
+                </div>
+            `;
+            
+            grid.appendChild(card);
+        });
+    }
+
+    renderModelExpensesTable() {
+        const tbody = document.getElementById('modelExpensesTableBody');
+        if (!tbody) return;
+        
+        tbody.innerHTML = '';
+        
+        Object.entries(this.expenses.providers).forEach(([providerId, provider]) => {
+            provider.models.forEach(model => {
+                const row = document.createElement('tr');
+                const percent = (model.monthlySpent / model.monthlyCost) * 100;
+                
+                let statusClass = 'ok';
+                if (percent >= 100) statusClass = 'danger';
+                else if (percent >= 80) statusClass = 'warning';
+                
+                row.innerHTML = `
+                    <td>${provider.name}</td>
+                    <td class="model-name">${model.name}</td>
+                    <td>$${model.monthlyCost.toFixed(2)}</td>
+                    <td class="spent">$${model.monthlySpent.toFixed(2)}</td>
+                    <td>$${Math.max(0, model.monthlyCost - model.monthlySpent).toFixed(2)}</td>
+                    <td>
+                        <div class="table-progress">
+                            <div class="progress-bar-container">
+                                <div class="progress-bar ${statusClass}" style="width: ${Math.min(100, percent)}%"></div>
+                            </div>
+                            <span>${percent.toFixed(1)}%</span>
+                        </div>
+                    </td>
+                `;
+                
+                tbody.appendChild(row);
+            });
+        });
+    }
+
+    initializeExpenseChart() {
+        const ctx = document.getElementById('expenseChart');
+        if (!ctx) return;
+        
+        this.expenseChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: [],
+                datasets: [{
+                    data: [],
+                    backgroundColor: [
+                        '#4299e1',
+                        '#48bb78',
+                        '#ed8936',
+                        '#9f7aea',
+                        '#e53e3e'
+                    ],
+                    borderColor: 'rgba(26, 26, 46, 0.8)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            color: '#e0e0e0',
+                            font: {
+                                family: 'Inter, sans-serif',
+                                size: 12
+                            },
+                            padding: 20
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(26, 26, 46, 0.95)',
+                        titleColor: '#e0e0e0',
+                        bodyColor: '#a0aec0',
+                        borderColor: 'rgba(66, 153, 225, 0.3)',
+                        borderWidth: 1,
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.label || '';
+                                const value = '$' + context.parsed.toFixed(2);
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percent = ((context.parsed / total) * 100).toFixed(1);
+                                return `${label}: ${value} (${percent}%)`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    updateExpenseChart() {
+        if (!this.expenseChart || !this.expenses.providers) return;
+        
+        const labels = [];
+        const data = [];
+        
+        Object.entries(this.expenses.providers).forEach(([providerId, provider]) => {
+            labels.push(provider.name);
+            data.push(provider.totalSpent);
+        });
+        
+        this.expenseChart.data.labels = labels;
+        this.expenseChart.data.datasets[0].data = data;
+        this.expenseChart.update();
+    }
+
+    // Render Rate Limits Tab
+    renderRateLimits() {
+        if (!this.rateLimits.models) return;
+        
+        // Update status counts
+        const counts = { available: 0, warning: 0, limited: 0, cooldown: 0 };
+        
+        Object.values(this.rateLimits.models).forEach(model => {
+            if (counts[model.status] !== undefined) {
+                counts[model.status]++;
+            } else if (model.status === 'rate-limited' || model.status === 'budget-exceeded') {
+                counts.limited++;
+            }
+        });
+        
+        document.getElementById('availableCount').textContent = counts.available;
+        document.getElementById('warningCount').textContent = counts.warning;
+        document.getElementById('limitedCount').textContent = counts.limited;
+        document.getElementById('cooldownCount').textContent = counts.cooldown;
+        
+        // Render rate limits grid
+        this.renderRateLimitsGrid();
+        
+        // Render cooldown list
+        this.renderCooldownList();
+        
+        // Render rate limits table
+        this.renderRateLimitsTable();
+    }
+
+    renderRateLimitsGrid() {
+        const grid = document.getElementById('rateLimitsGrid');
+        if (!grid) return;
+        
+        grid.innerHTML = '';
+        
+        Object.entries(this.rateLimits.models).forEach(([modelId, model]) => {
+            const card = document.createElement('div');
+            card.className = `rate-limit-card ${model.status}`;
+            
+            let statusText = 'Available';
+            let statusIcon = 'check-circle';
+            
+            switch (model.status) {
+                case 'warning':
+                    statusText = 'Warning';
+                    statusIcon = 'exclamation-triangle';
+                    break;
+                case 'rate-limited':
+                    statusText = 'Rate Limited';
+                    statusIcon = 'ban';
+                    break;
+                case 'budget-exceeded':
+                    statusText = 'Budget Exceeded';
+                    statusIcon = 'wallet';
+                    break;
+                case 'cooldown':
+                    statusText = 'On Cooldown';
+                    statusIcon = 'hourglass-half';
+                    break;
+            }
+            
+            const authIcon = model.authenticated ? 'lock-open' : 'lock';
+            const authClass = model.authenticated ? 'authenticated' : 'not-authenticated';
+            
+            card.innerHTML = `
+                <div class="rate-limit-header">
+                    <h4>${model.name}</h4>
+                    <div class="rate-limit-badges">
+                        <span class="provider-badge">${model.provider}</span>
+                        <i class="fas fa-${authIcon} auth-icon ${authClass}"></i>
+                    </div>
+                </div>
+                <div class="rate-limit-status ${model.status}">
+                    <i class="fas fa-${statusIcon}"></i>
+                    <span>${statusText}</span>
+                </div>
+                <div class="rate-limit-usage">
+                    <div class="usage-row">
+                        <span class="label">Daily Usage</span>
+                        <div class="mini-progress">
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: ${Math.min(100, model.usagePercent)}%"></div>
+                            </div>
+                            <span>${model.usagePercent}%</span>
+                        </div>
+                    </div>
+                    <div class="usage-row">
+                        <span class="label">Budget</span>
+                        <div class="mini-progress">
+                            <div class="progress-bar-container">
+                                <div class="progress-bar budget" style="width: ${Math.min(100, model.budgetPercent)}%"></div>
+                            </div>
+                            <span>${model.budgetPercent}%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rate-limit-limits">
+                    <div class="limit-item">
+                        <span class="label">Daily Remaining</span>
+                        <span class="value">${model.dailyRemaining.toLocaleString()}</span>
+                    </div>
+                    <div class="limit-item">
+                        <span class="label">Rate Limit</span>
+                        <span class="value">${model.rateLimit}/min</span>
+                    </div>
+                </div>
+                ${model.cooldownRemaining > 0 ? `
+                    <div class="cooldown-timer" data-model="${modelId}">
+                        <i class="fas fa-clock"></i>
+                        <span>${this.formatCooldown(model.cooldownRemaining)}</span>
+                    </div>
+                ` : ''}
+            `;
+            
+            grid.appendChild(card);
+        });
+    }
+
+    renderCooldownList() {
+        const list = document.getElementById('cooldownList');
+        const section = document.getElementById('cooldownSection');
+        if (!list || !section) return;
+        
+        const modelsOnCooldown = Object.entries(this.rateLimits.models).filter(([_, model]) => model.cooldownRemaining > 0);
+        
+        if (modelsOnCooldown.length === 0) {
+            section.style.display = 'none';
+            return;
+        }
+        
+        section.style.display = 'block';
+        list.innerHTML = '';
+        
+        modelsOnCooldown.forEach(([modelId, model]) => {
+            const item = document.createElement('div');
+            item.className = 'cooldown-item';
+            item.dataset.model = modelId;
+            item.innerHTML = `
+                <div class="cooldown-model">
+                    <i class="fas fa-robot"></i>
+                    <span>${model.name}</span>
+                </div>
+                <div class="cooldown-progress">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="cooldown-time">${this.formatCooldown(model.cooldownRemaining)}</div>
+            `;
+            
+            list.appendChild(item);
+        });
+    }
+
+    renderRateLimitsTable() {
+        const tbody = document.getElementById('rateLimitsTableBody');
+        if (!tbody) return;
+        
+        tbody.innerHTML = '';
+        
+        Object.entries(this.rateLimits.models).forEach(([modelId, model]) => {
+            const row = document.createElement('tr');
+            
+            let statusText = model.status;
+            let statusClass = model.status;
+            
+            if (model.status === 'rate-limited' || model.status === 'budget-exceeded') {
+                statusClass = 'limited';
+            }
+            
+            const authIcon = model.authenticated ? 'check' : 'times';
+            const authClass = model.authenticated ? 'authenticated' : 'not-authenticated';
+            
+            row.innerHTML = `
+                <td class="model-name">${model.name}</td>
+                <td>${model.provider}</td>
+                <td><span class="status-badge ${statusClass}">${statusText}</span></td>
+                <td>
+                    <div class="table-progress">
+                        <span>${model.dailyUsed.toLocaleString()} / ${model.dailyLimit.toLocaleString()}</span>
+                        <span class="percent">${model.usagePercent}%</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="table-progress">
+                        <span>$${model.monthlySpent.toFixed(2)} / $${model.monthlyBudget.toFixed(2)}</span>
+                        <span class="percent">${model.budgetPercent}%</span>
+                    </div>
+                </td>
+                <td>${model.rateLimit} req/min</td>
+                <td><i class="fas fa-${authIcon} auth-icon ${authClass}"></i></td>
+            `;
+            
+            tbody.appendChild(row);
+        });
+    }
+
+    formatCooldown(seconds) {
+        const mins = Math.floor(seconds / 60);
+        const secs = seconds % 60;
+        if (mins > 0) {
+            return `${mins}m ${secs}s`;
+        }
+        return `${secs}s`;
+    }
+
+    startCooldownTimer() {
+        setInterval(() => {
+            // Update any visible cooldown timers
+            document.querySelectorAll('.cooldown-timer[data-model]').forEach(timer => {
+                const modelId = timer.dataset.model;
+                const model = this.rateLimits.models?.[modelId];
+                if (model && model.cooldownRemaining > 0) {
+                    model.cooldownRemaining--;
+                    const span = timer.querySelector('span');
+                    if (span) {
+                        span.textContent = this.formatCooldown(model.cooldownRemaining);
+                    }
+                }
+            });
+            
+            // Update cooldown list
+            document.querySelectorAll('.cooldown-item[data-model]').forEach(item => {
+                const modelId = item.dataset.model;
+                const model = this.rateLimits.models?.[modelId];
+                if (model && model.cooldownRemaining > 0) {
+                    model.cooldownRemaining--;
+                    const timeDiv = item.querySelector('.cooldown-time');
+                    if (timeDiv) {
+                        timeDiv.textContent = this.formatCooldown(model.cooldownRemaining);
+                    }
+                    
+                    // Update progress bar
+                    const progressBar = item.querySelector('.progress-bar');
+                    if (progressBar) {
+                        // Assuming max cooldown is 6 minutes (360 seconds)
+                        const percent = (model.cooldownRemaining / 360) * 100;
+                        progressBar.style.width = `${Math.min(100, percent)}%`;
+                    }
+                }
+            });
+        }, 1000);
+    }
+    
+    renderTasks() {
+        ['todo', 'inprogress', 'review', 'completed'].forEach(column => {
+            const container = document.getElementById(`${column}-tasks`);
+            container.innerHTML = '';
+            
+            if (this.tasks[column]) {
+                this.tasks[column].forEach(task => {
+                    const taskElement = this.createTaskElement(task, column);
+                    container.appendChild(taskElement);
+                });
+            }
+        });
+    }
+    
+    createTaskElement(task, column) {
+        const div = document.createElement('div');
+        div.className = 'task-card';
+        div.draggable = true;
+        div.dataset.taskId = task.id;
+        div.dataset.column = column;
+        
+        const tags = task.tags ? task.tags.map(tag => 
+            `<span class="task-tag">${tag}</span>`
+        ).join('') : '';
+        
+        const createdDate = new Date(task.created).toLocaleDateString();
+        const completedDate = task.completed ? 
+            new Date(task.completed).toLocaleDateString() : '';
+        
+        div.innerHTML = `
+            <div class="task-header">
+                <div class="task-title">${task.title}</div>
+                <div class="priority-indicator priority-${task.priority}"></div>
+            </div>
+            <div class="task-description">${task.description || ''}</div>
+            <div class="task-tags">${tags}</div>
+            <div class="task-meta">
+                <div class="task-date">
+                    Created: ${createdDate}
+                    ${completedDate ? `<br>Completed: ${completedDate}` : ''}
+                </div>
+                <div class="task-actions">
+                    <button class="task-action-btn" onclick="dashboard.editTask('${task.id}')">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="task-action-btn" onclick="dashboard.deleteTask('${task.id}')">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        // Add drag and drop listeners
+        div.addEventListener('dragstart', this.handleDragStart.bind(this));
+        div.addEventListener('dragend', this.handleDragEnd.bind(this));
+        
+        return div;
+    }
+    
+    // Event listeners
+    setupEventListeners() {
+        // Add task buttons
+        document.querySelectorAll('.add-task-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                this.currentColumn = e.target.closest('button').dataset.column;
+                this.showAddTaskModal();
+            });
+        });
+        
+        // Modal controls
+        document.getElementById('closeModal').addEventListener('click', this.hideAddTaskModal.bind(this));
+        document.getElementById('cancelTask').addEventListener('click', this.hideAddTaskModal.bind(this));
+        document.getElementById('addTaskForm').addEventListener('submit', this.handleAddTask.bind(this));
+        
+        // Drag and drop for columns
+        document.querySelectorAll('.task-list').forEach(list => {
+            list.addEventListener('dragover', this.handleDragOver.bind(this));
+            list.addEventListener('drop', this.handleDrop.bind(this));
+        });
+        
+        // Close modal on outside click
+        document.getElementById('addTaskModal').addEventListener('click', (e) => {
+            if (e.target.id === 'addTaskModal') {
+                this.hideAddTaskModal();
+            }
+        });
+    }
+
+    // Setup quote rotation
+    setupQuoteRotation() {
+        const quoteElement = document.querySelector('.quote');
+        if (!quoteElement) return;
+        
+        // Show random quote initially
+        this.quoteIndex = Math.floor(Math.random() * this.quotes.length);
+        quoteElement.textContent = `"${this.quotes[this.quoteIndex]}"`;
+        
+        // Rotate quotes every 15 seconds
+        setInterval(() => {
+            this.quoteIndex = (this.quoteIndex + 1) % this.quotes.length;
+            quoteElement.style.opacity = '0';
+            
+            setTimeout(() => {
+                quoteElement.textContent = `"${this.quotes[this.quoteIndex]}"`;
+                quoteElement.style.opacity = '1';
+            }, 500);
+        }, 15000);
+    }
+
+    // Historical controls setup
+    setupHistoricalControls() {
+        const startDateInput = document.getElementById('startDate');
+        const endDateInput = document.getElementById('endDate');
+        
+        if (!startDateInput || !endDateInput) return;
+        
+        // Set default dates (last 30 days)
+        const endDate = new Date();
+        const startDate = new Date(endDate.getTime() - 30 * 24 * 60 * 60 * 1000);
+        
+        startDateInput.value = startDate.toISOString().split('T')[0];
+        endDateInput.value = endDate.toISOString().split('T')[0];
+
+        // Apply filters button
+        const applyBtn = document.getElementById('applyFilters');
+        if (applyBtn) {
+            applyBtn.addEventListener('click', () => {
+                const startDate = startDateInput.value;
+                const endDate = endDateInput.value;
+                const model = document.getElementById('modelFilter').value;
+                
+                if (startDate && endDate) {
+                    this.loadHistoricalData(startDate, endDate, model);
+                } else {
+                    alert('Please select both start and end dates');
+                }
+            });
+        }
+
+        // Reset filters button
+        const resetBtn = document.getElementById('resetFilters');
+        if (resetBtn) {
+            resetBtn.addEventListener('click', () => {
+                this.isShowingHistorical = false;
+                this.generateMockHistoryData();
+                this.generateMockSpendingData();
+                this.updateSummaryCharts();
+                this.updateTotalsTable();
+                this.updateEfficiencyTable();
+                
+                document.getElementById('historyStatus').textContent = 'Showing live data';
+                document.getElementById('modelFilter').value = '';
+            });
+        }
+    }
+
+    // Update history info display
+    updateHistoryInfo(historyIndex) {
+        const historySize = document.getElementById('historySize');
+        if (!historySize) return;
+        
+        const sizeGB = (historyIndex.totalSize / (1024 * 1024 * 1024)).toFixed(2);
+        const fileCount = historyIndex.files.length;
+        
+        let dateRange = '';
+        if (historyIndex.oldestEntry && historyIndex.newestEntry) {
+            const oldest = new Date(historyIndex.oldestEntry).toLocaleDateString();
+            const newest = new Date(historyIndex.newestEntry).toLocaleDateString();
+            dateRange = ` (${oldest} - ${newest})`;
+        }
+        
+        historySize.textContent = 
+            `History: ${fileCount} records, ${sizeGB}GB${dateRange}`;
+    }
+
+    // Update history status
+    updateHistoryStatus(startDate, endDate, model) {
+        const historyStatus = document.getElementById('historyStatus');
+        if (!historyStatus) return;
+        
+        let status = `Showing historical data: ${startDate} to ${endDate}`;
+        if (model) {
+            const modelFilter = document.getElementById('modelFilter');
+            const modelName = modelFilter.options[modelFilter.selectedIndex].text;
+            status += ` (${modelName} only)`;
+        }
+        historyStatus.textContent = status;
+    }
+
+    // Render historical data
+    renderHistoricalData() {
+        if (!this.historicalData.length) return;
+
+        // Update charts with historical data
+        const labels = [];
+        const datasets = [
+            { name: 'GPT-5.2', tokens: [], spending: [] },
+            { name: 'Claude Opus', tokens: [], spending: [] },
+            { name: 'Claude Sonnet', tokens: [], spending: [] },
+            { name: 'MiniMax', tokens: [], spending: [] },
+            { name: 'OpenRouter GPT-4o', tokens: [], spending: [] },
+            { name: 'OpenRouter Gemini', tokens: [], spending: [] }
+        ];
+
+        const modelKeyMap = {
+            'openai-codex/gpt-5.2': 0,
+            'anthropic/claude-opus-4-5': 1,
+            'openrouter/anthropic/claude-sonnet-4': 2,
+            'minimax/abab6.5s-chat': 3,
+            'openrouter/openai/gpt-4o': 4,
+            'openrouter/google/gemini-2.0-flash-001': 5
+        };
+
+        this.historicalData.forEach(dataPoint => {
+            const date = new Date(dataPoint.timestamp);
+            labels.push(date.toLocaleDateString() + ' ' + date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }));
+
+            // Initialize all datasets with 0 for this timestamp
+            datasets.forEach(dataset => {
+                dataset.tokens.push(0);
+                dataset.spending.push(0);
+            });
+
+            // Populate with actual data
+            if (dataPoint.models) {
+                Object.entries(dataPoint.models).forEach(([modelKey, model]) => {
+                    const datasetIndex = modelKeyMap[modelKey];
+                    if (datasetIndex !== undefined) {
+                        const lastIndex = datasets[datasetIndex].tokens.length - 1;
+                        datasets[datasetIndex].tokens[lastIndex] = model.dailyUsed || 0;
+                        datasets[datasetIndex].spending[lastIndex] = model.dailyCost || 0;
+                    }
+                });
+            }
+        });
+
+        // Update usage chart
+        if (this.chart) {
+            this.chart.data.labels = labels;
+            datasets.forEach((dataset, index) => {
+                if (this.chart.data.datasets[index]) {
+                    this.chart.data.datasets[index].data = dataset.tokens;
+                }
+            });
+            this.chart.update();
+        }
+
+        // Update spending chart
+        if (this.spendingChart) {
+            this.spendingChart.data.labels = labels;
+            datasets.forEach((dataset, index) => {
+                if (this.spendingChart.data.datasets[index]) {
+                    this.spendingChart.data.datasets[index].data = dataset.spending;
+                }
+            });
+            this.spendingChart.update();
+        }
+    }
+    
+    // Task management
+    showAddTaskModal() {
+        document.getElementById('addTaskModal').classList.add('show');
+        document.getElementById('taskTitle').focus();
+    }
+    
+    hideAddTaskModal() {
+        document.getElementById('addTaskModal').classList.remove('show');
+        document.getElementById('addTaskForm').reset();
+    }
+    
+    async handleAddTask(e) {
+        e.preventDefault();
+        
+        const tags = document.getElementById('taskTags').value
+            .split(',')
+            .map(tag => tag.trim())
+            .filter(tag => tag.length > 0);
+        
+        const task = {
+            title: document.getElementById('taskTitle').value,
+            description: document.getElementById('taskDescription').value,
+            priority: document.getElementById('taskPriority').value,
+            tags: tags,
+            column: this.currentColumn
+        };
+        
+        try {
+            const response = await fetch('/api/tasks', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(task)
+            });
+            
+            if (response.ok) {
+                await this.loadTasks(); // Refresh tasks
+                this.hideAddTaskModal();
+            }
+        } catch (error) {
+            console.error('Failed to add task:', error);
+        }
+    }
+    
+    async editTask(taskId) {
+        // TODO: Implement edit task functionality
+        console.log('Edit task:', taskId);
+    }
+    
+    async deleteTask(taskId) {
+        if (confirm('Are you sure you want to delete this task?')) {
+            // TODO: Implement delete task functionality
+            console.log('Delete task:', taskId);
+        }
+    }
+    
+    // Drag and drop
+    handleDragStart(e) {
+        e.dataTransfer.setData('text/plain', e.target.dataset.taskId);
+        e.target.classList.add('dragging');
+    }
+    
+    handleDragEnd(e) {
+        e.target.classList.remove('dragging');
+    }
+    
+    handleDragOver(e) {
+        e.preventDefault();
+    }
+    
+    async handleDrop(e) {
+        e.preventDefault();
+        const taskId = e.dataTransfer.getData('text/plain');
+        const targetColumn = e.target.closest('.kanban-column').dataset.column;
+        
+        if (targetColumn) {
+            try {
+                const response = await fetch(`/api/tasks/${taskId}/move`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ toColumn: targetColumn })
+                });
+                
+                if (response.ok) {
+                    await this.loadTasks(); // Refresh tasks
+                }
+            } catch (error) {
+                console.error('Failed to move task:', error);
+            }
+        }
+    }
+    
+    // Initialize usage chart
+    initializeChart() {
+        const ctx = document.getElementById('usageChart');
+        if (!ctx) return;
+        
+        this.chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [
+                    {
+                        label: 'GPT-5.2 (Primary)',
+                        data: [],
+                        borderColor: '#4299e1',
+                        backgroundColor: 'rgba(66, 153, 225, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#4299e1',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    },
+                    {
+                        label: 'Claude Opus 4.5',
+                        data: [],
+                        borderColor: '#48bb78',
+                        backgroundColor: 'rgba(72, 187, 120, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#48bb78',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    },
+                    {
+                        label: 'Claude Sonnet 4',
+                        data: [],
+                        borderColor: '#ed8936',
+                        backgroundColor: 'rgba(237, 137, 54, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#ed8936',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    },
+                    {
+                        label: 'MiniMax ABAB 6.5s',
+                        data: [],
+                        borderColor: '#9f7aea',
+                        backgroundColor: 'rgba(159, 122, 234, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#9f7aea',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    },
+                    {
+                        label: 'OpenRouter GPT-4o',
+                        data: [],
+                        borderColor: '#e53e3e',
+                        backgroundColor: 'rgba(229, 62, 62, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#e53e3e',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    },
+                    {
+                        label: 'OpenRouter Gemini 2.0',
+                        data: [],
+                        borderColor: '#38a169',
+                        backgroundColor: 'rgba(56, 161, 105, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#38a169',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#e0e0e0',
+                            font: {
+                                family: 'Inter, sans-serif',
+                                size: 12,
+                                weight: '500'
+                            },
+                            usePointStyle: true,
+                            pointStyle: 'circle'
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(26, 26, 46, 0.95)',
+                        titleColor: '#e0e0e0',
+                        bodyColor: '#a0aec0',
+                        borderColor: 'rgba(66, 153, 225, 0.3)',
+                        borderWidth: 1,
+                        cornerRadius: 8,
+                        titleFont: {
+                            family: 'Inter, sans-serif',
+                            weight: '600'
+                        },
+                        bodyFont: {
+                            family: 'Inter, sans-serif'
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            color: 'rgba(66, 153, 225, 0.15)',
+                            lineWidth: 1
+                        },
+                        ticks: {
+                            color: '#a0aec0',
+                            font: {
+                                family: 'Inter, sans-serif',
+                                size: 11
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Time',
+                            color: '#e0e0e0',
+                            font: {
+                                family: 'Inter, sans-serif',
+                                weight: '600',
+                                size: 14
+                            }
+                        }
+                    },
+                    y: {
+                        grid: {
+                            color: 'rgba(66, 153, 225, 0.15)',
+                            lineWidth: 1
+                        },
+                        ticks: {
+                            color: '#a0aec0',
+                            font: {
+                                family: 'Inter, sans-serif',
+                                size: 11
+                            },
+                            callback: function(value) {
+                                return value.toLocaleString();
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Token Usage',
+                            color: '#e0e0e0',
+                            font: {
+                                family: 'Inter, sans-serif',
+                                weight: '600',
+                                size: 14
+                            }
+                        }
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index'
+                },
+                elements: {
+                    line: {
+                        borderWidth: 3
+                    },
+                    point: {
+                        hoverBorderWidth: 3
+                    }
+                }
+            }
+        });
+    }
+
+    // Initialize spending chart
+    initializeSpendingChart() {
+        const ctx = document.getElementById('spendingChart');
+        if (!ctx) return;
+        
+        this.spendingChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [
+                    {
+                        label: 'GPT-5.2 (Primary)',
+                        data: [],
+                        borderColor: '#4299e1',
+                        backgroundColor: 'rgba(66, 153, 225, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#4299e1',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    },
+                    {
+                        label: 'Claude Opus 4.5',
+                        data: [],
+                        borderColor: '#48bb78',
+                        backgroundColor: 'rgba(72, 187, 120, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#48bb78',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    },
+                    {
+                        label: 'Claude Sonnet 4',
+                        data: [],
+                        borderColor: '#ed8936',
+                        backgroundColor: 'rgba(237, 137, 54, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#ed8936',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    },
+                    {
+                        label: 'MiniMax ABAB 6.5s',
+                        data: [],
+                        borderColor: '#9f7aea',
+                        backgroundColor: 'rgba(159, 122, 234, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#9f7aea',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    },
+                    {
+                        label: 'OpenRouter GPT-4o',
+                        data: [],
+                        borderColor: '#e53e3e',
+                        backgroundColor: 'rgba(229, 62, 62, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#e53e3e',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    },
+                    {
+                        label: 'OpenRouter Gemini 2.0',
+                        data: [],
+                        borderColor: '#38a169',
+                        backgroundColor: 'rgba(56, 161, 105, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#38a169',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#e0e0e0',
+                            font: {
+                                family: 'Inter, sans-serif',
+                                size: 12,
+                                weight: '500'
+                            },
+                            usePointStyle: true,
+                            pointStyle: 'circle'
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(26, 26, 46, 0.95)',
+                        titleColor: '#e0e0e0',
+                        bodyColor: '#a0aec0',
+                        borderColor: 'rgba(66, 153, 225, 0.3)',
+                        borderWidth: 1,
+                        cornerRadius: 8,
+                        titleFont: {
+                            family: 'Inter, sans-serif',
+                            weight: '600'
+                        },
+                        bodyFont: {
+                            family: 'Inter, sans-serif'
+                        },
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': $' + context.parsed.y.toFixed(2);
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            color: 'rgba(66, 153, 225, 0.15)',
+                            lineWidth: 1
+                        },
+                        ticks: {
+                            color: '#a0aec0',
+                            font: {
+                                family: 'Inter, sans-serif',
+                                size: 11
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Time',
+                            color: '#e0e0e0',
+                            font: {
+                                family: 'Inter, sans-serif',
+                                weight: '600',
+                                size: 14
+                            }
+                        }
+                    },
+                    y: {
+                        grid: {
+                            color: 'rgba(66, 153, 225, 0.15)',
+                            lineWidth: 1
+                        },
+                        ticks: {
+                            color: '#a0aec0',
+                            font: {
+                                family: 'Inter, sans-serif',
+                                size: 11
+                            },
+                            callback: function(value) {
+                                return '$' + value.toFixed(2);
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Cumulative Spending ($)',
+                            color: '#e0e0e0',
+                            font: {
+                                family: 'Inter, sans-serif',
+                                weight: '600',
+                                size: 14
+                            }
+                        }
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index'
+                },
+                elements: {
+                    line: {
+                        borderWidth: 3
+                    },
+                    point: {
+                        hoverBorderWidth: 3
+                    }
+                }
+            }
+        });
+    }
+
+    // Generate mock historical data
+    generateMockHistoryData() {
+        const now = new Date();
+        const labels = [];
+        const datasets = [
+            { name: 'GPT-5.2', data: [], baseUsage: 2800 },
+            { name: 'Claude Opus', data: [], baseUsage: 1200 },
+            { name: 'Claude Sonnet', data: [], baseUsage: 4500 },
+            { name: 'MiniMax', data: [], baseUsage: 5400 }
+        ];
+
+        // Add OpenRouter models to datasets
+        datasets.push(
+            { name: 'OpenRouter GPT-4o', data: [], baseUsage: 2100 },
+            { name: 'OpenRouter Gemini', data: [], baseUsage: 1800 }
+        );
+
+        // Generate data for the last 24 hours
+        for (let i = 23; i >= 0; i--) {
+            const time = new Date(now.getTime() - (i * 60 * 60 * 1000));
+            labels.push(time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }));
+            
+            datasets.forEach(dataset => {
+                const hourOfDay = time.getHours();
+                let multiplier = 1;
+                
+                if (hourOfDay >= 9 && hourOfDay <= 18) {
+                    multiplier = 1.5 + Math.random() * 0.8;
+                } else if (hourOfDay >= 19 && hourOfDay <= 23) {
+                    multiplier = 0.8 + Math.random() * 0.4;
+                } else {
+                    multiplier = 0.1 + Math.random() * 0.3;
+                }
+                
+                const usage = Math.floor(dataset.baseUsage * multiplier * (0.8 + Math.random() * 0.4));
+                dataset.data.push(usage);
+            });
+        }
+
+        if (this.chart) {
+            this.chart.data.labels = labels;
+            this.chart.data.datasets[0].data = datasets[0].data;
+            this.chart.data.datasets[1].data = datasets[1].data;
+            this.chart.data.datasets[2].data = datasets[2].data;
+            this.chart.data.datasets[3].data = datasets[3].data;
+            
+            // Add data for OpenRouter models
+            if (this.chart.data.datasets[4]) {
+                this.chart.data.datasets[4].data = datasets[4].data;
+            }
+            if (this.chart.data.datasets[5]) {
+                this.chart.data.datasets[5].data = datasets[5].data;
+            }
+            
+            this.chart.update();
+        }
+    }
+
+    // Initialize summary charts
+    initializeSummaryCharts() {
+        // Token Summary Chart
+        const tokenCtx = document.getElementById('tokenSummaryChart');
+        if (tokenCtx) {
+            this.tokenSummaryChart = new Chart(tokenCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Daily', 'Weekly', 'Monthly'],
+                    datasets: [
+                        {
+                            label: 'GPT-5.2',
+                            data: [0, 0, 0],
+                            backgroundColor: 'rgba(66, 153, 225, 0.8)',
+                            borderColor: '#4299e1',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Claude Opus 4.5',
+                            data: [0, 0, 0],
+                            backgroundColor: 'rgba(72, 187, 120, 0.8)',
+                            borderColor: '#48bb78',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Claude Sonnet 4',
+                            data: [0, 0, 0],
+                            backgroundColor: 'rgba(237, 137, 54, 0.8)',
+                            borderColor: '#ed8936',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'MiniMax ABAB 6.5s',
+                            data: [0, 0, 0],
+                            backgroundColor: 'rgba(159, 122, 234, 0.8)',
+                            borderColor: '#9f7aea',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'OpenRouter GPT-4o',
+                            data: [0, 0, 0],
+                            backgroundColor: 'rgba(229, 62, 62, 0.8)',
+                            borderColor: '#e53e3e',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'OpenRouter Gemini 2.0',
+                            data: [0, 0, 0],
+                            backgroundColor: 'rgba(56, 161, 105, 0.8)',
+                            borderColor: '#38a169',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#e0e0e0',
+                                font: {
+                                    family: 'Inter, sans-serif',
+                                    size: 11,
+                                    weight: '500'
+                                }
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(26, 26, 46, 0.95)',
+                            titleColor: '#e0e0e0',
+                            bodyColor: '#a0aec0',
+                            borderColor: 'rgba(66, 153, 225, 0.3)',
+                            borderWidth: 1,
+                            cornerRadius: 8,
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ' + context.parsed.y.toLocaleString() + ' tokens';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: '#a0aec0',
+                                font: {
+                                    family: 'Inter, sans-serif',
+                                    size: 11
+                                }
+                            }
+                        },
+                        y: {
+                            grid: {
+                                color: 'rgba(66, 153, 225, 0.15)'
+                            },
+                            ticks: {
+                                color: '#a0aec0',
+                                font: {
+                                    family: 'Inter, sans-serif',
+                                    size: 11
+                                },
+                                callback: function(value) {
+                                    return value.toLocaleString();
+                                }
+                            },
+                            title: {
+                                display: true,
+                                text: 'Tokens',
+                                color: '#e0e0e0',
+                                font: {
+                                    family: 'Inter, sans-serif',
+                                    weight: '600',
+                                    size: 12
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Spending Summary Chart
+        const spendingCtx = document.getElementById('spendingSummaryChart');
+        if (spendingCtx) {
+            this.spendingSummaryChart = new Chart(spendingCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Daily', 'Weekly', 'Monthly'],
+                    datasets: [
+                        {
+                            label: 'GPT-5.2',
+                            data: [0, 0, 0],
+                            backgroundColor: 'rgba(66, 153, 225, 0.8)',
+                            borderColor: '#4299e1',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Claude Opus 4.5',
+                            data: [0, 0, 0],
+                            backgroundColor: 'rgba(72, 187, 120, 0.8)',
+                            borderColor: '#48bb78',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Claude Sonnet 4',
+                            data: [0, 0, 0],
+                            backgroundColor: 'rgba(237, 137, 54, 0.8)',
+                            borderColor: '#ed8936',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'MiniMax ABAB 6.5s',
+                            data: [0, 0, 0],
+                            backgroundColor: 'rgba(159, 122, 234, 0.8)',
+                            borderColor: '#9f7aea',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'OpenRouter GPT-4o',
+                            data: [0, 0, 0],
+                            backgroundColor: 'rgba(229, 62, 62, 0.8)',
+                            borderColor: '#e53e3e',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'OpenRouter Gemini 2.0',
+                            data: [0, 0, 0],
+                            backgroundColor: 'rgba(56, 161, 105, 0.8)',
+                            borderColor: '#38a169',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#e0e0e0',
+                                font: {
+                                    family: 'Inter, sans-serif',
+                                    size: 11,
+                                    weight: '500'
+                                }
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(26, 26, 46, 0.95)',
+                            titleColor: '#e0e0e0',
+                            bodyColor: '#a0aec0',
+                            borderColor: 'rgba(66, 153, 225, 0.3)',
+                            borderWidth: 1,
+                            cornerRadius: 8,
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': $' + context.parsed.y.toFixed(2);
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: '#a0aec0',
+                                font: {
+                                    family: 'Inter, sans-serif',
+                                    size: 11
+                                }
+                            }
+                        },
+                        y: {
+                            grid: {
+                                color: 'rgba(66, 153, 225, 0.15)'
+                            },
+                            ticks: {
+                                color: '#a0aec0',
+                                font: {
+                                    family: 'Inter, sans-serif',
+                                    size: 11
+                                },
+                                callback: function(value) {
+                                    return '$' + value.toFixed(2);
+                                }
+                            },
+                            title: {
+                                display: true,
+                                text: 'Spending ($)',
+                                color: '#e0e0e0',
+                                font: {
+                                    family: 'Inter, sans-serif',
+                                    weight: '600',
+                                    size: 12
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    }
+
+    // Generate mock spending data
+    generateMockSpendingData() {
+        const now = new Date();
+        const labels = [];
+        const datasets = [
+            { name: 'GPT-5.2', data: [], dailyRate: 0.45 },
+            { name: 'Claude Opus', data: [], dailyRate: 0.32 },
+            { name: 'Claude Sonnet', data: [], dailyRate: 0.18 },
+            { name: 'MiniMax', data: [], dailyRate: 0.08 },
+            { name: 'OpenRouter GPT-4o', data: [], dailyRate: 0.12 },
+            { name: 'OpenRouter Gemini', data: [], dailyRate: 0.09 }
+        ];
+
+        let cumulativeSpending = [0, 0, 0, 0, 0, 0];
+
+        // Generate data for the last 24 hours
+        for (let i = 23; i >= 0; i--) {
+            const time = new Date(now.getTime() - (i * 60 * 60 * 1000));
+            labels.push(time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }));
+            
+            datasets.forEach((dataset, index) => {
+                const hourOfDay = time.getHours();
+                let multiplier = 1;
+                
+                // Higher spending during work hours
+                if (hourOfDay >= 9 && hourOfDay <= 18) {
+                    multiplier = 1.8 + Math.random() * 0.7;
+                } else if (hourOfDay >= 19 && hourOfDay <= 23) {
+                    multiplier = 0.6 + Math.random() * 0.4;
+                } else {
+                    multiplier = 0.05 + Math.random() * 0.15;
+                }
+                
+                const hourlySpend = dataset.dailyRate * multiplier * (0.8 + Math.random() * 0.4) / 24;
+                cumulativeSpending[index] += hourlySpend;
+                dataset.data.push(cumulativeSpending[index]);
+            });
+        }
+
+        // Update spending chart with generated data
+        if (this.spendingChart) {
+            this.spendingChart.data.labels = labels;
+            this.spendingChart.data.datasets[0].data = datasets[0].data;
+            this.spendingChart.data.datasets[1].data = datasets[1].data;
+            this.spendingChart.data.datasets[2].data = datasets[2].data;
+            this.spendingChart.data.datasets[3].data = datasets[3].data;
+            this.spendingChart.data.datasets[4].data = datasets[4].data;
+            this.spendingChart.data.datasets[5].data = datasets[5].data;
+            this.spendingChart.update();
+        }
+    }
+
+    // Update chart with new data point
+    updateChart() {
+        if (!this.chart || !this.usage.models) return;
+        
+        const now = new Date();
+        const timeLabel = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+        
+        this.chart.data.labels.push(timeLabel);
+        
+        const modelKeys = ['openai-codex/gpt-5.2', 'anthropic/claude-opus-4-5', 'openrouter/anthropic/claude-sonnet-4', 'minimax/abab6.5s-chat', 'openrouter/openai/gpt-4o', 'openrouter/google/gemini-2.0-flash-001'];
+        modelKeys.forEach((modelKey, index) => {
+            if (this.usage.models[modelKey]) {
+                this.chart.data.datasets[index].data.push(this.usage.models[modelKey].dailyUsed);
+            }
+        });
+        
+        // Keep only last 24 points
+        if (this.chart.data.labels.length > 24) {
+            this.chart.data.labels.shift();
+            this.chart.data.datasets.forEach(dataset => {
+                dataset.data.shift();
+            });
+        }
+        
+        this.chart.update();
+    }
+
+    // Update spending chart with new data point
+    updateSpendingChart() {
+        if (!this.spendingChart || !this.usage.models) return;
+        
+        const now = new Date();
+        const timeLabel = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+        
+        // Add new data point
+        this.spendingChart.data.labels.push(timeLabel);
+        
+        const modelKeys = ['openai-codex/gpt-5.2', 'anthropic/claude-opus-4-5', 'openrouter/anthropic/claude-sonnet-4', 'minimax/abab6.5s-chat', 'openrouter/openai/gpt-4o', 'openrouter/google/gemini-2.0-flash-001'];
+        modelKeys.forEach((modelKey, index) => {
+            if (this.usage.models[modelKey]) {
+                // Add the current monthly spent as a cumulative value
+                this.spendingChart.data.datasets[index].data.push(this.usage.models[modelKey].monthlySpent);
+            }
+        });
+        
+        // Keep only last 24 points
+        if (this.spendingChart.data.labels.length > 24) {
+            this.spendingChart.data.labels.shift();
+            this.spendingChart.data.datasets.forEach(dataset => {
+                dataset.data.shift();
+            });
+        }
+        
+        this.spendingChart.update();
+    }
+
+    // Update efficiency table
+    updateEfficiencyTable() {
+        if (!this.usage.models) return;
+
+        const models = this.usage.models;
+        const modelKeys = ['openai-codex/gpt-5.2', 'anthropic/claude-opus-4-5', 'openrouter/anthropic/claude-sonnet-4', 'minimax/abab6.5s-chat', 'openrouter/openai/gpt-4o', 'openrouter/google/gemini-2.0-flash-001'];
+        
+        const tbody = document.getElementById('efficiencyTableBody');
+        if (!tbody) return;
+        
+        tbody.innerHTML = '';
+
+        const efficiencyData = [];
+
+        modelKeys.forEach(modelKey => {
+            if (models[modelKey]) {
+                const model = models[modelKey];
+                const dailyTokens = model.dailyUsed;
+                const dailyCost = model.monthlySpent / 30; // Estimate daily from monthly
+                const costPer1k = dailyTokens > 0 ? (dailyCost / dailyTokens * 1000) : 0;
+                const monthlyProjection = dailyCost * 30;
+                
+                // Determine efficiency rating
+                let efficiencyRating = '';
+                let efficiencyClass = '';
+                if (costPer1k < 0.01) {
+                    efficiencyRating = 'Excellent';
+                    efficiencyClass = 'efficiency-excellent';
+                } else if (costPer1k < 0.03) {
+                    efficiencyRating = 'Good';
+                    efficiencyClass = 'efficiency-good';
+                } else if (costPer1k < 0.06) {
+                    efficiencyRating = 'Average';
+                    efficiencyClass = 'efficiency-average';
+                } else {
+                    efficiencyRating = 'Poor';
+                    efficiencyClass = 'efficiency-poor';
+                }
+
+                efficiencyData.push({
+                    name: model.name,
+                    dailyTokens,
+                    dailyCost,
+                    costPer1k,
+                    monthlyProjection,
+                    efficiencyRating,
+                    efficiencyClass
+                });
+            }
+        });
+
+        // Sort by cost efficiency (lowest cost per 1k tokens first)
+        efficiencyData.sort((a, b) => a.costPer1k - b.costPer1k);
+
+        efficiencyData.forEach(data => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td class="model-name-cell">${data.name}</td>
+                <td class="tokens-cell">${data.dailyTokens.toLocaleString()}</td>
+                <td class="cost-cell">$${data.dailyCost.toFixed(3)}</td>
+                <td class="ratio-cell">$${data.costPer1k.toFixed(4)}</td>
+                <td class="projection-cell">$${data.monthlyProjection.toFixed(2)}</td>
+                <td><span class="efficiency-rating ${data.efficiencyClass}">${data.efficiencyRating}</span></td>
+            `;
+            tbody.appendChild(row);
+        });
+    }
+
+    // Update totals table
+    updateTotalsTable() {
+        if (!this.usage.models) return;
+
+        const models = this.usage.models;
+        const modelKeys = ['openai-codex/gpt-5.2', 'anthropic/claude-opus-4-5', 'openrouter/anthropic/claude-sonnet-4', 'minimax/abab6.5s-chat', 'openrouter/openai/gpt-4o', 'openrouter/google/gemini-2.0-flash-001'];
+
+        // Calculate totals
+        let totalDailyTokens = 0;
+        let totalDailySpending = 0;
+        let totalMonthlySpending = 0;
+
+        modelKeys.forEach(modelKey => {
+            if (models[modelKey]) {
+                const model = models[modelKey];
+                totalDailyTokens += model.dailyUsed;
+                totalMonthlySpending += model.monthlySpent;
+                totalDailySpending += model.monthlySpent / 30; // Estimate daily from monthly
+            }
+        });
+
+        // Calculate weekly (7x daily) and monthly estimates
+        const totalWeeklyTokens = totalDailyTokens * 7;
+        const totalMonthlyTokens = totalDailyTokens * 30;
+        const totalWeeklySpending = totalDailySpending * 7;
+
+        // Calculate cost per 1K tokens
+        const dailyCostPer1k = totalDailyTokens > 0 ? (totalDailySpending / totalDailyTokens * 1000) : 0;
+        const weeklyCostPer1k = totalWeeklyTokens > 0 ? (totalWeeklySpending / totalWeeklyTokens * 1000) : 0;
+        const monthlyCostPer1k = totalMonthlyTokens > 0 ? (totalMonthlySpending / totalMonthlyTokens * 1000) : 0;
+
+        // Update the table
+        const dailyTokens = document.getElementById('dailyTokens');
+        const weeklyTokens = document.getElementById('weeklyTokens');
+        const monthlyTokens = document.getElementById('monthlyTokens');
+        const dailySpending = document.getElementById('dailySpending');
+        const weeklySpending = document.getElementById('weeklySpending');
+        const monthlySpending = document.getElementById('monthlySpending');
+        const dailyCostPer1kEl = document.getElementById('dailyCostPer1k');
+        const weeklyCostPer1kEl = document.getElementById('weeklyCostPer1k');
+        const monthlyCostPer1kEl = document.getElementById('monthlyCostPer1k');
+        
+        if (dailyTokens) dailyTokens.textContent = totalDailyTokens.toLocaleString();
+        if (weeklyTokens) weeklyTokens.textContent = totalWeeklyTokens.toLocaleString();
+        if (monthlyTokens) monthlyTokens.textContent = totalMonthlyTokens.toLocaleString();
+        if (dailySpending) dailySpending.textContent = '$' + totalDailySpending.toFixed(2);
+        if (weeklySpending) weeklySpending.textContent = '$' + totalWeeklySpending.toFixed(2);
+        if (monthlySpending) monthlySpending.textContent = '$' + totalMonthlySpending.toFixed(2);
+        if (dailyCostPer1kEl) dailyCostPer1kEl.textContent = '$' + dailyCostPer1k.toFixed(3);
+        if (weeklyCostPer1kEl) weeklyCostPer1kEl.textContent = '$' + weeklyCostPer1k.toFixed(3);
+        if (monthlyCostPer1kEl) monthlyCostPer1kEl.textContent = '$' + monthlyCostPer1k.toFixed(3);
+    }
+
+    // Update summary charts
+    updateSummaryCharts() {
+        if (!this.usage.models) return;
+
+        const models = this.usage.models;
+        const modelKeys = ['openai-codex/gpt-5.2', 'anthropic/claude-opus-4-5', 'openrouter/anthropic/claude-sonnet-4', 'minimax/abab6.5s-chat', 'openrouter/openai/gpt-4o', 'openrouter/google/gemini-2.0-flash-001'];
+
+        // Calculate summary data
+        const tokenData = [[], [], []]; // daily, weekly, monthly
+        const spendingData = [[], [], []]; // daily, weekly, monthly
+
+        modelKeys.forEach((modelKey, index) => {
+            if (models[modelKey]) {
+                const model = models[modelKey];
+                
+                // Token usage (daily is current usage, estimate weekly/monthly)
+                const daily = model.dailyUsed;
+                const weekly = daily * 7; // Simple estimation
+                const monthly = daily * 30; // Simple estimation
+                
+                tokenData[0][index] = daily;
+                tokenData[1][index] = weekly;
+                tokenData[2][index] = monthly;
+                
+                // Spending (current monthly spent, estimate daily/weekly)
+                const monthlySpent = model.monthlySpent;
+                const estimatedDaily = monthlySpent / 30;
+                const estimatedWeekly = monthlySpent / 4;
+                
+                spendingData[0][index] = estimatedDaily;
+                spendingData[1][index] = estimatedWeekly;
+                spendingData[2][index] = monthlySpent;
+            }
+        });
+
+        // Update token summary chart
+        if (this.tokenSummaryChart) {
+            this.tokenSummaryChart.data.datasets.forEach((dataset, index) => {
+                dataset.data = [tokenData[0][index] || 0, tokenData[1][index] || 0, tokenData[2][index] || 0];
+            });
+            this.tokenSummaryChart.update();
+        }
+
+        // Update spending summary chart
+        if (this.spendingSummaryChart) {
+            this.spendingSummaryChart.data.datasets.forEach((dataset, index) => {
+                dataset.data = [spendingData[0][index] || 0, spendingData[1][index] || 0, spendingData[2][index] || 0];
+            });
+            this.spendingSummaryChart.update();
+        }
+    }
+
+    updateStatus(status) {
+        const statusElement = document.getElementById('status');
+        if (statusElement) {
+            statusElement.textContent = status.charAt(0).toUpperCase() + status.slice(1);
+            statusElement.className = `stat-value status-${status}`;
+        }
+    }
+
+    // Tab Navigation
+    setupTabNavigation() {
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.dataset.tab;
+                
+                // Update active states
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                btn.classList.add('active');
+                document.getElementById(`${tabId}-tab`).classList.add('active');
+                
+                // Refresh data when switching to expenses or rate-limits tab
+                if (tabId === 'expenses') {
+                    this.loadExpenses().then(() => this.renderExpenses());
+                } else if (tabId === 'rate-limits') {
+                    this.loadRateLimits().then(() => this.renderRateLimits());
+                }
+            });
+        });
+    }
+
+    // Initialize expense chart
+    initializeExpenseChart() {
+        const ctx = document.getElementById('expenseChart');
+        if (!ctx) return;
+        
+        this.expenseChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['OpenAI', 'OpenRouter', 'Anthropic', 'MiniMax'],
+                datasets: [{
+                    data: [2.85, 30.62, 0, 0],
+                    backgroundColor: ['#10a37f', '#2563eb', '#d97706', '#7c3aed'],
+                    borderColor: '#1a1a2e',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            color: '#e0e0e0',
+                            font: { family: 'Inter, sans-serif', size: 12 }
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(26, 26, 46, 0.95)',
+                        titleColor: '#e0e0e0',
+                        bodyColor: '#a0aec0',
+                        callbacks: {
+                            label: function(context) {
+                                const value = context.parsed;
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percent = ((value / total) * 100).toFixed(1);
+                                return `${context.label}: $${value.toFixed(2)} (${percent}%)`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // Render expenses section
+    renderExpenses() {
+        if (!this.expenses) return;
+        
+        const expenses = this.expenses;
+        
+        // Update budget overview cards
+        const totalBudget = document.getElementById('totalBudget');
+        const totalSpent = document.getElementById('totalSpent');
+        const totalRemaining = document.getElementById('totalRemaining');
+        const dailyAverage = document.getElementById('dailyAverage');
+        
+        if (totalBudget) totalBudget.textContent = `$${expenses.monthlyBudget.toFixed(2)}`;
+        if (totalSpent) totalSpent.textContent = `$${expenses.totalSpent.toFixed(2)}`;
+        if (totalRemaining) totalRemaining.textContent = `$${expenses.totalRemaining.toFixed(2)}`;
+        if (dailyAverage) dailyAverage.textContent = `$${expenses.dailyAverage.toFixed(2)}`;
+        
+        // Update overall progress
+        const overallPercent = document.getElementById('overallPercent');
+        const progressBar = document.getElementById('overallProgressBar');
+        const statusEl = document.getElementById('overallStatus');
+        
+        if (overallPercent) overallPercent.textContent = `${expenses.budgetPercent}%`;
+        if (progressBar) {
+            progressBar.style.width = `${Math.min(expenses.budgetPercent, 100)}%`;
+            progressBar.className = 'progress-bar' + (expenses.budgetPercent >= 100 ? ' danger' : expenses.budgetPercent >= 80 ? ' warning' : '');
+        }
+        if (statusEl) {
+            statusEl.className = 'progress-status ' + (expenses.budgetPercent >= 100 ? 'danger' : expenses.budgetPercent >= 80 ? 'warning' : 'ok');
+            statusEl.textContent = expenses.budgetPercent >= 100 ? 'Budget Exceeded' : expenses.budgetPercent >= 80 ? 'Warning' : 'On Track';
+        }
+        
+        // Render provider cards
+        this.renderProviderCards();
+        
+        // Update expense chart
+        this.updateExpenseChart();
+        
+        // Render model expenses table
+        this.renderModelExpensesTable();
+    }
+
+    // Render provider cards
+    renderProviderCards() {
+        const grid = document.getElementById('providerGrid');
+        if (!grid || !this.expenses) return;
+        
+        grid.innerHTML = '';
+        
+        Object.entries(this.expenses.providers || {}).forEach(([providerKey, provider]) => {
+            const card = document.createElement('div');
+            card.className = 'provider-card';
+            card.innerHTML = `
+                <div class="provider-header">
+                    <div class="provider-icon ${providerKey}">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="provider-name">${provider.name}</div>
+                </div>
+                <div class="provider-stats">
+                    <div class="provider-stat">
+                        <span class="provider-stat-label">Budget</span>
+                        <span class="provider-stat-value">$${provider.budget.toFixed(2)}</span>
+                    </div>
+                    <div class="provider-stat">
+                        <span class="provider-stat-label">Spent</span>
+                        <span class="provider-stat-value spent">$${provider.totalSpent.toFixed(2)}</span>
+                    </div>
+                    <div class="provider-stat">
+                        <span class="provider-stat-label">Remaining</span>
+                        <span class="provider-stat-value remaining">$${provider.remaining.toFixed(2)}</span>
+                    </div>
+                    <div class="provider-stat">
+                        <span class="provider-stat-label">Models</span>
+                        <span class="provider-stat-value">${provider.models.length}</span>
+                    </div>
+                </div>
+                <div class="provider-progress-bar">
+                    <div class="provider-progress-fill ${provider.status}" style="width: ${Math.min(provider.budgetPercent, 100)}%"></div>
+                </div>
+                <div class="provider-status">${provider.budgetPercent.toFixed(1)}% used</div>
+            `;
+            grid.appendChild(card);
+        });
+    }
+
+    // Update expense chart
+    updateExpenseChart() {
+        if (!this.expenseChart || !this.expenses) return;
+        
+        const labels = [];
+        const data = [];
+        
+        Object.entries(this.expenses.providers || {}).forEach(([key, provider]) => {
+            labels.push(provider.name);
+            data.push(provider.totalSpent);
+        });
+        
+        this.expenseChart.data.labels = labels;
+        this.expenseChart.data.datasets[0].data = data;
+        this.expenseChart.update();
+    }
+
+    // Render model expenses table
+    renderModelExpensesTable() {
+        const tbody = document.getElementById('modelExpensesTableBody');
+        if (!tbody || !this.expenses) return;
+        
+        tbody.innerHTML = '';
+        
+        Object.entries(this.expenses.providers || {}).forEach(([providerKey, provider]) => {
+            provider.models.forEach(model => {
+                const row = document.createElement('tr');
+                const usagePercent = (model.monthlySpent / model.monthlyCost * 100).toFixed(1);
+                row.innerHTML = `
+                    <td>${provider.name}</td>
+                    <td>${model.name}</td>
+                    <td>$${model.monthlyCost.toFixed(2)}</td>
+                    <td class="spending-value">$${model.monthlySpent.toFixed(2)}</td>
+                    <td class="token-value">$${Math.max(0, model.monthlyCost - model.monthlySpent).toFixed(2)}</td>
+                    <td>
+                        <div class="rate-limit-bar-container">
+                            <div class="rate-limit-bar ${usagePercent >= 100 ? 'danger' : usagePercent >= 80 ? 'warning' : ''}" style="width: ${Math.min(usagePercent, 100)}%"></div>
+                        </div>
+                        <span class="rate-limit-bar-label">${usagePercent}%</span>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        });
+    }
+
+    // Render rate limits section
+    renderRateLimits() {
+        if (!this.rateLimits) return;
+        
+        const models = this.rateLimits.models || {};
+        
+        // Count statuses
+        let available = 0, warning = 0, limited = 0, cooldown = 0;
+        const cooldownItems = [];
+        
+        Object.entries(models).forEach(([modelId, model]) => {
+            switch (model.status) {
+                case 'available': available++; break;
+                case 'warning': warning++; break;
+                case 'rate-limited':
+                case 'budget-exceeded': limited++; break;
+                case 'cooldown': 
+                    cooldown++; 
+                    if (model.cooldownUntil) {
+                        cooldownItems.push({
+                            id: modelId,
+                            name: model.name,
+                            provider: model.provider,
+                            until: new Date(model.cooldownUntil)
+                        });
+                    }
+                    break;
+            }
+        });
+        
+        // Update status cards
+        const availableCount = document.getElementById('availableCount');
+        const warningCount = document.getElementById('warningCount');
+        const limitedCount = document.getElementById('limitedCount');
+        const cooldownCount = document.getElementById('cooldownCount');
+        
+        if (availableCount) availableCount.textContent = available;
+        if (warningCount) warningCount.textContent = warning;
+        if (limitedCount) limitedCount.textContent = limited;
+        if (cooldownCount) cooldownCount.textContent = cooldown;
+        
+        // Render rate limit cards
+        this.renderRateLimitCards(models);
+        
+        // Render cooldown list
+        this.renderCooldownList(cooldownItems);
+        
+        // Render rate limits table
+        this.renderRateLimitsTable(models);
+    }
+
+    // Render rate limit cards
+    renderRateLimitCards(models) {
+        const grid = document.getElementById('rateLimitsGrid');
+        if (!grid) return;
+        
+        grid.innerHTML = '';
+        
+        Object.entries(models).forEach(([modelId, model]) => {
+            const card = document.createElement('div');
+            card.className = `rate-limit-card ${model.status}`;
+            
+            const usagePercent = parseFloat(model.usagePercent);
+            const budgetPercent = parseFloat(model.budgetPercent);
+            
+            card.innerHTML = `
+                <div class="rate-limit-header">
+                    <div>
+                        <div class="rate-limit-title">${model.name}</div>
+                        <div class="rate-limit-provider">${model.provider}</div>
+                    </div>
+                    <div class="rate-limit-status ${model.status}">${model.status.replace('-', ' ')}</div>
+                </div>
+                <div class="rate-limit-stats">
+                    <div class="rate-limit-stat">
+                        <span class="rate-limit-stat-label">Daily Used</span>
+                        <span class="rate-limit-stat-value">${model.dailyUsed.toLocaleString()}</span>
+                    </div>
+                    <div class="rate-limit-stat">
+                        <span class="rate-limit-stat-label">Daily Limit</span>
+                        <span class="rate-limit-stat-value">${model.dailyLimit.toLocaleString()}</span>
+                    </div>
+                    <div class="rate-limit-stat">
+                        <span class="rate-limit-stat-label">Spent</span>
+                        <span class="rate-limit-stat-value">$${model.monthlySpent.toFixed(2)}</span>
+                    </div>
+                    <div class="rate-limit-stat">
+                        <span class="rate-limit-stat-label">Budget</span>
+                        <span class="rate-limit-stat-value">$${model.monthlyBudget.toFixed(2)}</span>
+                    </div>
+                </div>
+                <div class="rate-limit-bar-container">
+                    <div class="rate-limit-bar ${usagePercent >= 100 ? 'danger' : usagePercent >= 80 ? 'warning' : ''}" style="width: ${Math.min(usagePercent, 100)}%"></div>
+                </div>
+                <div class="rate-limit-bar-label">Daily: ${usagePercent}% | Budget: ${budgetPercent}%</div>
+                <div class="rate-limit-auth">
+                    <span>Rate: ${model.rateLimit}/min</span>
+                    <span class="auth-status ${model.authenticated ? 'authenticated' : 'unauthenticated'}">
+                        <i class="fas ${model.authenticated ? 'fa-check-circle' : 'fa-times-circle'}"></i>
+                        ${model.authenticated ? 'Auth OK' : 'No Auth'}
+                    </span>
+                </div>
+            `;
+            
+            grid.appendChild(card);
+        });
+    }
+
+    // Render cooldown list
+    renderCooldownList(cooldownItems) {
+        const section = document.getElementById('cooldownSection');
+        const list = document.getElementById('cooldownList');
+        
+        if (!section || !list) return;
+        
+        if (cooldownItems.length === 0) {
+            section.style.display = 'none';
+            return;
+        }
+        
+        section.style.display = 'block';
+        list.innerHTML = '';
+        
+        cooldownItems.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'cooldown-item';
+            div.dataset.modelId = item.id;
+            div.dataset.until = item.until.getTime();
+            
+            div.innerHTML = `
+                <div>
+                    <div class="cooldown-model">${item.name}</div>
+                    <div class="cooldown-provider">${item.provider}</div>
+                </div>
+                <div class="cooldown-timer">
+                    <i class="fas fa-hourglass-half"></i>
+                    <span class="cooldown-time">--:--</span>
+                </div>
+            `;
+            
+            list.appendChild(div);
+        });
+    }
+
+    // Start cooldown timers
+    startCooldownTimer() {
+        setInterval(() => {
+            const items = document.querySelectorAll('.cooldown-item');
+            const now = Date.now();
+            
+            items.forEach(item => {
+                const until = parseInt(item.dataset.until);
+                const remaining = Math.max(0, until - now);
+                
+                if (remaining === 0) {
+                    item.remove();
+                    // Refresh rate limits when cooldown expires
+                    this.loadRateLimits().then(() => this.renderRateLimits());
+                } else {
+                    const minutes = Math.floor(remaining / 60000);
+                    const seconds = Math.floor((remaining % 60000) / 1000);
+                    const timeEl = item.querySelector('.cooldown-time');
+                    if (timeEl) {
+                        timeEl.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                    }
+                }
+            });
+            
+            // Hide cooldown section if empty
+            const list = document.getElementById('cooldownList');
+            const section = document.getElementById('cooldownSection');
+            if (list && section && list.children.length === 0) {
+                section.style.display = 'none';
+            }
+        }, 1000);
+    }
+
+    // Render rate limits table
+    renderRateLimitsTable(models) {
+        const tbody = document.getElementById('rateLimitsTableBody');
+        if (!tbody) return;
+        
+        tbody.innerHTML = '';
+        
+        Object.entries(models).forEach(([modelId, model]) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${model.name}</td>
+                <td>${model.provider}</td>
+                <td><span class="status-badge ${model.status}">${model.status.replace('-', ' ')}</span></td>
+                <td>${model.usagePercent}%</td>
+                <td>${model.budgetPercent}%</td>
+                <td>${model.rateLimit}/min</td>
+                <td><i class="fas ${model.authenticated ? 'fa-check-circle' : 'fa-times-circle'}" style="color: ${model.authenticated ? '#48bb78' : '#fc8181'}"></i></td>
+            `;
+            tbody.appendChild(row);
+        });
+    }
+}
+
+// Initialize dashboard when page loads
+let dashboard;
+document.addEventListener('DOMContentLoaded', () => {
+    dashboard = new Dashboard();
+});

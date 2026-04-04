@@ -1,0 +1,219 @@
+title: LCARS House 1
+path: lcars-house1
+icon: mdi:home-analytics
+badges: []
+cards:
+  # ==========================================
+  # HOUSE 1 HEADER
+  # ==========================================
+  - type: markdown
+    card_mod:
+      class: header-left
+    content: '# HOUSE 1 — PRIME RESIDENCE'
+
+  # ==========================================
+  # ROOM SUBTABS (NAVIGATION)
+  # ==========================================
+  - type: horizontal-stack
+    card_mod:
+      class: middle-left
+    cards:
+      - type: button
+        name: Living
+        icon: mdi:sofa
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h1-living
+        card_mod:
+          class: button-bar-left
+      - type: button
+        name: Kitchen
+        icon: mdi:stove
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h1-kitchen
+        card_mod:
+          class: button-small
+      - type: button
+        name: Primary
+        icon: mdi:bed-king
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h1-bedroom
+        card_mod:
+          class: button-small
+      - type: button
+        name: Office
+        icon: mdi:laptop
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h1-office
+        card_mod:
+          class: button-small
+      - type: button
+        name: Garage
+        icon: mdi:garage
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h1-garage
+        card_mod:
+          class: button-small
+      - type: button
+        name: Outdoor
+        icon: mdi:tree
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h1-outdoor
+        card_mod:
+          class: button-bar-right
+
+  # ==========================================
+  # HOUSE 1 SYSTEMS GRID
+  # ==========================================
+  - type: grid
+    columns: 3
+    square: false
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '# CLIMATE'
+          - type: thermostat
+            entity: climate.house1_main
+            card_mod:
+              class: middle-contained
+          - type: entities
+            card_mod:
+              class: middle-contained
+            entities:
+              - entity: sensor.house1_temperature_average
+                name: Avg Temp
+              - entity: sensor.house1_humidity_average
+                name: Avg Humidity
+              - entity: sensor.house1_air_quality
+                name: Air Quality
+          - type: markdown
+            card_mod:
+              class: footer-contained
+            content: '## THERMAL SYSTEMS'
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '# LIGHTING'
+          - type: grid
+            columns: 2
+            square: false
+            cards:
+              - type: button
+                entity: light.house1_living_room
+                name: Living
+                tap_action:
+                  action: toggle
+                card_mod:
+                  class: button-lozenge-left
+              - type: button
+                entity: light.house1_kitchen
+                name: Kitchen
+                tap_action:
+                  action: toggle
+                card_mod:
+                  class: button-lozenge-right
+              - type: button
+                entity: light.house1_bedroom
+                name: Primary
+                tap_action:
+                  action: toggle
+                card_mod:
+                  class: button-lozenge-left
+              - type: button
+                entity: light.house1_office
+                name: Office
+                tap_action:
+                  action: toggle
+                card_mod:
+                  class: button-lozenge-right
+          - type: markdown
+            card_mod:
+              class: footer-contained
+            content: '## LIGHT ARRAY'
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '# SECURITY'
+          - type: alarm-panel
+            entity: alarm_control_panel.house1_alarm
+            card_mod:
+              class: middle-contained
+          - type: entities
+            card_mod:
+              class: middle-contained
+            entities:
+              - entity: lock.house1_front_door
+                name: Front Door
+              - entity: lock.house1_back_door
+                name: Back Door
+              - entity: binary_sensor.house1_front_door_motion
+                name: Front Motion
+              - entity: binary_sensor.house1_back_door_motion
+                name: Back Motion
+          - type: markdown
+            card_mod:
+              class: footer-contained
+            content: '## SECURITY GRID'
+
+  # ==========================================
+  # MEDIA + ENERGY
+  # ==========================================
+  - type: grid
+    columns: 2
+    square: false
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-left
+            content: '# MEDIA SYSTEMS'
+          - type: media-control
+            entity: media_player.house1_living_room_tv
+            card_mod:
+              class: middle-left
+          - type: media-control
+            entity: media_player.house1_whole_home
+            card_mod:
+              class: middle-left
+          - type: markdown
+            card_mod:
+              class: footer-left
+            content: '## AUDIO VISUAL'
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-right
+            content: '# ENERGY'
+          - type: entities
+            card_mod:
+              class: middle-right
+            entities:
+              - entity: sensor.house1_energy_today
+                name: Energy Today
+              - entity: sensor.house1_energy_month
+                name: Energy Month
+              - entity: sensor.house1_solar_today
+                name: Solar Today
+              - entity: sensor.house1_battery_level
+                name: Battery Level
+          - type: markdown
+            card_mod:
+              class: footer-right
+            content: '## POWER SYSTEMS'

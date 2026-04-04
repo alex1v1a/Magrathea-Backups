@@ -1,0 +1,129 @@
+{
+  "weekOf": "2026-02-08",
+  "generatedAt": "2026-02-11T08:05:00.000Z",
+  "meals": [
+    {
+      "date": "Sunday 2/8",
+      "day": "Sunday",
+      "meal": "Pan-Seared Cod with Lemon Butter",
+      "servings": 4
+    },
+    {
+      "date": "Monday 2/9",
+      "day": "Monday",
+      "meal": "Beef Stir-Fry with Vegetables",
+      "servings": 4
+    },
+    {
+      "date": "Tuesday 2/10",
+      "day": "Tuesday",
+      "meal": "Fish Tacos with Mango Salsa",
+      "servings": 4
+    },
+    {
+      "date": "Wednesday 2/11",
+      "day": "Wednesday",
+      "meal": "Korean Beef Bulgogi Bowl",
+      "servings": 4
+    },
+    {
+      "date": "Thursday 2/12",
+      "day": "Thursday",
+      "meal": "Mediterranean Chicken Bowl",
+      "servings": 4
+    },
+    {
+      "date": "Friday 2/13",
+      "day": "Friday",
+      "meal": "Chicken Tikka Masala",
+      "servings": 4
+    },
+    {
+      "date": "Saturday 2/14",
+      "day": "Saturday",
+      "meal": "Grilled Salmon with Asparagus",
+      "servings": 4
+    }
+  ],
+  "shoppingList": {
+    "proteins": [
+      "1.5 lbs cod fillets",
+      "1.5 lbs ribeye steak (thinly sliced)",
+      "1.5 lbs white fish (tilapia or cod) for tacos",
+      "2 lbs chicken breast (cubed) - for Mediterranean bowl",
+      "2 lbs chicken breast (cubed) - for tikka masala",
+      "4 salmon fillets (6 oz each), skin on",
+      "4 eggs (for bulgogi bowls, optional)"
+    ],
+    "produce": [
+      "Fresh parsley",
+      "Capers",
+      "Mixed vegetables for stir-fry (broccoli, bell peppers, snap peas)",
+      "Fresh ginger",
+      "Green onions",
+      "Corn tortillas (8-10 count)",
+      "2 ripe mangos",
+      "1 jalapeño",
+      "Fresh cilantro",
+      "Cabbage slaw mix (8 oz)",
+      "1 Asian pear (or apple juice)",
+      "Kimchi (16 oz)",
+      "Cucumber (2)",
+      "Cherry tomatoes (1 pint)",
+      "Feta cheese (8 oz)",
+      "Hummus (1/2 cup worth)",
+      "Kalamata olives",
+      "Tzatziki",
+      "Asparagus (1 lb)",
+      "Fresh dill",
+      "Fresh thyme",
+      "Fresh basil (optional)",
+      "1 lemon (for slicing)"
+    ],
+    "pantry": [
+      "White wine (optional, for cod)",
+      "Oyster sauce",
+      "Cornstarch",
+      "Beef broth",
+      "Sesame seeds",
+      "Chipotle mayo",
+      "Brown sugar",
+      "Tomato puree (14 oz can)",
+      "Heavy cream",
+      "Plain yogurt (for marinade)",
+      "Garam masala",
+      "Turmeric",
+      "Cayenne pepper"
+    ],
+    "breadAndGrains": [
+      "Jasmine rice (if not in stock)",
+      "Basmati rice (if not in stock)",
+      "Naan bread"
+    ]
+  },
+  "excludedItems": [
+    "Butter",
+    "Olive oil",
+    "Vegetable oil",
+    "Sesame oil",
+    "Soy sauce",
+    "Lemons",
+    "Limes",
+    "Garlic",
+    "Onions",
+    "Salt",
+    "Black pepper",
+    "Garlic powder",
+    "Chili powder",
+    "Cumin",
+    "Paprika",
+    "All-purpose flour",
+    "White rice",
+    "Chicken broth",
+    "Quinoa",
+    "White wine vinegar",
+    "Dijon mustard",
+    "Mayonnaise",
+    "Honey"
+  ]
+}

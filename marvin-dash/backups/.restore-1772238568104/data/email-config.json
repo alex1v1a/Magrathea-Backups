@@ -1,0 +1,47 @@
+{
+  "icloud": {
+    "email": "MarvinMartian9@icloud.com",
+    "password": "jgdw-epfw-mspb-nihn"
+  },
+  "gmail": {
+    "email": "9marvinmartian@gmail.com",
+    "password": "section9"
+  },
+  "discord": {
+    "webhook": null
+  },
+  "keywords": [
+    "urgent",
+    "action required",
+    "asap",
+    "important",
+    "priority",
+    "deadline",
+    "expires",
+    "payment due",
+    "bill due",
+    "overdue",
+    "security alert",
+    "suspicious activity",
+    "verification",
+    "appointment",
+    "meeting",
+    "scheduled",
+    "confirmed",
+    "delivery",
+    "shipped",
+    "tracking",
+    "order",
+    "password",
+    "login",
+    "account",
+    "verify"
+  ],
+  "prioritySenders": [
+    "alex@1v1a.com",
+    "sferrazzaa96@gmail.com",
+    "apple.com",
+    "icloud.com",
+    "google.com"
+  ]
+}

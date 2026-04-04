@@ -1,0 +1,445 @@
+# LCARS Button Card Templates
+# Include this in your button-card configuration
+
+button_card_templates:
+  # ============================================
+  # BASE LCARS BUTTON STYLES
+  # ============================================
+  
+  lcars_base:
+    show_name: true
+    show_icon: true
+    show_state: false
+    size: 100%
+    aspect_ratio: 1/1
+    tap_action:
+      action: toggle
+    hold_action:
+      action: more-info
+    styles:
+      card:
+        - font-family: "Antonio, sans-serif"
+        - text-transform: uppercase
+        - border: none
+        - box-shadow: none
+      name:
+        - font-weight: 600
+        - letter-spacing: 1px
+      icon:
+        - color: var(--lcars-black)
+  
+  # ============================================
+  # LCARS PILL BUTTONS (Main Actions)
+  # ============================================
+  
+  lcars_orange_pill:
+    template: lcars_base
+    styles:
+      card:
+        - background: "#FF9900"
+        - border-radius: "0px 20px 20px 0px"
+        - height: "50px"
+        - display: flex
+        - align-items: center
+        - justify-content: flex-end
+        - padding-right: "15px"
+      name:
+        - color: "#000000"
+        - font-size: "16px"
+      icon:
+        - color: "#000000"
+  
+  lcars_purple_pill:
+    template: lcars_base
+    styles:
+      card:
+        - background: "#CC99CC"
+        - border-radius: "20px 0px 0px 20px"
+        - height: "50px"
+        - display: flex
+        - align-items: center
+        - justify-content: flex-start
+        - padding-left: "15px"
+      name:
+        - color: "#000000"
+        - font-size: "16px"
+      icon:
+        - color: "#000000"
+  
+  lcars_blue_pill:
+    template: lcars_base
+    styles:
+      card:
+        - background: "#9999CC"
+        - border-radius: "0px 20px 20px 0px"
+        - height: "40px"
+        - display: flex
+        - align-items: center
+        - justify-content: flex-end
+        - padding-right: "15px"
+      name:
+        - color: "#000000"
+        - font-size: "14px"
+      icon:
+        - color: "#000000"
+  
+  lcars_red_pill:
+    template: lcars_base
+    styles:
+      card:
+        - background: "#CC6666"
+        - border-radius: "20px 0px 0px 20px"
+        - height: "50px"
+        - display: flex
+        - align-items: center
+        - justify-content: flex-start
+        - padding-left: "15px"
+      name:
+        - color: "#000000"
+        - font-size: "16px"
+      icon:
+        - color: "#000000"
+  
+  lcars_tan_pill:
+    template: lcars_base
+    styles:
+      card:
+        - background: "#FFCC99"
+        - border-radius: "0px 15px 15px 0px"
+        - height: "35px"
+        - display: flex
+        - align-items: center
+        - justify-content: flex-end
+        - padding-right: "12px"
+      name:
+        - color: "#000000"
+        - font-size: "13px"
+      icon:
+        - color: "#000000"
+  
+  lcars_pink_pill:
+    template: lcars_base
+    styles:
+      card:
+        - background: "#CC6699"
+        - border-radius: "15px 0px 0px 15px"
+        - height: "40px"
+        - display: flex
+        - align-items: center
+        - justify-content: flex-start
+        - padding-left: "15px"
+      name:
+        - color: "#000000"
+        - font-size: "14px"
+      icon:
+        - color: "#000000"
+  
+  lcars_gold_pill:
+    template: lcars_base
+    styles:
+      card:
+        - background: "#FFCC66"
+        - border-radius: "15px 0px 0px 15px"
+        - height: "35px"
+        - display: flex
+        - align-items: center
+        - justify-content: flex-start
+        - padding-left: "12px"
+      name:
+        - color: "#000000"
+        - font-size: "13px"
+      icon:
+        - color: "#000000"
+  
+  # ============================================
+  # LCARS HEADER/FOOTER ELEMENTS
+  # ============================================
+  
+  lcars_header:
+    show_name: true
+    show_icon: false
+    show_state: false
+    tap_action:
+      action: none
+    styles:
+      card:
+        - background: "linear-gradient(90deg, #CC99CC 0%, #CC99CC 15%, #FF9900 15%, #FF9900 85%, #CC99CC 85%, #CC99CC 100%)"
+        - border-radius: "0px 25px 0px 0px"
+        - height: "40px"
+        - display: flex
+        - align-items: center
+        - justify-content: center
+      name:
+        - color: "#000000"
+        - font-size: "20px"
+        - font-weight: 700
+        - letter-spacing: "2px"
+  
+  lcars_footer:
+    show_name: false
+    show_icon: false
+    show_state: false
+    tap_action:
+      action: none
+    styles:
+      card:
+        - background: "linear-gradient(90deg, #FF9900 0%, #FF9900 80%, #000000 80%, #000000 85%, #FF9900 85%, #FF9900 100%)"
+        - border-radius: "0px 0px 0px 25px"
+        - height: "30px"
+  
+  lcars_side_elbow_left:
+    show_name: false
+    show_icon: false
+    show_state: false
+    tap_action:
+      action: none
+    styles:
+      card:
+        - background: "#CC99CC"
+        - border-radius: "0px 35px 0px 0px"
+        - width: "80px"
+        - height: "80px"
+  
+  lcars_side_elbow_right:
+    show_name: false
+    show_icon: false
+    show_state: false
+    tap_action:
+      action: none
+    styles:
+      card:
+        - background: "#FF9900"
+        - border-radius: "35px 0px 0px 0px"
+        - width: "80px"
+        - height: "80px"
+  
+  # ============================================
+  # LCARS DATA DISPLAY CARDS
+  # ============================================
+  
+  lcars_data_box:
+    show_name: true
+    show_icon: false
+    show_state: true
+    styles:
+      card:
+        - background: "#FFCC99"
+        - border-radius: "20px 0px 20px 0px"
+        - padding: "15px"
+      state:
+        - color: "#000000"
+        - font-size: "28px"
+        - font-weight: 700
+      name:
+        - color: "#333333"
+        - font-size: "12px"
+        - text-transform: uppercase
+  
+  lcars_sensor_value:
+    show_name: true
+    show_icon: true
+    show_state: true
+    show_units: true
+    styles:
+      card:
+        - background: "#000000"
+        - border: "2px solid #FFCC99"
+        - border-radius: "15px 0px 15px 0px"
+      state:
+        - color: "#FFCC99"
+        - font-size: "32px"
+        - font-weight: 700
+      name:
+        - color: "#FF9900"
+        - font-size: "14px"
+        - text-transform: uppercase
+      icon:
+        - color: "#FF9900"
+  
+  # ============================================
+  # LCARS SCENE BUTTONS
+  # ============================================
+  
+  lcars_scene_button:
+    template: lcars_base
+    styles:
+      card:
+        - background: "#9999CC"
+        - border-radius: "0px 20px 20px 0px"
+        - height: "45px"
+        - display: flex
+        - align-items: center
+        - justify-content: center
+      name:
+        - color: "#000000"
+        - font-size: "15px"
+      icon:
+        - color: "#000000"
+    state:
+      - value: "on"
+        styles:
+          card:
+            - background: "#FF9900"
+          icon:
+            - color: "#000000"
+          name:
+            - color: "#000000"
+  
+  # ============================================
+  # LCARS LIGHT CONTROLS
+  # ============================================
+  
+  lcars_light_button:
+    template: lcars_base
+    styles:
+      card:
+        - background: "#666666"
+        - border-radius: "0px 15px 15px 0px"
+        - height: "40px"
+        - display: flex
+        - align-items: center
+        - justify-content: flex-end
+        - padding-right: "15px"
+      name:
+        - color: "#FFFFFF"
+        - font-size: "14px"
+      icon:
+        - color: "#FFFFFF"
+    state:
+      - value: "on"
+        styles:
+          card:
+            - background: "#FF9900"
+          icon:
+            - color: "#000000"
+          name:
+            - color: "#000000"
+  
+  # ============================================
+  # LCARS LOCK CONTROLS
+  # ============================================
+  
+  lcars_lock_button:
+    template: lcars_base
+    styles:
+      card:
+        - background: "#CC6666"
+        - border-radius: "20px 0px 0px 20px"
+        - height: "45px"
+        - display: flex
+        - align-items: center
+        - justify-content: flex-start
+        - padding-left: "15px"
+      name:
+        - color: "#000000"
+        - font-size: "14px"
+      icon:
+        - color: "#000000"
+    state:
+      - value: "locked"
+        icon: mdi:lock
+        styles:
+          card:
+            - background: "#66CC66"
+      - value: "unlocked"
+        icon: mdi:lock-open-variant
+  
+  # ============================================
+  # LCARS MEDIA PLAYER
+  # ============================================
+  
+  lcars_media_player:
+    show_name: true
+    show_icon: true
+    show_state: true
+    styles:
+      card:
+        - background: "#000000"
+        - border: "2px solid #CC99CC"
+        - border-radius: "20px 0px 20px 0px"
+        - padding: "15px"
+      name:
+        - color: "#FF9900"
+        - font-size: "16px"
+      state:
+        - color: "#CC99CC"
+        - font-size: "14px"
+      icon:
+        - color: "#FF9900"
+  
+  # ============================================
+  # LCARS ALERT BUTTONS
+  # ============================================
+  
+  lcars_alert_red:
+    template: lcars_base
+    styles:
+      card:
+        - background: "#CC6666"
+        - border-radius: "20px 20px 0px 0px"
+        - height: "50px"
+        - animation: "lcars-pulse 1s infinite alternate"
+      name:
+        - color: "#000000"
+        - font-size: "18px"
+        - font-weight: 700
+      icon:
+        - color: "#000000"
+  
+  lcars_alert_yellow:
+    template: lcars_base
+    styles:
+      card:
+        - background: "#FFCC66"
+        - border-radius: "20px 20px 0px 0px"
+        - height: "50px"
+      name:
+        - color: "#000000"
+        - font-size: "18px"
+        - font-weight: 700
+      icon:
+        - color: "#000000"
+  
+  # ============================================
+  # NAVIGATION BUTTONS
+  # ============================================
+  
+  lcars_nav_button:
+    template: lcars_base
+    tap_action:
+      action: navigate
+    styles:
+      card:
+        - background: "#333333"
+        - border: "2px solid #FF9900"
+        - border-radius: "0px 15px 0px 15px"
+        - height: "40px"
+      name:
+        - color: "#FF9900"
+        - font-size: "14px"
+      icon:
+        - color: "#FF9900"
+    state:
+      - value: "on"
+        styles:
+          card:
+            - background: "#FF9900"
+            - border: "2px solid #FF9900"
+          name:
+            - color: "#000000"
+          icon:
+            - color: "#000000"
+  
+  # ============================================
+  # EMPTY SPACER (for layout)
+  # ============================================
+  
+  lcars_spacer:
+    show_name: false
+    show_icon: false
+    show_state: false
+    styles:
+      card:
+        - background: "transparent"
+        - box-shadow: none
+        - border: none

@@ -1,0 +1,107 @@
+Device Name,IP Address,MAC Address,Type,Category,Location,Notes
+Apple TV HD,10.1.1.130,00:04:4b:b1:4f:a3,Media Player,Entertainment,Sayville,Apple TV
+HDHR-1067E1B1,10.1.1.181,00:18:dd:06:7e:1b,Tuner,Media,Sayville,HDHomeRun Tuner
+Linux PC,10.1.1.137,00:22:75:24:ea:46,Computer,IT,Sayville,Linux Computer
+Envoy,10.1.1.146,00:35:ff:32:47:9c,Energy Monitor,Energy,Sayville,Solar Panel Monitor
+XSPQR,10.1.1.9,00:3e:e1:c8:f6:10,Server,IT,Sayville,Fixed IP Server
+Amazon Echo,10.1.1.176,00:f3:61:7d:47:21,Smart Speaker,Voice,Sayville,Amazon Alexa
+XSPQR WIFI,10.1.1.195,04:4b:ed:f0:71:b0,Server,IT,Sayville,XSPQR Wireless
+Amazon Echo,10.1.1.75,08:a6:bc:79:d0:4f,Smart Speaker,Voice,Sayville,Amazon Alexa
+Rachio 1,10.1.1.254,0c:2a:69:0e:93:48,Sprinkler,Outdoor,Sayville,Rachio Sprinkler Controller
+TR100,10.1.1.150,0c:cf:89:b6:9f:5a,Camera,Security,Sayville,TR100 Camera
+Amazon Echo,10.1.1.81,10:09:f9:88:68:43,Smart Speaker,Voice,Sayville,Amazon Alexa
+ESP Device,10.1.1.6,10:52:1c:43:07:20,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+Nest Thermostat,10.1.1.80,14:c1:4e:31:cd:e1,Thermostat,Climate,Sayville,Nest Thermostat
+Nest Thermostat,10.1.1.125,14:c1:4e:3c:df:ea,Thermostat,Climate,Sayville,Nest Thermostat
+Nest Thermostat,10.1.1.22,14:c1:4e:5a:e2:20,Thermostat,Climate,Sayville,Nest Thermostat
+Apple Watch SE,10.1.1.82,16:9d:e8:e7:5c:45,Watch,Mobile,Sayville,Apple Watch
+Insignia Roku TV,10.1.1.31,1c:1e:e3:ca:ba:5b,TV,Entertainment,Sayville,Roku Smart TV
+ESP Device,10.1.1.242,2c:3a:e8:2e:ae:b5,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+ESP Device,10.1.1.168,2c:3a:e8:2e:b1:14,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+Teckin Smart Plug,10.1.1.178,38:01:46:a9:1e:d0,Smart Plug,Lighting,Sayville,Teckin TC100
+Teckin Smart Plug,10.1.1.107,38:01:46:a9:1f:1a,Smart Plug,Lighting,Sayville,Teckin TC100
+Teckin Smart Plug,10.1.1.192,38:01:46:a9:97:75,Smart Plug,Lighting,Sayville,Teckin TC100
+LG webOS TV,10.1.1.174,40:2f:86:6b:27:02,TV,Entertainment,Sayville,LG Smart TV
+ESP Device,10.1.1.70,40:f5:20:0a:54:04,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+Apple Laptop,10.1.1.119,42:0d:60:58:87:97,Computer,IT,Sayville,MacBook
+ESP Device,10.1.1.24,44:67:55:21:d9:f6,IoT,Unknown,Sayville,espressif Device
+Bookshelf 2G,10.1.1.27,44:d9:e7:6c:c5:c4,Access Point,Network,Sayville,UniFi AP
+ESP Device,10.1.1.77,50:02:91:6a:fd:6e,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+ESP Device,10.1.1.162,50:02:91:6a:fd:c4,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+HP Printer,10.1.1.7,50:65:f3:e5:43:e1,Printer,Office,Sayville,HP Printer
+iPhone,10.1.1.159,52:f4:97:11:f7:85,Phone,Mobile,Sayville,iPhone
+Linux Device,10.1.1.140,5c:86:c1:16:52:71,Computer,IT,Sayville,Linux Device
+09AA01AF37190P28,10.1.1.156,64:16:66:b5:22:73,Unknown,Unknown,Sayville,Unknown Device
+Apple Watch SE,10.1.1.243,66:b1:f3:6f:d3:0c,Watch,Mobile,Sayville,Apple Watch
+Apple iPad Pro,10.1.1.66,66:e4:60:12:2b:b5,Tablet,Mobile,Sayville,iPad Pro
+Nest Protect,10.1.1.47,68:57:2d:18:0c:53,Smoke Detector,Safety,Sayville,Nest Protect
+Ring Doorbell,10.1.1.43,18:7f:88:34:ef:c5,Camera,Security,Sayville,Ring Doorbell
+Ring Floodlight Cam,10.1.1.8,18:7f:88:a0:22:79,Camera,Security,Sayville,Ring Floodlight
+Amazon Kindle,10.1.1.45,6c:55:b1:84:21:d0,Tablet,Mobile,Sayville,Kindle
+BL Device,10.1.1.36,78:0f:77:1a:51:b6,Unknown,Unknown,Sayville,Unknown Device
+Pool 2G,10.1.1.236,78:8a:20:e2:de:10,Access Point,Network,Sayville,UniFi AP Pool
+Weather Station,10.1.1.60,7c:a6:b0:0d:a5:2e,Sensor,Climate,Sayville,La Crosse Weather Station
+ESP Device,10.1.1.13,80:7d:3a:01:b4:bc,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+ESP Device,10.1.1.177,80:7d:3a:01:b7:10,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+Teckin Smart Plug,10.1.1.144,80:9f:9b:f6:86:6e,Smart Plug,Lighting,Sayville,Teckin TC100
+ESP Device,10.1.1.110,84:0d:8e:50:bf:df,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+ESP Device,10.1.1.127,84:0d:8e:50:c2:99,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+Amazon Kindle,10.1.1.170,84:28:59:b6:b6:62,Tablet,Mobile,Sayville,Kindle
+TY_WR Device,10.1.1.79,84:e3:42:2b:7e:b2,Smart Device,Unknown,Sayville,Tuya Device
+TY_WR Device,10.1.1.136,84:e3:42:43:f3:ab,Smart Device,Unknown,Sayville,Tuya Device
+TY_WR Device,10.1.1.10,84:e3:42:49:da:01,Smart Device,Unknown,Sayville,Tuya Device
+ESP Device,10.1.1.84,84:f3:eb:48:8b:75,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+ESP Device,10.1.1.128,84:f3:eb:48:b7:d4,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+ESP Device,10.1.1.210,84:f3:eb:a7:59:a1,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+ESP Device,10.1.1.88,84:f3:eb:a7:6c:98,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+Samsung Range,10.1.1.29,88:57:1d:90:1c:3a,Appliance,Kitchen,Sayville,Samsung Smart Range
+Living-Room,10.1.1.113,8c:26:aa:ee:49:9d,Media Player,Entertainment,Sayville,Apple TV or similar
+Amazon Echo,10.1.1.165,90:a8:22:53:fe:43,Smart Speaker,Voice,Sayville,Amazon Alexa
+Apple Watch,10.1.1.116,92:23:2c:58:09:7b,Watch,Mobile,Sayville,Apple Watch
+SBS10 Device,10.1.1.26,94:b9:7e:60:b9:c8,Unknown,Unknown,Sayville,Unknown Device
+wlan0 Device,10.1.1.220,a0:92:08:a8:ae:36,Unknown,Unknown,Sayville,Unknown Device
+Teckin Smart Plug,10.1.1.23,a0:9f:10:7e:82:2c,Smart Plug,Lighting,Sayville,Teckin TC100
+Teckin Smart Plug,10.1.1.108,a0:9f:10:7e:e4:6d,Smart Plug,Lighting,Sayville,Teckin TC100
+Teckin Smart Plug,10.1.1.73,a0:9f:10:7f:b3:95,Smart Plug,Lighting,Sayville,Teckin TC100
+Teckin Smart Plug,10.1.1.14,a0:9f:10:fd:fb:5e,Smart Plug,Lighting,Sayville,Teckin TC100
+Apple iPhone,10.1.1.83,a2:d1:56:c9:00:a0,Phone,Mobile,Sayville,iPhone 11 Pro Max
+Arlo Base Station,10.1.1.15,a4:11:62:4d:ae:4f,Camera Hub,Security,Sayville,VMB3500 Arlo
+Arlo Video Doorbell,10.1.1.101,a4:11:62:bd:72:57,Camera,Security,Sayville,AVD1001 Arlo
+Verizon Router,10.1.1.212,ac:91:9b:61:f6:0b,Router,Network,Sayville,CR1000A Verizon
+Arlo Base Station,10.1.1.46,b0:39:56:e4:0c:3f,Camera Hub,Security,Sayville,VMB4000 Arlo
+Teckin Smart Plug,10.1.1.109,b4:c9:b9:68:f4:e4,Smart Plug,Lighting,Sayville,Teckin TC100
+Teckin Smart Plug,10.1.1.129,b4:c9:b9:69:13:74,Smart Plug,Lighting,Sayville,Teckin TC100
+Teckin Smart Plug,10.1.1.163,b4:c9:b9:69:13:95,Smart Plug,Lighting,Sayville,Teckin TC100
+Teckin Smart Plug,10.1.1.145,b4:c9:b9:69:1e:91,Smart Plug,Lighting,Sayville,Teckin TC100
+Teckin Smart Plug,10.1.1.102,b4:c9:b9:69:25:41,Smart Plug,Lighting,Sayville,Teckin TC100
+Teckin Smart Plug,10.1.1.191,b4:c9:b9:69:2c:75,Smart Plug,Lighting,Sayville,Teckin TC100
+Apple Laptop,10.1.1.16,b6:d8:9f:31:64:c1,Computer,IT,Sayville,MacBook
+Samsung Device,10.1.1.42,c0:48:e6:82:8b:7c,Phone,Mobile,Sayville,Samsung Phone
+RabbitAir Purifier,10.1.1.213,c4:4f:33:12:e2:f5,Air Purifier,Climate,Sayville,RabbitAir Purifier
+ESP Device,10.1.1.157,cc:50:e3:c7:8e:44,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+Amazon Echo Dot,10.1.1.49,cc:9e:a2:8c:22:50,Smart Speaker,Voice,Sayville,Echo Dot 3rd Gen
+Amazon Echo Dot,10.1.1.89,cc:9e:a2:a0:58:7b,Smart Speaker,Voice,Sayville,Echo Dot 3rd Gen
+Amazon Echo Dot,10.1.1.90,cc:f7:35:02:4b:01,Smart Speaker,Voice,Sayville,Echo Dot 2nd Gen
+Amazon Echo Dot,10.1.1.194,cc:f7:35:65:98:ab,Smart Speaker,Voice,Sayville,Echo Dot 3rd Gen
+Amazon Echo Dot,10.1.1.25,cc:f7:35:e5:37:8d,Smart Speaker,Voice,Sayville,Echo Dot 5th Gen
+Wyze Camera,10.1.1.12,d0:3f:27:34:41:2c,Camera,Security,Sayville,Wyze Camera
+TY_WR Device,10.1.1.111,d4:a6:51:dc:ad:fa,Smart Device,Unknown,Sayville,Tuya Device
+TY_WR Device,10.1.1.115,d4:a6:51:e0:30:4f,Smart Device,Unknown,Sayville,Tuya Device
+Apple iPhone,10.1.1.40,d8:be:65:21:9f:49,Phone,Mobile,Sayville,iPhone 15 Pro Max
+Nest Thermostat,10.1.1.35,d8:eb:46:0e:81:f5,Thermostat,Climate,Sayville,Nest Thermostat
+Nest Thermostat,10.1.1.106,d8:eb:46:14:9e:cb,Thermostat,Climate,Sayville,Nest Thermostat
+ESP Device,10.1.1.237,dc:4f:22:45:c2:a0,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+ESP Device,10.1.1.19,dc:4f:22:45:c6:f0,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+ESP Device,10.1.1.78,dc:4f:22:92:72:63,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+Amazon Echo,10.1.1.94,ec:8a:c4:0e:87:b2,Smart Speaker,Voice,Sayville,Amazon Alexa
+Amazon Echo,10.1.1.147,ec:8a:c4:21:2e:f8,Smart Speaker,Voice,Sayville,Amazon Alexa
+ESP Device,10.1.1.214,ec:fa:bc:00:7f:f7,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+ESP Device,10.1.1.171,ec:fa:bc:68:80:90,IoT,Unknown,Sayville,ESP8266/ESP32 Device
+Apple iPhone,10.1.1.117,ee:c6:17:b6:37:a5,Phone,Mobile,Sayville,iPhone 15 Pro
+Amazon Echo Flex,10.1.1.44,f4:03:2a:d2:68:77,Smart Speaker,Voice,Sayville,Echo Flex
+TR100 Camera,10.1.1.153,fc:6b:f0:fd:0f:c4,Camera,Security,Sayville,TR100
+TR100 Camera,10.1.1.225,fc:6b:f0:fe:11:6e,Camera,Security,Sayville,TR100
+Alex's Bedroom AP,10.1.1.95,fc:ec:da:b6:e2:ec,Access Point,Network,Sayville,UniFi AC Pro
+Lounge AP,10.1.1.50,fc:ec:da:b6:e4:d8,Access Point,Network,Sayville,UniFi AC Pro
+Basement Boiler AP,10.1.1.72,fc:ec:da:b6:e9:af,Access Point,Network,Sayville,UniFi AC Pro
+Office AP,10.1.1.59,fc:ec:da:b6:ea:32,Access Point,Network,Sayville,UniFi AC Pro

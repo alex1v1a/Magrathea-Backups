@@ -1,0 +1,331 @@
+# ============================================
+# LCARS BRIDGE DASHBOARD
+# Main Control View - Primary Operations
+# ============================================
+
+title: Bridge
+icon: mdi:view-dashboard
+path: bridge
+panel: false
+background: "#000000"
+
+# Include button card templates
+type: custom:button-card
+template:
+  - lcars-templates
+
+# Card Mod Global Theme
+card_mod:
+  style: |
+    ha-card {
+      background: #000000 !important;
+    }
+
+# ============================================
+# DASHBOARD LAYOUT
+# ============================================
+cards:
+  # ==========================================
+  # TOP HEADER BAR
+  # ==========================================
+  - type: custom:button-card
+    template: lcars_header
+    name: "USS HOME ASSISTANT - BRIDGE"
+    tap_action:
+      action: none
+
+  # ==========================================
+  # STATUS ROW
+  # ==========================================
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: lcars_data_box
+        entity: sensor.date
+        name: "Stardate"
+        
+      - type: custom:button-card
+        template: lcars_data_box
+        entity: sensor.time
+        name: "Ship's Time"
+        
+      - type: custom:button-card
+        template: lcars_data_box
+        entity: weather.home
+        name: "Conditions"
+        show_state: true
+        state_display: "{{ states('weather.home') }}"
+
+  # ==========================================
+  # MAIN CONTENT GRID
+  # ==========================================
+  - type: custom:layout-card
+    layout_type: custom:grid-layout
+    layout:
+      grid-template-columns: 200px 1fr 200px
+      grid-template-rows: auto
+      grid-template-areas: |
+        "sidebar main status"
+      gap: 10px
+    cards:
+      # ========================================
+      # LEFT SIDEBAR - Navigation
+      # ========================================
+      - type: vertical-stack
+        view_layout:
+          grid-area: sidebar
+        cards:
+          - type: custom:button-card
+            template: lcars_side_elbow_left
+            
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Engineering"
+            icon: mdi:engine
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-engineering
+              
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Science"
+            icon: mdi:flask
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-science
+              
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Tactical"
+            icon: mdi:shield
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-tactical
+              
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Quarters"
+            icon: mdi:bed
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-quarters
+              
+          - type: custom:button-card
+            template: lcars_orange_pill
+            name: "Red Alert"
+            icon: mdi:alert
+            entity: input_boolean.red_alert
+            tap_action:
+              action: toggle
+
+      # ========================================
+      # MAIN CONTENT AREA
+      # ========================================
+      - type: vertical-stack
+        view_layout:
+          grid-area: main
+        cards:
+          # Quick Scenes
+          - type: custom:button-card
+            template: lcars_header
+            name: "QUICK SCENES"
+            
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                template: lcars_scene_button
+                entity: scene.good_morning
+                name: "Morning"
+                icon: mdi:weather-sunset-up
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  target:
+                    entity_id: scene.good_morning
+                    
+              - type: custom:button-card
+                template: lcars_scene_button
+                entity: scene.good_night
+                name: "Night"
+                icon: mdi:weather-night
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  target:
+                    entity_id: scene.good_night
+                    
+              - type: custom:button-card
+                template: lcars_scene_button
+                entity: scene.away
+                name: "Away"
+                icon: mdi:exit-run
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  target:
+                    entity_id: scene.away
+                    
+              - type: custom:button-card
+                template: lcars_scene_button
+                entity: scene.movie_time
+                name: "Movie"
+                icon: mdi:movie-open
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  target:
+                    entity_id: scene.movie_time
+
+          # Climate Control
+          - type: custom:button-card
+            template: lcars_header
+            name: "ENVIRONMENTAL CONTROLS"
+            
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                template: lcars_sensor_value
+                entity: climate.living_room
+                name: "Living Room"
+                icon: mdi:thermostat
+                show_state: true
+                state_display: "{{ state_attr('climate.living_room', 'current_temperature') }}°F"
+                
+              - type: custom:button-card
+                template: lcars_sensor_value
+                entity: climate.bedroom
+                name: "Bedroom"
+                icon: mdi:thermostat
+                show_state: true
+                state_display: "{{ state_attr('climate.bedroom', 'current_temperature') }}°F"
+                
+              - type: custom:button-card
+                template: lcars_sensor_value
+                entity: sensor.humidity
+                name: "Humidity"
+                icon: mdi:water-percent
+
+          # Quick Lights
+          - type: custom:button-card
+            template: lcars_header
+            name: "ILLUMINATION"
+            
+          - type: custom:layout-card
+            layout_type: custom:grid-layout
+            layout:
+              grid-template-columns: repeat(4, 1fr)
+              gap: 5px
+            cards:
+              - type: custom:button-card
+                template: lcars_light_button
+                entity: light.living_room
+                name: "Living Room"
+                icon: mdi:lightbulb
+                
+              - type: custom:button-card
+                template: lcars_light_button
+                entity: light.kitchen
+                name: "Kitchen"
+                icon: mdi:lightbulb
+                
+              - type: custom:button-card
+                template: lcars_light_button
+                entity: light.bedroom
+                name: "Bedroom"
+                icon: mdi:lightbulb
+                
+              - type: custom:button-card
+                template: lcars_light_button
+                entity: light.hallway
+                name: "Hallway"
+                icon: mdi:lightbulb
+                
+              - type: custom:button-card
+                template: lcars_light_button
+                entity: light.bathroom
+                name: "Bathroom"
+                icon: mdi:lightbulb
+                
+              - type: custom:button-card
+                template: lcars_light_button
+                entity: light.office
+                name: "Office"
+                icon: mdi:lightbulb
+                
+              - type: custom:button-card
+                template: lcars_light_button
+                entity: light.outside
+                name: "Outside"
+                icon: mdi:lightbulb-outline
+                
+              - type: custom:button-card
+                template: lcars_purple_pill
+                name: "All Off"
+                icon: mdi:lightbulb-off
+                tap_action:
+                  action: call-service
+                  service: light.turn_off
+                  target:
+                    entity_id: all
+
+          # Media Player
+          - type: custom:button-card
+            template: lcars_header
+            name: "COMMUNICATIONS"
+            
+          - type: custom:button-card
+            template: lcars_media_player
+            entity: media_player.living_room_speaker
+            name: "Main Audio"
+            icon: mdi:speaker
+            tap_action:
+              action: more-info
+            hold_action:
+              action: toggle
+
+      # ========================================
+      # RIGHT SIDEBAR - Status
+      # ========================================
+      - type: vertical-stack
+        view_layout:
+          grid-area: status
+        cards:
+          - type: custom:button-card
+            template: lcars_side_elbow_right
+            
+          - type: custom:button-card
+            template: lcars_data_box
+            entity: sensor.home_assistant_version
+            name: "System Ver"
+            
+          - type: custom:button-card
+            template: lcars_sensor_value
+            entity: sensor.processor_use
+            name: "CPU Usage"
+            icon: mdi:cpu-64-bit
+            
+          - type: custom:button-card
+            template: lcars_sensor_value
+            entity: sensor.memory_use_percent
+            name: "Memory"
+            icon: mdi:memory
+            
+          - type: custom:button-card
+            template: lcars_sensor_value
+            entity: sensor.disk_use_percent
+            name: "Storage"
+            icon: mdi:harddisk
+            
+          - type: custom:button-card
+            template: lcars_gold_pill
+            name: "Restart"
+            icon: mdi:restart
+            tap_action:
+              action: call-service
+              service: homeassistant.restart
+
+  # ==========================================
+  # FOOTER
+  # ==========================================
+  - type: custom:button-card
+    template: lcars_footer

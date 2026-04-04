@@ -1,0 +1,462 @@
+# Star Trek LCARS Mission Pad Dashboard for Home Assistant
+# Complete dashboard configuration
+
+title: LCARS Mission Control
+views:
+  # Main Weather Mission Pad
+  - !include mission-pad-weather.yaml
+  
+  # Device Control Views
+  - title: Devices
+    icon: mdi:devices
+    path: devices
+    cards:
+      - !include devices-main.yaml
+      
+  - title: Sensors
+    icon: mdi:radar
+    path: devices-sensors
+    theme: LCARS
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: button
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/devices
+                name: ← BACK
+                icon: mdi:arrow-left
+                styles:
+                  card:
+                    - background: '#9999CC'
+                    - border-radius: '20px 0 0 20px'
+              - type: markdown
+                content: |
+                  <div style="background: #9999CC; padding: 10px 20px; border-radius: 0 20px 20px 0; font-family: 'Antonio', sans-serif; font-size: 20px; font-weight: bold; color: #000;">
+                  SENSORS</div>
+          - type: grid
+            columns: 3
+            cards:
+              - type: sensor
+                entity: sensor.living_room_temperature
+                name: LIVING ROOM
+                graph: line
+              - type: sensor
+                entity: sensor.bedroom_temperature
+                name: BEDROOM
+                graph: line
+              - type: sensor
+                entity: sensor.kitchen_temperature
+                name: KITCHEN
+                graph: line
+              - type: sensor
+                entity: sensor.humidity
+                name: HUMIDITY
+                icon: mdi:water-percent
+              - type: sensor
+                entity: sensor.co2
+                name: CO2
+                icon: mdi:molecule-co2
+              - type: sensor
+                entity: sensor.air_quality_index
+                name: AQI
+                icon: mdi:air-filter
+              - type: history-graph
+                title: TEMPERATURE HISTORY
+                hours_to_show: 24
+                entities:
+                  - sensor.living_room_temperature
+                  - sensor.bedroom_temperature
+                  - sensor.outdoor_temperature
+              - type: history-graph
+                title: HUMIDITY HISTORY
+                hours_to_show: 24
+                entities:
+                  - sensor.humidity
+              - type: statistics-graph
+                title: ENERGY (7 DAYS)
+                days_to_show: 7
+                entities:
+                  - sensor.energy_usage
+
+  - title: Lights
+    icon: mdi:lightbulb
+    path: devices-lights
+    theme: LCARS
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: button
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/devices
+                name: ← BACK
+                icon: mdi:arrow-left
+                styles:
+                  card:
+                    - background: '#CC6699'
+                    - border-radius: '20px 0 0 20px'
+              - type: markdown
+                content: |
+                  <div style="background: #CC6699; padding: 10px 20px; border-radius: 0 20px 20px 0; font-family: 'Antonio', sans-serif; font-size: 20px; font-weight: bold; color: #000;">
+                  LIGHTING CONTROL</div>
+          - type: grid
+            columns: 2
+            cards:
+              - type: light
+                entity: light.living_room
+                name: LIVING ROOM
+                icon: mdi:sofa
+              - type: light
+                entity: light.kitchen
+                name: KITCHEN
+                icon: mdi:fridge
+              - type: light
+                entity: light.bedroom
+                name: BEDROOM
+                icon: mdi:bed
+              - type: light
+                entity: light.bathroom
+                name: BATHROOM
+                icon: mdi:shower
+              - type: light
+                entity: light.hallway
+                name: HALLWAY
+                icon: mdi:door
+              - type: light
+                entity: light.outdoor
+                name: OUTDOOR
+                icon: mdi:outdoor-lamp
+          - type: horizontal-stack
+            cards:
+              - type: button
+                tap_action:
+                  action: scene.turn_on
+                  entity: scene.all_lights_on
+                name: ALL ON
+                icon: mdi:lightbulb-on
+                styles:
+                  card:
+                    - background: '#FFCC99'
+              - type: button
+                tap_action:
+                  action: scene.turn_on
+                  entity: scene.all_lights_off
+                name: ALL OFF
+                icon: mdi:lightbulb-off
+                styles:
+                  card:
+                    - background: '#9999CC'
+              - type: button
+                tap_action:
+                  action: scene.turn_on
+                  entity: scene.dimmed
+                name: DIMMED
+                icon: mdi:brightness-4
+                styles:
+                  card:
+                    - background: '#6699CC'
+
+  - title: Climate
+    icon: mdi:thermostat
+    path: devices-climate
+    theme: LCARS
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: button
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/devices
+                name: ← BACK
+                icon: mdi:arrow-left
+                styles:
+                  card:
+                    - background: '#99CC99'
+                    - border-radius: '20px 0 0 20px'
+              - type: markdown
+                content: |
+                  <div style="background: #99CC99; padding: 10px 20px; border-radius: 0 20px 20px 0; font-family: 'Antonio', sans-serif; font-size: 20px; font-weight: bold; color: #000;">
+                  CLIMATE CONTROL</div>
+          - type: thermostat
+            entity: climate.main
+          - type: grid
+            columns: 3
+            cards:
+              - type: sensor
+                entity: sensor.hvac_runtime_today
+                name: RUNTIME
+              - type: sensor
+                entity: sensor.filter_life
+                name: FILTER
+              - type: sensor
+                entity: sensor.energy_cost_today
+                name: COST
+          - type: history-graph
+            title: TEMPERATURE HISTORY
+            hours_to_show: 48
+            entities:
+              - sensor.indoor_temperature
+              - sensor.outdoor_temperature
+
+  - title: Security
+    icon: mdi:shield
+    path: devices-security
+    theme: LCARS
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: button
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/devices
+                name: ← BACK
+                icon: mdi:arrow-left
+                styles:
+                  card:
+                    - background: '#FF9900'
+                    - border-radius: '20px 0 0 20px'
+              - type: markdown
+                content: |
+                  <div style="background: #FF9900; padding: 10px 20px; border-radius: 0 20px 20px 0; font-family: 'Antonio', sans-serif; font-size: 20px; font-weight: bold; color: #000;">
+                  SECURITY</div>
+          - type: alarm-panel
+            entity: alarm_control_panel.main
+            states:
+              - arm_home
+              - arm_away
+              - arm_night
+          - type: grid
+            columns: 2
+            cards:
+              - type: camera
+                entity: camera.front_door
+                name: FRONT DOOR
+              - type: camera
+                entity: camera.backyard
+                name: BACKYARD
+              - type: camera
+                entity: camera.garage
+                name: GARAGE
+              - type: camera
+                entity: camera.living_room
+                name: LIVING ROOM
+          - type: entities
+            title: SENSORS
+            entities:
+              - binary_sensor.front_door
+              - binary_sensor.back_door
+              - binary_sensor.garage_door
+              - binary_sensor.motion_living_room
+              - binary_sensor.motion_kitchen
+              - binary_sensor.window_living_room
+
+  - title: Media
+    icon: mdi:play-circle
+    path: devices-media
+    theme: LCARS
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: button
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/devices
+                name: ← BACK
+                icon: mdi:arrow-left
+                styles:
+                  card:
+                    - background: '#6699CC'
+                    - border-radius: '20px 0 0 20px'
+              - type: markdown
+                content: |
+                  <div style="background: #6699CC; padding: 10px 20px; border-radius: 0 20px 20px 0; font-family: 'Antonio', sans-serif; font-size: 20px; font-weight: bold; color: #000;">
+                  MEDIA CONTROL</div>
+          - type: media-control
+            entity: media_player.living_room
+          - type: media-control
+            entity: media_player.bedroom
+          - type: media-control
+            entity: media_player.kitchen
+          - type: grid
+            columns: 3
+            cards:
+              - type: button
+                tap_action:
+                  action: call-service
+                  service: media_player.volume_down
+                  entity_id: all
+                name: VOL -
+                icon: mdi:volume-minus
+              - type: button
+                tap_action:
+                  action: call-service
+                  service: media_player.volume_mute
+                  entity_id: all
+                name: MUTE
+                icon: mdi:volume-off
+              - type: button
+                tap_action:
+                  action: call-service
+                  service: media_player.volume_up
+                  entity_id: all
+                name: VOL +
+                icon: mdi:volume-plus
+
+  # Location Views
+  - !include locations-main.yaml
+  
+  - title: Downstairs
+    icon: mdi:home-floor-1
+    path: location-downstairs
+    theme: LCARS
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: button
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/locations
+                name: ← BACK
+                icon: mdi:arrow-left
+                styles:
+                  card:
+                    - background: '#CC6699'
+                    - border-radius: '20px 0 0 20px'
+              - type: markdown
+                content: |
+                  <div style="background: #CC6699; padding: 10px 20px; border-radius: 0 20px 20px 0; font-family: 'Antonio', sans-serif; font-size: 20px; font-weight: bold; color: #000;">
+                  DOWNSTAIRS</div>
+          - type: grid
+            columns: 2
+            cards:
+              - type: entities
+                title: LIVING ROOM
+                entities:
+                  - light.living_room
+                  - sensor.living_room_temperature
+                  - sensor.living_room_humidity
+                  - media_player.living_room
+              - type: entities
+                title: KITCHEN
+                entities:
+                  - light.kitchen
+                  - sensor.kitchen_temperature
+                  - switch.kitchen_outlets
+              - type: thermostat
+                entity: climate.downstairs
+              - type: camera
+                entity: camera.living_room
+                name: LIVING ROOM CAM
+
+  - title: Upstairs
+    icon: mdi:home-floor-2
+    path: location-upstairs
+    theme: LCARS
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: button
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/locations
+                name: ← BACK
+                icon: mdi:arrow-left
+                styles:
+                  card:
+                    - background: '#9999CC'
+                    - border-radius: '20px 0 0 20px'
+              - type: markdown
+                content: |
+                  <div style="background: '#9999CC'; padding: 10px 20px; border-radius: 0 20px 20px 0; font-family: 'Antonio', sans-serif; font-size: 20px; font-weight: bold; color: #000;">
+                  UPSTAIRS</div>
+          - type: grid
+            columns: 2
+            cards:
+              - type: entities
+                title: BEDROOM
+                entities:
+                  - light.bedroom
+                  - sensor.bedroom_temperature
+                  - sensor.bedroom_humidity
+                  - media_player.bedroom
+              - type: entities
+                title: BATHROOM
+                entities:
+                  - light.bathroom
+                  - sensor.bathroom_temperature
+                  - switch.bathroom_fan
+              - type: thermostat
+                entity: climate.upstairs
+              - type: camera
+                entity: camera.bedroom
+                name: BEDROOM CAM
+
+  - title: Garage/Exterior
+    icon: mdi:garage
+    path: location-garage
+    theme: LCARS
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: button
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/locations
+                name: ← BACK
+                icon: mdi:arrow-left
+                styles:
+                  card:
+                    - background: '#99CC99'
+                    - border-radius: '20px 0 0 20px'
+              - type: markdown
+                content: |
+                  <div style="background: #99CC99; padding: 10px 20px; border-radius: 0 20px 20px 0; font-family: 'Antonio', sans-serif; font-size: 20px; font-weight: bold; color: #000;">
+                  GARAGE / EXTERIOR</div>
+          - type: grid
+            columns: 2
+            cards:
+              - type: entities
+                title: GARAGE
+                entities:
+                  - cover.garage_door
+                  - light.garage
+                  - sensor.garage_temperature
+                  - binary_sensor.garage_door
+              - type: entities
+                title: OUTDOORS
+                entities:
+                  - light.outdoor_front
+                  - light.outdoor_back
+                  - switch.irrigation
+                  - sensor.outdoor_temperature
+              - type: camera
+                entity: camera.garage
+                name: GARAGE CAM
+              - type: camera
+                entity: camera.backyard
+                name: BACKYARD CAM
+              - type: weather-forecast
+                entity: weather.home
+                show_current: true
+                show_forecast: false
+              - type: sensor
+                entity: sensor.wind_speed
+                name: WIND
+                icon: mdi:weather-windy

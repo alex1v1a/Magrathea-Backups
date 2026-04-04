@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-02-08T19:07:16.668Z",
+  "totalItems": 31,
+  "addedToCart": 27,
+  "substitutions": [
+    {
+      "original": "Asian pear",
+      "substitution": "bosc pear",
+      "reason": "similar texture and sweetness"
+    },
+    {
+      "original": "Gochujang",
+      "substitution": "sriracha",
+      "reason": "spicy fermented flavor"
+    },
+    {
+      "original": "Sesame seeds",
+      "substitution": "omit",
+      "reason": "garnish only - not critical"
+    }
+  ],
+  "finalItemCount": 29
+}

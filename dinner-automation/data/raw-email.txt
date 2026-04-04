@@ -1,0 +1,326 @@
+﻿Return-path: <alex@1v1a.com>
+Original-recipient: rfc822;marvinmartian9@icloud.com
+Received: from p00-icloudmta-asmtp-us-west-2a-60-percent-1 by p55-mailgateway-smtp-bb9f7d949-bzpz5 (mailgateway 2544B77)
+	with SMTP id 1ab1b872-f206-469a-91ca-ec9031fbe3c9 
+	for <marvinmartian9@icloud.com>; Wed, 11 Feb 2026 01:30:10 GMT
+X-Apple-MoveToFolder: INBOX 
+X-Apple-Action: MOVE_TO_FOLDER/INBOX
+X-Apple-UUID: 1ab1b872-f206-469a-91ca-ec9031fbe3c9
+Received: from outbound.mr.icloud.com (unknown [127.0.0.2])
+	by p00-icloudmta-asmtp-us-west-2a-60-percent-1 (Postfix) with ESMTPS id 3FFFB1800135
+	for <marvinmartian9@icloud.com>; Wed, 11 Feb 2026 01:30:09 +0000 (UTC)
+Dkim-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1v1a.com; s=sig1; t=1770773410; x=1773365410; bh=OD17QhMYRVsto9B2rTULgzGu3q8VR4lg8Js6uYH1Ix4=; h=Content-Type:From:Mime-Version:Subject:Date:Message-Id:To:x-icloud-hme; b=ZMpfDdmwNe3lFoLDW90pj6CnWu43KuiFd9cp4LkmGS/t/aSoauYol1t+heF5UgwAnUneorjBQsKdsCRei1+lXKQ2NZM1+l5gUZTVx3vhOx7fvzXcqmvDktujniOwoktIolg+dKs+2vLTdgg6gQV99MiDTEY6zjYzPtbbcF9hQbnrRHMq91DRWosPqVv3AbbgCXc0W3NQErelejL7vLSUpm6YQ5bLTzFHtIf64Zx3dFEN8QOi4E3p5eFp8XIiZyLPff63GkLiCchjZAEA3Tv4lkfnRNoQolA40xrRUCQjUeclrqJIlyi/ycyR1TjlvTiEIdDo4KuDcd2Qe7QhUjmFKg==
+mail-alias-created-date: 1365055244000
+Received: from smtpclient.apple (unknown [17.57.152.38])
+	by p00-icloudmta-asmtp-us-west-2a-60-percent-1 (Postfix) with ESMTPSA id 8C19A180012B
+	for <marvinmartian9@icloud.com>; Wed, 11 Feb 2026 01:30:08 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=Apple-Mail-E73FE5F3-0759-4D84-A1CC-DDB97E738471
+Content-Transfer-Encoding: 7bit
+From: Alexander Sferrazza <alex@1v1a.com>
+Mime-Version: 1.0 (1.0)
+Subject: Re: ******* Dinner Plan: Week of 2/7/2026
+Date: Tue, 10 Feb 2026 19:29:57 -0600
+Message-Id: <012FBE5F-6462-49A5-B417-72E5A564F54F@1v1a.com>
+References: <1770772815076@icloud.com>
+In-Reply-To: <1770772815076@icloud.com>
+To: Maverick Marvin <MarvinMartian9@icloud.com>
+X-Mailer: iPhone Mail (23D125)
+X-CLX-Shades: Deliver
+X-CLX-UShades: None
+X-CLX-Score: 1005
+X-CLX-UnSpecialScore: 216
+X-CLX-Spam: false
+X-MANTSH: 1TFkXGxoaHxEKWUQXY0hFTVNucgFyRHIRCllNF25PRkNcT1gRCl9ZFxgbHBEKX00
+ XZEVETxEKWUkXHR9xGwYbHxp3Bh8SBhoGGgYfGQYacRoQGncGGgYaBhkaBhoGGgYacRoQGncGG
+ hEKWV4XY2N5EQpDThdfSWJBSXVJaxtZYm5df1tkQxJCEhxyB1BBWkwaXV5OfhEKWFwXGQQaBB8
+ eBRsaGgQSGAQbHxIEGB0QGx4aHxoRCl5ZF01dc2sSEQpNXBcbGhwRCkxaF2hja29rEQpFWRdoa
+ xEKTEYXYmtrEQpDWhcbHQQfHQQbHxgEGRIRCkJeFxsRCkJFF24TG1pae0ETHFNbEQpCThdkGWt
+ iAV1/bGhHfREKQkwXZ2RdbgVwTmd4RVwRCkJsF2MbSX1tXE1TWWxiEQpCQBdtBW9GTlphckwFa
+ BEKQlgXYXgaWE5wWk5OUksRClpYFxgRCnBnF28ae29sHAFoE3tYEBoRCnBoF21aQht8ekgYTUx
+ oEBoRCnBoF2dHYl9bYV5lYnBwEBoRCnBoF29gE1lBHQFMZF8fEBoRCnBoF28eGm5PR31QQkdQE
+ BoRCnBoF2NYEkxfYEVZUxNoEBoRCnBoF2h5WUdoUhMeZmxuEBoRCnBoF21yT1JzfHwfRGBYEBo
+ RCnBoF28YfVpHQRNATVtOEBoRCnB/F21kaU5tAU1Fe0xAEAcdHhEKcF8XbHlAU0R5ZVJJaFsQB
+ xMaEQpwfRdlaB9lQnBNXUVkfBAaEQpwfRdkb01feGdbQF9YbxAaEQpwfRdtUBhfeRlDfG1zTxA
+ aEQpwfRdua0JJblxCBX8YRBAaEQpwbBdnXHN6eVNrTh1gbRAaEQpwTBduE31bZBpiH1JvaRAaE
+ QptfhcaEQpYTRdLEQ==
+X-Authority-Info-Out: v=2.4 cv=ZcAQ98VA c=1 sm=1 tr=0 ts=698bdba1
+ cx=c_apl:c_apl_out:c_pps a=9OgfyREA4BUYbbCgc0Y0oA==:117
+ a=9OgfyREA4BUYbbCgc0Y0oA==:17 a=HzLeVaNsDn8A:10 a=VkNPw1HP01LnGYTKEx00:22
+ a=Mpw57Om8IfrbqaoTuvik:22 a=GgsMoib0sEa3-_RKJdDe:22 a=vnREMb7VAAAA:8
+ a=v3ZZPjhaAAAA:8 a=wRf3dgmg8RjAwQpcfkoA:9 a=ADvErqphDA6X04DX:21
+ a=_W_S_7VecoQA:10 a=QEXdDO2ut3YA:10
+X-Proofpoint-Spam-Details-Enc: AW1haW4tMjYwMjExMDAxMSBTYWx0ZWRfXzItxdIuO5Y6T
+ M3JkXN8AO4oB+nyKjfyT8kP/qvAxJCKGreCDnjOPUMgwb5pbj7cCC7TKpG2qzSCDJmCDyY63hJy
+ P3kEPiJyuJk/XLzfH1G/nREbbEIDvE6pu4n2Zn+RnQ+qtSGWauv7l0QZtCzeViLvAPVFYiw64Ej
+ QR1Zz3gsTEeqhrClG7IZEKZatCI+iniGX7zlTvLf+Vgt5+4osTX1oa2IGrxODYE/2aaCLjUts4S
+ noGDv+6uRKxBObDiEro1kmsm8d0q1Dl2j2SNmF1mjQH2RnpK16EwGss2KAYbsDF6fn8vfwGqxwE
+ Da06ZqjkRL7D8ZFrjenRtoc+nKMG/KPJryk+2kVBTVEJ7s78OOQgKhZ1MRag1nPZZ6pFH59cl3d
+ fmegLr/g
+X-Proofpoint-GUID: ucHkc_cA1sHDwUqNi8h86X-zkpf0wtdT
+X-Proofpoint-ORIG-GUID: ucHkc_cA1sHDwUqNi8h86X-zkpf0wtdT
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.293,Aquarius:18.0.1121,Hydra:6.1.51,FMLib:17.12.100.49
+ definitions=2026-02-10_03,2026-02-10_03,2025-10-01_01
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 adultscore=0
+ spamscore=0 bulkscore=0 mlxlogscore=999 lowpriorityscore=0 clxscore=1005
+ suspectscore=0 mlxscore=0 phishscore=0 malwarescore=0
+ classifier=customer_allow authscore=0 adjust=0 reason=mlx scancount=1
+ engine=8.22.0-2601150000 definitions=main-2602110011
+X-JNJ: AAAAAAABuwn/er4+V0tIKOhbsAckeSnzBdqBqCjeUawTJg4bPi5acrPbzel2faLcHeUity7lN0X+b5MmDzZ6BOSTHr8rJxZJnqkPSLQrHOmjEKbtXlflFcrE0ZkaXAKnuIHy1v52fAzKcRUqD5gDIvFfvsgnuSW37Oqg4Tps//VUPGv59yIPov0JtKdPTf7Ec86PA4Vi+JELPQg++YSiu9zSAPOAUD8wuHRIQPi0op5+O/oxv1b9pJNdYjAjvVtYR0PZR/b4J77IiQ4YxtNNfFfdzvXzNAcw27x7nzN+6twWi6ZjYkGsav91vCFnq3yHxH6vFlnKdqsFwo3yZSYKnClIacLhh00FQSfb6V6f50e2q1mrm9jsYaHw2d6yDaJRLQXLWXuSIt7MNO2ds+E9388BHhIXfC749n+fT5TCnUf7oK86PM+Xm9XF2FWC7PGFzPJ4Jwbi/YGc7eMTVxz9TPMc6DmXbXlZkpwMiJPCeV1THbbq7X4bEy8twa5efTFsCJrdUxksjjCtua+LxLn+D0iiXTuMdUEVQF+oJkjzneAlQidHUL37HtY9yRkjQ2mPeEpwUe/iKVBO5mOb3lhkRGhSijtlyEyln6Y+Dgy9l73abqDdmbVXPgR9sicIguLkd2x5
+
+
+--Apple-Mail-E73FE5F3-0759-4D84-A1CC-DDB97E738471
+Content-Type: text/html;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html class=3D"apple-mail-supports-explicit-dark-mode"><head><meta http-equi=
+v=3D"content-type" content=3D"text/html; charset=3Dutf-8"></head><body dir=3D=
+"auto"><div><font color=3D"#ffffff">Permanently add to pantry: olive oil, sa=
+lt, pepper, ketchup, mustard, milk, soy sauce,&nbsp;</font></div><div><font c=
+olor=3D"#ffffff"><br></font></div><div><font color=3D"#ffffff">Permanently e=
+xclude: asparagus, zucchini, couchette, mushrooms,&nbsp;</font></div><br id=3D=
+"lineBreakAtBeginningOfSignature"><div dir=3D"ltr">Alexander Sferrazza</div>=
+<div dir=3D"ltr"><br><blockquote type=3D"cite">On Feb 10, 2026, at 7:20=E2=80=
+=AFPM, Marvin Maverick &lt;MarvinMartian9@icloud.com&gt; wrote:<br><br></blo=
+ckquote></div><blockquote type=3D"cite"><div dir=3D"ltr">=EF=BB=BF
+
+
+
+  <style>body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", R=
+oboto, sans-serif; line-height: 1.6; color: rgb(51, 51, 51); max-width: 600p=
+x; margin: 0px auto; padding: 20px; }
+h1 { color: rgb(216, 30, 5); border-bottom-width: 2px; border-bottom-style: s=
+olid; border-bottom-color: rgb(216, 30, 5); padding-bottom: 10px; }
+h2 { color: rgb(85, 85, 85); margin-top: 30px; }
+.meal { background: rgb(249, 249, 249); border-radius: 8px; padding: 15px; m=
+argin: 15px 0px; border-left-width: 4px; border-left-style: solid; border-le=
+ft-color: rgb(216, 30, 5); }
+.day { font-weight: bold; color: rgb(216, 30, 5); font-size: 14px; text-tran=
+sform: uppercase; }
+.meal-name { font-size: 18px; font-weight: 600; margin: 5px 0px; }
+.details { font-size: 13px; color: rgb(102, 102, 102); margin: 8px 0px; }
+.ingredients { font-size: 12px; color: rgb(136, 136, 136); margin-top: 10px;=
+ }
+.video-link { display: inline-block; margin-top: 8px; padding: 6px 12px; bac=
+kground: rgb(255, 0, 0); color: white; text-decoration: none; border-radius:=
+ 4px; font-size: 12px; }
+.budget { background: rgb(232, 245, 233); border-radius: 8px; padding: 15px;=
+ margin: 20px 0px; }
+.budget-row { display: flex; justify-content: space-between; margin: 5px 0px=
+; }
+.actions { background: rgb(255, 243, 224); border-radius: 8px; padding: 15px=
+; margin: 20px 0px; }
+.actions h3 { margin-top: 0px; color: rgb(230, 81, 0); }
+.actions ul { margin: 10px 0px; padding-left: 20px; }
+.actions li { margin: 8px 0px; }
+.footer { margin-top: 30px; padding-top: 20px; border-top-width: 1px; border=
+-top-style: solid; border-top-color: rgb(221, 221, 221); font-size: 12px; co=
+lor: rgb(153, 153, 153); }</style>
+
+
+  <h1>=F0=9F=8D=BD=EF=B8=8F Weekly Dinner Plan</h1>
+  <p><strong>Week of:</strong> Saturday, February 7, 2026</p>
+ =20
+  <div class=3D"budget">
+    <div class=3D"budget-row"><span>Budget Allocated:</span> <strong>$200</s=
+trong></div>
+    <div class=3D"budget-row"><span>Estimated Cost:</span> <strong>$166</str=
+ong></div>
+    <div class=3D"budget-row"><span>Remaining:</span> <strong style=3D"color=
+: #4caf50;">$17.40</strong></div>
+  </div>
+
+  <div class=3D"meal">
+    <div class=3D"day">Sunday</div>
+    <div class=3D"meal-name">Grilled Salmon with Asparagus</div>
+    <div class=3D"details">
+      =E2=8F=B1=EF=B8=8F 25 min |=20
+      =F0=9F=8C=8D Pacific Northwest American |=20
+      =F0=9F=92=B0 ~$28 |=20
+      =E2=9A=A1 medium
+    </div>
+    <div class=3D"details">=F0=9F=93=96 Salmon has been the lifeblood of Pac=
+ific Northwest indigenous peoples for thousands of years. Modern...</div>
+    <a href=3D"https://www.youtube.com/watch?v=3DJ6xW4f_q34g" class=3D"video=
+-link" target=3D"_blank">=F0=9F=8E=A5 Watch on YouTube (12:45)</a>
+    <div class=3D"ingredients">
+      <strong>Ingredients needed:</strong> Atlantic salmon fillets, Fresh as=
+paragus, Lemon, Olive oil, Garlic, Sea salt
+    </div>
+  </div>
+
+  <div class=3D"meal">
+    <div class=3D"day">Monday</div>
+    <div class=3D"meal-name">Pork Tenderloin with Roasted Vegetables</div>
+    <div class=3D"details">
+      =E2=8F=B1=EF=B8=8F 45 min |=20
+     =20
+      =F0=9F=92=B0 ~$23 |=20
+      =E2=9A=A1 medium
+    </div>
+   =20
+   =20
+    <div class=3D"ingredients">
+      <strong>Ingredients needed:</strong> Pork tenderloin, Brussels sprouts=
+, Sweet potatoes, Dijon mustard, Fresh rosemary, Balsamic vinegar
+    </div>
+  </div>
+
+  <div class=3D"meal">
+    <div class=3D"day">Tuesday</div>
+    <div class=3D"meal-name">Fish Tacos with Mango Salsa</div>
+    <div class=3D"details">
+      =E2=8F=B1=EF=B8=8F 30 min |=20
+      =F0=9F=8C=8D Mexican / Baja California |=20
+      =F0=9F=92=B0 ~$26 |=20
+      =F0=9F=94=B0 easy
+    </div>
+    <div class=3D"details">=F0=9F=93=96 Fish tacos originated in the coastal=
+ towns of Baja California, where local fishermen would cook thei...</div>
+    <a href=3D"https://www.youtube.com/watch?v=3DJkDXvK1_caI" class=3D"video=
+-link" target=3D"_blank">=F0=9F=8E=A5 Watch on YouTube (15:20)</a>
+    <div class=3D"ingredients">
+      <strong>Ingredients needed:</strong> White fish fillets, Corn tortilla=
+s, Mango, Red onion, Jalapeno, Cabbage slaw mix, Chipotle mayo
+    </div>
+  </div>
+
+  <div class=3D"meal">
+    <div class=3D"day">Wednesday</div>
+    <div class=3D"meal-name">Chicken Tikka Masala</div>
+    <div class=3D"details">
+      =E2=8F=B1=EF=B8=8F 45 min |=20
+      =F0=9F=8C=8D Indian / British-Indian |=20
+      =F0=9F=92=B0 ~$22 |=20
+      =E2=9A=A1 medium
+    </div>
+    <div class=3D"details">=F0=9F=93=96 The origin of Chicken Tikka Masala i=
+s hotly debated! Many claim it was invented in Glasgow, Scotland...</div>
+    <a href=3D"https://www.youtube.com/watch?v=3DysUumkRFP8I" class=3D"video=
+-link" target=3D"_blank">=F0=9F=8E=A5 Watch on YouTube (22:15)</a>
+    <div class=3D"ingredients">
+      <strong>Ingredients needed:</strong> Chicken thighs, Greek yogurt, Hea=
+vy cream, Basmati rice, Tikka masala sauce, Fresh ginger
+    </div>
+  </div>
+
+  <div class=3D"meal">
+    <div class=3D"day">Thursday</div>
+    <div class=3D"meal-name">Beef Stir-Fry with Vegetables</div>
+    <div class=3D"details">
+      =E2=8F=B1=EF=B8=8F 20 min |=20
+      =F0=9F=8C=8D Chinese / Asian Fusion |=20
+      =F0=9F=92=B0 ~$24 |=20
+      =F0=9F=94=B0 easy
+    </div>
+    <div class=3D"details">=F0=9F=93=96 Stir-frying was developed in China a=
+s a way to cook small amounts of food quickly over high heat wit...</div>
+    <a href=3D"https://www.youtube.com/watch?v=3DIYO7CLvh23U" class=3D"video=
+-link" target=3D"_blank">=F0=9F=8E=A5 Watch on YouTube (12:30)</a>
+    <div class=3D"ingredients">
+      <strong>Ingredients needed:</strong> Flank steak, Broccoli florets, Be=
+ll peppers, Soy sauce, Sesame oil, Green onions
+    </div>
+  </div>
+
+  <div class=3D"meal">
+    <div class=3D"day">Friday</div>
+    <div class=3D"meal-name">Shrimp Tacos with Cabbage Slaw</div>
+    <div class=3D"details">
+      =E2=8F=B1=EF=B8=8F 25 min |=20
+     =20
+      =F0=9F=92=B0 ~$25 |=20
+      =F0=9F=94=B0 easy
+    </div>
+   =20
+   =20
+    <div class=3D"ingredients">
+      <strong>Ingredients needed:</strong> Large shrimp, Corn tortillas, Red=
+ cabbage, Avocado, Lime, Cilantro, Chipotle powder
+    </div>
+  </div>
+
+  <div class=3D"meal">
+    <div class=3D"day">Saturday</div>
+    <div class=3D"meal-name">Vegetable Curry with Chickpeas</div>
+    <div class=3D"details">
+      =E2=8F=B1=EF=B8=8F 35 min |=20
+     =20
+      =F0=9F=92=B0 ~$18 |=20
+      =F0=9F=94=B0 easy
+    </div>
+   =20
+   =20
+    <div class=3D"ingredients">
+      <strong>Ingredients needed:</strong> Chickpeas, Coconut milk, Spinach,=
+ Curry paste, Naan bread, Yellow onion
+    </div>
+  </div>
+
+  <div class=3D"actions">
+    <h3>=F0=9F=93=8B How to Confirm or Make Changes</h3>
+    <p><strong>Reply to this email with any changes:</strong></p>
+    <ul>
+      <li><strong>Swap a meal:</strong> "Swap Monday to Chicken Alfredo"</li=
+>
+      <li><strong>Remove a meal:</strong> "Remove Wednesday dinner"</li>
+      <li><strong>Add a meal:</strong> "Add Sunday: Spaghetti Carbonara"</li=
+>
+      <li><strong>Confirm all:</strong> "Looks good!" or "Confirmed"</li>
+    </ul>
+    <p><em>I'll automatically sync your changes to your Apple Calendar and u=
+pdate your HEB cart!</em></p>
+  </div>
+ =20
+  <div style=3D"background: #f0f0f0; border-radius: 8px; padding: 15px; marg=
+in: 20px 0; font-size: 12px;">
+    <h4 style=3D"margin-top: 0; color: #555;">=F0=9F=9B=A0=EF=B8=8F Quick Co=
+mmands Reference</h4>
+    <table style=3D"width: 100%; border-collapse: collapse;">
+      <tbody><tr style=3D"border-bottom: 1px solid #ddd;">
+        <td style=3D"padding: 6px 0; font-weight: bold;">Exclude item this w=
+eek only:</td>
+        <td style=3D"padding: 6px 0; font-family: monospace;">node stock-man=
+ager.js --weekly-add "Olive oil"</td>
+      </tr>
+      <tr style=3D"border-bottom: 1px solid #ddd;">
+        <td style=3D"padding: 6px 0; font-weight: bold;">Permanently exclude=
+ item:</td>
+        <td style=3D"padding: 6px 0; font-family: monospace;">node stock-man=
+ager.js --stock-add "Soy sauce"</td>
+      </tr>
+      <tr style=3D"border-bottom: 1px solid #ddd;">
+        <td style=3D"padding: 6px 0; font-weight: bold;">View exclusions:</t=
+d>
+        <td style=3D"padding: 6px 0; font-family: monospace;">node stock-man=
+ager.js --list</td>
+      </tr>
+      <tr style=3D"border-bottom: 1px solid #ddd;">
+        <td style=3D"padding: 6px 0; font-weight: bold;">Remove from exclusi=
+ons:</td>
+        <td style=3D"padding: 6px 0; font-family: monospace;">node stock-man=
+ager.js --weekly-remove "Garlic"</td>
+      </tr>
+      <tr>
+        <td style=3D"padding: 6px 0; font-weight: bold;">Check dinner plan s=
+tatus:</td>
+        <td style=3D"padding: 6px 0; font-family: monospace;">node dinner-em=
+ail-system.js --check-reply</td>
+      </tr>
+    </tbody></table>
+  </div>
+ =20
+  <div class=3D"footer">
+    <p>=E2=80=94 Marvin Maverick<br>Alex's Assistant | Logistics Coordinator=
+ | Professional Overthinker</p>
+    <br>
+    <p style=3D"font-style: italic; color: #666;">"Brain the size of a plane=
+t, and I'm asked to write an email."</p>
+  </div>
+
+
+
+</div></blockquote></body></html>=
+
+--Apple-Mail-E73FE5F3-0759-4D84-A1CC-DDB97E738471--

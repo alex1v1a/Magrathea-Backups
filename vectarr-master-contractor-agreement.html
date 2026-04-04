@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vectarr LLC — Master Contractor & Subcontractor Agreement Framework</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 11pt;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: white;
+            padding: 0;
+        }
+        
+        .document {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.75in;
+        }
+        
+        /* Header Section */
+        .header {
+            border-bottom: 3px solid #1a365d;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .company-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .company-info h1 {
+            font-family: 'Inter', sans-serif;
+            font-size: 24pt;
+            font-weight: 700;
+            color: #1a365d;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+        
+        .company-info .tagline {
+            font-family: 'Inter', sans-serif;
+            font-size: 9pt;
+            color: #4a5568;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .document-title {
+            text-align: right;
+        }
+        
+        .document-title h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 16pt;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+        
+        .document-title .version {
+            font-family: 'Inter', sans-serif;
+            font-size: 9pt;
+            color: #718096;
+        }
+        
+        .contact-strip {
+            font-family: 'Inter', sans-serif;
+            font-size: 8pt;
+            color: #4a5568;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        /* Main Content */
+        .content {
+            margin-top: 30px;
+        }
+        
+        h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 14pt;
+            font-weight: 700;
+            color: #1a365d;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 11pt;
+            font-weight: 600;
+            color: #2d3748;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        h5 {
+            font-family: 'Inter', sans-serif;
+            font-size: 10pt;
+            font-weight: 600;
+            color: #4a5568;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+        
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        
+        .recitals {
+            background: #f7fafc;
+            border-left: 4px solid #1a365d;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        .recitals p {
+            margin-bottom: 8px;
+            text-align: left;
+        }
+        
+        .recitals p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .definition-box {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+        
+        .definition-box strong {
+            color: #1a365d;
+            font-family: 'Inter', sans-serif;
+            font-size: 10pt;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        ol.main-list {
+            counter-reset: section;
+            list-style: none;
+        }
+        
+        ol.main-list > li {
+            counter-increment: section;
+            margin-bottom: 25px;
+            padding-left: 0;
+        }
+        
+        ol.main-list > li::before {
+            content: counter(section) ".  ";
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 12pt;
+            color: #1a365d;
+        }
+        
+        ol.sub-list {
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        
+        ol.sub-list > li {
+            margin-bottom: 8px;
+        }
+        
+        ul.bullet-list {
+            margin-left: 30px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        
+        ul.bullet-list > li {
+            margin-bottom: 6px;
+            list-style-type: square;
+        }
+        
+        .penalty-clause {
+            background: #fff5f5;
+            border-left: 4px solid #c53030;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+        
+        .penalty-clause strong {
+            color: #c53030;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .highlight-box {
+            background: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+        
+        .highlight-box strong {
+            color: #2b6cb0;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .warning-box {
+            background: #fffaf0;
+            border: 2px solid #dd6b20;
+            border-radius: 4px;
+            padding: 15px 20px;
+            margin: 20px 0;
+        }
+        
+        .warning-box strong {
+            color: #c05621;
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            font-size: 9pt;
+            letter-spacing: 1px;
+        }
+        
+        .signature-section {
+            margin-top: 50px;
+            page-break-inside: avoid;
+        }
+        
+        .signature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 30px;
+        }
+        
+        .signature-block {
+            border-top: 1px solid #1a365d;
+            padding-top: 10px;
+            margin-top: 60px;
+        }
+        
+        .signature-block .entity {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 11pt;
+            color: #1a365d;
+        }
+        
+        .signature-block .role {
+            font-size: 9pt;
+            color: #4a5568;
+            margin-top: 3px;
+        }
+        
+        .signature-line {
+            border-bottom: 1px solid #1a365d;
+            height: 40px;
+            margin-bottom: 5px;
+        }
+        
+        .date-line {
+            border-bottom: 1px solid #718096;
+            height: 25px;
+            margin-top: 15px;
+            width: 60%;
+        }
+        
+        .exhibit {
+            page-break-before: always;
+            margin-top: 40px;
+        }
+        
+        .exhibit-header {
+            text-align: center;
+            border-bottom: 2px solid #1a365d;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .exhibit-header h3 {
+            border-bottom: none;
+            margin-bottom: 5px;
+        }
+        
+        .document-selector {
+            background: #f0fff4;
+            border: 2px solid #38a169;
+            border-radius: 4px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .document-selector h4 {
+            color: #22543d;
+            margin-top: 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 10pt;
+        }
+        
+        th {
+            background: #1a365d;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            text-align: left;
+            padding: 12px;
+        }
+        
+        td {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 10px 12px;
+        }
+        
+        tr:nth-child(even) {
+            background: #f7fafc;
+        }
+        
+        .footer-note {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 9pt;
+            color: #718096;
+            text-align: center;
+        }
+        
+        .page-break {
+            page-break-after: always;
+        }
+        
+        .initial-here {
+            display: inline-block;
+            width: 80px;
+            border-bottom: 1px solid #1a365d;
+            margin: 0 5px;
+            text-align: center;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            .document {
+                padding: 0.5in;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="document">
+        <!-- Header -->
+        <div class="header">
+            <div class="company-header">
+                <div class="company-info">
+                    <h1>VECTARR</h1>
+                    <div class="tagline">Manufacturing Solutions LLC</div>
+                </div>
+                <div class="document-title">
+                    <h2>MASTER CONTRACTOR &amp;<br>SUBCONTRACTOR AGREEMENT</h2>
+                    <div class="version">Version 2.0 — February 2026</div>
+                </div>
+            </div>
+            <div class="contact-strip">
+                <span>Vectarr LLC, a Texas Limited Liability Company</span>
+                <span>5900 Balcones Drive STE 100, Austin, TX 78731</span>
+                <span>vectarr.com</span>
+            </div>
+        </div>
+
+        <!-- Document Selector -->
+        <div class="document-selector">
+            <h4>📋 Document Selection Guide</h4>
+            <p><strong>Use the appropriate agreement based on contractor classification:</strong></p>
+            <table>
+                <tr>
+                    <th>Contractor Type</th>
+                    <th>Applicable Section</th>
+                    <th>Additional Requirements</th>
+                </tr>
+                <tr>
+                    <td>Individual Freelancer (Sole Proprietor)</td>
+                    <td>Section I — Freelancer NDA</td>
+                    <td>W-9, Certificate of Insurance</td>
+                </tr>
+                <tr>
+                    <td>Subcontractor with Client Access</td>
+                    <td>Section II — Back-to-Back NDA</td>
+                    <td>Client NDA Acknowledgment, ITAR Certification</td>
+                </tr>
+                <tr>
+                    <td>Professional Services Firm</td>
+                    <td>Section III — Master Agreement</td>
+                    <td>SOW Required, Performance Bond (if &gt;$50K)</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Parties Block -->
+        <h3>Parties &amp; Effective Date</h3>
+        <p><strong>THIS MASTER CONTRACTOR &amp; SUBCONTRACTOR AGREEMENT</strong> (the "<strong>Agreement</strong>") is entered into and effective as of the <span class="initial-here">&nbsp;</span> day of <span class="initial-here">&nbsp;</span>, 20<span class="initial-here">&nbsp;</span> (the "<strong>Effective Date</strong>"), by and between:</p>
+        
+        <div style="margin: 20px 0; padding: 15px; background: #f7fafc; border-radius: 4px;">
+            <p><strong>VECTARR LLC</strong>, a limited liability company organized and existing under the laws of the State of Texas, with its principal place of business at 5900 Balcones Drive STE 100, Austin, TX 78731 USA ("<strong>Company</strong>" or "<strong>Vectarr</strong>");</p>
+            <p style="text-align: center; margin: 15px 0;">AND</p>
+            <p><strong>[CONTRACTOR FULL LEGAL NAME]</strong>, [a/an] [State/Country] [individual / sole proprietorship / corporation / limited liability company / partnership], with [his/her/its] principal place of business at [Address] ("<strong>Contractor</strong>").</p>
+        </div>
+
+        <!-- Recitals -->
+        <h3>Recitals</h3>
+        <div class="recitals">
+            <p><strong>WHEREAS</strong>, Company operates a manufacturing equipment quoting and procurement platform serving defense, aerospace, and industrial clients with stringent confidentiality, security, and export control requirements;</p>
+            <p><strong>WHEREAS</strong>, Company desires to engage Contractor to perform professional services that may require access to Confidential Information, technical data, and/or client systems;</p>
+            <p><strong>WHEREAS</strong>, Contractor acknowledges that Company is bound by strict non-disclosure, data protection, and export control obligations to its clients, and that any breach of such obligations would result in irreparable harm to Company and its clients;</p>
+            <p><strong>WHEREAS</strong>, Contractor represents that it has the requisite expertise, qualifications, and security posture to perform the services in compliance with all applicable laws, regulations, and Company standards;</p>
+            <p><strong>NOW, THEREFORE</strong>, in consideration of the mutual covenants and agreements contained herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the parties agree as follows:</p>
+        </div>
+
+        <!-- Main Agreement Body -->
+        <ol class="main-list">
+            
+            <!-- SECTION I: FREELANCER PROVISIONS -->
+            <li style="page-break-before: always;">
+                <strong>SCOPE &amp; DEFINITIONS</strong>
+                
+                <h5>1.1 Scope of Engagement</h5>
+                <p>Contractor shall perform professional services as specified in one or more written Statements of Work ("<strong>SOW</strong>") executed by authorized representatives of both parties. Each SOW shall describe: (a) specific services and deliverables; (b) acceptance criteria; (c) project timeline and milestones; (d) compensation and payment terms; and (e) any project-specific requirements.</p>
+                
+                <h5>1.2 Definitions</h5>
+                <div class="definition-box">
+                    <p><strong>"Authorized Purpose"</strong> means performing services for Company that directly support Company's contractual obligations to its clients.</p>
+                    <p><strong>"Confidential Information"</strong> means all information, data, materials, and knowledge, whether disclosed orally, visually, electronically, or in writing, that is: (a) designated as confidential, proprietary, restricted, or export-controlled; (b) subject to data protection laws, ITAR, EAR, or security classifications; or (c) information that reasonably should be understood to be confidential given its nature and circumstances of disclosure.</p>
+                    <p><strong>"Client NDA"</strong> means the confidentiality, non-disclosure, data protection, intellectual property, security, and export control obligations imposed upon Company by its clients, which are incorporated herein by reference.</p>
+                    <p><strong>"Export-Controlled Information"</strong> means technical data subject to United States export control laws, including the International Traffic in Arms Regulations (ITAR, 22 CFR §§ 120-130) and the Export Administration Regulations (EAR, 15 CFR §§ 730-774).</p>
+                    <p><strong>"Foreign Person"</strong> means any natural person who is not a lawful permanent resident of the United States, a protected individual under 8 U.S.C. § 1324b(a)(3), or a U.S. citizen.</p>
+                    <p><strong>"U.S. Person"</strong> means a U.S. citizen, lawful permanent resident (Green Card holder), protected individual, or U.S. entity (corporation, LLC, partnership) organized under U.S. law.</p>
+                    <p><strong>"Work Product"</strong> means all deliverables, inventions, discoveries, improvements, developments, software, documentation, and materials created, conceived, or developed by Contractor in the performance of services.</p>
+                </div>
+            </li>
+
+            <!-- SECTION II: CONFIDENTIALITY -->
+            <li style="page-break-before: always;">
+                <strong>CONFIDENTIALITY &amp; NON-DISCLOSURE OBLIGATIONS</strong>
+                
+                <h5>2.1 Standard of Care</h5>
+                <p>Contractor shall hold all Confidential Information in strict confidence and shall protect Confidential Information with at least the same degree of care used to protect Contractor's own confidential information, but in no event less than reasonable care consistent with industry best practices.</p>
+                
+                <h5>2.2 Use Restrictions</h5>
+                <p>Contractor shall:</p>
+                <ol class="sub-list">
+                    <li>Use Confidential Information <strong>solely for the Authorized Purpose</strong> and for no other purpose whatsoever;</li>
+                    <li>Not disclose, disseminate, transmit, or make available Confidential Information to any third party without prior written consent of Company;</li>
+                    <li>Limit access to Confidential Information to those employees, contractors, and agents with strict need-to-know who are bound by confidentiality obligations at least as restrictive as this Agreement;</li>
+                    <li>Not remove, obscure, or alter any proprietary notices or legends;</li>
+                    <li>Immediately notify Company upon discovery of any unauthorized use or disclosure.</li>
+                </ol>
+
+                <h5>2.3 Flow-Down of Client NDA Obligations</h5>
+                <div class="warning-box">
+                    <strong>Critical Obligation — Read Carefully</strong>
+                    <p>All confidentiality, non-disclosure, data protection, intellectual property, security, and export control obligations imposed upon Company by its clients are hereby <strong>incorporated by reference</strong> into this Agreement and shall apply equally to Contractor. In the event of any conflict, the <strong>more restrictive obligation shall govern</strong>.</p>
+                </div>
+                
+                <h5>2.4 Exclusions from Confidential Information</h5>
+                <p>Confidential Information shall not include information that: (a) was publicly available prior to disclosure; (b) becomes publicly available through no breach of this Agreement; (c) was rightfully received from a third party without restriction; or (d) was independently developed without use of Confidential Information. The burden of proving any exclusion shall rest solely with Contractor.</p>
+            </li>
+
+            <!-- SECTION III: EXPORT CONTROL -->
+            <li style="page-break-before: always;">
+                <strong>EXPORT CONTROL &amp; ITAR COMPLIANCE</strong>
+                
+                <div class="penalty-clause">
+                    <strong>⚠ VIOLATIONS OF EXPORT CONTROL LAWS MAY RESULT IN:</strong>
+                    <ul class="bullet-list">
+                        <li>Criminal penalties up to <strong>$1,000,000 per violation</strong> and 20 years imprisonment</li>
+                        <li>Civil penalties up to <strong>$300,000 per violation</strong> or twice the transaction value</li>
+                        <li>Debarment from government contracting</li>
+                        <li>Immediate termination and liquidated damages under Section 11</li>
+                    </ul>
+                </div>
+                
+                <h5>3.1 ITAR Compliance Certification</h5>
+                <p>Contractor hereby certifies and represents that:</p>
+                <ol class="sub-list">
+                    <li>Contractor is a <strong>U.S. Person</strong> as defined under ITAR § 120.62, or has disclosed any non-U.S. status to Company in writing prior to accessing any controlled information;</li>
+                    <li>No Foreign Person shall access, handle, process, or transmit any ITAR-controlled technical data unless expressly authorized in writing by Company and all required export licenses have been obtained;</li>
+                    <li>Contractor shall comply with all applicable export control laws and regulations;</li>
+                    <li>Contractor shall immediately report any suspected violation of export control laws.</li>
+                </ol>
+
+                <h5>3.2 Access Restrictions</h5>
+                <p>Contractor shall not access, handle, process, or transmit any Export-Controlled Information unless:</p>
+                <ul class="bullet-list">
+                    <li>Expressly authorized in writing by Company;</li>
+                    <li>All required export authorizations, licenses, or exemptions are in effect;</li>
+                    <li>Access is limited to U.S. Persons only (for ITAR-controlled data); and</li>
+                    <li>Proper security protocols are maintained.</li>
+                </ul>
+
+                <h5>3.3 Breach Consequences</h5>
+                <p>Breach of this Section shall constitute a <strong>material breach</strong> of this Agreement, entitling Company to immediate termination, injunctive relief, and liquidated damages as set forth in Section 11. Contractor shall indemnify Company for all penalties, fines, and liability arising from Contractor's breach of export control obligations.</p>
+            </li>
+
+            <!-- SECTION IV: INTELLECTUAL PROPERTY -->
+            <li style="page-break-before: always;">
+                <strong>WORK PRODUCT &amp; INTELLECTUAL PROPERTY</strong>
+                
+                <h5>4.1 Work Made for Hire</h5>
+                <p>All Work Product shall be deemed <strong>works made for hire</strong> under applicable copyright laws and shall be the sole and exclusive property of Company. Contractor acknowledges that Company, and not Contractor, shall be considered the author and owner of all Work Product for copyright purposes.</p>
+                
+                <h5>4.2 Assignment of Rights</h5>
+                <p>To the extent any Work Product does not qualify as a work made for hire, Contractor hereby <strong>irrevocably assigns and transfers</strong> to Company all right, title, and interest in and to such Work Product, including:</p>
+                <ul class="bullet-list">
+                    <li>All intellectual property rights, including patents, copyrights, trademarks, and trade secrets;</li>
+                    <li>All moral rights, rights of attribution, and rights of integrity;</li>
+                    <li>All proprietary rights, economic rights, and rights to sue for infringement;</li>
+                    <li>All improvements, modifications, and derivative works.</li>
+                </ul>
+
+                <h5>4.3 Further Assurances</h5>
+                <p>Contractor shall execute all documents and take all actions reasonably requested by Company to perfect, register, record, and enforce Company's ownership rights in the Work Product. This obligation shall survive termination of this Agreement.</p>
+
+                <h5>4.4 No License Granted</h5>
+                <p>Nothing in this Agreement shall be construed as granting Contractor any license or right under any patent, copyright, trademark, trade secret, or other intellectual property right of Company. All rights not expressly granted are reserved by Company.</p>
+            </li>
+
+            <!-- SECTION V: SECURITY -->
+            <li>
+                <strong>SECURITY SAFEGUARDS &amp; DATA PROTECTION</strong>
+                
+                <h5>5.1 Security Requirements</h5>
+                <p>Contractor shall implement and maintain administrative, technical, and physical safeguards consistent with industry best practices (including NIST SP 800-171 for defense contractors) and no less rigorous than those maintained by Contractor for its own confidential information.</p>
+
+                <h5>5.2 Minimum Security Measures</h5>
+                <p>At minimum, Contractor shall maintain:</p>
+                <ol class="sub-list">
+                    <li>Secure storage and transmission using AES-256 encryption for data at rest and TLS 1.3 for data in transit;</li>
+                    <li>Multi-factor authentication for all systems accessing Confidential Information;</li>
+                    <li>Access controls, role-based permissions, and comprehensive audit logging;</li>
+                    <li>Regular vulnerability assessments and patch management;</li>
+                    <li>Annual security awareness training for all personnel;</li>
+                    <li>Incident detection and response capabilities with 24-hour notification.</li>
+                </ol>
+
+                <h5>5.3 Compliance with Client Requirements</h5>
+                <p>Contractor shall promptly implement any additional security measures required by Company or its clients, including but not limited to CMMC certification, ISO 27001 compliance, or client-specific security controls.</p>
+            </li>
+
+            <!-- SECTION VI: SUBCONTRACTING -->
+            <li>
+                <strong>PROHIBITION ON SUBCONTRACTING</strong>
+                
+                <div class="warning-box">
+                    <strong>Absolute Prohibition</strong>
+                    <p>Contractor <strong>shall not</strong> subcontract, delegate, assign, or transfer any rights or obligations under this Agreement without prior <strong>written consent</strong> of Company. Any purported assignment or subcontract in violation of this Section shall be <strong>void ab initio</strong> (void from the beginning).</p>
+                </div>
+                
+                <p>If Company grants written consent to subcontracting:</p>
+                <ol class="sub-list">
+                    <li>Contractor shall remain <strong>fully liable</strong> for all acts and omissions of any subcontractor;</li>
+                    <li>Contractor shall ensure all subcontractors execute confidentiality agreements consistent with this Agreement;</li>
+                    <li>All subcontractor agreements must be provided to Company for review prior to engagement.</li>
+                </ol>
+            </li>
+
+            <!-- SECTION VII: BREACH NOTIFICATION -->
+            <li>
+                <strong>BREACH NOTIFICATION &amp; INCIDENT RESPONSE</strong>
+                
+                <h5>7.1 Immediate Notification Requirement</h5>
+                <div class="penalty-clause">
+                    <strong>Contractor shall immediately notify Company, and in no event later than TWENTY-FOUR (24) HOURS following discovery, of:</strong>
+                </div>
+                <ol class="sub-list">
+                    <li>Any actual, suspected, or threatened unauthorized access to Confidential Information;</li>
+                    <li>Any security incident, data breach, or cybersecurity event;</li>
+                    <li>Any loss or theft of devices or media containing Confidential Information;</li>
+                    <li>Any violation of export control laws or regulations;</li>
+                    <li>Any ransomware, malware, or unauthorized intrusion affecting systems containing Confidential Information.</li>
+                </ol>
+
+                <h5>7.2 Cooperation Obligations</h5>
+                <p>Contractor shall cooperate fully with Company and its clients in investigating and remedying any incident, including providing access to systems, logs, and personnel as reasonably requested. Contractor shall bear all costs of investigation and remediation arising from Contractor's breach or negligence.</p>
+            </li>
+
+            <!-- SECTION VIII: RETURN OF INFORMATION -->
+            <li>
+                <strong>RETURN &amp; DESTRUCTION OF CONFIDENTIAL INFORMATION</strong>
+                
+                <h5>8.1 Return/Destruction Obligations</h5>
+                <p>Upon the earlier of: (a) completion of services; (b) termination of this Agreement; (c) written request; or (d) expiration of applicable retention period, Contractor shall:</p>
+                <ol class="sub-list">
+                    <li>Immediately cease all use of Confidential Information;</li>
+                    <li>Return all tangible embodiments to Company or destroy as directed;</li>
+                    <li>Permanently delete all electronic copies from all systems, devices, cloud storage, and backup media;</li>
+                    <li>Provide written certification of return/destruction signed by an authorized officer.</li>
+                </ol>
+
+                <h5>8.2 Archival Exception</h5>
+                <p>Notwithstanding the foregoing, Contractor may retain one (1) copy solely for archival purposes to the extent required by applicable law, provided such copy remains subject to all confidentiality obligations.</p>
+            </li>
+
+            <!-- SECTION IX: REPRESENTATIONS -->
+            <li>
+                <strong>REPRESENTATIONS, WARRANTIES &amp; COVENANTS</strong>
+                
+                <p>Contractor represents, warrants, and covenants that:</p>
+                <ol class="sub-list">
+                    <li>Contractor has full right, power, and authority to enter into and perform this Agreement;</li>
+                    <li>All services shall be performed in a professional and workmanlike manner in accordance with industry standards;</li>
+                    <li>All deliverables shall be original works free from infringement of third-party rights;</li>
+                    <li>Contractor shall comply with all applicable laws, regulations, and industry standards;</li>
+                    <li>Contractor has all necessary licenses, permits, and qualifications;</li>
+                    <li>Contractor maintains Comprehensive General Liability ($2M), Cyber Liability ($5M), and Professional Liability ($2M) insurance;</li>
+                    <li>Contractor is not subject to any conflicting obligations that would prevent performance;</li>
+                    <li>Contractor is not a party to any litigation that could materially affect its ability to perform.</li>
+                </ol>
+            </li>
+
+            <!-- SECTION X: INDEMNIFICATION -->
+            <li style="page-break-before: always;">
+                <strong>INDEMNIFICATION</strong>
+                
+                <h5>10.1 Indemnification Obligation</h5>
+                <p>Contractor shall <strong>defend, indemnify, and hold harmless</strong> Company, its clients, and their respective officers, directors, employees, agents, successors, and assigns from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising out of or relating to:</p>
+                <ol class="sub-list">
+                    <li>Any breach of this Agreement by Contractor;</li>
+                    <li>Any unauthorized use or disclosure of Confidential Information;</li>
+                    <li>Any claim that Work Product infringes third-party intellectual property rights;</li>
+                    <li>Any violation of applicable laws or regulations, including export control laws;</li>
+                    <li>Any negligence or willful misconduct of Contractor;</li>
+                    <li>Any act or omission of Contractor's personnel.</li>
+                </ol>
+
+                <h5>10.2 Notice and Cooperation</h5>
+                <p>Company shall promptly notify Contractor of any claim subject to indemnification. Contractor shall have sole control of defense and settlement, provided that no settlement admitting liability on behalf of Company may be made without Company's prior written consent.</p>
+            </li>
+
+            <!-- SECTION XI: REMEDIES & PENALTIES -->
+            <li style="page-break-before: always;">
+                <strong>REMEDIES, PENALTIES &amp; LIQUIDATED DAMAGES</strong>
+                
+                <h5>11.1 Injunctive Relief</h5>
+                <p>Contractor acknowledges that any breach or threatened breach of this Agreement would cause <strong>irreparable harm</strong> to Company for which monetary damages would be inadequate. Company shall be entitled to seek immediate <strong>injunctive relief</strong>, specific performance, and other equitable remedies <strong>without necessity of proving actual damages or posting a bond</strong>.</p>
+
+                <h5>11.2 Liquidated Damages</h5>
+                <p>The parties acknowledge and agree that:</p>
+                <div class="penalty-clause">
+                    <table>
+                        <tr>
+                            <th>Breach Type</th>
+                            <th>Liquidated Damages</th>
+                            <th>Additional Remedies</th>
+                        </tr>
+                        <tr>
+                            <td>Unauthorized disclosure of Confidential Information</td>
+                            <td><strong>$50,000 per occurrence</strong></td>
+                            <td>Actual damages, injunctive relief</td>
+                        </tr>
+                        <tr>
+                            <td>Export control violation (ITAR/EAR)</td>
+                            <td><strong>$100,000 per occurrence</strong></td>
+                            <td>Immediate termination, government reporting</td>
+                        </tr>
+                        <tr>
+                            <td>Failure to report breach within 24 hours</td>
+                            <td><strong>$10,000 per day of delay</strong></td>
+                            <td>Termination for cause</td>
+                        </tr>
+                        <tr>
+                            <td>Unauthorized subcontracting</td>
+                            <td><strong>$25,000 per occurrence</strong></td>
+                            <td>Void ab initio, termination</td>
+                        </tr>
+                        <tr>
+                            <td>IP ownership dispute/infringement</td>
+                            <td><strong>$75,000 per occurrence</strong></td>
+                            <td>Assignment of rights, attorneys' fees</td>
+                        </tr>
+                        <tr>
+                            <td>Failure to return/destroy Confidential Information</td>
+                            <td><strong>$5,000 per day of non-compliance</strong></td>
+                            <td>Specific performance</td>
+                        </tr>
+                    </table>
+                    <p style="margin-top: 10px; font-size: 9pt;"><em>Liquidated damages are not penalties but reasonable estimates of harm difficult to quantify. They are in addition to, not in lieu of, other remedies.</em></p>
+                </div>
+
+                <h5>11.3 Attorneys' Fees</h5>
+                <p>In any action to enforce this Agreement, the <strong>prevailing party</strong> shall be entitled to recover reasonable attorneys' fees, costs, and expenses from the non-prevailing party.</p>
+            </li>
+
+            <!-- SECTION XII: TERM & TERMINATION -->
+            <li>
+                <strong>TERM, TERMINATION &amp; SURVIVAL</strong>
+                
+                <h5>12.1 Term</h5>
+                <p>This Agreement shall commence on the Effective Date and continue until terminated as provided herein.</p>
+
+                <h5>12.2 Termination for Convenience</h5>
+                <p>Either party may terminate this Agreement for convenience upon <strong>thirty (30) days' prior written notice</strong>.</p>
+
+                <h5>12.3 Termination for Cause</h5>
+                <p>Either party may terminate this Agreement immediately upon material breach by the other party if such breach is not cured within <strong>ten (10) days</strong> following written notice.</p>
+
+                <h5>12.4 Effect of Termination</h5>
+                <p>Upon termination: (a) Contractor shall immediately cease work and return all Company property; (b) Company shall pay for undisputed services performed prior to termination; (c) all provisions that by nature should survive shall survive.</p>
+
+                <h5>12.5 Survival</h5>
+                <p>All obligations of confidentiality, non-disclosure, IP assignment, indemnification, and export control shall survive for the longest period required by: (a) Client NDA; (b) applicable law; or (c) nature of Confidential Information, but in no event less than <strong>five (5) years</strong>. Liquidated damages and injunctive relief provisions shall survive indefinitely.</p>
+            </li>
+
+            <!-- SECTION XIII: COMPENSATION -->
+            <li>
+                <strong>COMPENSATION &amp; PAYMENT TERMS</strong>
+                
+                <h5>13.1 Compensation</h5>
+                <p>Company shall pay Contractor the fees specified in each SOW for services performed and accepted. Payment terms are Net 30 from date of invoice or acceptance of deliverables, whichever is later.</p>
+
+                <h5>13.2 Withholding</h5>
+                <p>Company reserves the right to withhold payment for any services or deliverables that do not meet acceptance criteria. Contractor shall be solely responsible for all taxes, insurance, and expenses.</p>
+            </li>
+
+            <!-- SECTION XIV: GOVERNING LAW -->
+            <li>
+                <strong>GOVERNING LAW, JURISDICTION &amp; DISPUTE RESOLUTION</strong>
+                
+                <h5>14.1 Governing Law</h5>
+                <p>This Agreement shall be governed by and construed in accordance with the laws of the <strong>State of Texas</strong>, without regard to its conflict of laws principles.</p>
+
+                <h5>14.2 Venue</h5>
+                <p>Any legal action shall be instituted exclusively in state or federal courts located in <strong>Travis County, Texas</strong>. Contractor irrevocably submits to jurisdiction and waives any objection to venue.</p>
+
+                <h5>14.3 Dispute Resolution</h5>
+                <p>Any dispute shall first be subject to non-binding mediation in Austin, Texas. If mediation fails, disputes shall be resolved through binding arbitration under AAA rules in Travis County, Texas.</p>
+            </li>
+
+            <!-- SECTION XV: INDEPENDENT CONTRACTOR -->
+            <li>
+                <strong>INDEPENDENT CONTRACTOR RELATIONSHIP</strong>
+                
+                <p>Contractor is an <strong>independent contractor</strong> and not an employee, agent, partner, or joint venturer of Company. Contractor has no authority to bind Company. Contractor is solely responsible for all taxes, withholding, insurance, and benefits for its personnel.</p>
+            </li>
+
+            <!-- SECTION XVI: GENERAL PROVISIONS -->
+            <li>
+                <strong>GENERAL PROVISIONS</strong>
+                
+                <h5>16.1 Entire Agreement</h5>
+                <p>This Agreement constitutes the <strong>entire agreement</strong> between the parties and supersedes all prior agreements, understandings, and communications.</p>
+
+                <h5>16.2 Amendment</h5>
+                <p>This Agreement may not be amended except by a <strong>written instrument signed by authorized representatives</strong> of both parties.</p>
+
+                <h5>16.3 Waiver</h5>
+                <p>No waiver of any provision shall be effective unless in writing and signed by the party against whom waiver is sought.</p>
+
+                <h5>16.4 Severability</h5>
+                <p>If any provision is held invalid, remaining provisions shall continue in full force and effect.</p>
+
+                <h5>16.5 Counterparts</h5>
+                <p>This Agreement may be executed in counterparts, each of which shall be deemed an original.</p>
+
+                <h5>16.6 Assignment</h5>
+                <p>Company may assign this Agreement without consent. Contractor may not assign without prior written consent.</p>
+            </li>
+        </ol>
+
+        <!-- Signature Block -->
+        <div class="signature-section">
+            <h3>Execution</h3>
+            <p><strong>IN WITNESS WHEREOF</strong>, the parties have executed this Master Contractor &amp; Subcontractor Agreement as of the Effective Date first written above.</p>
+            
+            <div class="signature-grid">
+                <div>
+                    <div class="entity-info" style="margin-bottom: 20px;">
+                        <p><strong>VECTARR LLC</strong></p>
+                        <p style="font-size: 9pt; color: #4a5568;">A Texas Limited Liability Company</p>
+                    </div>
+                    <div class="signature-line"></div>
+                    <p style="font-size: 9pt; color: #4a5568; margin-top: 5px;">Signature</p>
+                    <div style="margin-top: 15px;">
+                        <p><strong>[Authorized Signatory Name]</strong></p>
+                        <p style="font-size: 9pt; color: #4a5568;">[Title]</p>
+                    </div>
+                    <div class="date-line"></div>
+                    <p style="font-size: 9pt; color: #4a5568; margin-top: 5px;">Date</p>
+                </div>
+                
+                <div>
+                    <div class="entity-info" style="margin-bottom: 20px;">
+                        <p><strong>[CONTRACTOR NAME]</strong></p>
+                        <p style="font-size: 9pt; color: #4a5568;">[Entity Type / Individual]</p>
+                    </div>
+                    <div class="signature-line"></div>
+                    <p style="font-size: 9pt; color: #4a5568; margin-top: 5px;">Signature</p>
+                    <div style="margin-top: 15px;">
+                        <p><strong>[Authorized Signatory Name]</strong></p>
+                        <p style="font-size: 9pt; color: #4a5568;">[Title]</p>
+                    </div>
+                    <div class="date-line"></div>
+                    <p style="font-size: 9pt; color: #4a5568; margin-top: 5px;">Date</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exhibit A: Authorization Letter -->
+        <div class="exhibit">
+            <div class="exhibit-header">
+                <h3>EXHIBIT A</h3>
+                <p style="font-family: 'Inter', sans-serif; font-size: 11pt; color: #4a5568;">Authorization &amp; Ownership Confirmation</p>
+            </div>
+            
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h1 style="font-family: 'Inter', sans-serif; font-size: 20pt; color: #1a365d; letter-spacing: 3px;">VECTARR</h1>
+                <p style="font-family: 'Inter', sans-serif; font-size: 9pt; color: #4a5568; text-transform: uppercase; letter-spacing: 2px;">A Texas Limited Liability Company</p>
+                <p style="margin-top: 10px;">vectarr.com</p>
+            </div>
+            
+            <p style="text-align: right; margin-bottom: 30px;">Date: <span class="initial-here" style="width: 150px;">&nbsp;</span></p>
+            
+            <p><strong>RE: Ownership and Authorization Confirmation</strong></p>
+            <p><strong>To Whom It May Concern:</strong></p>
+            
+            <p>This letter serves as official confirmation of the ownership structure and authorization status of Vectarr LLC, a Texas Limited Liability Company (the "Company").</p>
+            
+            <h4>OWNERSHIP STRUCTURE</h4>
+            <p>Vectarr LLC is equally owned by two (2) members, each holding a fifty percent (50%) ownership interest:</p>
+            <ol class="sub-list">
+                <li><strong>Marc Alexander Sferrazza</strong> — 50% Member Interest</li>
+                <li><strong>Kamal Katul</strong> — 50% Member Interest</li>
+            </ol>
+            
+            <h4>AUTHORIZATION</h4>
+            <p>Marc Alexander Sferrazza is hereby confirmed as an <strong>authorized signer and agent</strong> of Vectarr LLC, with full authority to:</p>
+            <ul class="bullet-list">
+                <li>Enter into contracts and agreements on behalf of the Company</li>
+                <li>Open, maintain, and operate business banking and financial accounts</li>
+                <li>Register, title, and insure motor vehicles in the Company's name</li>
+                <li>Execute all documentation related to vehicle registration and ownership</li>
+                <li>Represent the Company and execute binding documents</li>
+            </ul>
+            
+            <p>This authorization is made pursuant to the Operating Agreement of Vectarr LLC and Texas LLC laws (Texas Business Organizations Code, Title 3, Chapter 101). This letter provides reasonable assurance of Marc Alexander Sferrazza's authority to act on behalf of the Company.</p>
+            
+            <div class="signature-grid" style="margin-top: 50px;">
+                <div>
+                    <div class="signature-line"></div>
+                    <p style="margin-top: 10px;"><strong>Kamal Katul</strong></p>
+                    <p style="font-size: 9pt; color: #4a5568;">Member, Vectarr LLC</p>
+                    <div class="date-line" style="width: 80%;"></div>
+                    <p style="font-size: 9pt; color: #4a5568; margin-top: 5px;">Date</p>
+                </div>
+                <div>
+                    <div class="signature-line"></div>
+                    <p style="margin-top: 10px;"><strong>Marc Alexander Sferrazza</strong></p>
+                    <p style="font-size: 9pt; color: #4a5568;">Member, Vectarr LLC</p>
+                    <div class="date-line" style="width: 80%;"></div>
+                    <p style="font-size: 9pt; color: #4a5568; margin-top: 5px;">Date</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exhibit B: Quick Reference -->
+        <div class="exhibit">
+            <div class="exhibit-header">
+                <h3>EXHIBIT B</h3>
+                <p style="font-family: 'Inter', sans-serif; font-size: 11pt; color: #4a5568;">Penalty &amp; Liquidated Damages Quick Reference</p>
+            </div>
+            
+            <table style="font-size: 10pt;">
+                <tr>
+                    <th style="width: 35%;">Violation</th>
+                    <th style="width: 25%;">Liquidated Damages</th>
+                    <th style="width: 40%;">Consequences</th>
+                </tr>
+                <tr>
+                    <td>Unauthorized Confidentiality Breach</td>
+                    <td><strong>$50,000</strong> per occurrence</td>
+                    <td>Termination, injunctive relief, actual damages</td>
+                </tr>
+                <tr>
+                    <td>Export Control Violation (ITAR/EAR)</td>
+                    <td><strong>$100,000</strong> per occurrence</td>
+                    <td>Immediate termination, potential criminal referral</td>
+                </tr>
+                <tr>
+                    <td>Late Breach Notification (&gt;24hrs)</td>
+                    <td><strong>$10,000/day</strong> of delay</td>
+                    <td>Termination for cause</td>
+                </tr>
+                <tr>
+                    <td>Unauthorized Subcontracting</td>
+                    <td><strong>$25,000</strong> per occurrence</td>
+                    <td>Void ab initio, immediate termination</td>
+                </tr>
+                <tr>
+                    <td>IP Infringement/Ownership Dispute</td>
+                    <td><strong>$75,000</strong> per occurrence</td>
+                    <td>Assignment of rights, attorneys' fees</td>
+                </tr>
+                <tr>
+                    <td>Failure to Return/Destroy Information</td>
+                    <td><strong>$5,000/day</strong> non-compliance</td>
+                    <td>Specific performance, injunctive relief</td>
+                </tr>
+            </table>
+            
+            <div class="highlight-box" style="margin-top: 20px;">
+                <strong>Important Notes:</strong>
+                <ul class="bullet-list">
+                    <li>Liquidated damages are <strong>in addition to</strong> actual damages and attorneys' fees</li>
+                    <li>Company may elect to pursue actual damages instead of liquidated damages where appropriate</li>
+                    <li>Multiple violations may result in cumulative damages</li>
+                    <li>Federal penalties for export violations are <strong>separate and additional</strong> to contractual damages</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <p>Vectarr LLC | 5900 Balcones Drive STE 100 | Austin, TX 78731 | vectarr.com</p>
+            <p style="margin-top: 5px;">This document contains legally binding obligations. Consult legal counsel before signing.</p>
+            <p style="margin-top: 5px; font-size: 8pt;">Document Version 2.0 — February 2026</p>
+        </div>
+    </div>
+</body>
+</html>

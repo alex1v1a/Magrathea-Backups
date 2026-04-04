@@ -1,0 +1,143 @@
+# ============================================
+# HOMEKIT MULTI-BRIDGE CONFIGURATION
+# Separates devices by location/IP subnet
+# ============================================
+
+# ============================================
+# BRIDGE 1: AUSTIN (10.0.1.x) - PRIMARY HOME
+# ============================================
+homekit:
+  - name: "Austin Home"
+    port: 21064
+    ip_address: 10.0.1.90
+    advertise_ip:
+      - 10.0.1.90
+    filter:
+      include_domains:
+        - light
+        - switch
+        - climate
+        - sensor
+        - binary_sensor
+        - fan
+        - cover
+        - lock
+        - media_player
+        - camera
+        - device_tracker
+        - scene
+      # Explicitly include Austin entities
+      include_entities:
+        # Lights
+        - light.foyer
+        - light.front_yard
+        - light.kitchen_lamp
+        - light.lounge
+        - light.lounge_lamp
+        - light.pond_light_1
+        - light.pool_light
+        # Media Players
+        - media_player.austin_tx_tu7000_75_tv
+        - media_player.austin_tx_tu7000_75_tv_un75tu7000fxza
+        - media_player.living_room
+        # Device Trackers
+        - device_tracker.alexander
+        # Saxton Arlo Cameras
+        - binary_sensor.saxton_back_door_motion
+        - binary_sensor.saxton_back_door_sound
+        - binary_sensor.saxton_backyard_patio_pond_motion
+        - binary_sensor.saxton_backyard_patio_pond_sound
+        - binary_sensor.saxton_backyard_shed_motion
+        - binary_sensor.saxton_backyard_shed_sound
+        - binary_sensor.saxton_backyard_stairs_motion
+        - binary_sensor.saxton_backyard_stairs_sound
+        - binary_sensor.saxton_doorbell_motion
+        - binary_sensor.saxton_garden_motion
+        - binary_sensor.saxton_garden_sound
+        - binary_sensor.saxton_playground_motion
+        - binary_sensor.saxton_playground_sound
+        - event.saxton_doorbell_main
+      # Exclude Sayville entities
+      exclude_entities:
+        - switch.anouk_server_socket_1
+        - switch.cyn_pia_switch_socket_1
+        - switch.hanka_9_server_socket_1
+        - switch.marcs_bathroom_heated_floor_socket_1
+        - switch.marcs_room_fridge_lamp_socket_1
+        - scene.driveway_pump_off_cyn_pia_switch_off
+    entity_config:
+      media_player.austin_tx_tu7000_75_tv:
+        name: "Living Room TV"
+        type: television
+      media_player.living_room:
+        name: "Apple TV"
+        type: television
+      light.foyer:
+        name: "Foyer"
+      light.lounge:
+        name: "Lounge"
+
+  # ============================================
+  # BRIDGE 2: SAYVILLE (10.1.1.x) - SECONDARY HOME
+  # ============================================
+  - name: "Sayville Home"
+    port: 21065
+    ip_address: 10.0.1.90
+    advertise_ip:
+      - 10.0.1.90
+    filter:
+      include_domains:
+        - switch
+        - scene
+      # Only Sayville entities
+      include_entities:
+        - switch.anouk_server_socket_1
+        - switch.cyn_pia_switch_socket_1
+        - switch.hanka_9_server_socket_1
+        - switch.marcs_bathroom_heated_floor_socket_1
+        - switch.marcs_room_fridge_lamp_socket_1
+        - scene.driveway_pump_off_cyn_pia_switch_off
+    entity_config:
+      switch.anouk_server_socket_1:
+        name: "Anouk Server"
+      switch.cyn_pia_switch_socket_1:
+        name: "Cyn & Pia Switch"
+      switch.hanka_9_server_socket_1:
+        name: "HANKA Server"
+      switch.marcs_bathroom_heated_floor_socket_1:
+        name: "Marc's Heated Floor"
+      switch.marcs_room_fridge_lamp_socket_1:
+        name: "Marc's Lamp"
+
+  # ============================================
+  # BRIDGE 3: PARNELL (10.2.1.x) - THIRD HOME
+  # ============================================
+  - name: "Parnell Home"
+    port: 21066
+    ip_address: 10.0.1.90
+    advertise_ip:
+      - 10.0.1.90
+    filter:
+      include_domains:
+        - light
+        - switch
+        - climate
+        - sensor
+        - binary_sensor
+      # Parnell entities (when available)
+      include_entities: []
+
+  # ============================================
+  # TV ACCESSORY (Individual HomeKit Accessory)
+  # ============================================
+  - name: "Samsung TV"
+    port: 21067
+    ip_address: 10.0.1.90
+    mode: accessory
+    filter:
+      include_entities:
+        - media_player.austin_tx_tu7000_75_tv
+    entity_config:
+      media_player.austin_tx_tu7000_75_tv:
+        name: "Samsung TV"
+        type: television

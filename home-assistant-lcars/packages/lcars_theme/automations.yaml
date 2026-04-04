@@ -1,0 +1,246 @@
+# ============================================
+# LCARS THEME - AUTOMATIONS
+# Automated behaviors for the LCARS interface
+# ============================================
+
+automation:
+  # ==========================================
+  # THEME ACTIVATION
+  # ==========================================
+  - id: lcars_theme_startup
+    alias: LCARS - Set Theme on Startup
+    description: Automatically set LCARS theme when Home Assistant starts
+    trigger:
+      - platform: homeassistant
+        event: start
+    condition: []
+    action:
+      - service: frontend.set_theme
+        data:
+          name: "Star Trek LCARS"
+    mode: single
+
+  # ==========================================
+  # RED ALERT AUTOMATIONS
+  # ==========================================
+  - id: lcars_red_alert_motion
+    alias: LCARS - Red Alert on Motion (Night)
+    description: Activate red alert when motion detected during night hours
+    trigger:
+      - platform: state
+        entity_id:
+          - binary_sensor.front_door_motion
+          - binary_sensor.backyard_motion
+        to: "on"
+    condition:
+      - condition: time
+        after: "22:00:00"
+        before: "06:00:00"
+      - condition: state
+        entity_id: input_boolean.do_not_disturb
+        state: "off"
+    action:
+      - service: script.lcars_red_alert
+      - service: script.lcars_alert_sound
+      - service: light.turn_on
+        target:
+          entity_id: light.all_lights
+        data:
+          color_name: red
+          brightness_pct: 100
+    mode: single
+
+  - id: lcars_red_alert_cancel
+    alias: LCARS - Cancel Red Alert
+    description: Cancel red alert when alarm is disarmed
+    trigger:
+      - platform: state
+        entity_id: alarm_control_panel.home
+        to: disarmed
+    condition:
+      - condition: state
+        entity_id: input_boolean.red_alert
+        state: "on"
+    action:
+      - service: script.lcars_all_clear
+      - service: light.turn_on
+        target:
+          entity_id: light.all_lights
+        data:
+          color_temp_kelvin: 2700
+          brightness_pct: 80
+    mode: single
+
+  # ==========================================
+  # INTERACTION COUNTER
+  # ==========================================
+  - id: lcars_count_interactions
+    alias: LCARS - Count Button Presses
+    description: Count LCARS interface interactions
+    trigger:
+      - platform: event
+        event_type: state_changed
+    condition:
+      - condition: template
+        value_template: "{{ trigger.entity_id.startswith('light.') or trigger.entity_id.startswith('switch.') }}"
+    action:
+      - service: counter.increment
+        target:
+          entity_id: counter.lcars_button_presses
+    mode: single
+
+  # ==========================================
+  # SCREENSAVER AUTOMATION
+  # ==========================================
+  - id: lcars_screensaver_start
+    alias: LCARS - Start Screensaver
+    description: Start screensaver timer when no activity
+    trigger:
+      - platform: state
+        entity_id: counter.lcars_button_presses
+        for:
+          minutes: 10
+    condition:
+      - condition: state
+        entity_id: timer.lcars_screensaver
+        state: idle
+    action:
+      - service: timer.start
+        target:
+          entity_id: timer.lcars_screensaver
+    mode: restart
+
+  - id: lcars_screensaver_trigger
+    alias: LCARS - Screensaver Trigger
+    description: Dim screen when screensaver timer finishes
+    trigger:
+      - platform: event
+        event_type: timer.finished
+        event_data:
+          entity_id: timer.lcars_screensaver
+    condition: []
+    action:
+      - service: browser_mod/popup
+        data:
+          title: "LCARS Standby"
+          content: "Touch screen to resume."
+          timeout: 30000
+    mode: single
+
+  # ==========================================
+  # NIGHT MODE AUTOMATIONS
+  # ==========================================
+  - id: lcars_night_mode_auto
+    alias: LCARS - Auto Night Mode
+    description: Automatically switch to night mode at sunset
+    trigger:
+      - platform: sun
+        event: sunset
+        offset: "+00:30:00"
+    condition: []
+    action:
+      - service: script.lcars_night_mode
+    mode: single
+
+  - id: lcars_day_mode_auto
+    alias: LCARS - Auto Day Mode
+    description: Automatically switch to day mode at sunrise
+    trigger:
+      - platform: sun
+        event: sunrise
+        offset: "-00:30:00"
+    condition: []
+    action:
+      - service: script.lcars_day_mode
+    mode: single
+
+  # ==========================================
+  # SOUND EFFECTS
+  # ==========================================
+  - id: lcars_beep_on_button
+    alias: LCARS - Beep on Button Press
+    description: Play beep sound when LCARS buttons are pressed
+    trigger:
+      - platform: event
+        event_type: state_changed
+    condition:
+      - condition: template
+        value_template: "{{ trigger.entity_id.startswith('light.') or trigger.entity_id.startswith('switch.') or trigger.entity_id.startswith('scene.') }}"
+    action:
+      - service: script.lcars_beep
+    mode: queued
+    max: 10
+
+  # ==========================================
+  # WELCOME NOTIFICATION
+  # ==========================================
+  - id: lcars_welcome_notification
+    alias: LCARS - Welcome Notification
+    description: Show welcome notification when user logs in
+    trigger:
+      - platform: homeassistant
+        event: start
+    condition: []
+    action:
+      - delay:
+          seconds: 5
+      - service: script.lcars_welcome
+    mode: single
+
+  # ==========================================
+  # SYSTEM STATUS UPDATES
+  # ==========================================
+  - id: lcars_daily_report
+    alias: LCARS - Daily Status Report
+    description: Generate daily status report at 08:00
+    trigger:
+      - platform: time
+        at: "08:00:00"
+    condition: []
+    action:
+      - service: persistent_notification.create
+        data:
+          title: "Daily Status Report"
+          message: >-
+            Stardate: {{ states('sensor.stardate') }}
+            
+            System Status: {{ states('sensor.alert_status') }}
+            
+            Environmental: {{ states('weather.home') }}
+            
+            Interactions Today: {{ states('counter.lcars_button_presses') }}
+    mode: single
+
+  # ==========================================
+  # THEME TOGGLE AUTOMATION
+  # ==========================================
+  - id: lcars_toggle_theme
+    alias: LCARS - Toggle Theme Mode
+    description: Toggle between LCARS and default theme
+    trigger:
+      - platform: state
+        entity_id: input_boolean.lcars_theme_toggle
+    action:
+      - choose:
+          - conditions:
+              - condition: state
+                entity_id: input_boolean.lcars_theme_toggle
+                state: "on"
+            sequence:
+              - service: frontend.set_theme
+                data:
+                  name: "Star Trek LCARS"
+        default:
+          - service: frontend.set_theme
+            data:
+              name: "default"
+    mode: single
+
+# ============================================
+# INPUT BOOLEAN FOR THEME TOGGLE
+# ============================================
+input_boolean:
+  lcars_theme_toggle:
+    name: LCARS Theme
+    icon: mdi:star-trek
+    initial: true

@@ -1,0 +1,80 @@
+{
+  "exclusions": {
+    "kimchi": {
+      "ingredient": "kimchi",
+      "originalName": "kimchi",
+      "reason": "preference",
+      "substitute": null,
+      "addedAt": "2026-02-07T18:25:00.000Z",
+      "updatedAt": "2026-02-07T18:36:56.920Z",
+      "autoDetected": true,
+      "source": "email_reply",
+      "sourceEmail": "manual",
+      "emailReplies": [
+        {
+          "email": "alex@1v1a.com",
+          "reason": "exclusion_request",
+          "timestamp": "2026-02-07T18:25:00.000Z"
+        },
+        {
+          "email": "manual",
+          "reason": "preference",
+          "timestamp": "2026-02-07T18:36:56.920Z"
+        }
+      ]
+    },
+    "fresh asparagus": {
+      "ingredient": "fresh asparagus",
+      "originalName": "fresh asparagus",
+      "reason": "preference",
+      "substitute": "green beans",
+      "addedAt": "2026-02-07T18:25:00.000Z",
+      "updatedAt": "2026-02-07T18:36:56.922Z",
+      "autoDetected": true,
+      "source": "email_reply",
+      "sourceEmail": "manual",
+      "emailReplies": [
+        {
+          "email": "alex@1v1a.com",
+          "reason": "exclusion_request",
+          "timestamp": "2026-02-07T18:25:00.000Z"
+        },
+        {
+          "email": "manual",
+          "reason": "preference",
+          "timestamp": "2026-02-07T18:36:56.921Z"
+        }
+      ]
+    },
+    "capers": {
+      "ingredient": "capers",
+      "originalName": "capers",
+      "reason": "preference",
+      "substitute": null,
+      "addedAt": "2026-02-07T18:25:00.000Z",
+      "updatedAt": "2026-02-07T18:36:56.923Z",
+      "autoDetected": true,
+      "source": "email_reply",
+      "sourceEmail": "manual",
+      "emailReplies": [
+        {
+          "email": "alex@1v1a.com",
+          "reason": "exclusion_request",
+          "timestamp": "2026-02-07T18:25:00.000Z"
+        },
+        {
+          "email": "manual",
+          "reason": "preference",
+          "timestamp": "2026-02-07T18:36:56.923Z"
+        }
+      ]
+    }
+  },
+  "version": "1.0",
+  "lastUpdated": "2026-02-07T18:36:56.923Z",
+  "metadata": {
+    "totalExclusions": 3,
+    "autoDetected": 3,
+    "manualAdded": 0
+  }
+}

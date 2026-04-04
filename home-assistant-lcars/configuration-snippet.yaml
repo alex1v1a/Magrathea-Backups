@@ -1,0 +1,170 @@
+# ============================================
+# configuration.yaml additions for LCARS Theme
+# Copy these sections into your configuration.yaml
+# ============================================
+
+# ============================================
+# FRONTEND - ENABLE THEMES
+# ============================================
+frontend:
+  themes: !include_dir_merge_named themes
+
+# ============================================
+# HOMEASSISTANT - ENABLE PACKAGES
+# ============================================
+homeassistant:
+  packages: !include_dir_named packages
+  # If you already have a homeassistant: section, just add the packages line
+
+# ============================================
+# LOVELACE - DASHBOARD CONFIGURATION
+# ============================================
+lovelace:
+  mode: storage
+  resources:
+    # These may be auto-added by HACS, but can be explicitly defined:
+    - url: /hacsfiles/lovelace-card-mod/card-mod.js
+      type: module
+    - url: /hacsfiles/button-card/button-card.js
+      type: module
+    - url: /hacsfiles/lovelace-layout-card/layout-card.js
+      type: module
+    - url: /hacsfiles/lovelace-state-switch/state-switch.js
+      type: module
+    - url: /local/lcars/css/lcars-card-mod.css
+      type: css
+  
+  dashboards:
+    # Bridge - Main Control Dashboard
+    lcars-bridge:
+      mode: yaml
+      title: Bridge
+      icon: mdi:view-dashboard
+      show_in_sidebar: true
+      require_admin: false
+      filename: lovelace/dashboards/bridge.yaml
+    
+    # Engineering - System Monitoring
+    lcars-engineering:
+      mode: yaml
+      title: Engineering
+      icon: mdi:engine
+      show_in_sidebar: true
+      require_admin: false
+      filename: lovelace/dashboards/engineering.yaml
+    
+    # Science - Weather and Sensors
+    lcars-science:
+      mode: yaml
+      title: Science
+      icon: mdi:flask
+      show_in_sidebar: true
+      require_admin: false
+      filename: lovelace/dashboards/science.yaml
+    
+    # Tactical - Security and Cameras
+    lcars-tactical:
+      mode: yaml
+      title: Tactical
+      icon: mdi:shield
+      show_in_sidebar: true
+      require_admin: false
+      filename: lovelace/dashboards/tactical.yaml
+    
+    # Quarters - Comfort and Lighting
+    lcars-quarters:
+      mode: yaml
+      title: Quarters
+      icon: mdi:bed
+      show_in_sidebar: true
+      require_admin: false
+      filename: lovelace/dashboards/quarters.yaml
+
+# ============================================
+# OPTIONAL: DEFAULT THEME AUTOMATION
+# ============================================
+automation:
+  - alias: "LCARS - Set Theme on Startup"
+    description: "Automatically activate LCARS theme when Home Assistant starts"
+    trigger:
+      - platform: homeassistant
+        event: start
+    action:
+      - delay: "00:00:05"  # Wait for frontend to be ready
+      - service: frontend.set_theme
+        data:
+          name: "Star Trek LCARS"
+    mode: single
+
+# ============================================
+# OPTIONAL: MANUAL THEME SWITCH
+# ============================================
+input_boolean:
+  lcars_theme_enabled:
+    name: LCARS Theme Enabled
+    icon: mdi:star-trek
+    initial: true
+
+# ============================================
+# OPTIONAL: INFLUXDB FOR HISTORY GRAPHS
+# (If you want to use long-term stats)
+# ============================================
+# influxdb:
+#   host: localhost
+#   port: 8086
+#   database: homeassistant
+#   username: homeassistant
+#   password: YOUR_PASSWORD
+#   max_retries: 3
+#   default_measurement: state
+
+# ============================================
+# OPTIONAL: RECORDER FOR HISTORY
+# ============================================
+recorder:
+  purge_keep_days: 30
+  exclude:
+    entities:
+      - sensor.time
+      - sensor.date
+      - sensor.lcars_time
+  include:
+    entities:
+      - sensor.*temperature*
+      - sensor.*humidity*
+      - sensor.energy*
+      - binary_sensor.*motion*
+      - light.*
+
+# ============================================
+# OPTIONAL: LOGGER FOR DEBUGGING
+# ============================================
+logger:
+  default: warning
+  logs:
+    homeassistant.components.frontend: debug
+    custom_components.button_card: debug
+
+# ============================================
+# NOTES
+# ============================================
+# 
+# 1. The `!include_dir_merge_named` directive merges all YAML files
+#    in the themes directory into a single themes configuration.
+#
+# 2. The `!include_dir_named` directive includes all YAML files
+#    from the packages directory as separate packages.
+#
+# 3. Make sure the folder paths match your actual installation:
+#    - /config/themes/
+#    - /config/packages/
+#    - /config/lovelace/dashboards/
+#
+# 4. If you use Docker, paths may need to be adjusted for your setup.
+#
+# 5. After adding this configuration, restart Home Assistant completely.
+#
+# 6. For Home Assistant OS or Container, the paths shown above are correct.
+#
+# 7. For Home Assistant Core (venv), adjust paths as needed.
+#

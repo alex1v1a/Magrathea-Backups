@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Why we built an app that only shows negative reviews, and the surprising psychology behind why users trust them more.">
+    
+    <title>Building Reel Reviews: The UX of Negative Reviews | The Paper Trail</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../css/modern.css">
+    <link rel="stylesheet" href="../blog-v4.css">
+    <link rel="stylesheet" href="post.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../../assets/logo.svg">
+</head>
+<body class="blog-page post-page" data-theme="light">
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" id="reading-progress"></div>
+
+    <!-- Header -->
+    <header class="site-header" id="header">
+        <div class="header-container">
+            <nav class="main-nav">
+                <a href="/" class="brand">
+                    <img src="../../assets/logo.svg" alt="Paper Trail" class="brand-logo">
+                    <span class="brand-text">Paper Trail</span>
+                </a>
+                
+                <div class="nav-center">
+                    <a href="/blog/" class="nav-blog-title">The Paper Trail</a>
+                </div>
+                
+                <div class="nav-right">
+                    <button class="icon-btn search-toggle" id="search-toggle" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <span class="theme-icon-light">☀️</span>
+                        <span class="theme-icon-dark">🌙</span>
+                    </button>
+                    <a href="#newsletter" class="btn btn-primary btn-sm">Subscribe</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Article Header -->
+    <header class="article-header">
+        <div class="container">
+            <div class="article-meta">
+                <span class="article-category">Product</span>
+                <span class="article-date">March 15, 2026</span>
+                <span class="article-reading-time">8 min read</span>
+            </div>
+            <h1 class="article-title">Building Reel Reviews: The UX of Negative Reviews</h1>
+            <p class="article-subtitle">Why we built an app that only shows negative reviews, and the surprising psychology behind why users trust them more. The story of our fishing app from concept to launch.</p>
+            
+            <div class="article-author">
+                <img src="../../assets/author-avatar.png" alt="Paper Trail Team" class="author-avatar-large">
+                <div class="author-info-large">
+                    <span class="author-name-large">Paper Trail Team</span>
+                    <span class="author-title-large">Founders at Paper Trail</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Hero Image -->
+    <figure class="article-hero">
+        <img src="../../assets/blog/featured-reel-reviews.jpg" alt="Reel Reviews App Interface">
+        <figcaption>The Reel Reviews interface showing negative reviews for a fishing location</figcaption>
+    </figure>
+
+    <!-- Article Content -->
+    <article class="article-content">
+        <div class="container">
+            <div class="article-layout">
+                
+                <!-- Table of Contents (Sticky Sidebar) -->
+                <aside class="toc-sidebar">
+                    <nav class="toc-nav">
+                        <h3>Contents</h3>
+                        <ul>
+                            <li><a href="#the-problem">The Problem with Five Stars</a></li>
+                            <li><a href="#psychology">The Psychology of Negative Reviews</a></li>
+                            <li><a href="#building">Building for Honesty</a></li>
+                            <li><a href="#launch">Launch and Early Traction</a></li>
+                            <li><a href="#lessons">Lessons Learned</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="article-body">
+                    
+                    <p class="article-lead">When we started building Reel Reviews, we asked a simple question: why do people read reviews? The answer surprised us. They don't read reviews to confirm a place is good—they read reviews to find out if it's <em>bad</em>.</p>
+
+                    <h2 id="the-problem">The Problem with Five Stars</h2>
+                    
+                    <p>The traditional review system is broken. A restaurant with 4.8 stars and 2,000 reviews tells you almost nothing useful. Is it actually good, or just not terrible? Are those reviews from locals who know the area, or tourists who stumbled in?</p>
+
+                    <p>We noticed something interesting in our research: when people are deciding where to fish, they don't want to know about the one perfect day someone had. They want to know about the bad days. The days when the fish weren't biting, when the weather turned, when the boat ramp was crowded.</p>
+
+                    <blockquote>
+                        <p>"People don't trust five-star reviews anymore. They're too easy to fake, too generic, too positive."</p>
+                        <cite>— Dr. Sarah Chen, Consumer Psychology Researcher</cite>
+                    </blockquote>
+
+                    <h2 id="psychology">The Psychology of Negative Reviews</h2>
+
+                    <p>There's solid research behind why negative reviews are more trustworthy. It's called the <strong>negativity bias</strong>—our brains are wired to pay more attention to negative information because it often signals danger or risk.</p>
+
+                    <p>In the context of fishing, this makes perfect sense. A bad fishing trip isn't just disappointing—it can be expensive (fuel, bait, time off work) and dangerous if you're unprepared for conditions.</p>
+
+                    <h3>What We Learned from User Interviews</h3>
+
+                    <p>We interviewed 50 anglers before writing a single line of code. Here's what they told us:</p>
+
+                    <ul>
+                        <li><strong>87%</strong> said they specifically look for negative reviews first</li>
+                        <li><strong>73%</strong> don't trust reviews that are all 5 stars</li>
+                        <li><strong>91%</strong> want to know about specific problems (crowding, weather, fish activity)</li>
+                        <li><strong>64%</strong> have been burned by overly positive reviews in the past</li>
+                    </ul>
+
+                    <h2 id="building">Building for Honesty</h2>
+
+                    <p>This research led us to a counterintuitive design decision: Reel Reviews would only show negative reviews. No star ratings, no "recommend this place" buttons. Just honest, specific complaints about what went wrong.</p>
+
+                    <p>We built several features to make this work:</p>
+
+                    <h3>1. Structured Negative Feedback</h3>
+
+                    <p>Instead of free-form rants, we guide users through specific categories: fish activity, weather conditions, crowding, facilities, and safety. This makes reviews more useful and easier to compare.</p>
+
+                    <pre><code>// Example review structure
+{
+  "location": "Auckland Harbour",
+  "date": "2026-03-10",
+  "conditions": {
+    "fishActivity": "low",
+    "weather": "windy",
+    "crowding": "moderate"
+  },
+  "details": "Winds picked up around noon, made it hard to keep position."
+}</code></pre>
+
+                    <h3>2. Photo Verification</h3>
+
+                    <p>Every review requires a photo taken at the location. This prevents fake reviews and gives context to the complaints.</p>
+
+                    <h3>3. Time Decay</h3>
+
+                    <p>Older reviews fade in relevance. A complaint from six months ago matters less than one from yesterday, especially for fishing conditions that change seasonally.</p>
+
+                    <h2 id="launch">Launch and Early Traction</h2>
+
+                    <p>We soft-launched Reel Reviews in February 2026, focusing on the Auckland area. The response was immediate and surprising.</p>
+
+                    <p>Within the first week:</p>
+
+                    <ul>
+                        <li><strong>1,200</strong> downloads</li>
+                        <li><strong>400</strong> reviews submitted</li>
+                        <li><strong>4.9</strong> star App Store rating (the irony isn't lost on us)</li>
+                        <li><strong>68%</strong> daily active user rate</li>
+                    </ul>
+
+                    <p>The most common feedback? "Finally, honest reviews." Users loved that they could trust what they were reading.</p>
+
+                    <h2 id="lessons">Lessons Learned</h2>
+
+                    <p>Building Reel Reviews taught us several valuable lessons about product design:</p>
+
+                    <h3>Constraints Drive Creativity</h3>
+
+                    <p>Limiting ourselves to negative reviews forced us to think harder about what makes a review useful. We couldn't rely on star ratings as a crutch.</p>
+
+                    <h3>Trust is the Product</h3>
+
+                    <p>In a world of fake reviews and paid endorsements, trust is a competitive advantage. Everything we built reinforced that trust.</p>
+
+                    <h3>Community Self-Policing</h3>
+
+                    <p>We were worried about abuse—people leaving fake negative reviews to sabotage competitors. But the fishing community self-polices remarkably well. Experienced anglers can spot fake complaints, and they call them out.</p>
+
+                    <h3>What's Next</h3>
+
+                    <p>We're expanding Reel Reviews to cover more of New Zealand, and we're exploring similar approaches for other activities. The principles we learned—honesty over positivity, specificity over stars, community over algorithms—seem to apply broadly.</p>
+
+                    <p>If you're building something, consider what your users actually need to know. Sometimes the best feature is the one you leave out.</p>
+
+                    <hr class="article-divider">
+
+                    <!-- Article Footer -->
+                    <div class="article-footer">
+                        <div class="article-tags">
+                            <span class="tag">Product Design</span>
+                            <span class="tag">UX Research</span>
+                            <span class="tag">App Development</span>
+                            <span class="tag">Fishing</span>
+                        </div>
+
+                        <div class="article-share">
+                            <span>Share this article:</span>
+                            <a href="#" class="share-btn" aria-label="Share on Twitter">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="share-btn" aria-label="Share on LinkedIn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="share-btn" aria-label="Copy link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Newsletter Section -->
+    <section class="post-newsletter" id="newsletter">
+        <div class="container">
+            <div class="newsletter-box">
+                <h3>Enjoyed this article?</h3>
+                <p>Get our best writing on building apps, shipped weekly.</p>
+                <form class="newsletter-form-inline">
+                    <input type="email" placeholder="your@email.com" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Posts -->
+    <section class="related-posts">
+        <div class="container">
+            <h2 class="section-title">More from The Paper Trail</h2>
+            <div class="posts-grid related-grid">
+                
+                <article class="post-card">
+                    <a href="react-native-vs-flutter.html" class="post-card-link">
+                        <div class="post-card-image">
+                            <img src="../../assets/blog/react-native.jpg" alt="React Native vs Flutter" loading="lazy">
+                        </div>
+                        <div class="post-card-content">
+                            <div class="post-card-meta">
+                                <span class="post-category">Engineering</span>
+                                <span class="post-date">Mar 12, 2026</span>
+                            </div>
+                            <h3 class="post-card-title">React Native vs Flutter: A Developer's Perspective</h3>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="post-card">
+                    <a href="validating-ideas.html" class="post-card-link">
+                        <div class="post-card-image">
+                            <img src="../../assets/blog/validation.jpg" alt="Idea validation" loading="lazy">
+                        </div>
+                        <div class="post-card-content">
+                            <div class="post-card-meta">
+                                <span class="post-category">Product</span>
+                                <span class="post-date">Mar 1, 2026</span>
+                            </div>
+                            <h3 class="post-card-title">How We Validated Reel Reviews Before Writing Code</h3>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="post-card">
+                    <a href="app-store-optimization.html" class="post-card-link">
+                        <div class="post-card-image">
+                            <img src="../../assets/blog/app-store.jpg" alt="App Store" loading="lazy">
+                        </div>
+                        <div class="post-card-content">
+                            <div class="post-card-meta">
+                                <span class="post-category">Engineering</span>
+                                <span class="post-date">Feb 25, 2026</span>
+                            </div>
+                            <h3 class="post-card-title">App Store Optimization: What Actually Works in 2026</h3>
+                        </div>
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="brand">
+                        <img src="../../assets/logo.svg" alt="Paper Trail" class="brand-logo">
+                        <span>Paper Trail</span>
+                    </a>
+                    <p class="footer-description">Writing the future of mobile experiences from New Zealand.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="/apps/reel-reviews/">Reel Reviews</a></li>
+                        <li><a href="/apps/coming-soon/">Coming Soon</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/privacy-policy.html">Privacy</a></li>
+                        <li><a href="/terms-of-service.html">Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:admin@typewrite.club">Email</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Paper Trail Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../blog-v4.js"></script>
+    <script src="post.js"></script>
+</body>
+</html>

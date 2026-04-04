@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--
+  ==============================================================================
+  INDIVIDUAL BLOG POST PAGE: React Native vs Flutter
+  ==============================================================================
+  
+  POST DETAILS:
+  - Title: React Native vs Flutter: A Developer's Perspective
+  - Slug: react-native-vs-flutter
+  - Category: Engineering
+  - Date: March 12, 2026
+  - Author: Paper Trail Team
+  - Reading Time: 6 min read
+  
+  PAGE STRUCTURE:
+  1. Header (shared navigation)
+  2. Post Header (title, meta, author)
+  3. Featured Image
+  4. Post Content
+  5. Post Navigation
+  6. Footer
+  
+  CSS: /blog/blog-v4.css
+  ==============================================================================
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="After building production apps with both frameworks, here's what we learned about React Native vs Flutter.">
+    
+    <title>React Native vs Flutter: A Developer's Perspective | The Paper Trail</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/blog/blog-v4.css">
+</head>
+<body class="post-page">
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <nav class="main-nav">
+                <a href="/" class="brand" aria-label="Paper Trail - Back to home">
+                    <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect width="48" height="48" rx="8" fill="#dc2626"/>
+                        <path d="M14 12h20v4H14v-4zm0 10h20v4H14v-4zm0 10h14v4H14v-4z" fill="white"/>
+                    </svg>
+                    <span>Paper Trail</span>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/blog/" class="nav-link active">Blog</a></li>
+                    <li><a href="/apps/reel-reviews/" class="nav-link">Reel Reviews</a></li>
+                    <li><a href="/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <header class="post-header">
+            <div class="post-meta">
+                <span class="post-category">Engineering</span>
+                <span class="post-date">March 12, 2026</span>
+                <span class="reading-time">6 min read</span>
+            </div>
+            
+            <h1 class="post-header-title">React Native vs Flutter: A Developer's Perspective</h1>
+            
+            <p class="post-header-excerpt">
+                After building production apps with both frameworks, here's what we learned about 
+                performance, developer experience, and making the right choice for your project.
+            </p>
+            
+            <div class="post-author" style="justify-content: center; margin-top: 24px;">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                    <span class="author-name">Paper Trail Team</span>
+                    <span class="author-title">Founders</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="post-featured-image gradient-pink" role="img" aria-label="Featured image for React Native vs Flutter post">
+            </div>
+        </div>
+
+        <article class="post-content">
+            <div class="post-body">
+                <p>
+                    When we started Paper Trail, we had to make a decision: build our apps with 
+                    React Native or Flutter? Both promised cross-platform development with native 
+                    performance. Both had passionate communities. We ended up using both—for different 
+                    projects. Here's what we learned.
+                </p>
+
+                <h2>The React Native Experience</h2>
+                
+                <p>
+                    Our first app was built with React Native. The learning curve was gentle—if you 
+                    know React for the web, you know 80% of React Native. The JavaScript ecosystem 
+                    is vast, and we could leverage libraries we'd used before.
+                </p>
+
+                <p><strong>What worked well:</strong></p>
+                <ul>
+                    <li>Hot reload is genuinely fast</li>
+                    <li>Third-party library ecosystem is enormous</li>
+                    <li>Easy to find developers who know React</li>
+                    <li>Web and mobile can share code in some cases</li>
+                </ul>
+
+                <p><strong>What frustrated us:</strong></p>
+                <ul>
+                    <li>Native module integration can be painful</li>
+                    <li>Performance issues with complex animations</li>
+                    <li>Breaking changes between versions</li>
+                    <li>App size tends to be larger</li>
+                </ul>
+
+                <h2>The Flutter Experience</h2>
+                
+                <p>
+                    For our second app, we tried Flutter. The learning curve was steeper—Dart was 
+                    new to us, and the widget-based approach felt different from anything we'd done 
+                    before. But once we got over that hump, the development experience was excellent.
+                </p>
+
+                <p><strong>What worked well:</strong></p>
+                <ul>
+                    <li>Consistent UI across platforms</li>
+                    <li>Excellent performance out of the box</li>
+                    <li>Hot reload is reliable and fast</li>
+                    <li>Built-in widget library reduces dependencies</li>
+                    <li>Single codebase feels more unified</li>
+                </ul>
+
+                <p><strong>What frustrated us:</strong></p>
+                <ul>
+                    <li>Smaller ecosystem than JavaScript</li>
+                    <li>Some native features require platform channels</li>
+                    <li>App size is still significant</li>
+                    <li>Fewer developers available for hiring</li>
+                </ul>
+
+                <h2>Performance: The Real Test</h2>
+                
+                <p>
+                    We ran benchmarks on identical features in both frameworks. Flutter consistently 
+                    performed better for animations and scrolling complex lists. React Native caught 
+                    up when we optimized, but that took extra effort.
+                </p>
+
+                <p>
+                    For Reel Reviews, which relies heavily on map interactions and smooth animations, 
+                    Flutter's performance advantage was the deciding factor.
+                </p>
+
+                <h2>Our Recommendation</h2>
+                
+                <p>
+                    Choose <strong>React Native</strong> if:
+                </p>
+                <ul>
+                    <li>Your team already knows React</li>
+                    <li>You need to ship quickly with many third-party integrations</li>
+                    <li>You might need a web version later</li>
+                </ul>
+
+                <p>
+                    Choose <strong>Flutter</strong> if:
+                </p>
+                <ul>
+                    <li>UI consistency and performance are priorities</li>
+                    <li>You want fewer dependencies to manage</li>
+                    <li>You have time for the initial learning curve</li>
+                </ul>
+
+                <p>
+                    Both frameworks can produce excellent apps. The "right" choice depends on your 
+                    team, timeline, and priorities. The good news? You can always switch—or use both 
+                    for different projects like we do.
+                </p>
+            </div>
+        </article>
+
+        <!-- Post Navigation -->
+        <nav class="post-navigation" aria-label="Post navigation">
+            <a href="/blog/posts/day-in-life.html" class="post-nav-link">
+                <div class="post-nav-label">Previous</div>
+                <div class="post-nav-title">A Day in the Life: Running an App Company from Auckland</div>
+            </a>
+            
+            <a href="/blog/posts/building-reel-reviews.html" class="post-nav-link">
+                <div class="post-nav-label">Next</div>
+                <div class="post-nav-title">Building Reel Reviews: The UX of Negative Reviews</div>
+            </a>
+        </nav>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="brand" aria-label="Paper Trail - Back to home">
+                        <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="48" height="48" rx="8" fill="#dc2626"/>
+                            <path d="M14 12h20v4H14v-4zm0 10h20v4H14v-4zm0 10h14v4H14v-4z" fill="white"/>
+                        </svg>
+                        <span>Paper Trail</span>
+                    </a>
+                    <p class="footer-description">Writing the future of mobile experiences from New Zealand.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="/apps/reel-reviews/">Reel Reviews</a></li>
+                        <li><a href="/apps/coming-soon/">Coming Soon</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/privacy-policy.html">Privacy</a></li>
+                        <li><a href="/terms-of-service.html">Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:admin@typewrite.club">Email</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Paper Trail Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-02-05T18:25:29.861Z",
+  "smtp": {
+    "success": true,
+    "result": {
+      "success": true,
+      "messageId": "<cdebcec7-0af9-ae35-bc99-7ecb08465a4e@icloud.com>",
+      "recipients": [
+        "alex@1v1a.com",
+        "sferrazzaa96@gmail.com"
+      ],
+      "timestamp": "2026-02-05T18:25:31.815Z"
+    }
+  },
+  "imap": {
+    "success": true,
+    "messageCount": 0,
+    "messages": []
+  },
+  "parsing": {
+    "success": false,
+    "passed": 6,
+    "failed": 1
+  }
+}

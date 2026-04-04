@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "totalSize": 2691,
+  "files": [
+    {
+      "filename": "usage-2026-02-24-1771955374752.json",
+      "timestamp": 1771955374752,
+      "size": 819
+    },
+    {
+      "filename": "usage-2026-02-24-1771955400876.json",
+      "timestamp": 1771955400876,
+      "size": 936
+    },
+    {
+      "filename": "usage-2026-02-24-1771956600257.json",
+      "timestamp": 1771956600257,
+      "size": 936
+    }
+  ],
+  "oldestEntry": 1771955374752,
+  "newestEntry": 1771956600257
+}

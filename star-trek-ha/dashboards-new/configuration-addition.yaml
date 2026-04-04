@@ -1,0 +1,144 @@
+# ==========================================
+# LCARS MULTI-HOUSE DASHBOARD CONFIGURATION
+# ==========================================
+# Add this to your configuration.yaml or include it
+
+lovelace:
+  mode: storage
+  dashboards:
+    # Main Overview Dashboard
+    lcars-overview:
+      mode: yaml
+      title: LCARS Overview
+      icon: mdi:star-four-points
+      show_in_sidebar: true
+      filename: dashboards-new/lcars-overview.yaml
+    
+    # House 1 Dashboards
+    lcars-house1:
+      mode: yaml
+      title: House 1
+      icon: mdi:home-analytics
+      show_in_sidebar: true
+      filename: dashboards-new/lcars-house1.yaml
+    
+    lcars-h1-living:
+      mode: yaml
+      title: H1 Living
+      icon: mdi:sofa
+      show_in_sidebar: false
+      filename: dashboards-new/lcars-h1-living.yaml
+    
+    lcars-h1-kitchen:
+      mode: yaml
+      title: H1 Kitchen
+      icon: mdi:stove
+      show_in_sidebar: false
+      filename: dashboards-new/lcars-h1-kitchen.yaml
+    
+    lcars-h1-bedroom:
+      mode: yaml
+      title: H1 Bedroom
+      icon: mdi:bed-king
+      show_in_sidebar: false
+      filename: dashboards-new/lcars-h1-bedroom.yaml
+    
+    lcars-h1-office:
+      mode: yaml
+      title: H1 Office
+      icon: mdi:laptop
+      show_in_sidebar: false
+      filename: dashboards-new/lcars-h1-office.yaml
+    
+    lcars-h1-garage:
+      mode: yaml
+      title: H1 Garage
+      icon: mdi:garage
+      show_in_sidebar: false
+      filename: dashboards-new/lcars-h1-garage.yaml
+    
+    lcars-h1-outdoor:
+      mode: yaml
+      title: H1 Outdoor
+      icon: mdi:tree
+      show_in_sidebar: false
+      filename: dashboards-new/lcars-h1-outdoor.yaml
+    
+    # House 2 Dashboards
+    lcars-house2:
+      mode: yaml
+      title: House 2
+      icon: mdi:home-variant
+      show_in_sidebar: true
+      filename: dashboards-new/lcars-house2.yaml
+    
+    lcars-h2-living:
+      mode: yaml
+      title: H2 Living
+      icon: mdi:sofa
+      show_in_sidebar: false
+      filename: dashboards-new/lcars-h2-living.yaml
+    
+    lcars-h2-kitchen:
+      mode: yaml
+      title: H2 Kitchen
+      icon: mdi:stove
+      show_in_sidebar: false
+      filename: dashboards-new/lcars-h2-kitchen.yaml
+    
+    lcars-h2-bedroom:
+      mode: yaml
+      title: H2 Bedroom
+      icon: mdi:bed-king
+      show_in_sidebar: false
+      filename: dashboards-new/lcars-h2-bedroom.yaml
+    
+    lcars-h2-office:
+      mode: yaml
+      title: H2 Office
+      icon: mdi:laptop
+      show_in_sidebar: false
+      filename: dashboards-new/lcars-h2-office.yaml
+    
+    lcars-h2-garage:
+      mode: yaml
+      title: H2 Garage
+      icon: mdi:garage
+      show_in_sidebar: false
+      filename: dashboards-new/lcars-h2-garage.yaml
+    
+    lcars-h2-outdoor:
+      mode: yaml
+      title: H2 Outdoor
+      icon: mdi:tree
+      show_in_sidebar: false
+      filename: dashboards-new/lcars-h2-outdoor.yaml
+    
+    # Device Type Dashboards
+    lcars-devices-weather:
+      mode: yaml
+      title: Weather
+      icon: mdi:weather-partly-cloudy
+      show_in_sidebar: true
+      filename: dashboards-new/lcars-devices-weather.yaml
+    
+    lcars-devices-cameras:
+      mode: yaml
+      title: Cameras
+      icon: mdi:cctv
+      show_in_sidebar: true
+      filename: dashboards-new/lcars-devices-cameras.yaml
+    
+    lcars-devices-thermostats:
+      mode: yaml
+      title: Thermostats
+      icon: mdi:thermostat
+      show_in_sidebar: true
+      filename: dashboards-new/lcars-devices-thermostats.yaml
+    
+    lcars-devices-security:
+      mode: yaml
+      title: Security
+      icon: mdi:shield-home
+      show_in_sidebar: true
+      filename: dashboards-new/lcars-devices-security.yaml

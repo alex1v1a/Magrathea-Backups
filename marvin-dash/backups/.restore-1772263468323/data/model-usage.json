@@ -1,0 +1,83 @@
+{
+  "lastUpdated": "2026-02-28T07:20:00.911Z",
+  "teamConfig": {
+    "lead": "Trillian",
+    "members": [
+      "Marvin",
+      "Deep Thought",
+      "Bistromath",
+      "Trillian"
+    ],
+    "primaryModel": "moonshot/kimi-k2.5",
+    "subAgentModel": "kimi-coding/k2p5",
+    "sharedWorkspace": "\\\\10.0.1.10\\Magrathea"
+  },
+  "models": {
+    "moonshot/kimi-k2.5": {
+      "name": "Moonshot Kimi K2.5 (Primary - ALL BOTS)",
+      "role": "primary",
+      "dailyLimit": 100000,
+      "dailyUsed": 22181,
+      "monthlyCost": 50,
+      "monthlySpent": 116.89191061759131,
+      "accountBalance": -66.89191061759131,
+      "status": "ACTIVE - Use for main agent"
+    },
+    "kimi-coding/k2p5": {
+      "name": "Kimi Code K2.5 (Sub-agent - ALL BOTS)",
+      "role": "subagent",
+      "dailyLimit": 200000,
+      "dailyUsed": 22344,
+      "monthlyCost": 30,
+      "monthlySpent": 111.35952877604016,
+      "accountBalance": -81.35952877604016,
+      "status": "ACTIVE - Use for sub-tasks, spawning"
+    },
+    "minimax/MiniMax-M2.1": {
+      "name": "MiniMax M2.1 (Coding)",
+      "role": "coding",
+      "dailyLimit": 200000,
+      "dailyUsed": 19622,
+      "monthlyCost": 30,
+      "monthlySpent": 98.34627847943331,
+      "accountBalance": -68.34627847943331,
+      "status": "STANDBY - Conservative usage"
+    }
+  },
+  "teamBudget": {
+    "hourlyLimit": 2,
+    "dailyLimit": 48,
+    "weeklyLimit": 336,
+    "currentHourSpend": 0,
+    "currentDaySpend": 0,
+    "currentWeekSpend": 0,
+    "alerts": {
+      "hourly": "PAUSE if >$1.50/hour",
+      "daily": "REVIEW if >$40/day",
+      "weekly": "ESCALATE if >$300/week"
+    }
+  },
+  "sshMesh": {
+    "status": "5/6 connections working",
+    "pending": [
+      "Marvin (WSL) → Bistromath",
+      "Deep Thought → Trillian"
+    ],
+    "completed": [
+      "Trillian → Marvin",
+      "Trillian → Bistromath",
+      "Deep Thought → Marvin",
+      "Deep Thought → Bistromath",
+      "Marvin (WSL) → Deep Thought"
+    ]
+  },
+  "tasks": {
+    "1": "Change to Moonshot primary model - DONE",
+    "2": "Use Kimi-code for sub-agents - ACTIVE",
+    "3": "Move dashboard to shared workspace - DONE",
+    "4": "Study CLI docs - IN PROGRESS",
+    "5": "Complete SSH mesh - IN PROGRESS",
+    "6": "Setup heartbeat cron monitoring - PENDING"
+  },
+  "notes": "Updated per alex1v1a instructions: Trillian is lead, $2/hour limit, Moonshot primary, Kimi-code for sub-agents. Dashboard moved to shared workspace."
+}

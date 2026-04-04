@@ -1,0 +1,378 @@
+{
+  "weekOf": "2026-02-08",
+  "meals": [
+    {
+      "day": "Sunday",
+      "name": "Pan-Seared Cod with Lemon Butter",
+      "category": "seafood",
+      "estimatedCost": 28,
+      "prepTime": "20 min",
+      "difficulty": "easy",
+      "healthy": true,
+      "ingredients": [
+        {
+          "name": "Cod fillets",
+          "amount": "1.5 lbs",
+          "hebSearch": "cod fillet fresh",
+          "inStock": false
+        },
+        {
+          "name": "Unsalted butter",
+          "amount": "4 tbsp",
+          "hebSearch": "butter unsalted",
+          "inStock": false
+        },
+        {
+          "name": "Fresh lemon",
+          "amount": "2",
+          "hebSearch": "lemon",
+          "inStock": false
+        },
+        {
+          "name": "Fresh parsley",
+          "amount": "1 bunch",
+          "hebSearch": "parsley fresh",
+          "inStock": false
+        },
+        {
+          "name": "Capers",
+          "amount": "1 jar",
+          "hebSearch": "capers",
+          "inStock": false
+        },
+        {
+          "name": "White wine",
+          "amount": "1/4 cup",
+          "hebSearch": "white wine cooking",
+          "inStock": false
+        },
+        {
+          "name": "Garlic",
+          "amount": "1 bulb",
+          "hebSearch": "garlic",
+          "inStock": false
+        }
+      ],
+      "status": "modified"
+    },
+    {
+      "day": "Monday",
+      "name": "Pork Tenderloin with Roasted Vegetables",
+      "category": "american",
+      "estimatedCost": 23,
+      "prepTime": "45 min",
+      "difficulty": "medium",
+      "healthy": true,
+      "ingredients": [
+        {
+          "name": "Pork tenderloin",
+          "amount": "1.5 lbs",
+          "hebSearch": "pork tenderloin",
+          "inStock": false
+        },
+        {
+          "name": "Brussels sprouts",
+          "amount": "1.5 lbs",
+          "hebSearch": "brussels sprouts",
+          "inStock": false
+        },
+        {
+          "name": "Sweet potatoes",
+          "amount": "2 lbs",
+          "hebSearch": "sweet potatoes",
+          "inStock": false
+        },
+        {
+          "name": "Dijon mustard",
+          "amount": "1 jar",
+          "hebSearch": "dijon mustard",
+          "inStock": false
+        },
+        {
+          "name": "Fresh rosemary",
+          "amount": "1 bunch",
+          "hebSearch": "rosemary fresh",
+          "inStock": false
+        },
+        {
+          "name": "Balsamic vinegar",
+          "amount": "1 bottle",
+          "hebSearch": "balsamic vinegar",
+          "inStock": false
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "day": "Tuesday",
+      "name": "Fish Tacos with Mango Salsa",
+      "category": "mexican",
+      "estimatedCost": 26,
+      "prepTime": "30 min",
+      "difficulty": "easy",
+      "healthy": true,
+      "ingredients": [
+        {
+          "name": "White fish fillets",
+          "amount": "1.5 lbs",
+          "hebSearch": "tilapia fillet",
+          "inStock": false
+        },
+        {
+          "name": "Corn tortillas",
+          "amount": "1 pack",
+          "hebSearch": "corn tortillas",
+          "inStock": false
+        },
+        {
+          "name": "Mango",
+          "amount": "2",
+          "hebSearch": "mango",
+          "inStock": false
+        },
+        {
+          "name": "Red onion",
+          "amount": "1",
+          "hebSearch": "red onion",
+          "inStock": false
+        },
+        {
+          "name": "Jalapeno",
+          "amount": "2",
+          "hebSearch": "jalapeno",
+          "inStock": false
+        },
+        {
+          "name": "Cabbage slaw mix",
+          "amount": "1 bag",
+          "hebSearch": "coleslaw mix",
+          "inStock": false
+        },
+        {
+          "name": "Chipotle mayo",
+          "amount": "1 bottle",
+          "hebSearch": "chipotle mayo",
+          "inStock": false
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "day": "Wednesday",
+      "name": "Chicken Tikka Masala",
+      "category": "indian",
+      "estimatedCost": 22,
+      "prepTime": "45 min",
+      "difficulty": "medium",
+      "healthy": true,
+      "ingredients": [
+        {
+          "name": "Chicken thighs",
+          "amount": "2 lbs",
+          "hebSearch": "chicken thighs boneless",
+          "inStock": false
+        },
+        {
+          "name": "Greek yogurt",
+          "amount": "16 oz",
+          "hebSearch": "greek yogurt plain",
+          "inStock": false
+        },
+        {
+          "name": "Heavy cream",
+          "amount": "1 pint",
+          "hebSearch": "heavy cream",
+          "inStock": false
+        },
+        {
+          "name": "Basmati rice",
+          "amount": "2 lbs",
+          "hebSearch": "H-E-B Basmati Rice",
+          "inStock": false
+        },
+        {
+          "name": "Tikka masala sauce",
+          "amount": "1 jar",
+          "hebSearch": "tikka masala sauce",
+          "inStock": false
+        },
+        {
+          "name": "Fresh ginger",
+          "amount": "1 piece",
+          "hebSearch": "ginger root",
+          "inStock": false
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "day": "Thursday",
+      "name": "Beef Stir-Fry with Vegetables",
+      "category": "asian",
+      "estimatedCost": 24,
+      "prepTime": "20 min",
+      "difficulty": "easy",
+      "healthy": true,
+      "ingredients": [
+        {
+          "name": "Flank steak",
+          "amount": "1.5 lbs",
+          "hebSearch": "flank steak",
+          "inStock": false
+        },
+        {
+          "name": "Broccoli florets",
+          "amount": "2 heads",
+          "hebSearch": "broccoli",
+          "inStock": false
+        },
+        {
+          "name": "Bell peppers",
+          "amount": "3",
+          "hebSearch": "bell peppers",
+          "inStock": false
+        },
+        {
+          "name": "Soy sauce",
+          "amount": "1 bottle",
+          "hebSearch": "soy sauce low sodium",
+          "inStock": false
+        },
+        {
+          "name": "Sesame oil",
+          "amount": "1 bottle",
+          "hebSearch": "sesame oil",
+          "inStock": false
+        },
+        {
+          "name": "Green onions",
+          "amount": "1 bunch",
+          "hebSearch": "green onions",
+          "inStock": false
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "day": "Friday",
+      "name": "Shrimp Tacos with Cabbage Slaw",
+      "category": "mexican",
+      "estimatedCost": 25,
+      "prepTime": "25 min",
+      "difficulty": "easy",
+      "healthy": true,
+      "ingredients": [
+        {
+          "name": "Large shrimp",
+          "amount": "1.5 lbs",
+          "hebSearch": "shrimp large raw",
+          "inStock": false
+        },
+        {
+          "name": "Corn tortillas",
+          "amount": "1 pack",
+          "hebSearch": "corn tortillas",
+          "inStock": false
+        },
+        {
+          "name": "Red cabbage",
+          "amount": "1 head",
+          "hebSearch": "cabbage red",
+          "inStock": false
+        },
+        {
+          "name": "Avocado",
+          "amount": "3",
+          "hebSearch": "avocado",
+          "inStock": false
+        },
+        {
+          "name": "Lime",
+          "amount": "4",
+          "hebSearch": "lime",
+          "inStock": false
+        },
+        {
+          "name": "Cilantro",
+          "amount": "1 bunch",
+          "hebSearch": "cilantro fresh",
+          "inStock": false
+        },
+        {
+          "name": "Chipotle powder",
+          "amount": "1 container",
+          "hebSearch": "chipotle powder",
+          "inStock": false
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "day": "Saturday",
+      "name": "Vegetable Curry with Chickpeas",
+      "category": "vegetarian",
+      "estimatedCost": 18,
+      "prepTime": "35 min",
+      "difficulty": "easy",
+      "healthy": true,
+      "ingredients": [
+        {
+          "name": "Chickpeas",
+          "amount": "2 cans",
+          "hebSearch": "chickpeas",
+          "inStock": false
+        },
+        {
+          "name": "Coconut milk",
+          "amount": "2 cans",
+          "hebSearch": "coconut milk",
+          "inStock": false
+        },
+        {
+          "name": "Spinach",
+          "amount": "10 oz",
+          "hebSearch": "spinach fresh",
+          "inStock": false
+        },
+        {
+          "name": "Curry paste",
+          "amount": "1 jar",
+          "hebSearch": "curry paste",
+          "inStock": false
+        },
+        {
+          "name": "Naan bread",
+          "amount": "1 pack",
+          "hebSearch": "Stonefire Naan",
+          "inStock": false
+        },
+        {
+          "name": "Yellow onion",
+          "amount": "1",
+          "hebSearch": "yellow onion",
+          "inStock": false
+        }
+      ],
+      "status": "planned"
+    }
+  ],
+  "budget": {
+    "allocated": 200,
+    "estimatedMealCost": 166,
+    "buffer": 16.6,
+    "totalWithBuffer": 182.6,
+    "remaining": 17.400000000000006
+  },
+  "metadata": {
+    "generatedAt": "2026-02-08T15:00:19.017Z",
+    "exclusionsCount": 0,
+    "generatedBy": "DinnerAutomation v2.0"
+  },
+  "stockSummary": {
+    "totalStockItems": 0,
+    "planIngredients": 43,
+    "inStock": 0,
+    "needed": 43,
+    "stockItems": []
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "description": "Weekly meal plan exclusions - items to exclude from THIS WEEK's shopping. These reset every Saturday when new meal plan is generated.",
+  "lastUpdated": "2026-02-10T23:03:49.281Z",
+  "resetSchedule": "Every Saturday 9:00 AM",
+  "items": [
+    {
+      "name": "Olive oil",
+      "reason": "Have large bottle",
+      "addedDate": "2026-02-10",
+      "expiresDate": "2026-02-15"
+    },
+    {
+      "name": "Garlic",
+      "reason": "Plenty in pantry",
+      "addedDate": "2026-02-10",
+      "expiresDate": "2026-02-15"
+    },
+    {
+      "name": "Soy sauce",
+      "reason": "Just bought new bottle",
+      "addedDate": "2026-02-10",
+      "expiresDate": "2026-02-15"
+    },
+    {
+      "name": "Rice",
+      "reason": "Bought 10lb bag yesterday",
+      "addedDate": "2026-02-10",
+      "expiresDate": "2026-02-14"
+    }
+  ]
+}

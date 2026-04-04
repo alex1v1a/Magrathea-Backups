@@ -1,0 +1,15 @@
+# ⚠️ DEPRECATED - Security Issue Fixed
+# 
+# This file contains a HARDCODED PASSWORD and should NOT be used.
+# 
+# Use send_email_secure.py instead, which:
+# - Loads credentials from environment variables
+# - Has no hardcoded passwords
+# - Uses the same API
+#
+# Migration:
+#   OLD: python send_email_apple.py
+#   NEW: python send_email_secure.py
+#
+# Set your credentials in .env file:
+#   ICLOUD_APP_PASSWORD=your_app_specific_password

@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "createdAt": "2026-02-08T00:33:13.890Z",
+  "weekOf": "2026-02-08",
+  "systems": {
+    "email": {
+      "status": "sent",
+      "messageId": "<3884520d-94ba-9716-4e72-272a96fe1be4@icloud.com>",
+      "recipients": [
+        "alex@1v1a.com",
+        "sferrazzaa96@gmail.com"
+      ]
+    },
+    "calendar": {
+      "status": "synced",
+      "events": 5,
+      "file": "calendar-events.json"
+    },
+    "heb": {
+      "status": "launched",
+      "items": 31,
+      "method": "chrome_extension_auto"
+    }
+  },
+  "syncStatus": {
+    "allComplete": true,
+    "readyForUser": true,
+    "awaitingReplies": true
+  }
+}

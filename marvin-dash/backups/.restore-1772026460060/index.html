@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvin's Galactic Command Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-rocket"></i> Marvin's Galactic Command Center</h1>
+                <div class="quote-container">
+                    <span class="quote">"Don't Panic." - The Hitchhiker's Guide to the Galaxy</span>
+                </div>
+
+                <!-- OpenClaw Auto-Recovery Status Bar -->
+                <div class="recovery-status-bar" id="recoveryStatusBar">
+                    <div class="recovery-status-header">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>OpenClaw Auto-Recovery Status</span>
+                        <span class="recovery-last-update" id="recoveryLastUpdate">--</span>
+                    </div>
+                    <div class="recovery-services" id="recoveryServices">
+                        <!-- Services populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- AI Chat Interface -->
+                <div class="chat-interface" id="chatInterface">
+                    <div class="chat-header" id="chatHeader">
+                        <span class="chat-title">
+                            <i class="fas fa-robot"></i> 
+                            Marvin AI Assistant
+                            <span class="connection-status connecting" id="chatConnectionStatus" title="Connecting..."></span>
+                        </span>
+                        <div class="chat-header-actions">
+                            <button class="chat-clear" id="chatClear" title="Clear Chat History">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                            <button class="chat-toggle" id="chatToggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat-body" id="chatBody">
+                        <div class="chat-messages" id="chatMessages">
+                            <div class="chat-message system">
+                                <div class="message-content">
+                                    <p>Hello! I'm Marvin, your AI assistant. How can I help you today?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-input-container">
+                            <input type="text" class="chat-input" id="chatInput" placeholder="Type a message..." maxlength="500">
+                            <button class="chat-send" id="chatSend">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Monthly Spending Summary -->
+                <div class="spending-summary-header">
+                    <h3><i class="fas fa-wallet"></i> Monthly Spending</h3>
+                    <div class="spending-cards">
+                        <div class="spending-card" id="foodSpendingCard">
+                            <div class="spending-card-icon food">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="spending-card-info">
+                                <span class="spending-label">Food</span>
+                                <span class="spending-value" id="foodSpendValue">$0.00</span>
+                                <span class="spending-budget">/ $800</span>
+                            </div>
+                            <div class="spending-status" id="foodStatus"></div>
+                        </div>
+                        <div class="spending-card" id="aiSpendingCard">
+                            <div class="spending-card-icon ai">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="spending-card-info">
+                                <span class="spending-label">AI</span>
+                                <span class="spending-value" id="aiSpendValue">$0.00</span>
+                                <span class="spending-budget">/ $200</span>
+                            </div>
+                            <div class="spending-status" id="aiStatus"></div>
+                        </div>
+                        <div class="spending-card" id="billsSpendingCard">
+                            <div class="spending-card-icon bills">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <div class="spending-card-info">
+                                <span class="spending-label">Bills</span>
+                                <span class="spending-value" id="billsSpendValue">$0.00</span>
+                                <span class="spending-budget">/ $3,500</span>
+                            </div>
+                            <div class="spending-status" id="billsStatus"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side: Star Trek Logo above Last Update -->
+                <div class="header-right">
+                    <!-- Star Trek Logo linking to Home Assistant -->
+                    <div class="ha-logo-container">
+                        <a href="http://localhost:8123" target="_blank" rel="noopener noreferrer" class="ha-logo-link" title="Open Home Assistant">
+                            <svg class="ha-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="Star Trek - Home Assistant">
+                                <!-- Starfleet Command Insignia (Delta Shield) -->
+                                <defs>
+                                    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+                                        <stop offset="50%" style="stop-color:#D4AF37;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+                                    </linearGradient>
+                                    <linearGradient id="silverGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#C0C0C0;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#808080;stop-opacity:1" />
+                                    </linearGradient>
+                                    <filter id="glow">
+                                        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                        <feMerge>
+                                            <feMergeNode in="coloredBlur"/>
+                                            <feMergeNode in="SourceGraphic"/>
+                                        </feMerge>
+                                    </filter>
+                                </defs>
+                                <!-- Outer Delta Shield -->
+                                <path d="M100 15 L170 160 L100 130 L30 160 Z" fill="url(#goldGradient)" stroke="#D4AF37" stroke-width="3" filter="url(#glow)"/>
+                                <!-- Inner stylized communicator -->
+                                <ellipse cx="100" cy="95" rx="25" ry="40" fill="url(#silverGradient)" stroke="#A0A0A0" stroke-width="2"/>
+                                <!-- Top accent -->
+                                <path d="M100 35 L115 65 L100 55 L85 65 Z" fill="#E8E8E8"/>
+                                <!-- Bottom point detail -->
+                                <circle cx="100" cy="110" r="8" fill="#606060"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="header-stats">
+                        <div class="stat">
+                            <span class="stat-label">Status:</span>
+                            <span class="stat-value status-online" id="status">Online</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Last Update:</span>
+                            <span class="stat-value" id="lastUpdate">--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Tab Navigation -->
+        <nav class="tab-navigation">
+            <button class="tab-btn active" data-tab="kanban">
+                <i class="fas fa-clipboard-list"></i> Kanban Board
+            </button>
+            <button class="tab-btn" data-tab="calendar">
+                <i class="fas fa-calendar-alt"></i> Calendar
+            </button>
+            <button class="tab-btn" data-tab="analytics">
+                <i class="fas fa-chart-area"></i> Analytics
+            </button>
+            <button class="tab-btn" data-tab="expenses">
+                <i class="fas fa-dollar-sign"></i> Expenses
+            </button>
+            <button class="tab-btn" data-tab="food-spending">
+                <i class="fas fa-shopping-basket"></i> Food Spending
+            </button>
+            <button class="tab-btn" data-tab="rate-limits">
+                <i class="fas fa-tachometer-alt"></i> Rate Limits
+            </button>
+        </nav>
+
+        <!-- Analytics Tab -->
+        <section class="tab-content" id="analytics-tab">
+            <div class="analytics-container">
+                <!-- Historical Data Controls -->
+                    <section class="controls-section">
+                        <h3><i class="fas fa-filter"></i> Historical Data Filters</h3>
+                        <div class="controls-container">
+                            <div class="control-group">
+                                <label for="startDate">Start Date:</label>
+                                <input type="date" id="startDate">
+                            </div>
+                            <div class="control-group">
+                                <label for="endDate">End Date:</label>
+                                <input type="date" id="endDate">
+                            </div>
+                            <div class="control-group">
+                                <label for="modelFilter">Model:</label>
+                                <select id="modelFilter">
+                                    <option value="">All Models</option>
+                                    <option value="openai-codex/gpt-5.2">GPT-5.2 (Primary)</option>
+                                    <option value="anthropic/claude-opus-4-5">Claude Opus 4.5</option>
+                                    <option value="openrouter/anthropic/claude-sonnet-4">Claude Sonnet 4 (OpenRouter)</option>
+                                    <option value="minimax/abab6.5s-chat">MiniMax ABAB 6.5s</option>
+                                    <option value="openrouter/openai/gpt-4o">OpenRouter GPT-4o</option>
+                                    <option value="openrouter/google/gemini-2.0-flash-001">OpenRouter Gemini 2.0</option>
+                                </select>
+                            </div>
+                            <div class="control-group">
+                                <button id="applyFilters" class="apply-filters-btn">
+                                    <i class="fas fa-search"></i> Apply Filters
+                                </button>
+                            </div>
+                            <div class="control-group">
+                                <button id="resetFilters" class="reset-filters-btn">
+                                    <i class="fas fa-undo"></i> Reset to Live
+                                </button>
+                            </div>
+                        </div>
+                        <div class="history-info" id="historyInfo">
+                            <span id="historyStatus">Showing live data</span>
+                            <span id="historySize">History size: Loading...</span>
+                        </div>
+                    </section>
+
+                    <!-- Usage Graph Section -->
+                    <section class="graph-section">
+                        <h3><i class="fas fa-chart-line"></i> Model Usage Over Time</h3>
+                        <div class="graph-container">
+                            <canvas id="usageChart"></canvas>
+                        </div>
+                    </section>
+
+                    <!-- Spending Graph Section -->
+                    <section class="graph-section">
+                        <h3><i class="fas fa-dollar-sign"></i> Model Spending Over Time</h3>
+                        <div class="graph-container">
+                            <canvas id="spendingChart"></canvas>
+                        </div>
+                    </section>
+
+                    <!-- Combined Totals Table -->
+                    <section class="totals-section">
+                        <h3><i class="fas fa-calculator"></i> Combined Totals - All Models</h3>
+                        <div class="totals-table-container">
+                            <table class="totals-table" id="totalsTable">
+                                <thead>
+                                    <tr>
+                                        <th>Period</th>
+                                        <th>Total Tokens</th>
+                                        <th>Total Spending</th>
+                                        <th>Avg. Cost per 1K Tokens</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="period-label">Daily</td>
+                                        <td class="token-value" id="dailyTokens">-</td>
+                                        <td class="spending-value" id="dailySpending">-</td>
+                                        <td class="cost-per-token" id="dailyCostPer1k">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="period-label">Weekly</td>
+                                        <td class="token-value" id="weeklyTokens">-</td>
+                                        <td class="spending-value" id="weeklySpending">-</td>
+                                        <td class="cost-per-token" id="weeklyCostPer1k">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="period-label">Monthly</td>
+                                        <td class="token-value" id="monthlyTokens">-</td>
+                                        <td class="spending-value" id="monthlySpending">-</td>
+                                        <td class="cost-per-token" id="monthlyCostPer1k">-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- Individual Model Efficiency Table -->
+                    <section class="efficiency-section">
+                        <h3><i class="fas fa-balance-scale"></i> Model Efficiency Breakdown</h3>
+                        <div class="efficiency-table-container">
+                            <table class="efficiency-table" id="efficiencyTable">
+                                <thead>
+                                    <tr>
+                                        <th>Model</th>
+                                        <th>Daily Tokens</th>
+                                        <th>Daily Cost</th>
+                                        <th>Cost per 1K Tokens</th>
+                                        <th>Monthly Projection</th>
+                                        <th>Efficiency Rating</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="efficiencyTableBody">
+                                    <!-- Model efficiency rows will be populated here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- Summary Statistics Section -->
+                    <section class="summary-section">
+                        <h3><i class="fas fa-chart-bar"></i> Usage & Spending Summary</h3>
+                        <div class="summary-grid">
+                            <div class="summary-chart-container">
+                                <h4>Total Tokens Used</h4>
+                                <canvas id="tokenSummaryChart"></canvas>
+                            </div>
+                            <div class="summary-chart-container">
+                                <h4>Total Spending</h4>
+                                <canvas id="spendingSummaryChart"></canvas>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Model Usage Section -->
+                    <section class="usage-section">
+                        <h3><i class="fas fa-chart-pie"></i> Individual Model Status</h3>
+                        <div class="usage-grid" id="usageGrid">
+                            <!-- Model usage cards will be populated here -->
+                        </div>
+                    </section>
+                </div>
+        </section>
+
+        <!-- Expenses Tab -->
+        <section class="tab-content" id="expenses-tab">
+            <div class="expenses-container">
+                <!-- Budget Overview Cards -->
+                <section class="budget-overview">
+                    <h2><i class="fas fa-wallet"></i> Monthly Budget Overview</h2>
+                    <div class="budget-cards">
+                        <div class="budget-card total">
+                            <div class="budget-icon"><i class="fas fa-coins"></i></div>
+                            <div class="budget-info">
+                                <span class="budget-label">Total Budget</span>
+                                <span class="budget-value" id="totalBudget">$200.00</span>
+                            </div>
+                        </div>
+                        <div class="budget-card spent">
+                            <div class="budget-icon"><i class="fas fa-receipt"></i></div>
+                            <div class="budget-info">
+                                <span class="budget-label">Total Spent</span>
+                                <span class="budget-value" id="totalSpent">$0.00</span>
+                            </div>
+                        </div>
+                        <div class="budget-card remaining">
+                            <div class="budget-icon"><i class="fas fa-piggy-bank"></i></div>
+                            <div class="budget-info">
+                                <span class="budget-label">Remaining</span>
+                                <span class="budget-value" id="totalRemaining">$0.00</span>
+                            </div>
+                        </div>
+                        <div class="budget-card daily">
+                            <div class="budget-icon"><i class="fas fa-calendar-day"></i></div>
+                            <div class="budget-info">
+                                <span class="budget-label">Daily Average</span>
+                                <span class="budget-value" id="dailyAverage">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Overall Budget Progress -->
+                    <div class="overall-progress">
+                        <div class="progress-header">
+                            <span>Overall Budget Usage</span>
+                            <span id="overallPercent">0%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="overallProgressBar" style="width: 0%"></div>
+                        </div>
+                        <div class="progress-status" id="overallStatus">On Track</div>
+                    </div>
+                </section>
+
+                <!-- Provider Breakdown -->
+                <section class="provider-breakdown">
+                    <h2><i class="fas fa-building"></i> Provider Breakdown</h2>
+                    <div class="provider-grid" id="providerGrid">
+                        <!-- Provider cards will be populated here -->
+                    </div>
+                </section>
+
+                <!-- Expense Chart -->
+                <section class="expense-chart-section">
+                    <h2><i class="fas fa-chart-pie"></i> Spending by Provider</h2>
+                    <div class="expense-chart-container">
+                        <canvas id="expenseChart"></canvas>
+                    </div>
+                </section>
+
+                <!-- Detailed Model Expenses -->
+                <section class="model-expenses">
+                    <h2><i class="fas fa-list-alt"></i> Model Expense Details</h2>
+                    <div class="model-expenses-table-container">
+                        <table class="model-expenses-table" id="modelExpensesTable">
+                            <thead>
+                                <tr>
+                                    <th>Provider</th>
+                                    <th>Model</th>
+                                    <th>Monthly Budget</th>
+                                    <th>Spent</th>
+                                    <th>Remaining</th>
+                                    <th>Usage %</th>
+                                </tr>
+                            </thead>
+                            <tbody id="modelExpensesTableBody">
+                                <!-- Model expense rows will be populated here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Rate Limits Tab -->
+        <section class="tab-content" id="rate-limits-tab">
+            <div class="rate-limits-container">
+                <!-- Status Overview -->
+                <section class="rate-limits-overview">
+                    <h2><i class="fas fa-tachometer-alt"></i> Rate Limits Status</h2>
+                    <div class="status-cards">
+                        <div class="status-card available">
+                            <div class="status-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="status-count" id="availableCount">0</div>
+                            <div class="status-label">Available</div>
+                        </div>
+                        <div class="status-card warning">
+                            <div class="status-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="status-count" id="warningCount">0</div>
+                            <div class="status-label">Warning</div>
+                        </div>
+                        <div class="status-card limited">
+                            <div class="status-icon"><i class="fas fa-ban"></i></div>
+                            <div class="status-count" id="limitedCount">0</div>
+                            <div class="status-label">Rate Limited</div>
+                        </div>
+                        <div class="status-card cooldown">
+                            <div class="status-icon"><i class="fas fa-hourglass-half"></i></div>
+                            <div class="status-count" id="cooldownCount">0</div>
+                            <div class="status-label">On Cooldown</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Rate Limits Grid -->
+                <section class="rate-limits-grid-section">
+                    <h2><i class="fas fa-server"></i> Model Status</h2>
+                    <div class="rate-limits-grid" id="rateLimitsGrid">
+                        <!-- Rate limit cards will be populated here -->
+                    </div>
+                </section>
+
+                <!-- Cooldown Section -->
+                <section class="cooldown-section" id="cooldownSection">
+                    <h2><i class="fas fa-clock"></i> Active Cooldowns</h2>
+                    <div class="cooldown-list" id="cooldownList">
+                        <!-- Cooldown timers will be populated here -->
+                    </div>
+                </section>
+
+                <!-- Rate Limits Table -->
+                <section class="rate-limits-table-section">
+                    <h2><i class="fas fa-table"></i> Detailed Rate Limits</h2>
+                    <div class="rate-limits-table-container">
+                        <table class="rate-limits-table" id="rateLimitsTable">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>Provider</th>
+                                    <th>Status</th>
+                                    <th>Daily Usage</th>
+                                    <th>Budget Usage</th>
+                                    <th>Rate Limit</th>
+                                    <th>Auth</th>
+                                </tr>
+                            </thead>
+                            <tbody id="rateLimitsTableBody">
+                                <!-- Rate limit rows will be populated here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Kanban Board Tab -->
+        <section class="tab-content active" id="kanban-tab">
+            <section class="kanban-section">
+                <h2><i class="fas fa-clipboard-list"></i> Project & Task Management</h2>
+                <div class="kanban-board">
+                    <div class="kanban-column" data-column="todo">
+                        <div class="column-header">
+                            <h3><i class="fas fa-list"></i> To Do</h3>
+                            <button class="add-task-btn" data-column="todo">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="task-list" id="todo-tasks">
+                            <!-- Tasks will be populated here -->
+                        </div>
+                    </div>
+
+                    <div class="kanban-column" data-column="inprogress">
+                        <div class="column-header">
+                            <h3><i class="fas fa-play"></i> In Progress</h3>
+                            <button class="add-task-btn" data-column="inprogress">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="task-list" id="inprogress-tasks">
+                            <!-- Tasks will be populated here -->
+                        </div>
+                    </div>
+
+                    <div class="kanban-column" data-column="review">
+                        <div class="column-header">
+                            <h3><i class="fas fa-eye"></i> Review</h3>
+                            <button class="add-task-btn" data-column="review">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="task-list" id="review-tasks">
+                            <!-- Tasks will be populated here -->
+                        </div>
+                    </div>
+
+                    <div class="kanban-column" data-column="completed">
+                        <div class="column-header">
+                            <h3><i class="fas fa-check"></i> Completed</h3>
+                        </div>
+                        <div class="task-list" id="completed-tasks">
+                            <!-- Tasks will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Task History Section -->
+            <section class="task-history-section">
+                <h3><i class="fas fa-history"></i> Task Completion History</h3>
+                
+                <button class="view-history-btn" onclick="dashboard.loadTaskHistory(20, 0); this.style.display='none'; document.getElementById('taskHistoryContainer').style.display='block';">
+                    <i class="fas fa-list-check"></i> View Completed Tasks History
+                </button>
+                
+                <div id="taskHistoryContainer" style="display: none;">
+                    <!-- Task history will be loaded here -->
+                    <div class="no-history">Click "View Completed Tasks History" to see your completed tasks!</div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Food Spending Tab -->
+        <section class="tab-content" id="food-spending-tab">
+            <div class="food-spending-container">
+                <!-- Budget Overview Cards -->
+                <section class="food-budget-overview">
+                    <h2><i class="fas fa-shopping-basket"></i> Food Spending Tracker</h2>
+                    <div class="food-budget-cards">
+                        <div class="food-budget-card weekly">
+                            <div class="food-budget-icon"><i class="fas fa-calendar-week"></i></div>
+                            <div class="food-budget-info">
+                                <span class="food-budget-label">Weekly Budget</span>
+                                <span class="food-budget-value">$200.00</span>
+                            </div>
+                        </div>
+                        <div class="food-budget-card spent">
+                            <div class="food-budget-icon"><i class="fas fa-receipt"></i></div>
+                            <div class="food-budget-info">
+                                <span class="food-budget-label">This Week</span>
+                                <span class="food-budget-value" id="foodWeeklySpent">$0.00</span>
+                            </div>
+                        </div>
+                        <div class="food-budget-card monthly">
+                            <div class="food-budget-icon"><i class="fas fa-calendar-alt"></i></div>
+                            <div class="food-budget-info">
+                                <span class="food-budget-label">Monthly Total</span>
+                                <span class="food-budget-value" id="foodMonthlySpent">$0.00</span>
+                            </div>
+                        </div>
+                        <div class="food-budget-card remaining">
+                            <div class="food-budget-icon"><i class="fas fa-piggy-bank"></i></div>
+                            <div class="food-budget-info">
+                                <span class="food-budget-label">Remaining</span>
+                                <span class="food-budget-value" id="foodRemaining">$800.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Weekly Budget Progress -->
+                    <div class="food-weekly-progress">
+                        <div class="progress-header">
+                            <span>Weekly Budget Usage</span>
+                            <span id="foodWeeklyPercent">0%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="foodWeeklyProgressBar" style="width: 0%"></div>
+                        </div>
+                        <div class="progress-status" id="foodWeeklyStatus">On Track</div>
+                    </div>
+                </section>
+
+                <!-- Category Breakdown -->
+                <section class="food-category-breakdown">
+                    <h2><i class="fas fa-chart-pie"></i> Spending by Category</h2>
+                    <div class="food-category-grid" id="foodCategoryGrid">
+                        <!-- Populated by JS -->
+                    </div>
+                </section>
+
+                <!-- Monthly Trends Chart -->
+                <section class="food-trends-section">
+                    <h2><i class="fas fa-chart-line"></i> Monthly Trends (6 Months)</h2>
+                    <div class="food-chart-container">
+                        <canvas id="foodTrendsChart"></canvas>
+                    </div>
+                </section>
+
+                <!-- Purchase History Table -->
+                <section class="food-history-section">
+                    <h2><i class="fas fa-history"></i> HEB Purchase History (6 Months)</h2>
+                    <div class="food-history-controls">
+                        <div class="control-group">
+                            <label for="foodCategoryFilter">Category:</label>
+                            <select id="foodCategoryFilter">
+                                <option value="">All Categories</option>
+                                <option value="groceries">Groceries</option>
+                                <option value="fruits-snacks">Fruits/Snacks</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="foodMonthFilter">Month:</label>
+                            <select id="foodMonthFilter">
+                                <option value="">All Months</option>
+                                <!-- Populated by JS -->
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <button id="refreshFoodData" class="apply-filters-btn">
+                                <i class="fas fa-sync"></i> Refresh
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="food-history-table-container">
+                        <table class="food-history-table" id="foodHistoryTable">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Store</th>
+                                    <th>Category</th>
+                                    <th>Items</th>
+                                    <th>Amount</th>
+                                    <th>Payment</th>
+                                </tr>
+                            </thead>
+                            <tbody id="foodHistoryTableBody">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Weekly Dinner Plan PDF Generator -->
+                <section class="dinner-plan-section">
+                    <h2><i class="fas fa-file-pdf"></i> Weekly Dinner Plan PDF</h2>
+                    <div class="dinner-plan-controls">
+                        <div class="control-group">
+                            <label for="dinnerPlanWeek">Week Starting:</label>
+                            <input type="date" id="dinnerPlanWeek">
+                        </div>
+                        <div class="control-group">
+                            <label for="dinnerPlanEmail">Email To:</label>
+                            <input type="email" id="dinnerPlanEmail" value="alex@1v1a.com" placeholder="Enter email">
+                        </div>
+                        <div class="control-group">
+                            <button id="generateDinnerPlan" class="primary-btn">
+                                <i class="fas fa-envelope"></i> Generate & Email PDF
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div id="dinnerPlanStatus" class="dinner-plan-status hidden">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <span>Generating PDF and sending email...</span>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Calendar Tab -->
+        <section class="tab-content" id="calendar-tab">
+            <div class="calendar-container">
+                <!-- Calendar Header -->
+                <div class="calendar-header">
+                    <h2><i class="fas fa-calendar-alt"></i> Task Calendar</h2>
+                    <div class="calendar-controls">
+                        <div class="calendar-view-toggle">
+                            <button class="view-btn active" data-view="month"><i class="fas fa-th"></i> Month</button>
+                            <button class="view-btn" data-view="week"><i class="fas fa-columns"></i> Week</button>
+                        </div>
+                        <div class="calendar-navigation">
+                            <button class="nav-btn" id="prevPeriod"><i class="fas fa-chevron-left"></i></button>
+                            <button class="today-btn" id="goToToday">Today</button>
+                            <button class="nav-btn" id="nextPeriod"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar Title -->
+                <div class="calendar-title" id="calendarTitle">
+                    <span id="currentMonthYear">February 2026</span>
+                </div>
+
+                <!-- Month View -->
+                <div class="calendar-month-view" id="monthView">
+                    <div class="calendar-weekdays">
+                        <div class="weekday">Sun</div>
+                        <div class="weekday">Mon</div>
+                        <div class="weekday">Tue</div>
+                        <div class="weekday">Wed</div>
+                        <div class="weekday">Thu</div>
+                        <div class="weekday">Fri</div>
+                        <div class="weekday">Sat</div>
+                    </div>
+                    <div class="calendar-grid" id="monthGrid">
+                        <!-- Days will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Week View -->
+                <div class="calendar-week-view hidden" id="weekView">
+                    <div class="week-header" id="weekHeader">
+                        <!-- Week days header will be populated by JavaScript -->
+                    </div>
+                    <div class="week-grid" id="weekGrid">
+                        <!-- Time slots will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Task Legend -->
+                <div class="calendar-legend">
+                    <div class="legend-item">
+                        <span class="legend-dot todo"></span>
+                        <span class="legend-label">To Do</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot inprogress"></span>
+                        <span class="legend-label">In Progress</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot review"></span>
+                        <span class="legend-label">Review</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot completed"></span>
+                        <span class="legend-label">Completed</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Add Task Modal -->
+    <div class="modal" id="addTaskModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Task</h3>
+                <button class="close-btn" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="addTaskForm">
+                <div class="form-group">
+                    <label for="taskTitle">Title</label>
+                    <input type="text" id="taskTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="taskDescription">Description</label>
+                    <textarea id="taskDescription" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="taskPriority">Priority</label>
+                    <select id="taskPriority">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="taskTags">Tags (comma-separated)</label>
+                    <input type="text" id="taskTags" placeholder="e.g., finance, urgent, business">
+                </div>
+                <div class="form-group">
+                    <label for="taskDueDate">Due Date</label>
+                    <input type="date" id="taskDueDate" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="cancelTask">Cancel</button>
+                    <button type="submit" class="primary">Add Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

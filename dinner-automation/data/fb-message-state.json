@@ -1,0 +1,45 @@
+{
+  "lastCheck": "2026-02-07T22:05:00Z",
+  "conversations": [
+    {
+      "id": "audrey-thule-box",
+      "sender": "Audrey",
+      "item": "Thule box with clamps",
+      "preview": "Audrey reacted 👍 to your message",
+      "date": "2026-01-27",
+      "keywordsMatched": ["thule", "box"],
+      "status": "active",
+      "listingPrice": "$650"
+    },
+    {
+      "id": "evan-f150",
+      "sender": "Evan",
+      "item": "2018 Ford F-150 · STX",
+      "preview": "?",
+      "date": "2026-01-22",
+      "keywordsMatched": ["f-150", "f150", "truck"],
+      "status": "pending_response",
+      "listingPrice": "$26,500"
+    },
+    {
+      "id": "boni-f150",
+      "sender": "Boni",
+      "item": "2018 Ford F-150",
+      "preview": "You can probably get lower now with the drop in interest rates recently",
+      "date": "2026-01-05",
+      "keywordsMatched": ["f-150", "f150", "truck"],
+      "status": "active",
+      "listingPrice": "Unknown"
+    },
+    {
+      "id": "tyler-thule-box",
+      "sender": "Tyler",
+      "item": "Thule box with clamps",
+      "preview": "Lowest",
+      "date": "2026-01-11",
+      "keywordsMatched": ["thule", "box"],
+      "status": "price_negotiation",
+      "listingPrice": "Unknown"
+    }
+  ]
+}

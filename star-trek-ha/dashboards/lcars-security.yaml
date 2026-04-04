@@ -1,0 +1,290 @@
+# ==========================================
+# LCARS SECURITY - Protection Dashboard
+# ==========================================
+# Locks, alarms, cameras, and security systems
+# Color Scheme: Red (#CC4444) - Alert/Security
+# ==========================================
+
+title: LCARS Security
+path: lcars-security
+icon: mdi:shield
+badges: []
+cards:
+  # ==========================================
+  # LEFT COLUMN - Navigation Sidebar
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        card_mod:
+          class: header-left
+          style: |
+            ha-card {
+              background: #CC4444 !important;
+            }
+        content: '# NAVIGATION'
+
+      - type: button
+        name: "BRIDGE"
+        icon: mdi:star-four-points
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-bridge
+        card_mod:
+          class: button-lozenge-left
+
+      - type: button
+        name: "ENGINEERING"
+        icon: mdi:engine
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-engineering
+        card_mod:
+          class: button-lozenge-left
+
+      - type: button
+        name: "SCIENCE"
+        icon: mdi:telescope
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-science
+        card_mod:
+          class: button-lozenge-left
+
+      - type: button
+        name: "SECURITY"
+        icon: mdi:shield
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-security
+        card_mod:
+          class: button-lozenge-left
+          style: |
+            ha-card {
+              background: #FF8888 !important;
+              border-left: 8px solid #CC4444 !important;
+            }
+
+      - type: button
+        name: "QUARTERS"
+        icon: mdi:bed
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-quarters
+        card_mod:
+          class: button-lozenge-left
+
+      - type: markdown
+        card_mod:
+          class: footer-left
+          style: |
+            ha-card {
+              min-height: 60px !important;
+            }
+        content: '## USS HOME'
+
+  # ==========================================
+  # CENTER COLUMN - Alarm & Locks
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      # Security Header
+      - type: markdown
+        card_mod:
+          class: header-contained
+          style: |
+            ha-card {
+              background: #CC4444 !important;
+            }
+        content: '# SECURITY STATION'
+
+      # Alarm Control
+      - type: alarm-panel
+        entity: alarm_control_panel.home
+        states:
+          - arm_home
+          - arm_away
+          - disarm
+        card_mod:
+          class: middle-contained
+
+      # Door Locks
+      - type: markdown
+        card_mod:
+          class: header-contained
+        content: '# ACCESS CONTROL'
+
+      - type: grid
+        columns: 2
+        card_mod:
+          class: middle-contained
+        cards:
+          - type: button
+            entity: lock.front_door
+            name: "Front Door"
+            show_name: true
+            show_icon: true
+            show_state: true
+            card_mod:
+              class: button-lozenge-left
+
+          - type: button
+            entity: lock.back_door
+            name: "Back Door"
+            show_name: true
+            show_icon: true
+            show_state: true
+            card_mod:
+              class: button-lozenge-right
+
+          - type: button
+            entity: lock.garage_door
+            name: "Garage"
+            show_name: true
+            show_icon: true
+            show_state: true
+            card_mod:
+              class: button-lozenge-left
+
+          - type: button
+            entity: lock.side_gate
+            name: "Side Gate"
+            show_name: true
+            show_icon: true
+            show_state: true
+            card_mod:
+              class: button-lozenge-right
+
+      # Quick Actions
+      - type: markdown
+        card_mod:
+          class: header-contained
+        content: '# SECURITY ACTIONS'
+
+      - type: horizontal-stack
+        card_mod:
+          class: middle-contained
+        cards:
+          - type: button
+            name: "Lock All"
+            icon: mdi:lock
+            show_name: true
+            show_icon: true
+            tap_action:
+              action: call-service
+              service: lock.lock
+              target:
+                entity_id: all
+            card_mod:
+              class: button-bullet-left
+
+          - type: button
+            name: "Unlock All"
+            icon: mdi:lock-open
+            show_name: true
+            show_icon: true
+            tap_action:
+              action: call-service
+              service: lock.unlock
+              target:
+                entity_id: all
+            card_mod:
+              class: button-bullet-right
+
+      # Footer
+      - type: markdown
+        card_mod:
+          class: footer-contained
+        content: '## SECURITY ACTIVE'
+
+  # ==========================================
+  # RIGHT COLUMN - Sensors & Cameras
+  # ==========================================
+  - type: vertical-stack
+    cards:
+      # Sensors Header
+      - type: markdown
+        card_mod:
+          class: header-right
+          style: |
+            ha-card {
+              background: #CC4444 !important;
+            }
+        content: '# SENSOR ARRAY'
+
+      # Motion Sensors
+      - type: entities
+        entities:
+          - entity: binary_sensor.front_door_motion
+            name: "Front Motion"
+          - entity: binary_sensor.back_door_motion
+            name: "Back Motion"
+          - entity: binary_sensor.living_room_motion
+            name: "Living Room"
+          - entity: binary_sensor.hallway_motion
+            name: "Hallway"
+        card_mod:
+          class: middle-right
+
+      # Door/Window Sensors
+      - type: markdown
+        card_mod:
+          class: header-right
+        content: '# HULL BREACH MONITORS'
+
+      - type: entities
+        entities:
+          - entity: binary_sensor.front_door_sensor
+            name: "Front Door"
+          - entity: binary_sensor.back_door_sensor
+            name: "Back Door"
+          - entity: binary_sensor.garage_door_sensor
+            name: "Garage Door"
+          - entity: binary_sensor.living_room_window
+            name: "Living Room Window"
+          - entity: binary_sensor.bedroom_window
+            name: "Bedroom Window"
+        card_mod:
+          class: middle-right
+
+      # Camera Access
+      - type: markdown
+        card_mod:
+          class: header-right
+        content: '# VISUAL SENSORS'
+
+      - type: button
+        entity: camera.front_door_camera
+        name: "Front Door Camera"
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: more-info
+        card_mod:
+          class: button-lozenge-right
+
+      - type: button
+        entity: camera.backyard_camera
+        name: "Backyard Camera"
+        show_name: true
+        show_icon: true
+        tap_action:
+          action: more-info
+        card_mod:
+          class: button-lozenge-right
+
+      # Footer
+      - type: markdown
+        card_mod:
+          class: footer-right
+        content: '## PERIMETER SECURE'

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!--
+  ==============================================================================
+  INDIVIDUAL BLOG POST PAGE: How We Validated Reel Reviews
+  ==============================================================================
+  
+  POST DETAILS:
+  - Title: How We Validated Reel Reviews Before Writing Code
+  - Slug: validating-ideas
+  - Category: Product
+  - Date: March 1, 2026
+  - Author: Paper Trail Team
+  - Reading Time: 7 min read
+  
+  CSS: /blog/blog-v4.css
+  ==============================================================================
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Customer development techniques that saved us months of wasted effort.">
+    
+    <title>How We Validated Reel Reviews Before Writing Code | The Paper Trail</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/blog/blog-v4.css">
+</head>
+<body class="post-page">
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <nav class="main-nav">
+                <a href="/" class="brand" aria-label="Paper Trail - Back to home">
+                    <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect width="48" height="48" rx="8" fill="#dc2626"/>
+                        <path d="M14 12h20v4H14v-4zm0 10h20v4H14v-4zm0 10h14v4H14v-4z" fill="white"/>
+                    </svg>
+                    <span>Paper Trail</span>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/blog/" class="nav-link active">Blog</a></li>
+                    <li><a href="/apps/reel-reviews/" class="nav-link">Reel Reviews</a></li>
+                    <li><a href="/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <header class="post-header">
+            <div class="post-meta">
+                <span class="post-category">Product</span>
+                <span class="post-date">March 1, 2026</span>
+                <span class="reading-time">7 min read</span>
+            </div>
+            
+            <h1 class="post-header-title">How We Validated Reel Reviews Before Writing Code</h1>
+            
+            <p class="post-header-excerpt">
+                Customer development techniques that saved us months of wasted effort.
+            </p>
+            
+            <div class="post-author" style="justify-content: center; margin-top: 24px;">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                    <span class="author-name">Paper Trail Team</span>
+                    <span class="author-title">Founders</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="post-featured-image gradient-green" role="img" aria-label="Featured image for Validating Reel Reviews post">
+            </div>
+        </div>
+
+        <article class="post-content">
+            <div class="post-body">
+                <p>
+                    The idea for Reel Reviews came from a simple observation: we were spending 
+                    way too much time reading positive reviews to find the one negative nugget 
+                    that would actually tell us something useful. But was this a problem others 
+                    had? We didn't know. So we spent two weeks finding out before writing a 
+                    single line of code.
+                </p>
+
+                <h2>Step 1: The Problem Interview</h2>
+                
+                <p>
+                    We started with 30-minute interviews. Not pitches—interviews. We talked to 
+                    40 people about how they make decisions about restaurants, hotels, and services. 
+                    We didn't mention our idea. We just listened.
+                </p>
+
+                <p><strong>Key questions we asked:</strong></p>
+                <ul>
+                    <li>Walk me through the last time you tried a new restaurant. How did you decide?</li>
+                    <li>What do you look for in reviews? What makes a review helpful?</li>
+                    <li>Have you ever been disappointed after reading mostly positive reviews?</li>
+                    <li>How do you filter through review sites today?</li>
+                </ul>
+
+                <p>
+                    The pattern was clear: people were frustrated. They felt like positive reviews 
+                    were inflated, incentivized, or fake. But they also felt guilty for focusing 
+                    on negative feedback. One person called it "looking for problems." Another 
+                    said, "I know I shouldn't be so negative, but..."
+                </p>
+
+                <h2>Step 2: The Solution Sketch</h2>
+                
+                <p>
+                    After validating the problem, we sketched solutions. Not mockups—hand-drawn 
+                    sketches on paper. We showed them to the same people we'd interviewed.
+                </p>
+
+                <p>
+                    The first sketches were wrong. We showed a traditional review app with a 
+                    "sort by negative" option. People didn't get it. "Why would I want to see 
+                    only bad reviews?" they asked.
+                </p>
+
+                <p>
+                    The breakthrough came when we reframed it. Instead of "negative reviews," 
+                    we called them "honest reviews" or "what to watch out for." The positioning 
+                    mattered as much as the feature.
+                </p>
+
+                <h2>Step 3: The Fake Door Test</h2>
+                
+                <p>
+                    Before building, we created a landing page with a "Download the App" button. 
+                    The app didn't exist. When people clicked, they saw: "Coming soon! Leave your 
+                    email to be first to try it."
+                </p>
+
+                <p>
+                    We ran $100 of targeted ads to people interested in restaurant reviews and 
+                    local discovery. The click-through rate was 4.2%. More importantly, 60% of 
+                    clickers left their email. That was enough signal to proceed.
+                </p>
+
+                <h2>Step 4: The Concierge MVP</h2>
+                
+                <p>
+                    Our first "product" wasn't an app. It was a simple form where people could 
+                    text us a restaurant name, and we'd manually compile the negative reviews 
+                    from various sources and text them back.
+                </p>
+
+                <p>
+                    It was janky. It took us 10-15 minutes per request. But it proved the value 
+                    proposition. People used it. They came back. They told friends. We processed 
+                    200 requests over two weeks before shutting it down to build the real thing.
+                </p>
+
+                <h2>What We Learned</h2>
+                
+                <p>
+                    <strong>Validation isn't about certainty.</strong> It's about reducing risk. 
+                    We didn't prove Reel Reviews would be a huge success. We just proved that:
+                </p>
+
+                <ol>
+                    <li>The problem was real and painful</li>
+                    <li>Our framing of the solution resonated</li>
+                    <li>People would take action (click, sign up, use a manual service)</li>
+                </ol>
+
+                <p>
+                    That's enough to justify building. If any of those three hadn't been true, 
+                    we would have pivoted or killed the idea—saving months of development time.
+                </p>
+
+                <h2>The Cost of Skipping Validation</h2>
+                
+                <p>
+                    We've made this mistake before. Our first app (now sunsetted) was built on 
+                    assumptions. We spent six months developing something nobody wanted. The 
+                    technical execution was perfect. The market fit was nonexistent.
+                </p>
+
+                <p>
+                    The two weeks we spent validating Reel Reviews felt slow in the moment. In 
+                    retrospect, they were the fastest weeks we spent. They gave us confidence. 
+                    They gave us customer quotes to guide development. They gave us a waitlist 
+                    of excited users before launch.
+                </p>
+
+                <blockquote>
+                    "Build it and they will come" is a lie. Build it <em>after</em> they ask for 
+                    it. That's the difference between product-market fit and product-market hope.
+                </blockquote>
+
+                <p>
+                    If you're working on something new, take the time to validate. Your future 
+                    self will thank you.
+                </p>
+            </div>
+        </article>
+
+        <!-- Post Navigation -->
+        <nav class="post-navigation" aria-label="Post navigation">
+            <a href="#" class="post-nav-link" aria-disabled="true" style="opacity: 0.5;">
+                <div class="post-nav-label">Previous</div>
+                <div class="post-nav-title">No older posts</div>
+            </a>
+            
+            <a href="/blog/posts/day-in-life.html" class="post-nav-link">
+                <div class="post-nav-label">Next</div>
+                <div class="post-nav-title">A Day in the Life: Running an App Company from Auckland</div>
+            </a>
+        </nav>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="brand" aria-label="Paper Trail - Back to home">
+                        <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="48" height="48" rx="8" fill="#dc2626"/>
+                            <path d="M14 12h20v4H14v-4zm0 10h20v4H14v-4zm0 10h14v4H14v-4z" fill="white"/>
+                        </svg>
+                        <span>Paper Trail</span>
+                    </a>
+                    <p class="footer-description">Writing the future of mobile experiences from New Zealand.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="/apps/reel-reviews/">Reel Reviews</a></li>
+                        <li><a href="/apps/coming-soon/">Coming Soon</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/privacy-policy.html">Privacy</a></li>
+                        <li><a href="/terms-of-service.html">Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:admin@typewrite.club">Email</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Paper Trail Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

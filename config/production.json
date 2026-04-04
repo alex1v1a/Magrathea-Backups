@@ -1,0 +1,27 @@
+{
+  "environment": "production",
+  "browser": {
+    "headless": true,
+    "slowMo": 0
+  },
+  "logging": {
+    "level": "info",
+    "console": false,
+    "file": true
+  },
+  "antiBot": {
+    "minDelay": 3000,
+    "maxDelay": 8000
+  },
+  "metrics": {
+    "enabled": true,
+    "retentionDays": 90
+  },
+  "email": {
+    "smtp": {
+      "pool": true,
+      "maxConnections": 2,
+      "rateLimit": 5
+    }
+  }
+}

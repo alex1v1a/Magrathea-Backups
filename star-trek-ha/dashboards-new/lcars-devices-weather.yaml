@@ -1,0 +1,72 @@
+title: LCARS Weather Command
+path: lcars-devices-weather
+icon: mdi:weather-partly-cloudy
+badges: []
+cards:
+  - type: markdown
+    card_mod:
+      class: header-left
+    content: '# WEATHER OPERATIONS'
+
+  - type: grid
+    columns: 2
+    square: false
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '# HOUSE 1 — WEATHER'
+          - type: weather-forecast
+            entity: weather.house1
+            show_current: true
+            show_forecast: true
+            card_mod:
+              class: middle-contained
+          - type: entities
+            card_mod:
+              class: middle-contained
+            entities:
+              - entity: sensor.house1_uv_index
+                name: UV Index
+              - entity: sensor.house1_air_quality
+                name: Air Quality
+              - entity: sensor.house1_wind_speed
+                name: Wind Speed
+          - type: markdown
+            card_mod:
+              class: footer-contained
+            content: '## ATMOSPHERE STABLE'
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '# HOUSE 2 — WEATHER'
+          - type: weather-forecast
+            entity: weather.house2
+            show_current: true
+            show_forecast: true
+            card_mod:
+              class: middle-contained
+          - type: entities
+            card_mod:
+              class: middle-contained
+            entities:
+              - entity: sensor.house2_uv_index
+                name: UV Index
+              - entity: sensor.house2_air_quality
+                name: Air Quality
+              - entity: sensor.house2_wind_speed
+                name: Wind Speed
+          - type: markdown
+            card_mod:
+              class: footer-contained
+            content: '## ATMOSPHERE STABLE'
+
+  - type: markdown
+    card_mod:
+      class: footer-right
+    content: '## WEATHER UPLINK ACTIVE'

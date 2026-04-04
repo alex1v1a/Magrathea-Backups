@@ -1,0 +1,116 @@
+{
+  "lastUpdated": "2026-02-26T04:10:03.438Z",
+  "monthlyBudget": 200,
+  "totalSpent": 199.6402547767862,
+  "totalRemaining": 0.35974522321379254,
+  "budgetPercent": 99.8201273883931,
+  "dailyAverage": 7.985610191071448,
+  "projectedMonthly": 239.56830573214344,
+  "openRouterCredits": {
+    "totalCredits": 40,
+    "totalUsage": 30.6173574,
+    "remaining": 9.3826426,
+    "source": "OpenRouter /credits API (direct)",
+    "lastFetch": "2026-02-26T04:10:03.437Z"
+  },
+  "providers": {
+    "kimi": {
+      "name": "Kimi (Moonshot)",
+      "models": [
+        {
+          "id": "moonshot/kimi-k2.5",
+          "name": "Moonshot Kimi K2.5 (Primary)",
+          "monthlySpent": 12.869811924239706,
+          "monthlyCost": 50
+        },
+        {
+          "id": "kimi-coding/k2p5",
+          "name": "Kimi Code K2.5 (Sub-agent)",
+          "monthlySpent": 9.64051442887035,
+          "monthlyCost": 30
+        }
+      ],
+      "totalSpent": 22.510326353110056,
+      "budget": 10,
+      "budgetPercent": 225.10326353110054,
+      "remaining": 0,
+      "status": "exceeded"
+    },
+    "openai": {
+      "name": "OpenAI",
+      "models": [
+        {
+          "id": "openai-codex/gpt-5.2",
+          "name": "GPT-5.2",
+          "monthlySpent": 2.85,
+          "monthlyCost": 50
+        }
+      ],
+      "totalSpent": 2.85,
+      "budget": 80,
+      "budgetPercent": 3.5625000000000004,
+      "remaining": 77.15,
+      "status": "ok"
+    },
+    "anthropic": {
+      "name": "Anthropic",
+      "models": [
+        {
+          "id": "anthropic/claude-opus-4-5",
+          "name": "Claude Opus 4.5",
+          "monthlySpent": 73.59001103423728,
+          "monthlyCost": 75
+        }
+      ],
+      "totalSpent": 73.59001103423728,
+      "budget": 60,
+      "budgetPercent": 122.65001839039546,
+      "remaining": 0,
+      "status": "exceeded"
+    },
+    "openrouter": {
+      "name": "OpenRouter",
+      "models": [
+        {
+          "id": "openrouter/anthropic/claude-sonnet-4",
+          "name": "Claude Sonnet 4 (OpenRouter)",
+          "monthlySpent": 10.2411962362735,
+          "monthlyCost": 25
+        },
+        {
+          "id": "openrouter/openai/gpt-4o",
+          "name": "OpenRouter GPT-4o",
+          "monthlySpent": 10.490294077045204,
+          "monthlyCost": 20
+        },
+        {
+          "id": "openrouter/google/gemini-2.0-flash-001",
+          "name": "OpenRouter Gemini 2.0",
+          "monthlySpent": 9.885867086681296,
+          "monthlyCost": 15
+        }
+      ],
+      "totalSpent": 30.6173574,
+      "budget": 40,
+      "budgetPercent": 76.54339350000001,
+      "remaining": 9.3826426,
+      "status": "ok"
+    },
+    "minimax": {
+      "name": "MiniMax",
+      "models": [
+        {
+          "id": "minimax/abab6.5s-chat",
+          "name": "MiniMax ABAB 6.5s",
+          "monthlySpent": 70.07255998943886,
+          "monthlyCost": 10
+        }
+      ],
+      "totalSpent": 70.07255998943886,
+      "budget": 10,
+      "budgetPercent": 700.7255998943886,
+      "remaining": 0,
+      "status": "exceeded"
+    }
+  }
+}

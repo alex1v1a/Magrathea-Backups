@@ -1,0 +1,17 @@
+{
+  "name": "dinner-automation-tests",
+  "version": "1.0.0",
+  "description": "Test suite for dinner automation system",
+  "scripts": {
+    "test": "node tests/run-all.js",
+    "test:unit": "node tests/cart-verification.test.js && node tests/email-parsing.test.js && node tests/calendar-sync.test.js",
+    "test:load": "node tests/load-test.js",
+    "test:failure": "node tests/failure-modes.test.js",
+    "test:compare": "node self-improvement/benchmarks/compare.js compare",
+    "test:baseline": "node self-improvement/benchmarks/compare.js baseline"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "playwright": "^1.40.0"
+  }
+}

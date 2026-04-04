@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-02-09T02:18:44.565Z",
+  "actualItemsInCart": 27,
+  "targetItems": 31,
+  "missing": 4,
+  "status": "CONFIRMED_BY_USER",
+  "missingItems": [
+    "White fish fillets (tilapia)",
+    "Gochujang",
+    "Asian pear",
+    "Sesame seeds"
+  ],
+  "substitutionsApplied": {
+    "White fish fillets": "Catfish fillet (in cart)",
+    "Gochujang": "Sriracha (in cart)",
+    "Asian pear": "Bosc pear (in cart)",
+    "Sesame seeds": "Omitted (garnish)"
+  }
+}

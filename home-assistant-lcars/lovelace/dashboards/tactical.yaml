@@ -1,0 +1,412 @@
+# ============================================
+# LCARS TACTICAL DASHBOARD
+# Security, Cameras, Locks, and Alert Systems
+# ============================================
+
+title: Tactical
+icon: mdi:shield
+path: tactical
+panel: false
+background: "#000000"
+
+cards:
+  # ==========================================
+  # TOP HEADER BAR - Tactical Red Theme
+  # ==========================================
+  - type: custom:button-card
+    template: lcars_header
+    name: "USS HOME ASSISTANT - TACTICAL"
+    styles:
+      card:
+        - background: "linear-gradient(90deg, #CC6666 0%, #CC6666 15%, #FF9900 15%, #FF9900 85%, #CC6666 85%, #CC6666 100%)"
+
+  # ==========================================
+  # ALERT STATUS ROW
+  # ==========================================
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: lcars_alert_red
+        name: "RED ALERT"
+        icon: mdi:alert-octagon
+        entity: input_boolean.red_alert
+        tap_action:
+          action: toggle
+        state:
+          - value: "on"
+            styles:
+              card:
+                - animation: "pulse 1s infinite"
+                
+      - type: custom:button-card
+        template: lcars_alert_yellow
+        name: "YELLOW ALERT"
+        icon: mdi:alert
+        entity: input_boolean.yellow_alert
+        tap_action:
+          action: toggle
+          
+      - type: custom:button-card
+        template: lcars_blue_pill
+        name: "All Clear"
+        icon: mdi:shield-check
+        tap_action:
+          action: call-service
+          service: input_boolean.turn_off
+          target:
+            entity_id:
+              - input_boolean.red_alert
+              - input_boolean.yellow_alert
+        styles:
+          card:
+            - background: "#9999CC"
+            - border-radius: "15px 0px 0px 15px"
+
+  # ==========================================
+  # MAIN GRID LAYOUT
+  # ==========================================
+  - type: custom:layout-card
+    layout_type: custom:grid-layout
+    layout:
+      grid-template-columns: 250px 1fr 250px
+      grid-template-areas: |
+        "nav main controls"
+      gap: 15px
+    cards:
+      # ========================================
+      # LEFT NAVIGATION
+      # ========================================
+      - type: vertical-stack
+        view_layout:
+          grid-area: nav
+        cards:
+          - type: custom:button-card
+            template: lcars_side_elbow_left
+            styles:
+              card:
+                - background: "#CC6666"
+                
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Bridge"
+            icon: mdi:view-dashboard
+            styles:
+              card:
+                - border-color: "#CC6666"
+              name:
+                - color: "#CC6666"
+              icon:
+                - color: "#CC6666"
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-bridge
+              
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Engineering"
+            icon: mdi:engine
+            styles:
+              card:
+                - border-color: "#CC6666"
+              name:
+                - color: "#CC6666"
+              icon:
+                - color: "#CC6666"
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-engineering
+              
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Science"
+            icon: mdi:flask
+            styles:
+              card:
+                - border-color: "#CC6666"
+              name:
+                - color: "#CC6666"
+              icon:
+                - color: "#CC6666"
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-science
+              
+          - type: custom:button-card
+            template: lcars_nav_button
+            name: "Quarters"
+            icon: mdi:bed
+            styles:
+              card:
+                - border-color: "#CC6666"
+              name:
+                - color: "#CC6666"
+              icon:
+                - color: "#CC6666"
+            tap_action:
+              action: navigate
+              navigation_path: /lcars-quarters
+
+      # ========================================
+      # MAIN CONTENT - Camera Feeds
+      # ========================================
+      - type: vertical-stack
+        view_layout:
+          grid-area: main
+        cards:
+          # Camera Header
+          - type: custom:button-card
+            template: lcars_header
+            name: "VISUAL SURVEILLANCE"
+            styles:
+              card:
+                - background: "linear-gradient(90deg, #FF9900 0%, #FF9900 15%, #CC6666 15%, #CC6666 85%, #FF9900 85%, #FF9900 100%)"
+
+          # Camera Grid
+          - type: custom:layout-card
+            layout_type: custom:grid-layout
+            layout:
+              grid-template-columns: 1fr 1fr
+              grid-template-rows: 200px 200px
+              gap: 10px
+            cards:
+              - type: picture-entity
+                entity: camera.front_door
+                camera_view: live
+                show_name: false
+                show_state: false
+                tap_action:
+                  action: more-info
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: 2px solid #CC6666 !important;
+                      border-radius: 0px 15px 0px 15px !important;
+                      overflow: hidden !important;
+                    }
+                    
+              - type: picture-entity
+                entity: camera.backyard
+                camera_view: live
+                show_name: false
+                show_state: false
+                tap_action:
+                  action: more-info
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: 2px solid #CC6666 !important;
+                      border-radius: 0px 15px 0px 15px !important;
+                      overflow: hidden !important;
+                    }
+                    
+              - type: picture-entity
+                entity: camera.garage
+                camera_view: live
+                show_name: false
+                show_state: false
+                tap_action:
+                  action: more-info
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: 2px solid #CC6666 !important;
+                      border-radius: 0px 15px 0px 15px !important;
+                      overflow: hidden !important;
+                    }
+                    
+              - type: picture-entity
+                entity: camera.living_room
+                camera_view: live
+                show_name: false
+                show_state: false
+                tap_action:
+                  action: more-info
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: 2px solid #CC6666 !important;
+                      border-radius: 0px 15px 0px 15px !important;
+                      overflow: hidden !important;
+                    }
+
+          # Security Log
+          - type: custom:button-card
+            template: lcars_header
+            name: "SECURITY LOG"
+            styles:
+              card:
+                - background: "linear-gradient(90deg, #FF9900 0%, #FF9900 15%, #CC6666 15%, #CC6666 85%, #FF9900 85%, #FF9900 100%)"
+
+          - type: logbook
+            entities:
+              - binary_sensor.front_door_motion
+              - binary_sensor.backyard_motion
+              - binary_sensor.garage_motion
+              - lock.front_door
+              - alarm_control_panel.home
+            hours_to_show: 24
+            card_mod:
+              style: |
+                ha-card {
+                  background: #000000 !important;
+                  border: 2px solid #CC6666 !important;
+                  border-radius: 0px 20px 0px 20px !important;
+                }
+                .header {
+                  color: #CC6666 !important;
+                  font-family: Antonio, sans-serif !important;
+                }
+
+      # ========================================
+      # RIGHT SIDEBAR - Controls
+      # ========================================
+      - type: vertical-stack
+        view_layout:
+          grid-area: controls
+        cards:
+          - type: custom:button-card
+            template: lcars_side_elbow_right
+            styles:
+              card:
+                - background: "#CC6666"
+
+          # Alarm Control
+          - type: custom:button-card
+            template: lcars_header
+            name: "ALARM"
+            styles:
+              card:
+                - background: "#CC6666"
+                - border-radius: "0px 15px 0px 0px"
+                - height: "35px"
+
+          - type: alarm-panel
+            entity: alarm_control_panel.home
+            states:
+              - arm_home
+              - arm_away
+              - arm_night
+              - disarm
+            card_mod:
+              style: |
+                ha-card {
+                  background: #000000 !important;
+                  border: 2px solid #CC6666 !important;
+                  border-radius: 0px 0px 0px 15px !important;
+                }
+                paper-button {
+                  background: #CC6666 !important;
+                  color: #000000 !important;
+                  font-family: Antonio, sans-serif !important;
+                  text-transform: uppercase !important;
+                }
+
+          # Door Locks
+          - type: custom:button-card
+            template: lcars_header
+            name: "LOCKS"
+            styles:
+              card:
+                - background: "#FF9900"
+                - border-radius: "0px 15px 0px 0px"
+                - height: "35px"
+
+          - type: custom:button-card
+            template: lcars_lock_button
+            entity: lock.front_door
+            name: "Front Door"
+            icon: mdi:door-closed-lock
+
+          - type: custom:button-card
+            template: lcars_lock_button
+            entity: lock.back_door
+            name: "Back Door"
+            icon: mdi:door-closed-lock
+
+          - type: custom:button-card
+            template: lcars_lock_button
+            entity: lock.garage_door
+            name: "Garage"
+            icon: mdi:garage-lock
+
+          # Motion Sensors
+          - type: custom:button-card
+            template: lcars_header
+            name: "SENSORS"
+            styles:
+              card:
+                - background: "#FF9900"
+                - border-radius: "0px 15px 0px 0px"
+                - height: "35px"
+
+          - type: custom:button-card
+            template: lcars_sensor_value
+            entity: binary_sensor.front_door_motion
+            name: "Front Motion"
+            icon: mdi:motion-sensor
+            show_state: true
+            state_display: >
+              {% if is_state('binary_sensor.front_door_motion', 'on') %}
+                DETECTED
+              {% else %}
+                Clear
+              {% endif %}
+            styles:
+              card:
+                - border-color: >
+                    {% if is_state('binary_sensor.front_door_motion', 'on') %}
+                      "#CC6666"
+                    {% else %}
+                      "#666666"
+                    {% endif %}
+
+          - type: custom:button-card
+            template: lcars_sensor_value
+            entity: binary_sensor.backyard_motion
+            name: "Back Motion"
+            icon: mdi:motion-sensor
+            show_state: true
+            state_display: >
+              {% if is_state('binary_sensor.backyard_motion', 'on') %}
+                DETECTED
+              {% else %}
+                Clear
+              {% endif %}
+            styles:
+              card:
+                - border-color: >
+                    {% if is_state('binary_sensor.backyard_motion', 'on') %}
+                      "#CC6666"
+                    {% else %}
+                      "#666666"
+                    {% endif %}
+
+          - type: custom:button-card
+            template: lcars_sensor_value
+            entity: binary_sensor.garage_motion
+            name: "Garage Motion"
+            icon: mdi:motion-sensor
+            show_state: true
+            state_display: >
+              {% if is_state('binary_sensor.garage_motion', 'on') %}
+                DETECTED
+              {% else %}
+                Clear
+              {% endif %}
+            styles:
+              card:
+                - border-color: >
+                    {% if is_state('binary_sensor.garage_motion', 'on') %}
+                      "#CC6666"
+                    {% else %}
+                      "#666666"
+                    {% endif %}
+
+  # ==========================================
+  # FOOTER
+  # ==========================================
+  - type: custom:button-card
+    template: lcars_footer
+    styles:
+      card:
+        - background: "linear-gradient(90deg, #CC6666 0%, #CC6666 80%, #000000 80%, #000000 85%, #FF9900 85%, #FF9900 100%)"

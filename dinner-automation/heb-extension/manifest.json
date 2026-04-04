@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "HEB Auto Shopper",
+  "version": "3.0.0",
+  "description": "Automatically sync meal plan to HEB cart - adds new items, removes old ones",
+  "permissions": ["storage", "activeTab", "scripting", "alarms", "background"],
+  "host_permissions": ["https://www.heb.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [{
+    "matches": ["https://www.heb.com/*"],
+    "js": ["content-script-api.js"],
+    "run_at": "document_end"
+  }],
+  "web_accessible_resources": [{
+    "resources": ["items.json", "content-script-api.js"],
+    "matches": ["https://www.heb.com/*"]
+  }],
+  "externally_connectable": {
+    "matches": ["https://www.heb.com/*"]
+  }
+}

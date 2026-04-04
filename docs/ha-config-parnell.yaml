@@ -1,0 +1,140 @@
+# ============================================
+# HOME ASSISTANT CONFIGURATION - PARNELL
+# Multi-Location HomeKit Setup
+# Location: Parnell (10.2.1.x)
+# ============================================
+
+# Default config (keep existing)
+default_config:
+
+# ============================================
+# FRONTEND - LCARS THEME
+# ============================================
+frontend:
+  themes: !include_dir_merge_named themes
+  extra_module_url:
+    - /local/community/lovelace-card-mod/card-mod.js
+    - /local/community/ha-lcars/lcars.js
+  extra_html_url:
+    - https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap
+
+# ============================================
+# INCLUDES
+# ============================================
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+# ============================================
+# HOME ASSISTANT CORE SETTINGS
+# ============================================
+homeassistant:
+  name: "Parnell Home"
+  latitude: !secret home_latitude_parnell
+  longitude: !secret home_longitude_parnell
+  elevation: 100
+  unit_system: imperial
+  time_zone: America/Chicago
+  internal_url: "http://10.2.1.XXX:8123"  # UPDATE WITH ACTUAL IP
+  external_url: !secret external_url_parnell
+  packages: !include_dir_named packages
+  
+  auth_providers:
+    - type: homeassistant
+    - type: trusted_networks
+      trusted_networks:
+        - 10.2.1.0/24
+        - 127.0.0.1
+        - ::1
+
+# ============================================
+# HOMEKIT BRIDGE - PARNELL ONLY
+# ============================================
+homekit:
+  - name: "HASS Bridge Parnell"
+    port: 51829
+    ip_address: 10.2.1.XXX  # UPDATE WITH ACTUAL IP
+    
+    filter:
+      include_domains:
+        - light
+        - climate
+        - sensor
+        - binary_sensor
+        - switch
+        - fan
+        - cover
+        - lock
+      
+      exclude_entities:
+        - sensor.date
+        - sensor.time
+        - update.home_assistant_core_update
+      
+      include_entity_globs:
+        - "*.parnell_*"
+    
+    entity_config:
+      light.parnell_garage:
+        name: "Garage Lights"
+        type: lightbulb
+      
+      lock.parnell_garage_door:
+        name: "Garage Door"
+      
+      climate.parnell_hvac:
+        name: "HVAC"
+        type: thermostat
+
+# ============================================
+# LCARS INPUT HELPERS
+# ============================================
+input_boolean:
+  lcars_sound:
+    name: LCARS Sound
+    icon: mdi:volume-high
+  
+  lcars_texture:
+    name: LCARS Texture
+    icon: mdi:wallpaper
+
+input_number:
+  lcars_horizontal:
+    name: LCARS Horizontal
+    min: 6
+    max: 60
+    step: 1
+    unit_of_measurement: px
+    icon: mdi:arrow-left-right
+  
+  lcars_vertical:
+    name: LCARS Vertical
+    min: 26
+    max: 60
+    step: 1
+    unit_of_measurement: px
+    icon: mdi:arrow-up-down
+
+input_select:
+  parnell_home_mode:
+    name: "Parnell: Home Mode"
+    options:
+      - Home
+      - Away
+      - Sleep
+    initial: Home
+    icon: mdi:home-automation
+
+# ============================================
+# LOGGING
+# ============================================
+logger:
+  default: warning
+  logs:
+    homeassistant.components.homekit: debug
+
+# ============================================
+# RECORDER
+# ============================================
+recorder:
+  purge_keep_days: 30

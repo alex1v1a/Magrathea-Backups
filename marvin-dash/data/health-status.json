@@ -1,0 +1,283 @@
+{
+  "timestamp": "2026-04-04T14:00:02.370Z",
+  "duration": 1733,
+  "overall": {
+    "status": "critical",
+    "score": 50,
+    "checks": {
+      "total": 10,
+      "healthy": 4,
+      "warning": 2,
+      "critical": 4,
+      "error": 0
+    }
+  },
+  "checks": [
+    {
+      "name": "browser-status",
+      "status": "warning",
+      "message": "Chrome: not running, Edge: not running",
+      "data": {
+        "chrome": {
+          "running": false,
+          "port": 9222,
+          "details": null
+        },
+        "edge": {
+          "running": false,
+          "port": 9222,
+          "details": null
+        }
+      },
+      "timestamp": 1775311202305,
+      "duration": 1668
+    },
+    {
+      "name": "disk-space",
+      "status": "critical",
+      "message": "Disk usage: 90.5% (22.58GB free on C:)",
+      "data": {
+        "disks": [
+          {
+            "drive": "C:",
+            "totalGB": 237.53,
+            "freeGB": 22.58,
+            "usedPercent": 90.49
+          },
+          {
+            "drive": "E:",
+            "totalGB": 236.73,
+            "freeGB": 61.99,
+            "usedPercent": 73.81
+          }
+        ],
+        "maxUsedPercent": 90.49
+      },
+      "timestamp": 1775311200958,
+      "duration": 321
+    },
+    {
+      "name": "memory-usage",
+      "status": "healthy",
+      "message": "Memory: 51.2% used (15.53GB free of 31.80GB)",
+      "data": {
+        "totalGB": 31.8,
+        "freeGB": 15.53,
+        "usedPercent": 51.16
+      },
+      "timestamp": 1775311201353,
+      "duration": 395
+    },
+    {
+      "name": "cron-jobs",
+      "status": "warning",
+      "message": "4 healthy, 2 warning, 2 error (of 8 tasks)",
+      "data": {
+        "tasks": [
+          {
+            "name": "Marvin Auto Recovery",
+            "status": "healthy",
+            "enabled": true,
+            "lastRun": "4/4/2026 8:57:01 AM",
+            "nextRun": "4/4/2026 9:02:00 AM",
+            "lastResult": "0",
+            "hoursSinceLastRun": 0
+          },
+          {
+            "name": "Marvin Email Monitor",
+            "status": "healthy",
+            "enabled": true,
+            "lastRun": "4/4/2026 8:49:01 AM",
+            "nextRun": "4/4/2026 9:04:00 AM",
+            "lastResult": "0",
+            "hoursSinceLastRun": 0
+          },
+          {
+            "name": "Marvin Backup",
+            "status": "healthy",
+            "enabled": true,
+            "lastRun": "4/4/2026 8:48:01 AM",
+            "nextRun": "4/4/2026 9:03:00 AM",
+            "lastResult": "0",
+            "hoursSinceLastRun": 0
+          },
+          {
+            "name": "WSL-24x7-Monitor",
+            "status": "warning",
+            "enabled": true,
+            "lastRun": "3/2/2026 12:03:14 AM",
+            "nextRun": "N/A",
+            "lastResult": "1",
+            "hoursSinceLastRun": 800
+          },
+          {
+            "name": "OpenClaw Gateway Auto-Recovery",
+            "status": "healthy",
+            "enabled": true,
+            "lastRun": "4/4/2026 8:58:01 AM",
+            "nextRun": "4/4/2026 9:03:00 AM",
+            "lastResult": "0",
+            "hoursSinceLastRun": 0
+          },
+          {
+            "name": "Kanban-AutoRefresh",
+            "status": "warning",
+            "enabled": true,
+            "lastRun": "3/7/2026 2:23:26 AM",
+            "nextRun": "N/A",
+            "lastResult": "1",
+            "hoursSinceLastRun": 678
+          },
+          {
+            "name": "Marvin Dinner Automation",
+            "status": "error",
+            "enabled": false,
+            "error": "Task not found"
+          },
+          {
+            "name": "Marvin Facebook Monitor",
+            "status": "error",
+            "enabled": false,
+            "error": "Task not found"
+          }
+        ],
+        "summary": {
+          "healthy": 4,
+          "warning": 2,
+          "error": 2,
+          "total": 8
+        }
+      },
+      "timestamp": 1775311201728,
+      "duration": 375
+    },
+    {
+      "name": "email-connectivity",
+      "status": "healthy",
+      "message": "SMTP: reachable (577ms), IMAP: reachable (65ms)",
+      "data": {
+        "smtp": {
+          "status": "reachable",
+          "latency": 577
+        },
+        "imap": {
+          "status": "reachable",
+          "latency": 65
+        }
+      },
+      "timestamp": 1775311202370,
+      "duration": 642
+    },
+    {
+      "name": "key-files",
+      "status": "critical",
+      "message": "0 OK, 0 warning, 6 missing (of 6 files)",
+      "data": {
+        "files": [
+          {
+            "name": "recipeDatabase",
+            "path": "dinner-automation/data/recipe-database.json",
+            "exists": false,
+            "status": "error"
+          },
+          {
+            "name": "automationStatus",
+            "path": "dinner-automation/data/automation-status.json",
+            "exists": false,
+            "status": "error"
+          },
+          {
+            "name": "weeklyPlan",
+            "path": "dinner-automation/data/weekly-plan.json",
+            "exists": false,
+            "status": "error"
+          },
+          {
+            "name": "mealPlans",
+            "path": "meal-plans",
+            "exists": false,
+            "status": "error"
+          },
+          {
+            "name": "serviceStatus",
+            "path": "marvin-dash/data/service-status.json",
+            "exists": false,
+            "status": "error"
+          },
+          {
+            "name": "tasks",
+            "path": "marvin-dash/data/tasks.json",
+            "exists": false,
+            "status": "error"
+          }
+        ],
+        "summary": {
+          "healthy": 0,
+          "warning": 0,
+          "error": 6,
+          "total": 6
+        }
+      },
+      "timestamp": 1775311202306,
+      "duration": 578
+    },
+    {
+      "name": "dashboard",
+      "status": "critical",
+      "message": "Dashboard unreachable on port 3001: ",
+      "data": {
+        "port": 3001,
+        "error": ""
+      },
+      "timestamp": 1775311202305,
+      "duration": 577
+    },
+    {
+      "name": "gateway",
+      "status": "healthy",
+      "message": "OpenClaw Gateway on port 18789: responding",
+      "data": {
+        "port": 18789,
+        "statusCode": 200
+      },
+      "timestamp": 1775311202306,
+      "duration": 577
+    },
+    {
+      "name": "recipe-database",
+      "status": "critical",
+      "message": "Recipe database error: ENOENT: no such file or directory, open 'C:\\Users\\Admin\\.openclaw\\workspace\\marvin-dash\\dinner-automation\\data\\recipe-database.json'",
+      "data": {
+        "error": "ENOENT: no such file or directory, open 'C:\\Users\\Admin\\.openclaw\\workspace\\marvin-dash\\dinner-automation\\data\\recipe-database.json'"
+      },
+      "timestamp": 1775311202174,
+      "duration": 445
+    },
+    {
+      "name": "system-processes",
+      "status": "healthy",
+      "message": "Node: 4, Chrome: 8, Edge: 0, Python: 4",
+      "data": {
+        "node": {
+          "running": true,
+          "count": 4
+        },
+        "python": {
+          "running": true,
+          "count": 4
+        },
+        "chrome": {
+          "running": true,
+          "count": 8
+        },
+        "edge": {
+          "running": false,
+          "count": 0
+        }
+      },
+      "timestamp": 1775311202173,
+      "duration": 444
+    }
+  ],
+  "lastUpdated": "2026-04-04T14:00:02.370Z"
+}

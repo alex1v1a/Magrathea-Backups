@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How we validated Reel Reviews before writing a single line of code using customer development techniques.">
+    <title>How We Validated Reel Reviews Before Writing Code | The Paper Trail</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #ffffff; color: #111111; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        
+        .site-header { position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #e5e5e5; z-index: 100; }
+        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .main-nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 15px; }
+        .brand-logo { width: 28px; height: 28px; }
+        .nav-blog-title { font-family: 'Newsreader', Georgia, serif; font-size: 18px; font-weight: 500; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 8px 14px; font-size: 13px; font-weight: 500; border-radius: 8px; cursor: pointer; border: none; }
+        .btn-primary { background: #dc2626; color: white; }
+        .btn-primary:hover { background: #b91c1c; }
+        
+        .article-header { padding: 64px 24px 32px; text-align: center; max-width: 800px; margin: 0 auto; }
+        .article-meta { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 24px; font-size: 14px; }
+        .article-category { color: #dc2626; font-weight: 600; }
+        .article-date { color: #666; }
+        .article-title { font-family: 'Newsreader', Georgia, serif; font-size: 42px; line-height: 1.2; margin-bottom: 24px; }
+        @media (max-width: 640px) { .article-title { font-size: 28px; } }
+        
+        .article-hero { max-width: 1000px; margin: 0 auto 48px; padding: 0 24px; }
+        .article-hero-image { aspect-ratio: 16/9; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+        .article-hero-image svg { width: 120px; height: 120px; opacity: 0.9; }
+        
+        .article-content { max-width: 720px; margin: 0 auto; padding: 0 24px 64px; }
+        .article-content h2 { font-family: 'Newsreader', Georgia, serif; font-size: 28px; margin: 48px 0 16px; }
+        .article-content h3 { font-family: 'Newsreader', Georgia, serif; font-size: 22px; margin: 32px 0 12px; }
+        .article-content p { font-size: 17px; line-height: 1.8; margin-bottom: 20px; color: #333; }
+        .article-content ul { list-style: disc; padding-left: 24px; margin-bottom: 20px; }
+        .article-content li { font-size: 17px; line-height: 1.8; margin-bottom: 8px; color: #333; }
+        
+        .site-footer { background: #fafafa; border-top: 1px solid #e5e5e5; padding: 48px 0 24px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+        @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+        .footer-description { font-size: 14px; color: #666; max-width: 280px; margin-top: 12px; }
+        .footer-links h4 { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { font-size: 14px; color: #666; }
+        .footer-links a:hover { color: #111; }
+        .footer-bottom { padding-top: 24px; border-top: 1px solid #e5e5e5; text-align: center; }
+        .footer-bottom p { font-size: 13px; color: #888; }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <nav class="main-nav">
+                <a href="/" class="brand">
+                    <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="48" rx="8" fill="#dc2626"/>
+                        <path d="M14 12h20v4H14v-4zm0 10h20v4H14v-4zm0 10h14v4H14v-4z" fill="white"/>
+                    </svg>
+                    <span>Paper Trail</span>
+                </a>
+                <div class="nav-center">
+                    <a href="/blog/" class="nav-blog-title">The Paper Trail</a>
+                </div>
+                <div class="nav-right">
+                    <a href="/blog/#newsletter" class="btn btn-primary">Subscribe</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <header class="article-header">
+            <div class="article-meta">
+                <span class="article-category">Product</span>
+                <span class="article-date">March 1, 2026</span>
+            </div>
+            <h1 class="article-title">How We Validated Reel Reviews Before Writing Code</h1>
+        </header>
+        
+        <div class="article-hero">
+            <div class="article-hero-image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                    <polyline points="10 9 9 9 8 9"/>
+                </svg>
+            </div>
+        </div>
+        
+        <article class="article-content">
+            <p>The biggest mistake founders make is building something nobody wants. We were determined not to be that founder. Here's how we validated Reel Reviews before writing a single line of code.</p>
+            
+            <h2>Step 1: Customer Interviews</h2>
+            <p>We interviewed 50 anglers over two weeks. Not surveys—actual conversations. We asked about their pain points, how they currently find fishing spots, and what frustrates them about existing solutions.</p>
+            
+            <h2>Step 2: The Landing Page Test</h2>
+            <p>Before building the app, we built a simple landing page describing the concept. We ran Facebook ads targeting fishermen in New Zealand. The goal wasn't to get signups—it was to see if people would click.</p>
+            
+            <p>The results: 12% click-through rate. That's incredibly high for a cold audience. We had validation.</p>
+            
+            <h2>Step 3: The Concierge MVP</h2>
+            <p>We manually matched 20 beta testers with fishing spots based on their preferences. No app, just emails and phone calls. We learned more in those two weeks than we would have in six months of guessing.</p>
+            
+            <h2>What We Learned</h2>
+            <ul>
+                <li>People don't trust 5-star reviews—they want to know what went wrong</li>
+                <li>Location matters more than anything else</li>
+                <li>Photos are non-negotiable</li>
+                <li>Timing (season, time of day) is critical information</li>
+            </ul>
+            
+            <h2>The Result</h2>
+            <p>When we finally launched, we had 200 people on the waitlist who had already validated the concept. Our first month retention was 65%—well above industry average.</p>
+            
+            <p>The lesson: Talk to customers before you build. It's uncomfortable, but it's the difference between success and failure.</p>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="brand">
+                        <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="8" fill="#dc2626"/>
+                            <path d="M14 12h20v4H14v-4zm0 10h20v4H14v-4zm0 10h14v4H14v-4z" fill="white"/>
+                        </svg>
+                        <span>Paper Trail</span>
+                    </a>
+                    <p class="footer-description">Writing the future of mobile experiences from New Zealand.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="/apps/reel-reviews/">Reel Reviews</a></li>
+                        <li><a href="/apps/coming-soon/">Coming Soon</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/privacy-policy.html">Privacy</a></li>
+                        <li><a href="/terms-of-service.html">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:admin@typewrite.club">Email</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Paper Trail Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+[
+  {
+    "name": "tilapia fillet",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Fish Tacos with Mango Salsa",
+    "day": "Sunday"
+  },
+  {
+    "name": "corn tortillas",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Fish Tacos with Mango Salsa",
+    "day": "Sunday"
+  },
+  {
+    "name": "mango",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Fish Tacos with Mango Salsa",
+    "day": "Sunday"
+  },
+  {
+    "name": "red onion",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Fish Tacos with Mango Salsa",
+    "day": "Sunday"
+  },
+  {
+    "name": "jalapeno",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Fish Tacos with Mango Salsa",
+    "day": "Sunday"
+  },
+  {
+    "name": "coleslaw mix",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Fish Tacos with Mango Salsa",
+    "day": "Sunday"
+  },
+  {
+    "name": "chipotle mayo",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Fish Tacos with Mango Salsa",
+    "day": "Sunday"
+  },
+  {
+    "name": "cod fillet fresh",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Pan-Seared Cod with Lemon Butter",
+    "day": "Monday"
+  },
+  {
+    "name": "butter unsalted",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Pan-Seared Cod with Lemon Butter",
+    "day": "Monday"
+  },
+  {
+    "name": "parsley fresh",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Pan-Seared Cod with Lemon Butter",
+    "day": "Monday"
+  },
+  {
+    "name": "capers",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Pan-Seared Cod with Lemon Butter",
+    "day": "Monday"
+  },
+  {
+    "name": "white wine cooking",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Pan-Seared Cod with Lemon Butter",
+    "day": "Monday"
+  },
+  {
+    "name": "green beans fresh",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Pan-Seared Cod with Lemon Butter",
+    "day": "Monday"
+  },
+  {
+    "name": "chicken thighs bone-in",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Lemon Herb Grilled Chicken",
+    "day": "Tuesday"
+  },
+  {
+    "name": "lemon",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Lemon Herb Grilled Chicken",
+    "day": "Tuesday"
+  },
+  {
+    "name": "thyme fresh",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Lemon Herb Grilled Chicken",
+    "day": "Tuesday"
+  },
+  {
+    "name": "oregano dried",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Lemon Herb Grilled Chicken",
+    "day": "Tuesday"
+  },
+  {
+    "name": "couscous",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Lemon Herb Grilled Chicken",
+    "day": "Tuesday"
+  },
+  {
+    "name": "zucchini",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Lemon Herb Grilled Chicken",
+    "day": "Tuesday"
+  },
+  {
+    "name": "ribeye steak thin",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Korean Beef Bulgogi Bowl",
+    "day": "Wednesday"
+  },
+  {
+    "name": "asian pear",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Korean Beef Bulgogi Bowl",
+    "day": "Wednesday"
+  },
+  {
+    "name": "gochujang",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Korean Beef Bulgogi Bowl",
+    "day": "Wednesday"
+  },
+  {
+    "name": "jasmine rice",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Korean Beef Bulgogi Bowl",
+    "day": "Wednesday"
+  },
+  {
+    "name": "sesame seeds",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Korean Beef Bulgogi Bowl",
+    "day": "Wednesday"
+  },
+  {
+    "name": "kimchi",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Korean Beef Bulgogi Bowl",
+    "day": "Wednesday"
+  },
+  {
+    "name": "chicken breast boneless",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Mediterranean Chicken Bowl",
+    "day": "Thursday"
+  },
+  {
+    "name": "cucumber",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Mediterranean Chicken Bowl",
+    "day": "Thursday"
+  },
+  {
+    "name": "tomatoes cherry",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Mediterranean Chicken Bowl",
+    "day": "Thursday"
+  },
+  {
+    "name": "feta cheese",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Mediterranean Chicken Bowl",
+    "day": "Thursday"
+  },
+  {
+    "name": "quinoa",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Mediterranean Chicken Bowl",
+    "day": "Thursday"
+  },
+  {
+    "name": "hummus",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Mediterranean Chicken Bowl",
+    "day": "Thursday"
+  },
+  {
+    "name": "red onion",
+    "quantity": 1,
+    "unit": "item",
+    "meal": "Mediterranean Chicken Bowl",
+    "day": "Thursday"
+  }
+]

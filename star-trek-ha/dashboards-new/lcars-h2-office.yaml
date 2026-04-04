@@ -1,0 +1,176 @@
+title: H2 Office
+path: lcars-h2-office
+icon: mdi:laptop
+badges: []
+cards:
+  - type: markdown
+    card_mod:
+      class: header-left
+    content: '# HOUSE 2 — OFFICE'
+
+  - type: horizontal-stack
+    card_mod:
+      class: middle-left
+    cards:
+      - type: button
+        name: Overview
+        icon: mdi:home-analytics
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-house1
+        card_mod:
+          class: button-bar-left
+      - type: button
+        name: Living
+        icon: mdi:sofa
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h2-living
+        card_mod:
+          class: button-small
+      - type: button
+        name: Kitchen
+        icon: mdi:stove
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h2-kitchen
+        card_mod:
+          class: button-small
+      - type: button
+        name: Primary
+        icon: mdi:bed-king
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h2-bedroom
+        card_mod:
+          class: button-small
+      - type: button
+        name: Office
+        icon: mdi:laptop
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h2-office
+        card_mod:
+          class: button-small
+      - type: button
+        name: Garage
+        icon: mdi:garage
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h2-garage
+        card_mod:
+          class: button-small
+      - type: button
+        name: Outdoor
+        icon: mdi:tree
+        tap_action:
+          action: navigate
+          navigation_path: /lcars-h2-outdoor
+        card_mod:
+          class: button-bar-right
+
+  - type: markdown
+    card_mod:
+      class: header-contained
+    content: '# OFFICE CONTROLS'
+
+  - type: grid
+    columns: 4
+    square: false
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 💡 LIGHTS'
+          - type: grid
+            columns: 2
+            square: true
+            cards:
+              - type: button
+                entity: light.h2_office_overhead
+                name: Overhead
+                tap_action:
+                  action: toggle
+                card_mod:
+                  class: button-lozenge-left
+              - type: button
+                entity: light.h2_office_desk
+                name: Desk
+                tap_action:
+                  action: toggle
+                card_mod:
+                  class: button-lozenge-right
+              - type: button
+                entity: light.h2_office_accent
+                name: Accent
+                tap_action:
+                  action: toggle
+                card_mod:
+                  class: button-lozenge-left
+              - type: button
+                entity: light.h2_office_monitor
+                name: Monitor Bias
+                tap_action:
+                  action: toggle
+                card_mod:
+                  class: button-lozenge-right
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 🖥️ WORKSTATION'
+          - type: entities
+            card_mod:
+              class: middle-contained
+            entities:
+              - entity: switch.h2_office_pc
+                name: PC Power
+              - entity: switch.h2_office_monitor
+                name: Monitor
+              - entity: switch.h2_office_printer
+                name: Printer
+              - entity: sensor.h2_office_desk_occupancy
+                name: Desk Occupancy
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 🌡️ CLIMATE'
+          - type: sensor
+            entity: sensor.h2_office_temperature
+            name: Temperature
+            card_mod:
+              class: middle-contained
+          - type: sensor
+            entity: sensor.h2_office_humidity
+            name: Humidity
+            card_mod:
+              class: middle-contained
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            card_mod:
+              class: header-contained
+            content: '## 📡 SENSORS'
+          - type: entities
+            card_mod:
+              class: middle-contained
+            entities:
+              - entity: binary_sensor.h2_office_motion
+                name: Motion
+              - entity: binary_sensor.h2_office_occupancy
+                name: Occupancy
+              - entity: sensor.h2_office_illuminance
+                name: Light Level
+
+  - type: markdown
+    card_mod:
+      class: footer-left
+    content: '## OFFICE — HOUSE 2'

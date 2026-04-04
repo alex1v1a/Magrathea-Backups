@@ -1,0 +1,231 @@
+{
+  "timestamp": "2026-02-12T05:04:35.610Z",
+  "totalTime": 105809,
+  "avgTimePerItem": 4815,
+  "itemsProcessed": 42,
+  "successful": 40,
+  "failed": 2,
+  "cartDelta": 0,
+  "cacheStats": {
+    "size": 40,
+    "hits": 0,
+    "misses": 46,
+    "hitRate": "0.0"
+  },
+  "retriesNeeded": 4,
+  "concurrency": 3,
+  "itemTimings": [
+    {
+      "item": "ribeye steak",
+      "time": 6975,
+      "success": true
+    },
+    {
+      "item": "white fish for tacos",
+      "time": 7286,
+      "success": true
+    },
+    {
+      "item": "cod fillets",
+      "time": 7499,
+      "success": true
+    },
+    {
+      "item": "fresh parsley",
+      "time": 3132,
+      "success": true
+    },
+    {
+      "item": "salmon fillets",
+      "time": 6331,
+      "success": true
+    },
+    {
+      "item": "chicken breast",
+      "time": 6601,
+      "success": true
+    },
+    {
+      "item": "capers",
+      "time": 3098,
+      "success": true
+    },
+    {
+      "item": "green onions",
+      "time": 2730,
+      "success": true
+    },
+    {
+      "item": "fresh ginger",
+      "time": 6099,
+      "success": true
+    },
+    {
+      "item": "mixed vegetables for stir-fry",
+      "time": 6302,
+      "success": true
+    },
+    {
+      "item": "jalapeño",
+      "time": 3650,
+      "success": true
+    },
+    {
+      "item": "ripe mangos",
+      "time": 6532,
+      "success": true
+    },
+    {
+      "item": "fresh cilantro",
+      "time": 3270,
+      "success": true
+    },
+    {
+      "item": "Asian pear",
+      "time": 3307,
+      "success": true
+    },
+    {
+      "item": "kimchi",
+      "time": 3003,
+      "success": true
+    },
+    {
+      "item": "cucumbers",
+      "time": 2660,
+      "success": true
+    },
+    {
+      "item": "cherry tomatoes",
+      "time": 6603,
+      "success": true
+    },
+    {
+      "item": "corn tortillas",
+      "time": 8089,
+      "success": false,
+      "error": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button[data-qe-id=\"addToCart\"]').filter({ hasText: /add/i }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button disabled type=\"button\" data-qe-id=\"addToCart\" data-component=\"button\" class=\"focusVisibleOutline Button_button__ytBI_ Button_default__a3TQR Button_base__gqVu1 Button_brandDefault__tHhU1 AddByQuantityButton_button__kTaS8 AddByQuantityButton_secondary__59bMY\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    9 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n"
+    },
+    {
+      "item": "red onion",
+      "time": 3199,
+      "success": true
+    },
+    {
+      "item": "feta cheese",
+      "time": 3521,
+      "success": true
+    },
+    {
+      "item": "Kalamata olives",
+      "time": 3679,
+      "success": true
+    },
+    {
+      "item": "hummus",
+      "time": 6123,
+      "success": true
+    },
+    {
+      "item": "fresh dill",
+      "time": 2995,
+      "success": true
+    },
+    {
+      "item": "cabbage slaw mix",
+      "time": 10124,
+      "success": false,
+      "error": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button[data-qe-id=\"addToCart\"]').filter({ hasText: /add/i }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button disabled type=\"button\" data-qe-id=\"addToCart\" data-component=\"button\" class=\"focusVisibleOutline Button_button__ytBI_ Button_default__a3TQR Button_base__gqVu1 Button_brandDefault__tHhU1 AddByQuantityButton_button__kTaS8 AddByQuantityButton_secondary__59bMY\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n"
+    },
+    {
+      "item": "tzatziki",
+      "time": 6600,
+      "success": true
+    },
+    {
+      "item": "lemon",
+      "time": 3611,
+      "success": true
+    },
+    {
+      "item": "white wine",
+      "time": 3693,
+      "success": true
+    },
+    {
+      "item": "fresh thyme",
+      "time": 7615,
+      "success": true
+    },
+    {
+      "item": "oyster sauce",
+      "time": 2932,
+      "success": true
+    },
+    {
+      "item": "sesame seeds",
+      "time": 2769,
+      "success": true
+    },
+    {
+      "item": "beef broth",
+      "time": 6650,
+      "success": true
+    },
+    {
+      "item": "cornstarch",
+      "time": 8322,
+      "success": true
+    },
+    {
+      "item": "chipotle mayo",
+      "time": 3962,
+      "success": true
+    },
+    {
+      "item": "tomato puree",
+      "time": 3506,
+      "success": true
+    },
+    {
+      "item": "heavy cream",
+      "time": 3566,
+      "success": true
+    },
+    {
+      "item": "brown sugar",
+      "time": 6396,
+      "success": true
+    },
+    {
+      "item": "turmeric",
+      "time": 2791,
+      "success": true
+    },
+    {
+      "item": "plain yogurt",
+      "time": 7465,
+      "success": true
+    },
+    {
+      "item": "garam masala",
+      "time": 6436,
+      "success": true
+    },
+    {
+      "item": "cayenne pepper",
+      "time": 2927,
+      "success": true
+    },
+    {
+      "item": "naan bread",
+      "time": 3149,
+      "success": true
+    },
+    {
+      "item": "basmati rice",
+      "time": 5611,
+      "success": true
+    }
+  ]
+}

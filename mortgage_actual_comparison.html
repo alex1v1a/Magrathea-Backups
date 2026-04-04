@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actual Payment Comparison - Current vs FHA</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f7fa;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .header h1 { margin: 0; font-size: 32px; }
+        .header p { margin: 10px 0 0 0; opacity: 0.9; font-size: 18px; }
+        
+        .payment-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .payment-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 5px solid;
+        }
+        
+        .payment-card.current { border-top-color: #ff5722; }
+        .payment-card.fha { border-top-color: #4caf50; }
+        
+        .card-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .card-amount {
+            font-size: 56px;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .payment-card.current .card-amount { color: #ff5722; }
+        .payment-card.fha .card-amount { color: #4caf50; }
+        
+        .card-details {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: left;
+        }
+        
+        .detail-line {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .detail-line:last-child { border-bottom: none; }
+        
+        .savings-card {
+            background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(76, 175, 80, 0.3);
+        }
+        
+        .savings-amount {
+            font-size: 72px;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .savings-label {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .breakdown-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .breakdown-section h2 {
+            color: #1e3c72;
+            margin-top: 0;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 15px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #1e3c72;
+        }
+        
+        .highlight-row {
+            background: #e8f5e9;
+            font-weight: 600;
+        }
+        
+        .positive { color: #4caf50; font-weight: 600; }
+        .negative { color: #ff5722; font-weight: 600; }
+        
+        .recommendation {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 5px solid #2196f3;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .recommendation h2 {
+            color: #1565c0;
+            margin-top: 0;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>💰 Actual Payment Comparison</h1>
+        <p>Current Mortgage vs FHA 4.75% Refinance</p>
+    </div>
+
+    <div class="payment-cards">
+        <div class="payment-card current">
+            <div class="card-label">Current Mortgage (Mr. Cooper)</div>
+            <div class="card-amount">$3,737</div>
+            <div class="card-label">per month</div>
+            
+            <div class="card-details">
+                <div class="detail-line">
+                    <span>Principal & Interest</span>
+                    <span>~$2,123</span>
+                </div>
+                <div class="detail-line">
+                    <span>Mortgage Insurance</span>
+                    <span>$193</span>
+                </div>
+                <div class="detail-line">
+                    <span>Escrow (Taxes/Insurance)</span>
+                    <span>$1,553</span>
+                </div>
+                <div class="detail-line">
+                    <span><strong>Total</strong></span>
+                    <span><strong>$3,737</strong></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment-card fha">
+            <div class="card-label">FHA Refinance</div>
+            <div class="card-amount">$2,935</div>
+            <div class="card-label">per month</div>
+            
+            <div class="card-details">
+                <div class="detail-line">
+                    <span>Principal & Interest</span>
+                    <span>$1,911</span>
+                </div>
+                <div class="detail-line">
+                    <span>MIP (FHA Insurance)</span>
+                    <span>$149</span>
+                </div>
+                <div class="detail-line">
+                    <span>Escrow (Taxes/Insurance)</span>
+                    <span>$875</span>
+                </div>
+                <div class="detail-line">
+                    <span><strong>Total</strong></span>
+                    <span><strong>$2,935</strong></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="savings-card">
+        <div class="savings-label">YOU SAVE EVERY MONTH</div>
+        <div class="savings-amount">$802</div>
+        
+        <div class="savings-label">That's $9,624 per year! 💵</div>
+    </div>
+
+    <div class="breakdown-section">
+        <h2>📊 Detailed Savings Breakdown</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Current</th>
+                    <th>FHA 4.75%</th>
+                    <th>Savings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Principal & Interest</td>
+                    <td>~$2,123</td>
+                    <td>$1,911</td>
+                    <td class="positive">$212</td>
+                </tr>
+                <tr>
+                    <td>Mortgage Insurance</td>
+                    <td>$193 (PMI)</td>
+                    <td>$149 (MIP)</td>
+                    <td class="positive">$44</td>
+                </tr>
+                <tr>
+                    <td>Escrow</td>
+                    <td>$1,553</td>
+                    <td>$875</td>
+                    <td class="positive">$678</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>TOTAL MONTHLY</strong></td>
+                    <td><strong>$3,737</strong></td>
+                    <td><strong>$2,935</strong></td>
+                    <td class="positive"><strong>$802</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>💡 Why Your Current Payment is Higher</h3>
+        
+        <p>Your current escrow of <strong>$1,553</strong> is significantly higher than the FHA estimate of <strong>$875</strong>. This $678 difference could be due to:</p>
+        
+        <ul>
+            <li>Higher property taxes in your current escrow (possibly not yet adjusted for current rate)</li>
+            <li>Homeowners insurance premium differences</li>
+            <li>Reserve requirements in your current loan</li>
+        </ul>
+
+        <p><strong>Important:</strong> The FHA loan's $875 escrow may be an estimate. Your actual escrow could be higher if property taxes are assessed higher. However, the <strong>P&I + MI savings of $256/month</strong> is guaranteed regardless of escrow differences.</p>
+    </div>
+
+    <div class="breakdown-section">
+        <h2>📈 Long-Term Impact</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Time Period</th>
+                    <th>Current Total Cost</th>
+                    <th>FHA Total Cost</th>
+                    <th>Your Savings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1 Year</td>
+                    <td>$44,844</td>
+                    <td>$35,220</td>
+                    <td class="positive">$9,624</td>
+                </tr>
+                <tr>
+                    <td>5 Years</td>
+                    <td>$224,220</td>
+                    <td>$176,100</td>
+                    <td class="positive">$48,120</td>
+                </tr>
+                <tr>
+                    <td>10 Years</td>
+                    <td>$448,440</td>
+                    <td>$352,200</td>
+                    <td class="positive">$96,240</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>30 Years</strong></td>
+                    <td><strong>$1,345,320</strong></td>
+                    <td><strong>$1,056,600</strong></td>
+                    <td class="positive"><strong>$288,720</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="recommendation">
+        <h2>✅ The Verdict: This is a No-Brainer</h2>
+        
+        <p><strong>Save $802/month ($9,624/year) with the FHA refinance.</strong></p>
+        
+        <h3>Why you should do this:</h3>
+        
+        <ul>
+            <li>✅ <strong>Immediate savings:</strong> $802 less per month starting day one</li>
+            <li>✅ <strong>Cash out:</strong> Access ~$26,000 in equity with only $941 out of pocket</li>
+            <li>✅ <strong>Better rate:</strong> 4.75% is excellent (national average is 5.86%)</li>
+            <li>✅ <strong>Lower MI:</strong> Even with permanent MIP, you pay $44/month less than PMI</li>
+            <li>✅ <strong>Massive long-term savings:</strong> Nearly $290,000 over 30 years</li>
+        </ul>
+
+        <p><strong>Action item:</strong> Lock in this 4.75% rate. Even if your actual escrow ends up higher than $875, you're still saving $256/month on P&I + MI alone. This is one of the best refinance opportunities you'll see.</p>
+    </div>
+
+    <div class="footer">
+        <p>Based on actual payments: Current $3,737 vs FHA $2,935 | Savings: $802/month</p>
+        <p>Generated February 16, 2026 | For informational purposes only</p>
+    </div>
+</body>
+</html>

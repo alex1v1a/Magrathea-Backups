@@ -1,0 +1,169 @@
+{
+  "status": "pending_integration",
+  "store": "HEB Buda",
+  "items": [
+    {
+      "name": "White fish fillets",
+      "amount": "1.5 lbs",
+      "hebSearch": "tilapia fillet"
+    },
+    {
+      "name": "Corn tortillas",
+      "amount": "1 pack",
+      "hebSearch": "corn tortillas"
+    },
+    {
+      "name": "Mango",
+      "amount": "2",
+      "hebSearch": "mango"
+    },
+    {
+      "name": "Red onion",
+      "amount": "1",
+      "hebSearch": "red onion"
+    },
+    {
+      "name": "Jalapeno",
+      "amount": "2",
+      "hebSearch": "jalapeno"
+    },
+    {
+      "name": "Cabbage slaw mix",
+      "amount": "1 bag",
+      "hebSearch": "coleslaw mix"
+    },
+    {
+      "name": "Chipotle mayo",
+      "amount": "1 bottle",
+      "hebSearch": "chipotle mayo"
+    },
+    {
+      "name": "Cod fillets",
+      "amount": "1.5 lbs",
+      "hebSearch": "cod fillet fresh"
+    },
+    {
+      "name": "Unsalted butter",
+      "amount": "1 stick",
+      "hebSearch": "butter unsalted"
+    },
+    {
+      "name": "Fresh parsley",
+      "amount": "1 bunch",
+      "hebSearch": "parsley fresh"
+    },
+    {
+      "name": "Capers",
+      "amount": "1 jar",
+      "hebSearch": "capers"
+    },
+    {
+      "name": "White wine",
+      "amount": "1 bottle",
+      "hebSearch": "white wine cooking"
+    },
+    {
+      "name": "Green beans",
+      "amount": "1 lb",
+      "hebSearch": "green beans fresh"
+    },
+    {
+      "name": "Chicken thighs",
+      "amount": "2 lbs",
+      "hebSearch": "chicken thighs bone-in"
+    },
+    {
+      "name": "Lemon",
+      "amount": "3",
+      "hebSearch": "lemon"
+    },
+    {
+      "name": "Fresh thyme",
+      "amount": "1 bunch",
+      "hebSearch": "thyme fresh"
+    },
+    {
+      "name": "Oregano",
+      "amount": "1 container",
+      "hebSearch": "oregano dried"
+    },
+    {
+      "name": "Couscous",
+      "amount": "1 lb",
+      "hebSearch": "couscous"
+    },
+    {
+      "name": "Zucchini",
+      "amount": "3",
+      "hebSearch": "zucchini"
+    },
+    {
+      "name": "Ribeye steak",
+      "amount": "1.5 lbs",
+      "hebSearch": "ribeye steak thin"
+    },
+    {
+      "name": "Asian pear",
+      "amount": "1",
+      "hebSearch": "asian pear"
+    },
+    {
+      "name": "Gochujang",
+      "amount": "1 container",
+      "hebSearch": "gochujang"
+    },
+    {
+      "name": "Jasmine rice",
+      "amount": "2 lbs",
+      "hebSearch": "jasmine rice"
+    },
+    {
+      "name": "Sesame seeds",
+      "amount": "1 container",
+      "hebSearch": "sesame seeds"
+    },
+    {
+      "name": "Kimchi",
+      "amount": "16 oz",
+      "hebSearch": "kimchi"
+    },
+    {
+      "name": "Chicken breast",
+      "amount": "2 lbs",
+      "hebSearch": "chicken breast boneless"
+    },
+    {
+      "name": "Cucumber",
+      "amount": "2",
+      "hebSearch": "cucumber"
+    },
+    {
+      "name": "Cherry tomatoes",
+      "amount": "1 pint",
+      "hebSearch": "tomatoes cherry"
+    },
+    {
+      "name": "Feta cheese",
+      "amount": "8 oz",
+      "hebSearch": "feta cheese"
+    },
+    {
+      "name": "Quinoa",
+      "amount": "2 lbs",
+      "hebSearch": "quinoa"
+    },
+    {
+      "name": "Hummus",
+      "amount": "10 oz",
+      "hebSearch": "hummus"
+    },
+    {
+      "name": "Red onion",
+      "amount": "1",
+      "hebSearch": "red onion"
+    }
+  ],
+  "estimatedTotal": 143,
+  "hebCartUrl": null,
+  "createdAt": "2026-02-07T14:00:00.980Z"
+}

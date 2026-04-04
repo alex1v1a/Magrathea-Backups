@@ -1,0 +1,19 @@
+{
+  "environment": "development",
+  "browser": {
+    "headless": false,
+    "slowMo": 50
+  },
+  "logging": {
+    "level": "debug",
+    "console": true,
+    "file": true
+  },
+  "antiBot": {
+    "minDelay": 1000,
+    "maxDelay": 3000
+  },
+  "metrics": {
+    "enabled": true
+  }
+}

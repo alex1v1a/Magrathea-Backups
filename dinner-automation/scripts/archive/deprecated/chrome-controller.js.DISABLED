@@ -1,0 +1,324 @@
+#!/usr/bin/env node
+/**
+ * Persistent Chrome Automation Controller
+ * 
+ * Keeps Chrome running 24/7 with Marvin profile
+ * Automatically connects via CDP for automation tasks
+ * Uses existing logged-in sessions (Facebook, HEB, etc.)
+ * Zero manual intervention required
+ * 
+ * Usage:
+ *   node chrome-controller.js
+ *   node chrome-controller.js --facebook-login
+ *   node chrome-controller.js --heb-cart
+ */
+
+const { chromium } = require('playwright');
+const { spawn } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+const CONFIG = {
+  chromePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+  userDataDir: 'C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data',
+  debugPort: 9224,
+  profile: 'Default', // Marvin profile with all logins
+  pidFile: path.join(__dirname, '..', 'data', 'chrome-controller.pid'),
+  logFile: path.join(__dirname, '..', 'data', 'chrome-controller.log')
+};
+
+let chromeProcess = null;
+let isShuttingDown = false;
+
+function log(message, level = 'info') {
+  const timestamp = new Date().toISOString();
+  const prefix = { error: '❌', warn: '⚠️', success: '✅', info: 'ℹ️' }[level] || 'ℹ️';
+  const line = `[${timestamp}] ${prefix} ${message}`;
+  console.log(line);
+  try {
+    fs.appendFileSync(CONFIG.logFile, line + '\n');
+  } catch (e) {}
+}
+
+/**
+ * Check if Chrome is responding on debug port
+ */
+async function isChromeResponding() {
+  try {
+    const browser = await chromium.connectOverCDP(`http://localhost:${CONFIG.debugPort}`);
+    await browser.close();
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Launch Chrome with Marvin profile
+ */
+function launchChrome() {
+  log('Launching Chrome with Marvin profile...', 'info');
+  
+  const args = [
+    `--remote-debugging-port=${CONFIG.debugPort}`,
+    `--user-data-dir=${CONFIG.userDataDir}`,
+    `--profile-directory=${CONFIG.profile}`,
+    '--restore-last-session',
+    '--no-first-run',
+    '--start-maximized',
+    '--disable-background-timer-throttling',
+    '--disable-renderer-backgrounding'
+  ];
+  
+  chromeProcess = spawn(CONFIG.chromePath, args, {
+    detached: false,
+    windowsHide: true  // Hide cmd window to prevent crash/interruption
+  });
+  
+  // Save PID
+  fs.writeFileSync(CONFIG.pidFile, String(chromeProcess.pid));
+  
+  chromeProcess.on('exit', (code) => {
+    log(`Chrome exited with code ${code}`, code === 0 ? 'info' : 'warn');
+    chromeProcess = null;
+    if (!isShuttingDown) {
+      setTimeout(launchChrome, 5000); // Auto-restart
+    }
+  });
+  
+  chromeProcess.on('error', (err) => {
+    log(`Chrome error: ${err.message}`, 'error');
+    chromeProcess = null;
+  });
+  
+  return chromeProcess;
+}
+
+/**
+ * Kill all Chrome processes
+ */
+async function killAllChrome() {
+  return new Promise((resolve) => {
+    const { exec } = require('child_process');
+    // Multiple kills to ensure complete shutdown
+    exec('taskkill /F /IM chrome.exe 2>nul', () => {
+      setTimeout(() => {
+        exec('taskkill /F /IM chrome.exe 2>nul', () => {
+          setTimeout(resolve, 3000);
+        });
+      }, 2000);
+    });
+  });
+}
+
+/**
+ * Ensure Chrome is running and accessible
+ */
+async function ensureChrome() {
+  const isResponding = await isChromeResponding();
+  
+  if (!isResponding) {
+    log('Chrome not responding, restarting...', 'warn');
+    await killAllChrome();
+    launchChrome();
+    
+    // Wait for Chrome to start
+    log('Waiting for Chrome to initialize...', 'info');
+    await new Promise(r => setTimeout(r, 10000));
+    
+    // Verify it's working
+    for (let i = 0; i < 10; i++) {
+      if (await isChromeResponding()) {
+        log('✅ Chrome is responding on debug port', 'success');
+        return true;
+      }
+      await new Promise(r => setTimeout(r, 2000));
+    }
+    
+    log('❌ Chrome failed to start properly', 'error');
+    return false;
+  }
+  
+  return true;
+}
+
+/**
+ * Connect to Chrome and return browser instance
+ */
+async function getBrowser() {
+  await ensureChrome();
+  
+  const browser = await chromium.connectOverCDP(`http://localhost:${CONFIG.debugPort}`);
+  return browser;
+}
+
+/**
+ * Facebook Marketplace - Check messages
+ */
+async function checkFacebookMessages() {
+  log('Checking Facebook Marketplace messages...', 'info');
+  
+  const browser = await getBrowser();
+  
+  try {
+    const contexts = browser.contexts();
+    const context = contexts[0] || await browser.newContext();
+    
+    // Find or create Facebook page
+    let page = context.pages().find(p => p.url().includes('facebook.com'));
+    if (!page) {
+      page = await context.newPage();
+    }
+    
+    await page.goto('https://www.facebook.com/marketplace/inbox');
+    await page.waitForLoadState('networkidle');
+    
+    // Check for messages
+    const conversations = await page.locator('div[role="listitem"]').count();
+    log(`Found ${conversations} conversations`, 'info');
+    
+    // Look for F-150 related messages
+    const pageContent = await page.content();
+    const hasF150Messages = pageContent.toLowerCase().includes('f-150') || 
+                           pageContent.toLowerCase().includes('truck');
+    
+    if (hasF150Messages) {
+      log('🚨 F-150 related messages detected!', 'warn');
+      // Could send notification here
+    }
+    
+    return { conversations, hasF150Messages };
+    
+  } finally {
+    await browser.close();
+  }
+}
+
+/**
+ * HEB Cart - Use extension
+ */
+async function addToHEBCart() {
+  log('Adding items to HEB cart via extension...', 'info');
+  
+  const browser = await getBrowser();
+  
+  try {
+    const contexts = browser.contexts();
+    const context = contexts[0] || await browser.newContext();
+    
+    // Navigate to HEB
+    const page = await context.newPage();
+    await page.goto('https://www.heb.com');
+    
+    log('HEB page opened - extension should auto-load items', 'info');
+    
+    // Extension handles the rest
+    await new Promise(r => setTimeout(r, 5000));
+    
+  } finally {
+    await browser.close();
+  }
+}
+
+/**
+ * Main controller loop
+ */
+async function controller() {
+  log('========================================', 'info');
+  log('Chrome Automation Controller Starting', 'info');
+  log('========================================', 'info');
+  
+  // Initial Chrome start
+  await ensureChrome();
+  
+  // Keep alive
+  while (!isShuttingDown) {
+    try {
+      const isHealthy = await isChromeResponding();
+      
+      if (!isHealthy) {
+        log('Health check failed, restarting Chrome...', 'warn');
+        await ensureChrome();
+      }
+      
+      // Log status every minute
+      log('Health check: Chrome OK', 'success');
+      
+    } catch (error) {
+      log(`Controller error: ${error.message}`, 'error');
+    }
+    
+    await new Promise(r => setTimeout(r, 60000)); // Check every minute
+  }
+}
+
+/**
+ * Run automation task
+ */
+async function runTask(task) {
+  switch (task) {
+    case 'facebook-messages':
+      return await checkFacebookMessages();
+    case 'heb-cart':
+      return await addToHEBCart();
+    default:
+      log(`Unknown task: ${task}`, 'error');
+  }
+}
+
+// CLI
+if (require.main === module) {
+  const args = process.argv.slice(2);
+  
+  if (args.includes('--controller')) {
+    // Run as persistent controller
+    controller().catch(err => {
+      log(`Fatal error: ${err.message}`, 'error');
+      process.exit(1);
+    });
+    
+  } else if (args.includes('--facebook-messages')) {
+    // Run Facebook message check
+    checkFacebookMessages()
+      .then(result => {
+        console.log(JSON.stringify(result, null, 2));
+        process.exit(0);
+      })
+      .catch(err => {
+        log(`Error: ${err.message}`, 'error');
+        process.exit(1);
+      });
+      
+  } else if (args.includes('--heb-cart')) {
+    // Run HEB cart
+    addToHEBCart()
+      .then(() => process.exit(0))
+      .catch(err => {
+        log(`Error: ${err.message}`, 'error');
+        process.exit(1);
+      });
+      
+  } else {
+    console.log(`
+Chrome Automation Controller
+
+Usage:
+  node chrome-controller.js --controller          # Run persistent controller
+  node chrome-controller.js --facebook-messages   # Check FB messages
+  node chrome-controller.js --heb-cart            # Add to HEB cart
+
+This keeps Chrome running 24/7 with Marvin profile.
+All logins (Facebook, HEB) are persisted in the profile.
+Zero manual intervention required.
+`);
+    process.exit(0);
+  }
+}
+
+module.exports = { 
+  getBrowser, 
+  ensureChrome, 
+  checkFacebookMessages, 
+  addToHEBCart,
+  runTask 
+};

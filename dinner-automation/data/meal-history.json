@@ -1,0 +1,40 @@
+{
+  "meals": [
+    {
+      "name": "Grilled Salmon with Asparagus",
+      "date": "2026-02-08T15:00:19.246Z",
+      "category": "seafood"
+    },
+    {
+      "name": "Pork Tenderloin with Roasted Vegetables",
+      "date": "2026-02-08T15:00:19.246Z",
+      "category": "american"
+    },
+    {
+      "name": "Fish Tacos with Mango Salsa",
+      "date": "2026-02-08T15:00:19.246Z",
+      "category": "mexican"
+    },
+    {
+      "name": "Chicken Tikka Masala",
+      "date": "2026-02-08T15:00:19.246Z",
+      "category": "indian"
+    },
+    {
+      "name": "Beef Stir-Fry with Vegetables",
+      "date": "2026-02-08T15:00:19.246Z",
+      "category": "asian"
+    },
+    {
+      "name": "Shrimp Tacos with Cabbage Slaw",
+      "date": "2026-02-08T15:00:19.246Z",
+      "category": "mexican"
+    },
+    {
+      "name": "Vegetable Curry with Chickpeas",
+      "date": "2026-02-08T15:00:19.246Z",
+      "category": "vegetarian"
+    }
+  ],
+  "lastUpdated": "2026-02-08T15:00:19.246Z"
+}

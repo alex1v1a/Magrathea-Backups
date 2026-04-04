@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Refinance Comparison - $875 Escrow</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f7fa;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .header h1 { margin: 0 0 10px 0; font-size: 28px; }
+        .header p { margin: 0; opacity: 0.9; }
+        .summary-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .summary-box h2 {
+            color: #1e3c72;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .key-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .metric-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #2a5298;
+        }
+        .metric-card label {
+            display: block;
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .metric-card value {
+            display: block;
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-top: 5px;
+        }
+        .chart-container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+        }
+        .chart-box {
+            position: relative;
+            height: 300px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background: #1e3c72;
+            color: white;
+            font-weight: 600;
+        }
+        tr:nth-child(even) { background: #f8f9fa; }
+        tr:hover { background: #e3f2fd; }
+        .current { background: #fff3e0 !important; }
+        .fha { background: #e3f2fd !important; }
+        .conventional { background: #e8f5e9 !important; }
+        .negative { color: #c62828; font-weight: bold; }
+        .positive { color: #2e7d32; font-weight: bold; }
+        .pros-cons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .pc-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .pc-card h3 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+        }
+        .pc-card.fha-card h3 { color: #1565c0; border-color: #1565c0; }
+        .pc-card.conv-card h3 { color: #2e7d32; border-color: #2e7d32; }
+        .pc-card.current-card h3 { color: #e65100; border-color: #e65100; }
+        .pros { color: #2e7d32; }
+        .cons { color: #c62828; }
+        .pros li::before { content: "✓ "; font-weight: bold; }
+        .cons li::before { content: "✗ "; font-weight: bold; }
+        ul { padding-left: 20px; }
+        .highlight {
+            background: #fff9c4;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #fbc02d;
+            margin: 20px 0;
+        }
+        .recommendation {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        .recommendation h2 {
+            color: #1b5e20;
+            margin-top: 0;
+        }
+        .number { font-family: 'Courier New', monospace; font-weight: bold; }
+        .alert {
+            background: #ffebee;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #c62828;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏠 Mortgage Refinance Comparison</h1>
+        <p>Consistent $875/Month Escrow Across All Scenarios</p>
+        <p>Prepared for Alexander | February 2026</p>
+    </div>
+
+    <div class="summary-box">
+        <h2>📊 Current Situation Summary</h2>
+        <div class="key-metrics">
+            <div class="metric-card">
+                <label>Current Loan Balance</label>
+                <value class="number">$340,281.97</value>
+            </div>
+            <div class="metric-card">
+                <label>Current Interest Rate</label>
+                <value class="number">6.375%</value>
+            </div>
+            <div class="metric-card">
+                <label>Current Monthly Payment</label>
+                <value class="number">$3,190.92</value>
+            </div>
+            <div class="metric-card">
+                <label>Escrow (All Loans)</label>
+                <value class="number">$875/mo</value>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert">
+        <strong>⚠️ Key Finding:</strong> With consistent $875/month escrow, the Conventional refinance at 5.5% is MORE EXPENSIVE than your current loan at all property values except $415k (and only saves $22/mo there). The FHA refinance at 4.75% is the only option that provides meaningful savings.
+    </div>
+
+    <div class="chart-container">
+        <h2>📈 Monthly Payment Comparison ($875 Escrow)</h2>
+        <div class="chart-box">
+            <canvas id="paymentChart"></canvas>
+        </div>
+    </div>
+
+    <div class="chart-grid">
+        <div class="chart-container">
+            <h2>💰 Monthly Savings vs Current</h2>
+            <div class="chart-box">
+                <canvas id="savingsChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-container">
+            <h2>⏱️ Break-Even Analysis (Months)</h2>
+            <div class="chart-box">
+                <canvas id="breakevenChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <h2>📊 Total Cost Comparison (30-Year)</h2>
+        <div class="chart-box">
+            <canvas id="totalCostChart"></canvas>
+        </div>
+    </div>
+
+    <div class="summary-box">
+        <h2>📋 Detailed Comparison Table ($875 Escrow)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Property Value</th>
+                    <th>Loan Type</th>
+                    <th>LTV</th>
+                    <th>P&I</th>
+                    <th>MI/PMI</th>
+                    <th>Escrow</th>
+                    <th>Total</th>
+                    <th>Savings</th>
+                    <th>Break-Even</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- $380,000 -->
+                <tr class="current">
+                    <td rowspan="3"><strong>$380,000</strong></td>
+                    <td>Current</td>
+                    <td>89.5%</td>
+                    <td>$2,123</td>
+                    <td>$193</td>
+                    <td>$875</td>
+                    <td>$3,191</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="fha">
+                    <td>FHA 4.75%</td>
+                    <td>96.4%</td>
+                    <td>$1,911</td>
+                    <td>$149</td>
+                    <td>$875</td>
+                    <td>$2,935</td>
+                    <td class="positive">$256</td>
+                    <td>33.6 mo</td>
+                </tr>
+                <tr class="conventional">
+                    <td>Conv 5.5%</td>
+                    <td>96.4%</td>
+                    <td>$2,080</td>
+                    <td>$305</td>
+                    <td>$875</td>
+                    <td>$3,260</td>
+                    <td class="negative">-$69</td>
+                    <td>Never</td>
+                </tr>
+                <!-- $400,000 -->
+                <tr class="current">
+                    <td rowspan="3"><strong>$400,000</strong></td>
+                    <td>Current</td>
+                    <td>85.1%</td>
+                    <td>$2,123</td>
+                    <td>$193</td>
+                    <td>$875</td>
+                    <td>$3,191</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="fha">
+                    <td>FHA 4.75%</td>
+                    <td>91.6%</td>
+                    <td>$1,911</td>
+                    <td>$149</td>
+                    <td>$875</td>
+                    <td>$2,935</td>
+                    <td class="positive">$256</td>
+                    <td>33.6 mo</td>
+                </tr>
+                <tr class="conventional">
+                    <td>Conv 5.5%</td>
+                    <td>91.6%</td>
+                    <td>$2,080</td>
+                    <td>$275</td>
+                    <td>$875</td>
+                    <td>$3,230</td>
+                    <td class="negative">-$39</td>
+                    <td>Never</td>
+                </tr>
+                <!-- $415,000 -->
+                <tr class="current">
+                    <td rowspan="3"><strong>$415,000</strong></td>
+                    <td>Current</td>
+                    <td>82.0%</td>
+                    <td>$2,123</td>
+                    <td>$193</td>
+                    <td>$875</td>
+                    <td>$3,191</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="fha">
+                    <td>FHA 4.75%</td>
+                    <td>88.3%</td>
+                    <td>$1,911</td>
+                    <td>$149</td>
+                    <td>$875</td>
+                    <td>$2,935</td>
+                    <td class="positive">$256</td>
+                    <td>33.6 mo</td>
+                </tr>
+                <tr class="conventional">
+                    <td>Conv 5.5%</td>
+                    <td>88.3%</td>
+                    <td>$2,080</td>
+                    <td>$214</td>
+                    <td>$875</td>
+                    <td>$3,168</td>
+                    <td class="positive">$22</td>
+                    <td>455 mo</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="summary-box">
+        <h2>💵 Closing Costs & Cash Requirements</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Loan Type</th>
+                    <th>Closing Costs</th>
+                    <th>Cash to Close</th>
+                    <th>5-Year Total Cost</th>
+                    <th>30-Year Total Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>FHA Refi (all values)</td>
+                    <td>$26,960</td>
+                    <td class="positive">$941</td>
+                    <td>$202,047</td>
+                    <td>$1,083,487</td>
+                </tr>
+                <tr>
+                    <td>Conv @ $380k</td>
+                    <td>$10,208</td>
+                    <td>$36,282</td>
+                    <td>$206,412</td>
+                    <td>$1,183,620</td>
+                </tr>
+                <tr>
+                    <td>Conv @ $400k</td>
+                    <td>$10,208</td>
+                    <td>$20,282</td>
+                    <td>$204,570</td>
+                    <td>$1,172,620</td>
+                </tr>
+                <tr>
+                    <td>Conv @ $415k</td>
+                    <td>$10,208</td>
+                    <td>$8,282</td>
+                    <td>$200,318</td>
+                    <td>$1,150,665</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="summary-box">
+        <h2>⚖️ Pros & Cons Analysis</h2>
+        <div class="pros-cons">
+            <div class="pc-card current-card">
+                <h3>📍 Current Loan (6.375%)</h3>
+                <h4 class="pros">Pros:</h4>
+                <ul class="pros">
+                    <li>No closing costs</li>
+                    <li>No cash required</li>
+                    <li>No refinancing hassle</li>
+                    <li>Already in place</li>
+                </ul>
+                <h4 class="cons">Cons:</h4>
+                <ul class="cons">
+                    <li>Higher rate than FHA</li>
+                    <li>Missing $256/mo savings</li>
+                    <li>MIP likely permanent</li>
+                </ul>
+            </div>
+            <div class="pc-card fha-card">
+                <h3>🏛️ FHA Refinance (4.75%)</h3>
+                <h4 class="pros">Pros:</h4>
+                <ul class="pros">
+                    <li>ONLY option with real savings ($256/mo)</li>
+                    <li>Lowest interest rate (4.75%)</li>
+                    <li>Minimal cash to close ($941)</li>
+                    <li>Best 30-year total cost</li>
+                </ul>
+                <h4 class="cons">Cons:</h4>
+                <ul class="cons">
+                    <li>High closing costs ($26,960)</li>
+                    <li>33.6 month break-even</li>
+                    <li>MIP for life of loan</li>
+                </ul>
+            </div>
+            <div class="pc-card conv-card">
+                <h3>🏦 Conventional (5.5%)</h3>
+                <h4 class="pros">Pros:</h4>
+                <ul class="pros">
+                    <li>Lower closing costs (~$10K)</li>
+                    <li>PMI removable at 80% LTV</li>
+                    <li>No upfront MIP</li>
+                </ul>
+                <h4 class="cons">Cons:</h4>
+                <ul class="cons">
+                    <li>MORE EXPENSIVE than current at $380k & $400k</li>
+                    <li>Only saves $22/mo at $415k</li>
+                    <li>High cash to close required</li>
+                    <li>455 month break-even at $415k</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="highlight">
+        <strong>💡 Critical Insight:</strong> With $875/month escrow, the Conventional refinance fails to beat your current loan at all but the highest property value ($415k). At $380k and $400k, you'd actually PAY MORE per month. The FHA refinance is the only viable option for actual savings.
+    </div>
+
+    <div class="recommendation">
+        <h2>🎯 Recommendation</h2>
+        <p><strong>Take the FHA refinance at 4.75%.</strong> It's the only option that provides meaningful monthly savings ($256/month = $3,073/year) with reasonable cash to close ($941).</p>
+        
+        <p><strong>Avoid the Conventional 5.5% refinance</strong> unless your home appraises at $415k+ AND you have significant cash for closing. Even then, it only saves $22/month versus $256/month with FHA.</p>
+        
+        <p style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #81c784;">
+            <strong>Bottom Line:</strong> The FHA 4.75% refinance saves you $256/month, costs only $941 to close, and has the lowest 30-year total cost ($1.08M vs $1.15M+ for conventional). It's the clear winner in this scenario.
+        </p>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; padding: 20px; color: #666; font-size: 12px;">
+        <p>This report is for informational purposes only. Please consult with a licensed mortgage professional before making any financial decisions.</p>
+        <p>Generated on February 16, 2026 | Escrow normalized to $875/month for fair comparison</p>
+    </div>
+
+    <script>
+        // Chart configuration
+        const propertyValues = ['$380,000', '$400,000', '$415,000'];
+        
+        // Monthly Payment Chart
+        new Chart(document.getElementById('paymentChart'), {
+            type: 'bar',
+            data: {
+                labels: propertyValues,
+                datasets: [
+                    {
+                        label: 'Current Loan',
+                        data: [3191, 3191, 3191],
+                        backgroundColor: '#ff9800',
+                        borderColor: '#f57c00',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'FHA Refinance',
+                        data: [2935, 2935, 2935],
+                        backgroundColor: '#2196f3',
+                        borderColor: '#1565c0',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Conventional',
+                        data: [3260, 3230, 3168],
+                        backgroundColor: '#4caf50',
+                        borderColor: '#2e7d32',
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'top' },
+                    title: { 
+                        display: true,
+                        text: 'Monthly Payment with $875 Escrow'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 2800,
+                        title: { display: true, text: 'Monthly Payment ($)' }
+                    }
+                }
+            }
+        });
+
+        // Monthly Savings Chart
+        new Chart(document.getElementById('savingsChart'), {
+            type: 'bar',
+            data: {
+                labels: propertyValues,
+                datasets: [
+                    {
+                        label: 'FHA Monthly Savings',
+                        data: [256, 256, 256],
+                        backgroundColor: '#2196f3',
+                        borderColor: '#1565c0',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Conventional Monthly Savings',
+                        data: [-69, -39, 22],
+                        backgroundColor: ['#c62828', '#c62828', '#4caf50'],
+                        borderColor: ['#b71c1c', '#b71c1c', '#2e7d32'],
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'top' },
+                    title: {
+                        display: true,
+                        text: 'Savings vs Current Loan (Negative = You Pay More)'
+                    }
+                },
+                scales: {
+                    y: {
+                        title: { display: true, text: 'Monthly Savings ($)' }
+                    }
+                }
+            }
+        });
+
+        // Break-Even Chart
+        new Chart(document.getElementById('breakevenChart'), {
+            type: 'bar',
+            data: {
+                labels: propertyValues,
+                datasets: [
+                    {
+                        label: 'FHA Break-Even',
+                        data: [33.6, 33.6, 33.6],
+                        backgroundColor: '#2196f3',
+                        borderColor: '#1565c0',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Conventional Break-Even',
+                        data: [0, 0, 455],
+                        backgroundColor: ['#c62828', '#c62828', '#4caf50'],
+                        borderColor: ['#b71c1c', '#b71c1c', '#2e7d32'],
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'top' },
+                    title: {
+                        display: true,
+                        text: 'Break-Even Point (0 = Never/Negative Savings)'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Months to Break-Even' }
+                    }
+                }
+            }
+        });
+
+        // Total 30-Year Cost Chart
+        new Chart(document.getElementById('totalCostChart'), {
+            type: 'bar',
+            data: {
+                labels: propertyValues,
+                datasets: [
+                    {
+                        label: 'FHA Total 30-Year Cost',
+                        data: [1083487, 1083487, 1083487],
+                        backgroundColor: '#2196f3',
+                        borderColor: '#1565c0',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Conventional Total 30-Year Cost',
+                        data: [1183620, 1172620, 1150665],
+                        backgroundColor: '#4caf50',
+                        borderColor: '#2e7d32',
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'top' },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': $' + context.raw.toLocaleString();
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 1000000,
+                        title: { display: true, text: 'Total Cost ($)' },
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + (value / 1000000).toFixed(1) + 'M';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

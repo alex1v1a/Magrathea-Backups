@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="48" height="48">
+  <defs>
+    <!-- Premium gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626"/>
+      <stop offset="50%" style="stop-color:#b91c1c"/>
+      <stop offset="100%" style="stop-color:#7f1d1d"/>
+    </linearGradient>
+    <!-- Inner shadow effect -->
+    <filter id="innerShadow">
+      <feOffset dx="0" dy="2"/>
+      <feGaussianBlur stdDeviation="2" result="offset-blur"/>
+      <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"/>
+      <feFlood flood-color="black" flood-opacity="0.2" result="color"/>
+      <feComposite operator="in" in="color" in2="inverse" result="shadow"/>
+      <feComposite operator="over" in="shadow" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  
+  <!-- Background with rounded corners -->
+  <rect x="8" y="8" width="184" height="184" rx="40" ry="40" fill="url(#bgGrad)"/>
+  
+  <!-- Paper/document base -->
+  <rect x="45" y="50" width="95" height="110" rx="6" fill="white"/>
+  
+  <!-- Paper shadow/fold -->
+  <path d="M140 50 L155 65 L140 65 Z" fill="#e2e8f0"/>
+  
+  <!-- Red accent line -->
+  <rect x="60" y="85" width="65" height="8" rx="4" fill="#dc2626"/>
+  
+  <!-- Gray text lines -->
+  <rect x="60" y="105" width="80" height="5" rx="2.5" fill="#94a3b8"/>
+  <rect x="60" y="118" width="70" height="5" rx="2.5" fill="#94a3b8"/>
+  <rect x="60" y="131" width="75" height="5" rx="2.5" fill="#94a3b8"/>
+  
+  <!-- Stylized pen/pencil -->
+  <g transform="rotate(-45 140 80)">
+    <rect x="125" y="60" width="12" height="40" rx="2" fill="#dc2626"/>
+    <polygon points="131,100 137,100 134,108" fill="#7f1d1d"/>
+    <rect x="128" y="55" width="6" height="8" rx="1" fill="#475569"/>
+  </g>
+  
+  <!-- Subtle highlight -->
+  <rect x="8" y="8" width="184" height="92" rx="40" fill="white" fill-opacity="0.1"/>
+</svg>

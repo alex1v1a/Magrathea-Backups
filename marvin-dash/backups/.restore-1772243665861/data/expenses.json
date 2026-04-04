@@ -1,0 +1,56 @@
+{
+  "lastUpdated": "2026-02-28T01:35:03.752Z",
+  "monthlyBudget": 200,
+  "totalSpent": 294.1112886994879,
+  "totalRemaining": 0,
+  "budgetPercent": 147.05564434974394,
+  "dailyAverage": 10.893010692573625,
+  "projectedMonthly": 326.79032077720876,
+  "openRouterCredits": {
+    "totalCredits": 40,
+    "totalUsage": 30.6173574,
+    "remaining": 9.3826426,
+    "source": "OpenRouter /credits API (direct)",
+    "lastFetch": "2026-02-28T01:35:03.751Z"
+  },
+  "providers": {
+    "kimi": {
+      "name": "Kimi (Moonshot)",
+      "models": [
+        {
+          "id": "moonshot/kimi-k2.5",
+          "name": "Moonshot Kimi K2.5 (Primary - ALL BOTS)",
+          "monthlySpent": 105.47235948464282,
+          "monthlyCost": 50
+        },
+        {
+          "id": "kimi-coding/k2p5",
+          "name": "Kimi Code K2.5 (Sub-agent - ALL BOTS)",
+          "monthlySpent": 99.83023887596777,
+          "monthlyCost": 30
+        }
+      ],
+      "totalSpent": 205.3025983606106,
+      "budget": 10,
+      "budgetPercent": 2053.025983606106,
+      "remaining": 0,
+      "status": "exceeded"
+    },
+    "minimax": {
+      "name": "MiniMax",
+      "models": [
+        {
+          "id": "minimax/MiniMax-M2.1",
+          "name": "MiniMax M2.1 (Coding)",
+          "monthlySpent": 88.80869033887731,
+          "monthlyCost": 30
+        }
+      ],
+      "totalSpent": 88.80869033887731,
+      "budget": 10,
+      "budgetPercent": 888.0869033887731,
+      "remaining": 0,
+      "status": "exceeded"
+    }
+  }
+}

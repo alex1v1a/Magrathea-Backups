@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-02-08T22:31:56.535Z",
+  "type": "HEB Cart Substitutions",
+  "cartStatus": {
+    "totalItems": 31,
+    "inCart": 27,
+    "missing": 4,
+    "substitutions": 4,
+    "finalCount": 30
+  },
+  "substitutions": [
+    {
+      "original": "White fish fillets",
+      "substitute": "catfish fillet",
+      "note": "Both mild white fish"
+    },
+    {
+      "original": "Gochujang",
+      "substitute": "sriracha",
+      "note": "Both spicy Asian condiments"
+    },
+    {
+      "original": "Asian pear",
+      "substitute": "bosc pear",
+      "note": "Similar texture and sweetness"
+    },
+    {
+      "original": "Sesame seeds",
+      "substitute": "omit",
+      "note": "Garnish only - not critical"
+    }
+  ],
+  "recipesUpdated": 3,
+  "notes": "Substitutions applied to maintain meal plan integrity"
+}

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Paper Trail Limited - New Zealand based app development company. Creators of Reel Reviews.">
+    <title>Paper Trail Limited — App Development Studio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #ffffff; color: #111111; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        
+        /* Header */
+        .site-header { position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #e5e5e5; z-index: 100; }
+        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .main-nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 15px; }
+        .brand-logo { width: 28px; height: 28px; }
+        .nav-links { display: flex; gap: 32px; }
+        .nav-link { font-size: 14px; font-weight: 500; color: #666; transition: color 0.15s; }
+        .nav-link:hover, .nav-link.active { color: #111; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 10px 20px; font-size: 14px; font-weight: 500; border-radius: 8px; cursor: pointer; border: none; transition: all 0.15s; }
+        .btn-primary { background: #dc2626; color: white; }
+        .btn-primary:hover { background: #b91c1c; }
+        .btn-secondary { background: transparent; color: #111; border: 1px solid #e5e5e5; }
+        .btn-secondary:hover { background: #f5f5f5; }
+        .btn-lg { padding: 14px 28px; font-size: 15px; }
+        
+        /* Hero */
+        .hero { padding: 80px 0; text-align: center; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 20px; font-size: 14px; color: #666; margin-bottom: 24px; }
+        .hero-title { font-family: 'Newsreader', Georgia, serif; font-size: 56px; line-height: 1.1; margin-bottom: 24px; letter-spacing: -0.02em; }
+        .hero-subtitle { font-size: 20px; color: #666; max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+        .hero-cta { display: flex; gap: 16px; justify-content: center; }
+        @media (max-width: 640px) { .hero-title { font-size: 40px; } .hero-cta { flex-direction: column; align-items: center; } }
+        
+        /* Container */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        
+        /* Section Header */
+        .section-header { text-align: center; margin-bottom: 48px; }
+        .section-label { display: inline-block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #dc2626; margin-bottom: 12px; }
+        .section-title { font-family: 'Newsreader', Georgia, serif; font-size: 36px; margin-bottom: 12px; }
+        .section-description { font-size: 18px; color: #666; }
+        
+        /* Apps Section */
+        .apps-section { padding: 80px 0; background: #fafafa; border-top: 1px solid #e5e5e5; }
+        .apps-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+        @media (max-width: 768px) { .apps-grid { grid-template-columns: 1fr; } }
+        .app-card { background: white; border: 1px solid #e5e5e5; border-radius: 12px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
+        .app-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+        .app-card-image { aspect-ratio: 16/10; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative; }
+        .app-card-image.coming-soon { background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%); }
+        .app-badge { position: absolute; top: 16px; left: 16px; padding: 6px 12px; background: rgba(255,255,255,0.95); border-radius: 20px; font-size: 12px; font-weight: 600; }
+        .app-card-content { padding: 24px; }
+        .app-card-content h3 { font-family: 'Newsreader', Georgia, serif; font-size: 24px; margin-bottom: 4px; }
+        .app-tagline { font-size: 14px; color: #dc2626; font-weight: 500; margin-bottom: 12px; }
+        .app-description { font-size: 15px; color: #666; margin-bottom: 16px; line-height: 1.6; }
+        .app-features { margin-bottom: 20px; }
+        .app-features li { font-size: 14px; color: #666; padding: 4px 0; padding-left: 20px; position: relative; }
+        .app-features li::before { content: "✓"; position: absolute; left: 0; color: #dc2626; font-weight: 600; }
+        
+        /* About Section */
+        .about-section { padding: 80px 0; }
+        .about-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
+        .about-card { padding: 32px; background: #fafafa; border-radius: 12px; border: 1px solid #e5e5e5; }
+        .about-icon { font-size: 32px; margin-bottom: 16px; }
+        .about-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+        .about-card p { font-size: 15px; color: #666; line-height: 1.6; }
+        
+        /* Newsletter */
+        .newsletter-section { padding: 80px 0; background: #111; color: white; }
+        .newsletter-section .section-title { color: white; }
+        .newsletter-section .section-description { color: #999; }
+        .newsletter-form { display: flex; gap: 12px; justify-content: center; max-width: 500px; margin: 0 auto; }
+        .newsletter-input { flex: 1; padding: 14px 20px; border: 1px solid #333; border-radius: 8px; font-size: 15px; background: #1a1a1a; color: white; }
+        .newsletter-input::placeholder { color: #666; }
+        @media (max-width: 640px) { .newsletter-form { flex-direction: column; } }
+        
+        /* Footer */
+        .site-footer { background: #fafafa; border-top: 1px solid #e5e5e5; padding: 48px 0 24px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+        @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+        .footer-description { font-size: 14px; color: #666; max-width: 280px; margin-top: 12px; }
+        .footer-links h4 { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { font-size: 14px; color: #666; }
+        .footer-links a:hover { color: #111; }
+        .footer-bottom { padding-top: 24px; border-top: 1px solid #e5e5e5; text-align: center; }
+        .footer-bottom p { font-size: 13px; color: #888; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <nav class="main-nav">
+                <a href="/" class="brand">
+                    <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="48" rx="8" fill="#dc2626"/>
+                        <path d="M14 12h20v4H14v-4zm0 10h20v4H14v-4zm0 10h14v4H14v-4z" fill="white"/>
+                    </svg>
+                    <span>Paper Trail</span>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="/" class="nav-link active">Home</a></li>
+                    <li><a href="/blog/" class="nav-link">Blog</a></li>
+                    <li><a href="/apps/reel-reviews/" class="nav-link">Reel Reviews</a></li>
+                    <li><a href="/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-badge">
+                    <span>🇳🇿</span>
+                    <span>Based in New Zealand</span>
+                </div>
+                <h1 class="hero-title">Building apps that<br>tell the truth</h1>
+                <p class="hero-subtitle">
+                    Paper Trail Limited is a New Zealand-based app development company 
+                    creating innovative mobile experiences.
+                </p>
+                <div class="hero-cta">
+                    <a href="/apps/reel-reviews/" class="btn btn-primary btn-lg">Explore Reel Reviews</a>
+                    <a href="/blog/" class="btn btn-secondary btn-lg">Read our blog</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apps -->
+        <section class="apps-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Our Work</span>
+                    <h2 class="section-title">Apps we've built</h2>
+                    <p class="section-description">Each app solves a real problem with elegant design.</p>
+                </div>
+
+                <div class="apps-grid">
+                    <article class="app-card">
+                        <a href="/apps/reel-reviews/">
+                            <div class="app-card-image">
+                                <span class="app-badge">Available Now</span>
+                            </div>
+                            <div class="app-card-content">
+                                <h3>Reel Reviews</h3>
+                                <p class="app-tagline">The honest review app</p>
+                                <p class="app-description">Only negative reviews allowed. Catch bad spots before they catch you.</p>
+                                <ul class="app-features">
+                                    <li>Map-based discovery</li>
+                                    <li>Verified negative reviews</li>
+                                    <li>Available on iOS & Android</li>
+                                </ul>
+                                <span class="btn btn-primary">Learn more →</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="app-card">
+                        <a href="/apps/coming-soon/">
+                            <div class="app-card-image coming-soon">
+                                <span class="app-badge" style="background:#333;color:#fff;">Coming Soon</span>
+                            </div>
+                            <div class="app-card-content">
+                                <h3>Next Project</h3>
+                                <p class="app-tagline">Something new is brewing</p>
+                                <p class="app-description">We're working on our next app. Sign up to be the first to know.</p>
+                                <ul class="app-features">
+                                    <li>In development</li>
+                                    <li>Beta signup available</li>
+                                    <li>Launching 2026</li>
+                                </ul>
+                                <span class="btn btn-secondary">Get early access →</span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">About Us</span>
+                    <h2 class="section-title">Why Paper Trail?</h2>
+                    <p class="section-description">We believe great software tells a story.</p>
+                </div>
+
+                <!--
+                    ABOUT GRID - Three column layout for company story, mission, and location
+                    Expanded content to meet ~300 word requirement for Apple App Store compliance
+                    Each card maintains consistent styling with icon + heading + paragraph structure
+                -->
+                <div class="about-grid">
+                    <!--
+                        OUR STORY CARD
+                        Word count: ~175 words
+                        Covers: founding story, New Zealand connection, app development philosophy
+                        Tone: Professional with narrative emphasis on storytelling and craftsmanship
+                    -->
+                    <div class="about-card">
+                        <div class="about-icon">📖</div>
+                        <h3>Our Story</h3>
+                        <p>Paper Trail Limited was founded in the heart of Auckland, New Zealand, born from a simple belief: great software should tell a compelling story. Our journey began when our founder, frustrated by apps that promised much but delivered little, decided to create something different. Starting from a small office in Parnell, we set out to build mobile experiences that genuinely matter.</p>
+                        <p style="margin-top: 12px;">Each app we create represents a new chapter in our ongoing narrative of innovation. We don't just write code; we craft digital experiences that solve real problems for real people. Our New Zealand roots give us a unique perspective—we're used to doing more with less, to finding creative solutions in a place known as the edge of the world. This mindset shapes everything we build.</p>
+                        <p style="margin-top: 12px;">From our first prototype to our latest release, we've stayed true to our founding principle: technology should serve people, not the other way around. Every line of code, every pixel, every user interaction is an opportunity to tell that story.</p>
+                    </div>
+
+                    <!--
+                        OUR MISSION CARD
+                        Word count: ~145 words
+                        Covers: mission statement, values, app development philosophy, NZ perspective
+                        Tone: Professional, focused on honesty, transparency, and user respect
+                    -->
+                    <div class="about-card">
+                        <div class="about-icon">🎯</div>
+                        <h3>Our Mission</h3>
+                        <p>Our mission is straightforward yet ambitious: build apps that solve real problems with honesty and elegance. We reject the culture of feature bloat and dark patterns. Instead, we focus on what matters—creating intuitive, reliable software that respects users and their time.</p>
+                        <p style="margin-top: 12px;">We believe in transparency, quality craftsmanship, and the power of negative space. No fluff, just function. This philosophy guides every decision we make, from initial concept to final release. We're not interested in building apps that harvest data or manipulate behavior. We build tools that empower users and make their lives genuinely better.</p>
+                        <p style="margin-top: 12px;">As a New Zealand-based company, we bring a unique perspective to the global app market. We understand that great ideas can come from anywhere, and we're committed to proving that world-class software can be built from the edge of the world.</p>
+                    </div>
+
+                    <!--
+                        OUR HOME CARD
+                        Location card highlighting Auckland, New Zealand base
+                        Connects to contact page address for consistency
+                    -->
+                    <div class="about-card">
+                        <div class="about-icon">🇳🇿</div>
+                        <h3>Our Home</h3>
+                        <p>Proudly based in Parnell, Auckland, New Zealand. Creating global products from the edge of the world, where innovation meets the Pacific.</p>
+                        <p style="margin-top: 12px;">Our office at 1 Tika Street sits in one of Auckland's most vibrant neighborhoods, surrounded by the energy of New Zealand's largest city while maintaining the calm focus needed to build exceptional software.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label" style="color:#dc2626;">Newsletter</span>
+                    <h2 class="section-title">Stay in the loop</h2>
+                    <p class="section-description">Get updates on our apps and behind-the-scenes content.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="your@email.com" required class="newsletter-input">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="brand">
+                        <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="8" fill="#dc2626"/>
+                            <path d="M14 12h20v4H14v-4zm0 10h20v4H14v-4zm0 10h14v4H14v-4z" fill="white"/>
+                        </svg>
+                        <span>Paper Trail</span>
+                    </a>
+                    <p class="footer-description">Writing the future of mobile experiences from New Zealand.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="/apps/reel-reviews/">Reel Reviews</a></li>
+                        <li><a href="/apps/coming-soon/">Coming Soon</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/privacy-policy.html">Privacy</a></li>
+                        <li><a href="/terms-of-service.html">Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:admin@typewrite.club">Email</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Paper Trail Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

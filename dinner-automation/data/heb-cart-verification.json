@@ -1,0 +1,202 @@
+{
+  "timestamp": "2026-02-13T04:14:15.130Z",
+  "summary": {
+    "totalMealItems": 31,
+    "found": 0,
+    "missing": 31,
+    "extra": 0,
+    "cartBadge": 42,
+    "extracted": 0
+  },
+  "found": [],
+  "missing": [
+    {
+      "name": "White fish fillets",
+      "search": "tilapia",
+      "qty": 1.5,
+      "unit": "lbs"
+    },
+    {
+      "name": "Corn tortillas",
+      "search": "corn tortillas",
+      "qty": 1,
+      "unit": "pack"
+    },
+    {
+      "name": "Mango",
+      "search": "mango",
+      "qty": 2,
+      "unit": "each"
+    },
+    {
+      "name": "Red onion",
+      "search": "red onion",
+      "qty": 1,
+      "unit": "each"
+    },
+    {
+      "name": "Jalapeno",
+      "search": "jalapeno",
+      "qty": 2,
+      "unit": "each"
+    },
+    {
+      "name": "Cabbage slaw mix",
+      "search": "coleslaw",
+      "qty": 1,
+      "unit": "bag"
+    },
+    {
+      "name": "Chipotle mayo",
+      "search": "chipotle mayo",
+      "qty": 1,
+      "unit": "bottle"
+    },
+    {
+      "name": "Cod fillets",
+      "search": "cod",
+      "qty": 1.5,
+      "unit": "lbs"
+    },
+    {
+      "name": "Butter",
+      "search": "butter",
+      "qty": 1,
+      "unit": "pack"
+    },
+    {
+      "name": "Fresh parsley",
+      "search": "parsley",
+      "qty": 1,
+      "unit": "bunch"
+    },
+    {
+      "name": "Capers",
+      "search": "capers",
+      "qty": 1,
+      "unit": "jar"
+    },
+    {
+      "name": "White wine",
+      "search": "white wine",
+      "qty": 1,
+      "unit": "bottle"
+    },
+    {
+      "name": "Green beans",
+      "search": "green beans",
+      "qty": 1,
+      "unit": "lb"
+    },
+    {
+      "name": "Chicken thighs",
+      "search": "chicken thighs",
+      "qty": 2,
+      "unit": "lbs"
+    },
+    {
+      "name": "Lemon",
+      "search": "lemon",
+      "qty": 3,
+      "unit": "each"
+    },
+    {
+      "name": "Fresh thyme",
+      "search": "thyme",
+      "qty": 1,
+      "unit": "bunch"
+    },
+    {
+      "name": "Oregano",
+      "search": "oregano",
+      "qty": 1,
+      "unit": "container"
+    },
+    {
+      "name": "Couscous",
+      "search": "couscous",
+      "qty": 1,
+      "unit": "lb"
+    },
+    {
+      "name": "Zucchini",
+      "search": "zucchini",
+      "qty": 3,
+      "unit": "each"
+    },
+    {
+      "name": "Ribeye steak",
+      "search": "ribeye",
+      "qty": 1.5,
+      "unit": "lbs"
+    },
+    {
+      "name": "Asian pear",
+      "search": "asian pear",
+      "qty": 1,
+      "unit": "each"
+    },
+    {
+      "name": "Gochujang",
+      "search": "gochujang",
+      "qty": 1,
+      "unit": "container"
+    },
+    {
+      "name": "Jasmine rice",
+      "search": "jasmine rice",
+      "qty": 2,
+      "unit": "lbs"
+    },
+    {
+      "name": "Sesame seeds",
+      "search": "sesame",
+      "qty": 1,
+      "unit": "container"
+    },
+    {
+      "name": "Kimchi",
+      "search": "kimchi",
+      "qty": 16,
+      "unit": "oz"
+    },
+    {
+      "name": "Chicken breast",
+      "search": "chicken breast",
+      "qty": 2,
+      "unit": "lbs"
+    },
+    {
+      "name": "Cucumber",
+      "search": "cucumber",
+      "qty": 2,
+      "unit": "each"
+    },
+    {
+      "name": "Cherry tomatoes",
+      "search": "cherry tomatoes",
+      "qty": 1,
+      "unit": "pint"
+    },
+    {
+      "name": "Feta cheese",
+      "search": "feta",
+      "qty": 8,
+      "unit": "oz"
+    },
+    {
+      "name": "Quinoa",
+      "search": "quinoa",
+      "qty": 2,
+      "unit": "lbs"
+    },
+    {
+      "name": "Hummus",
+      "search": "hummus",
+      "qty": 10,
+      "unit": "oz"
+    }
+  ],
+  "extra": [],
+  "allCartItems": []
+}

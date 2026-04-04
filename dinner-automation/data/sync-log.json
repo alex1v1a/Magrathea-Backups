@@ -1,0 +1,268 @@
+[
+  {
+    "timestamp": "2026-02-08T22:38:56.850Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-08T23:00:57.982Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-08T23:30:33.001Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T00:01:26.621Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T00:30:34.677Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T01:01:02.585Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T01:30:34.003Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T02:02:18.231Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T02:30:41.918Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T03:01:05.401Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T03:30:35.229Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T04:01:00.301Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T04:30:42.756Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T05:09:04.901Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T05:30:41.020Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T06:01:08.045Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T06:30:43.935Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T07:01:52.359Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T07:30:56.900Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T08:31:22.972Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T09:00:55.953Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T09:31:26.047Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T10:01:10.879Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T10:31:41.836Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T11:00:48.305Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T11:30:39.043Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T12:00:43.907Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T12:30:44.904Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T13:00:48.925Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T13:31:14.857Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T14:01:31.670Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T14:30:38.229Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T15:01:32.155Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T15:30:50.562Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T16:03:38.049Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T16:30:50.087Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T17:30:35.894Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  },
+  {
+    "timestamp": "2026-02-09T18:01:04.135Z",
+    "action": "SYNC_TRIGGERED",
+    "cartItems": 27,
+    "targetItems": 30,
+    "missing": 3
+  }
+]

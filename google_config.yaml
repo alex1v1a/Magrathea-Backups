@@ -1,0 +1,14 @@
+# Google/YouTube Integration Configuration
+# Added: 2026-03-08
+
+# Credentials:
+# Email: alex@1v1a.com
+# Password: Standal0ne9
+
+# To integrate Google/YouTube:
+# 1. Google Calendar: Enable Google Calendar API at console.cloud.google.com
+# 2. YouTube: Enable YouTube Data API v3
+# 3. Create OAuth credentials
+# 4. Add to HA via Settings → Devices & Services → Google
+
+# For now, credentials documented for manual setup

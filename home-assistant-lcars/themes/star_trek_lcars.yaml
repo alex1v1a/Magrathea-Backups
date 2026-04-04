@@ -1,0 +1,399 @@
+# Star Trek LCARS Theme for Home Assistant
+# Based on TNG/DS9/Voyager LCARS interface design
+# https://lcars.computer/
+
+Star Trek LCARS:
+  # ============================================
+  # LCARS COLOR PALETTE
+  # ============================================
+  
+  # Primary Colors
+  lcars-orange: "#FF9900"
+  lcars-orange-light: "#FFCC66"
+  lcars-orange-dark: "#CC7A00"
+  
+  lcars-purple: "#CC99CC"
+  lcars-purple-light: "#E6CCE6"
+  lcars-purple-dark: "#996699"
+  
+  lcars-blue: "#9999CC"
+  lcars-blue-light: "#CCCCFF"
+  lcars-blue-dark: "#666699"
+  
+  # Secondary Colors
+  lcars-red: "#CC6666"
+  lcars-red-light: "#E69999"
+  lcars-red-dark: "#993333"
+  
+  lcars-pink: "#CC6699"
+  lcars-pink-light: "#E699BB"
+  lcars-pink-dark: "#993366"
+  
+  lcars-tan: "#FFCC99"
+  lcars-tan-light: "#FFE6CC"
+  lcars-tan-dark: "#CC9966"
+  
+  lcars-gold: "#FFCC66"
+  lcars-gold-light: "#FFE699"
+  lcars-gold-dark: "#CC9933"
+  
+  # Neutral Colors
+  lcars-black: "#000000"
+  lcars-white: "#FFFFFF"
+  lcars-gray: "#666666"
+  lcars-gray-light: "#999999"
+  lcars-gray-dark: "#333333"
+  
+  # ============================================
+  # BASE THEME COLORS
+  # ============================================
+  
+  # Primary UI Colors
+  primary-color: var(--lcars-orange)
+  accent-color: var(--lcars-purple)
+  secondary-background-color: var(--lcars-black)
+  
+  # Background Colors
+  primary-background-color: var(--lcars-black)
+  card-background-color: var(--lcars-black)
+  background-color: var(--lcars-black)
+  
+  # Text Colors
+  primary-text-color: var(--lcars-orange)
+  secondary-text-color: var(--lcars-tan)
+  text-primary-color: var(--lcars-orange)
+  text-light-primary-color: var(--lcars-tan)
+  disabled-text-color: var(--lcars-gray)
+  
+  # ============================================
+  # HA UI ELEMENTS
+  # ============================================
+  
+  # Sidebar
+  sidebar-background-color: var(--lcars-black)
+  sidebar-selected-text-color: var(--lcars-orange)
+  sidebar-selected-icon-color: var(--lcars-orange)
+  sidebar-icon-color: var(--lcars-purple)
+  sidebar-text-color: var(--lcars-purple)
+  
+  # Header
+  app-header-background-color: var(--lcars-black)
+  app-header-text-color: var(--lcars-orange)
+  app-header-selection-bar-color: var(--lcars-orange)
+  
+  # Cards
+  ha-card-border-radius: "0px 20px 0px 20px"
+  ha-card-box-shadow: "none"
+  ha-card-background: var(--lcars-black)
+  
+  # States
+  state-icon-color: var(--lcars-orange)
+  state-icon-active-color: var(--lcars-orange)
+  state-icon-inactive-color: var(--lcars-gray)
+  
+  # Sliders/Controls
+  slider-color: var(--lcars-orange)
+  slider-bar-color: var(--lcars-gray-dark)
+  
+  # Switches
+  switch-checked-color: var(--lcars-orange)
+  switch-checked-button-color: var(--lcars-orange)
+  switch-checked-track-color: var(--lcars-orange-dark)
+  switch-unchecked-button-color: var(--lcars-gray)
+  switch-unchecked-track-color: var(--lcars-gray-dark)
+  
+  # Radio Buttons
+  radio-selected-color: var(--lcars-orange)
+  
+  # Checkboxes
+  mdc-checkbox-unchecked-color: var(--lcars-gray)
+  mdc-checkbox-checked-color: var(--lcars-orange)
+  
+  # Inputs
+  input-fill-color: var(--lcars-gray-dark)
+  input-ink-color: var(--lcars-orange)
+  input-label-ink-color: var(--lcars-purple)
+  input-idle-line-color: var(--lcars-gray)
+  input-hover-line-color: var(--lcars-orange)
+  
+  # ============================================
+  # SPECIFIC ELEMENT OVERRIDES
+  # ============================================
+  
+  # Paper Elements (Legacy)
+  paper-card-background-color: var(--lcars-black)
+  paper-card-header-color: var(--lcars-orange)
+  paper-item-icon-color: var(--lcars-orange)
+  paper-item-icon-active-color: var(--lcars-orange)
+  paper-item-icon_-_color: var(--lcars-orange)
+  
+  # Material Design
+  mdc-theme-primary: var(--lcars-orange)
+  mdc-theme-secondary: var(--lcars-purple)
+  mdc-theme-background: var(--lcars-black)
+  mdc-theme-surface: var(--lcars-black)
+  
+  # Dialogs
+  dialog-backdrop-color: "rgba(0, 0, 0, 0.8)"
+  
+  # Tables
+  table-row-background-color: var(--lcars-black)
+  table-row-alternative-background-color: var(--lcars-gray-dark)
+  data-table-background-color: var(--lcars-black)
+  
+  # ============================================
+  # FONT CONFIGURATION
+  # ============================================
+  
+  # Primary Font Stack
+  primary-font-family: "Antonio, Eurostile, Helvetica, Arial, sans-serif"
+  paper-font-common-base_-_font-family: var(--primary-font-family)
+  paper-font-common-code_-_font-family: "Monaco, Consolas, monospace"
+  paper-font-body1_-_font-family: var(--primary-font-family)
+  paper-font-subhead_-_font-family: var(--primary-font-family)
+  paper-font-headline_-_font-family: var(--primary-font-family)
+  paper-font-caption_-_font-family: var(--primary-font-family)
+  paper-font-title_-_font-family: var(--primary-font-family)
+  
+  # ============================================
+  # CARD MOD GLOBAL STYLES
+  # ============================================
+  
+  card-mod-theme: "Star Trek LCARS"
+  
+  card-mod-root: |
+    ha-app-layout {
+      background: var(--lcars-black) !important;
+    }
+    
+    .header {
+      background: var(--lcars-black) !important;
+      border-bottom: 2px solid var(--lcars-orange) !important;
+    }
+    
+    ha-sidebar {
+      background: var(--lcars-black) !important;
+      border-right: 2px solid var(--lcars-purple) !important;
+    }
+    
+    .menu ha-icon {
+      color: var(--lcars-orange) !important;
+    }
+  
+  card-mod-view: |
+    hui-view {
+      background: var(--lcars-black) !important;
+    }
+    
+    hui-view::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: linear-gradient(90deg, 
+        var(--lcars-purple) 0%, 
+        var(--lcars-purple) 20%, 
+        var(--lcars-black) 20.1%, 
+        var(--lcars-black) 100%
+      );
+      z-index: 1;
+    }
+  
+  # ============================================
+  # LCARS BUTTON STYLES (for button-card)
+  # ============================================
+  
+  # LCARS Pill Button - Orange
+  lcars-button-orange: |
+    ha-card {
+      background: var(--lcars-orange) !important;
+      border-radius: 0px 20px 20px 0px !important;
+      height: 50px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      padding-right: 15px !important;
+    }
+    ha-card .name {
+      color: var(--lcars-black) !important;
+      font-family: var(--primary-font-family) !important;
+      font-weight: bold !important;
+      font-size: 16px !important;
+      text-transform: uppercase !important;
+    }
+  
+  # LCARS Pill Button - Purple
+  lcars-button-purple: |
+    ha-card {
+      background: var(--lcars-purple) !important;
+      border-radius: 20px 0px 0px 20px !important;
+      height: 50px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      padding-left: 15px !important;
+    }
+    ha-card .name {
+      color: var(--lcars-black) !important;
+      font-family: var(--primary-font-family) !important;
+      font-weight: bold !important;
+      font-size: 16px !important;
+      text-transform: uppercase !important;
+    }
+  
+  # LCARS Pill Button - Blue
+  lcars-button-blue: |
+    ha-card {
+      background: var(--lcars-blue) !important;
+      border-radius: 0px 20px 20px 0px !important;
+      height: 40px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      padding-right: 15px !important;
+    }
+    ha-card .name {
+      color: var(--lcars-black) !important;
+      font-family: var(--primary-font-family) !important;
+      font-weight: bold !important;
+      font-size: 14px !important;
+      text-transform: uppercase !important;
+    }
+  
+  # LCARS Pill Button - Red (Alert)
+  lcars-button-red: |
+    ha-card {
+      background: var(--lcars-red) !important;
+      border-radius: 20px 0px 0px 20px !important;
+      height: 50px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      padding-left: 15px !important;
+    }
+    ha-card .name {
+      color: var(--lcars-black) !important;
+      font-family: var(--primary-font-family) !important;
+      font-weight: bold !important;
+      font-size: 16px !important;
+      text-transform: uppercase !important;
+    }
+  
+  # LCARS Pill Button - Tan
+  lcars-button-tan: |
+    ha-card {
+      background: var(--lcars-tan) !important;
+      border-radius: 0px 15px 15px 0px !important;
+      height: 35px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      padding-right: 12px !important;
+    }
+    ha-card .name {
+      color: var(--lcars-black) !important;
+      font-family: var(--primary-font-family) !important;
+      font-weight: bold !important;
+      font-size: 13px !important;
+      text-transform: uppercase !important;
+    }
+  
+  # ============================================
+  # LCARS HEADER/FOOTER STYLES
+  # ============================================
+  
+  # LCARS Header Bar
+  lcars-header: |
+    ha-card {
+      background: linear-gradient(90deg, 
+        var(--lcars-purple) 0%, 
+        var(--lcars-purple) 15%, 
+        var(--lcars-orange) 15%, 
+        var(--lcars-orange) 85%,
+        var(--lcars-purple) 85%, 
+        var(--lcars-purple) 100%
+      ) !important;
+      border-radius: 0px 25px 0px 0px !important;
+      height: 40px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    ha-card .name {
+      color: var(--lcars-black) !important;
+      font-family: var(--primary-font-family) !important;
+      font-weight: bold !important;
+      font-size: 20px !important;
+      text-transform: uppercase !important;
+      letter-spacing: 2px !important;
+    }
+  
+  # LCARS Footer Bar
+  lcars-footer: |
+    ha-card {
+      background: linear-gradient(90deg, 
+        var(--lcars-orange) 0%, 
+        var(--lcars-orange) 80%, 
+        var(--lcars-black) 80%, 
+        var(--lcars-black) 85%,
+        var(--lcars-orange) 85%, 
+        var(--lcars-orange) 100%
+      ) !important;
+      border-radius: 0px 0px 0px 25px !important;
+      height: 30px !important;
+    }
+  
+  # LCARS Data Display Box
+  lcars-data-box: |
+    ha-card {
+      background: var(--lcars-tan) !important;
+      border-radius: 20px 0px 20px 0px !important;
+      border: none !important;
+    }
+    ha-card .state {
+      color: var(--lcars-black) !important;
+      font-family: var(--primary-font-family) !important;
+      font-size: 24px !important;
+      font-weight: bold !important;
+    }
+    ha-card .name {
+      color: var(--lcars-gray-dark) !important;
+      font-family: var(--primary-font-family) !important;
+      font-size: 12px !important;
+      text-transform: uppercase !important;
+    }
+  
+  # ============================================
+  # MODE-SPECIFIC VARIATIONS
+  # ============================================
+  
+  # Alert Mode (Red)
+  lcars-mode-alert: |
+    :host {
+      --primary-color: var(--lcars-red) !important;
+      --accent-color: var(--lcars-orange) !important;
+    }
+  
+  # Night Mode (Dimmed)
+  lcars-mode-night: |
+    :host {
+      --primary-color: var(--lcars-blue) !important;
+      --accent-color: var(--lcars-purple) !important;
+      --primary-text-color: var(--lcars-blue) !important;
+    }
+  
+  # Science Mode (Pink/Purple)
+  lcars-mode-science: |
+    :host {
+      --primary-color: var(--lcars-pink) !important;
+      --accent-color: var(--lcars-purple) !important;
+    }
+  
+  # Tactical Mode (Red)
+  lcars-mode-tactical: |
+    :host {
+      --primary-color: var(--lcars-red) !important;
+      --accent-color: var(--lcars-gold) !important;
+    }

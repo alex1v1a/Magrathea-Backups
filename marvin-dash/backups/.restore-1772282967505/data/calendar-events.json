@@ -1,0 +1,263 @@
+{
+  "events": [
+    {
+      "id": "local-1770257145349",
+      "title": "Test 10PM CST (Work) v2",
+      "description": "",
+      "start": "2026-02-05T04:00:00.000Z",
+      "end": "2026-02-05T05:00:00.000Z",
+      "allDay": false,
+      "location": "America/Chicago",
+      "calendarName": "Work",
+      "source": "icloud",
+      "url": "https://caldav.icloud.com/19133503748/calendars/4EB8FE0C-2545-49B5-8673-947E1ADFF750/local-1770257145349.ics",
+      "etag": "\"ml8ted4n\""
+    },
+    {
+      "id": "local-1770256802938",
+      "title": "Test 10PM CST (Home)",
+      "description": "",
+      "start": "2026-02-05T04:00:00.000Z",
+      "end": "2026-02-05T05:00:00.000Z",
+      "allDay": false,
+      "location": "America/Chicago",
+      "calendarName": "Home",
+      "source": "icloud",
+      "url": "https://caldav.icloud.com/19133503748/calendars/54C63CC9-48A7-413A-9048-0E40043B9276/local-1770256802938.ics",
+      "etag": "\"ml8t70m8\""
+    },
+    {
+      "id": "local-1770256802940",
+      "title": "Test 10PM CST (Dinner)",
+      "description": "",
+      "start": "2026-02-05T04:00:00.000Z",
+      "end": "2026-02-05T05:00:00.000Z",
+      "allDay": false,
+      "location": "America/Chicago",
+      "calendarName": "Dinner",
+      "source": "icloud",
+      "url": "https://caldav.icloud.com/19133503748/calendars/D1F66637-E7E2-41B1-8DAC-CC236FB99446/local-1770256802940.ics",
+      "etag": "\"ml8t70ys\""
+    },
+    {
+      "id": "2A872D82-E4D2-4455-AA72-E1FD8404A709",
+      "title": "Beef enchiladas ",
+      "description": "",
+      "start": "2026-02-23T23:00:00.000Z",
+      "end": "2026-02-24T00:00:00.000Z",
+      "allDay": false,
+      "location": "US/Central",
+      "calendarName": "Dinner",
+      "source": "icloud",
+      "url": "https://caldav.icloud.com/19133503748/calendars/D1F66637-E7E2-41B1-8DAC-CC236FB99446/2A872D82-E4D2-4455-AA72-E1FD8404A709.ics",
+      "etag": "\"mly05buc\""
+    },
+    {
+      "id": "9E5E5029-E0B4-40B9-AD22-8BF927B5DDA8",
+      "title": "Stuffed peppers ",
+      "description": "",
+      "start": "2026-02-28T23:00:00.000Z",
+      "end": "2026-03-01T00:00:00.000Z",
+      "allDay": false,
+      "location": "US/Central",
+      "calendarName": "Dinner",
+      "source": "icloud",
+      "url": "https://caldav.icloud.com/19133503748/calendars/D1F66637-E7E2-41B1-8DAC-CC236FB99446/9E5E5029-E0B4-40B9-AD22-8BF927B5DDA8.ics",
+      "etag": "\"mly06qkl\""
+    },
+    {
+      "id": "E9A249F5-CC65-4921-8E19-99C3BA11B1BD",
+      "title": "Burgers ",
+      "description": "",
+      "start": "2026-03-01T23:00:00.000Z",
+      "end": "2026-03-02T00:00:00.000Z",
+      "allDay": false,
+      "location": "US/Central",
+      "calendarName": "Dinner",
+      "source": "icloud",
+      "url": "https://caldav.icloud.com/19133503748/calendars/D1F66637-E7E2-41B1-8DAC-CC236FB99446/E9A249F5-CC65-4921-8E19-99C3BA11B1BD.ics",
+      "etag": "\"mly06zls\""
+    },
+    {
+      "id": "UGFuLVNlYXJlZCBD-1770518192463@dinner-automation",
+      "title": "Pan-Seared Cod with Lemon Butter",
+      "description": "🍽️  Pan-Seared Cod with Lemon Butter\n\n🌍 Cuisine: Mediterr\r\n anean / Italian\n📍 Origin: Coastal Italy and Greece\n\n📖 The Story:\nT\r\n his classic preparation has been enjoyed along the Mediterranean coast f\r\n or centuries. The simplicity of fresh fish with lemon and butter allows \r\n the delicate flavor of the cod to shine through. Italian fishermen would\r\n  cook their morning catch this way, using whatever herbs were growing i\r\n n their garden.\n\n⏱️  Timing:\n   Prep: 10 min\n   Cook: 10 min\n   Tot\r\n al: 20 min\n   Difficulty: Easy\n   Serves: 4\n\n🛒 Ingredients:\n   • 1\r\n .5 lbs cod fillets\n   • 4 tbsp unsalted butter\n   • 2 tbsp olive oil\n\r\n    • 3 tbsp fresh lemon juice\n   • 2 tbsp fresh parsley, chopped\n   •\r\n  2 tbsp capers, drained\n   • 1/4 cup white wine (optional)\n   • 2 clo\r\n ves garlic, minced\n   • Salt and pepper to taste\n   • Lemon wedges fo\r\n r serving\n\n👨‍🍳 Instructions:\n   1. Pat cod fillets dry with paper t\r\n owels. Season both sides with salt and pepper.\n   2. Heat olive oil in \r\n a large skillet over medium-high heat until shimmering.\n   3. Place cod\r\n  in the skillet, presentation side down. Cook for 3-4 minutes until gol\r\n den brown.\n   4. Flip the fillets and cook for another 2-3 minutes unti\r\n l fish flakes easily.\n   5. Remove fish to a warm plate and tent with f\r\n oil.\n   6. In the same pan, add butter and let it melt and foam. Add g\r\n arlic and sauté for 30 seconds.\n   7. Add lemon juice, white wine (if \r\n using), and capers. Simmer for 1-2 minutes.\n   8. Stir in fresh parsle\r\n y and pour sauce over the fish.\n   9. Serve immediately with lemon wedg\r\n es and your favorite sides.\n\n🎥 How to Cook This Recipe:\n   Watch on \r\n YouTube: https://www.youtube.com/watch?v=tlr2X09QKeo\n\n💡 Chef's Tip:\n\r\n    Don't overcook the cod - it should flake easily but still be moist. T\r\n he sauce should be bright and tangy.\n\n🍷 Wine Pairing: Sauvignon Blanc\r\n  or Pinot Grigio\n\n💰 Estimated Cost: $28-32\r",
+      "start": "2026-02-08T23:00:00.000Z",
+      "end": "2026-02-09T00:00:00.000Z",
+      "allDay": false,
+      "location": "Home",
+      "calendarName": "Dinner",
+      "source": "icloud",
+      "url": "https://caldav.icloud.com/19133503748/calendars/D1F66637-E7E2-41B1-8DAC-CC236FB99446/UGFuLVNlYXJlZCBD-1770518192463%40dinner-automation.ics",
+      "etag": "\"mldsp843\""
+    },
+    {
+      "id": "D88F4CAC-E97D-40E8-9D09-6376347432B8",
+      "title": "Drum sticks ",
+      "description": "",
+      "start": "2026-02-24T23:00:00.000Z",
+      "end": "2026-02-25T00:00:00.000Z",
+      "allDay": false,
+      "location": "US/Central",
+      "calendarName": "Dinner",
+      "source": "icloud",
+      "url": "https://caldav.icloud.com/19133503748/calendars/D1F66637-E7E2-41B1-8DAC-CC236FB99446/D88F4CAC-E97D-40E8-9D09-6376347432B8.ics",
+      "etag": "\"mly05p38\""
+    },
+    {
+      "id": "CFBF8ECD-5627-4A9B-9AED-4FD5E05D71DE",
+      "title": "Stir fry ",
+      "description": "",
+      "start": "2026-02-26T23:00:00.000Z",
+      "end": "2026-02-27T00:00:00.000Z",
+      "allDay": false,
+      "location": "US/Central",
+      "calendarName": "Dinner",
+      "source": "icloud",
+      "url": "https://caldav.icloud.com/19133503748/calendars/D1F66637-E7E2-41B1-8DAC-CC236FB99446/CFBF8ECD-5627-4A9B-9AED-4FD5E05D71DE.ics",
+      "etag": "\"mly062dl\""
+    },
+    {
+      "id": "TWVkaXRlcnJhbmVh-1770518192463@dinner-automation",
+      "title": "Mediterranean Chicken Bowl",
+      "description": "🍽️  Mediterranean Chicken Bowl\n\n🌍 Cuisine: Mediterranean \r\n / Greek\n📍 Origin: Greece and the Levant\n\n📖 The Story:\nThe Mediterr\r\n anean diet has been celebrated for centuries as one of the healthiest in\r\n  the world. This bowl brings together the bright flavors of the region -\r\n  lemon, olive oil, fresh herbs, and tangy feta. Greek islanders have \r\n been eating variations of this for millennia, using whatever was fresh \r\n from the land and sea.\n\n⏱️  Timing:\n   Prep: 15 min\n   Cook: 20 min\\\r\n n   Total: 35 min\n   Difficulty: Easy\n   Serves: 4\n\n🛒 Ingredients:\\\r\n n   • 2 lbs chicken breast, cubed\n   • 1 tsp dried oregano\n   • 1 tsp\r\n  garlic powder\n   • 2 tbsp olive oil\n   • 2 cups quinoa\n   • 4 cups c\r\n hicken broth\n   • 2 cucumbers, diced\n   • 1 pint cherry tomatoes, ha\r\n lved\n   • 1/2 red onion, diced\n   • 8 oz feta cheese, crumbled\n   •\r\n  1/2 cup hummus\n   • 1/4 cup kalamata olives\n   • 2 tbsp fresh lemon j\r\n uice\n   • Fresh parsley for garnish\n   • Tzatziki for serving\n\n👨‍🍳\r\n  Instructions:\n   1. Season chicken cubes with oregano, garlic powder\\\r\n , salt, and pepper.\n   2. Heat olive oil in a large skillet over mediu\r\n m-high heat.\n   3. Cook chicken for 8-10 minutes, stirring occasionall\r\n y, until golden and cooked through.\n   4. Meanwhile, rinse quinoa and\r\n  cook in chicken broth according to package directions.\n   5. Make cucu\r\n mber-tomato salad: Combine cucumber, tomatoes, red onion, and lemon j\r\n uice.\n   6. Fluff cooked quinoa with a fork.\n   7. Assemble bowls: Qui\r\n noa base, chicken, cucumber salad, hummus dollop.\n   8. Top with fet\r\n a, olives, and fresh parsley.\n   9. Serve with tzatziki on the side.\\\r\n n\n🎥 How to Cook This Recipe:\n   Watch on YouTube: https://www.youtube\r\n .com/watch?v=5h9q1FiD5s0\n\n💡 Chef's Tip:\n   Toast the quinoa in a dry\r\n  pan before cooking for extra nutty flavor.\n\n🍷 Wine Pairing: Assyrtik\r\n o or Pinot Grigio\n\n💰 Estimated Cost: $26-30\r",
+      "start": "2026-02-12T23:00:00.000Z",
+      "end": "2026-02-13T00:00:00.000Z",
+      "allDay": false,
+      "location": "Home",
+      "calendarName": "Dinner",
+      "source": "icloud",
+      "url": "https://caldav.icloud.com/19133503748/calendars/D1F66637-E7E2-41B1-8DAC-CC236FB99446/TWVkaXRlcnJhbmVh-1770518192463%40dinner-automation.ics",
+      "etag": "\"mldspas8\""
+    },
+    {
+      "id": "R3JpbGxlZCBTYWxt-1770518192463@dinner-automation",
+      "title": "Grilled Salmon with Asparagus",
+      "description": "🍽️  Grilled Salmon with Asparagus\n\n🌍 Cuisine: Pacific Nor\r\n thwest American\n📍 Origin: Pacific Northwest, USA / Coastal Alaska\n\n\r\n 📖 The Story:\nSalmon has been the lifeblood of Pacific Northwest indige\r\n nous peoples for thousands of years. Modern Pacific Northwest cuisine ce\r\n lebrates this heritage with simple preparations that honor the fish. Gri\r\n lling over cedar planks (a native tradition) or directly on the grill wi\r\n th minimal seasoning lets the wild salmon's rich, fatty flavor take cen\r\n ter stage.\n\n⏱️  Timing:\n   Prep: 10 min\n   Cook: 15 min\n   Total: 2\r\n 5 min\n   Difficulty: Medium\n   Serves: 4\n\n🛒 Ingredients:\n   • 4 sa\r\n lmon fillets (6 oz each), skin on\n   • 1 lb asparagus, trimmed\n   • \r\n 3 tbsp olive oil\n   • 2 tbsp fresh lemon juice\n   • 2 cloves garlic, \r\n minced\n   • 1 tsp fresh dill, chopped\n   • 1 tsp fresh thyme leaves\n\r\n    • 2 tbsp butter, melted\n   • 1 lemon, sliced\n   • Salt and pepper\r\n  to taste\n\n👨‍🍳 Instructions:\n   1. Pat salmon dry and bring to room\r\n  temperature for 15 minutes.\n   2. Preheat grill to medium-high heat (4\r\n 00°F).\n   3. Make marinade: Whisk olive oil, lemon juice, garlic, di\r\n ll, thyme, salt, and pepper.\n   4. Brush salmon and asparagus with m\r\n arinade.\n   5. Place salmon skin-side down on the grill. Cook for 5-6 m\r\n inutes.\n   6. Flip salmon and add asparagus to grill. Cook for 3-4 more\r\n  minutes.\n   7. Salmon is done when it flakes easily with a fork (inter\r\n nal temp 145°F).\n   8. Remove from grill and brush with melted butter.\\\r\n n   9. Serve with lemon slices and extra fresh herbs.\n\n🎥 How to Cook \r\n This Recipe:\n   Watch on YouTube: https://www.youtube.com/watch?v=J6xW4\r\n f_q34g\n\n💡 Chef's Tip:\n   Don't flip the salmon too early - it will r\r\n elease from the grill when ready. Skin helps protect the fish.\n\n🍷 Win\r\n e Pairing: Pinot Noir or Chardonnay\n\n💰 Estimated Cost: $28-32\r",
+      "start": "2026-02-14T23:00:00.000Z",
+      "end": "2026-02-15T00:00:00.000Z",
+      "allDay": false,
+      "location": "Home",
+      "calendarName": "Dinner",
+      "source": "icloud",
+      "url": "https://caldav.icloud.com/19133503748/calendars/D1F66637-E7E2-41B1-8DAC-CC236FB99446/R3JpbGxlZCBTYWxt-1770518192463%40dinner-automation.ics",
+      "etag": "\"mldspbzt\""
+    },
+    {
+      "id": "6006D68D-196E-4B09-917B-AAEC23DE7084",
+      "title": "Lemon pepper chicken ",
+      "description": "",
+      "start": "2026-03-02T23:00:00.000Z",
+      "end": "2026-03-03T00:00:00.000Z",
+      "allDay": false,
+      "location": "US/Central",
+      "calendarName": "Dinner",
+      "source": "icloud",
+      "url": "https://caldav.icloud.com/19133503748/calendars/D1F66637-E7E2-41B1-8DAC-CC236FB99446/6006D68D-196E-4B09-917B-AAEC23DE7084.ics",
+      "etag": "\"mly06fky\""
+    },
+    {
+      "id": "S29yZWFuIEJlZWYg-1770518192463@dinner-automation",
+      "title": "Korean Beef Bulgogi Bowl",
+      "description": "🍽️  Korean Beef Bulgogi Bowl\n\n🌍 Cuisine: Korean\n📍 Origi\r\n n: Seoul, South Korea (Ancient origins, modern form 1940s)\n\n📖 The S\r\n tory:\nBulgogi literally means 'fire meat' in Korean. Originally a dish \r\n of the Korean royal court, it was traditionally prepared for the wealth\r\n y and nobility. The marinade of soy, pear, and sesame was developed to\r\n  tenderize the meat in a time before refrigeration. Today it's Korea's m\r\n ost beloved dish, enjoyed at BBQ restaurants worldwide.\n\n⏱️  Timing:\\\r\n n   Prep: 20 min (+2 hrs marinade)\n   Cook: 15 min\n   Total: 2 hrs 35 \r\n min\n   Difficulty: Medium\n   Serves: 4\n\n🛒 Ingredients:\n   • 1.5 lb\r\n s ribeye steak, thinly sliced\n   • 1 Asian pear, grated (or 1/4 cup a\r\n pple juice)\n   • 1/4 cup soy sauce\n   • 2 tbsp brown sugar\n   • 2 tbs\r\n p sesame oil\n   • 3 cloves garlic, minced\n   • 1 tbsp fresh ginger, \r\n grated\n   • 2 green onions, sliced\n   • 1 tbsp sesame seeds\n   • 1/2\r\n  tsp black pepper\n   • 2 cups jasmine rice\n   • 16 oz kimchi\n   • 1 c\r\n ucumber, sliced\n   • 2 fried eggs for topping (optional)\n\n👨‍🍳 Inst\r\n ructions:\n   1. Make marinade: Mix grated pear, soy sauce, brown suga\r\n r, sesame oil, garlic, ginger, and pepper.\n   2. Add sliced beef to\r\n  marinade, toss to coat. Refrigerate for at least 2 hours, preferably \r\n overnight.\n   3. Cook jasmine rice according to package directions.\n  \r\n  4. Heat a large skillet or grill pan over high heat.\n   5. Cook beef i\r\n n batches for 2-3 minutes per side until caramelized and cooked through.\r\n \n   6. Sprinkle with green onions and sesame seeds.\n   7. Assemble bow\r\n ls: Rice base, bulgogi, kimchi, cucumber slices.\n   8. Top with a fr\r\n ied egg if desired. Serve with extra gochujang on the side.\n\n🎥 How to\r\n  Cook This Recipe:\n   Watch on YouTube: https://www.youtube.com/watch?v\r\n =Xnq0uG4bLdE\n\n💡 Chef's Tip:\n   The pear in the marinade is tradition\r\n al and helps tenderize the meat. Don't skip the marinade time!\n\n🍷 Win\r\n e Pairing: Soju or light Pinot Noir\n\n💰 Estimated Cost: $27-32\r",
+      "start": "2026-02-11T23:00:00.000Z",
+      "end": "2026-02-12T00:00:00.000Z",
+      "allDay": false,
+      "location": "Home",
+      "calendarName": "Dinner",
+      "source": "icloud",
+      "url": "https://caldav.icloud.com/19133503748/calendars/D1F66637-E7E2-41B1-8DAC-CC236FB99446/S29yZWFuIEJlZWYg-1770518192463%40dinner-automation.ics",
+      "etag": "\"mldspa79\""
+    },
+    {
+      "id": "QmVlZiBTdGlyLUZy-1770518192463@dinner-automation",
+      "title": "Beef Stir-Fry with Vegetables",
+      "description": "🍽️  Beef Stir-Fry with Vegetables\n\n🌍 Cuisine: Chinese / A\r\n sian Fusion\n📍 Origin: Guangdong Province, Southern China\n\n📖 The St\r\n ory:\nStir-frying was developed in China as a way to cook small amounts \r\n of food quickly over high heat with minimal fuel. This technique became \r\n essential in Southern China where fuel was scarce. The 'wok hei' or 'bre\r\n ath of the wok' is that smoky char flavor achieved only at high temperat\r\n ures.\n\n⏱️  Timing:\n   Prep: 15 min\n   Cook: 10 min\n   Total: 25 min\r\n \n   Difficulty: Easy\n   Serves: 4\n\n🛒 Ingredients:\n   • 1.5 lbs rib\r\n eye steak, thinly sliced against the grain\n   • 3 cups mixed vegetable\r\n s (broccoli, bell peppers, snap peas)\n   • 3 tbsp vegetable oil\n   •\r\n  3 cloves garlic, minced\n   • 1 tbsp fresh ginger, grated\n   • 1/4 c\r\n up soy sauce\n   • 2 tbsp oyster sauce\n   • 1 tbsp sesame oil\n   • 1 t\r\n sp cornstarch\n   • 1/4 cup beef broth\n   • 2 green onions, sliced\n  \r\n  • 1 tbsp sesame seeds\n   • Cooked rice for serving\n\n👨‍🍳 Instructio\r\n ns:\n   1. Slice beef thinly against the grain. Toss with 1 tbsp soy sau\r\n ce and set aside.\n   2. Mix remaining soy sauce, oyster sauce, sesame\r\n  oil, cornstarch, and beef broth in a bowl.\n   3. Heat wok or large s\r\n killet over high heat until smoking.\n   4. Add 2 tbsp oil and swirl to \r\n coat. Add beef in a single layer and sear for 1-2 minutes.\n   5. Remove\r\n  beef from wok and set aside.\n   6. Add remaining oil, garlic, and gi\r\n nger. Stir-fry for 30 seconds until fragrant.\n   7. Add vegetables and \r\n stir-fry for 3-4 minutes until crisp-tender.\n   8. Return beef to wok. \r\n Pour sauce over and toss constantly for 1-2 minutes until thickened.\n  \r\n  9. Garnish with green onions and sesame seeds. Serve over rice.\n\n🎥 H\r\n ow to Cook This Recipe:\n   Watch on YouTube: https://www.youtube.com/wa\r\n tch?v=IYO7CLvh23U\n\n💡 Chef's Tip:\n   High heat is key! Have all ingre\r\n dients prepped before starting. The wok should be smoking hot.\n\n🍷 Win\r\n e Pairing: Cabernet Sauvignon or Malbec\n\n💰 Estimated Cost: $24-28\r",
+      "start": "2026-02-09T23:00:00.000Z",
+      "end": "2026-02-10T00:00:00.000Z",
+      "allDay": false,
+      "location": "Home",
+      "calendarName": "Dinner",
+      "source": "icloud",
+      "url": "https://caldav.icloud.com/19133503748/calendars/D1F66637-E7E2-41B1-8DAC-CC236FB99446/QmVlZiBTdGlyLUZy-1770518192463%40dinner-automation.ics",
+      "etag": "\"mldsp8wo\""
+    },
+    {
+      "id": "Q2hpY2tlbiBUaWtr-1770518192463@dinner-automation",
+      "title": "Chicken Tikka Masala",
+      "description": "🍽️  Chicken Tikka Masala\n\n🌍 Cuisine: Indian / British-Ind\r\n ian\n📍 Origin: Glasgow, Scotland (1970s) - disputed\n\n📖 The Story:\n\r\n The origin of Chicken Tikka Masala is hotly debated! Many claim it was i\r\n nvented in Glasgow, Scotland in the 1970s when a customer complained hi\r\n s chicken tikka was too dry. The chef added a can of tomato soup and cre\r\n am, creating the creamy orange sauce we know today. Others claim it has\r\n  roots in Punjab. Either way, it's now Britain's national dish and belo\r\n ved worldwide.\n\n⏱️  Timing:\n   Prep: 15 min (+1 hr marinade)\n   Cook\r\n : 35 min\n   Total: 1 hr 50 min\n   Difficulty: Medium\n   Serves: 4\n\n\r\n 🛒 Ingredients:\n   • 2 lbs chicken breast, cut into 1-inch cubes\n   •\r\n  1 cup plain yogurt\n   • 2 tbsp lemon juice\n   • 2 tsp turmeric\n   • \r\n 2 tsp garam masala\n   • 2 tsp cumin\n   • 1 tsp paprika\n   • 1 tsp cay\r\n enne pepper\n   • 2 tbsp vegetable oil\n   • 1 large onion, diced\n   •\r\n  4 cloves garlic, minced\n   • 1 tbsp fresh ginger, grated\n   • 1 can\r\n  (14 oz) tomato puree\n   • 1 cup heavy cream\n   • 1/2 cup chicken brot\r\n h\n   • 2 tbsp butter\n   • Fresh cilantro for garnish\n   • Basmati ric\r\n e and naan for serving\n\n👨‍🍳 Instructions:\n   1. Marinate chicken: M\r\n ix yogurt, lemon juice, half the spices, and salt. Add chicken, coat\r\n  well. Refrigerate 1+ hours.\n   2. Heat 1 tbsp oil in a large skillet. \r\n Cook chicken in batches until browned. Set aside.\n   3. In the same pan\r\n , add remaining oil and butter. Sauté onion until soft (5 min).\n   4. \r\n Add garlic, ginger, and remaining spices. Cook for 1 minute until frag\r\n rant.\n   5. Add tomato puree and chicken broth. Simmer for 10 minutes.\\\r\n n   6. Stir in heavy cream and return chicken to the pan.\n   7. Simmer \r\n gently for 15-20 minutes until chicken is cooked through and sauce thick\r\n ens.\n   8. Taste and adjust seasoning. Garnish with fresh cilantro.\n  \r\n  9. Serve over basmati rice with warm naan.\n\n🎥 How to Cook This Recip\r\n e:\n   Watch on YouTube: https://www.youtube.com/watch?v=ysUumkRFP8I\n\n\r\n 💡 Chef's Tip:\n   For extra authentic flavor, grill the marinated chic\r\n ken on skewers (tikka) before adding to the sauce.\n\n🍷 Wine Pairing: R\r\n iesling or Gewürztraminer\n\n💰 Estimated Cost: $22-26\r",
+      "start": "2026-02-13T23:00:00.000Z",
+      "end": "2026-02-14T00:00:00.000Z",
+      "allDay": false,
+      "location": "Home",
+      "calendarName": "Dinner",
+      "source": "icloud",
+      "url": "https://caldav.icloud.com/19133503748/calendars/D1F66637-E7E2-41B1-8DAC-CC236FB99446/Q2hpY2tlbiBUaWtr-1770518192463%40dinner-automation.ics",
+      "etag": "\"mldspbdn\""
+    },
+    {
+      "id": "F6118089-F001-48E0-9587-FF4D321751F5",
+      "title": "Tacos",
+      "description": "",
+      "start": "2026-02-10T23:00:00.000Z",
+      "end": "2026-02-11T00:00:00.000Z",
+      "allDay": false,
+      "location": "US/Central",
+      "calendarName": "Dinner",
+      "source": "icloud",
+      "url": "https://caldav.icloud.com/19133503748/calendars/D1F66637-E7E2-41B1-8DAC-CC236FB99446/F6118089-F001-48E0-9587-FF4D321751F5.ics",
+      "etag": "\"mlbo9slc\""
+    },
+    {
+      "id": "RmlzaCBUYWNvcyB3-1770518192463@dinner-automation",
+      "title": "Fish Tacos with Mango Salsa",
+      "description": "🍽️  Fish Tacos with Mango Salsa\n\n🌍 Cuisine: Mexican / Baj\r\n a California\n📍 Origin: Baja California, Mexico (1980s)\n\n📖 The Stor\r\n y:\nFish tacos originated in the coastal towns of Baja California, wher\r\n e local fishermen would cook their catch in simple batter and serve it i\r\n n tortillas with fresh salsa. The dish exploded in popularity in San Die\r\n go in the 1980s and has since become a California staple. The contrast o\r\n f crispy fish with sweet mango is pure coastal magic.\n\n⏱️  Timing:\n  \r\n  Prep: 20 min\n   Cook: 10 min\n   Total: 30 min\n   Difficulty: Easy\n \r\n   Serves: 4\n\n🛒 Ingredients:\n   • 1.5 lbs white fish (tilapia or cod)\r\n , cut into strips\n   • 8-10 corn tortillas\n   • 2 ripe mangos, diced\r\n \n   • 1/2 red onion, finely diced\n   • 1 jalapeño, seeded and minced\r\n \n   • 1/4 cup fresh cilantro, chopped\n   • 2 limes, juiced\n   • 1/2\r\n  tsp salt\n   • 8 oz cabbage slaw mix\n   • 1/2 cup chipotle mayo\n   • \r\n 1 cup all-purpose flour\n   • 1 tsp chili powder\n   • 1/2 tsp cumin\n  \r\n  • Vegetable oil for frying\n   • Lime wedges for serving\n\n👨‍🍳 Instr\r\n uctions:\n   1. Make mango salsa: Combine mango, red onion, jalapeño,\r\n  cilantro, lime juice, and salt. Set aside to meld.\n   2. Mix flour w\r\n ith chili powder, cumin, and a pinch of salt in a shallow dish.\n   3.\r\n  Heat 1/2 inch of oil in a skillet to 350°F (175°C).\n   4. Dredge fish \r\n in seasoned flour, shake off excess.\n   5. Fry fish in batches for 3-4\r\n  minutes until golden and crispy. Drain on paper towels.\n   6. Warm tor\r\n tillas on a dry skillet or directly over a gas flame.\n   7. Assemble ta\r\n cos: Spread chipotle mayo on tortilla, add slaw, crispy fish, and man\r\n go salsa.\n   8. Squeeze fresh lime over each taco before serving.\n\n🎥\r\n  How to Cook This Recipe:\n   Watch on YouTube: https://www.youtube.com/\r\n watch?v=JkDXvK1_caI\n\n💡 Chef's Tip:\n   Don't overcrowd the pan when f\r\n rying - this lowers the oil temperature and makes fish soggy.\n\n🍷 Wine\r\n  Pairing: Mexican Lager or Sauvignon Blanc\n\n💰 Estimated Cost: $26-30\r",
+      "start": "2026-02-10T23:00:00.000Z",
+      "end": "2026-02-11T00:00:00.000Z",
+      "allDay": false,
+      "location": "Home",
+      "calendarName": "Dinner",
+      "source": "icloud",
+      "url": "https://caldav.icloud.com/19133503748/calendars/D1F66637-E7E2-41B1-8DAC-CC236FB99446/RmlzaCBUYWNvcyB3-1770518192463%40dinner-automation.ics",
+      "etag": "\"mldsp9kv\""
+    }
+  ],
+  "lastSync": "2026-02-28T12:19:28.979Z",
+  "calendars": [
+    {
+      "id": "4EB8FE0C-2545-49B5-8673-947E1ADFF750",
+      "name": "Work",
+      "url": "https://caldav.icloud.com/19133503748/calendars/4EB8FE0C-2545-49B5-8673-947E1ADFF750/",
+      "ctag": "HwoQEgwAARD1TwFY8QABAAAYARgAIhUItp7Ng7zpvZkBEOjZluTqgNHUuAEoAA==",
+      "syncToken": "HwoQEgwAARD1TwFY8QABAAAYARgAIhUItp7Ng7zpvZkBEOjZluTqgNHUuAEoAA=="
+    },
+    {
+      "id": "54C63CC9-48A7-413A-9048-0E40043B9276",
+      "name": "Home",
+      "url": "https://caldav.icloud.com/19133503748/calendars/54C63CC9-48A7-413A-9048-0E40043B9276/",
+      "ctag": "HwoQEgwAARD1Uwr1LAAAAAAYARgAIhUI2o35w6XElOoKELXo6bP6xOi5vwEoAA==",
+      "syncToken": "HwoQEgwAARD1Uwr1LAAAAAAYARgAIhUI2o35w6XElOoKELXo6bP6xOi5vwEoAA=="
+    },
+    {
+      "id": "C35E1C71-90D6-44DA-8827-B2154CD505ED",
+      "name": "Reminders",
+      "url": "https://caldav.icloud.com/19133503748/calendars/C35E1C71-90D6-44DA-8827-B2154CD505ED/",
+      "ctag": "HwoQEgwAAAAAAAAAAAAAAAAYARgAIhYI9IWRiPmSg/ClARDK3b3Omani4ogBKAA=",
+      "syncToken": "HwoQEgwAAAAAAAAAAAAAAAAYARgAIhYI9IWRiPmSg/ClARDK3b3Omani4ogBKAA="
+    },
+    {
+      "id": "D1F66637-E7E2-41B1-8DAC-CC236FB99446",
+      "name": "Dinner",
+      "url": "https://caldav.icloud.com/19133503748/calendars/D1F66637-E7E2-41B1-8DAC-CC236FB99446/",
+      "ctag": "HwoQEgwAARLBY5JkXQACAAAYARgAIhYIkImhzcygxciGARCQqPTCxo3ftqMBKAA=",
+      "syncToken": "HwoQEgwAARLBY5JkXQACAAAYARgAIhYIkImhzcygxciGARCQqPTCxo3ftqMBKAA="
+    }
+  ],
+  "syncConfig": {
+    "account": "MarvinMartian9@icloud.com",
+    "syncFrequency": "15m",
+    "lastSyncAttempt": "2026-02-28T12:19:28.979Z",
+    "syncStatus": "synced",
+    "eventCount": 17
+  }
+}

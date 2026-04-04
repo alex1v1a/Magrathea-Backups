@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Analysis: $3,737 vs FHA 4.75%</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f7fa;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .header h1 { margin: 0; font-size: 28px; }
+        .payment-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .payment-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .payment-card.current { border-top: 5px solid #ff5722; }
+        .payment-card.fha { border-top: 5px solid #4caf50; }
+        .card-label { font-size: 14px; color: #666; text-transform: uppercase; }
+        .card-amount { font-size: 48px; font-weight: bold; margin: 10px 0; }
+        .payment-card.current .card-amount { color: #ff5722; }
+        .payment-card.fha .card-amount { color: #4caf50; }
+        .chart-container {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .chart-box { position: relative; height: 400px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th {
+            background: #1e3c72;
+            color: #ffffff;
+            padding: 12px;
+            text-align: left;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            color: #333333;
+        }
+        tr:nth-child(even) { background: #f9f9f9; }
+        .highlight {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #4caf50;
+        }
+        .recommendation {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            border-left: 5px solid #2196f3;
+        }
+        .positive { color: #2e7d32; font-weight: bold; }
+        .negative { color: #c62828; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏠 Mortgage Payment Analysis</h1>
+        <p>Current $3,737 vs FHA 4.75% Refinance</p>
+    </div>
+
+    <div class="payment-cards">
+        <div class="payment-card current">
+            <div class="card-label">Current Mortgage</div>
+            <div class="card-amount">$3,737</div>
+            <div class="card-label">per month</div>
+        </div>
+        <div class="payment-card fha">
+            <div class="card-label">FHA 4.75%</div>
+            <div class="card-amount">$2,935</div>
+            <div class="card-label">per month</div>
+        </div>
+    </div>
+
+    <div class="highlight">
+        <h2 style="margin-top: 0; color: #1e3c72;">💰 Monthly Savings: $802</h2>
+        <p>That's <strong>$9,624 per year</strong> and <strong>$288,720 over 30 years!</strong></p>
+    </div>
+
+    <div class="chart-container">
+        <h2>📈 Monthly Payment Comparison Over 30 Years</h2>
+        <div class="chart-box">
+            <canvas id="paymentChart"></canvas>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <h2>📊 Cumulative Savings Over Time</h2>
+        <div class="chart-box">
+            <canvas id="savingsChart"></canvas>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <h2>💵 Total Cost Comparison by Period</h2>
+        <div class="chart-box">
+            <canvas id="costChart"></canvas>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <h2>⏱️ Break-Even Analysis</h2>
+        <div class="chart-box">
+            <canvas id="breakevenChart"></canvas>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <h2>📋 Payment Breakdown Comparison</h2>
+        <table>
+            <tr>
+                <th>Component</th>
+                <th>Current ($3,737)</th>
+                <th>FHA ($2,935)</th>
+                <th>Monthly Savings</th>
+            </tr>
+            <tr>
+                <td>Principal & Interest</td>
+                <td>~$2,123</td>
+                <td>$1,911</td>
+                <td class="positive">$212</td>
+            </tr>
+            <tr>
+                <td>Mortgage Insurance</td>
+                <td>$193 (PMI)</td>
+                <td>$149 (MIP)</td>
+                <td class="positive">$44</td>
+            </tr>
+            <tr>
+                <td>Escrow (Taxes/Ins)</td>
+                <td>$1,553</td>
+                <td>$875</td>
+                <td class="positive">$678</td>
+            </tr>
+            <tr style="background: #e8f5e9; font-weight: bold;">
+                <td>TOTAL MONTHLY</td>
+                <td>$3,737</td>
+                <td>$2,935</td>
+                <td class="positive">$802</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="chart-container">
+        <h2>📊 Long-Term Savings Analysis</h2>
+        <table>
+            <tr>
+                <th>Time Period</th>
+                <th>Current Total</th>
+                <th>FHA Total</th>
+                <th>You Save</th>
+            </tr>
+            <tr>
+                <td>1 Year</td>
+                <td>$44,844</td>
+                <td>$35,220</td>
+                <td class="positive">$9,624</td>
+            </tr>
+            <tr>
+                <td>5 Years</td>
+                <td>$224,220</td>
+                <td>$176,100</td>
+                <td class="positive">$48,120</td>
+            </tr>
+            <tr>
+                <td>10 Years</td>
+                <td>$448,440</td>
+                <td>$352,200</td>
+                <td class="positive">$96,240</td>
+            </tr>
+            <tr style="background: #e8f5e9; font-weight: bold;">
+                <td>30 Years</td>
+                <td>$1,345,320</td>
+                <td>$1,056,600</td>
+                <td class="positive">$288,720</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="recommendation">
+        <h2 style="margin-top: 0; color: #1565c0;">✅ Recommendation: Take the FHA 4.75% Refinance</h2>        
+        
+        <ul style="color: #333333;">
+            <li>✅ <strong>Immediate savings:</strong> $802/month ($9,624/year) starting day one</li>
+            <li>✅ <strong>Cash out:</strong> Access ~$26,000 in equity with only $941 out of pocket</li>
+            <li>✅ <strong>Better rate:</strong> 4.75% is excellent (national average is 5.86%)</li>
+            <li>✅ <strong>Lower MI:</strong> Even with permanent MIP, you pay $44/month less than PMI</li>
+            <li>✅ <strong>Massive long-term savings:</strong> Nearly $290,000 over 30 years</li>
+        </ul>
+
+        <p style="color: #333333;"><strong>Action item:</strong> Lock in this 4.75% rate. This is a once-in-a-market-cycle opportunity that saves you significant money every single month.</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; padding: 20px; color: #666666; font-size: 12px;">
+        <p>Based on actual payments: Current $3,737 vs FHA $2,935 | Savings: $802/month</p>
+        <p>Generated February 16, 2026 | For informational purposes only</p>
+    </div>
+
+    <script>
+        // Generate data for 360 months
+        const months = Array.from({length: 361}, (_, i) => i);
+        const yearLabels = months.map(m => m % 12 === 0 ? `Year ${m/12}` : '');
+        
+        // Current loan: $3,737 (assumed constant for simplicity)
+        const currentPayments = new Array(361).fill(3737);
+        
+        // FHA: $2,935 (constant)
+        const fhaPayments = new Array(361).fill(2935);
+        
+        // Chart 1: Monthly Payment Comparison
+        new Chart(document.getElementById('paymentChart'), {
+            type: 'line',
+            data: {
+                labels: yearLabels,
+                datasets: [
+                    {
+                        label: 'Current Mortgage ($3,737)',
+                        data: currentPayments,
+                        borderColor: '#ff5722',
+                        backgroundColor: 'rgba(255, 87, 34, 0.1)',
+                        borderWidth: 3,
+                        pointRadius: 0,
+                        pointHoverRadius: 6,
+                        fill: true
+                    },
+                    {
+                        label: 'FHA 4.75% ($2,935)',
+                        data: fhaPayments,
+                        borderColor: '#4caf50',
+                        backgroundColor: 'rgba(76, 175, 80, 0.1)',
+                        borderWidth: 3,
+                        pointRadius: 0,
+                        pointHoverRadius: 6,
+                        fill: true
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Monthly Payment Comparison Over 30 Years',
+                        font: { size: 16 }
+                    },
+                    legend: {
+                        position: 'top'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 2500,
+                        max: 4000,
+                        title: { 
+                            display: true, 
+                            text: 'Monthly Payment ($)',
+                            font: { weight: 'bold' }
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value.toLocaleString();
+                            }
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            maxTicksLimit: 15
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 2: Cumulative Savings
+        const cumulativeSavings = [];
+        let savings = -24000; // Start with closing costs
+        
+        for (let m = 1; m <= 360; m++) {
+            savings += (3737 - 2935); // $802/month savings
+            cumulativeSavings.push(savings);
+        }
+        
+        new Chart(document.getElementById('savingsChart'), {
+            type: 'line',
+            data: {
+                labels: yearLabels.slice(1),
+                datasets: [
+                    {
+                        label: 'Cumulative Net Savings',
+                        data: cumulativeSavings,
+                        borderColor: '#2196f3',
+                        backgroundColor: 'rgba(33, 150, 243, 0.2)',
+                        borderWidth: 3,
+                        fill: true,
+                        pointRadius: 0,
+                        pointHoverRadius: 6
+                    },
+                    {
+                        label: 'Break-Even Line',
+                        data: new Array(360).fill(0),
+                        borderColor: '#f44336',
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        pointRadius: 0,
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'When Do You Start Saving Money? (Net After $24K Closing Costs)',
+                        font: { size: 16 }
+                    }
+                },
+                scales: {
+                    y: {
+                        title: { 
+                            display: true, 
+                            text: 'Cumulative Savings ($)',
+                            font: { weight: 'bold' }
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value.toLocaleString();
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 3: Cost Comparison by Period
+        new Chart(document.getElementById('costChart'), {
+            type: 'bar',
+            data: {
+                labels: ['5 Years', '10 Years', '15 Years', '20 Years', '30 Years'],
+                datasets: [
+                    {
+                        label: 'Current Mortgage',
+                        data: [224220, 448440, 672660, 896880, 1345320],
+                        backgroundColor: 'rgba(255, 87, 34, 0.7)',
+                        borderColor: '#ff5722',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'FHA + Closing Costs',
+                        data: [200087, 376100, 552113, 728126, 1080600],
+                        backgroundColor: 'rgba(76, 175, 80, 0.7)',
+                        borderColor: '#4caf50',
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Total Cost Comparison (Including $24K Closing Costs)',
+                        font: { size: 16 }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': $' + context.raw.toLocaleString();
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 150000,
+                        title: { 
+                            display: true, 
+                            text: 'Total Cost ($)',
+                            font: { weight: 'bold' }
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + (value / 1000) + 'k';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 4: Break-Even Analysis
+        const monthlyData = [];
+        let runningSavings = -24000;
+        
+        for (let m = 1; m <= 36; m++) { // First 3 years
+            runningSavings += 802;
+            monthlyData.push({
+                month: m,
+                savings: runningSavings,
+                cumulative: m * 802
+            });
+        }
+        
+        new Chart(document.getElementById('breakevenChart'), {
+            type: 'bar',
+            data: {
+                labels: monthlyData.map(d => 'Month ' + d.month),
+                datasets: [
+                    {
+                        label: 'Net Savings (After Closing Costs)',
+                        data: monthlyData.map(d => d.savings),
+                        backgroundColor: monthlyData.map(d => d.savings < 0 ? 'rgba(244, 67, 54, 0.7)' : 'rgba(76, 175, 80, 0.7)'),
+                        borderColor: monthlyData.map(d => d.savings < 0 ? '#f44336' : '#4caf50'),
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Break-Even Timeline (First 3 Years)',
+                        font: { size: 16 }
+                    },
+                    annotation: {
+                        annotations: {
+                            line1: {
+                                type: 'line',
+                                yMin: 0,
+                                yMax: 0,
+                                borderColor: '#333',
+                                borderWidth: 2,
+                                borderDash: [5, 5]
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        title: { 
+                            display: true, 
+                            text: 'Net Savings ($)',
+                            font: { weight: 'bold' }
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value.toLocaleString();
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

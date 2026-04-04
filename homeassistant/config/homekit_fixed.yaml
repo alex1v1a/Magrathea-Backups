@@ -1,0 +1,236 @@
+# ============================================
+# CORRECTED HOMEKIT CONFIGURATION
+# Fixes existing HASS Bridge to include all real devices
+# Excludes noise (HACS, Wyze notifications)
+# ============================================
+
+homekit:
+  # ============================================
+  # MAIN BRIDGE: HASS Bridge (port 21064)
+  # Corrected to include real devices, exclude noise
+  # ============================================
+  - name: "HASS Bridge"
+    port: 21064
+    ip_address: 10.0.1.90
+    advertise_ip:
+      - 10.0.1.90
+    filter:
+      # Include domains (keep existing)
+      include_domains:
+        - binary_sensor
+        - button
+        - climate
+        - device_tracker
+        - fan
+        - humidifier
+        - input_boolean
+        - input_button
+        - input_select
+        - light
+        - lock
+        - media_player
+        - remote
+        - scene
+        - script
+        - select
+        - sensor
+        - switch
+      # EXCLUDE NOISE - these waste the 150 device limit
+      exclude_entities:
+        # HACS pre-release switches (12 devices)
+        - switch.ytube_music_player_pre_release
+        - switch.youtube_video_card_pre_release
+        - switch.youtube_pre_release
+        - switch.hacs_pre_release
+        - switch.tesla_pre_release
+        - switch.wyze_pre_release
+        - switch.govee_cloud_integration_pre_release
+        - switch.auto_backup_pre_release
+        - switch.govee_pre_release
+        - switch.arlo_camera_support_pre_release
+        - switch.lovelace_hass_aarlo_pre_release
+        - switch.tesla_style_solar_power_card_pre_release
+        # Wyze notification/motion switches (48 devices of noise)
+        - switch.alex_allie_bedroom_motion_detection
+        - switch.alex_allie_bedroom_notifications
+        - switch.back_patio_motion_detection
+        - switch.back_patio_notifications
+        - switch.backyard_2_motion_detection
+        - switch.backyard_2_notifications
+        - switch.backyard_egg_chair_motion_detection
+        - switch.backyard_egg_chair_notifications
+        - switch.backyard_kitchen_motion_detection
+        - switch.backyard_kitchen_notifications
+        - switch.backyard_motion_detection
+        - switch.backyard_motion_detection_2
+        - switch.backyard_notifications
+        - switch.backyard_notifications_2
+        - switch.bedroom_backyard_motion_detection
+        - switch.bedroom_backyard_notifications
+        - switch.dog_house_motion_detection
+        - switch.dog_house_notifications
+        - switch.dog_pen_motion_detection
+        - switch.dog_pen_notifications
+        - switch.driveway_motion_detection
+        - switch.driveway_notifications
+        - switch.front_door_notifications
+        - switch.front_yard_east_motion_detection
+        - switch.front_yard_east_notifications
+        - switch.front_yard_west_motion_detection
+        - switch.front_yard_west_notifications
+        - switch.garage_door_motion_detection
+        - switch.garage_door_notifications
+        - switch.garage_motion_detection
+        - switch.garage_notifications
+        - switch.garden_tools_motion_detection
+        - switch.garden_tools_notifications
+        - switch.lounge_floor_motion_detection
+        - switch.lounge_floor_notifications
+        - switch.lounge_motion_detection
+        - switch.lounge_notifications
+        - switch.maeves_room_motion_detection
+        - switch.maeves_room_notifications
+        - switch.noras_room_motion_detection
+        - switch.noras_room_notifications
+        - switch.print_mill_motion_detection
+        - switch.print_mill_notifications
+        - switch.saxton_motion_detection
+        - switch.saxton_notifications
+        - switch.side_yard_motion_detection
+        - switch.side_yard_notifications
+        # Exclude Sayville devices (they go in separate bridge)
+        - switch.anouk_server_socket_1
+        - switch.cyn_pia_switch_socket_1
+        - switch.hanka_9_server_socket_1
+        - switch.marcs_bathroom_heated_floor_socket_1
+        - switch.marcs_room_fridge_lamp_socket_1
+        - scene.driveway_pump_off_cyn_pia_switch_off
+    entity_config:
+      # Govee Lights - give them nice names
+      light.front_door_2:
+        name: "Front Door Light"
+      light.front_yard:
+        name: "Front Yard Lights"
+      light.kitchen_lamp:
+        name: "Kitchen Lamp"
+      light.lounge_lamp:
+        name: "Lounge Lamp"
+      light.rgbic_string_light_r:
+        name: "RGBIC String Right"
+      light.rgbwic_string_lights_l:
+        name: "RGBWIC String Left"
+      light.soft_lights:
+        name: "Soft Lights"
+      # Tuya Lights
+      light.foyer:
+        name: "Foyer"
+      light.lounge:
+        name: "Lounge Ceiling"
+      light.pond_light_1:
+        name: "Pond Light"
+      light.pool_light:
+        name: "Pool Light"
+      # Samsung TV
+      media_player.austin_tx_tu7000_75_tv:
+        name: "Samsung TV"
+        type: television
+      media_player.austin_tx_tu7000_75_tv_un75tu7000fxza:
+        name: "Samsung TV 2"
+        type: television
+      media_player.living_room:
+        name: "Apple TV"
+        type: television
+      media_player.tv:
+        name: "Bedroom TV"
+        type: television
+      # SmartThings Appliances
+      switch.refrigerator_cubed_ice:
+        name: "Fridge Cubed Ice"
+      switch.refrigerator_ice_bites:
+        name: "Fridge Ice Bites"
+      switch.refrigerator_power_cool:
+        name: "Fridge Power Cool"
+      switch.refrigerator_power_freeze:
+        name: "Fridge Power Freeze"
+      switch.refrigerator_sabbath_mode:
+        name: "Fridge Sabbath Mode"
+      sensor.refrigerator_fridge_temperature:
+        name: "Fridge Temp"
+      sensor.refrigerator_freezer_temperature:
+        name: "Freezer Temp"
+      # Washer/Dryer
+      select.washer:
+        name: "Washer"
+      select.dryer:
+        name: "Dryer"
+      select.basement_dryer:
+        name: "Basement Dryer"
+      # Govee Switches
+      switch.front_door:
+        name: "Front Door Switch"
+      switch.front_yard:
+        name: "Front Yard Switch"
+      switch.kitchen_lamp:
+        name: "Kitchen Lamp Switch"
+      switch.lounge_lamp:
+        name: "Lounge Lamp Switch"
+
+  # ============================================
+  # SAYVILLE BRIDGE (Separate home)
+  # ============================================
+  - name: "Sayville Home"
+    port: 21065
+    ip_address: 10.0.1.90
+    advertise_ip:
+      - 10.0.1.90
+    filter:
+      include_domains:
+        - switch
+        - scene
+      include_entities:
+        - switch.anouk_server_socket_1
+        - switch.cyn_pia_switch_socket_1
+        - switch.hanka_9_server_socket_1
+        - switch.marcs_bathroom_heated_floor_socket_1
+        - switch.marcs_room_fridge_lamp_socket_1
+        - scene.driveway_pump_off_cyn_pia_switch_off
+    entity_config:
+      switch.anouk_server_socket_1:
+        name: "Anouk Server"
+      switch.cyn_pia_switch_socket_1:
+        name: "Cyn & Pia Switch"
+      switch.hanka_9_server_socket_1:
+        name: "HANKA Server"
+      switch.marcs_bathroom_heated_floor_socket_1:
+        name: "Marc's Heated Floor"
+      switch.marcs_room_fridge_lamp_socket_1:
+        name: "Marc's Fridge Lamp"
+
+  # ============================================
+  # PARNELL BRIDGE (Ready for future devices)
+  # ============================================
+  - name: "Parnell Home"
+    port: 21069
+    ip_address: 10.0.1.90
+    advertise_ip:
+      - 10.0.1.90
+    filter:
+      include_domains:
+        - light
+        - switch
+      include_entities: []
+
+  # ============================================
+  # TV ACCESSORIES (Keep existing)
+  # ============================================
+  - name: "Samsung TV"
+    port: 21066
+    ip_address: 10.0.1.90
+    mode: accessory
+    filter:
+      include_entities:
+        - media_player.austin_tx_tu7000_75_tv
+    entity_config:
+      media_player.austin_tx_tu7000_75_tv:
+        name: "Samsung TV"
+        type: television

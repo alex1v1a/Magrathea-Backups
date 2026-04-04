@@ -1,0 +1,20 @@
+{
+  "name": "openclaw-extension-bluebubbles",
+  "version": "0.1.0",
+  "description": "OpenClaw external channel plugin for BlueBubbles iMessage bridge",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -p . --watch"
+  },
+  "keywords": ["openclaw", "extension", "bluebubbles", "imessage"],
+  "license": "MIT",
+  "peerDependencies": {
+    "openclaw": "^0.0.0",
+    "openclaw-plugin-sdk": "^0.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}

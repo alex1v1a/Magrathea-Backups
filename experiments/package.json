@@ -1,0 +1,20 @@
+{
+  "name": "automation-experiments",
+  "version": "1.0.0",
+  "description": "Experimental approaches for improving automation",
+  "main": "index.js",
+  "scripts": {
+    "test:browser-pool": "node browser-pool/test.js",
+    "test:queue": "node task-queue/test.js",
+    "test:state": "node state-machine/test.js",
+    "test:retry": "node smart-retry/test.js",
+    "test:parallel": "node parallel-processing/test.js",
+    "test:all": "npm run test:browser-pool && npm run test:queue && npm run test:state && npm run test:retry && npm run test:parallel"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

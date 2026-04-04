@@ -1,0 +1,3 @@
+@echo off
+echo Launching Edge for HEB Automation...
+start "" "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" https://www.heb.com

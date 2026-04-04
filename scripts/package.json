@@ -1,0 +1,16 @@
+{
+  "name": "marvin-email-monitor",
+  "version": "1.0.0",
+  "description": "Automated email monitoring for important messages",
+  "main": "email-monitor.js",
+  "scripts": {
+    "check": "node email-monitor.js",
+    "test": "node email-monitor.js --test",
+    "init": "node email-monitor.js --init",
+    "status": "node email-monitor.js --status"
+  },
+  "dependencies": {
+    "imap": "^0.8.19",
+    "mailparser": "^3.6.5"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "lastUpdated": "2026-02-25T11:35:00.188Z",
+  "models": {
+    "openai-codex/gpt-5.2": {
+      "name": "GPT-5.2 (Primary)",
+      "dailyLimit": 100000,
+      "dailyUsed": 8957,
+      "monthlyCost": 50,
+      "monthlySpent": 47.73991735001244,
+      "accountBalance": 2.2600826499875595
+    },
+    "anthropic/claude-opus-4-5": {
+      "name": "Claude Opus 4.5",
+      "dailyLimit": 50000,
+      "dailyUsed": 7553,
+      "monthlyCost": 75,
+      "monthlySpent": 43.01560232583325,
+      "accountBalance": 31.98439767416675
+    },
+    "openrouter/anthropic/claude-sonnet-4": {
+      "name": "Claude Sonnet 4 (OpenRouter)",
+      "dailyLimit": 80000,
+      "dailyUsed": 11781,
+      "monthlyCost": 25,
+      "monthlySpent": 38.322416070469735,
+      "accountBalance": -13.322416070469735
+    },
+    "minimax/abab6.5s-chat": {
+      "name": "MiniMax ABAB 6.5s",
+      "dailyLimit": 200000,
+      "dailyUsed": 12179,
+      "monthlyCost": 10,
+      "monthlySpent": 36.688710870237685,
+      "accountBalance": -26.688710870237685
+    },
+    "openrouter/openai/gpt-4o": {
+      "name": "OpenRouter GPT-4o",
+      "dailyLimit": 150000,
+      "dailyUsed": 8886,
+      "monthlyCost": 20,
+      "monthlySpent": 37.9062431290014,
+      "accountBalance": -17.906243129001403
+    },
+    "openrouter/google/gemini-2.0-flash-001": {
+      "name": "OpenRouter Gemini 2.0",
+      "dailyLimit": 120000,
+      "dailyUsed": 8466,
+      "monthlyCost": 15,
+      "monthlySpent": 35.00799894773183,
+      "accountBalance": -20.007998947731828
+    }
+  }
+}

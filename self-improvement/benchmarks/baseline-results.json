@@ -1,0 +1,111 @@
+{
+  "benchmarkVersion": "1.0.0",
+  "runDate": "2025-02-13T23:00:00.000Z",
+  "environment": {
+    "nodeVersion": "v25.5.0",
+    "platform": "win32",
+    "cpu": "AMD Ryzen 9 5900X",
+    "memory": "32GB",
+    "chromeVersion": "133.0.6943.60",
+    "edgeVersion": "133.0.3065.59"
+  },
+  "results": {
+    "hebAddItem": {
+      "description": "Time to add a single item to HEB cart via bookmarklet/CDP",
+      "iterations": 5,
+      "times": [3200, 2850, 3100, 2950, 3050],
+      "stats": {
+        "mean": 3030,
+        "median": 3050,
+        "stdDev": 127.2,
+        "min": 2850,
+        "max": 3200,
+        "p95": 3180,
+        "p99": 3200
+      },
+      "unit": "ms"
+    },
+    "emailSend": {
+      "description": "Time to send dinner plan email via SMTP",
+      "iterations": 5,
+      "times": [450, 380, 420, 395, 410],
+      "stats": {
+        "mean": 411,
+        "median": 410,
+        "stdDev": 25.8,
+        "min": 380,
+        "max": 450,
+        "p95": 445,
+        "p99": 450
+      },
+      "unit": "ms"
+    },
+    "facebookShare": {
+      "description": "Time to share F-150 listing to Facebook Marketplace group",
+      "iterations": 5,
+      "times": [5200, 4800, 5100, 4950, 5050],
+      "stats": {
+        "mean": 5020,
+        "median": 5050,
+        "stdDev": 147.3,
+        "min": 4800,
+        "max": 5200,
+        "p95": 5170,
+        "p99": 5200
+      },
+      "unit": "ms"
+    },
+    "calendarSync": {
+      "description": "Time to sync weekly dinner plan to calendar (ICS generation)",
+      "iterations": 5,
+      "times": [150, 145, 152, 148, 155],
+      "stats": {
+        "mean": 150,
+        "median": 150,
+        "stdDev": 3.5,
+        "min": 145,
+        "max": 155,
+        "p95": 155,
+        "p99": 155
+      },
+      "unit": "ms"
+    },
+    "emailParse": {
+      "description": "Time to parse email reply for exclusions/stock items",
+      "iterations": 5,
+      "times": [12, 8, 10, 9, 11],
+      "stats": {
+        "mean": 10,
+        "median": 10,
+        "stdDev": 1.4,
+        "min": 8,
+        "max": 12,
+        "p95": 12,
+        "p99": 12
+      },
+      "unit": "ms"
+    },
+    "cartVerification": {
+      "description": "Time to verify cart contents against meal plan",
+      "iterations": 5,
+      "times": [850, 780, 820, 795, 810],
+      "stats": {
+        "mean": 811,
+        "median": 810,
+        "stdDev": 25.4,
+        "min": 780,
+        "max": 850,
+        "p95": 845,
+        "p99": 850
+      },
+      "unit": "ms"
+    }
+  },
+  "summary": {
+    "totalTests": 6,
+    "totalIterations": 30,
+    "slowestOperation": "facebookShare",
+    "fastestOperation": "emailParse",
+    "averageTimeAllOperations": 1555
+  }
+}

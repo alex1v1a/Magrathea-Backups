@@ -1,0 +1,98 @@
+# Atom Microphone with Voice Assistant
+# Fixed for ESPHome 2026.x with ESP-IDF framework
+
+esphome:
+  name: atom-microphone
+  friendly_name: Atom Microphone
+
+esp32:
+  board: m5stack-atom
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  # Comment out encryption for now to test
+  # encryption:
+  #   key: !secret api_encryption_key
+
+ota:
+  - platform: esphome
+    password: !secret ota_password
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  ap:
+    ssid: "Atom-Mic Fallback"
+    password: !secret wifi_ap_password
+
+captive_portal:
+
+# I2S Audio Configuration for Microphone
+i2s_audio:
+  - id: i2s_in
+    i2s_lrclk_pin: GPIO33
+    i2s_bclk_pin: GPIO19
+
+# Microphone
+microphone:
+  - platform: i2s_audio
+    id: atom_mic
+    i2s_din_pin: GPIO22
+    adc_type: external
+    pdm: false
+
+# Speaker
+speaker:
+  - platform: i2s_audio
+    id: atom_speaker
+    dac_type: external
+    i2s_dout_pin: GPIO25
+
+# Voice Assistant
+voice_assistant:
+  microphone: atom_mic
+  speaker: atom_speaker
+  use_wake_word: true
+  noise_suppression_level: 2
+  auto_gain: 31dBFS
+  volume_multiplier: 2.0
+
+# Status LED - using esp32_rmt_led_strip for ESP-IDF
+light:
+  - platform: esp32_rmt_led_strip
+    rgb_order: GRB
+    pin: GPIO27
+    num_leds: 1
+    chipset: SK6812
+    name: "Atom LED"
+    id: atom_led
+    effects:
+      - pulse:
+          name: "Listening"
+          transition_length: 0.5s
+          update_interval: 0.5s
+
+# Button for voice activation - FIXED: removed pullup (GPIO39 doesn't support it)
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO39
+      inverted: true
+      mode:
+        input: true
+    name: "Atom Button"
+    on_press:
+      - voice_assistant.start:
+      - light.turn_on:
+          id: atom_led
+          effect: "Listening"
+    on_release:
+      - voice_assistant.stop:
+      - light.turn_off:
+          id: atom_led
+

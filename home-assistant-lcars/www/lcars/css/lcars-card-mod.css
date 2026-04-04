@@ -1,0 +1,471 @@
+/* ============================================
+   LCARS CARD MOD GLOBAL STYLES
+   For use with card-mod integration
+   ============================================ */
+
+/* Import LCARS Font */
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&display=swap');
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+:root {
+  /* LCARS Color Variables */
+  --lcars-orange: #FF9900;
+  --lcars-orange-light: #FFCC66;
+  --lcars-orange-dark: #CC7A00;
+  --lcars-purple: #CC99CC;
+  --lcars-purple-light: #E6CCE6;
+  --lcars-purple-dark: #996699;
+  --lcars-blue: #9999CC;
+  --lcars-blue-light: #CCCCFF;
+  --lcars-blue-dark: #666699;
+  --lcars-red: #CC6666;
+  --lcars-red-light: #E69999;
+  --lcars-red-dark: #993333;
+  --lcars-pink: #CC6699;
+  --lcars-pink-light: #E699BB;
+  --lcars-pink-dark: #993366;
+  --lcars-tan: #FFCC99;
+  --lcars-tan-light: #FFE6CC;
+  --lcars-tan-dark: #CC9966;
+  --lcars-gold: #FFCC66;
+  --lcars-gold-light: #FFE699;
+  --lcars-gold-dark: #CC9933;
+  --lcars-black: #000000;
+  --lcars-white: #FFFFFF;
+  --lcars-gray: #666666;
+  --lcars-gray-light: #999999;
+  --lcars-gray-dark: #333333;
+  
+  /* Font */
+  --lcars-font: 'Antonio', 'Eurostile', 'Helvetica', sans-serif;
+}
+
+/* ============================================
+   VIEW/WINDOW STYLES
+   ============================================ */
+
+/* Main view background */
+hui-view {
+  background-color: var(--lcars-black) !important;
+  font-family: var(--lcars-font) !important;
+}
+
+/* Remove default padding for edge-to-edge LCARS look */
+hui-view > * {
+  --ha-card-border-radius: 0px 20px 0px 20px;
+}
+
+/* ============================================
+   CARD STYLES
+   ============================================ */
+
+/* Base card styling */
+ha-card {
+  border-radius: 0px 20px 0px 20px !important;
+  box-shadow: none !important;
+  border: none !important;
+  background-color: var(--lcars-black) !important;
+}
+
+/* Card header text */
+ha-card .card-header {
+  font-family: var(--lcars-font) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  color: var(--lcars-orange) !important;
+  font-weight: 600 !important;
+  padding: 16px 16px 8px !important;
+}
+
+/* Card content */
+ha-card .card-content {
+  font-family: var(--lcars-font) !important;
+  color: var(--lcars-tan) !important;
+}
+
+/* ============================================
+   LCARS SPECIFIC CARD TYPES
+   ============================================ */
+
+/* LCARS Top Bar - Full width header */
+.lcars-top-bar {
+  background: linear-gradient(90deg, 
+    var(--lcars-purple) 0%, 
+    var(--lcars-purple) 5%, 
+    var(--lcars-black) 5%, 
+    var(--lcars-black) 6%,
+    var(--lcars-orange) 6%, 
+    var(--lcars-orange) 94%,
+    var(--lcars-black) 94%, 
+    var(--lcars-black) 95%,
+    var(--lcars-purple) 95%, 
+    var(--lcars-purple) 100%
+  ) !important;
+  border-radius: 0px 25px 0px 0px !important;
+  height: 50px !important;
+  display: flex;
+  align-items: center;
+  padding: 0 20px !important;
+}
+
+.lcars-top-bar .card-header {
+  color: var(--lcars-black) !important;
+  font-size: 22px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* LCARS Bottom Bar */
+.lcars-bottom-bar {
+  background: linear-gradient(90deg, 
+    var(--lcars-orange) 0%, 
+    var(--lcars-orange) 80%, 
+    var(--lcars-black) 80%, 
+    var(--lcars-black) 85%,
+    var(--lcars-purple) 85%, 
+    var(--lcars-purple) 100%
+  ) !important;
+  border-radius: 0px 0px 0px 25px !important;
+  height: 35px !important;
+}
+
+/* LCARS Side Elbow - Left side curved element */
+.lcars-elbow-left {
+  background: var(--lcars-purple) !important;
+  border-radius: 0px 35px 0px 0px !important;
+  width: 80px !important;
+  height: 80px !important;
+  position: relative;
+}
+
+.lcars-elbow-left::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 60%;
+  background: var(--lcars-black);
+  border-radius: 0px 25px 0px 0px;
+}
+
+/* LCARS Side Elbow - Right side curved element */
+.lcars-elbow-right {
+  background: var(--lcars-orange) !important;
+  border-radius: 35px 0px 0px 0px !important;
+  width: 80px !important;
+  height: 80px !important;
+  position: relative;
+}
+
+.lcars-elbow-right::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 60%;
+  background: var(--lcars-black);
+  border-radius: 25px 0px 0px 0px;
+}
+
+/* LCARS Data Display Area */
+.lcars-data-area {
+  background: var(--lcars-tan) !important;
+  border-radius: 15px 0px 15px 0px !important;
+  padding: 15px !important;
+}
+
+.lcars-data-area .state {
+  color: var(--lcars-black) !important;
+  font-family: var(--lcars-font) !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+}
+
+/* ============================================
+   BUTTON STYLES (for button-card)
+   ============================================ */
+
+/* Base LCARS Button */
+.lcars-button {
+  font-family: var(--lcars-font) !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px !important;
+  border: none !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lcars-button:hover {
+  filter: brightness(1.1);
+}
+
+.lcars-button:active {
+  filter: brightness(0.9);
+}
+
+/* Orange Pill Button */
+.lcars-btn-orange {
+  background: var(--lcars-orange) !important;
+  color: var(--lcars-black) !important;
+  border-radius: 0px 20px 20px 0px !important;
+}
+
+/* Purple Pill Button */
+.lcars-btn-purple {
+  background: var(--lcars-purple) !important;
+  color: var(--lcars-black) !important;
+  border-radius: 20px 0px 0px 20px !important;
+}
+
+/* Blue Pill Button */
+.lcars-btn-blue {
+  background: var(--lcars-blue) !important;
+  color: var(--lcars-black) !important;
+  border-radius: 0px 15px 15px 0px !important;
+}
+
+/* Red Pill Button (Alert) */
+.lcars-btn-red {
+  background: var(--lcars-red) !important;
+  color: var(--lcars-black) !important;
+  border-radius: 20px 0px 0px 20px !important;
+}
+
+/* Tan Pill Button (Data) */
+.lcars-btn-tan {
+  background: var(--lcars-tan) !important;
+  color: var(--lcars-black) !important;
+  border-radius: 0px 15px 15px 0px !important;
+}
+
+/* Pink Pill Button (Science) */
+.lcars-btn-pink {
+  background: var(--lcars-pink) !important;
+  color: var(--lcars-black) !important;
+  border-radius: 15px 0px 0px 15px !important;
+}
+
+/* Gold Pill Button (Warning) */
+.lcars-btn-gold {
+  background: var(--lcars-gold) !important;
+  color: var(--lcars-black) !important;
+  border-radius: 15px 0px 0px 15px !important;
+}
+
+/* ============================================
+   ENTITY BUTTON OVERRIDES
+   ============================================ */
+
+/* Default entity button styling */
+ha-card.type-entity-button {
+  background: var(--lcars-black) !important;
+}
+
+ha-card.type-entity-button .info {
+  font-family: var(--lcars-font) !important;
+  text-transform: uppercase !important;
+}
+
+ha-card.type-entity-button .state {
+  font-family: var(--lcars-font) !important;
+  color: var(--lcars-tan) !important;
+}
+
+/* ============================================
+   GAUGE & SENSOR STYLES
+   ============================================ */
+
+/* Gauge styling for LCARS */
+ha-card.type-gauge {
+  --gauge-color: var(--lcars-orange);
+}
+
+ha-card.type-gauge .value {
+  font-family: var(--lcars-font) !important;
+  color: var(--lcars-orange) !important;
+}
+
+/* Sensor card */
+ha-card.type-sensor .value {
+  font-family: var(--lcars-font) !important;
+  font-size: 32px !important;
+  color: var(--lcars-orange) !important;
+}
+
+ha-card.type-sensor .unit {
+  color: var(--lcars-tan) !important;
+}
+
+/* ============================================
+   GRAPH & HISTORY STYLES
+   ============================================ */
+
+/* History graph line colors */
+ha-card.type-history-graph .chart {
+  filter: hue-rotate(20deg) saturate(1.5);
+}
+
+/* Mini graph card (if used) */
+ha-card.type-custom-mini-graph-card {
+  --accent-color: var(--lcars-orange);
+}
+
+/* ============================================
+   SIDEBAR STYLES
+   ============================================ */
+
+/* Sidebar styling */
+ha-sidebar {
+  background: var(--lcars-black) !important;
+}
+
+ha-sidebar .title {
+  font-family: var(--lcars-font) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+}
+
+ha-sidebar paper-icon-item {
+  font-family: var(--lcars-font) !important;
+  text-transform: uppercase !important;
+}
+
+ha-sidebar paper-icon-item[selected] {
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--lcars-gray-dark) 100%
+  ) !important;
+  border-left: 4px solid var(--lcars-orange) !important;
+}
+
+/* ============================================
+   HEADER STYLES
+   ============================================ */
+
+/* App header */
+app-header {
+  background: var(--lcars-black) !important;
+  border-bottom: 2px solid var(--lcars-orange) !important;
+}
+
+app-header .title {
+  font-family: var(--lcars-font) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+}
+
+/* ============================================
+   ALERT MODES
+   ============================================ */
+
+/* Red Alert Mode */
+.lcars-alert-red {
+  --primary-color: var(--lcars-red) !important;
+  --accent-color: var(--lcars-orange) !important;
+  animation: lcars-pulse-red 1s infinite alternate;
+}
+
+@keyframes lcars-pulse-red {
+  from { box-shadow: 0 0 5px var(--lcars-red-dark); }
+  to { box-shadow: 0 0 20px var(--lcars-red); }
+}
+
+/* Yellow Alert Mode */
+.lcars-alert-yellow {
+  --primary-color: var(--lcars-gold) !important;
+  --accent-color: var(--lcars-orange) !important;
+}
+
+/* Blue Alert Mode */
+.lcars-alert-blue {
+  --primary-color: var(--lcars-blue) !important;
+  --accent-color: var(--lcars-purple) !important;
+}
+
+/* ============================================
+   SCROLLBARS
+   ============================================ */
+
+/* Custom scrollbar for LCARS look */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--lcars-black);
+  border-left: 1px solid var(--lcars-gray-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--lcars-orange);
+  border-radius: 0px 6px 6px 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--lcars-orange-light);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+/* LCARS Blink Animation */
+@keyframes lcars-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.lcars-blink {
+  animation: lcars-blink 2s infinite;
+}
+
+/* LCARS Slide In */
+@keyframes lcars-slide-in {
+  from { 
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to { 
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.lcars-slide-in {
+  animation: lcars-slide-in 0.5s ease-out;
+}
+
+/* LCARS Fade In */
+@keyframes lcars-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lcars-fade-in {
+  animation: lcars-fade-in 0.3s ease-out;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Mobile adjustments */
+  ha-card .card-header {
+    font-size: 16px !important;
+  }
+  
+  .lcars-top-bar {
+    height: 40px !important;
+  }
+  
+  .lcars-top-bar .card-header {
+    font-size: 18px !important;
+  }
+}

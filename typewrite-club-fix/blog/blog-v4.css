@@ -1,0 +1,1254 @@
+/**
+ * ============================================================================
+ * BLOG-V4.CSS - Unified Theme Stylesheet for Paper Trail Blog
+ * ============================================================================
+ * 
+ * PURPOSE:
+ * This stylesheet provides a unified visual theme for the Paper Trail blog
+ * that matches the home page aesthetic. It consolidates styles from both
+ * the home page and blog for consistency.
+ * 
+ * COLOR PALETTE (matching home page):
+ * - Primary Red: #dc2626 (buttons, accents, links)
+ * - Primary Red Hover: #b91c1c (button hover states)
+ * - Text Primary: #111111 (headings, main text)
+ * - Text Secondary: #666666 (body text, descriptions)
+ * - Text Muted: #888888 (footer text, captions)
+ * - Background White: #ffffff (main background)
+ * - Background Off-White: #fafafa (section backgrounds, cards)
+ * - Border Light: #e5e5e5 (borders, dividers)
+ * - Border Dark: #333333 (dark mode borders)
+ * 
+ * TYPOGRAPHY:
+ * - Headings: 'Newsreader', Georgia, serif
+ * - Body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif
+ * 
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   CSS RESET & BASE STYLES
+   ========================================================================== */
+
+/**
+ * Box-sizing reset ensures padding and borders are included in element
+ * dimensions, making layout calculations more predictable.
+ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Base body styles establish the default typography and color scheme.
+ * These match the home page exactly for visual consistency.
+ */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #ffffff;
+    color: #111111;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased; /* Smoother text rendering on WebKit */
+    -moz-osx-font-smoothing: grayscale;  /* Smoother text rendering on Firefox */
+}
+
+/**
+ * Images are responsive by default - scale to container width
+ * but never exceed natural dimensions.
+ */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/**
+ * Links inherit color by default, allowing parent elements
+ * to control link color while maintaining hover states.
+ */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.15s ease; /* Smooth color transitions for interactions */
+}
+
+/**
+ * Remove default list styling - we apply custom styles as needed.
+ */
+ul {
+    list-style: none;
+}
+
+/* ==========================================================================
+   LAYOUT CONTAINERS
+   ========================================================================== */
+
+/**
+ * Standard container constrains content width and centers it.
+ * Used throughout the site for consistent horizontal padding.
+ * 
+ * max-width: 1200px - Optimal reading width for most content
+ * padding: 0 24px - Consistent side padding on mobile and desktop
+ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ==========================================================================
+   HEADER STYLES
+   ========================================================================== */
+
+/**
+ * Site header is sticky (follows scroll) with glassmorphism effect.
+ * The backdrop-filter creates a frosted glass look over content.
+ * 
+ * z-index: 100 - Ensures header stays above most content
+ * position: sticky - Header follows scroll, always accessible
+ */
+.site-header {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+    backdrop-filter: blur(12px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(12px); /* Safari support */
+    border-bottom: 1px solid #e5e5e5;
+    z-index: 100;
+}
+
+/**
+ * Header container limits header content width.
+ */
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/**
+ * Main navigation uses flexbox for horizontal alignment.
+ * justify-content: space-between - Logo on left, nav on right
+ * height: 64px - Fixed header height for consistency
+ */
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+/**
+ * Brand logo and text container.
+ * Uses flex to align logo icon with text.
+ */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #111111;
+}
+
+.brand:hover {
+    color: #dc2626; /* Primary red on hover */
+}
+
+/**
+ * Brand logo SVG sizing.
+ */
+.brand-logo {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0; /* Prevent logo from shrinking */
+}
+
+/**
+ * Navigation links container.
+ * Hidden on mobile, shown on desktop via media queries.
+ */
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+/**
+ * Individual navigation link styling.
+ */
+.nav-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666666;
+    transition: color 0.15s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #111111;
+}
+
+/**
+ * Blog-specific header center section.
+ * Displays "The Paper Trail" blog title in the header center.
+ */
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/**
+ * Blog title in header - uses serif font for elegance.
+ */
+.nav-blog-title {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #111111;
+}
+
+.nav-blog-title:hover {
+    color: #dc2626;
+}
+
+/**
+ * Right side of header - typically holds action buttons.
+ */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ==========================================================================
+   BUTTON STYLES
+   ========================================================================== */
+
+/**
+ * Base button styles - shared across all button variants.
+ * Uses inline-flex for easy icon + text alignment.
+ */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.15s ease;
+    text-align: center;
+}
+
+/**
+ * Primary button - red background, white text.
+ * Used for main call-to-action buttons.
+ */
+.btn-primary {
+    background: #dc2626;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #b91c1c; /* Darker red on hover */
+    color: #ffffff;
+}
+
+/**
+ * Secondary button - transparent with border.
+ * Used for secondary actions.
+ */
+.btn-secondary {
+    background: transparent;
+    color: #111111;
+    border: 1px solid #e5e5e5;
+}
+
+.btn-secondary:hover {
+    background: #f5f5f5;
+    border-color: #111111;
+}
+
+/**
+ * Small button variant for compact spaces.
+ */
+.btn-sm {
+    padding: 8px 14px;
+    font-size: 13px;
+}
+
+/**
+ * Large button variant for hero sections.
+ */
+.btn-lg {
+    padding: 14px 28px;
+    font-size: 15px;
+}
+
+/**
+ * Icon button - square shape for icon-only buttons.
+ */
+.icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    color: #666666;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.icon-btn:hover {
+    background: #f5f5f5;
+    color: #111111;
+}
+
+/**
+ * Text button - looks like a link but has button padding.
+ */
+.btn-text {
+    background: transparent;
+    color: #666666;
+    padding: 8px 12px;
+}
+
+.btn-text:hover {
+    color: #111111;
+    background: #f5f5f5;
+}
+
+/* ==========================================================================
+   CATEGORY NAVIGATION (REMOVED - styles kept for backward compatibility)
+   ========================================================================== */
+
+/**
+ * NOTE: The category navigation has been removed from the blog as per
+ * task requirement #4. These styles remain for backward compatibility
+ * but are not used in the current implementation.
+ * 
+ * The original category nav had non-functional # hrefs for filtering
+ * by categories (All, Product, Engineering, Company, Customers).
+ * 
+ * If category filtering is needed in the future, JavaScript filtering
+ * would need to be implemented and these styles would apply.
+ */
+
+.category-nav {
+    display: none; /* HIDDEN - non-functional nav removed */
+}
+
+.category-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.category-list {
+    display: flex;
+    gap: 4px;
+    padding: 12px 0;
+    overflow-x: auto; /* Horizontal scroll on mobile */
+}
+
+.category-link {
+    display: block;
+    padding: 6px 14px;
+    color: #666666;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    white-space: nowrap; /* Prevent category names from wrapping */
+    transition: all 0.15s ease;
+}
+
+.category-link:hover,
+.category-link.active {
+    color: #111111;
+    background: #f5f5f5;
+}
+
+/* ==========================================================================
+   FEATURED POST SECTION
+   ========================================================================== */
+
+/**
+ * Featured post section - highlights the main/hero post.
+ * Uses padding to create vertical spacing.
+ */
+.featured-section {
+    padding: 48px 0 32px;
+}
+
+/**
+ * Featured post grid layout.
+ * Two columns on desktop: image (1.1fr) + content (1fr)
+ * Stacks to single column on mobile.
+ */
+.featured-post {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+/**
+ * Featured post image container.
+ * aspect-ratio: 16/10 - Consistent widescreen ratio
+ * overflow: hidden - Clips image to border-radius
+ */
+.featured-image {
+    aspect-ratio: 16 / 10;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover entire container, cropping if needed */
+    transition: transform 0.3s ease; /* Smooth zoom on hover */
+}
+
+.featured-image:hover img {
+    transform: scale(1.03); /* Subtle zoom effect on hover */
+}
+
+/**
+ * Featured post content area.
+ */
+.featured-content {
+    max-width: 520px;
+}
+
+/**
+ * Post meta information row.
+ * Contains: category, date, reading time
+ */
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    flex-wrap: wrap; /* Wrap on narrow screens */
+}
+
+/**
+ * Category label in post meta.
+ * Uses primary red color for visual hierarchy.
+ */
+.post-category {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+/**
+ * Post date and reading time - muted color.
+ */
+.post-date,
+.reading-time {
+    color: #666666;
+}
+
+/**
+ * Featured post title - large serif heading.
+ * font-size: 36px - Largest heading on the page
+ * line-height: 1.2 - Tight line height for impact
+ */
+.featured-title {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: #111111;
+}
+
+.featured-title a {
+    color: #111111;
+}
+
+.featured-title a:hover {
+    color: #dc2626; /* Red on hover */
+}
+
+/**
+ * Featured post excerpt/description.
+ * Uses secondary text color for visual hierarchy.
+ * font-size: 17px - Slightly larger than body for readability
+ */
+.featured-excerpt {
+    font-size: 17px;
+    color: #666666;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+/* ==========================================================================
+   AUTHOR STYLES
+   ========================================================================== */
+
+/**
+ * Author information container.
+ * Flex layout aligns avatar with name/title.
+ */
+.post-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/**
+ * Author avatar placeholder.
+ * Currently shows as a gray circle - should be replaced with actual image.
+ */
+.author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Circle shape */
+    background: #f5f5f5;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/**
+ * Author name and title stacked vertically.
+ */
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #111111;
+}
+
+.author-title {
+    font-size: 13px;
+    color: #666666;
+}
+
+/**
+ * Small author variant for post cards.
+ */
+.post-author-small {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #666666;
+}
+
+.author-avatar-small {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.author-avatar-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reading-time-small {
+    font-size: 13px;
+    color: #888888;
+}
+
+/* ==========================================================================
+   NEWSLETTER STRIP
+   ========================================================================== */
+
+/**
+ * Newsletter strip - full-width bar between sections.
+ * Uses off-white background to distinguish from main content.
+ */
+.newsletter-strip {
+    background: #fafafa;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 20px 0;
+}
+
+/**
+ * Newsletter content uses flex for horizontal layout.
+ * Stacks vertically on mobile.
+ */
+.newsletter-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.newsletter-text {
+    font-size: 15px;
+    color: #666666;
+}
+
+/**
+ * Newsletter form uses flex for input + button layout.
+ */
+.newsletter-form {
+    display: flex;
+    gap: 8px;
+}
+
+.newsletter-input {
+    width: 240px;
+    padding: 10px 14px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.15s ease;
+}
+
+.newsletter-input:focus {
+    outline: none;
+    border-color: #dc2626; /* Red border on focus */
+}
+
+.newsletter-input::placeholder {
+    color: #888888;
+}
+
+/* ==========================================================================
+   POSTS GRID SECTION
+   ========================================================================== */
+
+/**
+ * Posts section contains the grid of blog post cards.
+ */
+.posts-section {
+    padding: 48px 0 64px;
+}
+
+/**
+ * Section header styling.
+ */
+.section-header {
+    margin-bottom: 32px;
+}
+
+.section-header h2 {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #111111;
+}
+
+/**
+ * Posts grid - 3 columns on desktop, 2 on tablet, 1 on mobile.
+ */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+/**
+ * Individual post card container.
+ * Uses flex column for vertical content stacking.
+ */
+.post-card {
+    display: flex;
+    flex-direction: column;
+}
+
+/**
+ * Post card link wraps entire card for clickability.
+ * height: 100% ensures cards in same row have equal height.
+ */
+.post-card-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.2s ease;
+}
+
+.post-card-link:hover {
+    transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+/**
+ * Post card image container.
+ * Uses gradient as placeholder until actual images are added.
+ */
+.post-card-image {
+    aspect-ratio: 16 / 10;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.post-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.post-card:hover .post-card-image img {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/**
+ * Post card content area.
+ * flex: 1 allows content to fill available space.
+ */
+.post-card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/**
+ * Post card meta row.
+ */
+.post-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    flex-wrap: wrap;
+}
+
+/**
+ * Post card title.
+ * Uses serif font for consistent branding.
+ */
+.post-card-title {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    color: #111111;
+    transition: color 0.15s ease;
+}
+
+.post-card:hover .post-card-title {
+    color: #dc2626; /* Red on hover */
+}
+
+/**
+ * Post card excerpt/description.
+ */
+.post-card-excerpt {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    flex: 1; /* Pushes footer to bottom */
+}
+
+/**
+ * Post card footer - author and reading time.
+ * border-top creates visual separation from content.
+ */
+.post-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* ==========================================================================
+   LOAD MORE BUTTON
+   ========================================================================== */
+
+.load-more-container {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.btn-load-more {
+    padding: 12px 24px;
+    background: transparent;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666666;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-family: inherit;
+}
+
+.btn-load-more:hover {
+    border-color: #111111;
+    color: #111111;
+}
+
+/* ==========================================================================
+   FOOTER STYLES
+   ========================================================================== */
+
+/**
+ * Site footer - off-white background for visual separation.
+ */
+.site-footer {
+    background: #fafafa;
+    border-top: 1px solid #e5e5e5;
+    padding: 48px 0 24px;
+}
+
+/**
+ * Footer container.
+ */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/**
+ * Footer grid - 4 columns on desktop.
+ * First column (brand) is wider (2fr) than others (1fr).
+ */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+}
+
+.footer-description {
+    font-size: 14px;
+    color: #666666;
+    max-width: 280px;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+/**
+ * Footer link columns.
+ */
+.footer-links h4 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
+    color: #111111;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    font-size: 14px;
+    color: #666666;
+    transition: color 0.15s ease;
+}
+
+.footer-links a:hover {
+    color: #111111;
+}
+
+/**
+ * Footer bottom - copyright section.
+ * border-top creates visual separation.
+ */
+.footer-bottom {
+    padding-top: 24px;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #888888;
+}
+
+/* ==========================================================================
+   INDIVIDUAL POST PAGE STYLES
+   ========================================================================== */
+
+/**
+ * Single post page header - smaller than featured but larger than cards.
+ */
+.post-header {
+    padding: 48px 0 32px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post-header .post-meta {
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.post-header-title {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: #111111;
+}
+
+.post-header-excerpt {
+    font-size: 20px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+/**
+ * Post featured image - full width on post pages.
+ */
+.post-featured-image {
+    width: 100%;
+    aspect-ratio: 21 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 48px;
+}
+
+.post-featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/**
+ * Post content area - constrained width for readability.
+ * Optimal line length for reading is 60-75 characters.
+ */
+.post-content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px 64px;
+}
+
+/**
+ * Post body typography.
+ */
+.post-body {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333333; /* Slightly softer than pure black for long-form reading */
+}
+
+.post-body p {
+    margin-bottom: 24px;
+}
+
+.post-body h2 {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 32px;
+    margin-top: 48px;
+    margin-bottom: 20px;
+    color: #111111;
+    line-height: 1.3;
+}
+
+.post-body h3 {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 24px;
+    margin-top: 36px;
+    margin-bottom: 16px;
+    color: #111111;
+    line-height: 1.3;
+}
+
+.post-body ul,
+.post-body ol {
+    margin-bottom: 24px;
+    padding-left: 24px;
+}
+
+.post-body ul {
+    list-style: disc;
+}
+
+.post-body ol {
+    list-style: decimal;
+}
+
+.post-body li {
+    margin-bottom: 8px;
+}
+
+.post-body a {
+    color: #dc2626;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.post-body a:hover {
+    color: #b91c1c;
+}
+
+.post-body blockquote {
+    border-left: 4px solid #dc2626;
+    padding-left: 24px;
+    margin: 32px 0;
+    font-style: italic;
+    color: #666666;
+}
+
+.post-body strong {
+    color: #111111;
+    font-weight: 600;
+}
+
+.post-body code {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.9em;
+    background: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #dc2626;
+}
+
+.post-body pre {
+    background: #1a1a1a;
+    color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 24px;
+}
+
+.post-body pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+}
+
+/**
+ * Post navigation - previous/next links.
+ */
+.post-navigation {
+    max-width: 720px;
+    margin: 0 auto 64px;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.post-nav-link {
+    flex: 1;
+    padding: 24px;
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    transition: all 0.15s ease;
+}
+
+.post-nav-link:hover {
+    border-color: #dc2626;
+    background: #ffffff;
+}
+
+.post-nav-link[href="#"] {
+    opacity: 0.5;
+    pointer-events: none; /* Disable click on placeholder links */
+}
+
+.post-nav-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #888888;
+    margin-bottom: 8px;
+}
+
+.post-nav-title {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 18px;
+    color: #111111;
+}
+
+.post-nav-link:hover .post-nav-title {
+    color: #dc2626;
+}
+
+/* ==========================================================================
+   RESPONSIVE STYLES
+   ========================================================================== */
+
+/**
+ * Tablet breakpoint - 1024px and below.
+ */
+@media (max-width: 1024px) {
+    .posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/**
+ * Tablet breakpoint - 900px and below.
+ */
+@media (max-width: 900px) {
+    .featured-post {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .featured-title {
+        font-size: 28px;
+    }
+    
+    .post-header-title {
+        font-size: 36px;
+    }
+}
+
+/**
+ * Mobile breakpoint - 768px and below.
+ */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+    }
+    
+    .nav-links {
+        display: none; /* Hide desktop nav on mobile */
+    }
+    
+    .nav-center {
+        justify-content: flex-end; /* Align blog title right on mobile */
+    }
+    
+    .post-header-title {
+        font-size: 32px;
+    }
+    
+    .post-body {
+        font-size: 16px;
+    }
+}
+
+/**
+ * Small mobile breakpoint - 640px and below.
+ */
+@media (max-width: 640px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .newsletter-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .newsletter-form {
+        width: 100%;
+    }
+    
+    .newsletter-input {
+        width: 100%;
+        flex: 1;
+    }
+    
+    .post-navigation {
+        flex-direction: column;
+    }
+    
+    .post-header-title {
+        font-size: 28px;
+    }
+    
+    .post-featured-image {
+        aspect-ratio: 16 / 10;
+    }
+}
+
+/**
+ * Extra small mobile breakpoint - 480px and below.
+ */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px; /* Reduced padding on very small screens */
+    }
+    
+    .header-container {
+        padding: 0 16px;
+    }
+    
+    .featured-title {
+        font-size: 24px;
+    }
+    
+    .post-meta {
+        font-size: 12px;
+    }
+}
+
+/* ==========================================================================
+   UTILITY CLASSES
+   ========================================================================== */
+
+/**
+ * Screen reader only - visually hidden but accessible.
+ */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/**
+ * Gradient backgrounds for post images (until real images are added).
+ * These provide visual variety while maintaining consistent sizing.
+ */
+.gradient-purple {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-pink {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.gradient-blue {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.gradient-green {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.gradient-orange {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.gradient-dark {
+    background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+}

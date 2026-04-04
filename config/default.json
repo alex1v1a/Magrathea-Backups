@@ -1,0 +1,140 @@
+{
+  "$schema": "./config-schema.json",
+  "name": "marvin-automation",
+  "version": "2.1.0",
+  "environment": "${NODE_ENV}",
+  
+  "browser": {
+    "debugPort": 9222,
+    "headless": false,
+    "defaultViewport": { "width": 1280, "height": 720 },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.0.36",
+    "args": [
+      "--disable-blink-features=AutomationControlled",
+      "--disable-web-security",
+      "--disable-features=IsolateOrigins,site-per-process"
+    ],
+    "timeouts": {
+      "navigation": 30000,
+      "element": 10000,
+      "action": 5000
+    }
+  },
+
+  "antiBot": {
+    "minDelay": 3000,
+    "maxDelay": 8000,
+    "batchSize": 5,
+    "batchPauseMin": 10,
+    "batchPauseMax": 15,
+    "retryAttempts": 3,
+    "retryDelay": 5000,
+    "humanize": {
+      "enabled": true,
+      "mouseJitter": true,
+      "randomDelays": true,
+      "scrollBeforeClick": true
+    }
+  },
+
+  "heb": {
+    "baseUrl": "https://www.heb.com",
+    "cartVerifyTimeout": 5000,
+    "selectors": {
+      "cartLink": "a[data-testid=\"cart-link\"]",
+      "addToCartBtn": "button[data-qe-id=\"addToCart\"]",
+      "searchInput": "input[data-testid=\"search-input\"]",
+      "searchBtn": "button[data-testid=\"search-button\"]",
+      "productCard": "[data-testid=\"product-card\"]",
+      "loginEmail": "input[type=\"email\"]",
+      "loginPassword": "input[type=\"password\"]"
+    },
+    "timeouts": {
+      "pageLoad": 15000,
+      "searchResults": 5000,
+      "addToCart": 3000
+    }
+  },
+
+  "facebook": {
+    "baseUrl": "https://www.facebook.com",
+    "marketplaceUrl": "https://www.facebook.com/marketplace",
+    "selectors": {
+      "loginCheck": "[aria-label=\"Your profile\"]",
+      "messageList": "[role=\"main\"] [role=\"list\"]",
+      "marketplace": "[href*=\"/marketplace\"]",
+      "notifications": "[aria-label*=\"Notifications\"]"
+    },
+    "timeouts": {
+      "pageLoad": 20000,
+      "messageLoad": 10000
+    }
+  },
+
+  "email": {
+    "smtp": {
+      "host": "smtp.mail.me.com",
+      "port": 587,
+      "secure": false,
+      "pool": true,
+      "maxConnections": 1,
+      "maxMessages": 5,
+      "rateDelta": 1000,
+      "rateLimit": 2
+    },
+    "imap": {
+      "host": "imap.mail.me.com",
+      "port": 993,
+      "secure": true
+    },
+    "defaults": {
+      "from": "MarvinMartian9@icloud.com",
+      "fromName": "Marvin",
+      "recipients": ["alex@1v1a.com"]
+    },
+    "templates": {
+      "dinnerPlan": {
+        "subject": "Dinner Plan: {{day}}",
+        "variables": ["day", "meal", "ingredients"]
+      },
+      "shoppingList": {
+        "subject": "Shopping List",
+        "variables": ["items"]
+      }
+    }
+  },
+
+  "calendar": {
+    "syncInterval": 900000,
+    "lookaheadDays": 7,
+    "providers": {
+      "icloud": {
+        "serverUrl": "https://caldav.icloud.com"
+      }
+    }
+  },
+
+  "logging": {
+    "level": "${LOG_LEVEL}",
+    "dir": "./logs",
+    "maxFiles": 30,
+    "console": true,
+    "file": true,
+    "format": "json"
+  },
+
+  "metrics": {
+    "enabled": true,
+    "retentionDays": 30,
+    "collectInterval": 60000
+  },
+
+  "security": {
+    "credentialSource": "env",
+    "allowedEnvs": [".env", ".env.local"],
+    "secretPaths": [
+      ".secrets/config-secrets.json",
+      ".secrets/icloud-smtp.json"
+    ]
+  }
+}

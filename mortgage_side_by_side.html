@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side-by-Side Mortgage Comparison</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f7fa;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .header h1 { margin: 0; font-size: 32px; }
+        .header p { margin: 10px 0 0 0; opacity: 0.9; font-size: 18px; }
+        
+        .comparison-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .loan-box {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-top: 5px solid;
+        }
+        
+        .loan-box.current { border-top-color: #ff9800; }
+        .loan-box.fha { border-top-color: #2196f3; }
+        
+        .loan-header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .loan-header h2 {
+            margin: 0 0 10px 0;
+            font-size: 28px;
+            color: #1e3c72;
+        }
+        
+        .loan-type {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .loan-box.current .loan-type { background: #fff3e0; color: #e65100; }
+        .loan-box.fha .loan-type { background: #e3f2fd; color: #1565c0; }
+        
+        .rate-display {
+            font-size: 48px;
+            font-weight: 700;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .loan-box.current .rate-display { color: #ff9800; }
+        .loan-box.fha .rate-display { color: #2196f3; }
+        
+        .rate-label {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .detail-section {
+            margin: 25px 0;
+        }
+        
+        .detail-section h3 {
+            color: #1e3c72;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .detail-row:last-child { border-bottom: none; }
+        
+        .detail-label { color: #666; }
+        .detail-value { 
+            font-weight: 600; 
+            color: #1e3c72;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+        }
+        
+        .payment-highlight {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecef 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .payment-amount {
+            font-size: 42px;
+            font-weight: 700;
+            color: #1e3c72;
+        }
+        
+        .payment-label {
+            color: #666;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .vs-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .vs-header {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e3c72;
+            margin-bottom: 25px;
+        }
+        
+        .vs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            text-align: center;
+        }
+        
+        .vs-item {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .vs-item.current { background: #fff3e0; }
+        .vs-item.fha { background: #e3f2fd; }
+        .vs-item.savings { background: #e8f5e9; }
+        
+        .vs-value {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .vs-item.current .vs-value { color: #ff9800; }
+        .vs-item.fha .vs-value { color: #2196f3; }
+        .vs-item.savings .vs-value { color: #4caf50; }
+        
+        .vs-label {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .winner-badge {
+            display: inline-block;
+            background: #4caf50;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        .summary-box {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .summary-box h2 {
+            color: #1e3c72;
+            margin-top: 0;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 15px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-left: 5px solid #4caf50;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .highlight-box h3 {
+            color: #1b5e20;
+            margin-top: 0;
+        }
+        
+        .savings-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .savings-row:last-child { border-bottom: none; }
+        
+        .savings-amount {
+            font-size: 24px;
+            font-weight: 700;
+            color: #4caf50;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 12px;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison-container { grid-template-columns: 1fr; }
+            .vs-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏠 Side-by-Side Mortgage Comparison</h1>
+        <p>Current Mr. Cooper vs FHA 4.75% Refinance</p>
+    </div>
+
+    <div class="comparison-container">
+        <!-- CURRENT LOAN -->
+        <div class="loan-box current">
+            <div class="loan-header">
+                <h2>📍 Current Loan</h2>
+                <span class="loan-type">Conventional</span>
+                <div class="rate-display">6.375%</div>
+                <div class="rate-label">Interest Rate</div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Loan Details</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Lender</span>
+                    <span class="detail-value">Mr. Cooper</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Current Balance</span>
+                    <span class="detail-value">$340,281.97</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Original Loan Amount</span>
+                    <span class="detail-value">~$366,000</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Loan Term</span>
+                    <span class="detail-value">30 years</span>
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Monthly Payment Breakdown</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Principal & Interest</span>
+                    <span class="detail-value">$2,122.92</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">PMI</span>
+                    <span class="detail-value">$193.00</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Escrow (Taxes/Ins)</span>
+                    <span class="detail-value">$875.00</span>
+                </div>
+            </div>
+            
+            <div class="payment-highlight">
+                <div class="payment-amount">$3,190.92</div>
+                <div class="payment-label">Total Monthly Payment</div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>PMI Information</h3>
+                <div class="detail-row">
+                    <span class="detail-label">PMI Type</span>
+                    <span class="detail-value">Temporary</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Drops When</span>
+                    <span class="detail-value">At 80% LTV</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Time to Drop*</span>
+                    <span class="detail-value">54-97 months</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Payment After PMI</span>
+                    <span class="detail-value">$2,997.92</span>
+                </div>
+            </div>
+            
+            <div style="font-size: 12px; color: #999; margin-top: 20px;">
+                *Depends on home value appreciation
+            </div>
+        </div>
+
+        <!-- FHA REFINANCE -->
+        <div class="loan-box fha">
+            <div class="loan-header">
+                <h2>🏛️ FHA Refinance</h2>
+                <span class="loan-type">FHA Loan</span>
+                <div class="rate-display">4.75%</div>
+                <div class="rate-label">Interest Rate</div>
+                <div class="winner-badge">⭐ 1.625% LOWER!</div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Loan Details</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Lender</span>
+                    <span class="detail-value">United Wholesale</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">New Loan Amount</span>
+                    <span class="detail-value">$366,300</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Cash Out</span>
+                    <span class="detail-value" style="color: #4caf50;">+$26,018</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Loan Term</span>
+                    <span class="detail-value">30 years</span>
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Monthly Payment Breakdown</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Principal & Interest</span>
+                    <span class="detail-value">$1,910.79</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">MIP</span>
+                    <span class="detail-value">$149.00</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Escrow (Taxes/Ins)</span>
+                    <span class="detail-value">$875.00</span>
+                </div>
+            </div>
+            
+            <div class="payment-highlight">
+                <div class="payment-amount" style="color: #2196f3;">$2,934.79</div>
+                <div class="payment-label">Total Monthly Payment</div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>MIP Information</h3>
+                <div class="detail-row">
+                    <span class="detail-label">MIP Type</span>
+                    <span class="detail-value">Permanent</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Duration</span>
+                    <span class="detail-value">Life of loan</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Upfront MIP</span>
+                    <span class="detail-value">$6,300</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Payment Never Changes</span>
+                    <span class="detail-value">$2,934.79</span>
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Closing Costs</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Total Closing Costs</span>
+                    <span class="detail-value">$24,000</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Cash to Close</span>
+                    <span class="detail-value" style="color: #4caf50;">$941</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Rolled into Loan</span>
+                    <span class="detail-value">$23,059</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="vs-section">
+        <div class="vs-header">⚡ Head-to-Head Comparison</div>
+        
+        <div class="vs-grid">
+            <div class="vs-item current">
+                <div class="vs-value">$3,191</div>
+                <div class="vs-label">Current Monthly</div>
+            </div>
+            
+            <div class="vs-item fha">
+                <div class="vs-value">$2,935</div>
+                <div class="vs-label">FHA Monthly</div>
+            </div>
+            
+            <div class="vs-item savings">
+                <div class="vs-value">$256</div>
+                <div class="vs-label">Monthly Savings</div>
+                <div class="winner-badge">WINNER!</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="summary-box">
+        <h2>📊 The Bottom Line</h2>
+        
+        <div class="savings-row">
+            <span><strong>Monthly Savings (while you have PMI)</strong></span>
+            <span class="savings-amount">$256/month</span>
+        </div>
+        
+        <div class="savings-row">
+            <span><strong>Monthly Savings (after PMI drops)</strong></span>
+            <span class="savings-amount">$63/month</span>
+        </div>
+        
+        <div class="savings-row">
+            <span><strong>Annual Savings (first 5 years)</strong></span>
+            <span class="savings-amount">$3,072/year</span>
+        </div>
+        
+        <div class="savings-row">
+            <span><strong>Cash Out at Closing</strong></span>
+            <span class="savings-amount">$26,018</span>
+        </div>
+        
+        <div class="savings-row">
+            <span><strong>Cash Needed to Close</strong></span>
+            <span class="savings-amount" style="color: #2196f3;">$941</span>
+        </div>
+        
+        <div class="savings-row">
+            <span><strong>Break-Even Point</strong></span>
+            <span class="savings-amount" style="color: #ff9800;">94 months (7.8 years)</span>
+        </div>
+        
+        <div class="savings-row">
+            <span><strong>30-Year Total Savings</strong></span>
+            <span class="savings-amount">$3,166 - $17,447</span>
+        </div>
+    </div>
+
+    <div class="highlight-box">
+        <h3>✅ Recommendation: Take the FHA 4.75% Refinance</h3>
+        
+        <p><strong>Why this makes sense:</strong></p>
+        <ul>
+            <li>You save <strong>$256/month</strong> immediately (while you have PMI)</li>
+            <li>You still save <strong>$63/month</strong> even after your PMI would drop</li>
+            <li>You get <strong>$26,018 cash out</strong> with only $941 out of pocket</li>
+            <li>The 4.75% rate is <strong>below the national average</strong> (5.86% for FHA)</li>
+            <li>Over 30 years, you save <strong>thousands</strong> even accounting for permanent MIP</li>
+        </ul>
+
+        <p><strong>The math is clear:</strong> The 1.625% rate reduction (6.375% → 4.75%) saves you $212/month in P&I alone. This easily covers the $44/month difference between permanent MIP ($149) and temporary PMI ($193). You come out ahead <em>every single month</em> — both now and in the future.</p>
+    </div>
+
+    <div class="footer">
+        <p>This comparison is for informational purposes only. Please consult with a licensed mortgage professional.</p>
+        <p>Generated February 16, 2026 | Both loans assume $875/month property tax escrow</p>
+    </div>
+</body>
+</html>

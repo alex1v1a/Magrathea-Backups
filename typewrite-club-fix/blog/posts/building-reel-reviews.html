@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--
+  ==============================================================================
+  INDIVIDUAL BLOG POST PAGE: Building Reel Reviews
+  ==============================================================================
+  
+  POST DETAILS:
+  - Title: Building Reel Reviews: The UX of Negative Reviews
+  - Slug: building-reel-reviews
+  - Category: Product
+  - Date: March 15, 2026
+  - Author: Paper Trail Team
+  - Reading Time: 8 min read
+  
+  PAGE STRUCTURE:
+  1. Header (shared with blog index - consistent navigation)
+  2. Post Header (title, meta, author info)
+  3. Featured Image
+  4. Post Content (main article body)
+  5. Post Navigation (prev/next links)
+  6. Footer (shared with rest of site)
+  
+  CSS: Uses /blog/blog-v4.css for all styling
+  ==============================================================================
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Why we built an app that only shows negative reviews, and the surprising psychology behind why users trust them more.">
+    
+    <!-- Page Title - SEO friendly format: Post Title | Site Name -->
+    <title>Building Reel Reviews: The UX of Negative Reviews | The Paper Trail</title>
+    
+    <!-- Google Fonts - Same as home page for consistency -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet - Unified theme matching home page -->
+    <link rel="stylesheet" href="/blog/blog-v4.css">
+</head>
+<body class="post-page">
+
+    <!-- ==========================================================================
+         HEADER SECTION
+         Shared header with home page - provides consistent navigation
+         ========================================================================== -->
+    <header class="site-header">
+        <div class="header-container">
+            <nav class="main-nav">
+                <!-- Brand/Logo - links back to home page -->
+                <a href="/" class="brand" aria-label="Paper Trail - Back to home">
+                    <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect width="48" height="48" rx="8" fill="#dc2626"/>
+                        <path d="M14 12h20v4H14v-4zm0 10h20v4H14v-4zm0 10h14v4H14v-4z" fill="white"/>
+                    </svg>
+                    <span>Paper Trail</span>
+                </a>
+                
+                <!-- Navigation Links - same as home page for consistency -->
+                <ul class="nav-links">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/blog/" class="nav-link active">Blog</a></li>
+                    <li><a href="/apps/reel-reviews/" class="nav-link">Reel Reviews</a></li>
+                    <li><a href="/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+         MAIN CONTENT - POST ARTICLE
+         ========================================================================== -->
+    <main>
+        <!-- Post Header: Title, meta info, and author -->
+        <header class="post-header">
+            <!-- Post Meta: Category, Date, Reading Time -->
+            <div class="post-meta">
+                <span class="post-category">Product</span>
+                <span class="post-date">March 15, 2026</span>
+                <span class="reading-time">8 min read</span>
+            </div>
+            
+            <!-- Post Title -->
+            <h1 class="post-header-title">Building Reel Reviews: The UX of Negative Reviews</h1>
+            
+            <!-- Post Excerpt/Subtitle -->
+            <p class="post-header-excerpt">
+                Why we built an app that only shows negative reviews, and the surprising psychology 
+                behind why users trust them more.
+            </p>
+            
+            <!-- Author Info -->
+            <div class="post-author" style="justify-content: center; margin-top: 24px;">
+                <div class="author-avatar">
+                    <!-- Placeholder for author avatar - replace with actual image -->
+                </div>
+                <div class="author-info">
+                    <span class="author-name">Paper Trail Team</span>
+                    <span class="author-title">Founders</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Featured Image -->
+        <div class="container">
+            <div class="post-featured-image gradient-purple" role="img" aria-label="Featured image for Building Reel Reviews post">
+                <!-- Gradient placeholder - replace with actual image when available -->
+            </div>
+        </div>
+
+        <!-- Post Content -->
+        <article class="post-content">
+            <div class="post-body">
+                <p>
+                    When we started building Reel Reviews, everyone asked the same question: 
+                    <strong>"Why would you only show negative reviews?"</strong> It seemed counterintuitive. 
+                    Every other app was racing to highlight five-star ratings and glowing testimonials. 
+                    We went the other direction.
+                </p>
+
+                <h2>The Trust Problem</h2>
+                
+                <p>
+                    Here's what we learned from talking to hundreds of app users: people don't trust 
+                    perfect ratings anymore. When everything has 4.8 stars, the rating system becomes 
+                    meaningless. Users know that reviews can be bought, incentivized, or cherry-picked.
+                </p>
+
+                <p>
+                    But negative reviews? Those are different. A thoughtful critique takes effort. 
+                    Someone cared enough to write about what went wrong. That signal is valuable—even 
+                    if it's uncomfortable for the business being reviewed.
+                </p>
+
+                <h2>What We Built</h2>
+                
+                <p>
+                    Reel Reviews is a map-based app that shows you the negative reviews for businesses 
+                    in your area. We don't hide the positive ones entirely—you can still see them—but 
+                    we lead with the critical feedback because that's what helps you make better decisions.
+                </p>
+
+                <p>
+                    The UX challenge was fascinating. How do you show negative information without 
+                    making everything feel doom and gloom? How do you help users quickly assess whether 
+                    a criticism is relevant to them?
+                </p>
+
+                <h2>Three Key Design Decisions</h2>
+                
+                <p><strong>1. Context before content.</strong> We show the category of complaint first. 
+                "Service issue" vs "Food quality" vs "Wait time"—users can instantly filter for what 
+                matters to them.</p>
+
+                <p><strong>2. Recency matters.</strong> A two-year-old negative review about a restaurant 
+                that's under new management isn't helpful. We weight recent reviews more heavily and 
+                clearly show when they were written.</p>
+
+                <p><strong>3. Patterns over outliers.</strong> One angry customer having a bad day is 
+                different from twenty people reporting the same problem. Our interface makes these 
+                patterns visually obvious.</p>
+
+                <h2>The Surprising Result</h2>
+                
+                <p>
+                    We expected users to be cynical. Instead, they were relieved. There's something 
+                    honest about an app that doesn't try to sell you on perfection. Users report feeling 
+                    more confident in their decisions because they're seeing the full picture—or at 
+                    least the part that other apps try to bury.
+                </p>
+
+                <blockquote>
+                    "I used to read fifty positive reviews trying to find the one negative one that 
+                    would actually tell me something. Now I just open Reel Reviews." — Beta tester feedback
+                </blockquote>
+
+                <h2>What's Next</h2>
+                
+                <p>
+                    We're expanding beyond restaurants to other categories where negative feedback is 
+                    particularly valuable: hotels, car repair, contractors. The pattern holds: when 
+                    people have bad experiences, they want to warn others. We're just making that 
+                    warning easier to find.
+                </p>
+
+                <p>
+                    If you're interested in trying Reel Reviews, <a href="/apps/reel-reviews/">check out our product page</a> 
+                    or download it from the App Store. We'd love to hear what you think—even if it's negative.
+                </p>
+            </div>
+        </article>
+
+        <!-- Post Navigation: Previous/Next links -->
+        <nav class="post-navigation" aria-label="Post navigation">
+            <!-- Previous Post Link -->
+            <a href="/blog/posts/react-native-vs-flutter.html" class="post-nav-link">
+                <div class="post-nav-label">Previous</div>
+                <div class="post-nav-title">React Native vs Flutter: A Developer's Perspective</div>
+            </a>
+            
+            <!-- Next Post Link (disabled if this is the latest) -->
+            <a href="#" class="post-nav-link" aria-disabled="true" style="opacity: 0.5;">
+                <div class="post-nav-label">Next</div>
+                <div class="post-nav-title">No newer posts</div>
+            </a>
+        </nav>
+    </main>
+
+    <!-- ==========================================================================
+         FOOTER SECTION
+         Shared footer with home page
+         ========================================================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <a href="/" class="brand" aria-label="Paper Trail - Back to home">
+                        <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="48" height="48" rx="8" fill="#dc2626"/>
+                            <path d="M14 12h20v4H14v-4zm0 10h20v4H14v-4zm0 10h14v4H14v-4z" fill="white"/>
+                        </svg>
+                        <span>Paper Trail</span>
+                    </a>
+                    <p class="footer-description">Writing the future of mobile experiences from New Zealand.</p>
+                </div>
+                
+                <!-- Product Links -->
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="/apps/reel-reviews/">Reel Reviews</a></li>
+                        <li><a href="/apps/coming-soon/">Coming Soon</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Links -->
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/privacy-policy.html">Privacy</a></li>
+                        <li><a href="/terms-of-service.html">Terms</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Connect Links -->
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:admin@typewrite.club">Email</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>© 2026 Paper Trail Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

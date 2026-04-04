@@ -1,0 +1,100 @@
+{
+  "timestamp": "2026-02-14T20:56:09.526Z",
+  "weekOf": "2026-02-08",
+  "meals": [
+    {
+      "day": "Sunday",
+      "name": "Pan-Seared Cod with Lemon Butter",
+      "category": "seafood",
+      "ingredients": [
+        "Cod fillets",
+        "Unsalted butter",
+        "Fresh lemon",
+        "Fresh parsley",
+        "Capers",
+        "White wine",
+        "Garlic"
+      ]
+    },
+    {
+      "day": "Monday",
+      "name": "Pork Tenderloin with Roasted Vegetables",
+      "category": "american",
+      "ingredients": [
+        "Pork tenderloin",
+        "Brussels sprouts",
+        "Sweet potatoes",
+        "Dijon mustard",
+        "Fresh rosemary",
+        "Balsamic vinegar"
+      ]
+    },
+    {
+      "day": "Tuesday",
+      "name": "Fish Tacos with Mango Salsa",
+      "category": "mexican",
+      "ingredients": [
+        "White fish fillets",
+        "Corn tortillas",
+        "Mango",
+        "Red onion",
+        "Jalapeno",
+        "Cabbage slaw mix",
+        "Chipotle mayo"
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "name": "Chicken Tikka Masala",
+      "category": "indian",
+      "ingredients": [
+        "Chicken thighs",
+        "Greek yogurt",
+        "Heavy cream",
+        "Basmati rice",
+        "Tikka masala sauce",
+        "Fresh ginger"
+      ]
+    },
+    {
+      "day": "Thursday",
+      "name": "Beef Stir-Fry with Vegetables",
+      "category": "asian",
+      "ingredients": [
+        "Flank steak",
+        "Broccoli florets",
+        "Bell peppers",
+        "Soy sauce",
+        "Sesame oil",
+        "Green onions"
+      ]
+    },
+    {
+      "day": "Friday",
+      "name": "Shrimp Tacos with Cabbage Slaw",
+      "category": "mexican",
+      "ingredients": [
+        "Large shrimp",
+        "Corn tortillas",
+        "Red cabbage",
+        "Avocado",
+        "Lime",
+        "Cilantro",
+        "Chipotle powder"
+      ]
+    },
+    {
+      "day": "Saturday",
+      "name": "Vegetable Curry with Chickpeas",
+      "category": "vegetarian",
+      "ingredients": [
+        "Chickpeas",
+        "Coconut milk",
+        "Spinach",
+        "Curry paste",
+        "Naan bread",
+        "Yellow onion"
+      ]
+    }
+  ]
+}

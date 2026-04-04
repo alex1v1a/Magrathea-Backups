@@ -1,0 +1,78 @@
+{
+  "lastUpdated": "2026-02-26T00:50:00.947Z",
+  "models": {
+    "moonshot/kimi-k2.5": {
+      "name": "Moonshot Kimi K2.5 (Primary)",
+      "dailyLimit": 100000,
+      "dailyUsed": 693,
+      "monthlyCost": 50,
+      "monthlySpent": 3.8840716370666333,
+      "accountBalance": 46.11592836293337
+    },
+    "kimi-coding/k2p5": {
+      "name": "Kimi Code K2.5 (Sub-agent)",
+      "dailyLimit": 200000,
+      "dailyUsed": 790,
+      "monthlyCost": 30,
+      "monthlySpent": 3.1074091421426204,
+      "accountBalance": 26.89259085785738
+    },
+    "openai-codex/gpt-5.2": {
+      "name": "GPT-5.2",
+      "dailyLimit": 100000,
+      "dailyUsed": 13969,
+      "monthlyCost": 50,
+      "monthlySpent": 72.86616494980544,
+      "accountBalance": -22.866164949805437
+    },
+    "anthropic/claude-opus-4-5": {
+      "name": "Claude Opus 4.5",
+      "dailyLimit": 50000,
+      "dailyUsed": 12840,
+      "monthlyCost": 75,
+      "monthlySpent": 65.58870111071799,
+      "accountBalance": 9.411298889282008
+    },
+    "openrouter/anthropic/claude-sonnet-4": {
+      "name": "Claude Sonnet 4 (OpenRouter)",
+      "dailyLimit": 80000,
+      "dailyUsed": 16511,
+      "monthlyCost": 25,
+      "monthlySpent": 62.05222700594523,
+      "accountBalance": -37.05222700594523
+    },
+    "minimax/abab6.5s-chat": {
+      "name": "MiniMax ABAB 6.5s",
+      "dailyLimit": 200000,
+      "dailyUsed": 17246,
+      "monthlyCost": 10,
+      "monthlySpent": 62.92894776262202,
+      "accountBalance": -52.92894776262202
+    },
+    "openrouter/openai/gpt-4o": {
+      "name": "OpenRouter GPT-4o",
+      "dailyLimit": 150000,
+      "dailyUsed": 14493,
+      "monthlyCost": 20,
+      "monthlySpent": 62.831312677029565,
+      "accountBalance": -42.831312677029565
+    },
+    "openrouter/google/gemini-2.0-flash-001": {
+      "name": "OpenRouter Gemini 2.0",
+      "dailyLimit": 120000,
+      "dailyUsed": 13800,
+      "monthlyCost": 15,
+      "monthlySpent": 59.18621662540655,
+      "accountBalance": -44.18621662540655
+    }
+  },
+  "teamBudget": {
+    "hourlyLimit": 2,
+    "dailyLimit": 48,
+    "weeklyLimit": 336,
+    "currentHourSpend": 0,
+    "currentDaySpend": 0,
+    "currentWeekSpend": 0
+  },
+  "notes": "Moonshot/Kimi added as primary model per alex1v1a instructions. $2/hour limit applies."
+}
