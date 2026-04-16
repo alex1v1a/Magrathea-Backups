@@ -1,0 +1,202 @@
+[
+  {
+    "name": "United CNC Machining",
+    "address": "Auburn Hills, MI",
+    "phone": "248-348-1630",
+    "email": "info@unitedcncmachining.com",
+    "website": "https://unitedcncmachining.com",
+    "services": ["5-axis CNC machining", "EDM", "Precision manufacturing", "Aerospace machining", "Defense machining"]
+  },
+  {
+    "name": "Brighton NC Machine Corporation",
+    "address": "7300 Whitmore Lake Rd, Brighton, MI 48116",
+    "phone": "810-227-6190",
+    "email": "info@brightonncmachine.com",
+    "website": "https://brightonncmachine.com",
+    "services": ["CNC Turning", "CNC Vertical Boring Mills", "Horizontal Machining", "Vertical Machining", "CNC Grinders", "Centerless Grinders", "Robotic Machining"]
+  },
+  {
+    "name": "CCI Companies",
+    "address": "49175 West Road, Wixom, Michigan 48393",
+    "phone": "248-477-4230",
+    "email": "sales@cci-companies.com",
+    "website": "https://cci-cnc.com",
+    "services": ["Swiss Machining", "5-Axis CNC", "Fixtures", "Heat Sinks", "Precision Toleranced Parts", "Refrigeration Products"]
+  },
+  {
+    "name": "AT Precision",
+    "address": "Serving Ann Arbor and Detroit, MI areas (Chicagoland based)",
+    "phone": "847-509-5848",
+    "email": "info@atprecision.com",
+    "website": "https://www.atprecision.com",
+    "services": ["CNC milling", "CNC turning", "Precision grinding", "Precision cutting", "Precision drilling", "Wire EDM", "Micromachining"]
+  },
+  {
+    "name": "Gladwin Machine",
+    "address": "Gladwin, MI and surrounding areas",
+    "phone": "989-426-9251",
+    "email": "info@gladwinmachine.com",
+    "website": "https://gladwinmachine.com",
+    "services": ["CNC turning", "CNC milling", "Manual machining", "Stainless steel TIG welding", "Heliarc welding"]
+  },
+  {
+    "name": "Michigan CNC Tool, Inc.",
+    "address": "11710 Green Oak Industrial Drive, Whitmore Lake, MI 48189",
+    "phone": "734-449-9590",
+    "email": "info@micnctool.com",
+    "website": "http://www.micnctool.com",
+    "services": ["CNC machining", "Parts manufacturing", "Assembly machining", "AS9100D certified", "ISO 9001:2015 certified"]
+  },
+  {
+    "name": "Innovative Machine Technology",
+    "address": "Northville, MI",
+    "phone": "248-348-1630",
+    "email": "info@innovativemachinetech.com",
+    "website": "https://www.innovativemachinetech.com",
+    "services": ["CNC machining", "CNC turning", "CNC milling", "Water jet cutting", "MIG fabrication", "TIG fabrication", "Metal finishing"]
+  },
+  {
+    "name": "Knight Carbide",
+    "address": "Chesterfield, MI",
+    "phone": "586-598-4888",
+    "email": "sales@knightcarbide.com",
+    "website": "https://knightcarbide.com",
+    "services": ["Precision-ground carbide inserts", "Cutting tools", "Threading tools", "Milling inserts", "Turning inserts", "Boring inserts", "Carbide form tools"]
+  },
+  {
+    "name": "J&M Machine Products, Inc.",
+    "address": "Muskegon, MI",
+    "phone": "231-755-1622",
+    "email": "info@jmmachine.com",
+    "website": "https://www.jmmachine.com",
+    "services": ["CNC machining", "Precision machining of castings", "Precision machining of forgings", "Bar stock machining", "High-volume production"]
+  },
+  {
+    "name": "Bradhart Products, Inc.",
+    "address": "Brighton, MI",
+    "phone": "248-437-8700",
+    "email": "info@bradhart.com",
+    "website": "https://bradhart.com",
+    "services": ["CNC machining", "Aerospace machining", "Medical machining", "Cage bearings", "Precision machined components"]
+  },
+  {
+    "name": "Pac CNC",
+    "address": "Grand Rapids, MI",
+    "phone": "866-498-3956",
+    "email": "info@paccnc.com",
+    "website": "https://www.paccnc.com",
+    "services": ["CNC wire EDM", "Tool and die building", "Custom part manufacturing", "Metal stampings", "Prototype tooling"]
+  },
+  {
+    "name": "ProCam Services LLC",
+    "address": "Zeeland, MI",
+    "phone": "616-748-4200",
+    "email": "info@procamservices.com",
+    "website": "https://procamservices.com",
+    "services": ["CNC milling", "CNC turning", "CNC routing", "4th and 5th axis machining", "3D machining", "Fabricating services"]
+  },
+  {
+    "name": "Advanced CNC Technology, Inc.",
+    "address": "7330 19 Mile Rd, Sterling Heights, MI 48314",
+    "phone": "586-381-2939",
+    "email": "info@advcnctech.com",
+    "website": "https://advcnctech.com",
+    "services": ["3 & 5 Axis CNC Milling", "3 & 5 Axis Trimming", "Tight tolerance precision machining", "Turning", "Lathe work", "Prototype parts"]
+  },
+  {
+    "name": "Advanced Boring & Tool Co",
+    "address": "1001 W. 13 Mile Road, Madison Heights, MI 48071",
+    "phone": "586-598-9300",
+    "email": "info@advancedboringandtool.com",
+    "website": "https://www.advancedboringandtool.com",
+    "services": ["CNC Turning", "Welding", "Fabrication", "Fixture Assembly", "Tool Assembly", "CMM Certification", "Waterjet", "Plasma Cutting"]
+  },
+  {
+    "name": "JCGibbons Manufacturing Inc",
+    "address": "35055 Glendale St, Livonia, MI 48150",
+    "phone": "800-734-8596",
+    "email": "info@jcgibbons.com",
+    "website": "http://www.jcgibbons.com",
+    "services": ["CNC Machining", "Screw Machine Products", "Precision manufacturing"]
+  },
+  {
+    "name": "Baxter Machine & Tool Co., Inc.",
+    "address": "103 N. Horton St., Jackson, MI 49202",
+    "phone": "517-782-2808",
+    "email": "sales@baxtermachine.com",
+    "website": "https://baxtermachine.com",
+    "services": ["CNC Machining", "Precision Grinding", "CNC Turning", "CNC Milling", "Centerless Grinding", "Blanchard Grinding", "Component Production"]
+  },
+  {
+    "name": "Distinctive Manufacturing Group",
+    "address": "Zeeland, MI (near Grand Rapids)",
+    "phone": "616-748-4200",
+    "email": "rfq@distinctivemfg.co",
+    "website": "https://distinctivemfg.co",
+    "services": ["CNC machining", "Metal fabrication", "Steel fabrication", "Aluminum fabrication", "Stainless steel fabrication", "Robotic CNC cell", "5-axis CNC"]
+  },
+  {
+    "name": "Proto-Tek Manufacturing, Inc",
+    "address": "Roseville, MI",
+    "phone": "586-777-9000",
+    "email": "info@proto-tek.com",
+    "website": "https://www.proto-tek.com",
+    "services": ["CNC Machining", "CNC Milling", "CNC Turning", "3D Printing", "Rapid prototyping", "ISO 9001 certified", "AS9100 certified"]
+  },
+  {
+    "name": "Kotzian Tool Inc",
+    "address": "Shelby, MI",
+    "phone": "231-861-3255",
+    "email": "info@kotziantool.com",
+    "website": "https://www.kotziantool.com",
+    "services": ["Grinding", "Precision machining", "ISO 9001 certified", "AS9100 certified"]
+  },
+  {
+    "name": "Spencer Manufacturing Co LLC",
+    "address": "Port Huron, MI",
+    "phone": "810-982-4455",
+    "email": "info@spencermfg.com",
+    "website": "https://www.spencermfg.com",
+    "services": ["Welding", "Die Casting", "Stamping", "Manufacturing", "ISO 9001:2015 certified"]
+  },
+  {
+    "name": "Campbell Grinder Co",
+    "address": "Spring Lake, MI",
+    "phone": "231-799-1600",
+    "email": "info@campbellgrinder.com",
+    "website": "https://www.campbellgrinder.com",
+    "services": ["Grinding", "Turning", "Precision machining", "ITAR certified"]
+  },
+  {
+    "name": "Precision Advanced Machining Co",
+    "address": "Clinton Township, MI",
+    "phone": "586-790-9500",
+    "email": "info@precisionadvanced.com",
+    "website": "https://www.precisionadvanced.com",
+    "services": ["CNC Machining", "EDM", "Grinding", "ISO 9001 certified", "AS9100 certified"]
+  },
+  {
+    "name": "Great Lakes Machine Products",
+    "address": "7879 E M 36, Hamburg, MI",
+    "phone": "810-231-0060",
+    "email": "info@greatlakesmachine.com",
+    "website": "http://www.greatlakesmachine.com",
+    "services": ["CNC Machining", "Precision machining", "Manufacturing"]
+  },
+  {
+    "name": "Laser Access LLC",
+    "address": "Walker, MI",
+    "phone": "616-785-0500",
+    "email": "info@laseraccess.com",
+    "website": "https://www.laseraccess.com",
+    "services": ["CNC Milling", "Welding", "Fabrication", "Laser cutting", "AS9100 certified", "ITAR certified"]
+  },
+  {
+    "name": "Jackson Tool Sales, Inc",
+    "address": "Jackson, MI",
+    "phone": "517-782-2800",
+    "email": "info@jacksontoolsales.com",
+    "website": "https://www.jacksontoolsales.com",
+    "services": ["CNC Machining", "Manual Machining", "Welding", "ISO 9001:2015 certified"]
+  }
+]

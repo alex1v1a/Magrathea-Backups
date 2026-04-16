@@ -1,0 +1,177 @@
+[
+  {
+    "name": "Allied Machining Co., Inc.",
+    "address": "Newington, CT 06111",
+    "phone": "860-666-0866",
+    "email": "info@alliedmachining.biz",
+    "website": "https://alliedmachining.biz/"
+  },
+  {
+    "name": "Accuturn Manufacturing Co., LLC",
+    "address": "100 Commerce Way, South Windsor, CT 06074",
+    "phone": "860-289-6355",
+    "email": "sales@accuturnmfg.com",
+    "website": "https://accuturnmfg.com/"
+  },
+  {
+    "name": "M&S Machine & Tool",
+    "address": "West Haven, CT 06516",
+    "phone": "203-934-0955",
+    "email": "info@mandsmachinetool.com",
+    "website": "https://www.mandsmachinetool.com/"
+  },
+  {
+    "name": "Excello Tool Engineering & Manufacturing Co., Inc.",
+    "address": "37 Warfield Street, Milford, CT 06461",
+    "phone": "203-878-4073",
+    "email": "info@ExcelloTool.com",
+    "website": "https://excellotool.com/"
+  },
+  {
+    "name": "SSI Manufacturing Technologies Corporation",
+    "address": "Bristol, CT 06010",
+    "phone": "860-589-8004",
+    "email": "info@ssimanufacturing.com",
+    "website": "https://www.ssimanufacturing.com/"
+  },
+  {
+    "name": "Preferred Tool and Die, Inc.",
+    "address": "30 Forest Parkway, Shelton, CT 06484",
+    "phone": "203-925-8525",
+    "email": "info@preferredtool.com",
+    "website": "https://www.preferredtool.com/"
+  },
+  {
+    "name": "Acceleron, Inc.",
+    "address": "East Granby, CT 06026",
+    "phone": "860-651-9333",
+    "email": "info@acceleroninc.com",
+    "website": "https://acceleroninc.com/"
+  },
+  {
+    "name": "PrecisionX Group",
+    "address": "Waterbury, CT 06708",
+    "phone": "203-574-1466",
+    "email": "info@precisionxmfg.com",
+    "website": "https://precisionxmfg.com/"
+  },
+  {
+    "name": "Creed Monarch",
+    "address": "New Britain, CT 06051",
+    "phone": "860-826-4000",
+    "email": "info@creedmonarch.com",
+    "website": "https://www.creedmonarch.com/"
+  },
+  {
+    "name": "Micro Precision, LLC",
+    "address": "South Windham, CT 06266",
+    "phone": "860-423-4575",
+    "email": "info@microprecisiongroup.com",
+    "website": "https://microprecisiongroup.com/"
+  },
+  {
+    "name": "CED Services",
+    "address": "3 Fox Hollow Road, Oxford, CT 06478",
+    "phone": "203-828-6528",
+    "email": "info@cedmachining.com",
+    "website": "https://cedmachining.com/"
+  },
+  {
+    "name": "Technical Engineering, LLC",
+    "address": "100 Chapel Rd, Manchester, CT 06042",
+    "phone": "860-645-9401",
+    "email": "Mark@tellc.net",
+    "website": "https://www.tellc.net/"
+  },
+  {
+    "name": "NE-XT Precision Machining",
+    "address": "Connecticut",
+    "phone": "",
+    "email": "info@ne-xtusa.com",
+    "website": "https://ne-xtusa.com/"
+  },
+  {
+    "name": "RAM Tool, Inc.",
+    "address": "Serving Connecticut",
+    "phone": "815-962-8700",
+    "email": "info@ramtoolinc.com",
+    "website": "https://www.ramtoolinc.com/"
+  },
+  {
+    "name": "Owens Industries, LLC",
+    "address": "Serving Connecticut",
+    "phone": "262-725-1820",
+    "email": "info@owensind.com",
+    "website": "https://www.owensind.com/"
+  },
+  {
+    "name": "Gen-El-Mec Associates, Inc.",
+    "address": "1073 State Street, Bridgeport, CT 06605",
+    "phone": "203-333-0565",
+    "email": "",
+    "website": "http://gen-el-mec.com/"
+  },
+  {
+    "name": "New England Grinding & Machining LLC",
+    "address": "30 Radel Street, Bridgeport, CT 06607",
+    "phone": "203-333-1885",
+    "email": "",
+    "website": "http://newenglandgrindingandmachining.com/"
+  },
+  {
+    "name": "Dacruz Manufacturing",
+    "address": "100 Broderick Road, Bristol, CT 06010",
+    "phone": "860-584-5315",
+    "email": "",
+    "website": "https://dacruzmfg.com/"
+  },
+  {
+    "name": "Nova Machining LLC",
+    "address": "550 Broad Street, Bristol, CT 06010",
+    "phone": "860-584-1521",
+    "email": "",
+    "website": "http://www.novamachining.com/"
+  },
+  {
+    "name": "IntriCut Machine LLC",
+    "address": "199 Upton Rd Unit #9, Colchester, CT 06415",
+    "phone": "860-605-3052",
+    "email": "",
+    "website": "https://intricut-machine-llc.business.site/"
+  },
+  {
+    "name": "Blackbird Manufacturing & Design",
+    "address": "112 Gardner Tavern Lane, Coventry, CT 06238",
+    "phone": "860-331-3477",
+    "email": "",
+    "website": "http://www.blackbirdmfg.com/"
+  },
+  {
+    "name": "Electro Tech, Inc.",
+    "address": "408 Sandbank Road, Cheshire, CT 06410",
+    "phone": "203-271-1976",
+    "email": "",
+    "website": "http://www.eti-electrotech.com/"
+  },
+  {
+    "name": "Rand Machine Company",
+    "address": "1486 Highland Ave Unit 9, Cheshire, CT 06410",
+    "phone": "203-272-1352",
+    "email": "",
+    "website": "http://www.randmachineco.com/"
+  },
+  {
+    "name": "ACMT, AdChem Mfg Technologies, Inc.",
+    "address": "369 Progress Drive, Manchester, CT 06042",
+    "phone": "860-645-0592",
+    "email": "",
+    "website": "http://www.acmt.aero/"
+  },
+  {
+    "name": "Paramount Machine Co. Inc.",
+    "address": "138 Sanrico Drive, Manchester, CT",
+    "phone": "860-643-5549",
+    "email": "",
+    "website": "http://www.paramountmachineco.com/"
+  }
+]

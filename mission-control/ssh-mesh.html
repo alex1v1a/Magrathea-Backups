@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSH Mesh - Vectarr Mission Control</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+        h1 {
+            color: #00d4ff;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        .nav {
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #1a1a1a;
+            border-radius: 8px;
+        }
+        .nav a {
+            color: #00d4ff;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 500;
+        }
+        .nav a:hover { text-decoration: underline; }
+        .mesh-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .machine-card {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .machine-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #333;
+        }
+        .machine-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-right: 15px;
+        }
+        .machine-info h2 {
+            font-size: 18px;
+            color: #fff;
+        }
+        .machine-info span {
+            font-size: 12px;
+            color: #888;
+        }
+        .connection-list {
+            margin-top: 10px;
+        }
+        .connection {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin: 5px 0;
+            background: #0a0a0a;
+            border-radius: 8px;
+        }
+        .connection-status {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 12px;
+        }
+        .status-connected { background: #00ff88; }
+        .status-pending { background: #ffaa00; }
+        .status-none { background: #444; }
+        .connection-name {
+            flex: 1;
+            font-size: 14px;
+        }
+        .connection-type {
+            font-size: 12px;
+            color: #666;
+            font-family: monospace;
+        }
+        .key-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #1a1a1a;
+            border-radius: 12px;
+        }
+        .key-section h2 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+        }
+        .key-box {
+            background: #0a0a0a;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 12px;
+            color: #888;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        .mesh-diagram {
+            margin-top: 30px;
+            padding: 20px;
+            background: #1a1a1a;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .mesh-diagram h2 {
+            color: #00d4ff;
+            margin-bottom: 20px;
+        }
+        .mesh-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .mesh-node {
+            text-align: center;
+        }
+        .node-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 10px;
+        }
+        .node-circle.hub {
+            background: linear-gradient(135deg, #00ff88, #00cc66);
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+        }
+        .node-name {
+            font-weight: 600;
+            color: #fff;
+        }
+        .node-ip {
+            font-size: 12px;
+            color: #666;
+        }
+        .mesh-line {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, #00ff88, #00d4ff);
+        }
+        .timestamp {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔐 SSH Mesh Status</h1>
+    
+    <div class="nav">
+        <a href="index.html">← Back to Dashboard</a>
+        <a href="fleet-status.html">Fleet Status</a>
+        <a href="cron-calendar.html">Cron Calendar</a>
+    </div>
+
+    <div class="mesh-diagram">
+        <h2>Mesh Topology</h2>
+        <div class="mesh-visual">
+            <div class="mesh-node">
+                <div class="node-circle hub">🧠</div>
+                <div class="node-name">Deep Thought</div>
+                <div class="node-ip">10.0.1.99</div>
+            </div>
+            <div class="mesh-line"></div>
+            <div class="mesh-node">
+                <div class="node-circle">🤖</div>
+                <div class="node-name">Marvin</div>
+                <div class="node-ip">10.0.1.90</div>
+            </div>
+            <div class="mesh-line"></div>
+            <div class="mesh-node">
+                <div class="node-circle">⚡</div>
+                <div class="node-name">Bistromath</div>
+                <div class="node-ip">Fleet Node</div>
+            </div>
+            <div class="mesh-line"></div>
+            <div class="mesh-node">
+                <div class="node-circle">👩‍💻</div>
+                <div class="node-name">Trillian</div>
+                <div class="node-ip">10.0.1.199</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mesh-grid">
+        <div class="machine-card">
+            <div class="machine-header">
+                <div class="machine-avatar">🧠</div>
+                <div class="machine-info">
+                    <h2>Deep Thought</h2>
+                    <span>10.0.1.99 | SSH Hub</span>
+                </div>
+            </div>
+            <div class="connection-list">
+                <div class="connection">
+                    <div class="connection-status status-connected"></div>
+                    <div class="connection-name">← From Trillian</div>
+                    <div class="connection-type">Inbound</div>
+                </div>
+                <div class="connection">
+                    <div class="connection-status status-connected"></div>
+                    <div class="connection-name">← From Bistromath</div>
+                    <div class="connection-type">Inbound</div>
+                </div>
+                <div class="connection">
+                    <div class="connection-status status-connected"></div>
+                    <div class="connection-name">← From Marvin</div>
+                    <div class="connection-type">Inbound</div>
+                </div>
+                <div class="connection">
+                    <div class="connection-status status-connected"></div>
+                    <div class="connection-name">→ To Marvin</div>
+                    <div class="connection-type">Outbound</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="machine-card">
+            <div class="machine-header">
+                <div class="machine-avatar">🤖</div>
+                <div class="machine-info">
+                    <h2>Marvin</h2>
+                    <span>10.0.1.90 | Bidirectional</span>
+                </div>
+            </div>
+            <div class="connection-list">
+                <div class="connection">
+                    <div class="connection-status status-connected"></div>
+                    <div class="connection-name">← From Deep Thought</div>
+                    <div class="connection-type">Inbound</div>
+                </div>
+                <div class="connection">
+                    <div class="connection-status status-connected"></div>
+                    <div class="connection-name">→ To Deep Thought</div>
+                    <div class="connection-type">Outbound</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="machine-card">
+            <div class="machine-header">
+                <div class="machine-avatar">⚡</div>
+                <div class="machine-info">
+                    <h2>Bistromath</h2>
+                    <span>Fleet Node | Bidirectional</span>
+                </div>
+            </div>
+            <div class="connection-list">
+                <div class="connection">
+                    <div class="connection-status status-connected"></div>
+                    <div class="connection-name">← From Deep Thought</div>
+                    <div class="connection-type">Inbound</div>
+                </div>
+                <div class="connection">
+                    <div class="connection-status status-connected"></div>
+                    <div class="connection-name">→ To Deep Thought</div>
+                    <div class="connection-type">Outbound</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="machine-card">
+            <div class="machine-header">
+                <div class="machine-avatar">👩‍💻</div>
+                <div class="machine-info">
+                    <h2>Trillian</h2>
+                    <span>10.0.1.199 | Outbound Only</span>
+                </div>
+            </div>
+            <div class="connection-list">
+                <div class="connection">
+                    <div class="connection-status status-connected"></div>
+                    <div class="connection-name">→ To Deep Thought</div>
+                    <div class="connection-type">Outbound</div>
+                </div>
+                <div class="connection">
+                    <div class="connection-status status-connected"></div>
+                    <div class="connection-name">→ To Marvin</div>
+                    <div class="connection-type">Outbound</div>
+                </div>
+                <div class="connection">
+                    <div class="connection-status status-connected"></div>
+                    <div class="connection-name">→ To Bistromath</div>
+                    <div class="connection-type">Outbound</div>
+                </div>
+                <div class="connection">
+                    <div class="connection-status status-none"></div>
+                    <div class="connection-name">← Inbound</div>
+                    <div class="connection-type">None (By Design)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="key-section">
+        <h2>🔑 SSH Public Keys</h2>
+        <p style="margin-bottom: 15px; color: #888;">Add these to your ~/.ssh/authorized_keys:</p>
+        
+        <strong style="color: #00d4ff;">Deep Thought</strong>
+        <div class="key-box">ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJmzDQRI3vYC/4RrxaLTh3t0bNyKY3pKKo255BsgjXAh deepthought</div>
+        
+        <strong style="color: #00d4ff;">Trillian</strong>
+        <div class="key-box">ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFPkifL8ALNLgDX0YOlpKUOObs1nixoxiJp7maNZFKCC trillian@mac</div>
+        
+        <strong style="color: #00d4ff;">Bistromath</strong>
+        <div class="key-box">ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMcZjxr6SKbY0eTmRimvAEETBFkHpBlXWMNKe5SO8f/i bistromath@fleet</div>
+        
+        <strong style="color: #00d4ff;">Marvin</strong>
+        <div class="key-box">ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM7o8UX7gQK7YicuzdRNBOVmhOSE47OsKjTopc0LAhfH marvin@mesh</div>
+    </div>
+
+    <div class="timestamp">
+        Last Updated: 2026-04-11 22:20 CDT | Deep Thought Mission Control
+    </div>
+</body>
+</html>

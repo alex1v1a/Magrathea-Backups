@@ -1,0 +1,227 @@
+[
+  {
+    "business_name": "B & W Machine & Tool Co",
+    "address": "2815 Avalon Ave, Muscle Shoals, AL 35661",
+    "phone": "256-383-2942",
+    "fax": "256-383-2945",
+    "email": "",
+    "website": "https://bwmachine.com/",
+    "services": "CNC milling, turning, 5-axis machining, 3-D printing, light metal fabrication"
+  },
+  {
+    "business_name": "Decker Machine Co",
+    "address": "Columbiana, AL 35051",
+    "phone": "205-855-3035",
+    "fax": "",
+    "email": "",
+    "website": "https://deckermachineco.com/",
+    "services": "Custom CNC machining, tool and die fabrication, waterjet cutting"
+  },
+  {
+    "business_name": "Tanksley Machine & Tool, Inc.",
+    "address": "1407 Southfield Drive, S.E., Decatur, AL 35602",
+    "phone": "256-350-2276",
+    "fax": "256-350-2425",
+    "email": "info@tanksleymachine.com",
+    "website": "https://www.tanksleymachine.com/",
+    "services": "CNC machining, precision machining, ISO and AS9100 certified"
+  },
+  {
+    "business_name": "Wilson Machine & Welding, Inc.",
+    "address": "4787 Hwy 78, Cordova, AL 35550 (also Decatur and Hillsboro locations)",
+    "phone": "205-648-3203",
+    "fax": "",
+    "email": "jobs@wilsonmachine.net",
+    "website": "https://wilsonmachine.net/",
+    "services": "CNC machining, NC machining, manual machining, custom gear cutting, metal fabrication"
+  },
+  {
+    "business_name": "Whistler Machine Works, Inc.",
+    "address": "3036 Turner Road, Mobile, AL 36612",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "website": "https://www.whistlermachine.com/",
+    "services": "Machining, fabrication, repair services, welding, grinding"
+  },
+  {
+    "business_name": "Jeffrey Machine, Inc.",
+    "address": "3841 Industrial Drive, Birmingham, AL 35217",
+    "phone": "205-841-8600",
+    "fax": "205-841-2009",
+    "email": "",
+    "website": "https://www.jeffreymachine.com/",
+    "services": "Auger tooling, CNC machining, fabrication, welding"
+  },
+  {
+    "business_name": "Moses Precision LLC",
+    "address": "Arab and Albertville, AL",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "website": "https://www.mosesprecisionllc.com/",
+    "services": "CNC machining, turning, welding, fabrication, repair and rebuild"
+  },
+  {
+    "business_name": "Amtec Solutions Group",
+    "address": "Huntsville, AL",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "website": "https://www.amtecsolutionsgroup.com/",
+    "services": "CNC machining, robotics, automation, AS9100 certified"
+  },
+  {
+    "business_name": "Brown Precision, Inc.",
+    "address": "90 Shields Rd, Huntsville, AL 35811",
+    "phone": "256-746-0533",
+    "fax": "256-746-0511",
+    "email": "",
+    "website": "https://brownprecisioninc.com/",
+    "services": "CNC milling, 5-axis machining, composite machining, waterjet machining, AS9100D certified"
+  },
+  {
+    "business_name": "Alabama Specialty Products, Inc.",
+    "address": "152 Metal Samples Road, Munford, AL 36268",
+    "phone": "256-358-4202",
+    "fax": "",
+    "email": "",
+    "website": "https://alspi.com/",
+    "services": "Precision machining, metal finishing"
+  },
+  {
+    "business_name": "NTA, Inc.",
+    "address": "2001 Nichols Drive SW, Suite 200, Huntsville, AL 35802 (Machining: 171 Nick Fitcheard Rd, Huntsville, AL 35806)",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "website": "https://www.nta-inc.net/",
+    "services": "Mechanical design, precision machining, CNC machining"
+  },
+  {
+    "business_name": "Enterprise Machine Shop",
+    "address": "203 W Watts St, Enterprise, AL 36330",
+    "phone": "334-347-6323",
+    "fax": "",
+    "email": "",
+    "website": "",
+    "services": "General machine shop, welding, fabrication"
+  },
+  {
+    "business_name": "Turner Machine Inc.",
+    "address": "130 Durham Drive, Athens, AL 35611",
+    "phone": "256-233-1940",
+    "fax": "256-233-1961",
+    "email": "",
+    "website": "http://www.turnermachine.com/",
+    "services": "CNC machining, precision machining"
+  },
+  {
+    "business_name": "Dixie Precision Inc.",
+    "address": "4137 Lewisburg Road, Birmingham, AL 35207",
+    "phone": "205-841-8400",
+    "fax": "205-841-3004",
+    "email": "",
+    "website": "http://www.dixieprecision.com/",
+    "services": "Precision machining, CNC machining"
+  },
+  {
+    "business_name": "Jordan Machine Company",
+    "address": "355 Clow Lane, Birmingham, AL 35217",
+    "phone": "205-849-5050",
+    "fax": "205-849-5075",
+    "email": "",
+    "website": "http://www.jordanmachine.com",
+    "services": "Precision machining, CNC machining"
+  },
+  {
+    "business_name": "Smith's Machine",
+    "address": "14120 Hwy 11 North, Cottondale, AL 35453",
+    "phone": "205-553-7623",
+    "fax": "205-553-9770",
+    "email": "",
+    "website": "http://www.smithsmachine.com/",
+    "services": "CNC machining, precision machining"
+  },
+  {
+    "business_name": "S & B Machine",
+    "address": "820 Blackburn Drive, Mobile, AL 36608",
+    "phone": "251-633-4443",
+    "fax": "251-633-4454",
+    "email": "",
+    "website": "http://www.sandbmachine.com/",
+    "services": "CNC machining, precision machining"
+  },
+  {
+    "business_name": "Carmin Industries",
+    "address": "1350 Francis Street West, Jacksonville, AL 36265",
+    "phone": "256-435-8626",
+    "fax": "256-435-2604",
+    "email": "",
+    "website": "http://www.carminservices.com/",
+    "services": "Machining, fabrication"
+  },
+  {
+    "business_name": "Avans Machine & Tool Precision",
+    "address": "25490 Al Highway 79, Scottsboro, AL 35768",
+    "phone": "205-587-6071",
+    "fax": "",
+    "email": "",
+    "website": "http://www.avansmac.com/",
+    "services": "Precision machining, CNC machining"
+  },
+  {
+    "business_name": "Babb and Son Machine Shop (B&S)",
+    "address": "8095 Falcon Blvd, Fairhope, AL 36532",
+    "phone": "251-928-5291",
+    "fax": "251-928-5302",
+    "email": "",
+    "website": "http://www.bsmachineshop.com/",
+    "services": "Machine shop, CNC machining"
+  },
+  {
+    "business_name": "R & M Machine Shop, Inc.",
+    "address": "38336 AL Hwy. 75, Fyffe, AL 35971",
+    "phone": "256-659-2321",
+    "fax": "",
+    "email": "",
+    "website": "http://www.r-and-m.biz/home.html",
+    "services": "CNC machining, precision machining, WOSB certified"
+  },
+  {
+    "business_name": "Numeric Machine, Inc.",
+    "address": "4612 Main Street, Adamsville, AL 35005",
+    "phone": "205-674-6302",
+    "fax": "",
+    "email": "",
+    "website": "",
+    "services": "CNC machining, precision machining"
+  },
+  {
+    "business_name": "Marshall Machine Company",
+    "address": "1203 Horton Road, Albertville, AL 35950",
+    "phone": "205-878-6172",
+    "fax": "",
+    "email": "",
+    "website": "",
+    "services": "Machine shop, CNC machining"
+  },
+  {
+    "business_name": "Prestridge Machine, Inc.",
+    "address": "4605 Main Street, Adamsville, AL 35005",
+    "phone": "205-674-7278",
+    "fax": "",
+    "email": "",
+    "website": "",
+    "services": "CNC machining, precision machining"
+  },
+  {
+    "business_name": "Wingfield Engineering Co., Inc.",
+    "address": "110 Academy Circle, Goodwater, AL 35072",
+    "phone": "800-479-6906",
+    "fax": "256-839-6390",
+    "email": "",
+    "website": "http://www.wingfield.net/",
+    "services": "CNC machining, precision machining"
+  }
+]

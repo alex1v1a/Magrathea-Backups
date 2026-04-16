@@ -1,0 +1,18 @@
+# Team SSH Keys - Fleet Mesh
+# Updated: 2026-04-11
+
+## Deep Thought
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJmzDQRI3vYC/4RrxaLTh3t0bNyKY3pKKo255BsgjXAh deepthought
+
+## Trillian
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFPkifL8ALNLgDX0YOlpKUOObs1nixoxiJp7maNZFKCC trillian@mac
+
+## Bistromath
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMcZjxr6SKbY0eTmRimvAEETBFkHpBlXWMNKe5SO8f/i bistromath@fleet
+
+## Marvin
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM7o8UX7gQK7YicuzdRNBOVmhOSE47OsKjTopc0LAhfH marvin@mesh
+
+## Notes
+- Trillian connects OUT to others (no incoming SSH server)
+- Mesh is outbound-only from Trillian's perspective

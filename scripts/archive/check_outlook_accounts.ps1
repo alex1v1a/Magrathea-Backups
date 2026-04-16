@@ -1,0 +1,1 @@
+$o=New-Object -ComObject Outlook.Application;Write-Host "Configured Outlook Accounts:";$o.Session.Accounts|ForEach-Object{Write-Host "  - $($_.SmtpAddress)"};[System.Runtime.Interopservices.Marshal]::ReleaseComObject($o)|Out-Null

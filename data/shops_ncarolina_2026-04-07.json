@@ -1,0 +1,290 @@
+[
+  {
+    "business_name": "Advanced Machining LLC",
+    "address": {
+      "street": "215 N Main St",
+      "city": "Salisbury",
+      "state": "NC",
+      "zip": "28144"
+    },
+    "phone": "704-633-0990",
+    "website": "https://advancedmachiningcnc.com/",
+    "email": null
+  },
+  {
+    "business_name": "Wilson Machine & Tool, Inc.",
+    "address": {
+      "street": "306 Womack Rd",
+      "city": "Sanford",
+      "state": "NC",
+      "zip": "27330"
+    },
+    "phone": "919-775-3588",
+    "website": "https://wmtusa.com/",
+    "email": null
+  },
+  {
+    "business_name": "P&S Machining and Fabrication",
+    "address": {
+      "street": "1131 W Bodenhamer St",
+      "city": "Kernersville",
+      "state": "NC",
+      "zip": "27284"
+    },
+    "phone": "336-227-0151",
+    "website": "https://psmachine.com/",
+    "email": null
+  },
+  {
+    "business_name": "Johnson CNC LLC",
+    "address": {
+      "street": "133 S Main St",
+      "city": "Star",
+      "state": "NC",
+      "zip": "27356"
+    },
+    "phone": "910-428-1245",
+    "website": "https://www.johnsoncnc.com/",
+    "email": "ryanj@johnsoncnc.com"
+  },
+  {
+    "business_name": "Accu-Tool, LLC",
+    "address": {
+      "street": "1216 Laura Village Dr",
+      "city": "Apex",
+      "state": "NC",
+      "zip": "27523"
+    },
+    "phone": "919-363-2600",
+    "website": "https://accutool.net/",
+    "email": "greg@accutool.net"
+  },
+  {
+    "business_name": "Protodyne Manufacturing",
+    "address": {
+      "street": "4365 Triple Crown Dr SW Suite A",
+      "city": "Concord",
+      "state": "NC",
+      "zip": "28027"
+    },
+    "phone": "217-474-5861",
+    "website": "https://protodynemfg.com/",
+    "email": "khill@proto-dyne.com"
+  },
+  {
+    "business_name": "Distinctive Manufacturing Group",
+    "address": {
+      "street": "6990 Denver Industrial Park Rd",
+      "city": "Denver",
+      "state": "NC",
+      "zip": "28037"
+    },
+    "phone": "980-477-3478",
+    "website": "https://distinctivemfg.co/",
+    "email": "rfq@distinctivemfg.co"
+  },
+  {
+    "business_name": "Quality Products",
+    "address": {
+      "street": "4600 Westinghouse Blvd",
+      "city": "Charlotte",
+      "state": "NC",
+      "zip": "28273"
+    },
+    "phone": "704-504-3330",
+    "website": "https://www.qprod.com/",
+    "email": "info@qprod.com"
+  },
+  {
+    "business_name": "Nabell USA Corporation",
+    "address": {
+      "street": "208 Charter St",
+      "city": "Albemarle",
+      "state": "NC",
+      "zip": "28001"
+    },
+    "phone": "704-986-2455",
+    "website": "https://nabell.com/",
+    "email": "sales@nabell.com"
+  },
+  {
+    "business_name": "CMS Tool & Die, Inc.",
+    "address": {
+      "street": "1331 Bridge Barrier Rd",
+      "city": "Carolina Beach",
+      "state": "NC",
+      "zip": "28428"
+    },
+    "phone": "910-458-3322",
+    "website": "http://www.cmsmachineshop.com",
+    "email": null
+  },
+  {
+    "business_name": "SPM Machine Works, Inc.",
+    "address": {
+      "street": "4340 US-13",
+      "city": "Greenville",
+      "state": "NC",
+      "zip": "27834"
+    },
+    "phone": "252-758-4717",
+    "website": "http://www.spmmachineworks.com/",
+    "email": null
+  },
+  {
+    "business_name": "United Machine Works, Inc.",
+    "address": {
+      "street": "1716 NC HWY 903",
+      "city": "Greenville",
+      "state": "NC",
+      "zip": "27834"
+    },
+    "phone": "252-752-7434",
+    "website": "https://www.unitedmachineworksnc.com/",
+    "email": "info@umwgreenville.net"
+  },
+  {
+    "business_name": "Winterville Machine Works",
+    "address": {
+      "street": "2657 Highway 11",
+      "city": "Winterville",
+      "state": "NC",
+      "zip": "28590"
+    },
+    "phone": "252-756-3101",
+    "website": "https://www.wmwworks.com/",
+    "email": null
+  },
+  {
+    "business_name": "Ketchie Inc.",
+    "address": {
+      "street": "201 Winecoff School Rd",
+      "city": "Concord",
+      "state": "NC",
+      "zip": "28027"
+    },
+    "phone": "704-786-5101",
+    "website": "https://www.ketchiemeansquality.com/",
+    "email": "sales@ketchieinc.com"
+  },
+  {
+    "business_name": "Piedmont Machine & Mfg, Inc.",
+    "address": {
+      "street": "11 Hexcel Dr",
+      "city": "Concord",
+      "state": "NC",
+      "zip": "28027"
+    },
+    "phone": "704-788-7701",
+    "website": "https://www.piedmontmachine.com/",
+    "email": null
+  },
+  {
+    "business_name": "Mac Fab Company",
+    "address": {
+      "street": "913 W Catawba Ave",
+      "city": "Mount Holly",
+      "state": "NC",
+      "zip": "28120"
+    },
+    "phone": "704-822-1103",
+    "website": "https://macfab.net/",
+    "email": "Sales@MacFab.net"
+  },
+  {
+    "business_name": "Hastreiter Industries",
+    "address": {
+      "street": "400 W Veterans St",
+      "city": "Marshfield",
+      "state": "WI",
+      "zip": "54449"
+    },
+    "phone": "715-387-1114",
+    "website": "https://hastreiter.industries/",
+    "email": null
+  },
+  {
+    "business_name": "Owens Industries, Inc.",
+    "address": {
+      "street": "1338 E Botts Ave",
+      "city": "Oak Creek",
+      "state": "WI",
+      "zip": "53154"
+    },
+    "phone": "262-654-2410",
+    "website": "https://www.owensind.com/",
+    "email": null
+  },
+  {
+    "business_name": "RAM Tool, Inc.",
+    "address": {
+      "street": "1420 Cheyenne Ave",
+      "city": "Grafton",
+      "state": "WI",
+      "zip": "53024"
+    },
+    "phone": "262-375-3036",
+    "website": "https://www.ramtoolinc.com/",
+    "email": null
+  },
+  {
+    "business_name": "Roberson Machine Company",
+    "address": {
+      "street": "1391 E Boone Industrial Blvd",
+      "city": "Columbia",
+      "state": "MO",
+      "zip": "65202"
+    },
+    "phone": "573-646-3996",
+    "website": "https://robersontool.com/",
+    "email": null
+  },
+  {
+    "business_name": "RC-CNC Machine",
+    "address": {
+      "street": "3200 Spottswood St",
+      "city": "Raleigh",
+      "state": "NC",
+      "zip": "27615"
+    },
+    "phone": "919-877-0222",
+    "website": "https://rc-cncmachine.com/",
+    "email": null
+  },
+  {
+    "business_name": "SEI Technologies",
+    "address": {
+      "street": "2730 Zion Church Rd",
+      "city": "Concord",
+      "state": "NC",
+      "zip": "28025"
+    },
+    "phone": "704-455-5005",
+    "website": "https://seitechnologies.com/",
+    "email": null
+  },
+  {
+    "business_name": "Faircloth Machine Shop, Inc.",
+    "address": {
+      "street": "220 W Meadowview Rd",
+      "city": "Greensboro",
+      "state": "NC",
+      "zip": "27406"
+    },
+    "phone": "336-272-7235",
+    "website": "https://www.fairclothmachineshop.com/",
+    "email": null
+  },
+  {
+    "business_name": "Blanda, Inc.",
+    "address": {
+      "street": "11615 Dolomite Dr",
+      "city": "Raleigh",
+      "state": "NC",
+      "zip": "27617"
+    },
+    "phone": "919-876-2200",
+    "website": "https://blanda.net/",
+    "email": null
+  }
+]

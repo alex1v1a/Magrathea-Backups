@@ -1,0 +1,225 @@
+[
+  {
+    "shop_name": "Tri-Tec Industries",
+    "location": "Charlotte, NC",
+    "email": "info@tritecindustries.com",
+    "website": "https://tritecindustries.com/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Sentinel Machining",
+    "location": "Austin, TX",
+    "email": "contact@sentinelmachining.com",
+    "website": "https://sentinelmachining.com/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "CNC Precision Machines International LLC",
+    "location": "El Paso, TX",
+    "email": "info@cncpmsales.com",
+    "website": "https://www.cncprecision.com/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Plastifab Inc",
+    "location": "Phoenix, AZ",
+    "email": "create@plastifab.net",
+    "website": "https://plastifab.net/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Sierra Peaks",
+    "location": "Albuquerque, NM",
+    "email": "machining@sierra-peaks.com",
+    "website": "https://www.sierra-peaks.com/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Cobb Tool, Inc.",
+    "location": "Mableton, GA",
+    "email": "info@cobbtool.com",
+    "website": "https://cobbtool.com/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Automated Machine Works LLC",
+    "location": "Nashville, TN",
+    "email": "amworks.mike@gmail.com",
+    "website": "https://amachineworks.com/",
+    "contact_person": "Mike"
+  },
+  {
+    "shop_name": "ZYCI",
+    "location": "Chamblee/Atlanta, GA",
+    "email": "quotes@zyci.com",
+    "website": "https://www.zyci.com/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Hastreiter Industries",
+    "location": "Marshfield, WI",
+    "email": "Sales@HastreiterIndustries.com",
+    "website": "https://hastreiter.industries/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "BDE Manufacturing Technologies",
+    "location": "Beaverton/Portland, OR",
+    "email": "info@bdeinc.com",
+    "website": "https://www.bdeinc.com/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Distinctive MFG Co",
+    "location": "Nashville, TN",
+    "email": "rfq@distinctivemfg.co",
+    "website": "https://distinctivemfg.co/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Automated Machine Technologies, Inc.",
+    "location": "Orchard Park/Buffalo, NY",
+    "email": "sales@amtny.com",
+    "website": "https://www.amtny.com/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Aero Mechanism Precision, Inc.",
+    "location": "Chatsworth/Los Angeles, CA",
+    "email": "aeromech@aeromechanism.com",
+    "website": "https://www.aeromechanism.com/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Coweta Tech Precision",
+    "location": "Newnan/Atlanta, GA",
+    "email": null,
+    "website": "https://cowetatechprecision.com/",
+    "contact_person": null,
+    "phone": "770-251-2441"
+  },
+  {
+    "shop_name": "LT CNC Machining Inc.",
+    "location": "San Diego, CA",
+    "email": "liem@ltmachininginc.com",
+    "website": "https://www.ltmachininginc.com/",
+    "contact_person": "Liem"
+  },
+  {
+    "shop_name": "G.V. Industries",
+    "location": "National City/San Diego, CA",
+    "email": "email@gvindustries.biz",
+    "website": "https://gvindustries.biz/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Accurate Machine",
+    "location": "San Diego, CA",
+    "email": "brian@accuratemachinesd.com",
+    "website": "https://www.accuratemachinesd.com/",
+    "contact_person": "Brian"
+  },
+  {
+    "shop_name": "Darmark Corporation",
+    "location": "Poway/San Diego, CA",
+    "email": null,
+    "website": "https://darmark.com/",
+    "contact_person": null,
+    "phone": null
+  },
+  {
+    "shop_name": "Prototek Digital Manufacturing",
+    "location": "Blue Mounds/Madison, WI",
+    "email": "sgrundahl@prototek.com",
+    "website": "https://prototek.com/madison-wisconsin/",
+    "contact_person": "Steve Grundahl"
+  },
+  {
+    "shop_name": "American Precision Industries (API)",
+    "location": "Hillsboro/Portland, OR",
+    "email": null,
+    "website": "https://americanprecisionindustries.com/",
+    "contact_person": null,
+    "phone": "503-642-5611"
+  },
+  {
+    "shop_name": "Portland Precision Manufacturing",
+    "location": "Portland, OR",
+    "email": null,
+    "website": "https://www.ppmfg.com/",
+    "contact_person": null,
+    "phone": "503-253-6700"
+  },
+  {
+    "shop_name": "Mahuta Tool Corporation",
+    "location": "Germantown/Milwaukee, WI",
+    "email": null,
+    "website": "https://www.mahutatool.com/",
+    "contact_person": null,
+    "phone": "262-502-4100"
+  },
+  {
+    "shop_name": "Mat-Tech Inc.",
+    "location": "Milwaukee, WI",
+    "email": null,
+    "website": "https://www.mattechmachining.com/",
+    "contact_person": null,
+    "phone": "414-963-9889"
+  },
+  {
+    "shop_name": "GrovTec Machining",
+    "location": "Portland, OR",
+    "email": null,
+    "website": "https://grovtecmachining.com/",
+    "contact_person": null,
+    "phone": null
+  },
+  {
+    "shop_name": "Tucson CNC Machining Inc.",
+    "location": "Tucson, AZ",
+    "email": null,
+    "website": "https://tucsoncnc.com/",
+    "contact_person": null,
+    "phone": "520-305-4915"
+  },
+  {
+    "shop_name": "Hand Precision Machining Inc.",
+    "location": "Los Alamos/Albuquerque, NM",
+    "email": null,
+    "website": "https://machineshopnm.com/",
+    "contact_person": null,
+    "phone": null
+  },
+  {
+    "shop_name": "Tennessee Tool Works LLC",
+    "location": "Murfreesboro/Nashville, TN",
+    "email": null,
+    "website": "https://tntoolworks.com/",
+    "contact_person": null,
+    "phone": null
+  },
+  {
+    "shop_name": "John Bouchard & Sons Co.",
+    "location": "Nashville, TN",
+    "email": null,
+    "website": "https://jbouchard.com/",
+    "contact_person": null,
+    "phone": "615-256-0112"
+  },
+  {
+    "shop_name": "Price Manufacturing",
+    "location": "Corona/Los Angeles, CA",
+    "email": null,
+    "website": "https://www.pricemfg.com/",
+    "contact_person": null,
+    "phone": "951-371-5660"
+  },
+  {
+    "shop_name": "LA CNC Machine Shop",
+    "location": "Glendale/Los Angeles, CA",
+    "email": null,
+    "website": "https://lacncmachineshop.com/",
+    "contact_person": null,
+    "phone": "818-562-9676"
+  }
+]

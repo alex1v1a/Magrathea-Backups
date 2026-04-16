@@ -1,0 +1,67 @@
+[
+  {
+    "shop_name": "Atomic Machine",
+    "city": "Naples",
+    "state": "FL",
+    "email": "info@atomicmachine.com",
+    "phone": "(239) 353-9100",
+    "website": "https://www.atomicmachine.com",
+    "capabilities": "CNC milling, Swiss, lathes, wire EDM, aerospace, medical, defense, power & energy",
+    "contact_name": "info",
+    "certifications": "ISO 9001:2015, ISO 13485:2016, AS9100D",
+    "date_discovered": "2026-04-01",
+    "source": "web_search"
+  },
+  {
+    "shop_name": "Hubbell Machine Tooling Inc",
+    "city": "Cleveland",
+    "state": "OH",
+    "email": "sales@hubbellmachine.com",
+    "phone": "(216) 524-1797",
+    "website": "https://www.hubbellmachine.com",
+    "capabilities": "Custom manufacturing, precision CNC turning & milling, wire & ram EDM, reverse engineering, inspection",
+    "contact_name": "Vince Petek",
+    "certifications": "",
+    "date_discovered": "2026-04-01",
+    "source": "web_search"
+  },
+  {
+    "shop_name": "Titan Metal Products LLC",
+    "city": "Plain City",
+    "state": "OH",
+    "email": "info@titan-metalproducts.com",
+    "phone": "(614) 504-7000",
+    "website": "https://titanmetalproductsllc.com",
+    "capabilities": "CNC milling, CNC turning, prototype to production, automotive, specialty tool, government, food industry, medical industry",
+    "contact_name": "info",
+    "certifications": "",
+    "date_discovered": "2026-04-01",
+    "source": "web_search"
+  },
+  {
+    "shop_name": "CRI Machining",
+    "city": "Blairsville",
+    "state": "GA",
+    "email": "sales@crimachining.com",
+    "phone": "706.745.9599",
+    "website": "https://crimachining.com",
+    "capabilities": "CNC machining, fabrication, heat treat, 5-Axis milling and turning, waterjet, laser cutting, EDM",
+    "contact_name": "sales",
+    "certifications": "ISO 9001-2008",
+    "date_discovered": "2026-04-01",
+    "source": "web_search"
+  },
+  {
+    "shop_name": "Pinnacle Tool & Engineering Inc",
+    "city": "Cleveland",
+    "state": "OH",
+    "email": "cookracing@ameritech.net",
+    "phone": "(216) 252-1868",
+    "website": "https://www.pinnacletooleng.com",
+    "capabilities": "3-D machining, job shop machining, private label manufacturing, CNC milling, CNC turning, tooling",
+    "contact_name": "",
+    "certifications": "",
+    "date_discovered": "2026-04-01",
+    "source": "web_search"
+  }
+]

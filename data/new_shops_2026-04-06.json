@@ -1,0 +1,177 @@
+[
+  {
+    "shop_name": "BDE Manufacturing Technologies",
+    "location": "Beaverton, Oregon",
+    "email": "info@bdeinc.com",
+    "website": "https://www.bdeinc.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Hand Precision Machining, Inc.",
+    "location": "Los Alamos, New Mexico",
+    "email": "hand@handprecision.com",
+    "website": "https://machineshopnm.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Distinctive MFG Co",
+    "location": "Miami, Florida",
+    "email": "rfq@distinctivemfg.co",
+    "website": "https://distinctivemfg.co",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Catamount Machine Works",
+    "location": "Plant City, Florida",
+    "email": "info@catmw.com",
+    "website": "https://catmw.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Cobb Tool, Inc.",
+    "location": "Mableton, Georgia",
+    "email": "info@cobbtool.com",
+    "website": "https://cobbtool.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Tri-Tec Industries",
+    "location": "Charlotte, North Carolina",
+    "email": "info@tritecindustries.com",
+    "website": "https://tritecindustries.com",
+    "contact_person": "Rick Loyd"
+  },
+  {
+    "shop_name": "CNC Performance Engineering (CNCPE)",
+    "location": "Charlotte, North Carolina",
+    "email": "contact@cncpe.com",
+    "website": "https://www.cncpe.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Berg Tool, Inc.",
+    "location": "Chesterfield, Michigan",
+    "email": "quotes@bergtool.com",
+    "website": "https://bergtool.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Titan Metal Products, LLC",
+    "location": "Plain City, Ohio",
+    "email": "info@titan-metalproducts.com",
+    "website": "https://titanmetalproductsllc.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Bain Machine",
+    "location": "Warrensville Heights, Ohio",
+    "email": "info@bainmachine.com",
+    "website": "https://bainmachine.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Brooklyn Machine & Mfg., Inc.",
+    "location": "Cleveland, Ohio",
+    "email": "sales@brooklynmachinemfg.com",
+    "website": "https://www.brooklynmachinemfg.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "GMP CNC Machining",
+    "location": "Cleveland, Ohio",
+    "email": "info@gmpcnc.com",
+    "website": "https://gmpcnc.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Pinnacle Tool Engineering",
+    "location": "Woodmere (Cleveland), Ohio",
+    "email": "cookracing@ameritech.net",
+    "website": "https://www.pinnacletooleng.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "CCI CNC",
+    "location": "Wixom, Michigan",
+    "email": "sales@cci-companies.com",
+    "website": "https://cci-cnc.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "American Precision Tool Inc.",
+    "location": "Pacoima, California",
+    "email": "info@ameriprectool.com",
+    "website": "https://www.ameriprectool.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Portland Precision Manufacturing",
+    "location": "Portland, Oregon",
+    "email": null,
+    "website": "https://www.ppmfg.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "American Precision Industries (API)",
+    "location": "Hillsboro, Oregon",
+    "email": null,
+    "website": "https://americanprecisionindustries.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "RS Machine Inc",
+    "location": "Vancouver, Washington",
+    "email": null,
+    "website": "https://rsmachineinc.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Bogue Machine Co.",
+    "location": "Albuquerque, New Mexico",
+    "email": null,
+    "website": "https://boguemachine.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "CNC PROS",
+    "location": "Phoenix, Arizona",
+    "email": null,
+    "website": "https://cnc-pros.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Plastifab Inc",
+    "location": "Phoenix, Arizona",
+    "email": "create@plastifab.net",
+    "website": "https://plastifab.net",
+    "contact_person": null
+  },
+  {
+    "shop_name": "ZYCI",
+    "location": "Chamblee, Georgia",
+    "email": null,
+    "website": "https://www.zyci.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Coweta Tech Precision",
+    "location": "Newnan, Georgia",
+    "email": null,
+    "website": "https://cowetatechprecision.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "JW Machine",
+    "location": "Orlando, Florida",
+    "email": null,
+    "website": "https://jwmachinecorp.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "GrovTec Machining",
+    "location": "Portland, Oregon",
+    "email": null,
+    "website": "https://grovtecmachining.com",
+    "contact_person": null
+  }
+]

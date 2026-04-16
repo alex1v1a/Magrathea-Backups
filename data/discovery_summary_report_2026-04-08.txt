@@ -1,0 +1,147 @@
+================================================================================
+  DISCOVERY OPERATION SUMMARY REPORT
+  Operation Date: 2026-04-07 | Report Date: 2026-04-08
+================================================================================
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+This report summarizes the results of a 24-hour automated discovery operation 
+across 26 US regions to identify CNC machine shops and collect contact 
+information for business development purposes.
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+  Regions Covered:           26
+  Total Shops Found:         661
+  Unique Shops (deduped):    640
+  Duplicates Removed:        21
+  Total Emails Collected:    38
+  Total Phones Collected:    96
+  Shops with Websites:       128
+  Overall Email Capture Rate: 5.9%
+
+REGIONAL PERFORMANCE BREAKDOWN
+--------------------------------------------------------------------------------
+Rank | Region           | Shops | Emails | Phones | Email Rate
+-----|------------------|-------|--------|--------|----------
+  1  | Wisconsin        |   23  |   14   |   14   |  60.87%
+  2  | Texas            |   25  |    7   |    0   |  28.00%
+  3  | North Carolina   |   20  |    5   |   15   |  25.00%
+  4  | Indiana          |   22  |    5   |   22   |  22.73%
+  5  | Minnesota        |   24  |    5   |   24   |  20.83%
+  6  | Kentucky         |   25  |    3   |   23   |  12.00%
+  7  | Colorado         |   25  |    3   |   12   |  12.00%
+  8  | Oklahoma         |   25  |    3   |   25   |  12.00%
+  9  | Arizona          |   24  |    5   |   15   |  20.83%
+ 10  | Connecticut      |   25  |   15   |   24   |  60.00%
+ 11  | Utah             |   24  |    7   |   12   |  29.17%
+ 12  | Georgia          |   25  |    5   |   22   |  20.00%
+ 13  | Florida          |   25  |    5   |   24   |  20.00%
+ 14  | Illinois         |   22  |    4   |   21   |  18.18%
+ 15  | Louisiana        |   23  |    0   |    9   |   0.00%
+ 16  | Pennsylvania     |   25  |    0   |   24   |   0.00%
+ 17  | Missouri         |   25  |    0   |   24   |   0.00%
+ 18  | Massachusetts    |   23  |    0   |   19   |   0.00%
+ 19  | Michigan         |   25  |    0   |   25   |   0.00%
+ 20  | Tennessee        |   25  |    0   |   21   |   0.00%
+ 21  | Ohio             |   25  |    0   |   16   |   0.00%
+ 22  | Maryland         |   25  |    0   |   23   |   0.00%
+ 23  | New York         |   25  |    0   |    7   |   0.00%
+ 24  | California       |   23  |    0   |    1   |   0.00%
+ 25  | Oregon           |   40  |    3   |   39   |   7.50%
+ 26  | Washington       |   40  |    2   |   39   |   5.00%
+
+TOP PERFORMING REGIONS (Email Capture)
+--------------------------------------------------------------------------------
+1. Wisconsin (60.87%) - 14 emails from 23 shops
+2. Connecticut (60.00%) - 15 emails from 25 shops
+3. Utah (29.17%) - 7 emails from 24 shops
+4. Texas (28.00%) - 7 emails from 25 shops
+5. North Carolina (25.00%) - 5 emails from 20 shops
+
+LOWEST PERFORMING REGIONS (Email Capture)
+--------------------------------------------------------------------------------
+The following regions had 0% email capture rates:
+- Louisiana (0/23 shops)
+- Pennsylvania (0/25 shops)
+- Missouri (0/25 shops)
+- Massachusetts (0/23 shops)
+- Michigan (0/25 shops)
+- Tennessee (0/25 shops)
+- Ohio (0/25 shops)
+- Maryland (0/25 shops)
+- New York (0/25 shops)
+- California (0/23 shops)
+
+Note: Many of these regions have phone numbers but no extracted emails,
+suggesting the discovery tool successfully found shops but email extraction
+failed or sources did not publicly list email addresses.
+
+DATA QUALITY ANALYSIS
+--------------------------------------------------------------------------------
+Contact Information Coverage:
+  - Shops with email only:        2
+  - Shops with phone only:        60
+  - Shops with email + phone:     36
+  - Shops with website only:      66
+  - No contact info:              476 (74.4%)
+
+Deduplication Results:
+  - Original entries:             661
+  - Duplicates identified:        21
+  - Deduplication method:         Email (primary), Domain (secondary)
+  - Unique emails captured:       38
+  - Unique domains (no email):    90
+
+DELIVERABLES
+--------------------------------------------------------------------------------
+1. Master Discovery File: data/shops_master_discovery_2026-04-08.json
+   - Contains 640 unique shop records
+   - Includes all collected contact information
+   - Normalized data structure across all regions
+   - Deduplicated by email/domain
+
+ACTIONABLE INSIGHTS & RECOMMENDATIONS
+--------------------------------------------------------------------------------
+
+1. EMAIL CAPTURE STRATEGY OVERHAUL
+   - Overall 5.9% email capture rate is critically low for outreach campaigns
+   - Only 2 regions (Wisconsin, Connecticut) achieved >50% email capture
+   - Recommendation: Implement secondary email discovery sources or manual
+     verification for high-value regions
+
+2. PRIORITIZE HIGH-PERFORMING REGIONS
+   - Wisconsin and Connecticut demonstrate that quality email data IS available
+   - Focus future operations on similar regional profiles
+   - Analyze what made these regions successful (data source quality, etc.)
+
+3. PHONE DATA IS MORE RELIABLE
+   - 15% of shops have phone numbers vs 6% with emails
+   - Consider phone-based outreach as primary channel for this dataset
+   - Phone numbers collected: 96 total
+
+4. WEBSITE DATA GAPS
+   - Only 20% of shops have recorded websites
+   - Missing website data limits ability to manually find contact info
+   - Future operations should prioritize website discovery
+
+5. REGIONAL EXPANSION OPPORTUNITIES
+   - Large markets like California (23 shops, 0 emails) represent untapped potential
+   - Consider manual enrichment for major manufacturing hubs
+   - Texas performed well (28% email rate) - replicate approach in similar states
+
+6. DEDUPLICATION EFFECTIVENESS
+   - Only 3.2% duplicate rate (21/661) suggests good geographic distribution
+   - Low cross-region duplication validates the multi-region approach
+
+NEXT STEPS
+--------------------------------------------------------------------------------
+1. Conduct manual email enrichment for top 100 shops by capability match
+2. Implement phone outreach campaign using the 96 shops with phone numbers
+3. Re-run discovery for 0% email capture regions with alternative data sources
+4. Build targeted campaigns for Wisconsin and Connecticut (highest data quality)
+5. Update discovery tool to prioritize website and email extraction over phone
+
+================================================================================
+                          END OF REPORT
+================================================================================

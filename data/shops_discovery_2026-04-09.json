@@ -1,0 +1,170 @@
+[
+  {
+    "company_name": "Omega Precision Machining",
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "email": "alicia@omegamachining.com",
+    "phone": "702-761-9440",
+    "website": "https://www.omegamachining.com"
+  },
+  {
+    "company_name": "ACISW INC",
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "email": "derek@aciswinc.com",
+    "phone": "541-231-4061",
+    "website": "https://www.aciswinc.com"
+  },
+  {
+    "company_name": "702 CNC",
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "email": "info@702cnc.com",
+    "phone": "(702) 981-6361",
+    "website": "https://702cnc.com"
+  },
+  {
+    "company_name": "TKO Precision Machining",
+    "city": "Reno",
+    "state": "Nevada",
+    "email": "",
+    "phone": "",
+    "website": "https://tkoprecisionmachining.com"
+  },
+  {
+    "company_name": "Sierra Peaks",
+    "city": "Albuquerque",
+    "state": "New Mexico",
+    "email": "info@sierra-peaks.com",
+    "phone": "505.345.5577",
+    "website": "https://www.sierra-peaks.com"
+  },
+  {
+    "company_name": "Butterman Tool",
+    "city": "Albuquerque",
+    "state": "New Mexico",
+    "email": "",
+    "phone": "505-891-2758",
+    "website": "https://buttermantool.com"
+  },
+  {
+    "company_name": "Hand Precision Machining",
+    "city": "Los Alamos",
+    "state": "New Mexico",
+    "email": "",
+    "phone": "",
+    "website": "https://machineshopnm.com"
+  },
+  {
+    "company_name": "Lindsay Machine Works",
+    "city": "Independence",
+    "state": "Missouri",
+    "email": "",
+    "phone": "(816) 257-1166",
+    "website": "https://lindsaymachineworks.com"
+  },
+  {
+    "company_name": "Vista Manufacturing",
+    "city": "Kansas City",
+    "state": "Kansas",
+    "email": "",
+    "phone": "913-342-4939",
+    "website": "https://www.vista-mfg.com"
+  },
+  {
+    "company_name": "KC Machine",
+    "city": "Excelsior Springs",
+    "state": "Missouri",
+    "email": "",
+    "phone": "",
+    "website": "https://butlernational.com/our-businesses/kc-machine/"
+  },
+  {
+    "company_name": "Precision CNC Parts",
+    "city": "Kansas City",
+    "state": "Missouri",
+    "email": "",
+    "phone": "",
+    "website": "https://precisioncncparts.com"
+  },
+  {
+    "company_name": "Edmondson Industries",
+    "city": "Jacksonville",
+    "state": "Arkansas",
+    "email": "office@edmondsonindustries.com",
+    "phone": "(501) 982-1467",
+    "website": "https://www.edmondsonindustries.com"
+  },
+  {
+    "company_name": "Amark Engineering & Manufacturing",
+    "city": "Gravette",
+    "state": "Arkansas",
+    "email": "Dwayne@amarkeng.com",
+    "phone": "479-787-5206",
+    "website": "http://www.amarkeng.com"
+  },
+  {
+    "company_name": "Arkansas Tool & Die",
+    "city": "North Little Rock",
+    "state": "Arkansas",
+    "email": "",
+    "phone": "(501) 374-6972",
+    "website": "https://arktool.com"
+  },
+  {
+    "company_name": "T&S Machine Shop",
+    "city": "Alexander",
+    "state": "Arkansas",
+    "email": "",
+    "phone": "501-316-9069",
+    "website": "https://tsmachineshop.com"
+  },
+  {
+    "company_name": "RS Custom Machining",
+    "city": "Centerton",
+    "state": "Arkansas",
+    "email": "",
+    "phone": "",
+    "website": "http://www.rscmachining.com"
+  },
+  {
+    "company_name": "RBR Machine",
+    "city": "Fayetteville",
+    "state": "Arkansas",
+    "email": "",
+    "phone": "(281) 469-6400",
+    "website": "https://www.rbrmachine.com/fayetteville-ar/"
+  },
+  {
+    "company_name": "Green Oak Tool and Services",
+    "city": "",
+    "state": "Mississippi",
+    "email": "sales@greenoaktool.com",
+    "phone": "1-800-380-6885",
+    "website": "https://www.greenoaktool.com"
+  },
+  {
+    "company_name": "T&S Precision Manufacturing",
+    "city": "",
+    "state": "Mississippi",
+    "email": "",
+    "phone": "601-825-8627",
+    "website": "https://tsprecisionmfg.com"
+  },
+  {
+    "company_name": "RW Precision CNC Machining Services",
+    "city": "Vicksburg",
+    "state": "Mississippi",
+    "email": "",
+    "phone": "(601) 501-7494",
+    "website": "https://m.rwprecisioncnc.com"
+  },
+  {
+    "company_name": "C.L. Dews & Sons Foundry",
+    "city": "Hattiesburg",
+    "state": "Mississippi",
+    "email": "",
+    "phone": "",
+    "website": "https://dewsfoundry.com"
+  }
+]

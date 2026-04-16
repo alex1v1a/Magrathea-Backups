@@ -1,0 +1,202 @@
+[
+  {
+    "business_name": "FTC Industries",
+    "address": "728 111th St., Arlington, TX 76011",
+    "phone": "817-385-0021",
+    "website": "https://ftcindustries.com",
+    "email": "rick.flores@ftcindustries.com",
+    "notes": "Dallas-based CNC machine shop serving Oklahoma City and all of Oklahoma. 43,000 sq ft facility. ISO 9000 compliant."
+  },
+  {
+    "business_name": "Professional Machining Inc.",
+    "address": "3840 SW 113th Street, Oklahoma City, OK",
+    "phone": "405-691-1215",
+    "website": "https://hepman.com",
+    "email": "dan@hepman.com",
+    "notes": "Family-owned and operated machine shop with more than 50 years of experience in Oklahoma City. Full service machine shop specializing in R&D projects, repairs, modifications, prototypes."
+  },
+  {
+    "business_name": "SFM Inc.",
+    "address": "5700 SW 134th St, Oklahoma City, OK 73173",
+    "phone": "405-691-0984",
+    "website": "https://sfminc.us",
+    "email": "info@sfminc.us",
+    "notes": "Two locations including Pipe Yard in Tecumseh. General machining services, production manufacturing, programming and design services using Gibbs Cam."
+  },
+  {
+    "business_name": "MST Manufacturing",
+    "address": "2205 East L. Anderson Blvd, Claremore, OK 74017",
+    "phone": null,
+    "website": "https://www.mstmfg.com",
+    "email": null,
+    "notes": "Aerospace CNC shop specializing in 5-Axis-Milling Machines. Founded 2016 in Claremore. AS 9100D and ISO 9001:2015 certified facility."
+  },
+  {
+    "business_name": "A-1 Machine Shop",
+    "address": "Tulsa, OK",
+    "phone": null,
+    "website": "https://a1machineshop.com",
+    "email": null,
+    "notes": "Full service machine shop in Tulsa with more than 70 years of combined machining and fabrication experience. ISO Certified, family owned & operated."
+  },
+  {
+    "business_name": "Hastreiter Industries",
+    "address": "Marshfield, WI (serving Oklahoma City)",
+    "phone": null,
+    "website": "https://hastreiter.industries",
+    "email": null,
+    "notes": "Wisconsin-based precision CNC machine shop serving Oklahoma City area. 42,000 sq ft facility. ISO 9001:2015 Certified, AS9100D, ITAR Registered."
+  },
+  {
+    "business_name": "Bauman Machine Inc.",
+    "address": "6600 SW 44th, Oklahoma City, OK 73179",
+    "phone": "405-745-3484",
+    "website": "https://baumanmachine.com",
+    "email": null,
+    "notes": "Precision machine shop since 1973. Specializes in high-precision machining, prototyping, and custom fabrication for aerospace, energy, medical, industrial and defense."
+  },
+  {
+    "business_name": "RBR Machine",
+    "address": "Serving Oklahoma City, OK",
+    "phone": "281-469-6400",
+    "website": "https://www.rbrmachine.com",
+    "email": null,
+    "notes": "5 axis CNC and precision machine shop services. Industry leader in 5 axis CNC machining. ISO 9001 certified and AS 9100 registered."
+  },
+  {
+    "business_name": "C. Thorrez Industries",
+    "address": "Jackson, MI (serving Oklahoma City)",
+    "phone": null,
+    "website": "https://thorrez.com",
+    "email": null,
+    "notes": "Over 100 years of precision machining. Family-owned company with five state-of-the-art facilities spanning over 190,000 sq. ft. IATF 16949 and ISO 14001 certified."
+  },
+  {
+    "business_name": "Precision Manufacturing & Design, Inc.",
+    "address": "1690 North Third Street, Langley, OK 74350",
+    "phone": null,
+    "website": "https://www.precmfg.com",
+    "email": null,
+    "notes": "Langley, Oklahoma based manufacturer offering CNC machining, laser cutting, CAD/CAM design, prototyping, welding, fabrication. Over 30 years experience."
+  },
+  {
+    "business_name": "Industrial Machine Company",
+    "address": "1546 W Reno Avenue, Oklahoma City, OK",
+    "phone": "405-236-5419",
+    "website": "https://industrialmachinecompany.com",
+    "email": null,
+    "notes": "Full-service machine shop for over 75 years providing precision machining, welding, hydraulic repairs and field services. Available 24/7 for emergency service."
+  },
+  {
+    "business_name": "Applied Industrial Machining",
+    "address": "1930 SE 29th Street, Oklahoma City, OK",
+    "phone": "405-672-2222",
+    "website": "https://www.aim-okc.com",
+    "email": null,
+    "notes": "Leading provider of contract machining and manufacturing since 1978. Team of over 100 machinists, programmers, welders and specialists."
+  },
+  {
+    "business_name": "Precision Tool & Die (Cadrex)",
+    "address": "2200 N Ash Street, Ponca City, OK",
+    "phone": "580-762-2421",
+    "website": "https://www.cadrex.com/precision-metal-fab",
+    "email": null,
+    "notes": "Founded in 1978, now part of Cadrex. Sheet metal fabrication & stamping, welding, assembly, die building & repair."
+  },
+  {
+    "business_name": "Roberson Machine Company",
+    "address": "Serving Oklahoma City, OK (based in Missouri)",
+    "phone": "573-646-3996",
+    "website": "https://robersontool.com",
+    "email": null,
+    "notes": "Provides CNC services, precision machining, metal fabrication, prototyping, welding, 3D printing, and assembly throughout Oklahoma City area."
+  },
+  {
+    "business_name": "RAM Tool Inc.",
+    "address": "Grafton, WI (serving Oklahoma)",
+    "phone": null,
+    "website": "https://www.ramtoolinc.com",
+    "email": null,
+    "notes": "End-to-end precision machining CNC shop serving companies across Oklahoma since 1979. 80,000 sq ft facility. Specializes in aluminum and zinc die-cast dies."
+  },
+  {
+    "business_name": "Owens Industries",
+    "address": "Serving Oklahoma (based in Wisconsin)",
+    "phone": null,
+    "website": "https://www.owensind.com/MachineShop/Oklahoma",
+    "email": null,
+    "notes": "Top-tier CNC machine shop services serving Oklahoma with precision and craftsmanship. Specializes in intricate manufacturing and customized parts."
+  },
+  {
+    "business_name": "American Precision Machining",
+    "address": "19503 E. 6th Street, Tulsa, OK 74108",
+    "phone": "918-226-1004",
+    "website": "http://apmach.com",
+    "email": null,
+    "notes": "Precision machined parts, CNC milling, turning, grinding. Vision to creation with state-of-the-art equipment."
+  },
+  {
+    "business_name": "Infinity Machine Inc.",
+    "address": "8521 South Regency Drive, Tulsa, OK 74131",
+    "phone": "918-224-1937",
+    "website": "http://www.infinitymachine.com",
+    "email": null,
+    "notes": "Tulsa-based CNC machine shop."
+  },
+  {
+    "business_name": "B.T. Machine Inc.",
+    "address": "16210 East Marshall St., Tulsa, OK 74116",
+    "phone": "918-834-3340",
+    "website": "http://www.btmachineinc.com",
+    "email": null,
+    "notes": "Tulsa CNC machining services."
+  },
+  {
+    "business_name": "Padgett Machine Inc.",
+    "address": "1226 N. 143rd E. Ave., Tulsa, OK 74116",
+    "phone": "918-438-3444",
+    "website": null,
+    "email": null,
+    "notes": "Tulsa area machine shop. Fax: 918-438-3446"
+  },
+  {
+    "business_name": "TP Machine & Tool Co.",
+    "address": "4300 S. High Ave., Oklahoma City, OK 73129",
+    "phone": "405-672-5551",
+    "website": "http://tpmachine.com",
+    "email": null,
+    "notes": "Oklahoma City machine shop. Fax: 405-670-4022"
+  },
+  {
+    "business_name": "Aero Components Inc.",
+    "address": "535 SE 82nd Street, Oklahoma City, OK 73149",
+    "phone": "405-631-6644",
+    "website": "http://www.aerocomponentsok.com",
+    "email": null,
+    "notes": "Oklahoma City aerospace machining. Fax: 405-631-6645"
+  },
+  {
+    "business_name": "Auto Turn Manufacturing Inc.",
+    "address": "9800 S 219th East Avenue, Broken Arrow, OK",
+    "phone": "918-451-4511",
+    "website": "http://auto-turn.com",
+    "email": null,
+    "notes": "Broken Arrow CNC machining. Fax: 918-451-4404"
+  },
+  {
+    "business_name": "Hallco",
+    "address": "20937 East 37th Place South, Broken Arrow, OK 74014",
+    "phone": "918-355-9717",
+    "website": "http://www.hallcompany.net",
+    "email": null,
+    "notes": "Broken Arrow manufacturing. Fax: 918-355-7332"
+  },
+  {
+    "business_name": "Hearn Machine Tool Inc.",
+    "address": "Rt. 5 Box 78, Seminole, OK 74868",
+    "phone": "405-382-4623",
+    "website": "http://www.hearnmachinetool.com",
+    "email": null,
+    "notes": "Seminole machine shop. Fax: 405-382-1263"
+  }
+]

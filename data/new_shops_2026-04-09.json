@@ -1,0 +1,86 @@
+[
+  {
+    "shop_name": "The Nut Place",
+    "location": "Houston, TX",
+    "email": "sales@thenutplace.com",
+    "website": "https://thenutplace.com/machine-shop/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "RMC Reliable Machinists Corporation",
+    "location": "Houston, TX",
+    "email": "sales@rmcreliablemachinists.com",
+    "website": "https://www.rmcreliablemachinists.com/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "PV American Inc.",
+    "location": "Houston, TX",
+    "email": "pva@pvamerican.com",
+    "website": "https://www.pvamerican.com/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "B&R Productions",
+    "location": "New Waverly, TX",
+    "email": "info@bandrproduction.com",
+    "website": "https://bandrproduction.com/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Suwanee Machine Shop",
+    "location": "Suwanee, GA",
+    "email": "suwaneemachine@yahoo.com",
+    "website": "https://www.suwaneemachineshop.com/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "The CNC Shop",
+    "location": "Hesperia, CA",
+    "email": "Dan@thecncshop.com",
+    "website": "https://www.thecncshop.com/",
+    "contact_person": "Dan"
+  },
+  {
+    "shop_name": "Thermwood",
+    "location": "Dale, IN",
+    "email": "sales@thermwood.com",
+    "website": "https://www.thermwood.com/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "CNC Enterprises",
+    "location": "Montgomery, AL",
+    "email": "info@cncenterprises.us",
+    "website": "https://www.cncenterprises.us/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "JW Machine Corp",
+    "location": "Orlando, FL",
+    "email": "sales@jwmachine.com",
+    "website": "https://jwmachinecorp.com/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Unitron Precision Machining",
+    "location": "Apopka, FL",
+    "email": "unitronprecision@gmail.com",
+    "website": "https://www.unitronmachining.com/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Aeromethod",
+    "location": "Las Vegas, NV",
+    "email": "contact@aeromethod.com",
+    "website": "https://www.aeromethod.com/",
+    "contact_person": null
+  },
+  {
+    "shop_name": "M&S Machine & Tool",
+    "location": "West Haven, CT",
+    "email": "info@msmachinetool.com",
+    "website": "https://www.mandsmachinetool.com/",
+    "contact_person": null
+  }
+]

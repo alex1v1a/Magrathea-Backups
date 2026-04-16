@@ -1,0 +1,122 @@
+[
+  {
+    "shop_name": "Lowrance Machine",
+    "location": "Houston, TX",
+    "address": "13510 East Hardy Road, Houston, Texas 77039",
+    "website": "https://www.lowrancemachine.com",
+    "emails": ["info@lowrancemachine.com"],
+    "phones": ["(281) 449-6524"],
+    "capabilities": ["CNC Machining", "Custom Molds", "Engineered Components", "Fasteners", "Industrial Repair"],
+    "status": "New",
+    "date_first_contacted": "",
+    "notes": "ISO 9001-2015 certified, 5-axis CNC capabilities"
+  },
+  {
+    "shop_name": "RBR Machine",
+    "location": "Houston, TX",
+    "address": "Houston, Texas",
+    "website": "https://www.rbrmachine.com",
+    "emails": [],
+    "phones": ["(281) 469-6400"],
+    "capabilities": ["5-Axis CNC Machining", "Wire EDM", "CMM Inspection", "Swiss Turning", "API Threading"],
+    "status": "New",
+    "date_first_contacted": "",
+    "notes": "AS9100 & ISO 9001:2015 certified, large capacity milling 165\" X 36\""
+  },
+  {
+    "shop_name": "GMP CNC Machining",
+    "location": "Cleveland, OH",
+    "address": "1540 Coit Ave, Cleveland, Ohio 44112-2062",
+    "website": "https://gmpcnc.com",
+    "emails": ["info@gmpcnc.com"],
+    "phones": ["(216) 249-8670", "(216) 451-4111"],
+    "capabilities": ["CNC Turning", "CNC Milling", "Swiss Machining", "Assembly", "Inspection"],
+    "status": "New",
+    "date_first_contacted": "",
+    "notes": "ISO 9001 certified, 40+ years in business, 7 CNC lathes, 5 manual lathes"
+  },
+  {
+    "shop_name": "Brooklyn Machine & Mfg",
+    "location": "Cleveland, OH",
+    "address": "5180 Grant Ave, Cleveland, OH 44125",
+    "website": "https://www.brooklynmachinemfg.com",
+    "emails": ["sales@brooklynmachinemfg.com"],
+    "phones": ["(216) 341-1846", "(216) 341-1867"],
+    "capabilities": ["CNC Turning", "CNC Milling"],
+    "status": "New",
+    "date_first_contacted": "",
+    "notes": "Founded 1923, family owned, nearly 100 years in business"
+  },
+  {
+    "shop_name": "Bain Machine",
+    "location": "Warrensville Heights, OH",
+    "address": "19050 Cranwood Parkway, Warrensville Heights, OH 44128",
+    "website": "https://bainmachine.com",
+    "emails": ["info@bainmachine.com"],
+    "phones": ["(216) 518-0333"],
+    "capabilities": ["Precision Machining", "Assembly", "Welding", "Heat Treating", "Coating", "Prototyping"],
+    "status": "New",
+    "date_first_contacted": "",
+    "notes": "Serves automation, aerospace, defense, construction, steel mills, automotive, chemical industries"
+  },
+  {
+    "shop_name": "Titan Metal Products LLC",
+    "location": "Columbus, OH",
+    "address": "Columbus, OH",
+    "website": "https://titanmetalproductsllc.com",
+    "emails": [],
+    "phones": ["(614) 504-7000"],
+    "capabilities": ["CNC Machining", "Milling", "Turning"],
+    "status": "New",
+    "date_first_contacted": "",
+    "notes": "35+ years CNC machining expertise, prototype to production"
+  },
+  {
+    "shop_name": "Pinnacle Tool & Engineering",
+    "location": "Cleveland, OH",
+    "address": "10725 Briggs Rd, Cleveland, OH 44111",
+    "website": "https://www.pinnacletooleng.com",
+    "emails": [],
+    "phones": ["216-252-1868"],
+    "capabilities": ["Machine Shop", "Tool & Engineering"],
+    "status": "New",
+    "date_first_contacted": "",
+    "notes": "Monday-Friday 9am-4pm EST"
+  },
+  {
+    "shop_name": "Kadon Precision Machining",
+    "location": "Rockford, IL",
+    "address": "Rockford, IL",
+    "website": "https://www.kadonprecision.com",
+    "emails": [],
+    "phones": ["815-874-5850"],
+    "capabilities": ["Precision Machining", "Swiss Machining", "CNC Machining"],
+    "status": "New",
+    "date_first_contacted": "",
+    "notes": "State-of-the-art facilities, innovative solutions"
+  },
+  {
+    "shop_name": "RG Manufacturing and Machining",
+    "location": "Rockford, IL",
+    "address": "3358 N. Publishers Drive, Rockford, Illinois 61109",
+    "website": "https://rgmfg.com",
+    "emails": [],
+    "phones": ["(815) 282-2330"],
+    "capabilities": ["Grinding", "Manufacturing", "Machining"],
+    "status": "New",
+    "date_first_contacted": "",
+    "notes": "50+ years serving customers"
+  },
+  {
+    "shop_name": "Chicago CNC Machining Co",
+    "location": "Chicago, IL",
+    "address": "Chicago, IL",
+    "website": "https://chicagocncmachining.com",
+    "emails": [],
+    "phones": [],
+    "capabilities": ["CNC Machining", "Precision Manufacturing", "Prototypes", "Production"],
+    "status": "New",
+    "date_first_contacted": "",
+    "notes": "30 years industry experience, multi-axis machining centers"
+  }
+]

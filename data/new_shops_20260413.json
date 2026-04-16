@@ -1,0 +1,157 @@
+{
+  "Date": "2026-04-13",
+  "Source": "Web Search Discovery",
+  "Shops": [
+    {
+      "ShopName": "Brooklyn Machine & Mfg., Inc.",
+      "ContactName": "",
+      "Email": "sales@brooklynmachinemfg.com",
+      "Phone": "(216) 341-1846",
+      "Website": "https://www.brooklynmachinemfg.com",
+      "City": "Cleveland",
+      "State": "OH",
+      "Capabilities": "CNC Turning, CNC Milling, Precision Machining"
+    },
+    {
+      "ShopName": "Industrial Pattern & Manufacturing",
+      "ContactName": "",
+      "Email": "jthrun@industrialpattern.com",
+      "Phone": "(614) 252-0934",
+      "Website": "https://www.industrialpattern.com",
+      "City": "Columbus",
+      "State": "OH",
+      "Capabilities": "CNC Machining, Milling, Drilling, Boring, Taping, Threading, Prototyping"
+    },
+    {
+      "ShopName": "Linear Machining Technology",
+      "ContactName": "",
+      "Email": "info@linearmt.com",
+      "Phone": "(724) 863-9500",
+      "Website": "https://www.linearmt.com",
+      "City": "Latrobe",
+      "State": "PA",
+      "Capabilities": "5-Axis CNC Machining, Complex Geometry Components, Precision Machining"
+    },
+    {
+      "ShopName": "Unitron Precision Machining",
+      "ContactName": "",
+      "Email": "unitronprecision@gmail.com",
+      "Phone": "(407) 299-4180",
+      "Website": "https://www.unitronmachining.com",
+      "City": "Apopka",
+      "State": "FL",
+      "Capabilities": "CNC Milling, CNC Turning, Multi-Axis Machining, Manual Milling and Turning"
+    },
+    {
+      "ShopName": "Chicago Machining & Tool",
+      "ContactName": "",
+      "Email": "sales@chicago-machining.com",
+      "Phone": "224-628-0706",
+      "Website": "https://chicago-machining.com",
+      "City": "Palatine",
+      "State": "IL",
+      "Capabilities": "CNC Milling, CNC Turning, Rapid Prototyping, Low Volume Production"
+    },
+    {
+      "ShopName": "Marathon Precision",
+      "ContactName": "",
+      "Email": "sales@marathonprecision.com",
+      "Phone": "(847) 398-5165",
+      "Website": "https://marathonprecision.com",
+      "City": "Wheeling",
+      "State": "IL",
+      "Capabilities": "CNC Milling, CNC Turning, Conventional Machining, EDM, Waterjet Cutting, Laser Cutting"
+    },
+    {
+      "ShopName": "EMC Machining Inc.",
+      "ContactName": "",
+      "Email": "info@emcmachining.com",
+      "Phone": "(630) 860-7076",
+      "Website": "https://emcmachining.com",
+      "City": "Bensenville",
+      "State": "IL",
+      "Capabilities": "CNC Milling, CNC Turning, Prototyping to Production"
+    },
+    {
+      "ShopName": "Titan Metal Products, LLC",
+      "ContactName": "",
+      "Email": "info@titan-metalproducts.com",
+      "Phone": "(614) 504-7000",
+      "Website": "https://titanmetalproductsllc.com",
+      "City": "Plain City",
+      "State": "OH",
+      "Capabilities": "CNC Milling, CNC Turning, Prototype Work, Production Runs"
+    },
+    {
+      "ShopName": "The Nut Place, Inc.",
+      "ContactName": "",
+      "Email": "sales@thenutplace.com",
+      "Phone": "713-462-3147",
+      "Website": "https://thenutplace.com",
+      "City": "Houston",
+      "State": "TX",
+      "Capabilities": "CNC Milling, CNC Turning, Threading, Drilling, Broaching, Safety Bolts"
+    },
+    {
+      "ShopName": "Cobb Tool, Inc.",
+      "ContactName": "",
+      "Email": "info@cobbtool.com",
+      "Phone": "770-948-3775",
+      "Website": "https://cobbtool.com",
+      "City": "Mableton",
+      "State": "GA",
+      "Capabilities": "Precision Machining, Welding Fixtures, CNC Machining"
+    },
+    {
+      "ShopName": "C&H Machine & EDM Services",
+      "ContactName": "",
+      "Email": "info@c-hmachine.com",
+      "Phone": "(760) 746-6459",
+      "Website": "https://www.c-hmachine.com",
+      "City": "Escondido",
+      "State": "CA",
+      "Capabilities": "3, 4, 5-Axis CNC Milling, EDM Services, High-Speed Milling"
+    },
+    {
+      "ShopName": "GMP CNC Machining",
+      "ContactName": "",
+      "Email": "info@gmpcnc.com",
+      "Phone": "(216) 249-8670",
+      "Website": "https://gmpcnc.com",
+      "City": "Cleveland",
+      "State": "OH",
+      "Capabilities": "CNC Turning, CNC Milling, Swiss Machining, Assembly, Inspection"
+    },
+    {
+      "ShopName": "Rite Tool Inc.",
+      "ContactName": "",
+      "Email": "customerservice@ritetoolinc.net",
+      "Phone": "(586) 264-1900",
+      "Website": "https://ritetoolinc.com",
+      "City": "Sterling Heights",
+      "State": "MI",
+      "Capabilities": "CNC Milling, Precision Machining, Fixtures, Gages, Assemblies"
+    },
+    {
+      "ShopName": "Green Oak Tool and Services, Inc.",
+      "ContactName": "",
+      "Email": "sales@greenoaktool.com",
+      "Phone": "1-800-380-6885",
+      "Website": "https://www.greenoaktool.com",
+      "City": "Columbus",
+      "State": "OH",
+      "Capabilities": "Tool & Die, CNC Machining, 3D Routing, Die Repair, Prototype Services"
+    },
+    {
+      "ShopName": "M&S Machine & Tool",
+      "ContactName": "",
+      "Email": "info@msmachinetool.com",
+      "Phone": "203-933-8920",
+      "Website": "https://www.mandsmachinetool.com",
+      "City": "West Haven",
+      "State": "CT",
+      "Capabilities": "CNC Turning, Milling, Grinding, Honing, Lapping, Aerospace Parts"
+    }
+  ],
+  "TotalFound": 15
+}

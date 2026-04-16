@@ -1,0 +1,254 @@
+{
+  "shops": [
+    {
+      "name": "BDE Manufacturing Technologies",
+      "address": "3325 SE 67th Ave",
+      "city": "Beaverton",
+      "state": "OR",
+      "phone": "503-648-7418",
+      "email": "info@bdeinc.com",
+      "website": "https://www.bdeinc.com",
+      "services": "CNC machining, tool making, quick turnaround manufacturing"
+    },
+    {
+      "name": "American Precision Industries (API)",
+      "address": "2480 NE Century Blvd",
+      "city": "Hillsboro",
+      "state": "OR",
+      "phone": "503-642-5611",
+      "email": "",
+      "website": "https://americanprecisionindustries.com",
+      "services": "Precision CNC machining, metal fabrication, sheet metal, prototyping"
+    },
+    {
+      "name": "Oregon Swiss Precision, Inc.",
+      "address": "2143 NE Spalding Avenue",
+      "city": "Grants Pass",
+      "state": "OR",
+      "phone": "541-476-1150",
+      "email": "",
+      "website": "https://www.oregonswiss.com",
+      "services": "CNC turning, milling, Swiss type machining, 3D printing, aerospace"
+    },
+    {
+      "name": "Portland Precision Manufacturing Company",
+      "address": "16327 NE Cameron Boulevard",
+      "city": "Portland",
+      "state": "OR",
+      "phone": "503-253-6700",
+      "email": "",
+      "website": "https://www.ppmfg.com",
+      "services": "5-axis CNC machining, precision optical equipment, tight tolerance machining"
+    },
+    {
+      "name": "Portland CNC",
+      "address": "",
+      "city": "Portland",
+      "state": "OR",
+      "phone": "",
+      "email": "",
+      "website": "https://portlandcnc.com",
+      "services": "CNC routing, 3D milling, design consulting, CAD/CAM"
+    },
+    {
+      "name": "GrovTec Machining",
+      "address": "",
+      "city": "Portland",
+      "state": "OR",
+      "phone": "",
+      "email": "",
+      "website": "https://grovtecmachining.com",
+      "services": "Swiss CNC, micro-machining, multi-spindle automatics, aerospace, defense"
+    },
+    {
+      "name": "Stumptown CNC",
+      "address": "",
+      "city": "Portland",
+      "state": "OR",
+      "phone": "",
+      "email": "",
+      "website": "https://stumptowncnc.com",
+      "services": "CNC routing and milling, wood fabrication, prototyping"
+    },
+    {
+      "name": "Northwest Machine Works",
+      "address": "",
+      "city": "Canby",
+      "state": "OR",
+      "phone": "503-266-8096",
+      "email": "",
+      "website": "",
+      "services": "Precision CNC machining"
+    },
+    {
+      "name": "Cramer's Precision Manufacturing",
+      "address": "",
+      "city": "Springfield",
+      "state": "OR",
+      "phone": "",
+      "email": "",
+      "website": "https://www.machineshopsoregon.com",
+      "services": "Custom machine shop, prototype parts, rubber to metal bonding"
+    },
+    {
+      "name": "Artisan Machine",
+      "address": "2025 NW Crocker Ln",
+      "city": "Albany",
+      "state": "OR",
+      "phone": "541-812-7608",
+      "email": "",
+      "website": "",
+      "services": "CNC machining services"
+    },
+    {
+      "name": "PRE-TEC",
+      "address": "675 McKinley Street",
+      "city": "Eugene",
+      "state": "OR",
+      "phone": "541-484-2368",
+      "email": "",
+      "website": "http://pre-tec.com",
+      "services": "Precision machining, custom robotics"
+    },
+    {
+      "name": "A.F. Dick Manufacturing Inc.",
+      "address": "92640 Abbot Road",
+      "city": "Astoria",
+      "state": "OR",
+      "phone": "503-458-6292",
+      "email": "",
+      "website": "http://afdmfg.com",
+      "services": "CNC machining, manufacturing"
+    },
+    {
+      "name": "4B Precision Products Inc",
+      "address": "10281 Kraxberger Rd",
+      "city": "Canby",
+      "state": "OR",
+      "phone": "503-266-3284",
+      "email": "",
+      "website": "http://www.4bprecision.com",
+      "services": "Precision machining"
+    },
+    {
+      "name": "Arrow Tech Machine Works",
+      "address": "4677 Isabelle St Unit A",
+      "city": "Eugene",
+      "state": "OR",
+      "phone": "541-780-6938",
+      "email": "",
+      "website": "https://atechmachineworks.com",
+      "services": "Machine shop services, CNC machining"
+    },
+    {
+      "name": "Browns Machine and Hydraulic",
+      "address": "90500 Hwy 99N Unit B",
+      "city": "Eugene",
+      "state": "OR",
+      "phone": "541-344-1466",
+      "email": "",
+      "website": "http://brownsmachine.com",
+      "services": "Machine and hydraulic services"
+    },
+    {
+      "name": "Precision Machine & Manufacturing",
+      "address": "1290 S Bertelsen Road",
+      "city": "Eugene",
+      "state": "OR",
+      "phone": "541-484-9841",
+      "email": "",
+      "website": "https://premach.com",
+      "services": "Precision CNC machining and manufacturing"
+    },
+    {
+      "name": "Quality Metal Finishing, Inc",
+      "address": "1260 Wallis Street",
+      "city": "Eugene",
+      "state": "OR",
+      "phone": "541-343-4534",
+      "email": "",
+      "website": "https://qualitymetalfinishing.com",
+      "services": "Metal finishing, machining"
+    },
+    {
+      "name": "Ram-Z Fab",
+      "address": "4920 SW 3rd Street Unit D",
+      "city": "Corvallis",
+      "state": "OR",
+      "phone": "541-753-4090",
+      "email": "",
+      "website": "http://www.ramzfab.com",
+      "services": "Fabrication, machining"
+    },
+    {
+      "name": "Relentless MFG",
+      "address": "541 SW Wake Robin Ave",
+      "city": "Corvallis",
+      "state": "OR",
+      "phone": "541-230-8613",
+      "email": "",
+      "website": "https://www.relentlessmfg.co",
+      "services": "CNC machining, manufacturing"
+    },
+    {
+      "name": "J D Rinaldi Fabricators Inc",
+      "address": "99 S Pacific Highway",
+      "city": "Cottage Grove",
+      "state": "OR",
+      "phone": "541-686-1331",
+      "email": "",
+      "website": "http://www.jdrinaldifabricators.com",
+      "services": "Fabrication, machining"
+    },
+    {
+      "name": "C & R Machine Company",
+      "address": "530-A Liberty Avenue # A",
+      "city": "Gresham",
+      "state": "OR",
+      "phone": "503-661-1049",
+      "email": "",
+      "website": "http://www.cnrmachine.com",
+      "services": "CNC machining"
+    },
+    {
+      "name": "Sunset Manufacturing Company",
+      "address": "19355 SW Teton Ave",
+      "city": "Tualatin",
+      "state": "OR",
+      "phone": "503-692-1900",
+      "email": "info@sunsetcorp.com",
+      "website": "http://www.sunsetcorp.com",
+      "services": "Precision manufacturing, machining"
+    },
+    {
+      "name": "Prime Manufacturing",
+      "address": "985 NW Noble Dr. Unit D",
+      "city": "Estacada",
+      "state": "OR",
+      "phone": "503-308-9451",
+      "email": "",
+      "website": "https://www.primemfg.co",
+      "services": "ITAR / ISO 9001:2015/ AS9100D certified machining"
+    },
+    {
+      "name": "Treske Precision Machining, Inc.",
+      "address": "14140 SW Galbreath Dr",
+      "city": "Sherwood",
+      "state": "OR",
+      "phone": "503-625-2821",
+      "email": "",
+      "website": "http://treske.com",
+      "services": "Precision machining"
+    },
+    {
+      "name": "T K Machining",
+      "address": "7091 River Bend Drive",
+      "city": "Silverton",
+      "state": "OR",
+      "phone": "503-873-3060",
+      "email": "",
+      "website": "http://www.tkmachining.com",
+      "services": "CNC machining services"
+    }
+  ]
+}

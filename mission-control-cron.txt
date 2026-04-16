@@ -1,0 +1,11 @@
+# Mission Control Health Monitor Cron Job
+# Add this to crontab with: crontab -e
+
+# Check Mission Control health every 5 minutes
+*/5 * * * * /bin/bash /home/admin/.openclaw/workspace/mission-control-monitor.sh
+
+# Daily summary report at 8:00 AM
+0 8 * * * /bin/bash -c 'tail -100 /var/log/mission-control-health.log | grep -E "ERROR|ALERT" | mail -s "Mission Control Daily Report" admin@vectarr.com'
+
+# Weekly cleanup of old logs (Sundays at 2 AM)
+0 2 * * 0 /bin/bash -c 'find /var/log/mission-control-health.log* -mtime +30 -delete'

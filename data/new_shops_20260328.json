@@ -1,0 +1,74 @@
+[
+  {
+    "name": "American Valmark",
+    "website": "https://texascncmachining.com/",
+    "location": "Texas",
+    "services": ["CNC machining", "prototype to production", "water jet cutting", "laser cutting", "metal finishing"],
+    "date_found": "2026-03-28",
+    "source": "web_search"
+  },
+  {
+    "name": "Trace-A-Matic",
+    "website": "https://www.traceamatic.com/texas-machine-shop/",
+    "location": "Houston, Texas",
+    "services": ["CNC engineering", "3D CAD modeling", "CNC CAM programming", "4-axis machining", "3-axis machining", "CNC milling", "CNC lathe/turning", "CMM inspection"],
+    "date_found": "2026-03-28",
+    "source": "web_search"
+  },
+  {
+    "name": "EVS Metal",
+    "website": "https://evsmetal.com/solutions/machining/",
+    "location": "Austin, Texas",
+    "services": ["CNC machining", "metal fabrication", "sheet metal fabrication"],
+    "date_found": "2026-03-28",
+    "source": "web_search"
+  },
+  {
+    "name": "Texas Machining",
+    "website": "https://www.texas-machining.com/",
+    "location": "Texas",
+    "services": ["CNC milling", "CNC lathes", "3D printing", "precision inspection", "prototypes", "high-volume production"],
+    "date_found": "2026-03-28",
+    "source": "web_search"
+  },
+  {
+    "name": "Four Points Platinum",
+    "website": "https://fourpointsplatinum.com/",
+    "location": "Texas",
+    "services": ["precision machining", "fabrication", "3D printing", "turnkey manufacturing"],
+    "date_found": "2026-03-28",
+    "source": "web_search"
+  },
+  {
+    "name": "Distinctive MFG",
+    "website": "https://distinctivemfg.co/austin-cnc-machine-shop/",
+    "location": "Austin, Texas",
+    "services": ["CNC machining", "metal fabrication"],
+    "date_found": "2026-03-28",
+    "source": "web_search"
+  },
+  {
+    "name": "A & A Machine & Fabrication LLC",
+    "website": "https://aagroup.com/cnc-machine-shop-la-marque-tx/",
+    "location": "La Marque, Texas (Houston area)",
+    "services": ["CNC machining", "fabrication"],
+    "date_found": "2026-03-28",
+    "source": "web_search"
+  },
+  {
+    "name": "Pro-Machine LP",
+    "website": "https://www.mfg.com/cnc-machining-shops-texas/",
+    "location": "Houston, Texas",
+    "services": ["CNC machining"],
+    "date_found": "2026-03-28",
+    "source": "web_search"
+  },
+  {
+    "name": "T B & S Manufacturing Co",
+    "website": "https://www.mfg.com/cnc-machining-shops-texas/",
+    "location": "Texas",
+    "services": ["machining", "fabrication", "assembly"],
+    "date_found": "2026-03-28",
+    "source": "web_search"
+  }
+]

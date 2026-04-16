@@ -1,0 +1,103 @@
+{
+  "name": "Vectarr Operations",
+  "description": "Machine shop outreach and customer management tracking for Vectarr",
+  "boards": [
+    {
+      "id": "machine-shop-outreach",
+      "name": "Machine Shop Outreach Pipeline",
+      "columns": [
+        {"id": "prospects", "name": "Prospects", "color": "#6B7280"},
+        {"id": "contacted", "name": "Contacted", "color": "#3B82F6"},
+        {"id": "responded", "name": "Responded", "color": "#8B5CF6"},
+        {"id": "in-discussion", "name": "In Discussion", "color": "#F59E0B"},
+        {"id": "onboarding", "name": "Onboarding", "color": "#10B981"},
+        {"id": "active", "name": "Active", "color": "#059669"},
+        {"id": "paused", "name": "Paused", "color": "#6B7280"},
+        {"id": "declined", "name": "Declined", "color": "#DC2626"}
+      ],
+      "cardFields": [
+        {"name": "shopName", "label": "Shop Name", "type": "text", "required": true},
+        {"name": "location", "label": "Location", "type": "text", "required": false},
+        {"name": "contactPerson", "label": "Contact Person", "type": "text", "required": false},
+        {"name": "email", "label": "Email", "type": "email", "required": false},
+        {"name": "phone", "label": "Phone", "type": "text", "required": false},
+        {"name": "capabilities", "label": "Capabilities", "type": "multiselect", "options": ["CNC Milling", "CNC Turning", "3D Printing", "Sheet Metal", "Welding", "Grinding", "EDM", "Prototyping", "Production"], "required": false},
+        {"name": "website", "label": "Website", "type": "url", "required": false},
+        {"name": "dateFirstContacted", "label": "Date First Contacted", "type": "date", "required": false},
+        {"name": "lastActivityDate", "label": "Last Activity Date", "type": "date", "required": false},
+        {"name": "status", "label": "Status", "type": "dropdown", "options": ["Hot", "Warm", "Cold", "Qualified", "Unqualified"], "required": false},
+        {"name": "notes", "label": "Notes", "type": "textarea", "required": false},
+        {"name": "nextAction", "label": "Next Action", "type": "text", "required": false}
+      ]
+    },
+    {
+      "id": "customer-project-tracking",
+      "name": "Customer Project Tracking",
+      "columns": [
+        {"id": "new-inquiries", "name": "New Inquiries", "color": "#3B82F6"},
+        {"id": "quoted", "name": "Quoted", "color": "#8B5CF6"},
+        {"id": "in-production", "name": "In Production", "color": "#F59E0B"},
+        {"id": "completed", "name": "Completed", "color": "#10B981"},
+        {"id": "review-pending", "name": "Review Pending", "color": "#6B7280"},
+        {"id": "issues", "name": "Issues", "color": "#DC2626"}
+      ],
+      "cardFields": [
+        {"name": "companyName", "label": "Company Name", "type": "text", "required": true},
+        {"name": "contactPerson", "label": "Contact Person", "type": "text", "required": false},
+        {"name": "projectDescription", "label": "Project Description", "type": "textarea", "required": true},
+        {"name": "cadFileType", "label": "CAD File Type", "type": "text", "required": false},
+        {"name": "materialRequirements", "label": "Material Requirements", "type": "text", "required": false},
+        {"name": "quantity", "label": "Quantity", "type": "number", "required": false},
+        {"name": "quoteAmount", "label": "Quote Amount", "type": "currency", "required": false},
+        {"name": "awardedShop", "label": "Awarded Shop", "type": "text", "required": false},
+        {"name": "timeline", "label": "Timeline", "type": "text", "required": false},
+        {"name": "status", "label": "Status", "type": "dropdown", "options": ["Urgent", "High Priority", "Normal", "Low Priority"], "required": false}
+      ]
+    },
+    {
+      "id": "content-calendar",
+      "name": "Content Calendar",
+      "columns": [
+        {"id": "ideas", "name": "Ideas", "color": "#6B7280"},
+        {"id": "in-progress", "name": "In Progress", "color": "#3B82F6"},
+        {"id": "review", "name": "Review", "color": "#F59E0B"},
+        {"id": "scheduled", "name": "Scheduled", "color": "#8B5CF6"},
+        {"id": "published", "name": "Published", "color": "#10B981"},
+        {"id": "promoted", "name": "Promoted", "color": "#059669"}
+      ],
+      "cardFields": [
+        {"name": "title", "label": "Title", "type": "text", "required": true},
+        {"name": "contentType", "label": "Content Type", "type": "dropdown", "options": ["Blog Post", "Video", "Social Media", "Email Newsletter", "Whitepaper", "Case Study"], "required": true},
+        {"name": "author", "label": "Author", "type": "text", "required": false},
+        {"name": "dueDate", "label": "Due Date", "type": "date", "required": false},
+        {"name": "publishDate", "label": "Publish Date", "type": "date", "required": false},
+        {"name": "keywords", "label": "Keywords", "type": "text", "required": false},
+        {"name": "status", "label": "Status", "type": "dropdown", "options": ["Draft", "In Review", "Approved", "Ready"], "required": false},
+        {"name": "notes", "label": "Notes", "type": "textarea", "required": false}
+      ]
+    }
+  ],
+  "automation": {
+    "daily": {
+      "time": "05:00",
+      "tasks": [
+        "Move 5 shops from Prospects to Contacted",
+        "Create draft emails in Outlook",
+        "Update tracking spreadsheet"
+      ]
+    },
+    "weekly": {
+      "day": "Monday",
+      "time": "08:00",
+      "tasks": [
+        "Generate outreach summary report",
+        "Update machine shop profiles",
+        "Review Mission Control board health"
+      ]
+    }
+  },
+  "accessControl": {
+    "fullAccess": ["alex1v1a", "admin"],
+    "readOnly": ["sales", "support"]
+  }
+}

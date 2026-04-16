@@ -1,0 +1,218 @@
+[
+  {
+    "business_name": "Lot 19 (Machine Shop NYC)",
+    "address": "Industry City/Sunset Park, Brooklyn, New York",
+    "phone": "(212) 337-3789",
+    "email": "",
+    "website": "https://machineshopnyc.com/",
+    "services": ["CNC Milling", "CNC Turning", "Laser Cutting", "Engraving", "Rapid Prototyping", "Assembly", "CAD/CAM", "Electronics Design", "PCB Assembly", "Firmware Development"],
+    "location": "Brooklyn, NY"
+  },
+  {
+    "business_name": "Precise Tool & Manufacturing",
+    "address": "Rochester, NY",
+    "phone": "(585) 247-0700",
+    "email": "",
+    "website": "https://precisetool.com/",
+    "services": ["Large Part CNC Milling", "Large Turning", "5-Axis CNC Machining", "Small Milling", "Small Turning", "Rapid Prototyping", "Welding & Fabricating", "Assembly", "Quality Inspection", "Engineering"],
+    "location": "Rochester, NY"
+  },
+  {
+    "business_name": "Hi-Tech CNC Machining",
+    "address": "Westchester County, New York",
+    "phone": "",
+    "email": "",
+    "website": "http://www.hitechcncmachining.com/",
+    "services": ["CNC Milling", "CNC Turning", "Lathe-turning", "Boring", "Screw Machining", "Tapping", "Threading", "Anodizing", "Engraving", "Powder Coating", "Prototype Machining", "Production Machining"],
+    "location": "Westchester County, NY"
+  },
+  {
+    "business_name": "Spex Precision Machine Technologies",
+    "address": "Rochester, NY",
+    "phone": "",
+    "email": "",
+    "website": "https://www.spex1.com/",
+    "services": ["Screw Machining", "CNC Machining", "Swiss Screw Machines", "CNC Milling", "Supply Chain Management", "Precision Stainless Fittings", "Custom Pins", "Custom Screws"],
+    "location": "Rochester, NY"
+  },
+  {
+    "business_name": "RAM Tool, Inc.",
+    "address": "United States (Serves all New York including NYC, Buffalo, Rochester, Syracuse, Albany)",
+    "phone": "",
+    "email": "",
+    "website": "https://www.ramtoolinc.com/",
+    "services": ["CNC Machining", "EDM Machining", "Die Casting", "5-Axis Machining", "CNC Milling", "CNC Turning", "Tooling", "Die Cast Dies", "Engineering & Design", "Laser Scanning", "Reverse Engineering"],
+    "location": "Serves NY State"
+  },
+  {
+    "business_name": "Roberson Machine Company",
+    "address": "Midwest (Serves New York including NYC, Buffalo, Rochester)",
+    "phone": "(573) 646-3996",
+    "email": "",
+    "website": "https://robersontool.com/",
+    "services": ["CNC Turning", "CNC Milling", "Precision CNC Machining", "Wire EDM", "3D Printing", "Multi-axis Machining", "Anodizing", "Bead Blasting", "Passivating", "Heat Treating", "Powder Coating", "Deburring"],
+    "location": "Serves NY State"
+  },
+  {
+    "business_name": "AT Precision",
+    "address": "Chicagoland (Serves New York City, Yonkers, Rochester)",
+    "phone": "(847) 509-5848",
+    "email": "",
+    "website": "https://www.atprecision.com/",
+    "services": ["CNC Machining", "Precision Grinding", "Precision Milling", "Precision Cutting", "Precision Turning", "Precision Drilling", "Reverse Engineering"],
+    "location": "Serves NY State"
+  },
+  {
+    "business_name": "Thuro Metal Products, Inc.",
+    "address": "Brentwood, NY",
+    "phone": "800-238-3929",
+    "email": "",
+    "website": "",
+    "services": ["CNC Turning", "CNC Milling", "Multi-spindle Screw Machining", "Single Spindle Screw Machining", "Swiss Screw Machining"],
+    "location": "Brentwood, NY"
+  },
+  {
+    "business_name": "Corning Aerospace and Defense",
+    "address": "Corning, NY",
+    "phone": "607-974-9000",
+    "email": "",
+    "website": "",
+    "services": ["CNC Machining", "CNC Milling", "Precision Machining", "Aerospace Components"],
+    "location": "Corning, NY"
+  },
+  {
+    "business_name": "Owens Industries, LLC",
+    "address": "Oak Creek, WI (Serves all New York)",
+    "phone": "",
+    "email": "",
+    "website": "https://www.owensind.com/MachineShop/NewYork",
+    "services": ["5-Axis CNC Machining", "Wire EDM", "Aerospace CNC Machining", "HERMLE 5-axis CNC", "Agie Charmilles Wire EDM", "Zeiss Inspection", "DMG MORI CNC Milling", "CNC Turning"],
+    "location": "Serves NY State"
+  },
+  {
+    "business_name": "JEM International",
+    "address": "1 E 33rd Street, New York, NY 10016",
+    "phone": "(212) 889-1012",
+    "email": "Tammy@jeminc.net",
+    "website": "https://www.jeminc.net/",
+    "services": ["CNC Machining", "Precision Manufacturing"],
+    "location": "New York, NY"
+  },
+  {
+    "business_name": "Noszko Machine Co",
+    "address": "1182 Montauk Highway, Mastic, New York 11950",
+    "phone": "(631) 281-3255",
+    "email": "",
+    "website": "",
+    "services": ["Machine Shop Services", "CNC Machining"],
+    "location": "Mastic, NY (Long Island)"
+  },
+  {
+    "business_name": "G & L Precision Products Inc",
+    "address": "180 Oser Avenue Suite 900, Hauppauge, New York 11788",
+    "phone": "(631) 436-9229",
+    "email": "",
+    "website": "",
+    "services": ["Precision Machining", "CNC Services"],
+    "location": "Hauppauge, NY (Long Island)"
+  },
+  {
+    "business_name": "Jamco Aerospace Inc",
+    "address": "121 East Industry Court, Deer Park, New York 11729",
+    "phone": "(631) 586-7900",
+    "email": "",
+    "website": "",
+    "services": ["Aerospace CNC Machining", "Precision Machining", "Aerospace Components"],
+    "location": "Deer Park, NY (Long Island)"
+  },
+  {
+    "business_name": "Island Machine Co",
+    "address": "12 Evergreen Place, Deer Park, New York 11729",
+    "phone": "(631) 667-9393",
+    "email": "",
+    "website": "",
+    "services": ["Machine Shop Services", "CNC Machining"],
+    "location": "Deer Park, NY (Long Island)"
+  },
+  {
+    "business_name": "JF Machine Corporation",
+    "address": "89 Otis Street, West Babylon, New York 11704",
+    "phone": "(631) 491-7273",
+    "email": "",
+    "website": "",
+    "services": ["CNC Machining", "Precision Machining"],
+    "location": "West Babylon, NY (Long Island)"
+  },
+  {
+    "business_name": "Kondor Technologies Inc",
+    "address": "206 Christopher Street, Ronkonkoma, New York 11779",
+    "phone": "(631) 471-8832",
+    "email": "",
+    "website": "",
+    "services": ["CNC Machining", "Precision Manufacturing"],
+    "location": "Ronkonkoma, NY (Long Island)"
+  },
+  {
+    "business_name": "Lamar Industries Inc",
+    "address": "148 Lamar Street, West Babylon, New York 11704",
+    "phone": "(631) 643-3691",
+    "email": "",
+    "website": "",
+    "services": ["CNC Machining", "Precision Manufacturing"],
+    "location": "West Babylon, NY (Long Island)"
+  },
+  {
+    "business_name": "Malco Precision Products",
+    "address": "138 Lamar Street Unit B, West Babylon, New York 11704",
+    "phone": "(631) 253-0720",
+    "email": "",
+    "website": "",
+    "services": ["Precision Machining", "CNC Services"],
+    "location": "West Babylon, NY (Long Island)"
+  },
+  {
+    "business_name": "TFE Precision Parts",
+    "address": "921 Lincoln Avenue Suite 9, Holbrook, New York 11741",
+    "phone": "(631) 563-0843",
+    "email": "",
+    "website": "",
+    "services": ["Precision Parts", "CNC Machining"],
+    "location": "Holbrook, NY (Long Island)"
+  },
+  {
+    "business_name": "Wilco Industries Inc",
+    "address": "788 Marconi Avenue, Ronkonkoma, New York 11779",
+    "phone": "(631) 588-6992",
+    "email": "",
+    "website": "",
+    "services": ["CNC Machining", "Manufacturing Services"],
+    "location": "Ronkonkoma, NY (Long Island)"
+  },
+  {
+    "business_name": "Kaytec IND Corporation",
+    "address": "140 Remington Boulevard, Ronkonkoma, New York 11779",
+    "phone": "(631) 467-7700",
+    "email": "",
+    "website": "",
+    "services": ["CNC Machining", "Industrial Manufacturing"],
+    "location": "Ronkonkoma, NY (Long Island)"
+  },
+  {
+    "business_name": "Long Island Water Jet",
+    "address": "140 Keyland Court Unit 9, Bohemia, New York 11716",
+    "phone": "(631) 244-0638",
+    "email": "",
+    "website": "",
+    "services": ["Water Jet Cutting", "CNC Machining"],
+    "location": "Bohemia, NY (Long Island)"
+  },
+  {
+    "business_name": "Vanguard Metals Inc",
+    "address": "135 Brightside Avenue, Central Islip, New York 11722",
+    "phone": "(631) 234-6500",
+    "email": "",
+    "website": "",
+    "services": ["Metal Fabrication", "CNC Machining"],
+    "location": "Central Islip, NY (Long Island)"
+  }
+]

@@ -1,0 +1,178 @@
+[
+  {
+    "name": "Washington Machine Works",
+    "address": "5211 1st Ave S",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98108",
+    "phone": "(206) 767-2688",
+    "email": "info@washingtonmachineworks.com",
+    "website": "https://www.washingtonmachineworks.com",
+    "services": ["CNC milling", "CNC turning", "large parts machining", "prototypes", "repairs", "maintenance", "fabrication", "assembly"]
+  },
+  {
+    "name": "Ballard Machine Works",
+    "address": "915 NW 49th Street",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98107",
+    "phone": "(206) 972-4622",
+    "email": "grant@ballardmachineworks.com",
+    "website": "https://ballardmachineworks.com/",
+    "services": ["CNC milling", "CNC turning", "production machining", "contract manufacturing", "prototyping", "maintenance", "repair", "CAD modeling"]
+  },
+  {
+    "name": "Seattle Precision Machining",
+    "address": "305 S Dawson Street",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98108",
+    "phone": "(206) 659-9943",
+    "email": "seattleprecisionmachining@gmail.com",
+    "website": "https://www.seattleprecisionmachining.com/",
+    "services": ["CNC milling", "CNC turning", "production machining", "contract manufacturing", "CAD prototyping", "product design", "engineering consulting"]
+  },
+  {
+    "name": "Puget Sound Precision",
+    "address": "5800 W. Werner Rd. Suite A",
+    "city": "Bremerton",
+    "state": "WA",
+    "zip": "98312",
+    "phone": "(360) 297-3939",
+    "email": "info@pugetsoundprecision.com",
+    "website": "https://www.pugetsoundprecision.com/",
+    "services": ["CNC machining", "screw machine products", "precision parts", "sub-assemblies", "prototype machining", "production machining"]
+  },
+  {
+    "name": "EDJ Precision Machine",
+    "address": "",
+    "city": "Everett",
+    "state": "WA",
+    "zip": "",
+    "phone": "(425) 745-3937",
+    "email": null,
+    "website": "https://edjprecision.com/",
+    "services": ["CNC milling", "CNC turning", "lathe turning", "close tolerance machining", "heat treating", "grinding", "plating", "powder coating"]
+  },
+  {
+    "name": "Valley Machine Shop I - Kent",
+    "address": "1166 6th Avenue N",
+    "city": "Kent",
+    "state": "WA",
+    "zip": "98032",
+    "phone": "(425) 226-5040",
+    "email": "jerry@vmshop.com",
+    "website": "https://www.vmshop.com/",
+    "services": ["CNC machining", "5-axis milling", "mill machine centers", "turning", "precision aerospace parts"]
+  },
+  {
+    "name": "Valley Machine Shop II - Clarkston",
+    "address": "911 17th Street",
+    "city": "Clarkston",
+    "state": "WA",
+    "zip": "99403",
+    "phone": "(206) 954-0202",
+    "email": "jerry@vmshop.com",
+    "website": "https://www.vmshop.com/",
+    "services": ["CNC machining", "5-axis milling", "mill machine centers", "turning", "precision aerospace parts"]
+  },
+  {
+    "name": "American Manufacturing Solutions",
+    "address": "6021 E. Mansfield Ave, Suite 500",
+    "city": "Spokane Valley",
+    "state": "WA",
+    "zip": "99212",
+    "phone": "(509) 535-0049",
+    "email": null,
+    "website": "https://american-mfg-solutions.com/",
+    "services": ["CNC milling", "CNC turning", "5-axis machining", "tool and die design", "contract manufacturing", "OEM supply"]
+  },
+  {
+    "name": "Intermountain Machine",
+    "address": "5328 N. Sycamore",
+    "city": "Spokane",
+    "state": "WA",
+    "zip": "99217",
+    "phone": "(509) 482-0431",
+    "email": null,
+    "website": "https://intermountainmachine.com/",
+    "services": ["CNC machining", "machine shop services"]
+  },
+  {
+    "name": "RS Machine Inc",
+    "address": "6133 NE 63rd Street",
+    "city": "Vancouver",
+    "state": "WA",
+    "zip": "98661",
+    "phone": "(360) 694-0044",
+    "email": "info@rsmachineinc.com",
+    "website": "https://rsmachineinc.com/",
+    "services": ["CNC milling", "CNC turning", "CNC burning", "large parts machining", "forklift attachment parts", "hydraulic cylinder repair"]
+  },
+  {
+    "name": "Gillaspie Manufacturing",
+    "address": "10022 NE 72nd Ave. Suite #102",
+    "city": "Vancouver",
+    "state": "WA",
+    "zip": "98686",
+    "phone": "(360) 260-1975",
+    "email": "sales@gillaspiemfg.com",
+    "website": "https://www.gillaspiemfg.com/",
+    "services": ["CNC machining", "precision metal stamping", "tooling equipment", "brackets", "contacts", "shielding"]
+  },
+  {
+    "name": "Schurman Machine Inc",
+    "address": "23201 NE 10th Ave",
+    "city": "Ridgefield",
+    "state": "WA",
+    "zip": "98642",
+    "phone": "(360) 887-3193",
+    "email": "info@schurmanmfg.com",
+    "website": "https://www.schurmanmfg.com/",
+    "services": ["CNC machining", "heavy industrial machining", "machining", "fabrication", "inspection"]
+  },
+  {
+    "name": "TMF Inc",
+    "address": "26273 Twelve Trees Lane NW Suite B",
+    "city": "Poulsbo",
+    "state": "WA",
+    "zip": "98370",
+    "phone": "(360) 598-1750",
+    "email": "sales@tmf-inc.com",
+    "website": "https://tmf-inc.com/",
+    "services": ["5-axis CNC machining", "CNC milling", "CNC turning", "mill-turn", "laser marking", "assembly"]
+  },
+  {
+    "name": "Union Machine",
+    "address": "3721 S Lawrence St",
+    "city": "Tacoma",
+    "state": "WA",
+    "zip": "98409",
+    "phone": "(253) 476-0053",
+    "email": null,
+    "website": null,
+    "services": ["CNC machining", "manual machining", "hard metals", "plastics", "aircraft parts", "commercial manufacturing"]
+  },
+  {
+    "name": "Mega Machine Shop",
+    "address": "",
+    "city": "Tumwater",
+    "state": "WA",
+    "zip": "",
+    "phone": "",
+    "email": null,
+    "website": "https://www.megamachineshop.com/",
+    "services": ["3-axis milling", "4-axis milling", "5-axis milling", "multi-axis turning", "aerospace machining", "commercial machining"]
+  },
+  {
+    "name": "Western Machine Works",
+    "address": "12005 N. Burgard Road",
+    "city": "Portland",
+    "state": "OR",
+    "zip": "97203",
+    "phone": "(503) 286-7791",
+    "email": "info@westernmachine.com",
+    "website": "https://westernmachine.com/washington-machine-shop/",
+    "services": ["CNC milling", "CNC turning", "precision machining", "roll grinding", "thermal spray", "industrial equipment repair", "large component machining"]
+  }
+]

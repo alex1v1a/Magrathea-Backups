@@ -1,0 +1,177 @@
+[
+  {
+    "business_name": "Distinctive Manufacturing Group",
+    "address": "Denver, CO",
+    "phone": "720-405-8999",
+    "email": null,
+    "website": "https://distinctivemfg.co"
+  },
+  {
+    "business_name": "Focused On Machining",
+    "address": "8230 N Cora St, Louviers, CO 80131",
+    "phone": "303-922-3076",
+    "email": null,
+    "website": "https://www.focusedonmachining.com"
+  },
+  {
+    "business_name": "Tri-Gon Precision, Inc.",
+    "address": "820 Sahwatch Street, Colorado Springs, CO",
+    "phone": "719-473-2635",
+    "email": null,
+    "website": "https://www.tri-gon.com"
+  },
+  {
+    "business_name": "Summit CNC",
+    "address": "3211 West Hampden Ave, Englewood, CO 80110",
+    "phone": "303-285-2211",
+    "email": "service@summitcnc.com",
+    "website": "https://summitcnc.com"
+  },
+  {
+    "business_name": "Colorado Machine Works",
+    "address": "5850 Terminal Ave, Colorado Springs, CO 80915",
+    "phone": "719-396-7070",
+    "email": "info@coloradomachineworks.com",
+    "website": "https://coloradomachineworks.com"
+  },
+  {
+    "business_name": "Advanced Precision Machining",
+    "address": "1131 Delaware Ave. Suite #3, Longmont, CO 80501",
+    "phone": "720-838-8111",
+    "email": null,
+    "website": "https://advancedprecisionmachine.com"
+  },
+  {
+    "business_name": "Precise Cast",
+    "address": "Denver, CO",
+    "phone": "303-288-8221",
+    "email": null,
+    "website": "https://precisecast.com"
+  },
+  {
+    "business_name": "JBJ Precision Industries",
+    "address": "955 Elkton Drive, Colorado Springs, CO 80907",
+    "phone": "719-594-6363",
+    "email": null,
+    "website": "https://jbjprecision.com"
+  },
+  {
+    "business_name": "Owens Industries, Inc.",
+    "address": "Serving Colorado from Oak Creek, WI",
+    "phone": null,
+    "email": null,
+    "website": "https://www.owensind.com"
+  },
+  {
+    "business_name": "RAM Tool, Inc.",
+    "address": "Grafton, WI (serves Colorado)",
+    "phone": null,
+    "email": null,
+    "website": "https://www.ramtoolinc.com"
+  },
+  {
+    "business_name": "Roberson Machine Company",
+    "address": "Serving Colorado Springs, CO",
+    "phone": "573-646-3996",
+    "email": null,
+    "website": "https://robersontool.com"
+  },
+  {
+    "business_name": "The CNC Machine Shop",
+    "address": "Morrison, CO",
+    "phone": null,
+    "email": null,
+    "website": "https://www.mfg.com/manufacturer/the-cnc-machine-shop-morrison-colorado-1511610"
+  },
+  {
+    "business_name": "Howell Precision Machine and Engineering, Inc.",
+    "address": "Colorado Springs, CO",
+    "phone": null,
+    "email": null,
+    "website": "https://www.mfg.com/manufacturer/howell-precision-machine-and-engineering-inc-colorado-springs-colorado-1368936"
+  },
+  {
+    "business_name": "Goltec CNC Precision Machining",
+    "address": "Arvada, CO",
+    "phone": null,
+    "email": null,
+    "website": "https://www.mfg.com/manufacturer/goltec-cnc-precision-machining-arvada-colorado-1797837"
+  },
+  {
+    "business_name": "Platinum Precision Machining, Inc.",
+    "address": "Aurora, CO",
+    "phone": null,
+    "email": null,
+    "website": "https://www.mfg.com/manufacturer/platinum-precision-machining-inc-aurora-colorado-671143"
+  },
+  {
+    "business_name": "S & R Machine",
+    "address": "Englewood, CO",
+    "phone": null,
+    "email": null,
+    "website": "https://www.mfg.com/manufacturer/s-r-machine-englewood-colorado-1566242"
+  },
+  {
+    "business_name": "Absolute Precision, Inc.",
+    "address": "Colorado Springs, CO",
+    "phone": null,
+    "email": null,
+    "website": "https://www.mfg.com/manufacturer/absolute-precision-colorado-springs-colorado-1346156"
+  },
+  {
+    "business_name": "Ruth Precision CNC",
+    "address": "Highlands Ranch, CO",
+    "phone": null,
+    "email": null,
+    "website": "https://www.mfg.com/manufacturer/ruth-precision-cnc-highlands-ranch-colorado-1792044"
+  },
+  {
+    "business_name": "SpecMaster",
+    "address": "Denver, CO",
+    "phone": null,
+    "email": null,
+    "website": "https://www.mfg.com/manufacturer/specmaster-denver-colorado-749380"
+  },
+  {
+    "business_name": "Express Prototype Machining LLC",
+    "address": "Sheridan, CO",
+    "phone": null,
+    "email": null,
+    "website": "https://www.mfg.com/manufacturer/express-prototype-machining-llc-sheridan-colorado-1839048"
+  },
+  {
+    "business_name": "Kineo Inc.",
+    "address": "Colorado Springs, CO",
+    "phone": null,
+    "email": null,
+    "website": "https://www.mfg.com/manufacturer/kineo-inc-colorado-springs-colorado-580899"
+  },
+  {
+    "business_name": "Springs Fabrication Inc.",
+    "address": "Colorado Springs, CO",
+    "phone": null,
+    "email": null,
+    "website": "https://www.mfg.com/manufacturer/springs-fabrication-inc-colorado-springs-colorado-1217994"
+  },
+  {
+    "business_name": "Faustson Tool",
+    "address": "6803 Joyce Street, Arvada, CO",
+    "phone": "303-420-7422",
+    "email": null,
+    "website": null
+  },
+  {
+    "business_name": "Kimble Precision, Inc.",
+    "address": "418 8th St SE, Unit B11, Loveland, CO 80537",
+    "phone": "970-667-2778",
+    "email": "LKimble@kimble-precision.com",
+    "website": "http://www.kimble-precision.com"
+  },
+  {
+    "business_name": "High Country Manufacturing, Inc.",
+    "address": "103 N. 4th St., Montrose, CO 81402",
+    "phone": "970-252-8755",
+    "email": null,
+    "website": "http://www.highcountrymachining.com"
+  }
+]

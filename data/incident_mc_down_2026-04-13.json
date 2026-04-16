@@ -1,0 +1,42 @@
+{
+  "operation": "INCIDENT_MC_DOWN_2026-04-13",
+  "date": "2026-04-13",
+  "type": "INCIDENT",
+  "severity": "CRITICAL",
+  "status": "ONGOING",
+  "detected_by": "Deep Thought (afternoon checks)",
+  "detected_at": "2026-04-13T16:10:00",
+  "system": "Mission Control (Marvin)",
+  "host": "10.0.1.90",
+  "impact": "Vectarr dashboard and API offline - no shop/customer tracking possible",
+  "symptoms": [
+    "Host 10.0.1.90 not responding to ping",
+    "SSH connection timeout",
+    "HTTP 10.0.1.90:3000 timeout",
+    "HTTP 10.0.1.90:8080 timeout"
+  ],
+  "diagnostics": {
+    "ping": "FAILED - host unreachable",
+    "ssh": "FAILED - connection timeout",
+    "http_3000": "FAILED - timeout",
+    "http_8080": "FAILED - timeout"
+  },
+  "root_cause_analysis": "Host appears to be powered off or network disconnected. Last known status from 2026-03-26 MEMORY.md noted Marvin as 'completely offline, requires physical intervention'.",
+  "action_required": "Physical intervention needed on Marvin (10.0.1.90)",
+  "action_items": [
+    "Check power status on Marvin's machine",
+    "Check network connection",
+    "Restart machine if powered off",
+    "Restart Mission Control services if network issue"
+  ],
+  "workaround": "Local tracking files created in data/ directory for sync when MC returns",
+  "related_operations": [
+    "SCRIPT_IMPROVEMENTS_2026-04-13"
+  ],
+  "notes": [
+    "Cannot perform shop outreach tracking without Mission Control",
+    "Customer project tracking offline",
+    "Content calendar inaccessible",
+    "Local JSON tracking created as temporary workaround"
+  ]
+}

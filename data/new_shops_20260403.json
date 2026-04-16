@@ -1,0 +1,102 @@
+[
+  {
+    "shop_name": "FTC Industries",
+    "city": "Arlington",
+    "state": "TX",
+    "email": "rick.flores@ftcindustries.com",
+    "phone": "817-385-0021",
+    "website": "https://ftcindustries.com",
+    "capabilities": "CNC Turning, CNC Milling, Manufacturing, Assembly, Welding, Parts Finishing, Mechanical Design Support, ISO 9000 compliant",
+    "contact_name": "Rick Flores"
+  },
+  {
+    "shop_name": "NJC Machine Co.",
+    "city": "Franklin Park",
+    "state": "IL",
+    "email": "contactus@njcmachine.com",
+    "phone": "847-455-4400",
+    "website": "https://www.njcmachine.com",
+    "capabilities": "5-axis CNC mills, CNC machining, precision machining",
+    "contact_name": "Kevin Graff"
+  },
+  {
+    "shop_name": "Marathon Precision",
+    "city": "Wheeling",
+    "state": "IL",
+    "email": "sales@marathonprecision.com",
+    "phone": "847-398-5165",
+    "website": "https://marathonprecision.com",
+    "capabilities": "CNC Milling, CNC Turning, Conventional Machining, Grinding, Sinker and Wire EDM, Waterjet Cutting, Laser Cutting, Fabrication, ISO 9001 certified",
+    "contact_name": "Sales"
+  },
+  {
+    "shop_name": "Wagner Machine Co.",
+    "city": "Champaign",
+    "state": "IL",
+    "email": "info@wagner-machine.com",
+    "phone": "217-384-0072",
+    "website": "https://wagner-machine.com",
+    "capabilities": "CNC machining, precision machining, design services",
+    "contact_name": "Kurt Wagner"
+  },
+  {
+    "shop_name": "CCI Companies",
+    "city": "Wixom",
+    "state": "MI",
+    "email": "sales@cci-companies.com",
+    "phone": "248-477-4230",
+    "website": "https://cci-cnc.com",
+    "capabilities": "Precision CNC machining, custom manufacturing, military, testing and sensor technology, refrigeration",
+    "contact_name": "Sales"
+  },
+  {
+    "shop_name": "Centennial Machining",
+    "city": "Centennial",
+    "state": "CO",
+    "email": "contact@centennialmachining.com",
+    "phone": "303-680-5151",
+    "website": "https://www.centennialmachining.com",
+    "capabilities": "CNC machining mills/lathe, prototype, short run and production, aerospace, defense, medical, ISO-9001:2015 certified",
+    "contact_name": "Jared Hogan"
+  },
+  {
+    "shop_name": "Summit CNC",
+    "city": "Denver",
+    "state": "CO",
+    "email": "service@summitcnc.com",
+    "phone": "303-285-2211",
+    "website": "https://summitcnc.com",
+    "capabilities": "High-Precision CNC Machining, Mechanical Assembly, AS9100D Certified, ISO 9001:2015 Certified, ITAR Registered, aerospace, defense, medical",
+    "contact_name": "Jason Korbelik"
+  },
+  {
+    "shop_name": "Responsive Machining",
+    "city": "Titusville",
+    "state": "FL",
+    "email": "info@responsivemachining.com",
+    "phone": "321-225-4011",
+    "website": "https://www.responsivemachining.com",
+    "capabilities": "CNC milling, CNC turning, prototype machining, parts fabrication, short or long term production",
+    "contact_name": "Sales"
+  },
+  {
+    "shop_name": "Capital City Machine Shop",
+    "city": "Atlanta",
+    "state": "GA",
+    "email": "mmcclure@capitalcitymachineshop.com",
+    "phone": "770-447-9545",
+    "website": "https://capitalcitymachineshop.com",
+    "capabilities": "General machining services",
+    "contact_name": "M. McClure"
+  },
+  {
+    "shop_name": "CRI Machining",
+    "city": "Blairsville",
+    "state": "GA",
+    "email": "sales@crimachining.com",
+    "phone": "706-745-9599",
+    "website": "https://crimachining.com",
+    "capabilities": "CNC machining services",
+    "contact_name": "Sales"
+  }
+]

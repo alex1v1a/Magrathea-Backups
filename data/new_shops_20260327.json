@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Minco Inc",
+    "city": "Conroe",
+    "state": "TX",
+    "email": "info@mincoinc.com",
+    "phone": "(936) 756-5811",
+    "subtypes": "CNC Machining, Precision Machining, Oilfield Machining",
+    "site": "https://www.mincoinc.com",
+    "full_name": "Jim Cheatham",
+    "first_name": "Jim",
+    "last_name": "Cheatham"
+  },
+  {
+    "name": "Texas Machining",
+    "city": "Houston",
+    "state": "TX",
+    "email": "info@texas-machining.com",
+    "phone": "",
+    "subtypes": "CNC Machining, 3D Printing, Precision Machining",
+    "site": "https://www.texas-machining.com",
+    "full_name": "",
+    "first_name": "",
+    "last_name": ""
+  },
+  {
+    "name": "Halsey Manufacturing",
+    "city": "Denton",
+    "state": "TX",
+    "email": "Sales@HalseyMFG.com",
+    "phone": "940-566-3306",
+    "subtypes": "CNC Machining, CNC Turning, CNC Milling, Laser Engraving",
+    "site": "https://halseymfg.com",
+    "full_name": "",
+    "first_name": "",
+    "last_name": ""
+  },
+  {
+    "name": "Dallas Precision Machining",
+    "city": "Carrollton",
+    "state": "TX",
+    "email": "info@dallasprecisionmachining.com",
+    "phone": "(469) 588-3788",
+    "subtypes": "CNC Machining, CNC Milling, Sheet Metal Fabrication, Laser Cutting",
+    "site": "https://dallasprecisionmachining.com",
+    "full_name": "",
+    "first_name": "",
+    "last_name": ""
+  },
+  {
+    "name": "Conroe Machine LLC",
+    "city": "Conroe",
+    "state": "TX",
+    "email": "info@conroemachine.com",
+    "phone": "(936) 441-5700",
+    "subtypes": "Precision Machining, CNC Machining, Grinding, Milling, Turning",
+    "site": "https://www.conroemachine.com",
+    "full_name": "",
+    "first_name": "",
+    "last_name": ""
+  }
+]

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vectarr Mission Control</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <h1>VECTARR MISSION CONTROL</h1>
+            <span class="version-badge">v2.0 Consolidated</span>
+        </div>
+        <div class="status">
+            <div class="status-item">
+                <span class="status-dot" id="system-status-dot"></span>
+                <span id="system-status-text">System Online</span>
+            </div>
+            <div class="status-item">
+                <span class="connection-indicator" id="connection-status" title="Backend Connection">API</span>
+            </div>
+            <div class="status-item">
+                <span id="current-time"></span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="nav-tabs">
+        <div class="nav-tab active" data-tab="overview" onclick="showTab('overview')">Overview</div>
+        <div class="nav-tab" data-tab="kanban" onclick="showTab('kanban')">Kanban Boards</div>
+        <div class="nav-tab" data-tab="calendar" onclick="showTab('calendar')">Calendar</div>
+        <div class="nav-tab" data-tab="scheduler" onclick="showTab('scheduler')">Scheduler</div>
+        <div class="nav-tab" data-tab="cron" onclick="showTab('cron')">Cron Jobs</div>
+        <div class="nav-tab"><a href="fleet-status.html" style="color: inherit; text-decoration: none;">Fleet Status</a></div>
+        <div class="nav-tab"><a href="cron-calendar.html" style="color: inherit; text-decoration: none;">Cron Calendar</a></div>
+        <div class="nav-tab"><a href="ssh-mesh.html" style="color: inherit; text-decoration: none;">SSH Mesh</a></div>
+    </div>
+    
+    <div class="content">
+        <!-- Overview Tab -->
+        <div id="overview" class="tab-content active">
+            <div class="stats-grid">
+                <div class="stat-card" data-stat="shopsContacted">
+                    <div class="stat-label">Machine Shops Contacted</div>
+                    <div class="stat-value" id="stat-shops">--</div>
+                    <div class="stat-change positive" id="stat-shops-change">Loading...</div>
+                </div>
+                <div class="stat-card" data-stat="activeProjects">
+                    <div class="stat-label">Active Projects</div>
+                    <div class="stat-value" id="stat-projects">--</div>
+                    <div class="stat-change positive" id="stat-projects-change">Loading...</div>
+                </div>
+                <div class="stat-card" data-stat="emailsSent">
+                    <div class="stat-label">Emails Sent Today</div>
+                    <div class="stat-value" id="stat-emails">--</div>
+                    <div class="stat-change positive" id="stat-emails-change">Loading...</div>
+                </div>
+                <div class="stat-card" data-stat="responseRate">
+                    <div class="stat-label">Response Rate</div>
+                    <div class="stat-value" id="stat-response">--%</div>
+                    <div class="stat-change positive" id="stat-response-change">Loading...</div>
+                </div>
+            </div>
+            
+            <div class="section-header">
+                <h2 class="section-title">Today's Schedule</h2>
+                <button class="btn btn-primary" onclick="addEvent()">+ Add Event</button>
+            </div>
+            
+            <div class="scheduler-container" id="today-scheduler">
+                <!-- Dynamically populated -->
+            </div>
+            
+            <div class="section-header" style="margin-top: 30px;">
+                <h2 class="section-title">Recent Activity</h2>
+                <button class="btn btn-secondary" onclick="refreshActivity()">Refresh</button>
+            </div>
+            
+            <div class="activity-list" id="activity-list">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+        
+        <!-- Kanban Tab -->
+        <div id="kanban" class="tab-content">
+            <div class="board-selector">
+                <select id="kanban-board-select" onchange="switchKanbanBoard()">
+                    <option value="machine-shops">Machine Shop Outreach Pipeline</option>
+                    <option value="customer-projects">Customer Project Tracking</option>
+                    <option value="content-calendar">Content Calendar</option>
+                    <option value="business-ops">Business Operations</option>
+                    <option value="strategic">Strategic Initiatives</option>
+                </select>
+            </div>
+            
+            <div class="section-header">
+                <h2 class="section-title" id="kanban-title">Machine Shop Outreach Pipeline</h2>
+                <div>
+                    <button class="btn btn-secondary">Filter</button>
+                    <button class="btn btn-primary" onclick="addKanbanCard()">+ Add Card</button>
+                </div>
+            </div>
+            
+            <div class="kanban-board" id="kanban-board">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+        
+        <!-- Calendar Tab -->
+        <div id="calendar" class="tab-content">
+            <div class="section-header">
+                <h2 class="section-title" id="calendar-month">March 2026</h2>
+                <div class="calendar-nav">
+                    <button class="btn btn-secondary" onclick="prevMonth()">&lt; Prev</button>
+                    <button class="btn btn-secondary" onclick="currentMonth()">Today</button>
+                    <button class="btn btn-secondary" onclick="nextMonth()">Next &gt;</button>
+                </div>
+            </div>
+            
+            <div class="calendar-grid" id="calendar-grid">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+        
+        <!-- Scheduler Tab -->
+        <div id="scheduler" class="tab-content">
+            <div class="section-header">
+                <h2 class="section-title">Daily Scheduler</h2>
+                <button class="btn btn-primary" onclick="addScheduledTask()">+ Add Task</button>
+            </div>
+            
+            <div class="scheduler-container" id="scheduler-container">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+        
+        <!-- Cron Jobs Tab -->
+        <div id="cron" class="tab-content">
+            <div class="section-header">
+                <h2 class="section-title">Active Cron Jobs</h2>
+                <button class="btn btn-primary" onclick="addCronJob()">+ Add Job</button>
+            </div>
+            
+            <div class="cron-list" id="cron-list">
+                <!-- Dynamically populated -->
+            </div>
+            
+            <div class="section-header" style="margin-top: 30px;">
+                <h2 class="section-title">Job History</h2>
+            </div>
+            
+            <div class="cron-list" id="cron-history">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loading-spinner"></div>
+        <span>Loading...</span>
+    </div>
+    
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+    
+    <script src="api-client.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

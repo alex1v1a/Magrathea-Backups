@@ -1,0 +1,101 @@
+[
+  {
+    "shop_name": "Dallas Precision Machining",
+    "city": "Carrollton",
+    "state": "TX",
+    "email": "info@dallasprecisionmachining.com",
+    "phone": "469-588-3788",
+    "website": "https://dallasprecisionmachining.com",
+    "capabilities": "5-axis milling, mill-turn, 4th-axis machining, prototypes and production runs",
+    "contact_name": "Sales",
+    "date_discovered": "2026-04-02"
+  },
+  {
+    "shop_name": "All Craft Manufacturing",
+    "city": "Cincinnati",
+    "state": "OH",
+    "email": "sales@allcraftmfg.com",
+    "phone": "(513) 661-3383",
+    "website": "https://allcraftmfg.com",
+    "capabilities": "Work holding and fixturing, challenging castings and stock work",
+    "contact_name": "Sales",
+    "date_discovered": "2026-04-02"
+  },
+  {
+    "shop_name": "Pinnacle Tool Engineering",
+    "city": "Cleveland",
+    "state": "OH",
+    "email": "cookracing@ameritech.net",
+    "phone": "(216) 252-1868",
+    "website": "https://www.pinnacletooleng.com",
+    "capabilities": "Machine tooling, CNC machining",
+    "contact_name": "Sales",
+    "date_discovered": "2026-04-02"
+  },
+  {
+    "shop_name": "Illinois Valley Machine",
+    "city": "Peru",
+    "state": "IL",
+    "email": "office@illinoisvalleymachine.com",
+    "phone": "1 (815) 586-4511",
+    "website": "https://www.illinoisvalleymachine.com",
+    "capabilities": "CNC machining, general machine shop services",
+    "contact_name": "Office",
+    "date_discovered": "2026-04-02"
+  },
+  {
+    "shop_name": "EMC Machining",
+    "city": "Bensenville",
+    "state": "IL",
+    "email": "info@emcmachining.com",
+    "phone": "(630) 860-7076",
+    "website": "http://www.emcmachining.com",
+    "capabilities": "CNC milling and turning, prototyping to production",
+    "contact_name": "Sales",
+    "date_discovered": "2026-04-02"
+  },
+  {
+    "shop_name": "Brogan & Patrick",
+    "city": "Mundelein",
+    "state": "WI",
+    "email": "sales@brogan-patrick.com",
+    "phone": "262-723-6909",
+    "website": "https://www.brogan-patrick.com",
+    "capabilities": "Precision CNC machining, complex parts, tight-tolerance parts",
+    "contact_name": "Sales",
+    "date_discovered": "2026-04-02"
+  },
+  {
+    "shop_name": "RL CNC Machining",
+    "city": "Phoenixville",
+    "state": "PA",
+    "email": "info@rlcncmachining.com",
+    "phone": "484.752.2645",
+    "website": "https://www.rlcncmachining.com",
+    "capabilities": "Aerospace CNC machining, medical, OEM, precision CNC",
+    "contact_name": "Sales",
+    "date_discovered": "2026-04-02"
+  },
+  {
+    "shop_name": "Denver Machine Shop",
+    "city": "Henderson",
+    "state": "CO",
+    "email": "sales@denvermachine.com",
+    "phone": "303-295-6000",
+    "website": "https://www.denvermachine.com",
+    "capabilities": "Heavy custom machined parts, larger sized or heavy part CNC",
+    "contact_name": "Sales",
+    "date_discovered": "2026-04-02"
+  },
+  {
+    "shop_name": "Kineo",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "email": "Sales@kineo.us",
+    "phone": "(719) 278-3516",
+    "website": "https://kineo.us",
+    "capabilities": "ISO 13485:2016 Machine Shop, precision machining",
+    "contact_name": "Sales",
+    "date_discovered": "2026-04-02"
+  }
+]

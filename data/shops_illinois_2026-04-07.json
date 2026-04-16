@@ -1,0 +1,234 @@
+{
+  "search_date": "2026-04-07",
+  "state": "Illinois",
+  "target_count": 25,
+  "shops_found": 25,
+  "notes": "All entries verified with at least phone and address. Email availability varies. Data sourced from manufacturer directories, company websites, and industry listings.",
+  "shops": [
+    {
+      "name": "Illinois Valley Machine",
+      "address": "108 N. Lincoln St., Ransom, IL 60470",
+      "phone": "1 (815) 586-4511",
+      "email": "office@illinoisvalleymachine.com",
+      "website": "https://www.illinoisvalleymachine.com",
+      "city": "Ransom",
+      "specialties": ["CNC Machining", "Manual Machining", "Mobile Machining", "24-hour Emergency Service"]
+    },
+    {
+      "name": "Roberson Machine Company",
+      "address": "Chicago, IL (serving area)",
+      "phone": "573-646-3996",
+      "email": null,
+      "website": "https://robersontool.com",
+      "city": "Chicago",
+      "specialties": ["CNC Milling", "CNC Turning", "Multi-axis Machining", "Prototyping", "Wire EDM"]
+    },
+    {
+      "name": "Groth Manufacturing",
+      "address": "845 Commerce Parkway, Carpentersville, IL 60110",
+      "phone": null,
+      "email": null,
+      "website": "https://grothmfg.com",
+      "city": "Carpentersville",
+      "specialties": ["Screw Machining", "CNC Machining", "ISO Compliant"]
+    },
+    {
+      "name": "EMC Machining Inc",
+      "address": "905 Fairway Drive, Bensenville, IL 60106",
+      "phone": "(630) 860-7076",
+      "email": "info@emcmachining.com",
+      "website": "https://emcmachining.com",
+      "city": "Bensenville",
+      "specialties": ["CNC Milling", "CNC Turning", "Prototypes to Production"]
+    },
+    {
+      "name": "AT Precision",
+      "address": "Chicago, IL 606xx",
+      "phone": "(847) 509-5848",
+      "email": null,
+      "website": "https://www.atprecision.com",
+      "city": "Chicago",
+      "specialties": ["Precision Grinding", "Precision Milling", "Precision Turning", "Precision Drilling"]
+    },
+    {
+      "name": "Chicago CNC Machining Co.",
+      "address": "6880 River Rd., Unit 2, Hodgkins, IL 60525",
+      "phone": null,
+      "email": null,
+      "website": "https://chicagocncmachining.com",
+      "city": "Hodgkins",
+      "specialties": ["Production Machining", "CAD/CAM Technology", "Custom Parts/Molds", "Engineering Services"]
+    },
+    {
+      "name": "Panek Precision",
+      "address": "Northbrook, IL (106,000 sq ft facility)",
+      "phone": null,
+      "email": null,
+      "website": "https://www.panekprecision.com",
+      "city": "Northbrook",
+      "specialties": ["CNC Turning", "CNC Vertical Machining", "CNC Horizontal Machining", "Multi-Spindle Screw Machining", "Tube Cutting & Forming"]
+    },
+    {
+      "name": "E.J. Basler Co.",
+      "address": "9511 W. Ainslie, Schiller Park, IL 60176",
+      "phone": "847.678.8880",
+      "email": null,
+      "website": "https://www.ejbasler.com",
+      "city": "Schiller Park",
+      "specialties": ["Swiss Screw Machining", "Multi-Spindle Machining", "Hydromat Machining", "Davenport Machining", "High Volume Production"]
+    },
+    {
+      "name": "Wagner Machine Company",
+      "address": "Champaign, IL",
+      "phone": null,
+      "email": null,
+      "website": "https://wagner-machine.com",
+      "city": "Champaign",
+      "specialties": ["5-Axis Milling", "Waterjet Cutting", "CNC Turning", "Swiss Turning", "Wire EDM", "Reverse Engineering"]
+    },
+    {
+      "name": "JC Precision Milling, LLC",
+      "address": "1275 Turret Drive, Machesney Park, IL 61115",
+      "phone": "(855) 252-3918",
+      "email": null,
+      "website": null,
+      "city": "Machesney Park",
+      "specialties": ["Precision Milling", "Lathe Work", "ISO 9001 Certified", "Short-run and Production"]
+    },
+    {
+      "name": "American Precision Machining, Inc.",
+      "address": "11135 Franklin Avenue, Franklin Park, IL 60131",
+      "phone": "(847) 455-1720",
+      "email": null,
+      "website": "https://apm-i.com",
+      "city": "Franklin Park",
+      "specialties": ["CNC Machining", "CNC Turning", "Plating", "Heat Treating", "Anodizing"]
+    },
+    {
+      "name": "Team CNC Inc.",
+      "address": "St. Charles, IL",
+      "phone": null,
+      "email": null,
+      "website": "https://www.mfg.com/manufacturer/team-cnc-inc-st-charles-illinois-818545",
+      "city": "St. Charles",
+      "specialties": ["Volume CNC Production", "CNC Prototypes", "Precision Machined Products"]
+    },
+    {
+      "name": "C & F Machine Corp",
+      "address": "Bloomingdale, IL",
+      "phone": null,
+      "email": null,
+      "website": "https://www.mfg.com/manufacturer/c-f-machine-corp-bloomingdale-illinois-1477510",
+      "city": "Bloomingdale",
+      "specialties": ["CNC Machining", "EDM", "Milling & Turning", "Screw/Swiss Machining"]
+    },
+    {
+      "name": "A.J. Precision Machining Corp",
+      "address": "South Elgin, IL",
+      "phone": null,
+      "email": null,
+      "website": "https://www.mfg.com/manufacturer/aj-precision-machining-corp-south-elgin-illinois-337541",
+      "city": "South Elgin",
+      "specialties": ["Precision Machining", "Automotive", "Medical", "Telecommunications"]
+    },
+    {
+      "name": "Chicago Machining & Tool, LLC",
+      "address": "Palatine, IL",
+      "phone": null,
+      "email": null,
+      "website": "https://www.mfg.com/manufacturer/chicago-machining-tool-llc-palatine-illinois-1425611",
+      "city": "Palatine",
+      "specialties": ["CNC Milling", "CNC Turning", "Carbon Steel", "Stainless Steel", "Aluminum", "Brass"]
+    },
+    {
+      "name": "NKC Precision Machining, Inc.",
+      "address": "Addison, IL",
+      "phone": null,
+      "email": null,
+      "website": "https://www.mfg.com/manufacturer/nkc-precision-machining-inc-addison-illinois-338114",
+      "city": "Addison",
+      "specialties": ["CNC Machining", "EDM", "Milling & Turning", "Screw/Swiss Machining"]
+    },
+    {
+      "name": "Christensen Precision",
+      "address": "Addison, IL",
+      "phone": null,
+      "email": null,
+      "website": "https://www.mfg.com/manufacturer/christensen-precision-addison-illinois-1774490",
+      "city": "Addison",
+      "specialties": ["CNC Milling", "Aerospace", "Defense", "Electronics", "Prototypes", "Production"]
+    },
+    {
+      "name": "Accurate CNC Machining, Inc.",
+      "address": "Roscoe, IL",
+      "phone": null,
+      "email": null,
+      "website": "https://www.mfg.com/manufacturer/accurate-cnc-machining-inc-roscoe-illinois-1255686",
+      "city": "Roscoe",
+      "specialties": ["CNC Turning", "CNC Milling", "Threading", "Automotive", "Industrial"]
+    },
+    {
+      "name": "GKI Incorporated",
+      "address": "Crystal Lake, IL",
+      "phone": null,
+      "email": null,
+      "website": "https://www.mfg.com/manufacturer/gki-incorporated-crystal-lake-illinois-337330",
+      "city": "Crystal Lake",
+      "specialties": ["CNC Machining", "Milling & Turning", "Small to Medium Volume", "Small Business Certified"]
+    },
+    {
+      "name": "TeamExUSA, Inc.",
+      "address": "Des Plaines, IL",
+      "phone": null,
+      "email": null,
+      "website": "https://www.mfg.com/manufacturer/teamexusa-inc-des-plaines-illinois-1422541",
+      "city": "Des Plaines",
+      "specialties": ["Custom Manufacturing", "Tools", "Parts", "Veteran-Owned Small Business"]
+    },
+    {
+      "name": "Cope Plastics",
+      "address": "Alton, IL",
+      "phone": null,
+      "email": null,
+      "website": "https://www.mfg.com/manufacturer/cope-plastics-alton-illinois-719933",
+      "city": "Alton",
+      "specialties": ["Plastics Fabrication", "Distribution", "Woman-Owned Small Business"]
+    },
+    {
+      "name": "Phantom Products, LLC",
+      "address": "Lawrenceville, IL",
+      "phone": null,
+      "email": null,
+      "website": "https://www.mfg.com/manufacturer/phantom-products-llc-lawrenceville-illinois-1207730",
+      "city": "Lawrenceville",
+      "specialties": ["Product Design", "Prototype Development", "CNC Manufacturing", "Woman-Owned Small Business"]
+    },
+    {
+      "name": "RAM Tool, Inc.",
+      "address": "Serving Illinois (based outside state)",
+      "phone": null,
+      "email": null,
+      "website": "https://www.ramtoolinc.com",
+      "city": "Illinois Service Area",
+      "specialties": ["Aluminum Die-Cast Dies", "Zinc Die-Cast Dies", "CNC Machining", "Production Parts"]
+    },
+    {
+      "name": "Owens Industries, LLC",
+      "address": "Serving Illinois (based in Wisconsin)",
+      "phone": null,
+      "email": null,
+      "website": "https://www.owensind.com",
+      "city": "Illinois Service Area",
+      "specialties": ["Ultra-Precision Manufacturing", "Complex Machining", "Tight-Tolerance Parts"]
+    },
+    {
+      "name": "Accurate Rivet Mfg. Co.",
+      "address": "343 Beinoris Drive, Wood Dale, IL 60191",
+      "phone": "(630) 766-3401",
+      "email": "accuraterivet@comcast.net",
+      "website": "https://www.accuraterivet.com",
+      "city": "Wood Dale",
+      "specialties": ["Rivet Manufacturing", "Precision Machining"]
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "name": "C&C Machine",
+    "address": "2301 Breaux Ave, Harvey, LA 70058",
+    "phone": "(504) 362-7205",
+    "email": "",
+    "website": "https://www.ccmachineshop.com/",
+    "services": "Full-service industrial machining and fabrication, CNC milling, on-site machining, line-boring, flange-milling, welding"
+  },
+  {
+    "name": "Advanced CNC Machine Shop",
+    "address": "1194 Lady of the Lake Rd, St Martinville, LA 70582",
+    "phone": "(337) 369-6970",
+    "email": "",
+    "website": "https://advancedcncmachineshop.com/",
+    "services": "CNC machining, milling, oil field, military, and agriculture machinery parts, API certified"
+  },
+  {
+    "name": "Mezco Fabrication, LLC",
+    "address": "201 Arabian Drive, Suite 100, Lafayette, LA 70507",
+    "phone": "(337) 896-2005",
+    "email": "",
+    "website": "https://mezcofab.com/",
+    "services": "CNC mill and lathe machining, custom metal fabrication, laser cutting, powder coating, vertical mill and lathe"
+  },
+  {
+    "name": "Automated Production, LLC",
+    "address": "128 Millstone Road, Broussard, LA 70518",
+    "phone": "(337) 839-8080",
+    "email": "salesteam@automatedproduction.biz",
+    "website": "https://automatedproduction.biz/",
+    "services": "CNC machining, 5-axis capabilities, CNC mills and lathes, fabrication, CNC plate cutting, turnkey projects"
+  },
+  {
+    "name": "Fisher Manufacturing Services",
+    "address": "Hammond, LA 70401",
+    "phone": "(225) 294-5581",
+    "email": "",
+    "website": "https://www.fishermanufacturingservices.com/",
+    "services": "CNC machining, fabrication, welding, surface and cylindrical grinding, custom engineering, reverse engineering"
+  },
+  {
+    "name": "Reliable Machine Services, Inc.",
+    "address": "809 Cajundome Boulevard, Lafayette, LA 70506",
+    "phone": "(337) 233-8416",
+    "email": "info@reliablemachineservices.com",
+    "website": "https://www.reliablemachineservices.com/",
+    "services": "Precision machining, pump parts, 2D/3D CAD services, surface coatings, gas and air compressor parts"
+  },
+  {
+    "name": "H. Brown, Inc. - CNC Machine Shop",
+    "address": "1678 U.S. Highway 190, Eunice, LA 70535",
+    "phone": "(337) 457-8131",
+    "email": "information@hbrown.com",
+    "website": "https://www.hbrown.com/cnc-machine-shop",
+    "services": "CNC machining services, prototype development, precision manufacturing"
+  },
+  {
+    "name": "B & W Machine Shop",
+    "address": "410 Wesley Street, Lake Charles, LA 70615",
+    "phone": "(337) 564-6428",
+    "email": "",
+    "website": "",
+    "services": "CNC machine shop services, general machining"
+  },
+  {
+    "name": "Gulf Machine Shop Inc",
+    "address": "5337 Broad Street, Lake Charles, LA 70601",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "services": "CNC machine shop services, general machining"
+  },
+  {
+    "name": "Harry's Automotive Machine Shop",
+    "address": "3323 Highway 14 East, Lake Charles, LA 70607",
+    "phone": "(337) 478-1190",
+    "email": "",
+    "website": "",
+    "services": "CNC machine shop, engine rebuild, balancing, custom engines"
+  },
+  {
+    "name": "Sabre Machining Inc",
+    "address": "445 Vocational Parkway, West Monroe, LA 71292",
+    "phone": "(318) 396-1818",
+    "email": "",
+    "website": "",
+    "services": "CNC machining, welding, fitting, threading, repair services, family-owned since 1960s"
+  },
+  {
+    "name": "Mann Fleming",
+    "address": "1214 Cypress Street, West Monroe, LA 71291",
+    "phone": "(318) 325-4621",
+    "email": "",
+    "website": "",
+    "services": "CNC machine shop services"
+  },
+  {
+    "name": "Bell Machine Company Inc",
+    "address": "910 Grimmett Drive, Shreveport, LA 71107",
+    "phone": "(318) 227-2515",
+    "email": "",
+    "website": "",
+    "services": "CNC machine shop services"
+  },
+  {
+    "name": "Douglas Machine Inc",
+    "address": "1540 Grimmett Drive, Shreveport, LA 71107",
+    "phone": "(318) 425-8376",
+    "email": "",
+    "website": "",
+    "services": "CNC machine shop, welding equipment, repair services"
+  },
+  {
+    "name": "Metalcraft Manufacturing",
+    "address": "7054 Brooks Road, Shreveport, LA 71129",
+    "phone": "(318) 686-0200",
+    "email": "",
+    "website": "",
+    "services": "CNC machine shop, machine shop equipment and supplies"
+  },
+  {
+    "name": "J & C Machine Works & Fabricating Inc",
+    "address": "1070 Neosho Avenue, Baton Rouge, LA 70802",
+    "phone": "(225) 359-6117",
+    "email": "",
+    "website": "",
+    "services": "CNC machine shop, on-site welding and fabricating, line boring, boom repair"
+  },
+  {
+    "name": "Central Machine Works",
+    "address": "2853 Fellsway Drive, Baton Rouge, LA 70814",
+    "phone": "(225) 223-6054",
+    "email": "",
+    "website": "",
+    "services": "CNC machine shop services"
+  },
+  {
+    "name": "Dowty's Machine Works",
+    "address": "12040 Plank Road, Baton Rouge, LA 70811",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "services": "CNC machine shop, precision machine work, pump repairs, welding metallizing"
+  },
+  {
+    "name": "Cajun Machine Shop",
+    "address": "207 Bowie Bend Road, Lafayette, LA 70508",
+    "phone": "(337) 839-0660",
+    "email": "",
+    "website": "",
+    "services": "CNC machine shop services"
+  },
+  {
+    "name": "Nolan's Machine Shop",
+    "address": "1627 Jefferson Street, Lafayette, LA 70501",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "services": "CNC machine shop, commercial, industrial, oilfield, precision machining, welding, special coatings"
+  },
+  {
+    "name": "Oilco Machine Shop Inc",
+    "address": "1323 Eraste Landry Road, Lafayette, LA 70506",
+    "phone": "(337) 234-8508",
+    "email": "",
+    "website": "",
+    "services": "CNC machine shop services"
+  },
+  {
+    "name": "Boland Marine & Industrial LLC",
+    "address": "1000 Tchoupitoulas Street, New Orleans, LA 70130",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "services": "CNC machine shop, industrial and marine fabrication, structural steel and pipe"
+  },
+  {
+    "name": "Buck Kreihs",
+    "address": "2225 Tchoupitoulas Street, New Orleans, LA 70130",
+    "phone": "(504) 522-5879",
+    "email": "",
+    "website": "",
+    "services": "CNC machine shop, marine and industrial repairs, dynamic balancing"
+  },
+  {
+    "name": "Economy Iron Works Inc",
+    "address": "635 South Peters Street, New Orleans, LA 70130",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "services": "CNC machine shop, marine-industrial-commercial machining, valve and pump repair, welding"
+  }
+]

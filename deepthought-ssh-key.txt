@@ -1,0 +1,5 @@
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBeZnbtTOE1n032LwkEvpZD0swoNudNZFvmohqsLtKKN deepthought@windows
+
+Fingerprint: SHA256:dfcfdQ4T6UQC1yllwh8bWuG9eDa6kneqYt5JhGH5W7o
+
+Add this key to ~/.ssh/authorized_keys for SSH mesh connectivity.

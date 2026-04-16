@@ -1,0 +1,227 @@
+{
+  "search_date": "2026-04-07",
+  "region": "California",
+  "total_shops": 22,
+  "shops": [
+    {
+      "company_name": "RJ Enterprises",
+      "city": "Los Angeles",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://www.rjenterprise.net/",
+      "capabilities": ["CNC Turning", "CNC Milling", "CAD/CAM", "Precision Machining"],
+      "notes": "Founded 1986. AS9100D certified. Zero-tolerance rejection policy. Serves automotive, aerospace, commercial, medical, computer/electronics, oil and gas industries. Produces parts to +/-.0001 tolerances. Dock-to-Stock quality."
+    },
+    {
+      "company_name": "Dye CNC",
+      "city": "San Diego",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://dyecnc.com/",
+      "capabilities": ["CNC Turning", "CNC Milling", "3-5 Axis Machining", "Design Consulting"],
+      "notes": "Over 20 years machining experience. AS9100, ISO9000, ITAR Certified. Serves defense, aerospace, automotive, aviation, medical, electronic, high technology industries. Complex, tight tolerance parts to LTA production."
+    },
+    {
+      "company_name": "American Precision Tool Inc.",
+      "city": "Pacoima",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://www.ameriprectool.com/",
+      "capabilities": ["CNC Turning", "CNC Milling", "Swiss Machining", "Precision Grinding", "Tooling & Fixturing", "Prototyping", "Welding & Metal Fabrication"],
+      "notes": "AS9100D Certified. Serves aerospace, defense, medical, pharmaceutical (softgel tooling), racing, oil & gas industries. Located in Pacoima, serves Los Angeles and Orange County. 4 and 5-Axis machining capabilities."
+    },
+    {
+      "company_name": "San Diego Precision Machining Inc.",
+      "city": "San Diego",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://sdpm.com/",
+      "capabilities": ["CNC Milling", "CNC Turning", "N/C Conventional Machining", "Wire EDM", "4-5 Axis Machining", "Live Tooling"],
+      "notes": "Founded 1971. 53+ years experience. AS9100/ISO9001 certified. Serves aerospace, defense, medical, semiconductor, underwater, commercial industries. Machines aluminum, stainless, titanium, copper, super alloys, plastics. Parts from fractions of an inch to 12-inch diameters."
+    },
+    {
+      "company_name": "Darmark Corporation",
+      "city": "Poway",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://darmark.com/",
+      "capabilities": ["CNC Machining", "Screw Machining", "Precision Turning", "3-5 Axis CNC Milling", "Laser Engraving", "Turn-Key Assemblies"],
+      "notes": "Founded 1978. 40+ years in business. ISO9001:2015 and AS9100D certified. 28,000 sq ft facility. Specializes in high-temp alloys and exotic plastics. Serves aerospace, medical, semiconductor industries. Located in Poway, serves San Diego area."
+    },
+    {
+      "company_name": "CNC Manufacturing",
+      "city": "San Diego",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://cncmfg.net/",
+      "capabilities": ["Precision CNC Manufacturing"],
+      "notes": "29 years in business. Single piece to large production runs. On-time, on-budget delivery guarantee."
+    },
+    {
+      "company_name": "Accurate Machine",
+      "city": "San Diego",
+      "state": "CA",
+      "emails": ["brian@accuratemachinesd.com"],
+      "phone_numbers": ["(858) 566-1061"],
+      "website": "https://www.accuratemachinesd.com/",
+      "capabilities": ["Custom CNC Machining", "CNC Milling"],
+      "notes": "Serving San Diego machining industry since 1984 (40 years). Fast turnarounds, high quality precision parts."
+    },
+    {
+      "company_name": "Megla Manufacturing Inc.",
+      "city": "San Diego",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://www.meglamfg.com/",
+      "capabilities": ["CNC Machining", "Waterjet Cutting", "Metal Fabrication", "Custom Metal Fabrication", "Metal Welding"],
+      "notes": "Over 20 years experience. Serves aerospace, marine, medical, commercial sectors. Advanced waterjet cutting technology. Works with aluminum, stainless steel, titanium."
+    },
+    {
+      "company_name": "Langill's Machine",
+      "city": "Sacramento",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://langills.com/",
+      "capabilities": ["CNC Machining", "Rapid Prototyping", "Production CNC Machining", "5-Axis Machining", "Mill Turn", "Multi Pallet Production"],
+      "notes": "18,000 sq ft facility, 18 CNC machines, 5-axis capabilities, Mill Turn, Multi Pallet high production. ISO9000 quality compliance. Sacramento's premiere rapid prototyping and production CNC machining facility."
+    },
+    {
+      "company_name": "Mohan Machining",
+      "city": "Sacramento",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://www.mohanmachining.com/",
+      "capabilities": ["5-Axis CNC Milling", "CNC Turning", "Design-to-Prototype"],
+      "notes": "Founded 2020. Tight-tolerance parts on time and on budget. ±.0001\" tolerances, fast turnarounds. Handles single prototypes to full production runs. Aluminum aerospace components, large-scale steel parts."
+    },
+    {
+      "company_name": "TRI-C Machine Corp",
+      "city": "West Sacramento",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": ["(916) 371-8090"],
+      "website": "https://www.tricmachine.com/",
+      "capabilities": ["CNC Machining", "Milling & Lathe", "Prototype", "Production Runs", "Conventional Machining", "Surface Grinding", "MIG/TIG Welding", "Hydraulic Cylinder Repair"],
+      "notes": "520 Harbor Boulevard, West Sacramento. Large capacity lathe (7'x35'), surface grinding with 84\" Dia magnetic table, dual overhead cranes to 15 tons. Mobile fabrication and repair services."
+    },
+    {
+      "company_name": "Aaero Swiss",
+      "city": "Anaheim",
+      "state": "CA",
+      "emails": ["sales@aaeroswiss.com"],
+      "phone_numbers": ["(714) 322-8480"],
+      "website": "https://aaeroswiss.com/",
+      "capabilities": ["CNC Milling", "CNC Turning", "Micromachining", "Swiss Machining", "Screw Machining"],
+      "notes": "20+ years in business. Specializes in medical components machining, dental implants, precision medical products. Also serves aerospace, defense, automotive, computer, sporting goods. 11 Citizen Swiss screw machines. Family-owned, third generation machining family."
+    },
+    {
+      "company_name": "Ricaurte Precision",
+      "city": "Orange County",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://www.ricaurteprecision.com/",
+      "capabilities": ["5-Axis Machining", "3-Axis Machining", "4-Axis Machining", "Multi-Axis Lathes", "Swiss Screw Machining", "Wire EDM", "Quality Inspection"],
+      "notes": "30+ years precision CNC machining experience. 24/7 lights-out automation. Tolerances to +/- 0.0002\". Certified AS9100D & ISO 9001:2015, ITAR Registered, DOD Contractor, HUBZone Certified. Serves defense, medical device, space, automotive, industrial, aerospace. A-rated by ISNetworld."
+    },
+    {
+      "company_name": "American CNC Inc.",
+      "city": "Los Angeles",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://www.americancnc.net/",
+      "capabilities": ["4-5 Axis Milling", "CNC Turning", "Grinding", "Lapping"],
+      "notes": "Established 2011. 3,000 sq ft climate-controlled facility in South California. 24/7 operation capability. Serves government agencies, DOD, aerospace, racing, oil & gas, medical equipment."
+    },
+    {
+      "company_name": "Pendarvis Manufacturing",
+      "city": "Anaheim",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://www.pendarvismanufacturing.com/",
+      "capabilities": ["CNC Machining", "Welding", "Sheet Metal", "Assembly", "Finishing"],
+      "notes": "40+ years in business. 10+ degreed engineers on staff. AS9100, ISO9100, NADCAP, ITAR certified. Average lead time 3.2 weeks. Order range $750 - $7M. Serves aerospace, defense, medical, robotics, scientific research, transportation industries."
+    },
+    {
+      "company_name": "Bob's Welding, Machining & Fabrication",
+      "city": "Anaheim",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://www.bobsweldinginc.com/",
+      "capabilities": ["CNC Machining", "CNC Plasma Cutting", "Metal Welding", "Fabrication"],
+      "notes": "Orange County's preferred one-stop shop for fabrication, machining, and welding. Serves Anaheim, Santa Ana, Huntington Beach, Newport Beach, Garden Grove, Costa Mesa."
+    },
+    {
+      "company_name": "PNM Company",
+      "city": "Fresno",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://pnmcnc.com/",
+      "capabilities": ["CNC Machining", "Horizontal Machining", "Vertical Milling", "Screw Machining", "Turning"],
+      "notes": "Nearly 50 years in business. ISO 9001:2015 Certified. 30 CNC Machining Centers, 7 Horizontal Centers with 100+ pallets, 12 Haas Vertical Mills, 2 Screw Machines, 8 Turning Centers. 24/7 machining facility. Lower cost than overseas, fast turnaround."
+    },
+    {
+      "company_name": "Dale Brisco Inc.",
+      "city": "Fresno",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://dalebriscoinc.com/",
+      "capabilities": ["CNC Machining", "Laser Cutting", "5-Axis Water Jet Cutting", "Metal Bending", "Welding", "Powder Coating", "CAM & CAD"],
+      "notes": "Founded 1967. 57+ years serving Central Valley including Fresno, Madera, Merced. Contract manufacturing and precision fabrication. Full service manufacturing from design to finishing."
+    },
+    {
+      "company_name": "VECO Technologies",
+      "city": "Fresno",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://vecotechnologies.com/",
+      "capabilities": ["CNC Machining", "Engineering", "Specialized Welding", "Prototype & Development", "Tooling", "Custom Machines"],
+      "notes": "1411 North Whitney Avenue, Fresno. Over 40 years metal fabrication and machining experience. CNC equipment with 4th axis capabilities. Expert craftsmen and problem solvers. Single custom parts to full production runs."
+    },
+    {
+      "company_name": "Pro Machine Works",
+      "city": "Sacramento",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://promachineworks.com/",
+      "capabilities": ["CNC Machining", "Precision Machining"],
+      "notes": "Over 20 years delivering precision machining. Serves Sacramento area with advanced CNC machining services."
+    },
+    {
+      "company_name": "C&H Machine",
+      "city": "San Diego",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://www.c-hmachine.com/",
+      "capabilities": ["CNC Milling", "CNC Turning", "Wire EDM", "Sinker EDM", "Turnkey Assembly"],
+      "notes": "AS9100 certified, ITAR registered. Nationwide shipping. Provides CNC milling, turning, Wire EDM, Sinker EDM, and turnkey assembly services."
+    },
+    {
+      "company_name": "Andersen Industries",
+      "city": "San Diego",
+      "state": "CA",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://www.andersenmp.com/",
+      "capabilities": ["CNC Machining", "Powder Coating", "Welding"],
+      "notes": "110,000 square foot facility in San Diego area. Offers California-based CNC machining services, powder coating, welding and more."
+    }
+  ]
+}

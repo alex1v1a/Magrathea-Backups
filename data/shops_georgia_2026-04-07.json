@@ -1,0 +1,202 @@
+[
+  {
+    "name": "ZYCI",
+    "address": "3286 Catalina Drive, Chamblee, GA 30341",
+    "phone": "404-334-7064",
+    "website": "https://www.zyci.com/",
+    "email": "quotes@zyci.com",
+    "services": "CNC Machining, 3D Printing, Laser Marking, Aerospace AS9100 Certified"
+  },
+  {
+    "name": "Withers Tool, Die & Mfg. Co. Inc.",
+    "address": "1238 Veterans Memorial Hwy SW, Mableton, GA 30126",
+    "phone": "770-948-2544",
+    "website": "https://witherstool.com/",
+    "email": "wtd@witherstool.com",
+    "services": "Large Part CNC Milling, Turning, Grinding, Fabrication, Welding, Assembly"
+  },
+  {
+    "name": "Lasercraft Technologies",
+    "address": "Gainesville, GA",
+    "phone": "770-538-6000",
+    "website": "https://www.laser-craft.com/",
+    "email": "",
+    "services": "CNC Machining, Laser Cutting, Robotic Welding, Fiber Optic Laser Cutting, CNC Tube Bending"
+  },
+  {
+    "name": "Southland CNC",
+    "address": "Cornelia, GA",
+    "phone": "864-675-0026",
+    "website": "https://www.southlandcnc.com/",
+    "email": "",
+    "services": "Precision Machined Components, Concept Engineering to Full Production, QS 9000 Registered"
+  },
+  {
+    "name": "Coweta Tech Precision",
+    "address": "Newnan, GA",
+    "phone": "770-251-2441",
+    "website": "https://cowetatechprecision.com/",
+    "email": "",
+    "services": "CNC Machining, Precision Machining, Aerospace, Military/Defense, Oil & Gas, Medical"
+  },
+  {
+    "name": "GTI Precision Components",
+    "address": "3000 Spring Industrial Dr, Powder Springs, GA 30127",
+    "phone": "770-943-0555",
+    "website": "https://gtiprecision.com/",
+    "email": "",
+    "services": "5-Axis Machining, Multi-Axis Mill/Turn, Wire EDM, Aerospace, Satellite, Energy Industries"
+  },
+  {
+    "name": "Marcu Manufacturing",
+    "address": "5010 B.U. Bowman Drive, Suite 200, Buford, GA 30518",
+    "phone": "770-904-2977",
+    "website": "https://marcumfg.com/",
+    "email": "info@marcumfg.com",
+    "services": "CNC Turning, CNC Milling, Prototypes, Production Machining, Automotive, Medical, Semiconductor"
+  },
+  {
+    "name": "3G CNC Inc.",
+    "address": "4050 Enterprise Way, Suite 130, Flowery Branch, GA 30542",
+    "phone": "770-530-6482",
+    "website": "https://www.3gcnc.com/",
+    "email": "Jack.Souther@3GCNC.com",
+    "services": "CNC Machining, CAD/CAM Design, Welding, Fabrication, Part Duplicating, High/Low Volume"
+  },
+  {
+    "name": "Euro Machine Works",
+    "address": "76 Bay Creek Road, Suite J, Loganville, GA 30052",
+    "phone": "770-554-8833",
+    "website": "",
+    "email": "",
+    "services": "CNC Machining, Complex and Close-Tolerance Components, Aviation and Aerospace"
+  },
+  {
+    "name": "Capital City Machine Shop",
+    "address": "Atlanta, GA",
+    "phone": "770-447-9545",
+    "website": "https://capitalcitymachineshop.com/",
+    "email": "mmcclure@capitalcitymachineshop.com",
+    "services": "CNC Services, Precision Machining, Industrial Equipment Repair, Mining, Aggregate, Railroad"
+  },
+  {
+    "name": "Cobb Tool, Inc.",
+    "address": "120 Veterans Memorial HWY SE, Mableton, GA 30126",
+    "phone": "770-948-3775",
+    "website": "https://cobbtool.com/",
+    "email": "info@cobbtool.com",
+    "services": "Custom Welding Fixtures, Precision Machining, CNC Machining, Design Engineering"
+  },
+  {
+    "name": "Aerospace Fabrications of GA",
+    "address": "305 Butler Industrial Drive, Dallas, GA 30132",
+    "phone": "",
+    "website": "",
+    "email": "",
+    "services": "CNC Machining, Sheet Metal Forming and Fabrication, Assembly, Aluminum Heat Treating, Electro-Mechanical Assembly"
+  },
+  {
+    "name": "Roberson Machine Company",
+    "address": "Serving Atlanta, GA area",
+    "phone": "573-646-3996",
+    "website": "https://robersontool.com/",
+    "email": "",
+    "services": "CNC Services, Precision Machining, Metal Fabrication, Prototyping, Welding, 3D Printing, Assembly"
+  },
+  {
+    "name": "Blanda Inc",
+    "address": "Serving Georgia from Minneapolis (ships nationwide)",
+    "phone": "651-688-9510",
+    "website": "https://blanda.net/",
+    "email": "",
+    "services": "CNC Machining, Wire EDM, Prototyping, Waterjet Cutting, 5-Axis Machining, Precision Grinding"
+  },
+  {
+    "name": "AT Precision",
+    "address": "Serving Atlanta, GA from Northbrook, IL facility",
+    "phone": "847-509-5848",
+    "website": "https://www.atprecision.com/",
+    "email": "",
+    "services": "CNC Machining, CNC Milling, CNC Cutting, Grinding, Drilling, Turning, Contract Manufacturing"
+  },
+  {
+    "name": "Allied Textile",
+    "address": "2081 Ridge Road Southeast, Dalton, GA 30721",
+    "phone": "706-278-0567",
+    "website": "",
+    "email": "",
+    "services": "CNC Machine Shop"
+  },
+  {
+    "name": "B & J Machinery Co",
+    "address": "122 York Street, Dalton, GA 30721",
+    "phone": "",
+    "website": "",
+    "email": "",
+    "services": "CNC Machine Shop, Machinery, Supplies & Equipment"
+  },
+  {
+    "name": "Dalton Metal Fabricators Inc",
+    "address": "615 4th Avenue, Dalton, GA 30721",
+    "phone": "",
+    "website": "",
+    "email": "",
+    "services": "CNC Machine Shop, Sheet Metal, Tanks, Welding, Industrial Machinery, Fabrication"
+  },
+  {
+    "name": "Gunter's Automotive Machine Shop",
+    "address": "212 West Industrial Boulevard, Dalton, GA 30720",
+    "phone": "706-277-7769",
+    "website": "",
+    "email": "",
+    "services": "CNC Machine Shop, Engine Rebuild, Flywheels, Automotive Machining"
+  },
+  {
+    "name": "Sandidge Machine Shop",
+    "address": "195 Callahan Cavender Road Southeast, Dalton, GA 30721",
+    "phone": "706-277-1505",
+    "website": "",
+    "email": "",
+    "services": "CNC Machine Shop"
+  },
+  {
+    "name": "Srt Machinery",
+    "address": "1027a South Hamilton Street, Dalton, GA 30720",
+    "phone": "706-277-5776",
+    "website": "",
+    "email": "",
+    "services": "CNC Machine Shop"
+  },
+  {
+    "name": "Premier Machine LLC",
+    "address": "Thomaston, GA",
+    "phone": "",
+    "website": "",
+    "email": "",
+    "services": "Full-service Machine and Fabrication Shop, Sheet Metal Assembly, CNC Machining, EDM, Milling & Turning"
+  },
+  {
+    "name": "Ran Can Corp",
+    "address": "Albany, GA",
+    "phone": "",
+    "website": "",
+    "email": "",
+    "services": "CNC Machining, Close-Tolerance Machined Parts, Automotive Racing Parts"
+  },
+  {
+    "name": "Atlanta CNC & Engineering",
+    "address": "Griffin, GA",
+    "phone": "",
+    "website": "",
+    "email": "",
+    "services": "Job Shop, Contract Manufacturing, Fabrication and Machining"
+  },
+  {
+    "name": "Advanced Precision Mfg",
+    "address": "8155 Odessa Place, Douglasville, GA 30134",
+    "phone": "",
+    "website": "",
+    "email": "",
+    "services": "Full-service CNC Machining, Commercial Airlines, Agriculture, Construction"
+  }
+]

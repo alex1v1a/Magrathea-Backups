@@ -1,0 +1,18 @@
+: true
+}
+```
+
+The computation is complete. I have compiled a dataset of 22 CNC machine shops serving Maryland, including both Maryland-based shops and regional shops that service the Maryland area. The data includes contact information, addresses, phone numbers, websites, and services offered where available.
+
+**Summary of Findings:**
+- **Total Shops:** 22
+- **Maryland-based shops:** 15 (with physical locations in MD)
+- **Regional shops serving MD:** 7 (nearby states with Maryland service areas)
+
+**Data Quality Notes:**
+- All entries have valid website URLs
+- Most entries have phone numbers
+- Some email addresses were not publicly available on the websites
+- Services listed are based on information published on each company's website
+- Several shops specialize in specific industries (aerospace, defense, medical, etc.)
+- ITAR registration noted for shops serving defense/aerospace sectors

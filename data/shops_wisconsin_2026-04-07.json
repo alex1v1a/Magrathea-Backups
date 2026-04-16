@@ -1,0 +1,192 @@
+[
+  {
+    "id": 1,
+    "company_name": "Manitowoc Tool & Machining, LLC",
+    "address": "4211 Clipper Drive, Manitowoc, WI 54220",
+    "phone": "(920) 682-8825",
+    "toll_free": "855-243-2569",
+    "fax": "(920) 682-4299",
+    "email": "sales@mantool.com",
+    "website": "https://mantool.com",
+    "services": ["CNC Milling", "CNC Turning", "Robotics Machining", "5-Axis CNC Machining", "Large Part Machining", "Production Machining", "Assembly", "Painting"]
+  },
+  {
+    "id": 2,
+    "company_name": "G&V Machine Company",
+    "address": "N8100 Industrial Dr., Ixonia, WI 53036",
+    "phone": "(920) 206-1480",
+    "email": "info@gvmachine.com",
+    "website": "https://www.gvmachine.com",
+    "services": ["CNC Machining", "Castings", "Forgings", "Bar Stock", "Assemblies", "Packaging", "Secondary Operations"]
+  },
+  {
+    "id": 3,
+    "company_name": "Riverstone Machining LLC",
+    "address": "107 Industrial Dr., Fox Lake, WI 53933",
+    "phone": "(920) 928-3771",
+    "email": "Sales@RiverstoneMachining.com",
+    "website": "https://riverstonemachining.com",
+    "services": ["CNC Turning", "CNC Machining", "Metal Fabrication", "Agriculture", "Construction", "Defense", "HVAC", "Hydraulic", "Industrial", "Power Generation"]
+  },
+  {
+    "id": 4,
+    "company_name": "D&S Machine Service, Inc.",
+    "address": "412 Fourth St., Luxemburg, WI 54217",
+    "phone": "(920) 845-5425",
+    "fax": "877-364-3726",
+    "email": "sales@dsmachine.com",
+    "website": "https://dsmachine.com",
+    "services": ["CNC Machining", "Heavy Metal Fabrication", "Machining", "Fabrication", "Engineering", "Multi-component Assemblies"]
+  },
+  {
+    "id": 5,
+    "company_name": "Wisconsin Precision Machining (WPM)",
+    "address": "450 9th Avenue, Grafton, WI 53024",
+    "phone": "(262) 377-3100",
+    "email": "sales@wisprecision.com",
+    "website": "https://wisprecision.com",
+    "services": ["CNC Machining", "High-quality Production Machining", "CNC Milling", "CNC Turning"]
+  },
+  {
+    "id": 6,
+    "company_name": "Trace-A-Matic",
+    "address": "21125 Enterprise Avenue, Brookfield, WI 53045",
+    "phone": "(262) 797-7300",
+    "email": "sales@traceamatic.com",
+    "website": "https://www.traceamatic.com",
+    "services": ["Precision CNC Machining", "5-Axis Machining", "Large Part Machining", "Metal Fabrication", "Turnkey Manufacturing", "Aerospace", "Defense", "Medical", "Oil & Gas"]
+  },
+  {
+    "id": 7,
+    "company_name": "G&G Machine",
+    "address": "1801 Progress Way, Kaukauna, WI 54130",
+    "phone": "(920) 766-9788",
+    "email": "quotes@ggmachinewi.com",
+    "website": "https://www.ggmachinewi.com",
+    "services": ["Precision CNC Machining", "Shafts", "Seals", "High Rotating Parts", "Welding"]
+  },
+  {
+    "id": 8,
+    "company_name": "A to Z Machine",
+    "address": "2701 E. Winslow Ave., Appleton, WI 54911",
+    "phone": "(920) 993-0640",
+    "fax": "920-993-0650",
+    "website": "https://www.atozmachine.com",
+    "services": ["CNC Machining", "Contract Manufacturing", "Welding", "Fabrication", "Agriculture", "Military", "Food Processing", "Medical", "Oil & Gas", "Wind & Energy"]
+  },
+  {
+    "id": 9,
+    "company_name": "Hastreiter Industries",
+    "address": "Marshfield, WI",
+    "phone": "N/A",
+    "website": "https://hastreiter.industries",
+    "services": ["CNC Milling (3-5 Axis)", "CNC Turning (2-4 Axis)", "Laser Cutting", "Welding & Fabrication", "DFM & Metrology", "Prototyping", "3D Printing", "Aerospace", "Defense", "Medical"]
+  },
+  {
+    "id": 10,
+    "company_name": "Basin Precision Machining (Wenzel Industries)",
+    "address": "211 Collins Road, Jefferson, WI 53549",
+    "phone": "(920) 674-6003",
+    "website": "https://www.basinprecision.com",
+    "services": ["High Volume Production Machining", "Hydraulic Manifolds", "Horizontal Machining", "4-Axis Vertical Machining", "Lean Manufacturing"]
+  },
+  {
+    "id": 11,
+    "company_name": "Mahuta Tool Corporation",
+    "address": "Germantown, WI",
+    "phone": "(262) 502-4100",
+    "website": "https://www.mahutatool.com",
+    "services": ["CNC Machining", "Wire EDM", "Tooling", "Dies", "Fixtures", "Metal Stamping", "Prototype to Production"]
+  },
+  {
+    "id": 12,
+    "company_name": "Camco Precision Machining",
+    "address": "4701 Haag Drive, Union Grove, WI 53182",
+    "phone": "(262) 878-4700",
+    "website": "https://www.camcoprecision.com",
+    "services": ["CNC Machining", "Swiss Machining", "Precision Machined Parts", "Prototyping", "Production Runs"]
+  },
+  {
+    "id": 13,
+    "company_name": "Bayside Machine Corp.",
+    "address": "2257 American Blvd., De Pere, WI 54115",
+    "phone": "(920) 330-9972",
+    "email": "info@baysidemachine.net",
+    "website": "https://baysidemachine.com",
+    "services": ["CNC Machining", "Custom Fabrication", "Welding", "Waterjet Cutting", "Small Assemblies", "Aerospace", "Defense", "Agriculture"]
+  },
+  {
+    "id": 14,
+    "company_name": "Chief Manufacturing",
+    "address": "Wisconsin (Serving Appleton, Green Bay, Oshkosh)",
+    "phone": "N/A",
+    "website": "https://chief-mfg.com",
+    "services": ["CNC Milling", "CNC Turning", "Engineering", "Surface Grinding", "Stainless and Steel Welding", "Weldment Assemblies", "Static and Dynamic Balancing"]
+  },
+  {
+    "id": 15,
+    "company_name": "Owens Industries, LLC",
+    "address": "Oak Creek, WI (Milwaukee Area)",
+    "phone": "N/A",
+    "website": "https://www.owensind.com",
+    "services": ["Ultra-Precision CNC Machining", "5-Axis Wire EDM", "Simultaneous 5-Axis Milling", "CNC Turning", "Deburring", "Micromachining", "Aerospace", "Medical", "Defense"]
+  },
+  {
+    "id": 16,
+    "company_name": "Allis Manufacturing Corp.",
+    "address": "Milwaukee, WI",
+    "phone": "N/A",
+    "website": "https://www.allismfg.com",
+    "services": ["Large Machining", "Small Machining", "Welding", "Grinding", "Assembly", "Repair & Rebuild", "Contract Manufacturing", "Painting & Engraving", "Aerospace", "Defense", "Medical"]
+  },
+  {
+    "id": 17,
+    "company_name": "Reich Tool & Design, Inc.",
+    "address": "W175 N5750 Technology Dr, Menomonee Falls, WI 53051",
+    "phone": "(262) 252-3440",
+    "website": "https://reichtool.com",
+    "services": ["CNC Machining (3, 4, 5-Axis)", "CNC Turning", "Swiss Turning", "Wire EDM", "Waterjet Cutting", "Tool & Die", "Cleanroom Assembly", "Fabrication", "Medical", "Aerospace", "Automotive"]
+  },
+  {
+    "id": 18,
+    "company_name": "Milwaukee Precision Machining",
+    "address": "737 W Waterford Ave, Milwaukee, WI 53221",
+    "phone": "(414) 483-7111",
+    "fax": "(414) 481-8813",
+    "email": "ameyer@milwaukeeprec.com",
+    "website": "https://www.milwaukeemachining.com",
+    "services": ["CNC Machining", "CNC Turning", "CNC Milling", "Close Tolerance Machining", "Rapid Prototyping", "Short-Run", "High-Volume Machining"]
+  },
+  {
+    "id": 19,
+    "company_name": "AT Precision",
+    "address": "Serving Madison, WI (Based in IL)",
+    "phone": "(847) 509-5848",
+    "website": "https://www.atprecision.com",
+    "services": ["CNC Machining", "CNC Milling", "CNC Cutting", "Grinding", "Drilling", "Turning"]
+  },
+  {
+    "id": 20,
+    "company_name": "Roberson Machine Company",
+    "address": "Serving Green Bay, WI",
+    "phone": "(573) 646-3996",
+    "website": "https://robersontool.com",
+    "services": ["Custom CNC Machined Parts", "OEM Automotive", "Prototype to Production"]
+  },
+  {
+    "id": 21,
+    "company_name": "Aztalan Engineering Inc.",
+    "address": "Between Madison & Milwaukee, WI",
+    "phone": "N/A",
+    "website": "https://www.aztalan.com",
+    "services": ["Precision CNC Part Manufacturing", "Cleaning", "Prototyping", "Medical Industry"]
+  },
+  {
+    "id": 22,
+    "company_name": "Robinson Inc.",
+    "address": "Wisconsin",
+    "phone": "N/A",
+    "website": "https://www.robinsoninc.com",
+    "services": ["Precision Machining", "Fabrication"]
+  }
+]

@@ -1,0 +1,12 @@
+Added LAN endpoint: http://10.0.1.99:8080/
+Added wildcard endpoint: http://+:8080/
+Vectarr Mission Control Server Started
+======================================
+
+Local URL:    http://localhost:8080/
+LAN URLs:
+              http://10.0.1.99:8080/
+
+Press Ctrl+C to stop the server
+
+Server stopped

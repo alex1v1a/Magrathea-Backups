@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Ohio Laser",
+    "city": "Columbus",
+    "state": "OH",
+    "email": "sales@ohiolaser.com",
+    "phone": "614-873-7030",
+    "subtypes": "CNC machining, milling, drilling, tapping, fabrication, robotic MIG welding",
+    "site": "https://www.ohiolaser.com",
+    "full_name": "Ohio Laser Sales",
+    "first_name": "Sales",
+    "last_name": "Team"
+  },
+  {
+    "name": "Pinnacle Tool & Engineering Inc.",
+    "city": "Cleveland",
+    "state": "OH",
+    "email": "cookracing@ameritech.net",
+    "phone": "216-252-1868",
+    "subtypes": "CNC machining, hydraulic presses, CAD/CAM, inspection, prototype to production",
+    "site": "https://www.pinnacletooleng.com",
+    "full_name": "Pinnacle Tool Engineering",
+    "first_name": "Engineering",
+    "last_name": "Team"
+  },
+  {
+    "name": "South Texas Machine Shop, Inc.",
+    "city": "Alice",
+    "state": "TX",
+    "email": "INFO@STXMACHINE.COM",
+    "phone": "361-664-8902",
+    "subtypes": "General machining, oil and gas industry support",
+    "site": "https://www.stxmachine.com",
+    "full_name": "Victor Herrera",
+    "first_name": "Victor",
+    "last_name": "Herrera"
+  },
+  {
+    "name": "Texas Machine Shop MFG",
+    "city": "Houston",
+    "state": "TX",
+    "email": "Txmachineshop@yahoo.com",
+    "phone": "281-781-7593",
+    "subtypes": "Manufacturing, machining services",
+    "site": "https://tmsmanufacturing.com",
+    "full_name": "Texas Machine Shop",
+    "first_name": "Texas",
+    "last_name": "Machine Shop"
+  },
+  {
+    "name": "Rapid Parts Engineering",
+    "city": "Concord",
+    "state": "ON",
+    "email": "rapidparts@hotmail.com",
+    "phone": "",
+    "subtypes": "CNC machining, custom CNC fabrication, aluminum anodizing",
+    "site": "https://rapidpartsengineering.com",
+    "full_name": "Rapid Parts Engineering",
+    "first_name": "Rapid",
+    "last_name": "Parts"
+  },
+  {
+    "name": "Illinois Valley Machine",
+    "city": "Ransom",
+    "state": "IL",
+    "email": "office@illinoisvalleymachine.com",
+    "phone": "815-586-4511",
+    "subtypes": "CNC machining, manual machining, saw and welding services, 24-hour emergency machining",
+    "site": "https://www.illinoisvalleymachine.com",
+    "full_name": "Illinois Valley Machine",
+    "first_name": "Illinois",
+    "last_name": "Valley"
+  },
+  {
+    "name": "EMC Machining Inc.",
+    "city": "Bensenville",
+    "state": "IL",
+    "email": "info@emcmachining.com",
+    "phone": "630-860-7076",
+    "subtypes": "CNC milling and turning, prototyping to production, precision machined parts",
+    "site": "https://emcmachining.com",
+    "full_name": "EMC Machining",
+    "first_name": "EMC",
+    "last_name": "Machining"
+  }
+]

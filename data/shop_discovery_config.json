@@ -1,0 +1,188 @@
+
+{
+  "search_date": "2026-04-07",
+  "region": "North Carolina",
+  "total_shops": 20,
+  "shops": [
+    {
+      "company_name": "Advanced Machining LLC",
+      "city": "Salisbury",
+      "state": "NC",
+      "emails": ["info@admcnc.com"],
+      "phone_numbers": ["(704) 633-8157"],
+      "website": "https://advancedmachiningcnc.com/",
+      "capabilities": ["5-axis CNC milling", "turning", "wire and sinker EDM", "CAD/CAM", "Zeiss CMM", "grinding"]
+    },
+    {
+      "company_name": "Protodyne Manufacturing",
+      "city": "Concord",
+      "state": "NC",
+      "emails": ["khill@proto-dyne.com"],
+      "phone_numbers": ["(217) 474-5861"],
+      "website": "https://protodynemfg.com/",
+      "capabilities": ["3, 4, and 5-axis CNC machining", "CNC milling and turning", "prototypes", "production"]
+    },
+    {
+      "company_name": "CNC Performance Engineering (CNCPE)",
+      "city": "Charlotte",
+      "state": "NC",
+      "emails": ["contact@cncpe.com"],
+      "phone_numbers": ["(704) 599-2555"],
+      "website": "https://www.cncpe.com/",
+      "capabilities": ["CNC milling", "turning", "wire EDM", "prototyping", "production machining", "contract inspection"]
+    },
+    {
+      "company_name": "Quality Products",
+      "city": "Charlotte",
+      "state": "NC",
+      "emails": ["info@qprod.com"],
+      "phone_numbers": ["(704) 504-3330"],
+      "website": "https://www.qprod.com/",
+      "capabilities": ["CNC milling", "turning", "laser cutting", "metal forming", "welding", "assembly"]
+    },
+    {
+      "company_name": "Compass Precision, LLC",
+      "city": "Charlotte",
+      "state": "NC",
+      "emails": ["info@compassprecision.com"],
+      "phone_numbers": ["(704) 210-8600"],
+      "website": "https://compassprecision.com/",
+      "capabilities": ["5-axis CNC machining", "CNC milling", "turning", "Swiss screw machining", "EDM", "fabrication"]
+    },
+    {
+      "company_name": "Mac Fab Machining and Fabrication",
+      "city": "Mount Holly",
+      "state": "NC",
+      "emails": [],
+      "phone_numbers": ["(704) 827-4654"],
+      "website": "https://macfab.net/",
+      "capabilities": ["CNC milling", "CNC turning", "laser cutting", "welding", "fabrication", "powder coating"]
+    },
+    {
+      "company_name": "T-Fab & Precision Machining",
+      "city": "Asheville",
+      "state": "NC",
+      "emails": [],
+      "phone_numbers": ["(828) 236-3993"],
+      "website": "https://www.t-fab.com/",
+      "capabilities": ["CNC machining", "metal fabrication", "powder coating", "metal finishing", "design and build"]
+    },
+    {
+      "company_name": "P&S Machining and Fabrication",
+      "city": "Greensboro",
+      "state": "NC",
+      "emails": [],
+      "phone_numbers": ["(336) 227-0151"],
+      "website": "https://psmachine.com/",
+      "capabilities": ["CNC vertical milling", "horizontal milling", "turning", "Swiss-screw machining", "laser cutting"]
+    },
+    {
+      "company_name": "CMS Tool & Die",
+      "city": "Carolina Beach",
+      "state": "NC",
+      "emails": [],
+      "phone_numbers": ["(910) 458-8300"],
+      "website": "",
+      "capabilities": ["CNC machining", "tool and die", "precision manufacturing"]
+    },
+    {
+      "company_name": "Glaser-Miller Co",
+      "city": "Charlotte",
+      "state": "NC",
+      "emails": [],
+      "phone_numbers": ["(704) 588-0131"],
+      "website": "",
+      "capabilities": ["CNC machining", "precision manufacturing", "metal fabrication"]
+    },
+    {
+      "company_name": "A & N Tool & Machine Inc",
+      "city": "Graham",
+      "state": "NC",
+      "emails": [],
+      "phone_numbers": ["(336) 578-8300"],
+      "website": "",
+      "capabilities": ["CNC machining", "tool and die", "precision manufacturing"]
+    },
+    {
+      "company_name": "Abbot Industries Inc",
+      "city": "Gastonia",
+      "state": "NC",
+      "emails": [],
+      "phone_numbers": ["(704) 866-8455"],
+      "website": "",
+      "capabilities": ["CNC machining", "metal fabrication", "industrial manufacturing"]
+    },
+    {
+      "company_name": "Accurate Machine & Tool Co",
+      "city": "Raleigh",
+      "state": "NC",
+      "emails": [],
+      "phone_numbers": ["(919) 872-2210"],
+      "website": "",
+      "capabilities": ["CNC machining", "precision tooling", "contract manufacturing"]
+    },
+    {
+      "company_name": "Ace Edm & Tool",
+      "city": "Concord",
+      "state": "NC",
+      "emails": [],
+      "phone_numbers": ["(704) 786-1001"],
+      "website": "",
+      "capabilities": ["EDM machining", "CNC machining", "tool and die services"]
+    },
+    {
+      "company_name": "Ace Machining",
+      "city": "Rockingham",
+      "state": "NC",
+      "emails": [],
+      "phone_numbers": ["(910) 997-3333"],
+      "website": "",
+      "capabilities": ["CNC machining", "production parts", "precision manufacturing"]
+    },
+    {
+      "company_name": "Ackermann Tool & Machine Co",
+      "city": "Wilmington",
+      "state": "NC",
+      "emails": [],
+      "phone_numbers": ["(910) 762-1127"],
+      "website": "",
+      "capabilities": ["CNC machining", "tool manufacturing", "precision parts"]
+    },
+    {
+      "company_name": "Acme Die & Machine Corp",
+      "city": "Gastonia",
+      "state": "NC",
+      "emails": [],
+      "phone_numbers": ["(704) 864-5306"],
+      "website": "",
+      "capabilities": ["CNC machining", "die manufacturing", "metal fabrication"]
+    },
+    {
+      "company_name": "Advanced Machine & Fabs Inc",
+      "city": "Denver",
+      "state": "NC",
+      "emails": [],
+      "phone_numbers": ["(704) 483-4343"],
+      "website": "",
+      "capabilities": ["CNC machining", "fabrication", "precision manufacturing"]
+    },
+    {
+      "company_name": "Advanced Machining Concepts",
+      "city": "Kernersville",
+      "state": "NC",
+      "emails": [],
+      "phone_numbers": ["(336) 993-7900"],
+      "website": "",
+      "capabilities": ["CNC machining", "precision manufacturing", "prototyping"]
+    },
+    {
+      "company_name": "Advanced Metal Fabrication",
+      "city": "Washington",
+      "state": "NC",
+      "emails": [],
+      "phone_numbers": ["(252) 946-9433"],
+      "website": "",
+      "capabilities": ["CNC machining", "metal fabrication", "industrial manufacturing"]
+    }
+  ]
+}

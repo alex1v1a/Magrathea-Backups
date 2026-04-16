@@ -1,0 +1,349 @@
+[
+  {
+    "id": 1,
+    "business_name": "EVS Metal Pennsylvania CNC Machining",
+    "address": "Stroudsburg, PA",
+    "phone": "",
+    "email": "",
+    "website": "https://www.pennsylvaniamachining.com/",
+    "services": [
+      "CNC Machining",
+      "CNC Milling",
+      "CNC Turning",
+      "Sheet Metal Fabrication",
+      "Precision Machining",
+      "Mechanical Assembly"
+    ],
+    "capabilities": "6 vertical CNC mills, 1 CNC Lathe, Work envelope: 50x20x20 vertical; 22x25x22 horizontal, Precision tolerances of +/-.001 inch, Run quantities from 5 to 2500 pcs"
+  },
+  {
+    "id": 2,
+    "business_name": "King Precision Solutions",
+    "address": "2200 Colonial Ave, Erie, PA 16506",
+    "phone": "1-877-312-3858",
+    "email": "",
+    "website": "https://kingprecisionsolutions.com/",
+    "services": [
+      "CNC Machining",
+      "5-Axis Machining",
+      "Swiss Machining",
+      "Tool and Die Polishing",
+      "Turnkey Solutions"
+    ],
+    "certifications": "ISO 9001 compliant, ITAR compliant",
+    "notes": "Second-generation family business founded in 1990 in Erie, PA"
+  },
+  {
+    "id": 3,
+    "business_name": "John Prosock Machine, Inc.",
+    "address": "2250 Trumbauersville Road, Quakertown, PA 18951",
+    "phone": "215-804-0321",
+    "email": "",
+    "website": "https://www.jprosock.com/",
+    "services": [
+      "CNC Machining",
+      "CNC Milling",
+      "CNC Turning",
+      "Custom CNC Machining"
+    ],
+    "notes": "Founded in 1982, dedicated to customer service and quality machined parts",
+    "hours": "8:00am - 5:00pm, Monday - Friday"
+  },
+  {
+    "id": 4,
+    "business_name": "Kelley-Tron Machine Co.",
+    "address": "115 Aster Dr, Harrisburg, PA 17112",
+    "phone": "(717) 545-8814",
+    "email": "",
+    "website": "https://kelleytron.com/",
+    "services": [
+      "CNC Milling",
+      "Manual Machining",
+      "Vapor Honing",
+      "Polishing",
+      "CAD/CAM Programming"
+    ],
+    "certifications": "ISO Compliant",
+    "notes": "Almost 50 years of experience serving Harrisburg, PA area, Work envelope up to 30″ x 16″"
+  },
+  {
+    "id": 5,
+    "business_name": "Moon Tool & Die Co.",
+    "address": "18075 Woodlands Dr, Meadville, PA 16335",
+    "phone": "(814) 807-0681",
+    "email": "",
+    "website": "https://www.moontool.com/",
+    "services": [
+      "CNC Machining",
+      "CNC Milling",
+      "CNC Turning/Lathe",
+      "Wire EDM",
+      "Grinding",
+      "Welding & Fabrication"
+    ],
+    "notes": "Founded in 1979, 23,000 sq ft facility, Turning up to 35\" diameter x 88\" long, Milling travel 81\" x 32\" x 32\""
+  },
+  {
+    "id": 6,
+    "business_name": "LAMJEN Inc.",
+    "address": "Erie, PA",
+    "phone": "814.459.5277",
+    "email": "",
+    "website": "https://lamjen.com/",
+    "services": [
+      "CNC Milling",
+      "CNC Turning",
+      "Boring",
+      "Drilling",
+      "Grinding",
+      "Honing",
+      "Tapping",
+      "Deep Hole Drilling",
+      "Gun Drilling",
+      "Welding",
+      "Heat Treating",
+      "Assembly"
+    ],
+    "certifications": "ISO-9001:2015",
+    "notes": "Founded in 1968, Large diameter turning up to 40\", Complete turnkey solutions"
+  },
+  {
+    "id": 7,
+    "business_name": "Summit Machine Co, Inc",
+    "address": "Alverton, PA",
+    "phone": "",
+    "email": "",
+    "website": "https://www.summitmachinecompany.com/",
+    "services": [
+      "CNC Machining",
+      "CNC Milling",
+      "CNC Turning",
+      "Structural Fabrication",
+      "Metal Supply"
+    ],
+    "notes": "Family-operated since 1983, Serving PA, OH, and WV tri-state area, Same-day or next-day consultations",
+    "hours": "Mon - Fri 7:00 am - 4:00 pm"
+  },
+  {
+    "id": 8,
+    "business_name": "CNC Specialties Mfg Inc.",
+    "address": "760 Pine Run Road, Apollo, PA 15613",
+    "phone": "(724) 727-5680",
+    "email": "",
+    "website": "https://cncspecialtiesmfg.com/",
+    "services": [
+      "Precision CNC Machining"
+    ],
+    "notes": "Growing since 1996, Located in Apollo, PA"
+  },
+  {
+    "id": 9,
+    "business_name": "Ephrata Precision",
+    "address": "Lancaster, PA",
+    "phone": "",
+    "email": "",
+    "website": "https://www.ephrataprecision.com/",
+    "services": [
+      "CNC Machining",
+      "CNC Milling",
+      "Custom Manufacturing",
+      "Injection Molding",
+      "Polyurethane Molding"
+    ],
+    "notes": "Serving Lancaster, PA area since 1972, Works with brass, aluminum, steel, plastics"
+  },
+  {
+    "id": 10,
+    "business_name": "Centrx Inc.",
+    "address": "Pittsburgh, PA area",
+    "phone": "",
+    "email": "",
+    "website": "https://centrxinc.com/",
+    "services": [
+      "CNC Machining",
+      "CNC Milling",
+      "CNC Router",
+      "Laser Cutting",
+      "Welding",
+      "Forming",
+      "Punching",
+      "Electronic Controls",
+      "Wire Harness Manufacturing",
+      "Assembly Services",
+      "Anodizing",
+      "Powder Coating",
+      "Plating Services"
+    ],
+    "notes": "Contract manufacturer serving Pittsburgh area for 30+ years, Full-service from design to delivery"
+  },
+  {
+    "id": 11,
+    "business_name": "Roberson Machine Company",
+    "address": "Serving Pittsburgh, PA area",
+    "phone": "573-646-3996",
+    "email": "",
+    "website": "https://robersontool.com/",
+    "services": [
+      "CNC Services",
+      "Precision Machining",
+      "Metal Fabrication",
+      "Prototyping",
+      "Welding",
+      "3D Printing",
+      "Assembly"
+    ],
+    "notes": "Serves Pittsburgh, PA area with CNC machining and fabrication services"
+  },
+  {
+    "id": 12,
+    "business_name": "Gazzam Machine, Inc.",
+    "address": "3200 Penn Ave, Pittsburgh, PA 15236",
+    "phone": "412-471-6647",
+    "email": "",
+    "website": "https://gazzammachine.net/",
+    "services": [
+      "Large Part Machining",
+      "Custom Production Machining",
+      "Quick Turn Services",
+      "CNC Machining"
+    ],
+    "notes": "Serving Pittsburgh for over 113 years, Can machine parts 8 to 100 inches in diameter, Parts up to 16 feet long"
+  },
+  {
+    "id": 13,
+    "business_name": "Westwood Precision LLC",
+    "address": "1530 East Race St, Allentown, PA 18109",
+    "phone": "(610) 264-7020",
+    "email": "",
+    "website": "https://www.westwoodprecisionllc.com/",
+    "services": [
+      "CNC Milling",
+      "CNC Turning",
+      "Swiss Turning",
+      "Laser Marking",
+      "Heat Treating"
+    ],
+    "certifications": "ISO 13485 certified",
+    "notes": "Specializes in medical innovations and life-changing products, Located in Allentown"
+  },
+  {
+    "id": 14,
+    "business_name": "Van Industries, Inc.",
+    "address": "P.O. Box 31, #2 Industrial Drive, Birdsboro, PA 19508",
+    "phone": "610-582-1118",
+    "email": "",
+    "website": "https://www.vanindustriesinc.com/",
+    "services": [
+      "CNC Milling",
+      "CNC Turning",
+      "Large Format CNC Milling",
+      "Precision CNC Turning",
+      "Hydraulic Press",
+      "Band Saw"
+    ],
+    "notes": "Located near Reading, PA, Haas VF-9 with 40\"x84\"x30\" work envelope, Hyundai-Kia SKT28LM turning center"
+  },
+  {
+    "id": 15,
+    "business_name": "PFI Advanced Equipment Manufacturing",
+    "address": "Mohnton, PA (Berks County)",
+    "phone": "",
+    "email": "",
+    "website": "https://www.pfiaem.com/",
+    "services": [
+      "Metal CNC Machining",
+      "Foam Fabrication",
+      "Custom Fabrication",
+      "CNC Milling",
+      "CNC Router"
+    ],
+    "notes": "Over 75 years in business, Serves Allentown area, Specializes in foam and metal machining"
+  },
+  {
+    "id": 16,
+    "business_name": "RAM Tool, Inc.",
+    "address": "1420 Cheyenne Ave, Grafton, WI 53024 (Serves Pennsylvania)",
+    "phone": "262-375-3036",
+    "email": "",
+    "website": "https://www.ramtoolinc.com/",
+    "services": [
+      "CNC Machining",
+      "EDM Machining",
+      "Custom Machining",
+      "Die Cast Dies",
+      "Laser Scanning",
+      "Reverse Engineering",
+      "Prototype Tooling"
+    ],
+    "notes": "Since 1979, Specializes in aluminum and zinc die-cast dies, Serves Philadelphia, Pittsburgh, Allentown, Erie, Reading, Scranton, Harrisburg"
+  },
+  {
+    "id": 17,
+    "business_name": "Kiczan Manufacturing, Inc.",
+    "address": "3916 Crooked Run Road, North Versailles, PA 15137",
+    "phone": "412-678-0980",
+    "email": "",
+    "website": "https://kiczanmfg.com/",
+    "services": [
+      "CNC Machining",
+      "Metal Fabrication",
+      "Welding",
+      "Finishing",
+      "Assembly"
+    ],
+    "notes": "Founded in 1987, 53,000 sq ft facility, Less than 1% rejection rate, Full-service contract manufacturer serving Pittsburgh area"
+  },
+  {
+    "id": 18,
+    "business_name": "Holtwood Machine",
+    "address": "1304 Holtwood Rd, Holtwood, PA 17532",
+    "phone": "(717) 284-0890",
+    "email": "",
+    "website": "https://www.holtwoodmachine.com/",
+    "services": [
+      "CNC Lathing",
+      "CNC Milling",
+      "Laser Cutting",
+      "Waterjet Cutting",
+      "Injection Molding",
+      "3D Rapid Prototyping",
+      "Tube Bending",
+      "Welding"
+    ],
+    "notes": "Family business in Lancaster County, PA, Handles 1 to 30,000 pieces, Works with most plastics and metals",
+    "hours": "M-F 7:30am to 5:00pm"
+  },
+  {
+    "id": 19,
+    "business_name": "Bearon Manufacturing, LLC",
+    "address": "801 Stony Battery Road, Landisville, PA 17538",
+    "phone": "1-800-457-0154",
+    "email": "",
+    "website": "https://www.bearonmfg.com/",
+    "services": [
+      "CNC Machining",
+      "Casting",
+      "Prototyping",
+      "Pattern Making",
+      "PVC Forming",
+      "Naval Packing"
+    ],
+    "notes": "Originated in 1980, 80,000 sq ft climate-controlled facility with 30+ CNC machines, Located in Lancaster County",
+    "hours": ""
+  },
+  {
+    "id": 20,
+    "business_name": "Exact Precision, Inc.",
+    "address": "1872 Commerce Park E, Lancaster, PA 17601",
+    "phone": "(717) 517-9395",
+    "email": "sales@exactprecision.com",
+    "website": "https://www.exactprecision.com/",
+    "services": [
+      "CNC Machining",
+      "CNC Turning",
+      "Screw Machining",
+      "High Production Manufacturing"
+    ],
+    "notes": "25+ years of machining excellence, High production facility in Lancaster, PA"
+  }
+]

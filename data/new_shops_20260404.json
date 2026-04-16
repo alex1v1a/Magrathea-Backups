@@ -1,0 +1,110 @@
+[
+  {
+    "shop_name": "Illinois Valley Machine",
+    "city": "Ransom",
+    "state": "IL",
+    "email": "office@illinoisvalleymachine.com",
+    "phone": "1 (815) 586-4511",
+    "website": "https://www.illinoisvalleymachine.com",
+    "capabilities": "CNC and Manual Machining, In-House Saw and Welding, Mobile Machining, 7 Vertical Mills, 9 Lathes",
+    "contact_name": "Office",
+    "source": "web_search",
+    "discovery_date": "2026-04-04"
+  },
+  {
+    "shop_name": "Brogan & Patrick Mfg. Corp.",
+    "city": "Sullivan",
+    "state": "WI",
+    "email": "sales@brogan-patrick.com",
+    "phone": "262-723-6909",
+    "website": "https://www.brogan-patrick.com",
+    "capabilities": "Screw Machining, CNC Milling, CNC Turning, Plastic and Metal Components",
+    "contact_name": "Sales",
+    "source": "web_search",
+    "discovery_date": "2026-04-04"
+  },
+  {
+    "shop_name": "CCI Companies",
+    "city": "Wixom",
+    "state": "MI",
+    "email": "sales@cci-companies.com",
+    "phone": "(248)-477-4230",
+    "website": "https://cci-cnc.com",
+    "capabilities": "CNC Precision Machining, Swiss Machining, 5-Axis Capability, Custom Manufacturing",
+    "contact_name": "Sales",
+    "source": "web_search",
+    "discovery_date": "2026-04-04"
+  },
+  {
+    "shop_name": "Tomarjo Corp",
+    "city": "Thomasville",
+    "state": "NC",
+    "email": "Hireus@tomarjo.com",
+    "phone": "336-762-0065",
+    "website": "https://tomarjo.com",
+    "capabilities": "CNC Machining, CNC Lathe, Milling, Factory Automation",
+    "contact_name": "Hireus",
+    "source": "web_search",
+    "discovery_date": "2026-04-04"
+  },
+  {
+    "shop_name": "Accu-Tool LLC",
+    "city": "Apex",
+    "state": "NC",
+    "email": "greg@accutool.net",
+    "phone": "919-363-2600",
+    "website": "https://accutool.net",
+    "capabilities": "Multi-axis CNC Milling, Turning, Wire EDM, Medical, Aerospace, AS9100D Certified",
+    "contact_name": "Greg Stone",
+    "source": "web_search",
+    "discovery_date": "2026-04-04"
+  },
+  {
+    "shop_name": "Capital City Machine Shop",
+    "city": "Atlanta",
+    "state": "GA",
+    "email": "mmcclure@capitalcitymachineshop.com",
+    "phone": "770-447-9545",
+    "website": "https://capitalcitymachineshop.com",
+    "capabilities": "Precision Machining, CNC Services, Industrial Equipment Repair, Mining, Aggregate, Railroad",
+    "contact_name": "M. McClure",
+    "source": "web_search",
+    "discovery_date": "2026-04-04"
+  },
+  {
+    "shop_name": "CRI Machining",
+    "city": "Blairsville",
+    "state": "GA",
+    "email": "sales@crimachining.com",
+    "phone": "706.745.9599",
+    "website": "https://crimachining.com",
+    "capabilities": "5-Axis Milling and Turning, Waterjet, Laser Cutting, EDM, Heat Treat",
+    "contact_name": "Sales",
+    "source": "web_search",
+    "discovery_date": "2026-04-04"
+  },
+  {
+    "shop_name": "Northside Machine Company",
+    "city": "Dugger",
+    "state": "IN",
+    "email": "info@northsidemachine.com",
+    "phone": "812.648.2636",
+    "website": "https://www.northsidemachine.com",
+    "capabilities": "CNC Milling, CNC Turning, Military, Firearms, Aerospace, ISO 9001:2015/AS9100D Certified",
+    "contact_name": "Info",
+    "source": "web_search",
+    "discovery_date": "2026-04-04"
+  },
+  {
+    "shop_name": "Quake Manufacturing",
+    "city": "Fort Wayne",
+    "state": "IN",
+    "email": "paulquake@quakemfg.com",
+    "phone": "(260) 432-8023",
+    "website": "https://quakemfg.com",
+    "capabilities": "High-Speed CNC Machining, Swiss Lathe, Fabrication, Assembly, Inspection",
+    "contact_name": "Paul Quake",
+    "source": "web_search",
+    "discovery_date": "2026-04-04"
+  }
+]

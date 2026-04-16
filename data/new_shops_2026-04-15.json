@@ -1,0 +1,298 @@
+[
+  {
+    "name": "LT CNC Machining Inc.",
+    "city": "San Diego",
+    "state": "CA",
+    "email": "liem@ltmachininginc.com",
+    "website": "https://www.ltmachininginc.com",
+    "contact_person": null
+  },
+  {
+    "name": "G.V. Industries",
+    "city": "National City",
+    "state": "CA",
+    "email": "email@gvindustries.biz",
+    "website": "https://gvindustries.biz",
+    "contact_person": null
+  },
+  {
+    "name": "Accurate Machine",
+    "city": "San Diego",
+    "state": "CA",
+    "email": "brian@accuratemachinesd.com",
+    "website": "https://www.accuratemachinesd.com",
+    "contact_person": "Brian"
+  },
+  {
+    "name": "Bonneville Machine",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "email": "info@bonnevillemachine.com",
+    "website": "https://www.bonnevillemachine.com",
+    "contact_person": null
+  },
+  {
+    "name": "FTC Industries",
+    "city": "Arlington",
+    "state": "TX",
+    "email": "rick.flores@ftcindustries.com",
+    "website": "https://ftcindustries.com",
+    "contact_person": "Rick Flores"
+  },
+  {
+    "name": "Summit CNC",
+    "city": "Englewood",
+    "state": "CO",
+    "email": "service@summitcnc.com",
+    "website": "https://summitcnc.com",
+    "contact_person": null
+  },
+  {
+    "name": "JAH Machine Inc.",
+    "city": "Brea",
+    "state": "CA",
+    "email": "sales@jahmachine.com",
+    "website": "https://jahmachine.com",
+    "contact_person": null
+  },
+  {
+    "name": "Precision CNC Machining (PCM)",
+    "city": "Oxnard",
+    "state": "CA",
+    "email": "cncpcm@msn.com",
+    "website": "https://pcmcnc.com",
+    "contact_person": null
+  },
+  {
+    "name": "Ricaurte Precision",
+    "city": "Santa Ana",
+    "state": "CA",
+    "email": "cnc@ricaurteprecision.com",
+    "website": "https://www.ricaurteprecision.com",
+    "contact_person": null
+  },
+  {
+    "name": "Cobb Tool Inc.",
+    "city": "Mableton",
+    "state": "GA",
+    "email": "info@cobbtool.com",
+    "website": "https://cobbtool.com",
+    "contact_person": null
+  },
+  {
+    "name": "ZYCI",
+    "city": "Chamblee",
+    "state": "GA",
+    "email": "quotes@zyci.com",
+    "website": "https://www.zyci.com",
+    "contact_person": null
+  },
+  {
+    "name": "Blanda Inc",
+    "city": "Eagan",
+    "state": "MN",
+    "email": "services@blanda.net",
+    "website": "https://blanda.net",
+    "contact_person": null
+  },
+  {
+    "name": "Accu-Tool LLC",
+    "city": "Apex",
+    "state": "NC",
+    "email": "greg@accutool.net",
+    "website": "https://accutool.net",
+    "contact_person": "Greg Stone"
+  },
+  {
+    "name": "Borg Design",
+    "city": "North Andover",
+    "state": "MA",
+    "email": "rfq@borgdesign.com",
+    "website": "https://www.borgdesign.com",
+    "contact_person": "K. Andrew Borg"
+  },
+  {
+    "name": "Mitchell & Son Inc.",
+    "city": "Memphis",
+    "state": "TN",
+    "email": "ron@mitchell-son.com",
+    "website": "https://www.mitchell-son.com",
+    "contact_person": "Ron"
+  },
+  {
+    "name": "Tri-Tec Industries",
+    "city": "Charlotte",
+    "state": "NC",
+    "email": "info@tritecindustries.com",
+    "website": "https://tritecindustries.com",
+    "contact_person": "Rick Loyd"
+  },
+  {
+    "name": "Quality Products",
+    "city": "Charlotte",
+    "state": "NC",
+    "email": "info@qprod.com",
+    "website": "https://www.qprod.com",
+    "contact_person": "Dustin Jones"
+  },
+  {
+    "name": "Mountain View Supply Co.",
+    "city": "Charlotte",
+    "state": "NC",
+    "email": "",
+    "website": "https://mountainviewsupplyco.com",
+    "contact_person": null
+  },
+  {
+    "name": "Focused on Machining",
+    "city": "Arvada",
+    "state": "CO",
+    "email": "",
+    "website": "https://www.focusedonmachining.com",
+    "contact_person": null
+  },
+  {
+    "name": "Quality Components",
+    "city": "Denver",
+    "state": "CO",
+    "email": "vern@qccnc.com",
+    "website": "https://qccnc.com",
+    "contact_person": "Vern"
+  },
+  {
+    "name": "Batten Tool & Machine",
+    "city": "Burnsville",
+    "state": "MN",
+    "email": "",
+    "website": "https://battentool.com",
+    "contact_person": null
+  },
+  {
+    "name": "Challenge Machine",
+    "city": "Minneapolis",
+    "state": "MN",
+    "email": "",
+    "website": "https://challengemachine.com",
+    "contact_person": null
+  },
+  {
+    "name": "Cass Precision Machining",
+    "city": "Minneapolis",
+    "state": "MN",
+    "email": "",
+    "website": "https://cassprecisionmachining.com",
+    "contact_person": null
+  },
+  {
+    "name": "Ferrum Machining",
+    "city": "Attleboro",
+    "state": "MA",
+    "email": "",
+    "website": "https://ferrummachining.com",
+    "contact_person": null
+  },
+  {
+    "name": "American Precision Industries",
+    "city": "Hillsboro",
+    "state": "OR",
+    "email": "",
+    "website": "https://americanprecisionindustries.com",
+    "contact_person": null
+  },
+  {
+    "name": "Portland Precision Manufacturing",
+    "city": "Portland",
+    "state": "OR",
+    "email": "",
+    "website": "https://www.ppmfg.com",
+    "contact_person": null
+  },
+  {
+    "name": "Portland CNC",
+    "city": "Portland",
+    "state": "OR",
+    "email": "",
+    "website": "https://portlandcnc.com",
+    "contact_person": null
+  },
+  {
+    "name": "Delta Modern Machining",
+    "city": "Memphis",
+    "state": "TN",
+    "email": "",
+    "website": "https://www.deltamodernmachining.com",
+    "contact_person": null
+  },
+  {
+    "name": "Distinctive Manufacturing",
+    "city": "Memphis",
+    "state": "TN",
+    "email": "",
+    "website": "https://distinctivemfg.co",
+    "contact_person": null
+  },
+  {
+    "name": "Ellis Machine Works",
+    "city": "Charlotte",
+    "state": "NC",
+    "email": "",
+    "website": "https://www.ellismachineworks.com",
+    "contact_person": null
+  },
+  {
+    "name": "MAC FAB Company",
+    "city": "Mount Holly",
+    "state": "NC",
+    "email": "",
+    "website": "https://macfab.net",
+    "contact_person": null
+  },
+  {
+    "name": "Hastreiter Industries",
+    "city": "Marshfield",
+    "state": "WI",
+    "email": "",
+    "website": "https://hastreiter.industries",
+    "contact_person": null
+  },
+  {
+    "name": "Turnkey Machining",
+    "city": "Raleigh",
+    "state": "NC",
+    "email": "",
+    "website": "https://www.turnkeymachining.com",
+    "contact_person": null
+  },
+  {
+    "name": "Chatham CNC",
+    "city": "Raleigh",
+    "state": "NC",
+    "email": "",
+    "website": "https://www.chathamcnc.com",
+    "contact_person": null
+  },
+  {
+    "name": "Coweta Tech Precision",
+    "city": "Atlanta",
+    "state": "GA",
+    "email": "",
+    "website": "https://cowetatechprecision.com",
+    "contact_person": null
+  },
+  {
+    "name": "Capital City Machine Shop",
+    "city": "Atlanta",
+    "state": "GA",
+    "email": "",
+    "website": "https://capitalcitymachineshop.com",
+    "contact_person": null
+  },
+  {
+    "name": "K & K Machine Shop",
+    "city": "Villa Rica",
+    "state": "GA",
+    "email": "",
+    "website": "http://www.kkmachineatlanta.com",
+    "contact_person": null
+  }
+]

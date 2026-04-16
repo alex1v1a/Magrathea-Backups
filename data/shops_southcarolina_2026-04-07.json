@@ -1,0 +1,202 @@
+[
+  {
+    "company_name": "Foothills Machining, Inc.",
+    "phone": "(864) 868-0994",
+    "email": null,
+    "website": "https://www.foothillsmachininginc.com",
+    "address": "2502 Walhalla Highway, Pickens, SC 29671",
+    "services": "CNC Machining, Wire EDM Machining, Jigs/Fixtures/Design, Manual Machining, Assembly Automation"
+  },
+  {
+    "company_name": "Screwmatics of South Carolina, Inc.",
+    "phone": "(843) 672-3213",
+    "email": "sales@screwmaticssc.com",
+    "website": "https://screwmatics.com",
+    "address": "31659 HWY 9 West, Pageland, SC 29728",
+    "services": "Precision Production Machining, CNC Machining, Multi-Spindle Screw Machines, Lights-Out Manufacturing"
+  },
+  {
+    "company_name": "Precision Machine LLC",
+    "phone": null,
+    "email": null,
+    "website": "https://www.precisionmachinesc.com",
+    "address": "Fountain Inn, SC",
+    "services": "Turned, Milled & Drilled Components, Custom Machine Components, Low to Mid-Volume Orders"
+  },
+  {
+    "company_name": "Columbia Tool & Die",
+    "phone": "(803) 454-3900",
+    "email": "d.groom@columbiatoolanddie.com",
+    "website": "https://columbiatoolanddie.com",
+    "address": "301 Old Barnwell Road, West Columbia, SC 29170",
+    "services": "CNC Machining, Aerospace, Defense, Automotive, Nuclear, Medical, Exotic Alloys"
+  },
+  {
+    "company_name": "Calder Machine Company",
+    "phone": "843-665-5730",
+    "email": null,
+    "website": "https://www.caldermachine.com",
+    "address": "2116 Jody Road, Florence, SC 29502",
+    "services": "CNC Machining, Laser Cutting, Welding & Metal Fabrication, Water Jet Services, Powder Coating, Assembly"
+  },
+  {
+    "company_name": "Common CNC Manufacturing, LLC",
+    "phone": "(864) 594-9011",
+    "email": "cmbolin@commoncncmfg.com",
+    "website": "http://commoncncmfg.com",
+    "address": "380 Wingo Heights Rd Suite 6-B, Spartanburg, SC 29303",
+    "services": "CNC Manufacturing"
+  },
+  {
+    "company_name": "League Manufacturing Company",
+    "phone": "864.232.4423",
+    "email": null,
+    "website": "http://www.leaguemfg.com",
+    "address": "2200 Poinsett Highway, Greenville, SC 29609",
+    "services": "CNC Routers, Panel Processing, Plastic Fabrication, 3-D Surface Machining"
+  },
+  {
+    "company_name": "Sterling Precision Machining, Inc.",
+    "phone": null,
+    "email": null,
+    "website": "http://spmachining.com",
+    "address": "Summerville, SC",
+    "services": "CNC Machining, Manual Machining, Laser Cutting, Waterjet Cutting, Plasma Cutting, Fabrication, AWS Certified Welding"
+  },
+  {
+    "company_name": "K & M Tool & Die, Inc.",
+    "phone": "(864) 859-3209",
+    "email": null,
+    "website": "https://km-tool.com",
+    "address": "1632 Gentry Memorial Highway, Easley, SC",
+    "services": "CNC Machining, Contract Manufacturing"
+  },
+  {
+    "company_name": "Smith Machine & CNC, Inc.",
+    "phone": null,
+    "email": null,
+    "website": "https://www.smithcnc.com",
+    "address": "Sumter Industrial Park, Sumter, SC",
+    "services": "Precision Parts, Dies, Jigs, Fixtures, Welding Repair, CNC Machining"
+  },
+  {
+    "company_name": "Logan's Machine Shop",
+    "phone": "(864) 617-9099",
+    "email": null,
+    "website": "https://logansmachineshop.com",
+    "address": "717 Monitor Drive, Anderson, SC 29626",
+    "services": "Precision Machining, Prototyping, CNC Production, Large-Capacity Manual Lathe, MIG/TIG Welding"
+  },
+  {
+    "company_name": "General Machine of Anderson",
+    "phone": "864-375-9747",
+    "email": "info@generalmachine.org",
+    "website": "https://generalmachine.org",
+    "address": "120 Doubletree Dr, Anderson, SC 29625",
+    "services": "Assembly/Disassembly, Custom and Production Machining, Fieldwork, Millwright, Maintenance, Fabrication/Welding"
+  },
+  {
+    "company_name": "Advanced Machine Works, Inc.",
+    "phone": "(864) 859-0380",
+    "email": null,
+    "website": "http://www.advmachine.com",
+    "address": "106 Karnula Court PO Box 1020, Easley, SC",
+    "services": "CNC Machining"
+  },
+  {
+    "company_name": "Machine Shop Services",
+    "phone": "(864) 433-0190",
+    "email": null,
+    "website": "https://machineshopserv.com",
+    "address": "230 Berry Shoals Road, Duncan, SC",
+    "services": "CNC Machining, Fabrication, Powder Coating"
+  },
+  {
+    "company_name": "Service Machine Company",
+    "phone": "(803) 779-4949",
+    "email": null,
+    "website": null,
+    "address": "1644 Shop Road, Columbia, SC",
+    "services": "Machine Shop Services"
+  },
+  {
+    "company_name": "H&H Manufacturing Co.",
+    "phone": "(843) 479-4751",
+    "email": null,
+    "website": "http://handhmfg.com",
+    "address": "532 Highway 38 South, Bennettsville, SC 29512",
+    "services": "Manufacturing"
+  },
+  {
+    "company_name": "Marsh Industrial, Inc.",
+    "phone": "(843) 537-7694",
+    "email": null,
+    "website": "http://marshindustrial.blogspot.com",
+    "address": "694 Hwy 52 North, Cheraw, SC 29520",
+    "services": "Industrial Machining"
+  },
+  {
+    "company_name": "Distinctive Manufacturing Group",
+    "phone": "616-953-8999",
+    "email": null,
+    "website": "https://distinctivemfg.co",
+    "address": "Serving Charleston, SC",
+    "services": "CNC Milling, CNC Turning, 5-Axis CNC Machining, Metal Fabrication, Prototyping, 3D Printing"
+  },
+  {
+    "company_name": "J&J Machine",
+    "phone": "(231) 773-4100",
+    "email": null,
+    "website": "https://jjmachine99.com",
+    "address": "Serving Greenville, SC",
+    "services": "CNC Milling, CNC Turning, 5-Axis CNC Machining, Metal Fabrication"
+  },
+  {
+    "company_name": "C. Thorrez Industries, Inc.",
+    "phone": null,
+    "email": null,
+    "website": "https://thorrez.com",
+    "address": "Serving Greenville, SC (HQ in Michigan)",
+    "services": "CNC Machining, Production Machining, Swiss CNC Machining, CNC Turning, CNC Milling"
+  },
+  {
+    "company_name": "Hastreiter Industries",
+    "phone": "(715) 227-9988",
+    "email": "Sales@HastreiterIndustries.com",
+    "website": "https://hastreiter.industries",
+    "address": "Serving Charleston, SC (HQ in Marshfield, WI)",
+    "services": "CNC Milling, CNC Turning, 5-Axis CNC Machining, Aerospace Machining"
+  },
+  {
+    "company_name": "RAM Tool, Inc.",
+    "phone": null,
+    "email": null,
+    "website": "https://www.ramtoolinc.com",
+    "address": "Serving South Carolina",
+    "services": "Precision CNC Machining, Aluminum and Zinc Die-Cast Dies"
+  },
+  {
+    "company_name": "Owens Industries, LLC",
+    "phone": null,
+    "email": null,
+    "website": "https://www.owensind.com",
+    "address": "Serving South Carolina",
+    "services": "Precision CNC Machine Shop Services"
+  },
+  {
+    "company_name": "Custom Metalizing & Machining (CMMC)",
+    "phone": null,
+    "email": null,
+    "website": "https://cmmcsc.com",
+    "address": "South Carolina",
+    "services": "Custom Machining, Reverse Engineering, Gearbox Rebuilding, OEM Replacement Parts"
+  },
+  {
+    "company_name": "Accutech Machine, Inc.",
+    "phone": "(803) 735-8118",
+    "email": null,
+    "website": null,
+    "address": "1110 Northpoint Boulevard, Blythewood, SC",
+    "services": "Machine Shop Services"
+  }
+]

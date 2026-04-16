@@ -1,0 +1,221 @@
+{
+  "Date": "2026-04-13",
+  "Status": "Complete",
+  "TargetCount": 20,
+  "FoundCount": 20,
+  "Regions": [
+    "Alabama",
+    "Arizona",
+    "Florida",
+    "Georgia",
+    "Illinois (St. Louis metro)",
+    "Minnesota",
+    "New Mexico",
+    "North Carolina",
+    "Ohio",
+    "Oregon",
+    "Texas"
+  ],
+  "Shops": [
+    {
+      "ShopName": "Precise Machining Company",
+      "ContactName": "",
+      "Email": "info@precisemachiningco.com",
+      "Phone": "512-528-8771",
+      "Website": "https://www.precisemachiningco.com",
+      "City": "Austin",
+      "State": "TX",
+      "Capabilities": "CNC Machining, Turning, Milling"
+    },
+    {
+      "ShopName": "Lowrance Machine",
+      "ContactName": "",
+      "Email": "info@lowrancemachine.com",
+      "Phone": "(281) 449-6524",
+      "Website": "https://www.lowrancemachine.com",
+      "City": "Houston",
+      "State": "TX",
+      "Capabilities": "CNC Machining, Turning, Milling"
+    },
+    {
+      "ShopName": "FTC Industries",
+      "ContactName": "Rick Flores",
+      "Email": "rick.flores@ftcindustries.com",
+      "Phone": "+1 817-385-0021",
+      "Website": "https://ftcindustries.com",
+      "City": "Arlington",
+      "State": "TX",
+      "Capabilities": "CNC Machining, Milling, Turning, Custom Parts"
+    },
+    {
+      "ShopName": "Brooklyn Machine & Mfg",
+      "ContactName": "",
+      "Email": "sales@brooklynmachinemfg.com",
+      "Phone": "(216) 341-1846",
+      "Website": "https://www.brooklynmachinemfg.com",
+      "City": "Cleveland",
+      "State": "OH",
+      "Capabilities": "CNC Machining, Milling, Turning"
+    },
+    {
+      "ShopName": "PFI Precision",
+      "ContactName": "",
+      "Email": "sales@pfiprecision.com",
+      "Phone": "800.248.4734",
+      "Website": "https://www.pfiprecision.com",
+      "City": "New Carlisle",
+      "State": "OH",
+      "Capabilities": "Precision Machining, CNC Milling, Turning"
+    },
+    {
+      "ShopName": "Genesis Precision",
+      "ContactName": "",
+      "Email": "info@genesisprecisionaz.com",
+      "Phone": "602-687-9600",
+      "Website": "https://genesisprecisionaz.com",
+      "City": "Phoenix",
+      "State": "AZ",
+      "Capabilities": "CNC Machining, Milling, Turning, Prototyping"
+    },
+    {
+      "ShopName": "EEServ",
+      "ContactName": "",
+      "Email": "Office@eeserv.com",
+      "Phone": "(865) 789-3176",
+      "Website": "https://www.eeserv.com",
+      "City": "Casa Grande",
+      "State": "AZ",
+      "Capabilities": "CNC Machining, Industrial Repair, Fabrication"
+    },
+    {
+      "ShopName": "Bogue Machine Co.",
+      "ContactName": "",
+      "Email": "quotes@boguemachine.com",
+      "Phone": "(505) 344-9988",
+      "Website": "https://boguemachine.com",
+      "City": "Albuquerque",
+      "State": "NM",
+      "Capabilities": "CNC Milling, Turning, Precision Machining"
+    },
+    {
+      "ShopName": "Valkyrie Machining",
+      "ContactName": "Robert Tillung",
+      "Email": "info@valkyriemachining.com",
+      "Phone": "+1 505-225-2943",
+      "Website": "https://valkyriemachining.com",
+      "City": "Albuquerque",
+      "State": "NM",
+      "Capabilities": "CNC Machining, Wire EDM, Reverse Engineering"
+    },
+    {
+      "ShopName": "Hand Precision Machining",
+      "ContactName": "",
+      "Email": "hand@handprecision.com",
+      "Phone": "505-662-9001",
+      "Website": "https://machineshopnm.com",
+      "City": "Los Alamos",
+      "State": "NM",
+      "Capabilities": "High Precision Machining, CNC Milling, Turning"
+    },
+    {
+      "ShopName": "Blanda Inc",
+      "ContactName": "",
+      "Email": "services@blanda.net",
+      "Phone": "1-651-688-9510",
+      "Website": "https://blanda.net",
+      "City": "Eagan",
+      "State": "MN",
+      "Capabilities": "CNC Milling, Turning, Wire EDM, Waterjet"
+    },
+    {
+      "ShopName": "Anchor Machine & Fab",
+      "ContactName": "",
+      "Email": "info@anchormachineshop.com",
+      "Phone": "813-247-3099",
+      "Website": "https://anchormachineshop.com",
+      "City": "Tampa",
+      "State": "FL",
+      "Capabilities": "CNC Machining, Custom Fabrication, Heavy Equipment"
+    },
+    {
+      "ShopName": "CLN of South Florida",
+      "ContactName": "",
+      "Email": "sales@clncnc.com",
+      "Phone": "561-996-5900",
+      "Website": "https://clnofsouthflorida.com",
+      "City": "Belle Glade",
+      "State": "FL",
+      "Capabilities": "CNC Machining, Fabrication"
+    },
+    {
+      "ShopName": "Catamount Machine Works",
+      "ContactName": "",
+      "Email": "info@catmw.com",
+      "Phone": "813-659-0505",
+      "Website": "https://catmw.com",
+      "City": "Plant City",
+      "State": "FL",
+      "Capabilities": "5-Axis CNC Machining, Wire EDM, Prototyping"
+    },
+    {
+      "ShopName": "BDE Manufacturing Technologies",
+      "ContactName": "",
+      "Email": "info@bdeinc.com",
+      "Phone": "503.648.7418",
+      "Website": "https://www.bdeinc.com",
+      "City": "Beaverton",
+      "State": "OR",
+      "Capabilities": "CNC Machining, Milling, Turning, EDM"
+    },
+    {
+      "ShopName": "Schantz Machine & Fabrication",
+      "ContactName": "",
+      "Email": "sales@schantzfab.org",
+      "Phone": "618-651-4084",
+      "Website": "https://schantzfab.com",
+      "City": "Highland",
+      "State": "IL",
+      "Capabilities": "CNC Machining, Custom Fabrication, Design for Manufacturing"
+    },
+    {
+      "ShopName": "Advanced Machining LLC",
+      "ContactName": "",
+      "Email": "info@admcnc.com",
+      "Phone": "704-633-8157",
+      "Website": "https://advancedmachiningcnc.com",
+      "City": "Salisbury",
+      "State": "NC",
+      "Capabilities": "5-Axis CNC Milling, Turning, Wire EDM, Sinker EDM"
+    },
+    {
+      "ShopName": "Tri-Tec Industries",
+      "ContactName": "",
+      "Email": "info@tritecindustries.com",
+      "Phone": "704-424-5995",
+      "Website": "https://tritecindustries.com",
+      "City": "Charlotte",
+      "State": "NC",
+      "Capabilities": "CNC Precision Components, Milling, Turning"
+    },
+    {
+      "ShopName": "Georgia Machine Works",
+      "ContactName": "",
+      "Email": "sales@georgiamachineworks.com",
+      "Phone": "706.291.7655",
+      "Website": "https://georgiamachineworks.com",
+      "City": "Augusta",
+      "State": "GA",
+      "Capabilities": "CNC Machining, Milling, Turning"
+    },
+    {
+      "ShopName": "Cobb Tool, Inc.",
+      "ContactName": "",
+      "Email": "info@cobbtool.com",
+      "Phone": "770-948-3775",
+      "Website": "https://cobbtool.com",
+      "City": "Mableton",
+      "State": "GA",
+      "Capabilities": "Precision Machining, CNC Milling, Turning, Welding Fixtures"
+    }
+  ]
+}

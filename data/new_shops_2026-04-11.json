@@ -1,0 +1,149 @@
+[
+  {
+    "shop_name": "Sierra Peaks",
+    "location": "Albuquerque, NM",
+    "email": "info@sierra-peaks.com",
+    "website": "https://www.sierra-peaks.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Catamount Machine Works",
+    "location": "Plant City, FL",
+    "email": "info@catmw.com",
+    "website": "https://catmw.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Hand Precision Machining",
+    "location": "Los Alamos, NM",
+    "email": "hand@handprecision.com",
+    "website": "https://machineshopnm.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Chicago CNC Machining Co.",
+    "location": "Hodgkins, IL",
+    "email": "info@chicagocncmachining.com",
+    "website": "https://chicagocncmachining.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "M-1 Tool Works",
+    "location": "McHenry, IL",
+    "email": "info@m1toolworks.com",
+    "website": "https://www.m1toolworks.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Chicago Machining & Tool",
+    "location": "Palatine, IL",
+    "email": "sales@chicago-machining.com",
+    "website": "https://chicago-machining.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Tri-Tec Industries",
+    "location": "Charlotte, NC",
+    "email": "info@tritecindustries.com",
+    "website": "https://tritecindustries.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "LT Machining Inc.",
+    "location": "San Diego, CA",
+    "email": "liem@ltmachininginc.com",
+    "website": "https://www.ltmachininginc.com",
+    "contact_person": "Liem"
+  },
+  {
+    "shop_name": "Accurate Machine",
+    "location": "San Diego, CA",
+    "email": "brian@accuratemachinesd.com",
+    "website": "https://www.accuratemachinesd.com",
+    "contact_person": "Brian"
+  },
+  {
+    "shop_name": "G.V. Industries",
+    "location": "National City, CA",
+    "email": "email@gvindustries.biz",
+    "website": "https://gvindustries.biz",
+    "contact_person": null
+  },
+  {
+    "shop_name": "FTC Industries",
+    "location": "Arlington, TX",
+    "email": "rick.flores@ftcindustries.com",
+    "website": "https://ftcindustries.com",
+    "contact_person": "Rick Flores"
+  },
+  {
+    "shop_name": "C&C Machine",
+    "location": "Harvey, LA",
+    "email": "office@ccmachineshop.com",
+    "website": "https://www.ccmachineshop.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "C&C Machine",
+    "location": "Harvey, LA",
+    "email": "pbilich@ccmachineshop.com",
+    "website": "https://www.ccmachineshop.com",
+    "contact_person": "Paula Bilich"
+  },
+  {
+    "shop_name": "C&C Machine",
+    "location": "Harvey, LA",
+    "email": "lbilich@ccmachineshop.com",
+    "website": "https://www.ccmachineshop.com",
+    "contact_person": "Luke Bilich"
+  },
+  {
+    "shop_name": "A-1 Machine Shop",
+    "location": "Tulsa, OK",
+    "email": "info@a1machine.net",
+    "website": "https://a1machineshop.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Alpha Machinery & Technology",
+    "location": "Chatsworth, CA",
+    "email": "info@cncalpha.com",
+    "website": "https://www.cncalpha.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "R. Laing Manufacturing",
+    "location": "San Antonio, TX",
+    "email": "stephanie@rlaing.com",
+    "website": "https://rlaing.com",
+    "contact_person": "Stephanie"
+  },
+  {
+    "shop_name": "Texas Toolmakers",
+    "location": "San Antonio, TX",
+    "email": "info@txtool.com",
+    "website": "https://www.txtoolmakers.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Aero Mechanism Precision",
+    "location": "Chatsworth, CA",
+    "email": "aero@aeromechanism.com",
+    "website": "https://www.aeromechanism.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "Mahuta Tool Corporation",
+    "location": "Milwaukee, WI",
+    "email": "info@mahutatool.com",
+    "website": "https://www.mahutatool.com",
+    "contact_person": null
+  },
+  {
+    "shop_name": "King Precision Solutions",
+    "location": "Erie, PA",
+    "email": "info@kingprecisionsolutions.com",
+    "website": "https://kingprecisionsolutions.com",
+    "contact_person": null
+  }
+]

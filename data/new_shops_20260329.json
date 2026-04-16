@@ -1,0 +1,64 @@
+[
+  {
+    "name": "East Texas Machine Works",
+    "website": "https://www.etmworks.com/",
+    "location": "Longview, TX",
+    "phone": "(903) 759-9796",
+    "fax": "(903) 759-6206",
+    "email": null,
+    "capabilities": ["CNC machining", "milling", "turning", "welding", "fabrication", "large-part machining"],
+    "industries": ["general manufacturing"],
+    "year_founded": 1973,
+    "notes": "Over 50 years experience, turn-key supply chain solutions",
+    "date_discovered": "2026-03-29"
+  },
+  {
+    "name": "Four Points Platinum",
+    "website": "https://fourpointsplatinum.com/",
+    "location": "Austin, TX",
+    "phone": null,
+    "email": null,
+    "capabilities": ["CNC machining", "fabrication", "3D printing", "assembly", "engineering", "manufacturing"],
+    "industries": ["automotive", "aerospace", "medical", "electronics", "semiconductors"],
+    "year_founded": 2007,
+    "notes": "Full service adaptable machining, Austin-based since 2007",
+    "date_discovered": "2026-03-29"
+  },
+  {
+    "name": "Texas Machining",
+    "website": "https://www.texas-machining.com/",
+    "location": "Texas",
+    "phone": null,
+    "email": null,
+    "capabilities": ["CNC milling", "CNC lathes", "3D printing", "precision inspection"],
+    "industries": ["general manufacturing"],
+    "year_founded": 1998,
+    "notes": "25+ years experience, 3-axis and 5-axis machining, ±0.0001\" precision tolerance",
+    "date_discovered": "2026-03-29"
+  },
+  {
+    "name": "ER Machining",
+    "website": "https://ermachining.com/",
+    "location": "Houston, TX",
+    "phone": "(346) 333-8714",
+    "email": "Francois.Martin@ErMachining.com",
+    "capabilities": ["CNC machining", "CNC milling", "CNC turning", "emergency machining", "custom machining"],
+    "industries": ["general manufacturing"],
+    "year_founded": null,
+    "notes": "Houston-based, 5-star Google rating, fast turnaround",
+    "date_discovered": "2026-03-29"
+  },
+  {
+    "name": "Lewis Engineering",
+    "website": "https://lewisengineeringco.com/",
+    "location": "Marshall, TX",
+    "phone": "(903) 938-6754",
+    "fax": "(903) 935-3011",
+    "email": null,
+    "capabilities": ["CNC milling", "CNC turning", "chromate", "zinc phosphate", "metal painting", "salt spray testing", "metal stamping", "assembly", "welding", "broaching", "laser etching"],
+    "industries": ["defense", "aerospace", "industrial"],
+    "year_founded": 1961,
+    "notes": "Family owned 60+ years, defense/aerospace specialization, high-volume manufacturing",
+    "date_discovered": "2026-03-29"
+  }
+]

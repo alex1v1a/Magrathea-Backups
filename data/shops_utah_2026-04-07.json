@@ -1,0 +1,170 @@
+[
+  {
+    "name": "JD Machine",
+    "address": "2744 North Parkland Blvd, Ogden, UT 84404",
+    "phone": "(801) 823-2757",
+    "email": null,
+    "website": "https://www.jdmachine.com",
+    "services": ["CNC Machining", "CNC Turning", "CNC Milling", "Sheet Metal Fabrication", "Assembly & Testing"]
+  },
+  {
+    "name": "Sharp Tool Manufacturing",
+    "address": "1169 Century Drive, Ogden, UT 84404",
+    "phone": "(801) 392-6384",
+    "email": null,
+    "website": "https://www.sharptoolmfg.com",
+    "services": ["CNC Milling", "CNC Turning", "CNC Machining", "Fabrication"]
+  },
+  {
+    "name": "LV Swiss",
+    "address": "621 N State Street, La Verkin, UT 84745",
+    "phone": "(435) 635-1482",
+    "email": "quoting@lvswiss.com",
+    "website": "https://lvswiss.com",
+    "services": ["CNC Machining", "CNC Milling", "CNC Turning", "Swiss Screw Machining"]
+  },
+  {
+    "name": "Centric Precision Machining",
+    "address": "1805 West 2900 South, Units 3 & 4, Ogden, UT 84401",
+    "phone": "(801) 648-7527",
+    "email": "office@centricmachining.com",
+    "website": "https://www.centricmachining.com",
+    "services": ["Precision CNC Machining", "Aerospace Components", "Medical Components", "Low Volume Production"]
+  },
+  {
+    "name": "Cutting Edge CNC",
+    "address": "2898 Commerce Way, Suite 2, Ogden, UT 84401",
+    "phone": "(801) 928-8629",
+    "email": "orders@c-edgecnc.com",
+    "website": "https://www.c-edgecnc.com",
+    "services": ["CNC Vertical Machining", "CNC Horizontal Machining", "CNC Turning Centers", "Rapid Prototyping"]
+  },
+  {
+    "name": "Precision Balance & Machine",
+    "address": "8320 N Commerce Dr, Lake Point, UT 84074",
+    "phone": "(801) 261-1645",
+    "email": null,
+    "website": "https://pbmiut.com",
+    "services": ["CNC Machining", "Computerized Dynamic Balancing", "Welding", "Precision Alignment", "Custom Parts Fabrication"]
+  },
+  {
+    "name": "The CNC Pros",
+    "address": "3329 West 2555 South, West Valley City, UT 84119",
+    "phone": "(801) 973-0800",
+    "email": null,
+    "website": "https://thecncpros.com",
+    "services": ["5-Axis Milling", "3-Axis Turning", "CNC Machining", "Prototyping", "Tool & Die"]
+  },
+  {
+    "name": "CNC Fabrication",
+    "address": "3585 North 300 West, Hyde Park, UT 84318",
+    "phone": "(435) 563-3503",
+    "email": "info@cncfabrication.com",
+    "website": "https://cncfabrication.com",
+    "services": ["CNC Machining", "Fabrication", "Assembly", "Marine Fabrication", "CWI Inspections"]
+  },
+  {
+    "name": "Summit Machining",
+    "address": "1182 N 1565 W St, Orem, UT 84057",
+    "phone": "(801) 372-3856",
+    "email": "summitmachining07@gmail.com",
+    "website": "https://summitmachining07.com",
+    "services": ["CNC Lathe", "3-Axis CNC Milling", "4-Axis CNC Milling", "Mill-Turn Machining", "3D Scanning", "Laser Marking"]
+  },
+  {
+    "name": "A&M Tool and Cutter Grinding",
+    "address": "7010 S 400 W, Midvale, UT 84047",
+    "phone": "(801) 568-2887",
+    "email": null,
+    "website": "https://amtoolandcuttergrinding.com",
+    "services": ["Precision Machining", "CNC Milling", "CNC Lathe", "Tool & Cutter Grinding", "Surface Grinding"]
+  },
+  {
+    "name": "Alphaeus Manufacturing",
+    "address": "2410 W 350 N #2, Hurricane, UT 84737",
+    "phone": "(435) 229-5215",
+    "email": null,
+    "website": "https://alphaeusmfg.com",
+    "services": ["4-Axis Milling", "High Speed Milling", "Standard Turning", "Mill/Turn", "CNC Swiss Machining", "CNC Saw Cutting"]
+  },
+  {
+    "name": "Symetrx Machine",
+    "address": "1805 W 2900 S, Unit 2, Ogden, UT 84401",
+    "phone": "(801) 317-4288",
+    "email": null,
+    "website": null,
+    "services": ["Precision CNC Machining", "Fabrication"]
+  },
+  {
+    "name": "H&R Precision",
+    "address": "2192 S 3270 W, West Valley City, UT 84119",
+    "phone": "(801) 975-7400",
+    "email": null,
+    "website": null,
+    "services": ["CNC Machining", "Deburring", "Defense Industry Machining", "Aerospace Machining"]
+  },
+  {
+    "name": "L&R Automotive Machine",
+    "address": "91 Cross Street, Layton, UT 84041",
+    "phone": "(801) 544-4258",
+    "email": "lrmachine@qwestoffice.net",
+    "website": "https://www.lrautomotivemachine.com",
+    "services": ["Engine Rebuilding", "Valve Jobs", "Crankshaft Rebuilding", "Engine Block Repair", "Cylinder Head Pressure Testing"]
+  },
+  {
+    "name": "Reynolds Motor Machine",
+    "address": "760 Red Rock Road, St. George, UT 84770",
+    "phone": "(435) 628-6800",
+    "email": null,
+    "website": "http://www.rmmengines.com",
+    "services": ["Complete Engine Machine Shop", "Heads", "Blocks", "Cranks", "Rods", "Longblocks", "Shortblocks"]
+  },
+  {
+    "name": "CNC Machine & Design",
+    "address": "368 W 600 S, Salt Lake City, UT 84101",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "services": ["CNC Machining", "Precision Machining"]
+  },
+  {
+    "name": "Mountain View Machine",
+    "address": "Salt Lake City, UT",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "services": ["CNC Machining", "Precision Parts"]
+  },
+  {
+    "name": "Rapid Precision Machining",
+    "address": "Ogden, UT",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "services": ["CNC Milling", "CNC Turning", "Prototype Machining"]
+  },
+  {
+    "name": "Staker Tool & Design",
+    "address": "Logan, UT",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "services": ["CNC Machining", "Tool & Die", "Design Services"]
+  },
+  {
+    "name": "Uintah Machine",
+    "address": "Vernal, UT",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "services": ["CNC Machining", "Fabrication", "Industrial Equipment"]
+  },
+  {
+    "name": "Wasatch Precision",
+    "address": "Salt Lake City, UT",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "services": ["CNC Machining", "Precision Grinding", "EDM"]
+  }
+]

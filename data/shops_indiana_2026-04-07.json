@@ -1,0 +1,246 @@
+{
+  "date": "2026-04-07",
+  "totalShops": 24,
+  "shops": [
+    {
+      "id": 1,
+      "businessName": "Major Tool & Machine Inc.",
+      "address": " Indianapolis, Indiana",
+      "phone": "",
+      "email": "",
+      "website": "https://www.majortool.com/",
+      "city": "Indianapolis",
+      "services": "Large CNC milling and turning, manual and robotic welding, engineering, inspection, assembly"
+    },
+    {
+      "id": 2,
+      "businessName": "Northside Machine Company (NMC)",
+      "address": "8068 Main Street, Dugger, Indiana 47848",
+      "phone": "812-648-2636",
+      "email": "",
+      "website": "https://www.northsidemachine.com/",
+      "city": "Dugger",
+      "services": "CNC milling and turning, complex fabrication, in-house coatings, quality assurance"
+    },
+    {
+      "id": 3,
+      "businessName": "Impact CNC",
+      "address": "Columbia City, Indiana",
+      "phone": "",
+      "email": "",
+      "website": "https://www.impactcnc.net/",
+      "city": "Columbia City",
+      "services": "Precision CNC manufacturing, 92 CNC milling machines, 28 CNC turning centers, agricultural equipment"
+    },
+    {
+      "id": 4,
+      "businessName": "Summit City Precision Machining Inc. (SCPM)",
+      "address": "815 Lawrence Drive, Fort Wayne, Indiana 46804",
+      "phone": "260-459-7031",
+      "email": "",
+      "website": "https://www.goscpm.com/",
+      "city": "Fort Wayne",
+      "services": "ISO 13485 contract manufacturing, precision machining, CMM programming, PPAP, gauge manufacturing"
+    },
+    {
+      "id": 5,
+      "businessName": "Alliance Tool & Precision Machining",
+      "address": "3919 Engle Road, Fort Wayne, Indiana 46804",
+      "phone": "260-432-2909",
+      "email": "",
+      "website": "https://alliancetool.net/",
+      "city": "Fort Wayne",
+      "services": "Systems design, manufacturing, automation, CNC machining, precision grinding"
+    },
+    {
+      "id": 6,
+      "businessName": "Absolute Machining LLC",
+      "address": "3834 Vanguard Drive, Fort Wayne, IN 46809",
+      "phone": "260-747-4568",
+      "email": "shop@absmach.com",
+      "website": "https://absolutemachiningllc.com/",
+      "city": "Fort Wayne",
+      "services": "Precision CNC machining, custom prototyping, short-runs, high-volume machining"
+    },
+    {
+      "id": 7,
+      "businessName": "Precise Manufacturing",
+      "address": "4323 Merchant Road, Fort Wayne, IN 46818",
+      "phone": "260-422-6518",
+      "email": "info@precisemfginc.com",
+      "website": "https://www.precisemfginc.com",
+      "city": "Fort Wayne",
+      "services": "Horizontal and vertical milling, CNC Swiss machining, multi-spindle automatic screw machining, multi-axis CNC lathes"
+    },
+    {
+      "id": 8,
+      "businessName": "Action Machine Inc",
+      "address": "1847 Prairie Ave., South Bend, IN 46613",
+      "phone": "574-287-9650",
+      "email": "",
+      "website": "https://www.actionmachineinc.com/",
+      "city": "South Bend",
+      "services": "Custom driveshafts, CNC short run production, maintenance machining, welding"
+    },
+    {
+      "id": 9,
+      "businessName": "GMI Corporation",
+      "address": "700 International Drive, Franklin, IN 46131",
+      "phone": "317-736-5116",
+      "email": "info@gmicorp.com",
+      "website": "https://gmicorp.com/",
+      "city": "Franklin",
+      "services": "Swiss-style and multi-axis lathe, medical device manufacturing, RF connector, aerospace and defense"
+    },
+    {
+      "id": 10,
+      "businessName": "C M Engineering",
+      "address": "8112 E. Main St., Dugger, Indiana 47848",
+      "phone": "812-648-2038",
+      "email": "",
+      "website": "https://www.cm-engineering.org/",
+      "city": "Dugger",
+      "services": "Precision machined components, complex fabrication, laser cutting, CNC machining"
+    },
+    {
+      "id": 11,
+      "businessName": "South Bend Form Tool",
+      "address": "408 W. Indiana Ave., South Bend, Indiana 46613",
+      "phone": "574-289-2441",
+      "email": "",
+      "website": "https://sbform.com/",
+      "city": "South Bend",
+      "services": "CNC turning, CNC vertical machining, laser marking, precision grinding, EDM machining, fixtures and tooling"
+    },
+    {
+      "id": 12,
+      "businessName": "Highland Machine Tool",
+      "address": "Floyds Knobs, Indiana",
+      "phone": "812-923-8884",
+      "email": "",
+      "website": "https://highlandmachinetool.com/",
+      "city": "Floyds Knobs",
+      "services": "CNC machining, machine and welding solutions, specialty machined products"
+    },
+    {
+      "id": 13,
+      "businessName": "Hoosier Pattern",
+      "address": "Decatur, Indiana",
+      "phone": "",
+      "email": "",
+      "website": "https://hoosierpattern.com/",
+      "city": "Decatur",
+      "services": "3D sand printing, subtractive manufacturing, CNC machining, foundry tooling"
+    },
+    {
+      "id": 14,
+      "businessName": "Bedford Machine & Tool, Inc",
+      "address": "Bedford, IN",
+      "phone": "812-275-1948",
+      "email": "",
+      "website": "",
+      "city": "Bedford",
+      "services": "Design, tooling, production, CNC machining"
+    },
+    {
+      "id": 15,
+      "businessName": "MCD Machine, Inc.",
+      "address": "2345 W. Industrial Park Drive, Bloomington, Indiana 47404",
+      "phone": "812-339-1240",
+      "email": "melinda@mcdmachineinc.com",
+      "website": "https://mcdmachineinc.com/",
+      "city": "Bloomington",
+      "services": "Specialized lathe and mill CNC machining, polymers, carbon steels, stainless steels, high temp alloys"
+    },
+    {
+      "id": 16,
+      "businessName": "Anita Machine and Tool Inc",
+      "address": "Greater Lafayette area, Indiana",
+      "phone": "765-477-6054",
+      "email": "",
+      "website": "https://anitamachine.com/",
+      "city": "Lafayette",
+      "services": "Manual and CNC lathes and mills, laser cutter, water jet, wire EDM, welding services"
+    },
+    {
+      "id": 17,
+      "businessName": "H&R Industrial",
+      "address": "832 S Berkley Rd, Kokomo, IN 46901",
+      "phone": "765-868-8408",
+      "email": "",
+      "website": "https://www.hrindust.com/",
+      "city": "Kokomo",
+      "services": "Automation, machining, fabrication, contract maintenance, inspection"
+    },
+    {
+      "id": 18,
+      "businessName": "Specialty Machine & CNC",
+      "address": "Indiana",
+      "phone": "",
+      "email": "",
+      "website": "https://specialtymachinecnc.com/",
+      "city": "",
+      "services": "Custom machining, reverse engineering, design, precision machining"
+    },
+    {
+      "id": 19,
+      "businessName": "Jessen Manufacturing",
+      "address": "1409 West Beardsley Avenue, Elkhart, Indiana 46515",
+      "phone": "574-295-3836",
+      "email": "acandiano@jessenmfg.com",
+      "website": "https://www.jessenmfg.com/",
+      "city": "Elkhart",
+      "services": "Screw machine products, CNC turned parts, automatic screw machine, CNC vertical machining"
+    },
+    {
+      "id": 20,
+      "businessName": "Star Tool & Die Inc",
+      "address": "Elkhart, IN",
+      "phone": "574-264-3815",
+      "email": "",
+      "website": "https://www.startooldie.com/",
+      "city": "Elkhart",
+      "services": "3D machining, jigs, fixtures, dies, prototypes, special machines"
+    },
+    {
+      "id": 21,
+      "businessName": "Superior Innovations",
+      "address": "Nappanee, Indiana",
+      "phone": "",
+      "email": "",
+      "website": "https://www.simachining.com/",
+      "city": "Nappanee",
+      "services": "Full CNC machining solutions, high to low volume production, one-off parts"
+    },
+    {
+      "id": 22,
+      "businessName": "Hastreiter Industries",
+      "address": "Wisconsin-based, serving Indianapolis, IN area",
+      "phone": "",
+      "email": "",
+      "website": "https://hastreiter.industries/indianapolis-cnc-machine-shop/",
+      "city": "Indianapolis (served from WI)",
+      "services": "CNC milling (3-5 axis), CNC turning (2-4 axis), DFM, prototyping, 3D printing, welding, fabrication"
+    },
+    {
+      "id": 23,
+      "businessName": "Blanda Inc",
+      "address": "Minneapolis-based, serving Indiana",
+      "phone": "651-688-9510",
+      "email": "",
+      "website": "https://blanda.net/indiana-cnc-machine-shop/",
+      "city": "Indianapolis (served from MN)",
+      "services": "CNC machining, wire EDM, prototyping, waterjet cutting, precision grinding"
+    },
+    {
+      "id": 24,
+      "businessName": "RAM Tool, Inc.",
+      "address": "Serving Indiana from out-of-state location",
+      "phone": "",
+      "email": "",
+      "website": "https://www.ramtoolinc.com/areas-served/indiana-cnc-services",
+      "city": "Indianapolis, Fort Wayne, Evansville, South Bend",
+      "services": "Precision machining, EDM, CMM, multi-axis, die casting"
+    }
+  ]
+}

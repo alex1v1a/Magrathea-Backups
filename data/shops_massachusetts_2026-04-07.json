@@ -1,0 +1,183 @@
+{
+  "collection_date": "2026-04-11",
+  "state": "Massachusetts",
+  "total_shops": 22,
+  "shops": [
+    {
+      "company_name": "Jones Machine Company, Inc.",
+      "address": "4 Canal Street, Danvers, MA 01923",
+      "phone": "978-774-1140",
+      "website": "https://jonesmachineco.com",
+      "email": "contactus@jonesmac.com",
+      "services": "CNC Milling, CNC Turning, Assembly, Fabrication"
+    },
+    {
+      "company_name": "Ferrum Machining",
+      "address": "Attleboro, MA",
+      "phone": "508-386-8356",
+      "website": "https://ferrummachining.com",
+      "email": "FerrumMachining@yahoo.com",
+      "services": "Precision CNC Machining, Milling, Turning, Boring, Grinding, Component Assembly"
+    },
+    {
+      "company_name": "Mach Machine, Inc.",
+      "address": "569 Main Street, Hudson, MA 01749",
+      "phone": "978-274-5700",
+      "website": "https://www.machmachine.com",
+      "email": null,
+      "services": "CNC Precision Machining, Engineering Services, CAD Design"
+    },
+    {
+      "company_name": "Fitz Machine Inc",
+      "address": "4 Railroad Ave, Wakefield, MA 01880",
+      "phone": "781-245-5966",
+      "website": "https://fitzmachine.com",
+      "email": null,
+      "services": "Precision CNC Milling, CNC Turning, Horizontal Machining, Tooling and Fixturing"
+    },
+    {
+      "company_name": "Nortek Inc",
+      "address": "70 Doty Circle, West Springfield, MA 01089",
+      "phone": "413-781-4777",
+      "website": "https://www.nortekinc.net",
+      "email": "office@nortekinc.net",
+      "services": "Multi-axis CNC Milling, CNC Turning, Wire EDM, Grinding, CMM Inspection"
+    },
+    {
+      "company_name": "P&L Machine",
+      "address": "162 Ayer Rd, Littleton, MA 01460",
+      "phone": "978-486-9626",
+      "website": "https://plmachine.com",
+      "email": "info@plmachine.com",
+      "services": "CNC Machining, Horizontal Milling, CMM Inspection, Prototyping, Production Runs"
+    },
+    {
+      "company_name": "Dale Engineering",
+      "address": "3 Alfred Circle, Bedford, MA 01730",
+      "phone": "781-541-6055",
+      "website": "https://daleengineering.com",
+      "email": "quotes@daleengineering.com",
+      "services": "Precision CNC Machining, Molybdenum, Tungsten, Titanium, Wire EDM, Micro Hole EDM"
+    },
+    {
+      "company_name": "Pocasset Machine",
+      "address": "7 Commerce Park, P.O. Box 3088, Pocasset, MA 02559",
+      "phone": "508-563-5572",
+      "website": "https://pocassetmachine.com",
+      "email": null,
+      "services": "CNC Machining, 3-5 Axis Machining Centers, Turning Centers, Oceanographic, Defense, Medical"
+    },
+    {
+      "company_name": "Peerless Precision Inc",
+      "address": "22 Mainline Drive, Westfield, MA 01085",
+      "phone": "413-562-2359",
+      "website": "https://www.peerlessprecision.com",
+      "email": "info@peerlessprecision.com",
+      "services": "High-Precision CNC Milling, Aerospace, Defense, Medical Devices, Optical Components"
+    },
+    {
+      "company_name": "High Tech Machinists Inc",
+      "address": "177 Riverneck Rd, Chelmsford, MA 01824",
+      "phone": "978-256-1600",
+      "website": "https://www.hightechmachinists.com",
+      "email": "greg@hightechmachinists.com",
+      "services": "CNC Milling, CNC Turning, Assembly, Prototypes, Production Runs"
+    },
+    {
+      "company_name": "Northland-Willette Hydraulics Inc",
+      "address": "Plainville, MA",
+      "phone": "508-699-4016",
+      "website": "https://nwhydinc.com",
+      "email": null,
+      "services": "CNC Machining, Hydraulic Cylinder Repair, System Design"
+    },
+    {
+      "company_name": "Owens Industries LLC",
+      "address": "Serving Massachusetts",
+      "phone": null,
+      "website": "https://www.owensind.com",
+      "email": null,
+      "services": "Ultra-Precision CNC, 5-Axis Wire EDM, Turning/Milling, Deburring"
+    },
+    {
+      "company_name": "Compu-Gard Inc",
+      "address": "Swansea, MA",
+      "phone": "800-333-6810",
+      "website": null,
+      "email": null,
+      "services": "CNC Machining"
+    },
+    {
+      "company_name": "New England Water Jet Cutting",
+      "address": "New Bedford, MA",
+      "phone": "508-993-9235",
+      "website": null,
+      "email": null,
+      "services": "Water Jet Cutting, CNC Machining"
+    },
+    {
+      "company_name": "Meva Manufacturing Inc",
+      "address": "Dudley, MA",
+      "phone": "508-943-1600",
+      "website": null,
+      "email": null,
+      "services": "CNC Machining"
+    },
+    {
+      "company_name": "CNC Specialties",
+      "address": "Monson, MA",
+      "phone": "413-267-5051",
+      "website": null,
+      "email": null,
+      "services": "CNC Machining"
+    },
+    {
+      "company_name": "Precise Machine",
+      "address": "Monson, MA",
+      "phone": "413-267-3414",
+      "website": null,
+      "email": null,
+      "services": "CNC Machining"
+    },
+    {
+      "company_name": "Roberson Machine Company",
+      "address": "Serving Boston, MA",
+      "phone": "573-646-3996",
+      "website": "https://robersontool.com",
+      "email": null,
+      "services": "Precision CNC Machining"
+    },
+    {
+      "company_name": "RAM Tool Inc",
+      "address": "Serving Massachusetts",
+      "phone": "262-375-3036",
+      "website": "https://www.ramtoolinc.com",
+      "email": null,
+      "services": "Precision CNC Machining"
+    },
+    {
+      "company_name": "Dalton Manufacturing Group",
+      "address": "Amesbury, MA",
+      "phone": "978-388-2227",
+      "website": null,
+      "email": null,
+      "services": "CNC Machining, Custom Metalwork"
+    },
+    {
+      "company_name": "Fairhaven Machine",
+      "address": "Fairhaven, MA",
+      "phone": null,
+      "website": "https://fairhavenmachine.com",
+      "email": null,
+      "services": "CNC Machining"
+    },
+    {
+      "company_name": "EMG Manufacturing",
+      "address": "Massachusetts",
+      "phone": null,
+      "website": "https://www.egm-mfg.com",
+      "email": null,
+      "services": "CNC Machining"
+    }
+  ]
+}

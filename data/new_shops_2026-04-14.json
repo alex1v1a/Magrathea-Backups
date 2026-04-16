@@ -1,0 +1,235 @@
+﻿{
+    "Shops":  [
+                  {
+                      "Name":  "Halsey Manufacturing",
+                      "Location":  "Denton, TX",
+                      "Email":  "Sales@HalseyMFG.com",
+                      "Website":  "https://halseymfg.com",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Shamrock Precision",
+                      "Location":  "Dallas, TX",
+                      "Email":  "sales@shamrockprecision.com",
+                      "Website":  "https://shamrockprecision.com",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Silver Creek Machine",
+                      "Location":  "Fort Worth, TX",
+                      "Email":  "info@silvercreekmachine.com",
+                      "Website":  "https://www.silvercreekmachine.com",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "CJ\u0027s Machine \u0026 Fabrication",
+                      "Location":  "DFW Area, TX",
+                      "Email":  "andrew@cjsfabrication.com",
+                      "Website":  "https://www.cjsmachineandfab.com",
+                      "ContactPerson":  "Andrew"
+                  },
+                  {
+                      "Name":  "City Machine \u0026 Supply",
+                      "Location":  "Dallas, TX",
+                      "Email":  "Dallas@citymotorsupply.com",
+                      "Website":  "",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Chicago CNC Machining Co.",
+                      "Location":  "Hodgkins, IL",
+                      "Email":  "info@chicagocncmachining.com",
+                      "Website":  "https://chicagocncmachining.com",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Methods Machine Tools - Chicago",
+                      "Location":  "Elk Grove Village, IL",
+                      "Email":  "customersupport@methodsmachine.com",
+                      "Website":  "https://www.methodsmachine.com",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Technox Machine \u0026 Manufacturing Inc",
+                      "Location":  "Chicago, IL",
+                      "Email":  "amitshirsat@technoxmachine.com",
+                      "Website":  "https://www.technoxmachine.com",
+                      "ContactPerson":  "Amit Shirsat"
+                  },
+                  {
+                      "Name":  "HFO Chicago",
+                      "Location":  "Elk Grove Village, IL",
+                      "Email":  "ttaylor@hfochicago.com",
+                      "Website":  "https://www.haascnc.com",
+                      "ContactPerson":  "Tim Taylor"
+                  },
+                  {
+                      "Name":  "D.W. Ram Corporation",
+                      "Location":  "Chicago/Tinley Park, IL",
+                      "Email":  "",
+                      "Website":  "https://dwram.com",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Panek Precision",
+                      "Location":  "Northbrook, IL",
+                      "Email":  "",
+                      "Website":  "https://www.panekprecision.com",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Buell Machining",
+                      "Location":  "Chicago, IL",
+                      "Email":  "",
+                      "Website":  "https://buellmachining.com",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Matt Machine \u0026 Manufacturing, Inc.",
+                      "Location":  "Pittsburgh, PA",
+                      "Email":  "rudy@mattmachine.com",
+                      "Website":  "",
+                      "ContactPerson":  "Rudy"
+                  },
+                  {
+                      "Name":  "Versatech, Inc.",
+                      "Location":  "Export, PA",
+                      "Email":  "Info@E-Versatech.com",
+                      "Website":  "https://www.e-versatech.com",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "CNC Philly",
+                      "Location":  "Philadelphia, PA",
+                      "Email":  "info@cncphilly.com",
+                      "Website":  "https://www.cncphilly.com",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Northeast Precision Machinery, Inc.",
+                      "Location":  "Warminster, PA",
+                      "Email":  "sales@northeastprecision.com",
+                      "Website":  "",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Ephrata Precision Parts",
+                      "Location":  "Denver, PA",
+                      "Email":  "info@ephrataprecision.com",
+                      "Website":  "https://www.ephrataprecision.com",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Triangle Machine",
+                      "Location":  "Pennsylvania",
+                      "Email":  "office@trianglemachine.net",
+                      "Website":  "https://trianglemachine.net",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Conturo Prototyping",
+                      "Location":  "Pittsburgh, PA",
+                      "Email":  "info@conturo.com",
+                      "Website":  "https://www.conturo.com",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Small Parts Machine Inc.",
+                      "Location":  "Harmony, PA",
+                      "Email":  "info@smallpartsmachine.com",
+                      "Website":  "https://smallpartsmachine.com",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "General Manufacturing Company",
+                      "Location":  "Bethel Park, PA",
+                      "Email":  "quoterequest@generalmfg.net",
+                      "Website":  "https://generalmfg.net",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Precision Machining \u0026 Surfacing",
+                      "Location":  "Walton Hills, OH (Near Cleveland)",
+                      "Email":  "Dave@pre-machining.com",
+                      "Website":  "",
+                      "ContactPerson":  "Dave"
+                  },
+                  {
+                      "Name":  "Cleveland Machinery Sales",
+                      "Location":  "Ohio",
+                      "Email":  "sales@clevelandmachinery.com",
+                      "Website":  "https://clevelandmachinery.com",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Kiefer Tool and Mold Inc.",
+                      "Location":  "Cleveland, OH",
+                      "Email":  "info@kiefertool.com",
+                      "Website":  "https://kiefertool.com",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Salem Tool Co.",
+                      "Location":  "Grand Rapids Area, MI",
+                      "Email":  "info@salemtool.com",
+                      "Website":  "https://www.salemtoolcompany.com",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Delta Machine \u0026 Design",
+                      "Location":  "Grand Rapids, MI",
+                      "Email":  "Dvanderhyde@deltamachined.com",
+                      "Website":  "",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Superior Machine, Inc.",
+                      "Location":  "White Bear Lake/St. Paul, MN",
+                      "Email":  "info@superiormachineinc.net",
+                      "Website":  "https://www.superiormachineinc.net",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Minneapolis Commercial Mower \u0026 Welding",
+                      "Location":  "Minneapolis, MN",
+                      "Email":  "mplsmower@gmail.com",
+                      "Website":  "",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Twin Cities Maker",
+                      "Location":  "Minneapolis/St. Paul, MN",
+                      "Email":  "machineshop@tcmaker.org",
+                      "Website":  "",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "CGS Fabrication",
+                      "Location":  "Missouri",
+                      "Email":  "info@cgspt.com",
+                      "Website":  "",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Protolabs",
+                      "Location":  "Kansas City, MO",
+                      "Email":  "networksales@protolabs.com",
+                      "Website":  "https://www.protolabs.com",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "RMC Reliable Machinists Corporation",
+                      "Location":  "Houston, TX",
+                      "Email":  "info@rmcreliablemachinists.com",
+                      "Website":  "https://www.rmcreliablemachinists.com",
+                      "ContactPerson":  ""
+                  },
+                  {
+                      "Name":  "Dallas Precision Machining",
+                      "Location":  "Fort Worth/Carrollton, TX",
+                      "Email":  "info@dallasprecisionmachining.com",
+                      "Website":  "https://dallasprecisionmachining.com",
+                      "ContactPerson":  ""
+                  }
+              ]
+}

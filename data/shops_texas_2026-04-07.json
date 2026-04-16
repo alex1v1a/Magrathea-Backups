@@ -1,0 +1,257 @@
+{
+  "search_date": "2026-04-07",
+  "region": "Texas",
+  "total_shops": 25,
+  "shops": [
+    {
+      "company_name": "American Valmark Inc.",
+      "city": "Austin",
+      "state": "TX",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://texascncmachining.com/",
+      "capabilities": ["CNC Milling", "CNC Turning", "Laser Cutting", "Water Jet Cutting", "Surface Grinding", "Metal Finishing", "Polishing", "Heat Treating", "Prototype Machining"],
+      "notes": "Over 20 years in Central Texas. ITAR registered. Aerospace, semiconductor, medical device experience."
+    },
+    {
+      "company_name": "Blanda Inc.",
+      "city": "Eagan",
+      "state": "MN",
+      "emails": ["services@blanda.net"],
+      "phone_numbers": ["(651) 688-9510"],
+      "website": "https://blanda.net/",
+      "capabilities": ["CNC Milling", "CNC Turning", "Wire EDM", "Waterjet Cutting", "Precision Grinding", "Prototyping", "5 Axis Machining", "Titanium Machining", "Inconel Machining"],
+      "notes": "Minneapolis-based, serves Houston and all of Texas. Founded 1979."
+    },
+    {
+      "company_name": "Monroe Manufacturing Company LLC",
+      "city": "Spring",
+      "state": "TX",
+      "emails": ["austin@monroe-mfg.com"],
+      "phone_numbers": [],
+      "website": "https://www.monroe-mfg.com/",
+      "capabilities": ["CNC Machining", "Turning", "Milling", "Drilling", "Tapping", "Laser Cutting", "Brake-Press Bending", "Welding & Fabrication", "Finishing & Passivation"],
+      "notes": "Founded 2015. Shops in Montgomery and Spring, TX. Serves aerospace and oil & gas industries."
+    },
+    {
+      "company_name": "Midway Machine & Instrument Company",
+      "city": "South Houston",
+      "state": "TX",
+      "emails": ["sales@midway-machine.com"],
+      "phone_numbers": ["(713) 947-1102", "(888) 947-1250"],
+      "website": "https://midway-machine.com/",
+      "capabilities": ["CNC Milling", "CNC Turning", "EDM (Wire/Sinker/Small Hole)", "Gun Drilling", "Prototyping", "Precision Grinding", "Live Tooling"],
+      "notes": "Founded 1982. 25,000 sq ft facility. AS9100D/ISO 9001:2015 certified. Serves aerospace, biomedical, subsea, energy, medical, marine, agriculture."
+    },
+    {
+      "company_name": "R&H Machine LLC",
+      "city": "Longview",
+      "state": "TX",
+      "emails": [],
+      "phone_numbers": ["(903) 753-1550"],
+      "website": "https://www.rhmachinellc.com/",
+      "capabilities": ["CNC Machining", "3-4 Axis Machining", "Turning", "Milling", "Manual Machining", "Equipment Repair", "Welding", "Fabrication", "Hydrostatic Testing"],
+      "notes": "Woman-owned family business since 1991. 24/7 availability. Serves oil & gas, power stations, plant maintenance, railroads. ISO 9001 aligned."
+    },
+    {
+      "company_name": "Cypress Industries",
+      "city": "Austin",
+      "state": "TX",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://www.cypressindustries.com/",
+      "capabilities": ["CNC Machining", "3 Axis Milling", "CNC Lathe", "Grinders", "Tooling", "Prototyping"],
+      "notes": "Custom CNC machining center. Quick-turn to medium volume runs. Also has China manufacturing capabilities."
+    },
+    {
+      "company_name": "FTC Industries",
+      "city": "Arlington",
+      "state": "TX",
+      "emails": ["rick.flores@ftcindustries.com"],
+      "phone_numbers": ["(817) 385-0021"],
+      "website": "https://ftcindustries.com/",
+      "capabilities": ["CNC Turning", "CNC Milling", "Manufacturing", "Assembly", "Welding", "Parts Finishing", "Heat Treating", "Anodizing", "Plating", "Passivation", "Painting", "Laser Etching"],
+      "notes": "Founded 1997. 43,000 sq ft facility. Serves Dallas-Fort Worth and all of Texas. ISO 9000 compliant."
+    },
+    {
+      "company_name": "Halsey Manufacturing",
+      "city": "Denton",
+      "state": "TX",
+      "emails": [],
+      "phone_numbers": ["(940) 566-8388"],
+      "website": "https://www.halseymfg.com/",
+      "capabilities": ["CNC Turning", "CNC Milling", "Laser Engraving", "3D Printing", "Multi-axis Machining"],
+      "notes": "Founded 1979. Serves DFW area including Dallas, Fort Worth, Denton, Frisco, Plano, McKinney. Aerospace, aircraft, automotive, medical, defense industries."
+    },
+    {
+      "company_name": "Starke Machine",
+      "city": "Fort Worth",
+      "state": "TX",
+      "emails": [],
+      "phone_numbers": ["(817) 625-6821", "(817) 626-8001"],
+      "website": "https://www.starkemachine.com/",
+      "capabilities": ["CNC Turning", "CNC Milling", "4-5 Axis Machining", "Precision Machining", "Prototype to High-Volume Production"],
+      "notes": "ITAR registered job shop. AS9100/ISO9001 certified. Serves multiple industries with small to medium-sized parts."
+    },
+    {
+      "company_name": "Roberson Machine Company",
+      "city": "Fort Worth",
+      "state": "TX",
+      "emails": [],
+      "phone_numbers": ["(573) 646-3996"],
+      "website": "https://robersontool.com/",
+      "capabilities": ["CNC Turning", "CNC Milling", "Multi-Axis Machining", "5-Axis Machining", "Wire EDM", "Prototyping", "Precision Machining"],
+      "notes": "20+ years experience. Serves medical, aerospace, automotive, automation, industrial equipment, oil & gas."
+    },
+    {
+      "company_name": "JY's Extreme Machine",
+      "city": "Burleson",
+      "state": "TX",
+      "emails": ["info@jysextrememachine.com"],
+      "phone_numbers": ["(817) 295-0110"],
+      "website": "https://jysextrememachine.com/",
+      "capabilities": ["CNC Turning", "CNC Milling", "Programming", "Sawing", "Welding", "Precision Machining"],
+      "notes": "Founded 2005. 35+ years experience. Serves DFW metroplex. Industries: manufacturing, commercial, industrial, packaging, defense/military, aerospace."
+    },
+    {
+      "company_name": "RBR Machine",
+      "city": "Houston",
+      "state": "TX",
+      "emails": [],
+      "phone_numbers": ["(281) 469-6400"],
+      "website": "https://www.rbrmachine.com/",
+      "capabilities": ["5 Axis CNC Milling", "5 Axis CNC Turning", "Turnkey Manufacturing", "Wire EDM", "CMM Inspection", "Precision Machining"],
+      "notes": "ISO 9001 certified, AS 9100 registered. Serves Fort Worth, Corpus Christi, Tyler, and Texas-wide. Industries: oil & gas, aerospace, automotive, solar & wind, nuclear, agriculture."
+    },
+    {
+      "company_name": "Hastreiter Industries",
+      "city": "Marshfield",
+      "state": "WI",
+      "emails": [],
+      "phone_numbers": ["(715) 384-2949"],
+      "website": "https://hastreiter.industries/",
+      "capabilities": ["CNC Milling (3-5 Axis)", "CNC Turning (2-4 Axis)", "Laser Cutting", "Welding & Fabrication", "DFM & Metrology", "Prototyping", "3D Printing", "Contract Parts Inspection"],
+      "notes": "Wisconsin-based, serves El Paso and nationally. ISO 9001:2015, AS9100D, ITAR registered. Award-winning shop."
+    },
+    {
+      "company_name": "Wyler Industrial Works Inc.",
+      "city": "El Paso",
+      "state": "TX",
+      "emails": [],
+      "phone_numbers": ["(915) 772-4062"],
+      "website": "https://www.wylerindustrial.com/",
+      "capabilities": ["CNC Machining", "Routine Repairs", "Emergency Repairs", "Alterations", "Shaft Removal", "Destructive Testing", "Welding", "Line Boring", "Custom Parts"],
+      "notes": "Founded 1891. Serves Southwest region. Industries: oil & gas, mining, power stations, military/government, aviation/aerospace, automotive."
+    },
+    {
+      "company_name": "Gulf Coast Repair & Machine Shop Inc.",
+      "city": "Corpus Christi",
+      "state": "TX",
+      "emails": ["info@gulfcoastrepair.com"],
+      "phone_numbers": ["(361) 887-1244"],
+      "website": "https://www.gulfcoastrepair.com/",
+      "capabilities": ["CNC Machining", "Repair Services", "Phosphate Coating", "Oil & Gas Equipment"],
+      "notes": "Founded 1989. 20 acres, 51,000 sq ft facility. Serves oil & gas, Department of Defense, major oilfield companies."
+    },
+    {
+      "company_name": "Power Repair Service Inc.",
+      "city": "Corpus Christi",
+      "state": "TX",
+      "emails": [],
+      "phone_numbers": ["(361) 289-1471"],
+      "website": "https://powerrepair.net/",
+      "capabilities": ["CNC Machining", "Manual Machining", "Welding", "Field Services", "Rotating Equipment Repair"],
+      "notes": "Located at 314 McBride Lane. Specializes in rotating equipment repair for industrial applications."
+    },
+    {
+      "company_name": "Rigid Concepts LLC",
+      "city": "Van Alstyne",
+      "state": "TX",
+      "emails": [],
+      "phone_numbers": ["(214) 504-1967"],
+      "website": "https://www.rigidconcepts.com/",
+      "capabilities": ["5-Axis CNC Machining", "CNC Turning", "Lathe Work", "Precision CNC Milling", "Complex Assembly Manufacturing", "Quality Control & Inspection"],
+      "notes": "Veteran-owned. ISO 9001:2015 certified, ITAR registered. 22 CNC machines including 6 five-axis centers. Serves DFW metroplex including McKinney, Plano, Richardson, Allen, Dallas."
+    },
+    {
+      "company_name": "Cates Machine Shop Inc.",
+      "city": "Tyler",
+      "state": "TX",
+      "emails": [],
+      "phone_numbers": ["(903) 592-2015"],
+      "website": "http://catesmachine.com/",
+      "capabilities": ["CNC Machining", "Machine Work", "Fabrication", "Tool Repair", "Welding", "Plastic Machining", "Metal Fabrication"],
+      "notes": "Located at 12198 HWY 64 West. Tool repair, tool and die work, metal fabrication."
+    },
+    {
+      "company_name": "Thorrez Enterprises Inc.",
+      "city": "Fort Worth",
+      "state": "TX",
+      "emails": ["sales@thorrez.com"],
+      "phone_numbers": ["(734) 421-6330"],
+      "website": "https://thorrez.com/",
+      "capabilities": ["Precision Machining", "CNC Milling", "CNC Turning", "IATF 16949 Certified", "ISO 14001 Certified"],
+      "notes": "IATF 16949 and ISO 14001 certified. Serves Fort Worth area."
+    },
+    {
+      "company_name": "Owens Industries Inc.",
+      "city": "N/A (National Service)",
+      "state": "TX",
+      "emails": [],
+      "phone_numbers": ["(800) 934-6780"],
+      "website": "https://www.owensind.com/",
+      "capabilities": ["5-Axis CNC Machining", "CNC Milling", "CNC Turning", "Precision Machining", "Complex Components"],
+      "notes": "70+ years experience. Serves El Paso, Corpus Christi, McKinney, and all of Texas. Aerospace, medical, oil & gas focus."
+    },
+    {
+      "company_name": "Astro Machine & Tool Works LLC",
+      "city": "Tyler",
+      "state": "TX",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://www.astromachinetools.com/",
+      "capabilities": ["CNC Machining", "Machine Tools", "Tool Works"],
+      "notes": "Located at 8044 CR 313 East, Tyler TX."
+    },
+    {
+      "company_name": "EDM Intelligent Solutions",
+      "city": "El Paso",
+      "state": "TX",
+      "emails": [],
+      "phone_numbers": ["(817) 427-0222"],
+      "website": "https://www.edmdept.com/",
+      "capabilities": ["Wire EDM", "Sinker EDM", "EDM Hole Drilling", "Laser Ablation"],
+      "notes": "EDM manufacturing services for El Paso. Specialized EDM capabilities."
+    },
+    {
+      "company_name": "Leverage Mechanical Services",
+      "city": "Corpus Christi",
+      "state": "TX",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://leveragemechanicalservices.com/",
+      "capabilities": ["CNC Machining", "Machine Shop Services"],
+      "notes": "Serves Nueces County and Texas Gulf Coast. Oil and gas industry focus."
+    },
+    {
+      "company_name": "Lilly Machinery",
+      "city": "Tyler",
+      "state": "TX",
+      "emails": [],
+      "phone_numbers": [],
+      "website": "https://lillymachinery.com/",
+      "capabilities": ["CNC Machining", "Manual Machining", "Used Metalworking Equipment"],
+      "notes": "20,000 sq ft facility. Manual and CNC capabilities. Prototype to large heavy parts. Crane capacity up to 15 tons."
+    },
+    {
+      "company_name": "AT Precision",
+      "city": "N/A (National Service)",
+      "state": "TX",
+      "emails": [],
+      "phone_numbers": ["(800) 823-0791"],
+      "website": "https://www.atprecision.com/",
+      "capabilities": ["CNC Machining", "CNC Milling", "CNC Turning", "Grinding", "Custom Machining"],
+      "notes": "Decades of machining experience. Serves El Paso, Tyler, McKinney, and Texas-wide. Real-time job information online."
+    }
+  ]
+}

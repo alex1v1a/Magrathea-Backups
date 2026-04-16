@@ -1,0 +1,177 @@
+[
+  {
+    "business_name": "Tecton Industries, Inc.",
+    "address": "1105 East Milwaukee Street, P.O. Box 877, Spencer, IA 51301",
+    "phone": "(712) 262-4116",
+    "email": "sales@tectonind.com",
+    "website": "https://tectonind.com/"
+  },
+  {
+    "business_name": "Bowe Machine Company",
+    "address": "2527 State Street, Bettendorf, IA 52722",
+    "phone": "(563) 355-4777",
+    "email": "info@bowemachine.com",
+    "website": "https://www.bowemachine.com/"
+  },
+  {
+    "business_name": "Central Iowa Machine Shop Inc",
+    "address": "801 N 4th Ave, Marshalltown, IA 50158",
+    "phone": "(641) 752-7615",
+    "email": "tammy@centraliowamachine.com",
+    "website": "https://www.centraliowamachine.com/"
+  },
+  {
+    "business_name": "Bentley Manufacturing & Machining",
+    "address": "775 51st Street, Marion, IA 52302",
+    "phone": "(319) 373-5971",
+    "email": null,
+    "website": "https://www.bentley-mfg.com/"
+  },
+  {
+    "business_name": "C&C Machining Inc.",
+    "address": "22233 230th Ave, Centerville, IA 52544",
+    "phone": "(641) 856-8288",
+    "email": null,
+    "website": "https://cc-mach.com/"
+  },
+  {
+    "business_name": "Valley Machining Company",
+    "address": "1250 22nd Ave, PO Box 155, Rock Valley, IA 51247",
+    "phone": "(712) 476-2828",
+    "email": "vmc@valleymachining.com",
+    "website": "https://valleymachining.com/"
+  },
+  {
+    "business_name": "LeClaire Manufacturing",
+    "address": "Bettendorf, IA",
+    "phone": "(563) 332-6550",
+    "email": null,
+    "website": "https://www.leclairemfg.com/"
+  },
+  {
+    "business_name": "Mill Creek Machining (MCM)",
+    "address": "2915 A Ave E, Spencer, IA 51301",
+    "phone": null,
+    "email": null,
+    "website": "https://www.millcreekmachining.com/"
+  },
+  {
+    "business_name": "Rosko Manufacturing",
+    "address": "Des Moines, IA Area",
+    "phone": null,
+    "email": null,
+    "website": "https://roskomanufacturing.com/"
+  },
+  {
+    "business_name": "Superior Machine",
+    "address": "31 B Avenue W, Albia, IA",
+    "phone": "(515) 932-5999",
+    "email": null,
+    "website": "https://www.superiormachineia.com/"
+  },
+  {
+    "business_name": "Aerospace Geartech, Inc.",
+    "address": "7420 University Avenue, Suite D, Clive, IA 50325",
+    "phone": "(515) 255-3333",
+    "email": null,
+    "website": "http://www.aerospacegeartech.com/"
+  },
+  {
+    "business_name": "General Machine Works Company",
+    "address": "13 W 1st Street, Spencer, IA 51301",
+    "phone": "(712) 262-3738",
+    "email": null,
+    "website": "http://gm-w.com/"
+  },
+  {
+    "business_name": "Foster Engineering, Inc.",
+    "address": "5255 Pennsylvania Ave, Dubuque, IA 52002",
+    "phone": "(563) 584-9200",
+    "email": null,
+    "website": "http://www.precision-cnc-machining.com/"
+  },
+  {
+    "business_name": "Miller Products Company",
+    "address": "Osceola, IA",
+    "phone": "(800) 245-7034",
+    "email": null,
+    "website": "https://www.millerproductsco.com/"
+  },
+  {
+    "business_name": "Boyt & Zeller Tool & Die",
+    "address": "3120 Delaware Avenue, Des Moines, IA",
+    "phone": "(515) 262-6378",
+    "email": null,
+    "website": null
+  },
+  {
+    "business_name": "Blackhawk Engineering",
+    "address": "118 Blackhawk Lane, Cedar Falls, IA 50613",
+    "phone": "(319) 266-2681",
+    "email": null,
+    "website": "http://www.blackhawkengineering.com/"
+  },
+  {
+    "business_name": "Creative Werks Inc.",
+    "address": "1434 E. Fleming Ave, Des Moines, IA 50313",
+    "phone": "(515) 264-8222",
+    "email": null,
+    "website": "http://creativewerksinc.com/"
+  },
+  {
+    "business_name": "Uelner Precision Tools & Dies",
+    "address": "4545 Futuro Court, Dubuque, IA 52002-2615",
+    "phone": "(563) 583-5125",
+    "email": null,
+    "website": "http://www.uelnertool.com/"
+  },
+  {
+    "business_name": "Decker Precision Machining",
+    "address": "8760 Kapp Dr, Peosta, IA 52068",
+    "phone": "(563) 582-3242",
+    "email": null,
+    "website": "http://deckermachining.com/"
+  },
+  {
+    "business_name": "Snow Engineering, Inc.",
+    "address": "406 12th St, NE, Independence, IA 50644",
+    "phone": "(319) 334-4615",
+    "email": null,
+    "website": "http://snowengineering.com/"
+  },
+  {
+    "business_name": "Accurate Gear and Machine, Inc.",
+    "address": "2864 Burton Avenue, Waterloo, IA 50703",
+    "phone": "(319) 233-1997",
+    "email": null,
+    "website": "http://www.accurategear.com/"
+  },
+  {
+    "business_name": "Cedar Industries Inc.",
+    "address": "549 Center Street, Waterloo, IA 50703",
+    "phone": "(319) 234-1248",
+    "email": null,
+    "website": "http://cedarindustries.com/"
+  },
+  {
+    "business_name": "Power Engineering & Manufacturing, Ltd.",
+    "address": "2635 Wcf And N Drive, Waterloo, IA 50703",
+    "phone": "(319) 232-2311",
+    "email": null,
+    "website": "http://www.pemltd.com/"
+  },
+  {
+    "business_name": "Saturn Tool & Die Company",
+    "address": "2920 Janet Drive, Waterloo, IA 50703",
+    "phone": "(319) 232-5325",
+    "email": null,
+    "website": "http://saturntool.com/"
+  },
+  {
+    "business_name": "Spaceage Tool & Mfg.",
+    "address": "611 N. Park St, St. Ansgar, IA 50472",
+    "phone": "(641) 713-2055",
+    "email": null,
+    "website": "http://www.spaceagetool.com/"
+  }
+]

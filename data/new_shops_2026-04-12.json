@@ -1,0 +1,158 @@
+{
+  "Date": "2026-04-12",
+  "TargetCount": 20,
+  "FoundCount": 20,
+  "Status": "Complete",
+  "Regions": [
+    "Pennsylvania (Pittsburgh, Philadelphia)",
+    "California (Los Angeles, San Diego, Bay Area)",
+    "Texas (El Paso, San Antonio, Dallas/Fort Worth)",
+    "Louisiana (New Orleans, Harvey)",
+    "Massachusetts (Boston, Oxford, Peabody)",
+    "Wisconsin (Milwaukee)",
+    "North Carolina (Charlotte)",
+    "Minnesota (Eagan)"
+  ],
+  "Shops": [
+    {
+      "Name": "Philadelphia Precision CNC",
+      "Location": "Philadelphia, PA",
+      "Email": "info@philadelphiacnc.com",
+      "Website": "https://www.philadelphiacnc.com",
+      "ContactName": "Dante Porcelli (Founder & Owner), John Correle (Co-owner)"
+    },
+    {
+      "Name": "C&H Machine, Inc.",
+      "Location": "Escondido, CA",
+      "Email": "info@c-hmachine.com",
+      "Website": "https://www.c-hmachine.com",
+      "ContactName": ""
+    },
+    {
+      "Name": "Vargas Manufacturing Inc.",
+      "Location": "El Paso, TX",
+      "Email": "vargasmfg@msn.com",
+      "Website": "https://vargasmfg.com",
+      "ContactName": ""
+    },
+    {
+      "Name": "C&C Machine",
+      "Location": "Harvey, LA",
+      "Email": "office@ccmachineshop.com",
+      "Website": "https://www.ccmachineshop.com",
+      "ContactName": "Paula Bilich (Office Manager), Luke Bilich (Supervisor), Ivo Bilich (Production Manager)"
+    },
+    {
+      "Name": "Brady Machine Tool Services, Inc.",
+      "Location": "Oxford, MA",
+      "Email": "info@bradymts.com",
+      "Website": "https://www.bradymts.com",
+      "ContactName": ""
+    },
+    {
+      "Name": "Borg Design",
+      "Location": "Massachusetts",
+      "Email": "andrew@borgdesign.com",
+      "Website": "https://www.borgdesign.com",
+      "ContactName": "Andrew"
+    },
+    {
+      "Name": "Innovent Technologies LLC",
+      "Location": "Peabody, MA",
+      "Email": "info@innoventtech.com",
+      "Website": "https://innoventtech.com",
+      "ContactName": ""
+    },
+    {
+      "Name": "JAH Machine Inc.",
+      "Location": "Santa Ana, CA",
+      "Email": "sales@jahmachine.com",
+      "Website": "https://jahmachine.com",
+      "ContactName": ""
+    },
+    {
+      "Name": "Aero Mechanism Precision, Inc.",
+      "Location": "Chatsworth, CA",
+      "Email": "info@aeromechanism.com",
+      "Website": "https://www.aeromechanism.com",
+      "ContactName": ""
+    },
+    {
+      "Name": "Pacific CNC Machine Co.",
+      "Location": "Carlsbad, CA",
+      "Email": "accounting@pacificcnc.com",
+      "Website": "https://pacificcnc.com",
+      "ContactName": ""
+    },
+    {
+      "Name": "Bart Manufacturing, Inc.",
+      "Location": "Santa Clara, CA",
+      "Email": "sales@bartmanufacturing.com",
+      "Website": "https://www.bartmanufacturing.com",
+      "ContactName": ""
+    },
+    {
+      "Name": "R. Laing Manufacturing",
+      "Location": "San Antonio, TX",
+      "Email": "stephanie@rlaing.com",
+      "Website": "https://rlaing.com",
+      "ContactName": "Stephanie"
+    },
+    {
+      "Name": "C&F Tool & Die Co.",
+      "Location": "San Antonio, TX",
+      "Email": "diana@c-ftool.com",
+      "Website": "https://c-ftool.com",
+      "ContactName": "Diana"
+    },
+    {
+      "Name": "Texas Toolmakers Inc.",
+      "Location": "San Antonio, TX",
+      "Email": "info@txtool.com",
+      "Website": "https://www.txtoolmakers.com",
+      "ContactName": ""
+    },
+    {
+      "Name": "JB Machine LLC",
+      "Location": "San Antonio, TX",
+      "Email": "information@jb-machine.com",
+      "Website": "https://jb-machine.com",
+      "ContactName": ""
+    },
+    {
+      "Name": "FTC Industries",
+      "Location": "Arlington, TX",
+      "Email": "rick.flores@ftcindustries.com",
+      "Website": "https://ftcindustries.com",
+      "ContactName": "Rick Flores"
+    },
+    {
+      "Name": "Tri-Tec Industries",
+      "Location": "Charlotte, NC",
+      "Email": "info@tritecindustries.com",
+      "Website": "https://tritecindustries.com",
+      "ContactName": "Rick Loyd (President)"
+    },
+    {
+      "Name": "Linear Machining Technology",
+      "Location": "Greensburg, PA (Pittsburgh Area)",
+      "Email": "info@linearmt.com",
+      "Website": "https://www.linearmt.com",
+      "ContactName": ""
+    },
+    {
+      "Name": "Blanda Inc",
+      "Location": "Eagan, MN",
+      "Email": "services@blanda.net",
+      "Website": "https://blanda.net",
+      "ContactName": ""
+    },
+    {
+      "Name": "Distinctive Manufacturing Group",
+      "Location": "Charlotte, NC",
+      "Email": "rfq@distinctivemfg.co",
+      "Website": "https://distinctivemfg.co",
+      "ContactName": ""
+    }
+  ]
+}

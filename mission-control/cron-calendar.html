@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cron Calendar - Vectarr Mission Control</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+        h1 {
+            color: #00d4ff;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        .nav {
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #1a1a1a;
+            border-radius: 8px;
+        }
+        .nav a {
+            color: #00d4ff;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 500;
+        }
+        .nav a:hover { text-decoration: underline; }
+        .cron-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .cron-job {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+            border-left: 4px solid #00d4ff;
+        }
+        .cron-job.warning {
+            border-left-color: #ffaa00;
+        }
+        .cron-job.error {
+            border-left-color: #ff4444;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .job-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+        }
+        .job-schedule {
+            font-size: 14px;
+            color: #00d4ff;
+            font-family: monospace;
+        }
+        .job-details {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+        .job-status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .status-active {
+            background: #00ff88;
+            color: #000;
+        }
+        .status-timeout {
+            background: #ffaa00;
+            color: #000;
+        }
+        .summary {
+            margin-top: 30px;
+            padding: 20px;
+            background: #1a1a1a;
+            border-radius: 12px;
+        }
+        .summary h2 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+        }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .stat-box {
+            text-align: center;
+            padding: 15px;
+            background: #0a0a0a;
+            border-radius: 8px;
+        }
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #00d4ff;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+        .timestamp {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>📅 Cron Job Calendar</h1>
+    
+    <div class="nav">
+        <a href="index.html">← Back to Dashboard</a>
+        <a href="fleet-status.html">Fleet Status</a>
+        <a href="ssh-mesh.html">SSH Mesh</a>
+    </div>
+
+    <div class="cron-list">
+        <div class="cron-job">
+            <div class="job-header">
+                <span class="job-name">Email Monitor</span>
+                <span class="job-status status-active">ACTIVE</span>
+            </div>
+            <div class="job-schedule">0 */2 * * * (Every 2 hours)</div>
+            <div class="job-details">
+                Checks for actionable emails and machine shop replies.<br>
+                Machine: Deep Thought | Channel: discord
+            </div>
+        </div>
+
+        <div class="cron-job">
+            <div class="job-header">
+                <span class="job-name">Magrathea Backup</span>
+                <span class="job-status status-active">ACTIVE</span>
+            </div>
+            <div class="job-schedule">0 3 * * * (Daily at 3:00 AM)</div>
+            <div class="job-details">
+                Commits and pushes workspace to Magrathea repo.<br>
+                Machine: Deep Thought | Auto-commits all changes
+            </div>
+        </div>
+
+        <div class="cron-job">
+            <div class="job-header">
+                <span class="job-name">Daily Machine Shop Outreach</span>
+                <span class="job-status status-active">ACTIVE</span>
+            </div>
+            <div class="job-schedule">0 5 * * * (Daily at 5:00 AM)</div>
+            <div class="job-details">
+                Runs integrated outreach with automatic web discovery.<br>
+                Creates drafts for 10 shops, triggers discovery if needed.
+            </div>
+        </div>
+
+        <div class="cron-job warning">
+            <div class="job-header">
+                <span class="job-name">Vectarr Business Summary</span>
+                <span class="job-status status-timeout">TIMEOUT</span>
+            </div>
+            <div class="job-schedule">0 13 * * * (Daily at 1:00 PM)</div>
+            <div class="job-details">
+                Generates business operations report.<br>
+                ⚠ Last run timed out after 600s - needs investigation
+            </div>
+        </div>
+
+        <div class="cron-job">
+            <div class="job-header">
+                <span class="job-name">Web Discovery</span>
+                <span class="job-status status-active">ACTIVE</span>
+            </div>
+            <div class="job-schedule">0 14 * * * (Daily at 2:00 PM)</div>
+            <div class="job-details">
+                Searches for new CNC machine shops across regions.<br>
+                Target: 20 shops, Max regions: 15
+            </div>
+        </div>
+
+        <div class="cron-job">
+            <div class="job-header">
+                <span class="job-name">Shop Discovery (33 Regions)</span>
+                <span class="job-status status-active">ACTIVE</span>
+            </div>
+            <div class="job-schedule">Various (Daily across regions)</div>
+            <div class="job-details">
+                Parallel discovery jobs for each US state/region.<br>
+                Spawns sub-agents to search for CNC shops with contact info.
+            </div>
+        </div>
+    </div>
+
+    <div class="summary">
+        <h2>📊 Summary</h2>
+        <div class="summary-grid">
+            <div class="stat-box">
+                <div class="stat-number">34</div>
+                <div class="stat-label">Total Cron Jobs</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">33</div>
+                <div class="stat-label">Shop Discovery Regions</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Core Jobs</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">1</div>
+                <div class="stat-label">Timeout Issues</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="timestamp">
+        Last Updated: 2026-04-11 22:20 CDT | Deep Thought Mission Control
+    </div>
+</body>
+</html>

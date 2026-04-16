@@ -1,0 +1,209 @@
+{
+  "metadata": {
+    "search_date": "2026-04-11",
+    "state": "Alabama",
+    "total_shops_found": 21,
+    "data_quality_notes": [
+      "Some shops listed are physically located outside Alabama but actively serve the Alabama market",
+      "Email addresses were not available on all websites - some use contact forms only",
+      "All phone numbers and addresses verified from official company websites where possible",
+      "Physical Alabama shops prioritized over out-of-state service providers"
+    ]
+  },
+  "shops": [
+    {
+      "business_name": "B & W Machine & Tool Co",
+      "address": "2815 Avalon Ave, Muscle Shoals, AL 35661",
+      "phone": "256-383-2942",
+      "fax": "256-383-2945",
+      "email": null,
+      "website": "https://bwmachine.com/",
+      "location": "Muscle Shoals, AL",
+      "notes": "Family-owned since 1967, full-service CNC milling, turning, 5-axis machining"
+    },
+    {
+      "business_name": "Decker Machine Co",
+      "address": "540 Highway 49, Columbiana, AL 35051",
+      "phone": "205-855-3035",
+      "toll_free": "833-304-1195",
+      "email": null,
+      "website": "https://deckermachineco.com/",
+      "location": "Columbiana, AL",
+      "notes": "Serving greater Birmingham area since 1993, custom machining and design"
+    },
+    {
+      "business_name": "Freedom Precision Manufacturing",
+      "address": "P.O. Box 561, Arab, AL 35016",
+      "phone": "256-586-2200",
+      "fax": "256-586-2201",
+      "email": "jhyatt@freedomprecision.com",
+      "website": "https://www.freedomprecision.com/",
+      "location": "Arab, AL",
+      "notes": "AS9100D Certified, CNC and fabrication services, established 2004"
+    },
+    {
+      "business_name": "Moses Precision LLC",
+      "address": "Albertville/Arab, AL area",
+      "phone": null,
+      "email": null,
+      "website": "https://www.mosesprecisionllc.com/",
+      "location": "Albertville, AL",
+      "notes": "ISO 9001 partnered, full-service CNC machining, welding, repair and rebuild services"
+    },
+    {
+      "business_name": "Tanksley Machine & Tool, Inc.",
+      "address": "1407 Southfield Drive, S.E., Decatur, AL 35602",
+      "phone": "256-350-2276",
+      "fax": "256-350-2425",
+      "email": "info@tanksleymachine.com",
+      "website": "https://www.tanksleymachine.com/",
+      "location": "Decatur, AL",
+      "notes": "Family-owned since 1976, 40,000 sq ft facility, ISO and AS9100 certified"
+    },
+    {
+      "business_name": "SEMCO CNC Machining and Manufacturing LLC",
+      "address": "922 Brock Chapel Rd, Union Grove, AL 35175",
+      "phone": null,
+      "email": null,
+      "website": "https://www.semcomanufacturing.com/",
+      "location": "Union Grove, AL",
+      "notes": "ISO 9001 certified, Mazak CNC machining centers, prototype to production"
+    },
+    {
+      "business_name": "NTA Incorporated - CNC Machining Division",
+      "address": "171 Nick Fitcheard Rd., Huntsville, AL 35806",
+      "phone": "256-469-2266",
+      "email": "travis.morris@nta-inc.net",
+      "website": "https://www.nta-inc.net/services/mechanical-design-and-precision-machining/machining/",
+      "location": "Huntsville, AL",
+      "notes": "Aerospace and defense prototyping, 3-5 axis milling, high-complexity parts",
+      "contact_person": "Travis Morris, Shop Manager"
+    },
+    {
+      "business_name": "Brown Precision, Inc.",
+      "address": "90 Shields Rd, Huntsville, AL 35811",
+      "phone": "256-746-0533",
+      "email": "support@brownprecisioninc.com",
+      "website": "https://brownprecisioninc.com/",
+      "location": "Huntsville, AL",
+      "notes": "40+ years experience, AS9100D Certified, CNC milling, 5-axis machining, waterjet"
+    },
+    {
+      "business_name": "K & S Machining",
+      "address": "117 Jetplex Circle, Unit C11, Madison, AL 35758",
+      "phone": "256-325-1037",
+      "email": null,
+      "website": "https://www.ksmachining.com/",
+      "location": "Madison, AL",
+      "notes": "Aerospace & defense CNC machining, mill-turn lathes, serves Gulf Coast region"
+    },
+    {
+      "business_name": "Lee Precision Machine Shop, Inc.",
+      "address": "Athens, AL",
+      "phone": null,
+      "email": null,
+      "website": "https://leeprecisionmachine.com/",
+      "location": "Athens, AL",
+      "notes": "ISO 9001:2015 Certified, ITAR Registered, woman-owned, 40,000+ sq ft, est. 1977"
+    },
+    {
+      "business_name": "American Specialty Products and Machine Inc.",
+      "address": "Alabaster, AL 35007",
+      "phone": "205-918-7722",
+      "email": null,
+      "website": "https://amerispecandmachine.com/",
+      "location": "Alabaster, AL",
+      "notes": "Custom fasteners, CNC machining, rapid fabrication, Birmingham area"
+    },
+    {
+      "business_name": "Associated MetalCast",
+      "address": "Oxford, AL",
+      "phone": "256-831-8000",
+      "email": null,
+      "website": "https://www.associatedmetalcast.com/",
+      "location": "Oxford, AL",
+      "notes": "AS9100D & ISO 9001:2015 Certified, precision machining, castings"
+    },
+    {
+      "business_name": "U.S. Machine Services",
+      "address": "600 Zeigler Cir. E, Mobile, AL 36608",
+      "phone": "251-634-0445",
+      "email": null,
+      "website": "https://www.usmachineservices.com/",
+      "location": "Mobile, AL",
+      "notes": "ISO 9001:2015 Certified, family-owned since 2005, machining and repairs"
+    },
+    {
+      "business_name": "P&G Machine & Supply Co",
+      "address": "2617 Old Shell Rd, Mobile, AL 36607",
+      "phone": "251-471-4481",
+      "email": null,
+      "website": "https://pggears.com/",
+      "location": "Mobile, AL",
+      "notes": "Full-service machine shop, CNC, welding, equipment rental"
+    },
+    {
+      "business_name": "Theonics, Inc.",
+      "address": null,
+      "phone": null,
+      "email": null,
+      "website": "https://www.theonics.com/",
+      "location": "Alabama (location not specified on website)",
+      "notes": "Precision CNC machining, fabrication and assembly"
+    },
+    {
+      "business_name": "Roberson Machine Company (Serving Alabama)",
+      "address": "Headquarters: Missouri (serves Birmingham, AL area)",
+      "phone": "573-646-3996",
+      "email": null,
+      "website": "https://robersontool.com/",
+      "location": "Serves Birmingham, AL",
+      "notes": "Out-of-state provider serving Alabama market, full-service CNC"
+    },
+    {
+      "business_name": "RAM Tool, Inc. (Serving Alabama)",
+      "address": "Headquarters: Arkansas (serves Alabama)",
+      "phone": null,
+      "email": null,
+      "website": "https://www.ramtoolinc.com/areas-served/alabama-cnc-services",
+      "location": "Serves Huntsville, Birmingham, Montgomery, Mobile, Tuscaloosa, AL",
+      "notes": "Out-of-state provider, precision CNC services since 1979"
+    },
+    {
+      "business_name": "Owens Industries (Serving Alabama)",
+      "address": "Oak Creek, Wisconsin (serves Alabama)",
+      "phone": null,
+      "email": null,
+      "website": "https://www.owensind.com/MachineShop/Alabama",
+      "location": "Serves all of Alabama including Huntsville",
+      "notes": "Out-of-state provider, aerospace CNC machining, 5-axis capabilities"
+    },
+    {
+      "business_name": "AT Precision (Serving Alabama)",
+      "address": "Headquarters: Illinois (serves Birmingham, Huntsville, AL)",
+      "phone": "847-509-5848",
+      "email": null,
+      "website": "https://www.atprecision.com/",
+      "location": "Serves Birmingham and Huntsville, AL",
+      "notes": "Out-of-state provider, 20+ years experience, real-time job tracking"
+    },
+    {
+      "business_name": "Hastreiter Industries (Serving Alabama)",
+      "address": "Marshfield, Wisconsin (serves Huntsville, AL area)",
+      "phone": null,
+      "email": null,
+      "website": "https://hastreiter.industries/huntsville-cnc-machine-shop/",
+      "location": "Serves Huntsville, Decatur, Athens, AL",
+      "notes": "Out-of-state provider, AS9100D certified, 5-axis machining, serves aerospace/defense"
+    },
+    {
+      "business_name": "American Precision Tool Inc. (Serving Alabama)",
+      "address": "Pacoima, California (serves Alabama)",
+      "phone": null,
+      "email": null,
+      "website": "https://www.ameriprectool.com/alabama-cnc-machine-shop/",
+      "location": "Serves Alabama market",
+      "notes": "Out-of-state provider, AS9100D certified, aerospace and softgel tooling"
+    }
+  ]
+}

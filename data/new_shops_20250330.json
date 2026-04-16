@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Four Points Platinum",
+    "location": "Austin, TX",
+    "website": "https://fourpointsplatinum.com/",
+    "services": "Precision CNC Machining, Fabrication, 3D Printing",
+    "description": "Reliable precision CNC machine shop in Central Texas for comprehensive manufacturing solutions"
+  },
+  {
+    "name": "East Texas Machine Works (ETMW)",
+    "location": "Longview, TX",
+    "website": "https://www.etmworks.com/",
+    "services": "Large-part machining, Fabrication",
+    "description": "Over 50 years of large-part machining and fabrication services"
+  },
+  {
+    "name": "Texas Machining",
+    "location": "Texas",
+    "website": "https://www.texas-machining.com/",
+    "services": "CNC Machining, CNC Milling, CNC Lathes, 3D Printing",
+    "description": "Founded in 1998, delivering high-quality precision-machined parts from prototypes to high-volume production"
+  },
+  {
+    "name": "Distinctive Manufacturing",
+    "location": "Austin, TX",
+    "website": "https://distinctivemfg.co/",
+    "services": "CNC Machining, Metal Fabrication, CMM Inspection",
+    "description": "Metal fabrication and CNC machined parts across Central Texas including Travis County"
+  },
+  {
+    "name": "American Valmark (Texas CNC Machining)",
+    "location": "Texas",
+    "website": "https://texascncmachining.com/",
+    "services": "CNC Milling, Grinding, Heat Treating, Sandblasting, Anodizing, Plating, Powder Coating",
+    "description": "Decades of experience in CNC milling with full finishing services"
+  },
+  {
+    "name": "ER Machining",
+    "location": "Houston, TX",
+    "website": "https://ermachining.com/",
+    "services": "CNC Machining, CNC Milling, CNC Turning",
+    "description": "Trusted CNC machine shop offering high precision machining with fast turnaround"
+  },
+  {
+    "name": "Lewis Engineering",
+    "location": "Texas",
+    "website": "https://lewisengineeringco.com/",
+    "services": "CNC Machining, Fabrication",
+    "description": "Defense and aerospace focused CNC and fabrication machine shop with high volume capabilities"
+  },
+  {
+    "name": "A & A Machine & Fabrication LLC",
+    "location": "La Marque, TX (Houston area)",
+    "website": "https://aagroup.com/cnc-machine-shop-la-marque-tx/",
+    "services": "CNC Machining, Fabrication",
+    "description": "High-quality machining and fabrication services in the La Marque, Texas area"
+  },
+  {
+    "name": "Waggoner Manufacturing",
+    "location": "Austin, TX",
+    "website": "https://waggonermanufacturing.com/",
+    "services": "CNC Fabrication, Prototyping, CNC Machining, Turning, Milling",
+    "description": "CNC fabrication shop specializing in prototyping and precision manufacturing"
+  },
+  {
+    "name": "Leverage Mechanical Services",
+    "location": "Texas and Louisiana",
+    "website": "https://leveragemechanicalservices.com/",
+    "services": "CNC Machining, Fabrication",
+    "description": "CNC machine shops conveniently located throughout Texas and Louisiana"
+  },
+  {
+    "name": "Halsey Manufacturing",
+    "location": "DFW Dallas / Fort Worth Area, TX",
+    "website": "https://www.halseymfg.com/",
+    "services": "CNC Machining, CNC Design and Manufacturing",
+    "description": "CNC Machine Shop specializing in high precision machining for aerospace, aircraft, automotive, electronics, medical, and oil/gas industries"
+  },
+  {
+    "name": "Shamrock Precision",
+    "location": "Texas",
+    "website": "https://shamrockprecision.com/",
+    "services": "CNC Machining, Multi-axis Equipment",
+    "description": "Texas-based CNC machining company with experienced programmers and modern multi-axis equipment"
+  },
+  {
+    "name": "FTC Industries",
+    "location": "Arlington, TX (Dallas/Fort Worth)",
+    "website": "https://ftcindustries.com/",
+    "services": "Custom Machined Parts",
+    "description": "Since 1997, providing custom machined parts in Arlington, Texas and shipping nationwide"
+  },
+  {
+    "name": "Midway Machine",
+    "location": "Houston, TX",
+    "website": "https://midway-machine.com/",
+    "services": "Precision CNC Machining",
+    "description": "AS9100 & ISO 9001:2015 certified precision CNC machine shop in Houston"
+  },
+  {
+    "name": "Owens Industries",
+    "location": "Texas (serving)",
+    "website": "https://www.owensind.com/",
+    "services": "5-axis Wire EDM, Turning, Milling, Deburring",
+    "description": "Ultra-precision CNC machine shop specializing in simultaneous 5-axis wire EDM"
+  }
+]

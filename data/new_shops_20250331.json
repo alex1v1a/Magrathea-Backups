@@ -1,0 +1,57 @@
+[
+  {
+    "ShopName": "CNC Precision Machines International LLC",
+    "ContactName": "Info",
+    "Email": "info@cncpmsales.com",
+    "Phone": "(915) 778-0108",
+    "City": "El Paso",
+    "State": "TX",
+    "Website": "https://www.cncprecision.com/",
+    "Capabilities": "CNC machinery distribution, technical service, maintenance",
+    "Notes": "35+ years experience, serves El Paso TX, New Mexico, Northern Mexico. Distributes Sodick, Southwestern Industries, Chevalier, LaserStar, Sharp Industries."
+  },
+  {
+    "ShopName": "Halsey Manufacturing",
+    "ContactName": "Sales",
+    "Email": "Sales@HalseyMFG.com",
+    "Phone": "940-566-3306",
+    "City": "Denton",
+    "State": "TX",
+    "Website": "https://halseymfg.com/",
+    "Capabilities": "CNC Milling, CNC Turning, Multi-Axis Machining, Laser Operations",
+    "Notes": "40+ years in Fort Worth TX area. Serves Dallas, Fort Worth, Denton, Plano, Frisco and surrounding areas. Full service CNC manufacturing."
+  },
+  {
+    "ShopName": "East Valley Precision",
+    "ContactName": "Info",
+    "Email": "",
+    "Phone": "480-288-6601",
+    "City": "Chandler",
+    "State": "AZ",
+    "Website": "https://www.eastvalleyprecision.com/",
+    "Capabilities": "CNC Milling, CNC Turning, CNC Lathe, Wire EDM, Surface Grinding",
+    "Notes": "Serves Chandler, Mesa, Gilbert, Tempe AZ. Has Zeiss Contura CMM for quality control."
+  },
+  {
+    "ShopName": "Arizona Machining Services LLC",
+    "ContactName": "Info",
+    "Email": "",
+    "Phone": "",
+    "City": "Phoenix",
+    "State": "AZ",
+    "Website": "https://arizonamachiningservices.com/",
+    "Capabilities": "CNC Milling, CNC Turning, Manual Machining, Design Services, Laser Engraving",
+    "Notes": "50+ years experience. Haas VF-2 CNC Mills, Haas ST-10 CNC Lathe. Focus on prototypes, small and medium run parts. Also operates TOAR Designs product development."
+  },
+  {
+    "ShopName": "Shamrock Precision",
+    "ContactName": "Info",
+    "Email": "",
+    "Phone": "",
+    "City": "",
+    "State": "TX",
+    "Website": "https://shamrockprecision.com/",
+    "Capabilities": "CNC Precision Machining, Complex Geometries, Tight Tolerances",
+    "Notes": "Full-service precision machining in Texas. Short-run production and scalable volume."
+  }
+]

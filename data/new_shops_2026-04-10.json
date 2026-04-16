@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Automated Machine Works",
+    "location": "Nashville, TN",
+    "email": "amworks.mike@gmail.com",
+    "website": "https://amachineworks.com/",
+    "contact_name": "Mike"
+  },
+  {
+    "name": "Dye CNC",
+    "location": "San Diego, CA",
+    "email": "contact@dyecnc.com",
+    "website": "https://dyecnc.com/",
+    "contact_name": null
+  },
+  {
+    "name": "Crown Precision",
+    "location": "Cedar Park, TX",
+    "email": "info@crown-precision.com",
+    "website": "https://www.crown-precision.com/",
+    "contact_name": null
+  },
+  {
+    "name": "Olson Custom Designs",
+    "location": "Indianapolis, IN",
+    "email": "info@ocdfab.com",
+    "website": "https://olsoncustomdesigns.com/",
+    "contact_name": null
+  },
+  {
+    "name": "Summit CNC",
+    "location": "Denver, CO",
+    "email": "service@summitcnc.com",
+    "website": "https://summitcnc.com/",
+    "contact_name": null
+  },
+  {
+    "name": "Dunham Machine",
+    "location": "Cleveland, OH",
+    "email": "lp@dunhammachine.com",
+    "website": "https://www.dunhammachine.com/",
+    "contact_name": null
+  },
+  {
+    "name": "A-1 Machine Shop",
+    "location": "Tulsa, OK",
+    "email": "info@a1machine.net",
+    "website": "https://a1machineshop.com/",
+    "contact_name": null
+  },
+  {
+    "name": "CNC Performance Engineering",
+    "location": "Charlotte, NC",
+    "email": "contact@cncpe.com",
+    "website": "https://www.cncpe.com/",
+    "contact_name": null
+  },
+  {
+    "name": "Quality Products",
+    "location": "Charlotte, NC",
+    "email": "info@qprod.com",
+    "website": "https://www.qprod.com/",
+    "contact_name": "Dustin Jones"
+  },
+  {
+    "name": "Quality Products",
+    "location": "Charlotte, NC",
+    "email": "djones@qprod.com",
+    "website": "https://www.qprod.com/",
+    "contact_name": "Dustin Jones"
+  },
+  {
+    "name": "Barron Machine and Fabrication",
+    "location": "Fairfield, AL",
+    "email": "sales@barronmachinefab.com",
+    "website": "https://www.barronmachinefab.com/",
+    "contact_name": null
+  },
+  {
+    "name": "KC Machine",
+    "location": "Excelsior Springs, MO",
+    "email": "info@kc-machine.com",
+    "website": "https://kc-machine.com/",
+    "contact_name": null
+  },
+  {
+    "name": "Eagle Precision Machining",
+    "location": "Tampa, FL",
+    "email": "eagleprecision@jacksontransformer.com",
+    "website": "https://www.eagleprecisionmachining.com/",
+    "contact_name": null
+  },
+  {
+    "name": "Anchor Machine & Fab",
+    "location": "Tampa, FL",
+    "email": "info@anchormachineshop.com",
+    "website": "https://anchormachineshop.com/",
+    "contact_name": null
+  }
+]
