@@ -1,0 +1,272 @@
+# =============================================================================
+# CAMERA SCRIPTS
+# =============================================================================
+# Utility scripts for camera operations
+# =============================================================================
+
+# =============================================================================
+# SNAPSHOT OPERATIONS
+# =============================================================================
+snapshot_all_cameras:
+  alias: Snapshot All Cameras
+  sequence:
+    - service: camera.snapshot
+      target:
+        entity_id:
+          - camera.front_door
+          - camera.back_yard
+          - camera.garage
+          - camera.driveway
+          - camera.living_room
+          - camera.kitchen
+          - camera.side_gate
+          - camera.backyard_left
+          - camera.backyard_right
+          - camera.front_porch
+      data:
+        filename: "/config/www/snapshots/all_cameras_{{ now().strftime('%Y%m%d_%H%M%S') }}_{{ entity_id.split('.')[1] }}.jpg"
+    - service: notify.mobile_app_alexander
+      data:
+        title: 📸 Snapshots Taken
+        message: "All camera snapshots saved to /config/www/snapshots/"
+  mode: single
+  icon: mdi:camera-burst
+
+snapshot_priority_cameras:
+  alias: Snapshot Priority Cameras
+  sequence:
+    - service: camera.snapshot
+      target:
+        entity_id:
+          - camera.front_door
+          - camera.back_yard
+          - camera.garage
+          - camera.driveway
+      data:
+        filename: "/config/www/snapshots/priority_{{ now().strftime('%Y%m%d_%H%M%S') }}_{{ entity_id.split('.')[1] }}.jpg"
+  mode: single
+  icon: mdi:camera
+
+# =============================================================================
+# RECORDING OPERATIONS
+# =============================================================================
+start_all_recording:
+  alias: Start Recording All
+  sequence:
+    - service: switch.turn_on
+      target:
+        entity_id:
+          - switch.front_door_recording
+          - switch.back_yard_recording
+          - switch.garage_recording
+          - switch.driveway_recording
+          - switch.living_room_recording
+          - switch.kitchen_recording
+          - switch.side_gate_recording
+    - service: input_boolean.turn_on
+      target:
+        entity_id: input_boolean.enable_all_recording
+  mode: single
+  icon: mdi:record-rec
+
+stop_all_recording:
+  alias: Stop Recording All
+  sequence:
+    - service: switch.turn_off
+      target:
+        entity_id:
+          - switch.front_door_recording
+          - switch.back_yard_recording
+          - switch.garage_recording
+          - switch.driveway_recording
+          - switch.living_room_recording
+          - switch.kitchen_recording
+          - switch.side_gate_recording
+    - service: input_boolean.turn_off
+      target:
+        entity_id: input_boolean.enable_all_recording
+  mode: single
+  icon: mdi:record
+
+# =============================================================================
+# CAMERA CONTROL
+# =============================================================================
+restart_all_cameras:
+  alias: Restart All Cameras
+  sequence:
+    - service: button.press
+      target:
+        entity_id:
+          - button.front_door_restart
+          - button.back_yard_restart
+          - button.garage_restart
+          - button.driveway_restart
+    - delay: "00:00:05"
+    - service: notify.mobile_app_alexander
+      data:
+        title: 🔄 Cameras Restarted
+        message: "All cameras are restarting..."
+  mode: single
+  icon: mdi:restart
+
+enable_night_vision_all:
+  alias: Enable Night Vision All
+  sequence:
+    - service: select.select_option
+      target:
+        entity_id:
+          - select.front_door_night_vision_mode
+          - select.back_yard_night_vision_mode
+          - select.garage_night_vision_mode
+          - select.driveway_night_vision_mode
+      data:
+        option: "On"
+  mode: single
+  icon: mdi:weather-night
+
+disable_night_vision_all:
+  alias: Disable Night Vision All
+  sequence:
+    - service: select.select_option
+      target:
+        entity_id:
+          - select.front_door_night_vision_mode
+          - select.back_yard_night_vision_mode
+          - select.garage_night_vision_mode
+          - select.driveway_night_vision_mode
+      data:
+        option: "Off"
+  mode: single
+  icon: mdi:white-balance-sunny
+
+# =============================================================================
+# PTZ OPERATIONS
+# =============================================================================
+ptz_front_door_home:
+  alias: PTZ Front Door - Home Position
+  sequence:
+    - service: button.press
+      target:
+        entity_id: button.front_door_ptz_home
+  mode: single
+  icon: mdi:home
+
+ptz_front_door_preset_1:
+  alias: PTZ Front Door - Preset 1 (Entry)
+  sequence:
+    - service: number.set_value
+      target:
+        entity_id: number.front_door_ptz_preset
+      data:
+        value: 1
+  mode: single
+  icon: mdi:numeric-1-box
+
+ptz_front_door_preset_2:
+  alias: PTZ Front Door - Preset 2 (Walkway)
+  sequence:
+    - service: number.set_value
+      target:
+        entity_id: number.front_door_ptz_preset
+      data:
+        value: 2
+  mode: single
+  icon: mdi:numeric-2-box
+
+# =============================================================================
+# DOWNLOAD & EXPORT
+# =============================================================================
+download_recent_recordings:
+  alias: Download Recent Recordings
+  sequence:
+    - service: notify.mobile_app_alexander
+      data:
+        title: ⬇️ Download Started
+        message: "Preparing recent recordings for download..."
+    # This would integrate with Frigate or other recording backend
+    - service: shell_command.download_recordings
+      data:
+        hours: 24
+  mode: single
+  icon: mdi:download
+
+# =============================================================================
+# SECURITY MODES
+# =============================================================================
+activate_away_mode:
+  alias: Activate Away Mode
+  sequence:
+    - service: input_boolean.turn_on
+      target:
+        entity_id: input_boolean.camera_away_mode
+    - service: switch.turn_on
+      target:
+        entity_id:
+          - switch.front_door_motion_detection
+          - switch.back_yard_motion_detection
+          - switch.garage_motion_detection
+          - switch.driveway_motion_detection
+          - switch.side_gate_motion_detection
+          - switch.living_room_motion_detection
+          - switch.kitchen_motion_detection
+    - service: select.select_option
+      target:
+        entity_id: input_select.camera_notification_priority
+      data:
+        option: "All Events"
+    - service: notify.mobile_app_alexander
+      data:
+        title: 🛡️ Away Mode Activated
+        message: "All cameras armed and notifications enabled"
+  mode: single
+  icon: mdi:shield-home
+
+deactivate_away_mode:
+  alias: Deactivate Away Mode
+  sequence:
+    - service: input_boolean.turn_off
+      target:
+        entity_id: input_boolean.camera_away_mode
+    - service: select.select_option
+      target:
+        entity_id: input_select.camera_notification_priority
+      data:
+        option: "People Only"
+    - service: notify.mobile_app_alexander
+      data:
+        title: 🏠 Home Mode
+        message: "Camera system set to home mode"
+  mode: single
+  icon: mdi:home
+
+# =============================================================================
+# PANIC / EMERGENCY
+# =============================================================================
+camera_panic_mode:
+  alias: Camera Panic Mode
+  sequence:
+    - service: switch.turn_on
+      target:
+        entity_id:
+          - switch.front_door_recording
+          - switch.back_yard_recording
+          - switch.garage_recording
+          - switch.driveway_recording
+    - service: camera.snapshot
+      target:
+        entity_id:
+          - camera.front_door
+          - camera.back_yard
+          - camera.garage
+          - camera.driveway
+      data:
+        filename: "/config/www/snapshots/panic_{{ now().strftime('%Y%m%d_%H%M%S') }}_{{ entity_id.split('.')[1] }}.jpg"
+    - service: notify.mobile_app_alexander
+      data:
+        title: 🚨 PANIC MODE
+        message: "All cameras recording! Emergency snapshots saved."
+        data:
+          priority: high
+          ttl: 0
+  mode: single
+  icon: mdi:alarm-light

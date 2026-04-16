@@ -1,0 +1,1 @@
+Restart-NetAdapter -Name "vEthernet (WSL)" -Confirm:$false; Start-Sleep -Seconds 5

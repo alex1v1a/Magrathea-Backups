@@ -1,0 +1,81 @@
+# =============================================================================
+# BACKYARD LEFT CAMERA - Detailed View
+# =============================================================================
+
+title: Backyard Left Camera
+path: camera-backyard-left
+icon: mdi:arrow-expand-left
+subview: true
+back_path: /lovelace/security-main
+
+theme: Backend-selected
+
+sidebar:
+  - type: entities
+    title: Camera Controls
+    entities:
+      - entity: camera.backyard_left
+        name: Stream Status
+      - entity: switch.backyard_left_camera_enabled
+        name: Camera Power
+      - entity: switch.backyard_left_recording
+        name: Recording
+      - entity: switch.backyard_left_motion_detection
+        name: Motion Detection
+
+  - type: history-graph
+    title: Motion Events (24h)
+    hours_to_show: 24
+    entities:
+      - binary_sensor.backyard_left_motion
+
+views:
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: "[← Back to Security Dashboard](/lovelace/security-main)"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+
+      - type: picture-entity
+        entity: camera.backyard_left
+        name: Backyard Left - Live
+        show_state: false
+        show_name: true
+        camera_view: live
+        aspect_ratio: "16:9"
+        card_mod:
+          style: |
+            ha-card {
+              height: 60vh;
+            }
+
+      - type: horizontal-stack
+        cards:
+          - type: button
+            name: Snapshot
+            icon: mdi:camera
+            tap_action:
+              action: call-service
+              service: camera.snapshot
+              target:
+                entity_id: camera.backyard_left
+
+          - type: button
+            name: Record
+            icon: mdi:record-rec
+            tap_action:
+              action: call-service
+              service: switch.toggle
+              target:
+                entity_id: switch.backyard_left_recording
+
+  - type: logbook
+    entities:
+      - binary_sensor.backyard_left_motion
+    hours_to_show: 12
+    title: Motion Events

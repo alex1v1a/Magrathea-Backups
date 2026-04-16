@@ -1,0 +1,391 @@
+# =============================================================================
+# CAMERA AUTOMATIONS
+# =============================================================================
+# Automations for camera motion, recording, and notifications
+# =============================================================================
+
+# =============================================================================
+# MOTION NOTIFICATIONS
+# =============================================================================
+- id: camera_front_door_motion
+  alias: Camera - Front Door Motion Detected
+  description: Send notification when front door motion detected
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.front_door_motion
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: input_boolean.enable_notifications
+      state: 'on'
+    - condition: state
+      entity_id: timer.front_door_motion_cooldown
+      state: 'idle'
+  action:
+    - service: timer.start
+      target:
+        entity_id: timer.front_door_motion_cooldown
+    - service: camera.snapshot
+      target:
+        entity_id: camera.front_door
+      data:
+        filename: "/config/www/snapshots/front_door_latest.jpg"
+    - service: counter.increment
+      target:
+        entity_id: counter.motion_events_today
+    - service: notify.mobile_app_alexander
+      data:
+        title: 🚨 Motion Detected
+        message: "Motion at Front Door - {{ now().strftime('%I:%M %p') }}"
+        data:
+          image: "/local/snapshots/front_door_latest.jpg"
+          actions:
+            - action: URI
+              title: View Camera
+              uri: /lovelace/camera-front-door
+            - action: camera_snapshot
+              title: Take Snapshot
+  mode: single
+
+- id: camera_person_detected_front_door
+  alias: Camera - Person Detected at Front Door
+  description: Enhanced notification for person detection
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.front_door_person_detected
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: input_boolean.enable_object_detection
+      state: 'on'
+  action:
+    - service: camera.snapshot
+      target:
+        entity_id: camera.front_door
+      data:
+        filename: "/config/www/snapshots/front_door_person_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+    - service: counter.increment
+      target:
+        entity_id: counter.person_detections_today
+    - service: notify.mobile_app_alexander
+      data:
+        title: 👤 Person Detected
+        message: "Person at Front Door - {{ now().strftime('%I:%M %p') }}"
+        data:
+          image: "/local/snapshots/front_door_person_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+          priority: high
+          ttl: 0
+  mode: single
+
+- id: camera_package_detected
+  alias: Camera - Package Delivered
+  description: Notification for package detection
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.front_door_package_detected
+      to: 'on'
+  action:
+    - service: camera.snapshot
+      target:
+        entity_id: camera.front_door
+      data:
+        filename: "/config/www/snapshots/package_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+    - service: counter.increment
+      target:
+        entity_id: counter.package_detections_today
+    - service: notify.mobile_app_alexander
+      data:
+        title: 📦 Package Detected
+        message: "Package at Front Door - {{ now().strftime('%I:%M %p') }}"
+        data:
+          image: "/local/snapshots/package_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+  mode: single
+
+# =============================================================================
+# VEHICLE DETECTION
+# =============================================================================
+- id: camera_driveway_vehicle
+  alias: Camera - Vehicle in Driveway
+  description: Track vehicles entering driveway
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.driveway_vehicle_detected
+      to: 'on'
+  action:
+    - service: camera.snapshot
+      target:
+        entity_id: camera.driveway
+      data:
+        filename: "/config/www/snapshots/vehicle_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+    - service: counter.increment
+      target:
+        entity_id: counter.vehicle_detections_today
+    - service: input_text.set_value
+      target:
+        entity_id: input_text.last_camera_event
+      data:
+        value: "Vehicle detected in driveway at {{ now().strftime('%I:%M %p') }}"
+  mode: single
+
+# =============================================================================
+# RECORDING AUTOMATIONS
+# =============================================================================
+- id: camera_start_recording_on_motion
+  alias: Camera - Start Recording on Motion
+  description: Start recording when motion detected
+  trigger:
+    - platform: state
+      entity_id:
+        - binary_sensor.front_door_motion
+        - binary_sensor.back_yard_motion
+        - binary_sensor.garage_motion
+        - binary_sensor.driveway_motion
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: input_boolean.enable_all_recording
+      state: 'on'
+  action:
+    - service: switch.turn_on
+      target:
+        entity_id: >
+          {% set camera_map = {
+            'binary_sensor.front_door_motion': 'switch.front_door_recording',
+            'binary_sensor.back_yard_motion': 'switch.back_yard_recording',
+            'binary_sensor.garage_motion': 'switch.garage_recording',
+            'binary_sensor.driveway_motion': 'switch.driveway_recording'
+          } %}
+          {{ camera_map[trigger.entity_id] }}
+  mode: parallel
+  max: 10
+
+- id: camera_stop_recording_after_delay
+  alias: Camera - Stop Recording After Delay
+  description: Stop recording after set duration
+  trigger:
+    - platform: state
+      entity_id:
+        - binary_sensor.front_door_motion
+        - binary_sensor.back_yard_motion
+        - binary_sensor.garage_motion
+        - binary_sensor.driveway_motion
+      to: 'off'
+      for:
+        minutes: 2
+  action:
+    - service: switch.turn_off
+      target:
+        entity_id: >
+          {% set camera_map = {
+            'binary_sensor.front_door_motion': 'switch.front_door_recording',
+            'binary_sensor.back_yard_motion': 'switch.back_yard_recording',
+            'binary_sensor.garage_motion': 'switch.garage_recording',
+            'binary_sensor.driveway_motion': 'switch.driveway_recording'
+          } %}
+          {{ camera_map[trigger.entity_id] }}
+  mode: parallel
+  max: 10
+
+# =============================================================================
+# MASTER CONTROLS
+# =============================================================================
+- id: camera_enable_all_cameras
+  alias: Camera - Enable All Cameras
+  description: Turn on all cameras when master switch enabled
+  trigger:
+    - platform: state
+      entity_id: input_boolean.enable_all_cameras
+      to: 'on'
+  action:
+    - service: switch.turn_on
+      target:
+        entity_id:
+          - switch.front_door_camera_enabled
+          - switch.back_yard_camera_enabled
+          - switch.garage_camera_enabled
+          - switch.driveway_camera_enabled
+          - switch.living_room_camera_enabled
+          - switch.kitchen_camera_enabled
+          - switch.side_gate_camera_enabled
+
+- id: camera_disable_all_cameras
+  alias: Camera - Disable All Cameras
+  description: Turn off all cameras when master switch disabled
+  trigger:
+    - platform: state
+      entity_id: input_boolean.enable_all_cameras
+      to: 'off'
+  action:
+    - service: switch.turn_off
+      target:
+        entity_id:
+          - switch.front_door_camera_enabled
+          - switch.back_yard_camera_enabled
+          - switch.garage_camera_enabled
+          - switch.driveway_camera_enabled
+          - switch.living_room_camera_enabled
+          - switch.kitchen_camera_enabled
+          - switch.side_gate_camera_enabled
+
+- id: camera_enable_all_motion
+  alias: Camera - Enable All Motion Detection
+  description: Enable motion detection on all cameras
+  trigger:
+    - platform: state
+      entity_id: input_boolean.enable_all_motion
+      to: 'on'
+  action:
+    - service: switch.turn_on
+      target:
+        entity_id:
+          - switch.front_door_motion_detection
+          - switch.back_yard_motion_detection
+          - switch.garage_motion_detection
+          - switch.driveway_motion_detection
+          - switch.living_room_motion_detection
+          - switch.kitchen_motion_detection
+          - switch.side_gate_motion_detection
+
+- id: camera_disable_all_motion
+  alias: Camera - Disable All Motion Detection
+  description: Disable motion detection on all cameras
+  trigger:
+    - platform: state
+      entity_id: input_boolean.enable_all_motion
+      to: 'off'
+  action:
+    - service: switch.turn_off
+      target:
+        entity_id:
+          - switch.front_door_motion_detection
+          - switch.back_yard_motion_detection
+          - switch.garage_motion_detection
+          - switch.driveway_motion_detection
+          - switch.living_room_motion_detection
+          - switch.kitchen_motion_detection
+          - switch.side_gate_motion_detection
+
+# =============================================================================
+# PRIVACY MODE
+# =============================================================================
+- id: camera_privacy_mode_on
+  alias: Camera - Privacy Mode On
+  description: Disable indoor cameras when privacy mode enabled
+  trigger:
+    - platform: state
+      entity_id: input_boolean.camera_privacy_mode
+      to: 'on'
+  action:
+    - service: switch.turn_off
+      target:
+        entity_id:
+          - switch.living_room_camera_enabled
+          - switch.kitchen_camera_enabled
+    - service: input_boolean.turn_off
+      target:
+        entity_id:
+          - input_boolean.living_room_privacy
+          - input_boolean.kitchen_privacy
+    - service: notify.mobile_app_alexander
+      data:
+        title: 🔒 Privacy Mode
+        message: "Indoor cameras disabled for privacy"
+
+- id: camera_privacy_mode_off
+  alias: Camera - Privacy Mode Off
+  description: Re-enable indoor cameras when privacy mode disabled
+  trigger:
+    - platform: state
+      entity_id: input_boolean.camera_privacy_mode
+      to: 'off'
+  action:
+    - service: switch.turn_on
+      target:
+        entity_id:
+          - switch.living_room_camera_enabled
+          - switch.kitchen_camera_enabled
+    - service: notify.mobile_app_alexander
+      data:
+        title: 🔓 Privacy Mode
+        message: "Indoor cameras re-enabled"
+
+# =============================================================================
+# NIGHT MODE
+# =============================================================================
+- id: camera_night_mode_on
+  alias: Camera - Night Mode On
+  description: Enable night vision on all cameras
+  trigger:
+    - platform: time
+      at: input_datetime.camera_night_mode_start
+  condition:
+    - condition: state
+      entity_id: input_boolean.camera_night_mode
+      state: 'on'
+  action:
+    - service: select.select_option
+      target:
+        entity_id:
+          - select.front_door_night_vision_mode
+          - select.back_yard_night_vision_mode
+          - select.garage_night_vision_mode
+          - select.driveway_night_vision_mode
+      data:
+        option: "On"
+
+- id: camera_night_mode_off
+  alias: Camera - Night Mode Off
+  description: Disable night vision in morning
+  trigger:
+    - platform: time
+      at: input_datetime.camera_night_mode_end
+  action:
+    - service: select.select_option
+      target:
+        entity_id:
+          - select.front_door_night_vision_mode
+          - select.back_yard_night_vision_mode
+          - select.garage_night_vision_mode
+          - select.driveway_night_vision_mode
+      data:
+        option: "Auto"
+
+# =============================================================================
+# DAILY RESET
+# =============================================================================
+- id: camera_daily_reset
+  alias: Camera - Daily Statistics Reset
+  description: Reset daily counters at midnight
+  trigger:
+    - platform: time
+      at: "00:00:00"
+  action:
+    - service: counter.reset
+      target:
+        entity_id:
+          - counter.motion_events_today
+          - counter.person_detections_today
+          - counter.vehicle_detections_today
+          - counter.package_detections_today
+
+# =============================================================================
+# SYSTEM STATUS
+# =============================================================================
+- id: camera_system_status_update
+  alias: Camera - Update System Status
+  description: Update camera system status text
+  trigger:
+    - platform: state
+      entity_id:
+        - sensor.online_cameras
+        - binary_sensor.any_camera_motion
+  action:
+    - service: input_text.set_value
+      target:
+        entity_id: input_text.camera_system_status
+      data:
+        value: >
+          {{ states('sensor.online_cameras') }} cameras online
+          {% if is_state('binary_sensor.any_camera_motion', 'on') %}
+            - Motion detected
+          {% endif %}

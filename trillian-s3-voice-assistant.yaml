@@ -1,0 +1,286 @@
+esphome:
+  name: trillian-s3
+  friendly_name: Trillian S3 Voice Assistant
+  min_version: 2024.9.0
+  platformio_options:
+    board_build.flash_mode: dio
+    board_build.arduino.memory_type: qio_opi
+    # Required for microWakeWord
+    build_flags:
+      - "-DBOARD_HAS_PSRAM"
+
+esp32:
+  board: esp32-s3-devkitc-1
+  variant: esp32s3
+  flash_size: 8MB
+  framework:
+    type: esp-idf
+    version: recommended
+    sdkconfig_options:
+      # PSRAM settings for microWakeWord
+      CONFIG_ESP32S3_SPIRAM_SUPPORT: "y"
+      CONFIG_SPIRAM_USE: "1"
+      CONFIG_SPIRAM_SPEED_80M: "y"
+      # Increase main task stack size for voice processing
+      CONFIG_ESP_MAIN_TASK_STACK_SIZE: "8192"
+
+# PSRAM configuration
+psram:
+  mode: octal
+  speed: 80MHz
+
+# Enable logging
+logger:
+  level: DEBUG
+  # Reduce serial logging to prevent audio glitches
+  baud_rate: 0
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: !secret api_encryption_key
+  services:
+    - service: start_voice_assistant
+      then:
+        - voice_assistant.start
+    - service: stop_voice_assistant
+      then:
+        - voice_assistant.stop
+    - service: mute
+      then:
+        - micro_wake_word.stop
+    - service: unmute
+      then:
+        - micro_wake_word.start
+
+ota:
+  - platform: esphome
+    password: !secret ota_password
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  ap:
+    ssid: "Trillian-S3"
+    password: !secret wifi_ap_password
+
+captive_portal:
+
+# External components for microWakeWord
+external_components:
+  - source: github://esphome/micro-wake-word
+    components: [micro_wake_word]
+
+# Status LED (adjust pin based on your ESP32-S3 board)
+# Common onboard LED pins: GPIO2, GPIO8, GPIO48
+light:
+  - platform: esp32_rmt_led_strip
+    rgb_order: GRB
+    pin: GPIO48  # Adjust for your board - GPIO48 is common on ESP32-S3
+    num_leds: 1
+    chipset: SK6812
+    rmt_channel: 0
+    id: status_led
+    name: "Status LED"
+    default_transition_length: 0s
+    effects:
+      - pulse:
+          name: "Pulse Blue"
+          transition_length: 0.5s
+          update_interval: 0.5s
+          min_brightness: 50%
+          max_brightness: 100%
+      - pulse:
+          name: "Flash Yellow"
+          transition_length: 0.2s
+          update_interval: 0.2s
+          min_brightness: 0%
+          max_brightness: 100%
+      - pulse:
+          name: "Pulse Green"
+          transition_length: 1s
+          update_interval: 1s
+          min_brightness: 20%
+          max_brightness: 100%
+
+# Boot button (most ESP32-S3 devkits have a boot button)
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO0  # Boot button on most ESP32-S3 boards
+      mode: INPUT_PULLUP
+      inverted: true
+    name: "Trillian Button"
+    id: trillian_button
+    filters:
+      - delayed_on: 50ms
+      - delayed_off: 50ms
+    on_press:
+      then:
+        - voice_assistant.start:
+        - light.turn_on:
+            id: status_led
+            red: 0%
+            green: 0%
+            blue: 100%
+            brightness: 100%
+    on_release:
+      then:
+        - voice_assistant.stop:
+        - light.turn_off:
+            id: status_led
+  - platform: status
+    name: "Status"
+
+# microWakeWord - On-device wake word detection!
+micro_wake_word:
+  id: trillian_wake_word
+  models:
+    # Option 1: Use built-in wake words while training custom
+    - model: https://github.com/kahrendt/microWakeWord/releases/download/v2.1_models/okay_nabu.json
+      id: okay_nabu
+    # Option 2: Custom "Trillian" wake word (when trained)
+    # - model: trillian.json
+    #   id: trillian
+  on_wake_word_detected:
+    then:
+      - voice_assistant.start:
+      - light.turn_on:
+          id: status_led
+          red: 0%
+          green: 100%
+          blue: 0%
+          brightness: 100%
+          effect: "Pulse Green"
+
+# Voice Assistant Configuration
+voice_assistant:
+  id: va
+  microphone: s3_microphone
+  speaker: s3_speaker
+  # Disable HA wake word since we're using microWakeWord on-device
+  use_wake_word: false
+  noise_suppression_level: 2
+  auto_gain: 31dBFS
+  volume_multiplier: 2.0
+  on_listening:
+    then:
+      - light.turn_on:
+          id: status_led
+          red: 0%
+          green: 0%
+          blue: 100%
+          brightness: 100%
+          effect: "Pulse Blue"
+  on_stt_vad_end:
+    then:
+      - light.turn_on:
+          id: status_led
+          red: 100%
+          green: 100%
+          blue: 100%
+          brightness: 100%
+  on_tts_start:
+    then:
+      - light.turn_on:
+          id: status_led
+          red: 100%
+          green: 100%
+          blue: 100%
+          brightness: 100%
+  on_end:
+    then:
+      - delay: 2s
+      - light.turn_off:
+          id: status_led
+      # Restart wake word detection after conversation ends
+      - micro_wake_word.start:
+  on_error:
+    then:
+      - light.turn_on:
+          id: status_led
+          red: 100%
+          green: 0%
+          blue: 0%
+          brightness: 100%
+      - delay: 2s
+      - light.turn_off:
+          id: status_led
+      # Restart wake word after error
+      - micro_wake_word.start:
+
+# I2S Audio configuration
+# Adjust pins based on your ESP32-S3 board and microphone setup
+i2s_audio:
+  - id: i2s_input
+    i2s_lrclk_pin: GPIO4   # WS (Word Select / LRCK)
+    i2s_bclk_pin: GPIO5    # SCK (Bit Clock / BCLK)
+  - id: i2s_output
+    i2s_lrclk_pin: GPIO6   # Adjust for your speaker
+    i2s_bclk_pin: GPIO7
+
+# Microphone (I2S PDM or standard I2S)
+microphone:
+  - platform: i2s_audio
+    id: s3_microphone
+    i2s_din_pin: GPIO8     # Data input pin
+    adc_type: external
+    pdm: false             # Set to true for PDM microphones
+    channel: left
+    i2s_audio_id: i2s_input
+
+# Speaker
+speaker:
+  - platform: i2s_audio
+    id: s3_speaker
+    dac_type: external
+    i2s_dout_pin: GPIO9    # Data output pin
+    i2s_audio_id: i2s_output
+
+# Connection status indicator
+interval:
+  - interval: 5s
+    then:
+      - if:
+          condition:
+            not:
+              wifi.connected:
+          then:
+            - light.turn_on:
+                id: status_led
+                red: 100%
+                green: 100%
+                blue: 0%
+                brightness: 100%
+                effect: "Flash Yellow"
+            - delay: 1s
+            - light.turn_off:
+                id: status_led
+
+# Text sensors for status
+text_sensor:
+  - platform: template
+    name: "Voice Assistant State"
+    lambda: |-
+      if (id(va).is_running()) {
+        return std::string("Listening");
+      } else if (id(trillian_wake_word).is_running()) {
+        return std::string("Waiting for wake word");
+      } else {
+        return std::string("Idle");
+      }
+    update_interval: 1s
+
+# Additional sensors
+sensor:
+  - platform: uptime
+    name: "Uptime"
+  - platform: wifi_signal
+    name: "WiFi Signal"
+    update_interval: 60s
+  - platform: esp32_psram
+    name: "PSRAM Free"
+    update_interval: 30s
+
+# Enable improv via serial for easy WiFi setup
+improv_serial:

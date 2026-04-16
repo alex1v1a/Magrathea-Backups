@@ -1,0 +1,280 @@
+# =============================================================================
+# GARAGE CAMERA - Detailed View
+# =============================================================================
+# Individual camera view with full controls, playback, and motion timeline
+# =============================================================================
+
+title: Garage Camera
+path: camera-garage
+icon: mdi:garage
+subview: true
+back_path: /lovelace/security-main
+
+theme: Backend-selected
+
+# Sidebar with camera controls and status
+sidebar:
+  - type: entities
+    title: Camera Controls
+    entities:
+      - entity: camera.garage
+        name: Stream Status
+        icon: mdi:camera
+      - entity: switch.garage_camera_enabled
+        name: Camera Power
+        icon: mdi:power
+      - entity: switch.garage_recording
+        name: Recording
+        icon: mdi:record-rec
+      - entity: switch.garage_motion_detection
+        name: Motion Detection
+        icon: mdi:motion-sensor
+      - entity: number.garage_motion_sensitivity
+        name: Sensitivity
+
+  - type: entities
+    title: Garage Controls
+    entities:
+      - entity: cover.garage_door
+        name: Garage Door
+        icon: mdi:garage
+      - entity: binary_sensor.garage_door_contact
+        name: Door Status
+      - entity: sensor.garage_temperature
+        name: Temperature
+      - entity: sensor.garage_humidity
+        name: Humidity
+
+  - type: history-graph
+    title: Motion Events (24h)
+    hours_to_show: 24
+    entities:
+      - binary_sensor.garage_motion
+      - binary_sensor.garage_person_detected
+      - binary_sensor.garage_vehicle_detected
+
+  - type: entity
+    entity: sensor.garage_last_motion
+    name: Last Motion
+
+  - type: picture-entity
+    entity: image.garage_last_snapshot
+    name: Last Snapshot
+    show_state: false
+
+# Main content - Full camera view
+views:
+  - type: vertical-stack
+    cards:
+      # Navigation breadcrumb
+      - type: markdown
+        content: "[← Back to Security Dashboard](/lovelace/security-main)"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+
+      # Main camera feed
+      - type: picture-entity
+        entity: camera.garage
+        name: Garage - Live
+        show_state: false
+        show_name: true
+        camera_view: live
+        aspect_ratio: "16:9"
+        card_mod:
+          style: |
+            ha-card {
+              height: 60vh;
+              overflow: hidden;
+            }
+
+      # Quick action bar
+      - type: horizontal-stack
+        cards:
+          - type: button
+            name: Snapshot
+            icon: mdi:camera
+            tap_action:
+              action: call-service
+              service: camera.snapshot
+              target:
+                entity_id: camera.garage
+              data:
+                filename: "/config/www/snapshots/garage_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+            card_mod:
+              style: |
+                ha-card {
+                  background: var(--primary-color);
+                  color: white;
+                }
+
+          - type: button
+            name: Record
+            icon: mdi:record-rec
+            tap_action:
+              action: call-service
+              service: switch.toggle
+              target:
+                entity_id: switch.garage_recording
+            card_mod:
+              style: |
+                ha-card {
+                  background: {{ '#f44336' if is_state('switch.garage_recording', 'on') else 'var(--card-background-color)' }};
+                  color: {{ 'white' if is_state('switch.garage_recording', 'on') else 'var(--primary-text-color)' }};
+                }
+
+          - type: button
+            name: Garage Door
+            icon: mdi:garage
+            tap_action:
+              action: call-service
+              service: cover.toggle
+              target:
+                entity_id: cover.garage_door
+            card_mod:
+              style: |
+                ha-card {
+                  background: {{ '#4caf50' if is_state('cover.garage_door', 'open') else '#ff9800' }};
+                  color: white;
+                }
+
+          - type: button
+            name: Light
+            icon: mdi:lightbulb
+            tap_action:
+              action: call-service
+              service: switch.toggle
+              target:
+                entity_id: switch.garage_light
+            card_mod:
+              style: |
+                ha-card {
+                  background: {{ '#ff9800' if is_state('switch.garage_light', 'on') else 'var(--card-background-color)' }};
+                  color: {{ 'white' if is_state('switch.garage_light', 'on') else 'var(--primary-text-color)' }};
+                }
+
+  # Motion Events Section
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: "## Motion Events"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+            .markdown-body {
+              font-size: 1.2em;
+              font-weight: 500;
+              border-bottom: 2px solid var(--primary-color);
+              padding-bottom: 8px;
+            }
+
+      - type: logbook
+        entities:
+          - binary_sensor.garage_motion
+          - binary_sensor.garage_person_detected
+          - binary_sensor.garage_vehicle_detected
+        hours_to_show: 12
+        title: ""
+
+      - type: history-graph
+        title: Activity (Last 12 Hours)
+        hours_to_show: 12
+        entities:
+          - entity: binary_sensor.garage_motion
+            name: Motion
+          - entity: binary_sensor.garage_person_detected
+            name: Person
+          - entity: binary_sensor.garage_vehicle_detected
+            name: Vehicle
+          - entity: cover.garage_door
+            name: Garage Door
+        state_color: true
+
+      - type: glance
+        entities:
+          - entity: sensor.garage_motion_events_today
+            name: Motion Today
+          - entity: sensor.garage_vehicle_events_today
+            name: Vehicles Today
+        show_state: true
+
+  # Detection Zones
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: "## Detection Zones"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+            .markdown-body {
+              font-size: 1.2em;
+              font-weight: 500;
+              border-bottom: 2px solid var(--primary-color);
+              padding-bottom: 8px;
+            }
+
+      - type: entities
+        title: Active Zones
+        entities:
+          - entity: binary_sensor.garage_zone_entrance
+            name: Entrance Zone
+          - entity: binary_sensor.garage_zone_parking
+            name: Parking Zone
+          - entity: binary_sensor.garage_zone_storage
+            name: Storage Zone
+
+      - type: picture-entity
+        entity: image.garage_zones
+        name: Zone Configuration
+        show_state: false
+
+  # Camera Information
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: "## Camera Information"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+
+      - type: entities
+        entities:
+          - entity: sensor.garage_camera_model
+            name: Model
+          - entity: sensor.garage_firmware_version
+            name: Firmware
+          - entity: sensor.garage_ip_address
+            name: IP Address
+          - entity: sensor.garage_wifi_signal
+            name: WiFi Signal
+          - entity: sensor.garage_battery_level
+            name: Battery Level
+          - entity: sensor.garage_stream_resolution
+            name: Resolution
+
+      - type: button
+        name: Restart Camera
+        icon: mdi:restart
+        tap_action:
+          action: call-service
+          service: button.press
+          target:
+            entity_id: button.garage_restart
+        card_mod:
+          style: |
+            ha-card {
+              background: #f44336;
+              color: white;
+            }

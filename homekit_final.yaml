@@ -1,0 +1,120 @@
+# ============================================
+# HOMEKIT ARCHITECTURE - 7 Bridges for 3 Homes
+# ============================================
+
+# ============================================
+# BRIDGE 1: AUSTIN LIGHTS
+# Port: 21063
+# ============================================
+- name: "Austin Lights"
+  port: 21063
+  filter:
+    include_entities:
+      - light.door_left
+      - light.door_right
+      - light.fire_pit_light_1
+      - light.foyer
+      - light.front_door
+      - light.front_door_2
+      - light.front_yard
+      - light.kitchen_lamp
+      - light.lounge
+      - light.lounge_lamp
+      - light.pathway_left
+      - light.pathway_right
+      - light.pond_light_1
+      - light.pool_light
+      - light.porch_left
+      - light.porch_right
+      - light.range_light
+      - light.rgbic_string_light_r
+      - light.soft_lights
+      - light.rgbwic_string_lights_l
+      - light.trillian_trillian_led
+
+# ============================================
+# BRIDGE 2: AUSTIN SENSORS A (Priority)
+# Port: 21064
+# ============================================
+- name: "Austin Sensors A"
+  port: 21064
+  filter:
+    include_entities:
+      - sensor.backup_last_attempted_automatic_backup
+      - sensor.range_second_cavity_temperature
+      - sensor.range_temperature
+      - sensor.refrigerator_freezer_temperature
+      - sensor.refrigerator_fridge_temperature
+      - sensor.refrigerator_water_filter_usage
+      - sensor.refrigerator_water_filter_usage_2
+
+# ============================================
+# BRIDGE 3: AUSTIN SENSORS B (Secondary)  
+# Port: 21069
+# ============================================
+- name: "Austin Sensors B"
+  port: 21069
+  filter:
+    include_entities:
+      - sensor.alexander_app_version
+      - sensor.alexander_battery_level
+      - sensor.alexander_battery_state
+      - sensor.alexander_bssid
+      - sensor.alexander_connection_type
+      - sensor.alexander_ssid
+      - sensor.austin_tx_tu7000_75_tv_tv_channel
+      - sensor.backup_backup_manager_state
+      - sensor.dryer_machine_state
+      - sensor.front_door_battery
+      - sensor.washer_machine_state
+      - binary_sensor.atom_lite_trillian_voice_trillian_button
+      - binary_sensor.dryer_power
+      - binary_sensor.washer_power
+
+# ============================================
+# BRIDGE 4: SAYVILLE LIGHTS
+# Port: 21065
+# ============================================
+- name: "Sayville Lights"
+  port: 21065
+  filter:
+    include_entities:
+      - light.saxton_front_door
+
+# ============================================
+# BRIDGE 5: SAYVILLE SWITCHES
+# Port: 21066
+# ============================================
+- name: "Sayville Switches"
+  port: 21066
+  filter:
+    include_entities:
+      - switch.saxton_back_door
+      - switch.saxton_backyard_patio_pond
+      - switch.saxton_backyard_shed
+      - switch.saxton_backyard_stairs
+      - switch.saxton_garden
+      - switch.saxton_motion_detection
+      - switch.saxton_notifications
+      - switch.saxton_playground
+      - switch.saxton_power
+
+# ============================================
+# BRIDGE 6: PARNELL LIGHTS
+# Port: 21067
+# ============================================
+- name: "Parnell Lights"
+  port: 21067
+  filter:
+    include_entities:
+      - light.parnell_placeholder
+
+# ============================================
+# BRIDGE 7: PARNELL SWITCHES
+# Port: 21068
+# ============================================
+- name: "Parnell Switches"
+  port: 21068
+  filter:
+    include_entities:
+      - switch.parnell_placeholder

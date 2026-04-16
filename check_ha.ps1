@@ -1,0 +1,1 @@
+wsl -d Ubuntu -e bash -c "docker exec homeassistant wget -q -O - http://192.168.65.3:8123/ >/dev/null 2>&1 && echo 'HA is responding on 192.168.65.3' || echo 'HA not responding'"

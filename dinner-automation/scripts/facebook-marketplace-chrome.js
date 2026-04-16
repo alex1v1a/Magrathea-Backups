@@ -14,8 +14,16 @@ const path = require('path');
 
 const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 const CHROME_USER_DATA = 'C:\\Users\\Admin\\.openclaw\\chrome-marvin-only-profile';
-const FB_EMAIL = 'alex@xspqr.com';
-const FB_PASSWORD = 'section9';
+// Facebook Credentials - loaded from environment variables
+const FB_EMAIL = process.env.FACEBOOK_EMAIL || process.env.FACEBOOK_USERNAME;
+const FB_PASSWORD = process.env.FACEBOOK_PASSWORD;
+
+// Validate credentials are configured
+if (!FB_EMAIL || !FB_PASSWORD) {
+  console.error('ERROR: Facebook credentials not configured');
+  console.error('Set FACEBOOK_EMAIL and FACEBOOK_PASSWORD environment variables');
+  process.exit(1);
+}
 
 const GROUPS = [
   'HAYS COUNTY LIST & SELL',

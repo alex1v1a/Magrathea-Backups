@@ -1,0 +1,22 @@
+{
+  "wyze": {
+    "status": "SUCCESS",
+    "code": 200
+  },
+  "tuya": {
+    "status": "API_ERROR",
+    "code": 1004,
+    "error": "sign invalid"
+  },
+  "govee": {
+    "status": "SUCCESS",
+    "code": 200,
+    "devices_found": 6
+  },
+  "openweathermap": {
+    "status": "SUCCESS",
+    "code": 200,
+    "temp": 69.89,
+    "weather": "overcast clouds"
+  }
+}

@@ -1,0 +1,17 @@
+title: Media
+views:
+  - title: Media
+    cards:
+      - type: entities
+        title: Media Players
+        entities:
+          - media_player.tv
+          - media_player.lounge_apple_tv
+
+      - type: button
+        name: Launch Apple TV
+        tap_action:
+          action: call-service
+          service: media_player.turn_on
+          target:
+            entity_id: media_player.lounge_apple_tv

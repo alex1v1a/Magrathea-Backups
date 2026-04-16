@@ -1,0 +1,483 @@
+# =============================================================================
+# FRONT DOOR CAMERA - Detailed View
+# =============================================================================
+# Individual camera view with full controls, playback, and motion timeline
+# =============================================================================
+
+title: Front Door Camera
+path: camera-front-door
+icon: mdi:door-front
+subview: true
+back_path: /lovelace/security-main
+
+theme: Backend-selected
+
+# Sidebar with camera controls and status
+sidebar:
+  - type: entities
+    title: Camera Controls
+    entities:
+      - entity: camera.front_door
+        name: Stream Status
+        icon: mdi:camera
+      - entity: switch.front_door_camera_enabled
+        name: Camera Power
+        icon: mdi:power
+      - entity: switch.front_door_recording
+        name: Recording
+        icon: mdi:record-rec
+      - entity: switch.front_door_motion_detection
+        name: Motion Detection
+        icon: mdi:motion-sensor
+      - entity: number.front_door_motion_sensitivity
+        name: Sensitivity
+        icon: mdi:tune
+
+  - type: entities
+    title: PTZ Controls
+    entities:
+      - type: buttons
+        entities:
+          - entity: button.front_door_ptz_up
+            name: Up
+            icon: mdi:arrow-up
+          - entity: button.front_door_ptz_down
+            name: Down
+            icon: mdi:arrow-down
+          - entity: button.front_door_ptz_left
+            name: Left
+            icon: mdi:arrow-left
+          - entity: button.front_door_ptz_right
+            name: Right
+            icon: mdi:arrow-right
+          - entity: button.front_door_ptz_home
+            name: Home Position
+            icon: mdi:home
+      - entity: number.front_door_ptz_speed
+        name: Pan/Tilt Speed
+      - entity: number.front_door_zoom_level
+        name: Zoom Level
+
+  - type: entities
+    title: Night Vision
+    entities:
+      - entity: select.front_door_night_vision_mode
+        name: Mode
+        options:
+          - Auto
+          - On
+          - Off
+      - entity: number.front_door_ir_led_intensity
+        name: IR Intensity
+
+  - type: history-graph
+    title: Motion Events (24h)
+    hours_to_show: 24
+    entities:
+      - binary_sensor.front_door_motion
+      - binary_sensor.front_door_person_detected
+      - binary_sensor.front_door_vehicle_detected
+
+  - type: entity
+    entity: sensor.front_door_last_motion
+    name: Last Motion
+    icon: mdi:clock-outline
+
+  - type: picture-entity
+    entity: image.front_door_last_snapshot
+    name: Last Snapshot
+    show_state: false
+    tap_action:
+      action: navigate
+      navigation_path: /media-browser
+
+# Main content - Full camera view
+views:
+  - type: vertical-stack
+    cards:
+      # Navigation breadcrumb
+      - type: markdown
+        content: "[← Back to Security Dashboard](/lovelace/security-main)"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+            .markdown-body a {
+              color: var(--primary-color);
+              text-decoration: none;
+              font-weight: 500;
+            }
+
+      # Main camera feed - Full screen style
+      - type: vertical-stack
+        cards:
+          - type: picture-entity
+            entity: camera.front_door
+            name: Front Door - Live
+            show_state: false
+            show_name: true
+            camera_view: live
+            aspect_ratio: "16:9"
+            card_mod:
+              style: |
+                ha-card {
+                  height: 60vh;
+                  overflow: hidden;
+                }
+                img {
+                  object-fit: cover;
+                  width: 100%;
+                  height: 100%;
+                }
+
+          # Quick action bar
+          - type: horizontal-stack
+            cards:
+              - type: button
+                name: Snapshot
+                icon: mdi:camera
+                tap_action:
+                  action: call-service
+                  service: camera.snapshot
+                  target:
+                    entity_id: camera.front_door
+                  data:
+                    filename: "/config/www/snapshots/front_door_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: var(--primary-color);
+                      color: white;
+                    }
+
+              - type: button
+                name: Record
+                icon: mdi:record-rec
+                tap_action:
+                  action: call-service
+                  service: switch.toggle
+                  target:
+                    entity_id: switch.front_door_recording
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: {{ '#f44336' if is_state('switch.front_door_recording', 'on') else 'var(--card-background-color)' }};
+                      color: {{ 'white' if is_state('switch.front_door_recording', 'on') else 'var(--primary-text-color)' }};
+                    }
+
+              - type: button
+                name: Talk
+                icon: mdi:microphone
+                tap_action:
+                  action: call-service
+                  service: camera.enable_motion_detection
+                  target:
+                    entity_id: camera.front_door
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: #4caf50;
+                      color: white;
+                    }
+
+              - type: button
+                name: Light
+                icon: mdi:lightbulb
+                tap_action:
+                  action: call-service
+                  service: switch.toggle
+                  target:
+                    entity_id: switch.front_door_spotlight
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: {{ '#ff9800' if is_state('switch.front_door_spotlight', 'on') else 'var(--card-background-color)' }};
+                      color: {{ 'white' if is_state('switch.front_door_spotlight', 'on') else 'var(--primary-text-color)' }};
+                    }
+
+              - type: button
+                name: Fullscreen
+                icon: mdi:fullscreen
+                tap_action:
+                  action: fire-dom-event
+                  browser_mod:
+                    service: browser_mod/popup
+                    data:
+                      title: Front Door Camera
+                      content:
+                        type: picture-entity
+                        entity: camera.front_door
+                        camera_view: live
+                        aspect_ratio: "16:9"
+
+  # Playback Controls Section
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: "## Playback & Recordings"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+            .markdown-body {
+              font-size: 1.2em;
+              font-weight: 500;
+              color: var(--primary-text-color);
+              border-bottom: 2px solid var(--primary-color);
+              padding-bottom: 8px;
+            }
+
+      # Playback timeline
+      - type: custom:frigate-card
+        camera:
+          camera_entity: camera.front_door
+          live:
+            preload: true
+        menu:
+          mode: below
+          buttons:
+            live: true
+            recordings: true
+            snapshots: true
+            download: true
+            frigate: true
+        timeline:
+          mode: below
+          show_recordings: true
+
+      # Recent recordings list
+      - type: entities
+        title: Recent Recordings
+        entities:
+          - entity: sensor.front_door_last_recording
+            name: Last Recording
+            icon: mdi:video
+          - entity: sensor.front_door_recording_count_24h
+            name: Recordings (24h)
+            icon: mdi:counter
+          - entity: sensor.front_door_recording_duration_total
+            name: Total Duration
+            icon: mdi:timer
+
+      - type: button
+        name: View All Recordings
+        icon: mdi:folder-video
+        tap_action:
+          action: navigate
+          navigation_path: /media-browser
+
+  # Motion Detection Section
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: "## Motion Events Timeline"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+            .markdown-body {
+              font-size: 1.2em;
+              font-weight: 500;
+              color: var(--primary-text-color);
+              border-bottom: 2px solid var(--primary-color);
+              padding-bottom: 8px;
+            }
+
+      # Motion timeline
+      - type: logbook
+        entities:
+          - binary_sensor.front_door_motion
+          - binary_sensor.front_door_person_detected
+          - binary_sensor.front_door_vehicle_detected
+          - binary_sensor.front_door_package_detected
+        hours_to_show: 12
+        title: ""
+
+      # Motion history graph
+      - type: history-graph
+        title: Motion Activity (Last 12 Hours)
+        hours_to_show: 12
+        entities:
+          - entity: binary_sensor.front_door_motion
+            name: Motion
+          - entity: binary_sensor.front_door_person_detected
+            name: Person
+          - entity: binary_sensor.front_door_vehicle_detected
+            name: Vehicle
+        state_color: true
+
+      # Motion stats
+      - type: glance
+        entities:
+          - entity: sensor.front_door_motion_events_today
+            name: Today
+          - entity: sensor.front_door_motion_events_week
+            name: This Week
+          - entity: sensor.front_door_motion_events_month
+            name: This Month
+        show_state: true
+        show_icon: true
+
+  # Detection Zones Section
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: "## Detection Zones"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+            .markdown-body {
+              font-size: 1.2em;
+              font-weight: 500;
+              color: var(--primary-text-color);
+              border-bottom: 2px solid var(--primary-color);
+              padding-bottom: 8px;
+            }
+
+      # Zone configuration
+      - type: entities
+        title: Active Zones
+        entities:
+          - entity: binary_sensor.front_door_zone_entry
+            name: Entry Zone
+            icon: mdi:zone-marker
+          - entity: binary_sensor.front_door_zone_walkway
+            name: Walkway Zone
+            icon: mdi:zone-marker
+          - entity: binary_sensor.front_door_zone_street
+            name: Street Zone
+            icon: mdi:zone-marker
+          - entity: binary_sensor.front_door_zone_porch
+            name: Porch Zone
+            icon: mdi:zone-marker
+
+      # Zone image overlay
+      - type: picture-entity
+        entity: image.front_door_zones
+        name: Zone Configuration
+        show_state: false
+        tap_action:
+          action: navigate
+          navigation_path: /config/integrations/integration/frigate
+
+      - type: button
+        name: Configure Zones
+        icon: mdi:map-marker-radius
+        tap_action:
+          action: navigate
+          navigation_path: /config/integrations/integration/frigate
+
+  # Object Detection Section
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.object_detection_enabled
+        state: "on"
+    card:
+      type: vertical-stack
+      cards:
+        - type: markdown
+          content: "## Object Detection"
+          card_mod:
+            style: |
+              ha-card {
+                background: transparent;
+                box-shadow: none;
+              }
+              .markdown-body {
+                font-size: 1.2em;
+                font-weight: 500;
+                color: var(--primary-text-color);
+                border-bottom: 2px solid var(--primary-color);
+                padding-bottom: 8px;
+              }
+
+        - type: grid
+          columns: 2
+          cards:
+            - type: entity
+              entity: binary_sensor.front_door_person_detected
+              name: Person Detected
+            - type: entity
+              entity: sensor.front_door_person_count
+              name: Person Count
+            - type: entity
+              entity: binary_sensor.front_door_vehicle_detected
+              name: Vehicle Detected
+            - type: entity
+              entity: sensor.front_door_vehicle_count
+              name: Vehicle Count
+            - type: entity
+              entity: binary_sensor.front_door_package_detected
+              name: Package Detected
+            - type: entity
+              entity: binary_sensor.front_door_animal_detected
+              name: Animal Detected
+
+        # Detection preview with bounding boxes
+        - type: picture-entity
+          entity: camera.front_door_detected_objects
+          name: Detected Objects Preview
+          camera_view: auto
+          show_state: false
+
+  # Camera Information Section
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: "## Camera Information"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+            .markdown-body {
+              font-size: 1.2em;
+              font-weight: 500;
+              color: var(--primary-text-color);
+              border-bottom: 2px solid var(--primary-color);
+              padding-bottom: 8px;
+            }
+
+      - type: entities
+        entities:
+          - entity: sensor.front_door_camera_model
+            name: Model
+          - entity: sensor.front_door_firmware_version
+            name: Firmware
+          - entity: sensor.front_door_ip_address
+            name: IP Address
+          - entity: sensor.front_door_wifi_signal
+            name: WiFi Signal
+          - entity: sensor.front_door_battery_level
+            name: Battery Level
+          - entity: sensor.front_door_storage_used
+            name: Storage Used
+          - entity: sensor.front_door_stream_resolution
+            name: Resolution
+          - entity: sensor.front_door_frame_rate
+            name: Frame Rate
+
+      - type: button
+        name: Restart Camera
+        icon: mdi:restart
+        tap_action:
+          action: call-service
+          service: button.press
+          target:
+            entity_id: button.front_door_restart
+        card_mod:
+          style: |
+            ha-card {
+              background: #f44336;
+              color: white;
+            }

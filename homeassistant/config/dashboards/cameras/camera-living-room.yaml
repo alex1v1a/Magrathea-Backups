@@ -1,0 +1,107 @@
+# =============================================================================
+# LIVING ROOM CAMERA - Detailed View
+# =============================================================================
+
+title: Living Room Camera
+path: camera-living-room
+icon: mdi:sofa
+subview: true
+back_path: /lovelace/security-main
+
+theme: Backend-selected
+
+sidebar:
+  - type: entities
+    title: Camera Controls
+    entities:
+      - entity: camera.living_room
+        name: Stream Status
+      - entity: switch.living_room_camera_enabled
+        name: Camera Power
+      - entity: switch.living_room_recording
+        name: Recording
+      - entity: switch.living_room_motion_detection
+        name: Motion Detection
+      - entity: number.living_room_motion_sensitivity
+        name: Sensitivity
+
+  - type: history-graph
+    title: Motion Events (24h)
+    hours_to_show: 24
+    entities:
+      - binary_sensor.living_room_motion
+      - binary_sensor.living_room_person_detected
+
+  - type: entity
+    entity: sensor.living_room_last_motion
+    name: Last Motion
+
+views:
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: "[← Back to Security Dashboard](/lovelace/security-main)"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+
+      - type: picture-entity
+        entity: camera.living_room
+        name: Living Room - Live
+        show_state: false
+        show_name: true
+        camera_view: live
+        aspect_ratio: "16:9"
+        card_mod:
+          style: |
+            ha-card {
+              height: 60vh;
+            }
+
+      - type: horizontal-stack
+        cards:
+          - type: button
+            name: Snapshot
+            icon: mdi:camera
+            tap_action:
+              action: call-service
+              service: camera.snapshot
+              target:
+                entity_id: camera.living_room
+              data:
+                filename: "/config/www/snapshots/living_room_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+
+          - type: button
+            name: Record
+            icon: mdi:record-rec
+            tap_action:
+              action: call-service
+              service: switch.toggle
+              target:
+                entity_id: switch.living_room_recording
+
+          - type: button
+            name: Privacy Mode
+            icon: mdi:eye-off
+            tap_action:
+              action: call-service
+              service: switch.toggle
+              target:
+                entity_id: switch.living_room_privacy_mode
+
+  - type: logbook
+    entities:
+      - binary_sensor.living_room_motion
+      - binary_sensor.living_room_person_detected
+    hours_to_show: 12
+    title: Motion Events
+
+  - type: history-graph
+    title: Motion Activity (12h)
+    hours_to_show: 12
+    entities:
+      - binary_sensor.living_room_motion
+    state_color: true

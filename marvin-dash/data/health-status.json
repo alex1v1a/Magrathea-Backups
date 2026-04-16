@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-04-04T14:00:02.370Z",
-  "duration": 1733,
+  "timestamp": "2026-04-16T14:00:04.416Z",
+  "duration": 4108,
   "overall": {
     "status": "critical",
-    "score": 50,
+    "score": 55,
     "checks": {
       "total": 10,
       "healthy": 4,
-      "warning": 2,
-      "critical": 4,
+      "warning": 3,
+      "critical": 3,
       "error": 0
     }
   },
@@ -29,20 +29,20 @@
           "details": null
         }
       },
-      "timestamp": 1775311202305,
-      "duration": 1668
+      "timestamp": 1776348004361,
+      "duration": 4053
     },
     {
       "name": "disk-space",
       "status": "critical",
-      "message": "Disk usage: 90.5% (22.58GB free on C:)",
+      "message": "Disk usage: 92.8% (17.05GB free on C:)",
       "data": {
         "disks": [
           {
             "drive": "C:",
             "totalGB": 237.53,
-            "freeGB": 22.58,
-            "usedPercent": 90.49
+            "freeGB": 17.05,
+            "usedPercent": 92.82
           },
           {
             "drive": "E:",
@@ -51,55 +51,55 @@
             "usedPercent": 73.81
           }
         ],
-        "maxUsedPercent": 90.49
+        "maxUsedPercent": 92.82
       },
-      "timestamp": 1775311200958,
-      "duration": 321
+      "timestamp": 1776348001554,
+      "duration": 1246
     },
     {
       "name": "memory-usage",
       "status": "healthy",
-      "message": "Memory: 51.2% used (15.53GB free of 31.80GB)",
+      "message": "Memory: 53.5% used (14.78GB free of 31.80GB)",
       "data": {
         "totalGB": 31.8,
-        "freeGB": 15.53,
-        "usedPercent": 51.16
+        "freeGB": 14.78,
+        "usedPercent": 53.54
       },
-      "timestamp": 1775311201353,
-      "duration": 395
+      "timestamp": 1776348003224,
+      "duration": 1670
     },
     {
       "name": "cron-jobs",
       "status": "warning",
-      "message": "4 healthy, 2 warning, 2 error (of 8 tasks)",
+      "message": "1 healthy, 5 warning, 2 error (of 8 tasks)",
       "data": {
         "tasks": [
           {
             "name": "Marvin Auto Recovery",
             "status": "healthy",
             "enabled": true,
-            "lastRun": "4/4/2026 8:57:01 AM",
-            "nextRun": "4/4/2026 9:02:00 AM",
+            "lastRun": "4/16/2026 4:00:01 AM",
+            "nextRun": "4/17/2026 4:00:00 AM",
             "lastResult": "0",
-            "hoursSinceLastRun": 0
+            "hoursSinceLastRun": 5
           },
           {
             "name": "Marvin Email Monitor",
-            "status": "healthy",
+            "status": "warning",
             "enabled": true,
-            "lastRun": "4/4/2026 8:49:01 AM",
-            "nextRun": "4/4/2026 9:04:00 AM",
+            "lastRun": "4/11/2026 11:45:01 PM",
+            "nextRun": "N/A",
             "lastResult": "0",
-            "hoursSinceLastRun": 0
+            "hoursSinceLastRun": 105
           },
           {
             "name": "Marvin Backup",
-            "status": "healthy",
+            "status": "warning",
             "enabled": true,
-            "lastRun": "4/4/2026 8:48:01 AM",
-            "nextRun": "4/4/2026 9:03:00 AM",
-            "lastResult": "0",
-            "hoursSinceLastRun": 0
+            "lastRun": "4/16/2026 3:00:01 AM",
+            "nextRun": "4/17/2026 3:00:00 AM",
+            "lastResult": "1",
+            "hoursSinceLastRun": 6
           },
           {
             "name": "WSL-24x7-Monitor",
@@ -108,16 +108,16 @@
             "lastRun": "3/2/2026 12:03:14 AM",
             "nextRun": "N/A",
             "lastResult": "1",
-            "hoursSinceLastRun": 800
+            "hoursSinceLastRun": 1088
           },
           {
             "name": "OpenClaw Gateway Auto-Recovery",
-            "status": "healthy",
+            "status": "warning",
             "enabled": true,
-            "lastRun": "4/4/2026 8:58:01 AM",
-            "nextRun": "4/4/2026 9:03:00 AM",
-            "lastResult": "0",
-            "hoursSinceLastRun": 0
+            "lastRun": "4/11/2026 11:55:01 PM",
+            "nextRun": "N/A",
+            "lastResult": "267014",
+            "hoursSinceLastRun": 105
           },
           {
             "name": "Kanban-AutoRefresh",
@@ -126,7 +126,7 @@
             "lastRun": "3/7/2026 2:23:26 AM",
             "nextRun": "N/A",
             "lastResult": "1",
-            "hoursSinceLastRun": 678
+            "hoursSinceLastRun": 966
           },
           {
             "name": "Marvin Dinner Automation",
@@ -142,31 +142,31 @@
           }
         ],
         "summary": {
-          "healthy": 4,
-          "warning": 2,
+          "healthy": 1,
+          "warning": 5,
           "error": 2,
           "total": 8
         }
       },
-      "timestamp": 1775311201728,
-      "duration": 375
+      "timestamp": 1776348003547,
+      "duration": 323
     },
     {
       "name": "email-connectivity",
       "status": "healthy",
-      "message": "SMTP: reachable (577ms), IMAP: reachable (65ms)",
+      "message": "SMTP: reachable (815ms), IMAP: reachable (54ms)",
       "data": {
         "smtp": {
           "status": "reachable",
-          "latency": 577
+          "latency": 815
         },
         "imap": {
           "status": "reachable",
-          "latency": 65
+          "latency": 54
         }
       },
-      "timestamp": 1775311202370,
-      "duration": 642
+      "timestamp": 1776348004416,
+      "duration": 869
     },
     {
       "name": "key-files",
@@ -218,19 +218,20 @@
           "total": 6
         }
       },
-      "timestamp": 1775311202306,
-      "duration": 578
+      "timestamp": 1776348004362,
+      "duration": 815
     },
     {
       "name": "dashboard",
-      "status": "critical",
-      "message": "Dashboard unreachable on port 3001: ",
+      "status": "warning",
+      "message": "Dashboard on port 3001: unhealthy",
       "data": {
         "port": 3001,
-        "error": ""
+        "statusCode": 404,
+        "response": "<!DOCTYPE html><html lang=\"en\" class=\"dark\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/chunks/%5Broot-of-the-server%5D__8896b537._.css\" data-precedence=\"next_static/chunks/[root-of-the-server]__8896b537._.css\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_d1f81d45._.js\"/><script src=\"/_next/static/chunks/95c22_next_dist_compiled_react-dom_9e0d9d1c._.js\" async=\"\"></script><script src=\"/_next/static/chunks/95c22_next_dist_compiled_react-server-dom-turbopack_e11cd7e8._.js\" async=\"\"></script><script src=\"/_next/static/chunks/95c22_next_dist_compiled_next-devtools_index_867cdfcc.js\" async=\"\"></script><script src=\"/_next/static/chunks/95c22_next_dist_compiled_ca8372e9._.js\" async=\"\"></script><script src=\"/_next/static/chunks/95c22_next_dist_client_637088f2._.js\" async=\"\"></script><script src=\"/_next/static/chunks/95c22_next_dist_63042cc3._.js\" async=\"\"></script><script src=\"/_next/static/chunks/95c22_%40swc_helpers_cjs_cc15467e._.js\" async=\"\"></script><script src=\"/_next/static/chunks/openclaw-mission-control_frontend_a0ff3932._.js\" async=\"\"></script><script src=\"/_next/static/chunks/turbopack-openclaw-mission-control_frontend_2ee346ac._.js\" async=\"\"></script><script src=\"/_next/static/chunks/95c22_31e5717b._.js\" async=\"\"></script><script src=\"/_next/static/chunks/openclaw-mission-control_frontend_src_components_c29dc66f._.js\" async=\"\"></script><script src=\"/_next/static/chunks/openclaw-mission-control_frontend_src_app_layout_tsx_34431f21._.js\" async=\"\"></script><meta name=\"robots\" content=\"noindex\"/><meta name=\"next-size-adjust\" content=\"\"/><title>404: This page could not be found.</title><title>OpenClaw Mission Control</title><meta name=\"description\" content=\"A calm command center for every task.\"/><script src=\"/_next/static/chunks/95c22_next_dist_build_polyfills_polyfill-nomodule.js\" noModule=\"\"></script></head><body class=\"ibm_plex_sans_e49d0eda-module__EKixfa__variable sora_5505cfa3-module__zg2X6G__variable dm_serif_display_1d1695ab-module__S4HrAq__variable min-h-screen bg-app text-strong antialiased\"><div hidden=\"\"><!--$--><!--/$--></div><div data-cy=\"global-loader\" class=\"pointer-events-none fixed inset-x-0 top-0 z-[120] h-1 transition-opacity duration-200 opacity-0\" aria-hidden=\"true\" data-state=\"hidden\" role=\"status\"><div class=\"h-full w-full overflow-hidden bg-[var(--accent-soft)]\"><div class=\"h-full w-full animate-progress-shimmer bg-[linear-gradient(90deg,transparent_0%,var(--accent)_50%,transparent_100%)]\"></div></div><span class=\"sr-only\">Loading</span></div><!--$--><div style=\"font-family:system-ui,&quot;Segoe UI&quot;,Roboto,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;;height:100vh;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center\"><div><style>body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}</style><h1 class=\"next-error-h1\" style=\"display:inline-block;margin:0 20px 0 0;padding:0 23px 0 0;font-size:24px;font-weight:500;vertical-align:top;line-height:49px\">404</h1><div style=\"display:inline-block\"><h2 style=\"font-size:14px;font-weight:400;line-height:49px;margin:0\">This page could not be found.</h2></div></div></div><!--$--><!--/$--><!--/$--><script id=\"_R_\">self.__next_r=\"OJwkPcCWSqQkznUsD-KZg\"</script><script src=\"/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_d1f81d45._.js\" async=\"\"></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,\"5:I[\\\"[project]/openclaw-mission-control/frontend/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/95c22_31e5717b._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_components_c29dc66f._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_app_layout_tsx_34431f21._.js\\\"],\\\"SegmentViewNode\\\"]\\n7:\\\"$Sreact.fragment\\\"\\n19:I[\\\"[project]/openclaw-mission-control/frontend/src/components/providers/AuthProvider.tsx [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/95c22_31e5717b._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_components_c29dc66f._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_app_layout_tsx_34431f21._.js\\\"],\\\"AuthProvider\\\"]\\n1b:I[\\\"[project]/openclaw-mission-control/frontend/src/components/providers/QueryProvider.tsx [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/95c22_31e5717b._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_components_c29dc66f._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_app_layout_tsx_34431f21._.js\\\"],\\\"QueryProvider\\\"]\\n1d:I[\\\"[project]/openclaw-mission-control/frontend/src/components/ui/global-loader.tsx [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/95c22_31e5717b._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_components_c29dc66f._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_app_layout_tsx_34431f21._.js\\\"],\\\"GlobalLoader\\\"]\\n1f:I[\\\"[project]/openclaw-mission-control/frontend/node_modules/next/dist/client/components/layout-router.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/95c22_31e5717b._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_components_c29dc66f._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_app_layout_tsx_34431f21._.js\\\"],\\\"default\\\"]\\n21:I[\\\"[project]/openclaw-mission-control/frontend/node_modules/next/dist/client/components/render-from-template-context.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/95c22_31e5717b._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_components_c29dc66f._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_app_layout_tsx_34431f21._.js\\\"],\\\"default\\\"]\\n43:I[\\\"[project]/openclaw-mission-control/frontend/node_modules/next/dist/lib/framework/boundary-components.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/95c22_31e5717b._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_components_c29dc66f._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_app_layout_tsx_34431f21._.js\\\"],\\\"OutletBoundary\\\"]\\n45:\\\"$Sreact.suspense\\\"\\n56:I[\\\"[project]/openclaw-mission-control/frontend/node_modules/next/dist/lib/framework/boundary-components.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/95c22_31e5717b._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_components_c29dc66f._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_app_layout_tsx_34431f21._.js\\\"],\\\"ViewportBoundary\\\"]\\n5d:I[\\\"[project]/openclaw-mission-control/frontend/node_modules/next/dist/lib/framework/boundary-components.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/95c22_31e5717b._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_components_c29dc66f._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_app_layout_tsx_34431f21._.js\\\"],\\\"MetadataBoundary\\\"]\\n63:I[\\\"[project]/openclaw-mission-control/frontend/node_modules/next/dist/client/components/builtin/global-error.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/95c22_31e5717b._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_components_c29dc66f._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_app_layout_tsx_34431f21._.js\\\"],\\\"default\\\"]\\n:HL[\\\"/_next/static/chunks/%5Broot-of-the-server%5D__8896b537._.css\\\",\\\"style\\\"]\\n:N1776348004050.0034\\n3:\\\"$EObject.defineProperty(()=\\u003e{ctx.componentMod.preloadStyle(fullHref,ctx.renderOpts.crossOrigin,ctx.nonce)},\\\\\\\"name\\\\\\\",{value:\\\\\\\"\\\\\\\"})\\\"\\n2:{\\\"name\\\":\\\"Preloads\\\",\\\"key\\\":null,\\\"env\\\":\\\"Server\\\",\\\"stack\\\":[],\\\"props\\\":{\\\"preloadCallbacks\\\":[\\\"$3\\\"]}}\\n4:[]\\n6:[]\\n8:[[\\\"\"])</script><script>self.__next_f.push([1,\"Array.map\\\",\\\"\\\",0,0,0,0,false]]\\n9:[[\\\"Array.map\\\",\\\"\\\",0,0,0,0,false]]\\na:[[\\\"Array.map\\\",\\\"\\\",0,0,0,0,false]]\\nb:[[\\\"Array.map\\\",\\\"\\\",0,0,0,0,false]]\\ne:I[\\\"[project]/openclaw-mission-control/frontend/node_modules/next/dist/client/components/layout-router.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/95c22_31e5717b._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_components_c29dc66f._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_app_layout_tsx_34431f21._.js\\\"],\\\"default\\\"]\\n11:I[\\\"[project]/openclaw-mission-control/frontend/node_modules/next/dist/client/components/render-from-template-context.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/95c22_31e5717b._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_components_c29dc66f._.js\\\",\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_app_layout_tsx_34431f21._.js\\\"],\\\"default\\\"]\\n12:{}\\n13:[[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true]]\\n10:{\\\"children\\\":[\\\"$\\\",\\\"$L11\\\",null,\\\"$12\\\",null,\\\"$13\\\",1]}\\n14:[[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true]]\\nf:{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$undefined\\\",\\\"errorStyles\\\":\\\"$undefined\\\",\\\"errorScripts\\\":\\\"$undefined\\\",\\\"template\\\":[\\\"$\\\",\\\"$7\\\",null,\\\"$10\\\",null,\\\"$14\\\",0],\\\"templateStyles\\\":\\\"$undefined\\\",\\\"templateScripts\\\":\\\"$undefined\\\",\\\"notFound\\\":\\\"$Y\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\",\\\"segmentViewBoundaries\\\":\\\"$Y\\\"}\\n15:[[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true]]\\nd:{\\\"name\\\":\\\"RootLayout\\\",\\\"key\\\":null,\\\"env\\\":\\\"Server\\\",\\\"stack\\\":[],\\\"props\\\":{\\\"children\\\":[\\\"$\\\",\\\"$Le\\\",null,\\\"$f\\\",null,\\\"$15\\\",1],\\\"params\\\":\\\"$Y\\\"}}\\n16:[[\\\"RootLayout\\\",\\\"C:\\\\\\\\Users\\\\\\\\admin\\\\\\\\openclaw-mission-control\\\\\\\\frontend\\\\\\\\.next\\\\\\\\dev\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__4784512c._.js\\\",224,309,223,1,false]]\\n17:[[\\\"RootLayout\\\",\\\"C:\\\\\\\\Users\\\\\\\\admin\\\\\\\\openclaw-mission-control\\\\\\\\frontend\\\\\\\\.next\\\\\\\\dev\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__4784512c._.js\\\",227,316,223,1,false]]\\n18:[[\\\"RootLayout\\\",\\\"C:\\\\\\\\Users\\\\\\\\admin\\\\\\\\openclaw-mission-control\\\\\\\\frontend\\\\\\\\.next\\\\\\\\dev\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__4784512c._.js\\\",229,320,223,1,false]]\\n1a:[[\\\"RootLayout\\\",\\\"C:\\\\\\\\Users\\\\\\\\admin\\\\\\\\openclaw-mission-control\\\\\\\\frontend\\\\\\\\.next\\\\\\\\dev\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__4784512c._.js\\\",230,324,223,1,false]]\\n1c:[[\\\"RootLayout\\\",\\\"C:\\\\\\\\Users\\\\\\\\admin\\\\\\\\openclaw-mission-control\\\\\\\\frontend\\\\\\\\.next\\\\\\\\dev\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__4784512c._.js\\\",232,322,223,1,false]]\\n1e:[[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true]]\\n20:[[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true]]\\n22:[]\\n24:{\\\"name\\\":\\\"NotFound\\\",\\\"key\\\":null,\\\"env\\\":\\\"Server\\\",\\\"stack\\\":[],\\\"props\\\":{}}\\n25:{\\\"name\\\":\\\"HTTPAccessErrorFallback\\\",\\\"key\\\":null,\\\"env\\\":\\\"Server\\\",\\\"owner\\\":\\\"$24\\\",\\\"stack\\\":[],\\\"props\\\":{\\\"status\\\":404,\\\"message\\\":\\\"This page could not be found.\\\"}}\\n26:[]\\n27:[]\\n28:[]\\n29:[]\\n2a:[]\\n2b:[]\\n2c:[]\\n2d:[[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true]]\\n2e:[[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true]]\\n2f:[[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true]]\\n30:[[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true],[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true]]\\n31:[[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true],[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true]]\\n32:[[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true],[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true]]\\n33:[[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true],[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true]]\\n35:{\\\"name\\\":\\\"NotFound\\\",\\\"key\\\":null,\\\"env\\\":\\\"Server\\\",\\\"stack\\\":[[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true],[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true]],\\\"props\\\":{\\\"params\\\":\\\"$@36\\\",\\\"searchParams\\\":\\\"$@37\\\"}}\\n38:{\\\"name\\\":\\\"HTTPAccessErrorFallback\\\",\\\"key\\\":null,\\\"env\\\":\\\"Server\\\",\\\"owner\\\":\\\"$35\\\",\\\"stack\\\":[],\\\"props\\\":{\\\"status\\\":404,\\\"message\\\":\\\"This page could not be found.\\\"}}\\n39:[]\\n3a:[]\\n3b:[]\\n3c:[]\\n3d:[]\\n3e:[]\\n3f:[]\\n41:{\\\"name\\\":\\\"Next.MetadataOutlet\\\",\\\"key\\\":null,\\\"env\\\":\\\"Server\\\",\\\"stack\\\":[[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true],[\\\"Promise.all\\\",\\\"\\\",0,0,0,0,true]],\\\"props\\\":{}}\\n42:[]\\n44:[]\\n47:[]\\n49:{\\\"name\\\":\\\"Loading\\\",\\\"key\\\":\\\"l\\\",\\\"env\\\":\\\"Server\\\",\\\"stack\\\":[],\\\"props\\\":{}}\\n4a:[[\\\"Loading\\\",\\\"C:\\\\\\\\Users\\\\\\\\admin\\\\\\\\openclaw-mission-control\\\\\\\\frontend\\\\\\\\.next\\\\\\\\dev\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\openclaw-mission-control_frontend_src_app_loading_tsx_0ed17cc0._.js\\\",12,309,11,1,false]]\\n4b:[[\\\"Loading\\\",\\\"C:\\\\\\\\Users\\\\\\\\admin\\\\\\\\openclaw-mission-control\\\\\\\\frontend\\\\\\\\.next\\\\\\\\dev\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\openclaw-mission-control_frontend_src_app_loading_tsx_0ed17cc0._.js\\\",15,316,11,1,false]]\\n4c:[[\\\"Loading\\\",\\\"C:\\\\\\\\Users\\\\\\\\admin\\\\\\\\openclaw-mission-con\"])</script><script>self.__next_f.push([1,\"trol\\\\\\\\frontend\\\\\\\\.next\\\\\\\\dev\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\openclaw-mission-control_frontend_src_app_loading_tsx_0ed17cc0._.js\\\",18,314,11,1,false]]\\n4d:[[\\\"Loading\\\",\\\"C:\\\\\\\\Users\\\\\\\\admin\\\\\\\\openclaw-mission-control\\\\\\\\frontend\\\\\\\\.next\\\\\\\\dev\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\openclaw-mission-control_frontend_src_app_loading_tsx_0ed17cc0._.js\\\",25,314,11,1,false]]\\n4e:[]\\n\"])</script><script>self.__next_f.push([1,\"51:\\\"$EObject.defineProperty(function(type,config,children){for(var propName,i=2;i\\u003carguments.length;i++)validateChildKeys(arguments[i]);i={};var key=null;if(null!=config)for(propName in didWarnAboutOldJSXRuntime||!(\\\\\\\"__self\\\\\\\"in config)||\\\\\\\"key\\\\\\\"in config||(didWarnAboutOldJSXRuntime=!0,console.warn(\\\\\\\"Your app (or one of its dependencies) is using an outdated JSX transform. Update to the modern JSX transform for faster performance: https://react.dev/link/new-jsx-transform\\\\\\\")),hasValidKey(config)\\u0026\\u0026(checkKeyStringCoercion(config.key),key=\\\\\\\"\\\\\\\"+config.key),config)hasOwnProperty.call(config,propName)\\u0026\\u0026\\\\\\\"key\\\\\\\"!==propName\\u0026\\u0026\\\\\\\"__self\\\\\\\"!==propName\\u0026\\u0026\\\\\\\"__source\\\\\\\"!==propName\\u0026\\u0026(i[propName]=config[propName]);var childrenLength=arguments.length-2;if(1===childrenLength)i.children=children;else if(1\\u003cchildrenLength){for(var childArray=Array(childrenLength),_i=0;_i\\u003cchildrenLength;_i++)childArray[_i]=arguments[_i+2];Object.freeze\\u0026\\u0026Object.freeze(childArray),i.children=childArray}if(type\\u0026\\u0026type.defaultProps)for(propName in childrenLength=type.defaultProps)void 0===i[propName]\\u0026\\u0026(i[propName]=childrenLength[propName]);return key\\u0026\\u0026function(props,displayName){function warnAboutAccessingKey(){specialPropKeyWarningShown||(specialPropKeyWarningShown=!0,console.error(\\\\\\\"%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)\\\\\\\",displayName))}warnAboutAccessingKey.isReactWarning=!0,Object.defineProperty(props,\\\\\\\"key\\\\\\\",{get:warnAboutAccessingKey,configurable:!0})}(i,\\\\\\\"function\\\\\\\"==typeof type?type.displayName||type.name||\\\\\\\"Unknown\\\\\\\":type),(propName=1e4\\u003eReactSharedInternals.recentlyCreatedOwnerStacks++)?(childArray=Error.stackTraceLimit,Error.stackTraceLimit=10,childrenLength=Error(\\\\\\\"react-stack-top-frame\\\\\\\"),Error.stackTraceLimit=childArray):childrenLength=unknownOwnerDebugStack,ReactElement(type,key,i,getOwner(),childrenLength,propName?createTask(getTaskName(type)):unknownOwnerDebugTask)},\\\\\\\"name\\\\\\\",{value:\\\\\\\"\\\\\\\"})\\\"\\n\"])</script><script>self.__next_f.push([1,\"50:{\\\"name\\\":\\\"NonIndex\\\",\\\"key\\\":null,\\\"env\\\":\\\"Server\\\",\\\"stack\\\":[],\\\"props\\\":{\\\"createElement\\\":\\\"$51\\\",\\\"pagePath\\\":\\\"/_not-found\\\",\\\"statusCode\\\":404,\\\"isPossibleServerAction\\\":false}}\\n52:[]\\n54:{\\\"name\\\":\\\"ViewportWrapper\\\",\\\"key\\\":null,\\\"env\\\":\\\"Server\\\",\\\"stack\\\":[],\\\"props\\\":{}}\\n55:[]\\n58:{\\\"name\\\":\\\"Next.Viewport\\\",\\\"key\\\":null,\\\"env\\\":\\\"Server\\\",\\\"owner\\\":\\\"$54\\\",\\\"stack\\\":[],\\\"props\\\":{}}\\n5a:{\\\"name\\\":\\\"MetadataWrapper\\\",\\\"key\\\":null,\\\"env\\\":\\\"Server\\\",\\\"stack\\\":[],\\\"props\\\":{}}\\n5b:[]\\n5c:[]\\n5e:[]\\n60:{\\\"name\\\":\\\"Next.Metadata\\\",\\\"key\\\":null,\\\"env\\\":\\\"Server\\\",\\\"owner\\\":\\\"$5a\\\",\\\"stack\\\":[],\\\"props\\\":{}}\\n61:[]\\n36:{}\\n37:\\n64:[]\\n65:[]\\n66:[]\\n67:[]\\n1:D{\\\"time\\\":0.31059999763965607}\\n1:D\\\"$2\\\"\\n1:D{\\\"time\\\":0.35439999774098396}\\n1:null\\nc:D{\\\"time\\\":1.5108999982476234}\\nc:D\\\"$d\\\"\\nc:D{\\\"time\\\":1.764299999922514}\\n23:D{\\\"time\\\":2.630799997597933}\\n23:D\\\"$24\\\"\\n23:D{\\\"time\\\":2.7656999975442886}\\n23:D\\\"$25\\\"\\n23:D{\\\"time\\\":2.9840999990701675}\\n23:[[\\\"$\\\",\\\"title\\\",null,{\\\"children\\\":\\\"404: This page could not be found.\\\"},\\\"$25\\\",\\\"$26\\\",1],[\\\"$\\\",\\\"div\\\",null,{\\\"style\\\":{\\\"fontFamily\\\":\\\"system-ui,\\\\\\\"Segoe UI\\\\\\\",Roboto,Helvetica,Arial,sans-serif,\\\\\\\"Apple Color Emoji\\\\\\\",\\\\\\\"Segoe UI Emoji\\\\\\\"\\\",\\\"height\\\":\\\"100vh\\\",\\\"textAlign\\\":\\\"center\\\",\\\"display\\\":\\\"flex\\\",\\\"flexDirection\\\":\\\"column\\\",\\\"alignItems\\\":\\\"center\\\",\\\"justifyContent\\\":\\\"center\\\"},\\\"children\\\":[\\\"$\\\",\\\"div\\\",null,{\\\"children\\\":[[\\\"$\\\",\\\"style\\\",null,{\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\\\"}},\\\"$25\\\",\\\"$29\\\",1],[\\\"$\\\",\\\"h1\\\",null,{\\\"className\\\":\\\"next-error-h1\\\",\\\"style\\\":{\\\"display\\\":\\\"inline-block\\\",\\\"margin\\\":\\\"0 20px 0 0\\\",\\\"padding\\\":\\\"0 23px 0 0\\\",\\\"fontSize\\\":24,\\\"fontWeight\\\":500,\\\"verticalAlign\\\":\\\"top\\\",\\\"lineHeight\\\":\\\"49px\\\"},\\\"children\\\":404},\\\"$25\\\",\\\"$2a\\\",1],[\\\"$\\\",\\\"div\\\",null,{\\\"style\\\":{\\\"display\\\":\\\"inline-block\\\"},\\\"children\\\":[\\\"$\\\",\\\"h2\\\",null,{\\\"style\\\":{\\\"fontSize\\\":14,\\\"fontWeight\\\":400,\\\"lineHeight\\\":\\\"49px\\\",\\\"margin\\\":0},\\\"children\\\":\\\"This page could not be found.\\\"},\\\"$25\\\",\\\"$2c\\\",1]},\\\"$25\\\",\\\"$2b\\\",1]]},\\\"$25\\\",\\\"$28\\\",1]},\\\"$25\\\",\\\"$27\\\",1]]\\nc:[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"en\\\",\\\"className\\\":\\\"dark\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"ibm_plex_sans_e49d0eda-module__EKixfa__variable sora_5505cfa3-module__zg2X6G__variable dm_serif_display_1d1695ab-module__S4HrAq__variable min-h-screen bg-app text-strong antialiased\\\",\\\"children\\\":[\\\"$\\\",\\\"$L19\\\",null,{\\\"children\\\":[\\\"$\\\",\\\"$L1b\\\",null,{\\\"children\\\":[[\\\"$\\\",\\\"$L1d\\\",null,{},\\\"$d\\\",\\\"$1c\\\",1],[\\\"$\\\",\\\"$L1f\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$undefined\\\",\\\"errorStyles\\\":\\\"$undefined\\\",\\\"errorScripts\\\":\\\"$undefined\\\",\\\"template\\\":[\\\"$\\\",\\\"$L21\\\",null,{},null,\\\"$20\\\",1],\\\"templateStyles\\\":\\\"$undefined\\\",\\\"templateScripts\\\":\\\"$undefined\\\",\\\"notFound\\\":[\\\"$\\\",\\\"$L5\\\",\\\"c-not-found\\\",{\\\"type\\\":\\\"not-found\\\",\\\"pagePath\\\":\\\"__next_builtin__not-found.js\\\",\\\"children\\\":[\\\"$23\\\",[]]},null,\\\"$22\\\",0],\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\",\\\"segmentViewBoundaries\\\":[[\\\"$\\\",\\\"$L5\\\",null,{\\\"type\\\":\\\"boundary:not-found\\\",\\\"pagePath\\\":\\\"__next_builtin__not-found.js@boundary\\\"},null,\\\"$2d\\\",1],[\\\"$\\\",\\\"$L5\\\",null,{\\\"type\\\":\\\"boundary:loading\\\",\\\"pagePath\\\":\\\"/openclaw-mission-control/frontend/src/app/loading.tsx@boundary\\\"},null,\\\"$2e\\\",1],\\\"$undefined\\\",\\\"$undefined\\\"]},null,\\\"$1e\\\",1]]},\\\"$d\\\",\\\"$1a\\\",1]},\\\"$d\\\",\\\"$18\\\",1]},\\\"$d\\\",\\\"$17\\\",1]},\\\"$d\\\",\\\"$16\\\",1]\\n34:D{\\\"time\\\":4.3889999985694885}\\n34:D\\\"$35\\\"\\n34:D{\\\"time\\\":4.490699999034405}\\n34:D\\\"$38\\\"\\n34:D{\\\"time\\\":4.615299999713898}\\n34:[[\\\"$\\\",\\\"title\\\",null,{\\\"children\\\":\\\"404: This page could not be found.\\\"},\\\"$38\\\",\\\"$39\\\",1],[\\\"$\\\",\\\"div\\\",null,{\\\"style\\\":\\\"$23:1:props:style\\\",\\\"children\\\":[\\\"$\\\",\\\"div\\\",null,{\\\"children\\\":[[\\\"$\\\",\\\"style\\\",null,{\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\\\"}},\\\"$38\\\",\\\"$3c\\\",1],[\\\"$\\\",\\\"h1\\\",null,{\\\"className\\\":\\\"next-error-h1\\\",\\\"style\\\":\\\"$23:1:props:children:props:children:1:props:style\\\",\\\"children\\\":404},\\\"$38\\\",\\\"$3d\\\",1],[\\\"$\\\",\\\"div\\\",null,{\\\"style\\\":\\\"$23:1:props:children:props:children:2:props:style\\\",\\\"children\\\":[\\\"$\\\",\\\"h2\\\",null,{\\\"style\\\":\\\"$23:1:props:children:props:children:2:props:children:props:style\\\",\\\"children\\\":\\\"Th\"])</script><script>self.__next_f.push([1,\"is page could not be found.\\\"},\\\"$38\\\",\\\"$3f\\\",1]},\\\"$38\\\",\\\"$3e\\\",1]]},\\\"$38\\\",\\\"$3b\\\",1]},\\\"$38\\\",\\\"$3a\\\",1]]\\n40:D{\\\"time\\\":5.070499997586012}\\n40:D\\\"$41\\\"\\n40:D{\\\"time\\\":6.930799998342991}\\n40:[\\\"$\\\",\\\"$L43\\\",null,{\\\"children\\\":[\\\"$\\\",\\\"$45\\\",null,{\\\"name\\\":\\\"Next.MetadataOutlet\\\",\\\"children\\\":\\\"$@46\\\"},\\\"$41\\\",\\\"$44\\\",1]},\\\"$41\\\",\\\"$42\\\",1]\\n48:D{\\\"time\\\":7.372600000351667}\\n48:D\\\"$49\\\"\\n48:D{\\\"time\\\":7.498599998652935}\\n48:[\\\"$\\\",\\\"div\\\",\\\"l\\\",{\\\"data-cy\\\":\\\"route-loader\\\",\\\"className\\\":\\\"flex min-h-screen items-center justify-center bg-app px-6\\\",\\\"children\\\":[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"flex flex-col items-center gap-3\\\",\\\"children\\\":[[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"h-10 w-10 animate-spin rounded-full border-2 border-slate-200 border-t-[var(--accent)]\\\"},\\\"$49\\\",\\\"$4c\\\",1],[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"text-sm text-slate-500\\\",\\\"children\\\":\\\"Loading mission control...\\\"},\\\"$49\\\",\\\"$4d\\\",1]]},\\\"$49\\\",\\\"$4b\\\",1]},\\\"$49\\\",\\\"$4a\\\",1]\\n4f:D{\\\"time\\\":7.931499999016523}\\n4f:D\\\"$50\\\"\\n4f:D{\\\"time\\\":7.988099999725819}\\n4f:[\\\"$\\\",\\\"meta\\\",null,{\\\"name\\\":\\\"robots\\\",\\\"content\\\":\\\"noindex\\\"},\\\"$50\\\",\\\"$52\\\",1]\\n53:D{\\\"time\\\":8.090999998152256}\\n53:D\\\"$54\\\"\\n53:D{\\\"time\\\":8.173899997025728}\\n57:D{\\\"time\\\":8.246700000017881}\\n57:D\\\"$58\\\"\\n53:[\\\"$\\\",\\\"$L56\\\",null,{\\\"children\\\":\\\"$L57\\\"},\\\"$54\\\",\\\"$55\\\",1]\\n59:D{\\\"time\\\":8.71619999781251}\\n59:D\\\"$5a\\\"\\n59:D{\\\"time\\\":8.833499997854233}\\n5f:D{\\\"time\\\":8.978799998760223}\\n5f:D\\\"$60\\\"\\n59:[\\\"$\\\",\\\"div\\\",null,{\\\"hidden\\\":true,\\\"children\\\":[\\\"$\\\",\\\"$L5d\\\",null,{\\\"children\\\":[\\\"$\\\",\\\"$45\\\",null,{\\\"name\\\":\\\"Next.Metadata\\\",\\\"children\\\":\\\"$L5f\\\"},\\\"$5a\\\",\\\"$5e\\\",1]},\\\"$5a\\\",\\\"$5c\\\",1]},\\\"$5a\\\",\\\"$5b\\\",1]\\n62:[]\\n\"])</script><script>self.__next_f.push([1,\"0:{\\\"P\\\":\\\"$1\\\",\\\"b\\\":\\\"development\\\",\\\"c\\\":[\\\"\\\",\\\"api\\\",\\\"health\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"/_not-found\\\",{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]},\\\"$undefined\\\",\\\"$undefined\\\",true],[[\\\"$\\\",\\\"$L5\\\",\\\"layout\\\",{\\\"type\\\":\\\"layout\\\",\\\"pagePath\\\":\\\"/openclaw-mission-control/frontend/src/app/layout.tsx\\\",\\\"children\\\":[\\\"$\\\",\\\"$7\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/%5Broot-of-the-server%5D__8896b537._.css\\\",\\\"precedence\\\":\\\"next_static/chunks/[root-of-the-server]__8896b537._.css\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"},null,\\\"$8\\\",0],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/95c22_31e5717b._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,\\\"$9\\\",0],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_components_c29dc66f._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,\\\"$a\\\",0],[\\\"$\\\",\\\"script\\\",\\\"script-2\\\",{\\\"src\\\":\\\"/_next/static/chunks/openclaw-mission-control_frontend_src_app_layout_tsx_34431f21._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,\\\"$b\\\",0]],\\\"$c\\\"]},null,\\\"$6\\\",1]},null,\\\"$4\\\",0],{\\\"children\\\":[[\\\"$\\\",\\\"$7\\\",\\\"c\\\",{\\\"children\\\":[null,[\\\"$\\\",\\\"$L1f\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$undefined\\\",\\\"errorStyles\\\":\\\"$undefined\\\",\\\"errorScripts\\\":\\\"$undefined\\\",\\\"template\\\":[\\\"$\\\",\\\"$L21\\\",null,{},null,\\\"$31\\\",1],\\\"templateStyles\\\":\\\"$undefined\\\",\\\"templateScripts\\\":\\\"$undefined\\\",\\\"notFound\\\":\\\"$undefined\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\",\\\"segmentViewBoundaries\\\":[\\\"$undefined\\\",\\\"$undefined\\\",\\\"$undefined\\\",\\\"$undefined\\\"]},null,\\\"$30\\\",1]]},null,\\\"$2f\\\",0],{\\\"children\\\":[[\\\"$\\\",\\\"$7\\\",\\\"c\\\",{\\\"children\\\":[[\\\"$\\\",\\\"$L5\\\",\\\"c-page\\\",{\\\"type\\\":\\\"page\\\",\\\"pagePath\\\":\\\"__next_builtin__not-found.js\\\",\\\"children\\\":\\\"$34\\\"},null,\\\"$33\\\",1],null,\\\"$40\\\"]},null,\\\"$32\\\",0],{},null,false,false]},null,false,false]},[[\\\"$\\\",\\\"$L5\\\",\\\"c-loading\\\",{\\\"type\\\":\\\"loading\\\",\\\"pagePath\\\":\\\"/openclaw-mission-control/frontend/src/app/loading.tsx\\\",\\\"children\\\":\\\"$48\\\"},null,\\\"$47\\\",0],[],[]],false,false],[\\\"$\\\",\\\"$7\\\",\\\"h\\\",{\\\"children\\\":[\\\"$4f\\\",\\\"$53\\\",\\\"$59\\\",[\\\"$\\\",\\\"meta\\\",null,{\\\"name\\\":\\\"next-size-adjust\\\",\\\"content\\\":\\\"\\\"},null,\\\"$61\\\",1]]},null,\\\"$4e\\\",0],false]],\\\"m\\\":\\\"$W62\\\",\\\"G\\\":[\\\"$63\\\",\\\"$undefined\\\"],\\\"S\\\":false}\\n\"])</script><script>self.__next_f.push([1,\"57:D{\\\"time\\\":11.730200000107288}\\n57:[[\\\"$\\\",\\\"meta\\\",\\\"0\\\",{\\\"charSet\\\":\\\"utf-8\\\"},\\\"$41\\\",\\\"$64\\\",0],[\\\"$\\\",\\\"meta\\\",\\\"1\\\",{\\\"name\\\":\\\"viewport\\\",\\\"content\\\":\\\"width=device-width, initial-scale=1\\\"},\\\"$41\\\",\\\"$65\\\",0]]\\n46:D{\\\"time\\\":12.400699999183416}\\n46:null\\n5f:D{\\\"time\\\":12.411100000143051}\\n5f:[[\\\"$\\\",\\\"title\\\",\\\"0\\\",{\\\"children\\\":\\\"OpenClaw Mission Control\\\"},\\\"$41\\\",\\\"$66\\\",0],[\\\"$\\\",\\\"meta\\\",\\\"1\\\",{\\\"name\\\":\\\"description\\\",\\\"content\\\":\\\"A calm command center for every task.\\\"},\\\"$41\\\",\\\"$67\\\",0]]\\n\"])</script></body></html>"
       },
-      "timestamp": 1775311202305,
-      "duration": 577
+      "timestamp": 1776348004362,
+      "duration": 815
     },
     {
       "name": "gateway",
@@ -240,8 +241,8 @@
         "port": 18789,
         "statusCode": 200
       },
-      "timestamp": 1775311202306,
-      "duration": 577
+      "timestamp": 1776348004363,
+      "duration": 816
     },
     {
       "name": "recipe-database",
@@ -250,34 +251,34 @@
       "data": {
         "error": "ENOENT: no such file or directory, open 'C:\\Users\\Admin\\.openclaw\\workspace\\marvin-dash\\dinner-automation\\data\\recipe-database.json'"
       },
-      "timestamp": 1775311202174,
-      "duration": 445
+      "timestamp": 1776348004115,
+      "duration": 568
     },
     {
       "name": "system-processes",
       "status": "healthy",
-      "message": "Node: 4, Chrome: 8, Edge: 0, Python: 4",
+      "message": "Node: 7, Chrome: 0, Edge: 0, Python: 2",
       "data": {
         "node": {
           "running": true,
-          "count": 4
+          "count": 7
         },
         "python": {
           "running": true,
-          "count": 4
+          "count": 2
         },
         "chrome": {
-          "running": true,
-          "count": 8
+          "running": false,
+          "count": 0
         },
         "edge": {
           "running": false,
           "count": 0
         }
       },
-      "timestamp": 1775311202173,
-      "duration": 444
+      "timestamp": 1776348004115,
+      "duration": 568
     }
   ],
-  "lastUpdated": "2026-04-04T14:00:02.370Z"
+  "lastUpdated": "2026-04-16T14:00:04.416Z"
 }

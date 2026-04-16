@@ -15,11 +15,20 @@ const BATCH_SIZE = 5; // Process 5 items at a time
 const BATCH_DELAY_MIN = 8000; // 8 seconds between batches
 const BATCH_DELAY_MAX = 15000; // 15 seconds between batches
 
-// HEB Credentials - stored securely, only used for automation
+// HEB Credentials - loaded from environment variables
+// Set HEB_EMAIL and HEB_PASSWORD in your .env file
 const HEB_CREDENTIALS = {
-  email: 'alex@1v1a.com',
-  password: '$Tandal0ne'
+  email: process.env.HEB_EMAIL || process.env.HEB_USERNAME,
+  password: process.env.HEB_PASSWORD
 };
+
+// Validate credentials are configured
+if (!HEB_CREDENTIALS.email || !HEB_CREDENTIALS.password) {
+  console.error('ERROR: HEB credentials not configured');
+  console.error('Set HEB_EMAIL and HEB_PASSWORD environment variables');
+  console.error('Or use: source .env && node heb-cart-shared.js');
+  process.exit(1);
+}
 
 /**
  * Get random integer between min and max (inclusive)

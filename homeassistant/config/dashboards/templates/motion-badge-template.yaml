@@ -1,0 +1,16 @@
+# =============================================================================
+# MOTION BADGE TEMPLATE
+# =============================================================================
+# Reusable template for motion indicator badges
+# =============================================================================
+
+type: template
+icon: mdi:motion-sensor
+content: "{{ 'MOTION' if is_state('[[motion_sensor]]', 'on') else 'Clear' }}"
+icon_color: "{{ 'amber' if is_state('[[motion_sensor]]', 'on') else 'grey' }}"
+tap_action:
+  action: more-info
+  entity: "[[motion_sensor]]"
+
+# Variables:
+# [[motion_sensor]] - Motion sensor entity ID

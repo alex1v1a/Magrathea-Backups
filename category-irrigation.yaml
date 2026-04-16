@@ -1,0 +1,20 @@
+title: Irrigation
+views:
+  - title: Irrigation
+    cards:
+      - type: entities
+        title: Outdoor Controls
+        entities:
+          - switch.saxton_garden
+          - switch.saxton_backyard_patio_pond
+          - switch.saxton_playground
+
+      - type: button
+        name: All Irrigation Off
+        tap_action:
+          action: call-service
+          service: switch.turn_off
+          target:
+            entity_id:
+              - switch.saxton_garden
+              - switch.saxton_backyard_patio_pond

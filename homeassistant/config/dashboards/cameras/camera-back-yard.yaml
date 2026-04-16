@@ -1,0 +1,313 @@
+# =============================================================================
+# BACK YARD CAMERA - Detailed View
+# =============================================================================
+# Individual camera view with full controls, playback, and motion timeline
+# =============================================================================
+
+title: Back Yard Camera
+path: camera-back-yard
+icon: mdi:tree
+subview: true
+back_path: /lovelace/security-main
+
+theme: Backend-selected
+
+# Sidebar with camera controls and status
+sidebar:
+  - type: entities
+    title: Camera Controls
+    entities:
+      - entity: camera.back_yard
+        name: Stream Status
+        icon: mdi:camera
+      - entity: switch.back_yard_camera_enabled
+        name: Camera Power
+        icon: mdi:power
+      - entity: switch.back_yard_recording
+        name: Recording
+        icon: mdi:record-rec
+      - entity: switch.back_yard_motion_detection
+        name: Motion Detection
+        icon: mdi:motion-sensor
+      - entity: number.back_yard_motion_sensitivity
+        name: Sensitivity
+        icon: mdi:tune
+
+  - type: entities
+    title: PTZ Controls
+    entities:
+      - type: buttons
+        entities:
+          - entity: button.back_yard_ptz_up
+            name: Up
+            icon: mdi:arrow-up
+          - entity: button.back_yard_ptz_down
+            name: Down
+            icon: mdi:arrow-down
+          - entity: button.back_yard_ptz_left
+            name: Left
+            icon: mdi:arrow-left
+          - entity: button.back_yard_ptz_right
+            name: Right
+            icon: mdi:arrow-right
+          - entity: button.back_yard_ptz_home
+            name: Home Position
+            icon: mdi:home
+      - entity: number.back_yard_ptz_speed
+        name: Pan/Tilt Speed
+      - entity: number.back_yard_zoom_level
+        name: Zoom Level
+
+  - type: entities
+    title: Night Vision
+    entities:
+      - entity: select.back_yard_night_vision_mode
+        name: Mode
+      - entity: number.back_yard_ir_led_intensity
+        name: IR Intensity
+
+  - type: history-graph
+    title: Motion Events (24h)
+    hours_to_show: 24
+    entities:
+      - binary_sensor.back_yard_motion
+      - binary_sensor.back_yard_person_detected
+      - binary_sensor.back_yard_animal_detected
+
+  - type: entity
+    entity: sensor.back_yard_last_motion
+    name: Last Motion
+
+  - type: picture-entity
+    entity: image.back_yard_last_snapshot
+    name: Last Snapshot
+    show_state: false
+
+# Main content - Full camera view
+views:
+  - type: vertical-stack
+    cards:
+      # Navigation breadcrumb
+      - type: markdown
+        content: "[← Back to Security Dashboard](/lovelace/security-main)"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+
+      # Main camera feed
+      - type: picture-entity
+        entity: camera.back_yard
+        name: Back Yard - Live
+        show_state: false
+        show_name: true
+        camera_view: live
+        aspect_ratio: "16:9"
+        card_mod:
+          style: |
+            ha-card {
+              height: 60vh;
+              overflow: hidden;
+            }
+
+      # Quick action bar
+      - type: horizontal-stack
+        cards:
+          - type: button
+            name: Snapshot
+            icon: mdi:camera
+            tap_action:
+              action: call-service
+              service: camera.snapshot
+              target:
+                entity_id: camera.back_yard
+              data:
+                filename: "/config/www/snapshots/back_yard_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+            card_mod:
+              style: |
+                ha-card {
+                  background: var(--primary-color);
+                  color: white;
+                }
+
+          - type: button
+            name: Record
+            icon: mdi:record-rec
+            tap_action:
+              action: call-service
+              service: switch.toggle
+              target:
+                entity_id: switch.back_yard_recording
+            card_mod:
+              style: |
+                ha-card {
+                  background: {{ '#f44336' if is_state('switch.back_yard_recording', 'on') else 'var(--card-background-color)' }};
+                  color: {{ 'white' if is_state('switch.back_yard_recording', 'on') else 'var(--primary-text-color)' }};
+                }
+
+          - type: button
+            name: Talk
+            icon: mdi:microphone
+            card_mod:
+              style: |
+                ha-card {
+                  background: #4caf50;
+                  color: white;
+                }
+
+          - type: button
+            name: Light
+            icon: mdi:lightbulb
+            tap_action:
+              action: call-service
+              service: switch.toggle
+              target:
+                entity_id: switch.back_yard_floodlight
+            card_mod:
+              style: |
+                ha-card {
+                  background: {{ '#ff9800' if is_state('switch.back_yard_floodlight', 'on') else 'var(--card-background-color)' }};
+                  color: {{ 'white' if is_state('switch.back_yard_floodlight', 'on') else 'var(--primary-text-color)' }};
+                }
+
+          - type: button
+            name: Siren
+            icon: mdi:alarm-light
+            tap_action:
+              action: call-service
+              service: switch.toggle
+              target:
+                entity_id: switch.back_yard_siren
+            card_mod:
+              style: |
+                ha-card {
+                  background: {{ '#f44336' if is_state('switch.back_yard_siren', 'on') else 'var(--card-background-color)' }};
+                  color: {{ 'white' if is_state('switch.back_yard_siren', 'on') else 'var(--primary-text-color)' }};
+                }
+
+  # Motion Events Section
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: "## Motion Events"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+            .markdown-body {
+              font-size: 1.2em;
+              font-weight: 500;
+              border-bottom: 2px solid var(--primary-color);
+              padding-bottom: 8px;
+            }
+
+      - type: logbook
+        entities:
+          - binary_sensor.back_yard_motion
+          - binary_sensor.back_yard_person_detected
+          - binary_sensor.back_yard_animal_detected
+        hours_to_show: 12
+        title: ""
+
+      - type: history-graph
+        title: Motion Activity (Last 12 Hours)
+        hours_to_show: 12
+        entities:
+          - entity: binary_sensor.back_yard_motion
+            name: Motion
+          - entity: binary_sensor.back_yard_person_detected
+            name: Person
+          - entity: binary_sensor.back_yard_animal_detected
+            name: Animal
+        state_color: true
+
+      - type: glance
+        entities:
+          - entity: sensor.back_yard_motion_events_today
+            name: Today
+          - entity: sensor.back_yard_motion_events_week
+            name: This Week
+        show_state: true
+
+  # Detection Zones
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: "## Detection Zones"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+            .markdown-body {
+              font-size: 1.2em;
+              font-weight: 500;
+              border-bottom: 2px solid var(--primary-color);
+              padding-bottom: 8px;
+            }
+
+      - type: entities
+        title: Active Zones
+        entities:
+          - entity: binary_sensor.back_yard_zone_patio
+            name: Patio Zone
+          - entity: binary_sensor.back_yard_zone_grass
+            name: Grass Zone
+          - entity: binary_sensor.back_yard_zone_fence
+            name: Fence Zone
+          - entity: binary_sensor.back_yard_zone_garden
+            name: Garden Zone
+
+      - type: picture-entity
+        entity: image.back_yard_zones
+        name: Zone Configuration
+        show_state: false
+
+  # Camera Information
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: "## Camera Information"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+
+      - type: entities
+        entities:
+          - entity: sensor.back_yard_camera_model
+            name: Model
+          - entity: sensor.back_yard_firmware_version
+            name: Firmware
+          - entity: sensor.back_yard_ip_address
+            name: IP Address
+          - entity: sensor.back_yard_wifi_signal
+            name: WiFi Signal
+          - entity: sensor.back_yard_battery_level
+            name: Battery Level
+          - entity: sensor.back_yard_stream_resolution
+            name: Resolution
+          - entity: sensor.back_yard_frame_rate
+            name: Frame Rate
+
+      - type: button
+        name: Restart Camera
+        icon: mdi:restart
+        tap_action:
+          action: call-service
+          service: button.press
+          target:
+            entity_id: button.back_yard_restart
+        card_mod:
+          style: |
+            ha-card {
+              background: #f44336;
+              color: white;
+            }

@@ -14,29 +14,46 @@ const https = require('https');
 const progress = require('./progress-tracker.js');
 const TASK_ID = 'api-data-fetch';
 
-// Configuration - API Keys from OpenClaw config
+// Configuration - API Keys from environment variables or Bitwarden
+// Set these in your environment or use Bitwarden CLI integration
 const CONFIG = {
   openai: {
-    apiKey: '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',
+    apiKey: process.env.OPENAI_API_KEY,
     baseUrl: 'https://api.openai.com/v1'
   },
   openrouter: {
-    apiKey: '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',
+    apiKey: process.env.OPENROUTER_API_KEY,
     baseUrl: 'https://openrouter.ai/api/v1'
   },
   minimax: {
-    apiKey: 'sk-api-M9U4SwpTO43eL_XL4ZS7vegk0lQjg3vSFA1bYbJg2hf4hhI-5XiBtODgkEkoP7ZQl8BrzHzgSZZkXjD-oKFdIV3RdgdeHvJZBuDu_vyaDe97jzR9g8xvDRM',
+    apiKey: process.env.MINIMAX_API_KEY,
     baseUrl: 'https://api.minimax.chat/v1'
   },
   kimi: {
-    apiKey: 'sk-kimi-HvKVAWIeq9x1hWkqvZmHQqEsyeXSCx9wAAqpdMnFo1L5mc4GVV',
+    apiKey: process.env.KIMI_API_KEY,
     baseUrl: 'https://api.moonshot.cn/v1'
   },
   anthropic: {
-    apiKey: 'sk-ant-a03tL7-ewg1XJuA1GfP9AWnB-Baj8d5Me7p9d9hH7FPGeVPgAA',
+    apiKey: process.env.ANTHROPIC_API_KEY,
     baseUrl: 'https://api.anthropic.com/v1'
   }
 };
+
+// Validate that API keys are configured
+function validateConfig() {
+  const missing = [];
+  for (const [provider, config] of Object.entries(CONFIG)) {
+    if (!config.apiKey) {
+      missing.push(provider);
+    }
+  }
+  if (missing.length > 0) {
+    console.error('ERROR: Missing API keys for:', missing.join(', '));
+    console.error('Set environment variables: OPENAI_API_KEY, OPENROUTER_API_KEY, MINIMAX_API_KEY, KIMI_API_KEY, ANTHROPIC_API_KEY');
+    console.error('Or use: node lib/bitwarden-loader.js to load from Bitwarden');
+    process.exit(1);
+  }
+}
 
 // Data storage paths
 const DATA_DIR = path.join(__dirname, '..', 'data');
@@ -665,6 +682,9 @@ async function main() {
   console.log('║     Marvin Dashboard - Real API Data Fetcher               ║');
   console.log('║     NO MOCK DATA - ONLY REAL API VALUES                    ║');
   console.log('╚════════════════════════════════════════════════════════════╝\n');
+
+  // Validate API keys are configured
+  validateConfig();
 
   try {
     // Ensure directories exist

@@ -1,0 +1,246 @@
+# =============================================================================
+# CAMERA TEMPLATE SENSORS
+# =============================================================================
+# Template sensors for camera status, aggregation, and derived metrics
+# =============================================================================
+
+template:
+  # =========================================================================
+  # BINARY SENSORS - Camera Status
+  # =========================================================================
+  - binary_sensor:
+      # Any camera currently detecting motion
+      - name: Any Camera Motion
+        unique_id: any_camera_motion
+        state: >
+          {{ 
+            is_state('binary_sensor.front_door_motion', 'on') or
+            is_state('binary_sensor.back_yard_motion', 'on') or
+            is_state('binary_sensor.garage_motion', 'on') or
+            is_state('binary_sensor.driveway_motion', 'on') or
+            is_state('binary_sensor.living_room_motion', 'on') or
+            is_state('binary_sensor.kitchen_motion', 'on') or
+            is_state('binary_sensor.side_gate_motion', 'on')
+          }}
+        device_class: motion
+
+      # Any camera currently recording
+      - name: Any Camera Recording
+        unique_id: any_camera_recording
+        state: >
+          {{
+            is_state('binary_sensor.front_door_recording', 'on') or
+            is_state('binary_sensor.back_yard_recording', 'on') or
+            is_state('binary_sensor.garage_recording', 'on') or
+            is_state('binary_sensor.driveway_recording', 'on')
+          }}
+        icon: mdi:record-rec
+
+      # Camera system online status
+      - name: Camera System Online
+        unique_id: camera_system_online
+        state: >
+          {{
+            states('camera.front_door') not in ['unknown', 'unavailable', 'none'] or
+            states('camera.back_yard') not in ['unknown', 'unavailable', 'none'] or
+            states('camera.garage') not in ['unknown', 'unavailable', 'none'] or
+            states('camera.driveway') not in ['unknown', 'unavailable', 'none']
+          }}
+        device_class: connectivity
+
+      # Object detection enabled
+      - name: Object Detection Enabled
+        unique_id: object_detection_enabled
+        state: "{{ is_state('input_boolean.enable_object_detection', 'on') }}"
+        icon: mdi:account-search
+
+      # Person detected anywhere
+      - name: Person Detected Anywhere
+        unique_id: person_detected_anywhere
+        state: >
+          {{
+            is_state('binary_sensor.front_door_person_detected', 'on') or
+            is_state('binary_sensor.back_yard_person_detected', 'on') or
+            is_state('binary_sensor.garage_person_detected', 'on') or
+            is_state('binary_sensor.driveway_person_detected', 'on')
+          }}
+        device_class: occupancy
+
+      # Vehicle detected anywhere
+      - name: Vehicle Detected Anywhere
+        unique_id: vehicle_detected_anywhere
+        state: >
+          {{
+            is_state('binary_sensor.driveway_vehicle_detected', 'on') or
+            is_state('binary_sensor.garage_vehicle_detected', 'on') or
+            is_state('binary_sensor.front_door_vehicle_detected', 'on')
+          }}
+        icon: mdi:car
+
+  # =========================================================================
+  # SENSORS - Camera Aggregations and Metrics
+  # =========================================================================
+  - sensor:
+      # Count of cameras with active motion
+      - name: Active Motion Cameras
+        unique_id: active_motion_cameras
+        state: >
+          {{
+            [
+              is_state('binary_sensor.front_door_motion', 'on'),
+              is_state('binary_sensor.back_yard_motion', 'on'),
+              is_state('binary_sensor.garage_motion', 'on'),
+              is_state('binary_sensor.driveway_motion', 'on'),
+              is_state('binary_sensor.living_room_motion', 'on'),
+              is_state('binary_sensor.kitchen_motion', 'on'),
+              is_state('binary_sensor.side_gate_motion', 'on'),
+              is_state('binary_sensor.backyard_left_motion', 'on'),
+              is_state('binary_sensor.backyard_right_motion', 'on'),
+              is_state('binary_sensor.front_porch_motion', 'on')
+            ] | select('true') | list | count
+          }}
+        icon: mdi:cctv
+
+      # Count of cameras recording
+      - name: Active Recording Cameras
+        unique_id: active_recording_cameras
+        state: >
+          {{
+            [
+              is_state('binary_sensor.front_door_recording', 'on'),
+              is_state('binary_sensor.back_yard_recording', 'on'),
+              is_state('binary_sensor.garage_recording', 'on'),
+              is_state('binary_sensor.driveway_recording', 'on')
+            ] | select('true') | list | count
+          }}
+        icon: mdi:record-rec
+
+      # Count of online cameras
+      - name: Online Cameras
+        unique_id: online_cameras
+        state: >
+          {{
+            [
+              states('camera.front_door') not in ['unknown', 'unavailable', 'none'],
+              states('camera.back_yard') not in ['unknown', 'unavailable', 'none'],
+              states('camera.garage') not in ['unknown', 'unavailable', 'none'],
+              states('camera.driveway') not in ['unknown', 'unavailable', 'none'],
+              states('camera.living_room') not in ['unknown', 'unavailable', 'none'],
+              states('camera.kitchen') not in ['unknown', 'unavailable', 'none'],
+              states('camera.side_gate') not in ['unknown', 'unavailable', 'none'],
+              states('camera.backyard_left') not in ['unknown', 'unavailable', 'none'],
+              states('camera.backyard_right') not in ['unknown', 'unavailable', 'none'],
+              states('camera.front_porch') not in ['unknown', 'unavailable', 'none']
+            ] | select('true') | list | count
+          }}
+        icon: mdi:check-network
+
+      # Total detected persons
+      - name: Detected Persons
+        unique_id: detected_persons
+        state: >
+          {{
+            (states('sensor.front_door_person_count') | int(0)) +
+            (states('sensor.back_yard_person_count') | int(0)) +
+            (states('sensor.garage_person_count') | int(0)) +
+            (states('sensor.driveway_person_count') | int(0))
+          }}
+        icon: mdi:account
+
+      # Total detected vehicles
+      - name: Detected Vehicles
+        unique_id: detected_vehicles
+        state: >
+          {{
+            (states('sensor.driveway_vehicle_count') | int(0)) +
+            (states('sensor.garage_vehicle_count') | int(0))
+          }}
+        icon: mdi:car
+
+      # Total detected animals
+      - name: Detected Animals
+        unique_id: detected_animals
+        state: >
+          {{
+            (states('sensor.back_yard_animal_count') | int(0)) +
+            (states('sensor.garage_animal_count') | int(0))
+          }}
+        icon: mdi:dog-side
+
+      # Total detected packages
+      - name: Detected Packages
+        unique_id: detected_packages
+        state: >
+          {{
+            (states('sensor.front_door_package_count') | int(0)) +
+            (states('sensor.front_porch_package_count') | int(0))
+          }}
+        icon: mdi:package-variant-closed
+
+      # Camera storage used (aggregated)
+      - name: Camera Storage Used
+        unique_id: camera_storage_used
+        state: >
+          {{ 
+            [
+              states('sensor.front_door_storage_used') | float(0),
+              states('sensor.back_yard_storage_used') | float(0),
+              states('sensor.garage_storage_used') | float(0),
+              states('sensor.driveway_storage_used') | float(0)
+            ] | sum
+          }}
+        unit_of_measurement: GB
+        icon: mdi:harddisk
+
+      # Last motion location
+      - name: Last Motion Location
+        unique_id: last_motion_location
+        state: >
+          {% set cameras = {
+            'binary_sensor.front_door_motion': 'Front Door',
+            'binary_sensor.back_yard_motion': 'Back Yard',
+            'binary_sensor.garage_motion': 'Garage',
+            'binary_sensor.driveway_motion': 'Driveway',
+            'binary_sensor.living_room_motion': 'Living Room',
+            'binary_sensor.kitchen_motion': 'Kitchen',
+            'binary_sensor.side_gate_motion': 'Side Gate'
+          } %}
+          {% set last_changed = cameras.keys() 
+            | map('states') 
+            | map('last_changed') 
+            | list %}
+          {% set newest = last_changed | max %}
+          {% for entity, name in cameras.items() %}
+            {% if states[entity].last_changed == newest %}
+              {{ name }}
+            {% endif %}
+          {% endfor %}
+        icon: mdi:map-marker
+
+  # =========================================================================
+  # IMAGE ENTITIES - Camera Snapshots
+  # =========================================================================
+  - image:
+      # Front door last snapshot
+      - name: Front Door Last Snapshot
+        unique_id: front_door_last_snapshot
+        url: >
+          /local/snapshots/front_door_latest.jpg?{{ now().timestamp() }}
+
+      # Back yard last snapshot
+      - name: Back Yard Last Snapshot
+        unique_id: back_yard_last_snapshot
+        url: >
+          /local/snapshots/back_yard_latest.jpg?{{ now().timestamp() }}
+
+      # Garage last snapshot
+      - name: Garage Last Snapshot
+        unique_id: garage_last_snapshot
+        url: >
+          /local/snapshots/garage_latest.jpg?{{ now().timestamp() }}
+
+      # Driveway last snapshot
+      - name: Driveway Last Snapshot
+        unique_id: driveway_last_snapshot
+        url: >
+          /local/snapshots/driveway_latest.jpg?{{ now().timestamp() }}

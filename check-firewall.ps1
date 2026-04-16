@@ -1,0 +1,1 @@
+wsl -d Ubuntu -e bash -c "sudo iptables -L -n | grep -E '8125|DROP|ACCEPT' | head -10"

@@ -1,0 +1,55 @@
+{
+  "lastUpdated": "2026-04-16T14:05:00.796Z",
+  "models": {
+    "gpt-5": {
+      "name": "GPT-5",
+      "provider": "openai",
+      "requests": 0,
+      "tokens": 0,
+      "cost": 0,
+      "dailyUsed": 25121,
+      "monthlySpent": 124.43696812846143,
+      "accountBalance": null
+    },
+    "claude-opus-4": {
+      "name": "Claude Opus 4",
+      "provider": "anthropic",
+      "requests": 0,
+      "tokens": 0,
+      "cost": 0,
+      "dailyUsed": 27127,
+      "monthlySpent": 124.2299708328144,
+      "accountBalance": null
+    },
+    "kimi-k2.5": {
+      "name": "Kimi K2.5",
+      "provider": "moonshot",
+      "requests": 0,
+      "tokens": 0,
+      "cost": 0,
+      "dailyUsed": 24872,
+      "monthlySpent": 129.216159096773,
+      "accountBalance": null
+    },
+    "minimax-01": {
+      "name": "MiniMax-01",
+      "provider": "minimax",
+      "requests": 0,
+      "tokens": 0,
+      "cost": 0,
+      "dailyUsed": 25413,
+      "monthlySpent": 134.0034702609853,
+      "accountBalance": null
+    },
+    "openrouter": {
+      "name": "OpenRouter",
+      "provider": "openrouter",
+      "requests": 0,
+      "tokens": 0,
+      "cost": 0,
+      "dailyUsed": 25844,
+      "monthlySpent": 126.78409988302333,
+      "accountBalance": null
+    }
+  }
+}

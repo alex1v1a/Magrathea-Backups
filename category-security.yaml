@@ -1,0 +1,15 @@
+title: Security
+views:
+  - title: Security
+    cards:
+      - type: entities
+        title: Security Devices
+        entities:
+          - binary_sensor.front_door_battery
+          - sensor.front_door_battery
+
+      - type: button
+        name: Check All Sensors
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/lcars-security

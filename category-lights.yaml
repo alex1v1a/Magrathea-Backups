@@ -1,0 +1,25 @@
+title: Lights
+views:
+  - title: All Lights
+    cards:
+      - type: entities
+        title: Austin Lights
+        entities:
+          - light.lounge
+          - light.kitchen_lamp
+          - light.foyer
+          - light.front_door
+          - light.front_door_2
+          - light.front_yard
+          - light.backyard
+          - light.porch_left
+          - light.porch_right
+          - light.pathway_left
+          - light.pathway_right
+          - light.pool_light
+          - light.pond_light_1
+          - light.fire_pit_light_1
+          - light.range_light
+          - light.soft_lights
+          - light.rgbic_string_light_r
+          - light.rgbwic_string_lights_l

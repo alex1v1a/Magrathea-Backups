@@ -4,8 +4,16 @@
  */
 const { chromium } = require('playwright');
 
-const FB_EMAIL = 'alex@xspqr.com';
-const FB_PASSWORD = 'section9';
+// Facebook Credentials - loaded from environment variables
+const FB_EMAIL = process.env.FACEBOOK_EMAIL || process.env.FACEBOOK_USERNAME;
+const FB_PASSWORD = process.env.FACEBOOK_PASSWORD;
+
+// Validate credentials are configured
+if (!FB_EMAIL || !FB_PASSWORD) {
+  console.error('ERROR: Facebook credentials not configured');
+  console.error('Set FACEBOOK_EMAIL and FACEBOOK_PASSWORD environment variables');
+  process.exit(1);
+}
 
 async function restoreSession() {
   console.log('🔧 Facebook Session Restore\n');

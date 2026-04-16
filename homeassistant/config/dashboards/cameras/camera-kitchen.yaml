@@ -1,0 +1,85 @@
+# =============================================================================
+# KITCHEN CAMERA - Detailed View
+# =============================================================================
+
+title: Kitchen Camera
+path: camera-kitchen
+icon: mdi:silverware-fork-knife
+subview: true
+back_path: /lovelace/security-main
+
+theme: Backend-selected
+
+sidebar:
+  - type: entities
+    title: Camera Controls
+    entities:
+      - entity: camera.kitchen
+        name: Stream Status
+      - entity: switch.kitchen_camera_enabled
+        name: Camera Power
+      - entity: switch.kitchen_recording
+        name: Recording
+      - entity: switch.kitchen_motion_detection
+        name: Motion Detection
+
+  - type: history-graph
+    title: Motion Events (24h)
+    hours_to_show: 24
+    entities:
+      - binary_sensor.kitchen_motion
+
+  - type: entity
+    entity: sensor.kitchen_last_motion
+    name: Last Motion
+
+views:
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: "[← Back to Security Dashboard](/lovelace/security-main)"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+
+      - type: picture-entity
+        entity: camera.kitchen
+        name: Kitchen - Live
+        show_state: false
+        show_name: true
+        camera_view: live
+        aspect_ratio: "16:9"
+        card_mod:
+          style: |
+            ha-card {
+              height: 60vh;
+            }
+
+      - type: horizontal-stack
+        cards:
+          - type: button
+            name: Snapshot
+            icon: mdi:camera
+            tap_action:
+              action: call-service
+              service: camera.snapshot
+              target:
+                entity_id: camera.kitchen
+
+          - type: button
+            name: Record
+            icon: mdi:record-rec
+            tap_action:
+              action: call-service
+              service: switch.toggle
+              target:
+                entity_id: switch.kitchen_recording
+
+  - type: logbook
+    entities:
+      - binary_sensor.kitchen_motion
+    hours_to_show: 12
+    title: Motion Events

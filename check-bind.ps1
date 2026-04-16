@@ -1,0 +1,1 @@
+wsl -d Ubuntu -e bash -c "sudo ss -tlnp | grep 8125"

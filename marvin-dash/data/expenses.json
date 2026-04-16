@@ -1,11 +1,11 @@
 {
-  "lastUpdated": "2026-04-03T18:55:03.736Z",
+  "lastUpdated": "2026-04-16T14:05:04.486Z",
   "monthlyBudget": 200,
-  "totalSpent": 150.16925318447582,
-  "totalRemaining": 49.83074681552418,
-  "budgetPercent": 75.08462659223791,
-  "dailyAverage": 50.05641772815861,
-  "projectedMonthly": 1501.6925318447582,
+  "totalSpent": 542.5065683190342,
+  "totalRemaining": 0,
+  "budgetPercent": 271.2532841595171,
+  "dailyAverage": 33.906660519939635,
+  "projectedMonthly": 1017.199815598189,
   "openRouterCredits": {
     "totalCredits": 40,
     "totalUsage": 30.62,
@@ -14,51 +14,38 @@
     "lastFetch": null
   },
   "providers": {
-    "openai": {
-      "name": "OpenAI",
+    "other": {
+      "name": "other",
       "models": [
         {
-          "id": "openai/gpt-5",
+          "id": "gpt-5",
           "name": "GPT-5",
-          "monthlySpent": 2.85,
-          "monthlyCost": 50
-        }
-      ],
-      "totalSpent": 2.85,
-      "budget": 80,
-      "budgetPercent": 3.5625000000000004,
-      "remaining": 77.15,
-      "status": "ok"
-    },
-    "anthropic": {
-      "name": "Anthropic",
-      "models": [
+          "monthlySpent": 124.43696812846143
+        },
         {
-          "id": "anthropic/claude-opus-4-6",
-          "name": "Claude Opus 4.6",
-          "monthlySpent": 42.17525031044507,
-          "monthlyCost": 75
+          "id": "claude-opus-4",
+          "name": "Claude Opus 4",
+          "monthlySpent": 124.2299708328144
         }
       ],
-      "totalSpent": 42.17525031044507,
-      "budget": 60,
-      "budgetPercent": 70.29208385074178,
-      "remaining": 17.824749689554928,
-      "status": "ok"
+      "totalSpent": 248.66693896127583,
+      "budget": 50,
+      "budgetPercent": 497.3338779225517,
+      "remaining": 0,
+      "status": "exceeded"
     },
     "kimi": {
       "name": "Kimi (Moonshot)",
       "models": [
         {
-          "id": "moonshot/kimi-k2.5",
+          "id": "kimi-k2.5",
           "name": "Kimi K2.5",
-          "monthlySpent": 38.474308830886734,
-          "monthlyCost": 20
+          "monthlySpent": 129.216159096773
         }
       ],
-      "totalSpent": 38.474308830886734,
+      "totalSpent": 129.216159096773,
       "budget": 10,
-      "budgetPercent": 384.74308830886736,
+      "budgetPercent": 1292.16159096773,
       "remaining": 0,
       "status": "exceeded"
     },
@@ -66,15 +53,14 @@
       "name": "MiniMax",
       "models": [
         {
-          "id": "minimax/abab6.5s-chat",
-          "name": "MiniMax ABAB 6.5s",
-          "monthlySpent": 36.049694043144015,
-          "monthlyCost": 10
+          "id": "minimax-01",
+          "name": "MiniMax-01",
+          "monthlySpent": 134.0034702609853
         }
       ],
-      "totalSpent": 36.049694043144015,
+      "totalSpent": 134.0034702609853,
       "budget": 10,
-      "budgetPercent": 360.4969404314402,
+      "budgetPercent": 1340.034702609853,
       "remaining": 0,
       "status": "exceeded"
     },
@@ -82,10 +68,9 @@
       "name": "OpenRouter",
       "models": [
         {
-          "id": "openrouter/anthropic/claude-sonnet-4",
-          "name": "Claude Sonnet 4 (OpenRouter)",
-          "monthlySpent": 30.619999999999997,
-          "monthlyCost": 25
+          "id": "openrouter",
+          "name": "OpenRouter",
+          "monthlySpent": 30.62
         }
       ],
       "totalSpent": 30.62,

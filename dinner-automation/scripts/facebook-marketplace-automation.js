@@ -14,7 +14,7 @@
  *   2. Monitor mode (cron):        node facebook-marketplace-automation.js --monitor
  *   3. Share to groups:             node facebook-marketplace-automation.js --share
  * 
- * Credentials: alex@xspqr.com / section9
+ * Credentials: Set FACEBOOK_EMAIL and FACEBOOK_PASSWORD environment variables
  */
 
 const { chromium } = require('playwright');

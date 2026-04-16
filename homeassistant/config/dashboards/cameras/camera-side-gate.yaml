@@ -1,0 +1,91 @@
+# =============================================================================
+# SIDE GATE CAMERA - Detailed View
+# =============================================================================
+
+title: Side Gate Camera
+path: camera-side-gate
+icon: mdi:gate
+subview: true
+back_path: /lovelace/security-main
+
+theme: Backend-selected
+
+sidebar:
+  - type: entities
+    title: Camera Controls
+    entities:
+      - entity: camera.side_gate
+        name: Stream Status
+      - entity: switch.side_gate_camera_enabled
+        name: Camera Power
+      - entity: switch.side_gate_recording
+        name: Recording
+      - entity: switch.side_gate_motion_detection
+        name: Motion Detection
+
+  - type: history-graph
+    title: Motion Events (24h)
+    hours_to_show: 24
+    entities:
+      - binary_sensor.side_gate_motion
+      - binary_sensor.side_gate_person_detected
+
+views:
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: "[← Back to Security Dashboard](/lovelace/security-main)"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+
+      - type: picture-entity
+        entity: camera.side_gate
+        name: Side Gate - Live
+        show_state: false
+        show_name: true
+        camera_view: live
+        aspect_ratio: "16:9"
+        card_mod:
+          style: |
+            ha-card {
+              height: 60vh;
+            }
+
+      - type: horizontal-stack
+        cards:
+          - type: button
+            name: Snapshot
+            icon: mdi:camera
+            tap_action:
+              action: call-service
+              service: camera.snapshot
+              target:
+                entity_id: camera.side_gate
+
+          - type: button
+            name: Record
+            icon: mdi:record-rec
+            tap_action:
+              action: call-service
+              service: switch.toggle
+              target:
+                entity_id: switch.side_gate_recording
+
+          - type: button
+            name: Gate
+            icon: mdi:gate
+            tap_action:
+              action: call-service
+              service: switch.toggle
+              target:
+                entity_id: switch.side_gate_lock
+
+  - type: logbook
+    entities:
+      - binary_sensor.side_gate_motion
+    hours_to_show: 12
+    title: Motion Events

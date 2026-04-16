@@ -1,0 +1,17 @@
+title: Climate
+views:
+  - title: Climate
+    cards:
+      - type: entities
+        title: Temperature Sensors
+        entities:
+          - sensor.range_temperature
+          - sensor.refrigerator_fridge_temperature
+          - sensor.refrigerator_freezer_temperature
+
+      - type: entities
+        title: Appliances
+        entities:
+          - sensor.dryer_machine_state
+          - sensor.washer_machine_state
+          - sensor.range_operating_state

@@ -1,0 +1,88 @@
+# =============================================================================
+# ARLO CAMERA INTEGRATION (Saxton System)
+# =============================================================================
+# Configuration for Arlo cameras using the aarlo custom component
+# Requires: HACS aarlo custom component
+# =============================================================================
+
+# Aarlo Integration via HACS
+# Install from HACS: https://github.com/twrecked/hass-aarlo
+
+aarlo:
+  username: !secret arlo_username
+  password: !secret arlo_password
+  db_motion_time: 30
+  db_ding_time: 10
+  recent_time: 10
+  last_format: '%m-%d %H:%M'
+  refresh_devices_every: 2
+  stream_timeout: 120
+  request_timeout: 120
+  reconnect_every: 90
+  # mqtt_host: mqtt-cluster.arlo.com
+  # mqtt_hostname_check: false
+
+# Arlo Camera Configuration
+camera:
+  - platform: aarlo
+    ffmpeg_arguments: '-pred 1 -q:v 2'
+    # Packet size for streaming (reduce if choppy)
+    # packet_size: 564
+
+# Arlo Binary Sensors
+binary_sensor:
+  - platform: aarlo
+    monitored_conditions:
+      - motion
+      - sound
+      - ding
+      - cry
+      - connectivity
+
+# Arlo Sensors
+sensor:
+  - platform: aarlo
+    monitored_conditions:
+      - total_cameras
+      - last_capture
+      - last_capture_date
+      - signal_strength
+      - battery_level
+      - temperature
+      - humidity
+      - air_quality
+
+# Arlo Switches
+switch:
+  - platform: aarlo
+    siren: true
+    all_sirens: true
+    snapshot: true
+    doorbell_silence: true
+    siren_volume: 8
+    siren_duration: 10
+
+# Light Control
+light:
+  - platform: aarlo
+
+# Media Browser Support
+media_player:
+  - platform: aarlo
+    name: Arlo Last Recording
+    show_latest: true
+
+# Camera entities will be discovered as:
+# - camera.aarlo_back_yard (Arlo Pro 4/5)
+# - camera.aarlo_driveway (Arlo Pro 4/5)
+# - camera.aarlo_side_gate (Arlo Essential)
+# - camera.aarlo_backyard_left (Arlo Pro 4/5)
+# - camera.aarlo_backyard_right (Arlo Pro 4/5)
+# - camera.aarlo_front_porch (Arlo Video Doorbell)
+
+# Associated entities:
+# - binary_sensor.aarlo_back_yard_motion
+# - sensor.aarlo_back_yard_battery_level
+# - sensor.aarlo_back_yard_signal_strength
+# - switch.aarlo_back_yard_siren
+# - light.aarlo_back_yard_spotlight

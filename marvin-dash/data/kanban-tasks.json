@@ -1,0 +1,289 @@
+[
+  {
+    "id": "mnxr0eca",
+    "title": "CRITICAL: Rotate exposed API keys (OpenAI, Anthropic, MiniMax, Kimi, OpenRouter)",
+    "category": "security",
+    "priority": "critical",
+    "tags": [
+      "api-keys",
+      "security",
+      "in-progress"
+    ],
+    "status": "done",
+    "createdAt": "2026-04-13T22:12:35.866Z",
+    "updatedAt": "2026-04-13T22:17:41.223Z",
+    "assignee": "Sonnet-1 (Marvin Dashboard)",
+    "completedAt": "2026-04-13T22:17:41.222Z"
+  },
+  {
+    "id": "mnxr0em5",
+    "title": "CRITICAL: Rotate HEB ($Tandal0ne) and Facebook (section9) passwords",
+    "category": "security",
+    "priority": "critical",
+    "tags": [
+      "passwords",
+      "security",
+      "in-progress"
+    ],
+    "status": "done",
+    "createdAt": "2026-04-13T22:12:36.221Z",
+    "updatedAt": "2026-04-13T22:18:31.234Z",
+    "assignee": "Sonnet-2 (Dinner Automation)",
+    "completedAt": "2026-04-13T22:18:31.234Z"
+  },
+  {
+    "id": "mnxr0ewg",
+    "title": "Fix dinner-automation.js module references (broken require paths)",
+    "category": "bugfix",
+    "priority": "high",
+    "tags": [
+      "dinner-automation",
+      "modules",
+      "in-progress"
+    ],
+    "status": "in-progress",
+    "createdAt": "2026-04-13T22:12:36.592Z",
+    "updatedAt": "2026-04-13T22:13:00.000Z",
+    "assignee": "Sonnet-2 (Dinner Automation)"
+  },
+  {
+    "id": "mnxr0f6q",
+    "title": "Move all credentials to Bitwarden with loader utilities",
+    "category": "security",
+    "priority": "critical",
+    "tags": [
+      "credentials",
+      "bitwarden",
+      "refactor",
+      "in-progress"
+    ],
+    "status": "done",
+    "createdAt": "2026-04-13T22:12:36.962Z",
+    "updatedAt": "2026-04-13T22:17:52.847Z",
+    "assignee": "All Sonnet Agents",
+    "completedAt": "2026-04-13T22:17:52.846Z"
+  },
+  {
+    "id": "mnxr0fhk",
+    "title": "Order ESP32-S3 Box 3 for Trillian voice assistant",
+    "category": "hardware",
+    "priority": "medium",
+    "tags": [
+      "esp32",
+      "voice",
+      "trillian"
+    ],
+    "status": "todo",
+    "createdAt": "2026-04-13T22:12:37.352Z",
+    "updatedAt": "2026-04-13T22:12:37.352Z"
+  },
+  {
+    "id": "mnxr0fs1",
+    "title": "Deploy Voice Satellite Card on tablet/browser",
+    "category": "home-assistant",
+    "priority": "medium",
+    "tags": [
+      "voice",
+      "ha",
+      "dashboard"
+    ],
+    "status": "todo",
+    "createdAt": "2026-04-13T22:12:37.729Z",
+    "updatedAt": "2026-04-13T22:12:37.730Z"
+  },
+  {
+    "id": "mnxr0g2x",
+    "title": "Consolidate email monitors (v1 + v2) and remove hardcoded Gmail password",
+    "category": "refactor",
+    "priority": "high",
+    "tags": [
+      "email",
+      "consolidation",
+      "security",
+      "in-progress"
+    ],
+    "status": "in-progress",
+    "createdAt": "2026-04-13T22:12:38.121Z",
+    "updatedAt": "2026-04-13T22:13:00.000Z",
+    "assignee": "Sonnet-3 (Workspace Scripts)"
+  },
+  {
+    "id": "mnxr0gd5",
+    "title": "Fix race conditions in HEB parallel cart automation",
+    "category": "bugfix",
+    "priority": "high",
+    "tags": [
+      "heb",
+      "race-conditions",
+      "in-progress"
+    ],
+    "status": "in-progress",
+    "createdAt": "2026-04-13T22:12:38.489Z",
+    "updatedAt": "2026-04-13T22:13:00.000Z",
+    "assignee": "Sonnet-2 (Dinner Automation)"
+  },
+  {
+    "id": "mnxr156w",
+    "title": "Test 3Dash or ha-floorplan for 3D dashboard",
+    "category": "home-assistant",
+    "priority": "low",
+    "tags": [
+      "ha",
+      "dashboard",
+      "3d"
+    ],
+    "status": "todo",
+    "createdAt": "2026-04-13T22:13:10.664Z",
+    "updatedAt": "2026-04-13T22:13:10.665Z"
+  },
+  {
+    "id": "mnxr15go",
+    "title": "Archive duplicate scripts (~40% of codebase)",
+    "category": "maintenance",
+    "priority": "high",
+    "tags": [
+      "cleanup",
+      "archive",
+      "in-progress"
+    ],
+    "status": "in-progress",
+    "createdAt": "2026-04-13T22:13:11.016Z",
+    "updatedAt": "2026-04-13T22:13:00.000Z",
+    "assignee": "All Sonnet Agents"
+  },
+  {
+    "id": "mnxr160o",
+    "title": "Rotate section9 shared password across all infrastructure scripts",
+    "category": "security",
+    "priority": "critical",
+    "tags": [
+      "passwords",
+      "infrastructure",
+      "in-progress"
+    ],
+    "status": "done",
+    "createdAt": "2026-04-13T22:13:11.375Z",
+    "updatedAt": "2026-04-13T22:17:52.900Z",
+    "assignee": "Sonnet-4 (Magrathea Infrastructure)",
+    "completedAt": "2026-04-13T22:17:52.899Z"
+  },
+  {
+    "id": "mnxr15qn",
+    "title": "Implement atomic file writes for state files",
+    "category": "improvement",
+    "priority": "medium",
+    "tags": [
+      "reliability",
+      "atomic-writes"
+    ],
+    "status": "todo",
+    "createdAt": "2026-04-13T22:13:11.375Z",
+    "updatedAt": "2026-04-13T22:13:11.375Z"
+  },
+  {
+    "id": "mnxr189a",
+    "title": "Fix service-health.js wrong cwd path (breaks recovery)",
+    "category": "bugfix",
+    "priority": "critical",
+    "tags": [
+      "marvin-dash",
+      "recovery",
+      "in-progress"
+    ],
+    "status": "in-progress",
+    "createdAt": "2026-04-13T22:15:00.000Z",
+    "updatedAt": "2026-04-13T22:15:00.000Z",
+    "assignee": "Sonnet-1 (Marvin Dashboard)"
+  },
+  {
+    "id": "mnxr18bk",
+    "title": "Fix progress-tracker.js race condition corruption",
+    "category": "bugfix",
+    "priority": "high",
+    "tags": [
+      "marvin-dash",
+      "race-conditions",
+      "in-progress"
+    ],
+    "status": "in-progress",
+    "createdAt": "2026-04-13T22:15:30.000Z",
+    "updatedAt": "2026-04-13T22:15:30.000Z",
+    "assignee": "Sonnet-1 (Marvin Dashboard)"
+  },
+  {
+    "id": "mnxr18cm",
+    "title": "Fix heb-bridge-refactored.js Express error handler order",
+    "category": "bugfix",
+    "priority": "high",
+    "tags": [
+      "dinner-automation",
+      "express",
+      "in-progress"
+    ],
+    "status": "in-progress",
+    "createdAt": "2026-04-13T22:16:00.000Z",
+    "updatedAt": "2026-04-13T22:16:00.000Z",
+    "assignee": "Sonnet-5 (Utils/Templates)"
+  },
+  {
+    "id": "mnxr18dz",
+    "title": "Rotate iCloud app-specific password in send-instructions.js",
+    "category": "security",
+    "priority": "critical",
+    "tags": [
+      "passwords",
+      "icloud",
+      "in-progress"
+    ],
+    "status": "in-progress",
+    "createdAt": "2026-04-13T22:16:30.000Z",
+    "updatedAt": "2026-04-13T22:16:30.000Z",
+    "assignee": "Sonnet-5 (Utils/Templates)"
+  },
+  {
+    "id": "mnxr18ea",
+    "title": "Consolidate SSH fix scripts (bistromath/deep-thought)",
+    "category": "refactor",
+    "priority": "high",
+    "tags": [
+      "ssh",
+      "infrastructure",
+      "consolidation",
+      "in-progress"
+    ],
+    "status": "in-progress",
+    "createdAt": "2026-04-13T22:17:00.000Z",
+    "updatedAt": "2026-04-13T22:17:00.000Z",
+    "assignee": "Sonnet-4 (Magrathea Infrastructure)"
+  },
+  {
+    "id": "mnxr18fb",
+    "title": "Fix gateway-recovery.sh killing all Chrome processes",
+    "category": "bugfix",
+    "priority": "critical",
+    "tags": [
+      "gateway",
+      "recovery",
+      "in-progress"
+    ],
+    "status": "in-progress",
+    "createdAt": "2026-04-13T22:17:30.000Z",
+    "updatedAt": "2026-04-13T22:17:30.000Z",
+    "assignee": "Sonnet-3 (Workspace Scripts)"
+  },
+  {
+    "id": "mnxr18gc",
+    "title": "Create Bitwarden loader utilities (Node + PowerShell)",
+    "category": "security",
+    "priority": "critical",
+    "tags": [
+      "bitwarden",
+      "credentials",
+      "in-progress"
+    ],
+    "status": "in-progress",
+    "createdAt": "2026-04-13T22:18:00.000Z",
+    "updatedAt": "2026-04-13T22:18:00.000Z",
+    "assignee": "All Sonnet Agents"
+  }
+]

@@ -1,60 +1,21 @@
 {
-  "lastSync": 1771900346850,
+  "lastSync": 1776118568122,
   "checksums": {},
   "files": {
     "tasks.json": {
-      "checksum": "e362e2f5d9775d4a6e8db873f3148375",
-      "mtime": 1771641742000,
-      "loadedAt": 1771893692252
+      "checksum": "2a01dd23b4b3f2b3b73a087e3f5b953d",
+      "mtime": 1774268384000,
+      "loadedAt": 1776118568070
     }
   },
   "cachedTasks": {
     "todo": [
       {
-        "id": "dinner-2026-02-07",
-        "title": "Dinner Plans with Allie",
-        "description": "Coordinate dinner plans for tonight. Check preferences, timing, and any reservations needed.",
-        "priority": "high",
-        "created": "2026-02-07T14:54:00.000Z",
-        "dueDate": "2026-02-07T23:59:59.000Z",
-        "tags": [
-          "personal",
-          "family"
-        ]
-      },
-      {
-        "id": "fix-dinner-email",
-        "title": "Fix Dinner Automation Email Delivery",
-        "description": "Investigate why dinner plan emails are not being received. SMTP reports success but emails not in inbox. Check: spam filters, iCloud SMTP reputation, DKIM/SPF, alternative delivery methods (Discord, Telegram, direct notify).",
-        "priority": "high",
-        "created": "2026-02-07T15:19:00.000Z",
-        "dueDate": "2026-02-08T23:59:59.000Z",
-        "tags": [
-          "dinner-automation",
-          "email",
-          "bug"
-        ]
-      },
-      {
-        "id": "heb-workaround",
-        "title": "Find HEB Cart Automation Workaround",
-        "description": "HEB.com blocks browser automation. Research alternatives: HEB API, HEB Go app automation, Instacart integration, manual cart template generation, Curbside pickup API, or third-party grocery APIs that include HEB.",
-        "priority": "medium",
-        "created": "2026-02-07T15:19:00.000Z",
-        "dueDate": "2026-02-14T23:59:59.000Z",
-        "tags": [
-          "dinner-automation",
-          "heb",
-          "integration"
-        ]
-      },
-      {
         "id": "1",
         "title": "Tax Prep 2025",
-        "description": "Collect forms, find deductions, optimize take-home. W-2s, 1099s, Vectarr LLC expenses",
+        "description": "Collect forms, find deductions, optimize take-home",
         "priority": "high",
-        "created": "2026-02-02T05:41:30.995Z",
-        "dueDate": "2026-02-15T23:59:59.000Z",
+        "created": "2026-02-24T17:49:34.742Z",
         "tags": [
           "finance",
           "urgent"
@@ -65,174 +26,23 @@
         "title": "Vectarr Machine Shop Outreach",
         "description": "Research and onboard new machine shops to the quoting portal",
         "priority": "medium",
-        "created": "2026-02-02T05:41:30.995Z",
-        "dueDate": "2026-02-28T23:59:59.000Z",
+        "created": "2026-02-24T17:49:34.750Z",
         "tags": [
           "business",
           "outreach"
         ]
-      },
-      {
-        "id": "grocery-system",
-        "title": "Grocery & Meal Planning System",
-        "description": "Implement weekly meal plans with automated H-E-B grocery lists",
-        "priority": "medium",
-        "created": "2026-02-02T05:41:30.995Z",
-        "dueDate": "2026-02-10T23:59:59.000Z",
-        "tags": [
-          "home",
-          "automation"
-        ]
-      },
-      {
-        "id": "email-triage",
-        "title": "Email Inbox Triage & Spam Cleanup",
-        "description": "Organize alex@1v1a.com, filter spam, collect important documents",
-        "priority": "medium",
-        "created": "2026-02-03T06:00:00.000Z",
-        "dueDate": "2026-02-08T23:59:59.000Z",
-        "tags": [
-          "admin",
-          "organization"
-        ]
-      },
-      {
-        "id": "amazon-sns",
-        "title": "Amazon Subscribe & Save Audit",
-        "description": "Review TP, essentials, recurring supplies for cost optimization",
-        "priority": "low",
-        "created": "2026-02-03T06:00:00.000Z",
-        "dueDate": "2026-02-20T23:59:59.000Z",
-        "tags": [
-          "home",
-          "supplies"
-        ]
-      },
-      {
-        "id": "portfolio-review",
-        "title": "Portfolio Review & Rebalancing",
-        "description": "Analyze investments, suggest tax-advantaged strategies (SEP-IRA, Solo 401k for Vectarr)",
-        "priority": "medium",
-        "created": "2026-02-03T06:00:00.000Z",
-        "dueDate": "2026-02-25T23:59:59.000Z",
-        "tags": [
-          "finance",
-          "investing"
-        ]
-      },
-      {
-        "dueDate": "2026-02-05",
-        "description": "Ensure Apple Calendar ? Dashboard sync stays active and aligned with this local machine (CalDAV + local event handling).",
-        "tags": [
-          "calendar",
-          "sync",
-          "maintenance"
-        ],
-        "priority": "high",
-        "title": "Maintain calendar sync with local computer",
-        "column": "todo",
-        "id": "1770243931920",
-        "created": "2026-02-04T22:25:31.920Z"
       }
     ],
     "inprogress": [
       {
-        "id": "f150-sale",
-        "title": "F-150 Facebook Marketplace Sale",
-        "description": "Posted to 4 groups (61K+ reach). Monitor inquiries and messages.",
+        "id": "3",
+        "title": "Household Systems Setup",
+        "description": "Implement grocery ordering, supplies management, meal planning",
         "priority": "medium",
-        "created": "2026-02-02T05:41:30.995Z",
-        "dueDate": "2026-02-09T23:59:59.000Z",
+        "created": "2026-02-24T17:49:34.750Z",
         "tags": [
-          "sale",
-          "truck"
-        ]
-      },
-      {
-        "id": "sync-calendar-ui",
-        "title": "Fix Calendar UI (month/week alignment)",
-        "description": "Calendar month/week grids misaligned; fix spacing and weekday alignment so iCloud events display correctly.",
-        "priority": "high",
-        "created": "2026-02-05T03:02:00.000Z",
-        "dueDate": "2026-02-06T23:59:59.000Z",
-        "tags": [
-          "calendar",
-          "ui",
-          "sync"
-        ]
-      },
-      {
-        "id": "sync-gateway-stability",
-        "title": "Stabilize OpenClaw Gateway + Browser Control",
-        "description": "Gateway exits immediately; browser control snapshots fail. Make service stable and persistent.",
-        "priority": "high",
-        "created": "2026-02-05T03:02:00.000Z",
-        "dueDate": "2026-02-06T23:59:59.000Z",
-        "tags": [
-          "gateway",
-          "browser",
-          "reliability"
-        ]
-      },
-      {
-        "id": "sync-ha-theme",
-        "title": "Home Assistant: Enable CB-LCARS Theme",
-        "description": "Set HA theme to CB-LCARS via API once theme key confirmed.",
-        "priority": "medium",
-        "created": "2026-02-05T03:02:00.000Z",
-        "dueDate": "2026-02-06T23:59:59.000Z",
-        "tags": [
-          "home-assistant",
-          "theme"
-        ]
-      },
-      {
-        "id": "ha-govee",
-        "title": "Home Assistant: Complete Govee Integration",
-        "description": "API connected. Add remaining wall lamps and back door lights to dashboard",
-        "priority": "medium",
-        "created": "2026-02-02T15:33:17.379Z",
-        "dueDate": "2026-02-07T23:59:59.000Z",
-        "tags": [
-          "home-assistant",
-          "govee"
-        ]
-      },
-      {
-        "id": "ha-homekit",
-        "title": "Home Assistant: Full HomeKit Bridge",
-        "description": "Connect all Apple HomeKit devices (lights, TV, fans) to HA",
-        "priority": "medium",
-        "created": "2026-02-02T15:33:17.381Z",
-        "dueDate": "2026-02-12T23:59:59.000Z",
-        "tags": [
-          "home-assistant",
-          "homekit"
-        ]
-      },
-      {
-        "id": "ha-wyze",
-        "title": "Home Assistant: Wyze Camera Integration",
-        "description": "Add all 23 camera feeds for room awareness and presence detection",
-        "priority": "medium",
-        "created": "2026-02-02T15:33:17.385Z",
-        "dueDate": "2026-02-14T23:59:59.000Z",
-        "tags": [
-          "home-assistant",
-          "wyze",
-          "cameras"
-        ]
-      },
-      {
-        "id": "ha-voice",
-        "title": "Home Assistant: Advanced Voice Control",
-        "description": "Create custom automations and voice commands beyond Siri limitations",
-        "priority": "high",
-        "created": "2026-02-02T15:33:17.388Z",
-        "dueDate": "2026-02-21T23:59:59.000Z",
-        "tags": [
-          "home-assistant",
-          "voice"
+          "home",
+          "automation"
         ]
       }
     ],
@@ -243,105 +53,11 @@
         "title": "OpenClaw Service Installation",
         "description": "Set up Windows service for 24/7 availability with crash recovery",
         "priority": "high",
-        "created": "2026-02-02T05:41:30.995Z",
-        "dueDate": "2026-02-02T05:41:30.995Z",
-        "completed": "2026-02-02T05:41:30.995Z",
+        "created": "2026-02-24T17:49:34.750Z",
+        "completed": "2026-02-24T17:49:34.750Z",
         "tags": [
           "infrastructure",
           "reliability"
-        ]
-      },
-      {
-        "id": "docker-wsl",
-        "title": "Docker Installation in WSL2",
-        "description": "Docker 28.2.2 and docker-compose installed in Ubuntu WSL",
-        "priority": "high",
-        "created": "2026-02-02T05:41:30.995Z",
-        "dueDate": "2026-02-02T15:35:34.402Z",
-        "completed": "2026-02-02T15:35:34.402Z",
-        "tags": [
-          "infrastructure",
-          "complete"
-        ]
-      },
-      {
-        "id": "ha-deploy",
-        "title": "Home Assistant Container Deployed",
-        "description": "Running on port 8123 via WSL2. Accessible at http://localhost:8123",
-        "priority": "high",
-        "created": "2026-02-02T05:41:30.995Z",
-        "dueDate": "2026-02-02T15:37:13.403Z",
-        "completed": "2026-02-02T15:37:13.403Z",
-        "tags": [
-          "home-assistant",
-          "complete"
-        ]
-      },
-      {
-        "id": "ha-port-forward",
-        "title": "WSL2 Port Forwarding Configured",
-        "description": "HA accessible from Windows via localhost:8123 and LAN IP",
-        "priority": "high",
-        "created": "2026-02-02T05:41:30.995Z",
-        "dueDate": "2026-02-02T16:04:38.845Z",
-        "completed": "2026-02-02T16:04:38.845Z",
-        "tags": [
-          "home-assistant",
-          "networking"
-        ]
-      },
-      {
-        "id": "ha-onboard",
-        "title": "Home Assistant Onboarding Complete",
-        "description": "Initial setup, user account, basic configuration done",
-        "priority": "medium",
-        "created": "2026-02-02T05:41:30.995Z",
-        "dueDate": "2026-02-02T16:58:13.476Z",
-        "completed": "2026-02-02T16:58:13.476Z",
-        "tags": [
-          "home-assistant"
-        ]
-      },
-      {
-        "id": "f150-posts",
-        "title": "F-150 Posted to Facebook Groups",
-        "description": "Posted to 4 groups: Buda/Kyle Buy Sell, Everything Kyle TX, Shop Kyle/Austin/SM, Ventas Austin/Buda/Kyle",
-        "priority": "medium",
-        "created": "2026-02-02T05:41:30.995Z",
-        "dueDate": "2026-02-02T18:00:00.000Z",
-        "completed": "2026-02-02T18:00:00.000Z",
-        "tags": [
-          "sale",
-          "truck",
-          "complete"
-        ]
-      },
-      {
-        "id": "kanban-setup",
-        "title": "Kanban Board Auto-Refresh Setup",
-        "description": "Scheduled task runs every 30 min, logs to file, attempts Discord/OpenClaw notification",
-        "priority": "high",
-        "created": "2026-02-02T05:41:30.995Z",
-        "dueDate": "2026-02-03T06:55:00.000Z",
-        "completed": "2026-02-03T06:55:00.000Z",
-        "tags": [
-          "infrastructure",
-          "automation",
-          "complete"
-        ]
-      },
-      {
-        "id": "wsl-24x7",
-        "title": "WSL 24/7 Service Setup",
-        "description": "Windows scheduled task runs every 5 min to keep Ubuntu WSL running with auto-restart on failure",
-        "priority": "high",
-        "created": "2026-02-02T05:41:30.995Z",
-        "dueDate": "2026-02-03T06:55:00.000Z",
-        "completed": "2026-02-03T06:55:00.000Z",
-        "tags": [
-          "infrastructure",
-          "wsl",
-          "complete"
         ]
       }
     ]

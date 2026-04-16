@@ -1,0 +1,1 @@
+wsl -d Ubuntu -e bash -c "docker inspect homeassistant --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'"

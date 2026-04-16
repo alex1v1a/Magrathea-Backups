@@ -1,0 +1,648 @@
+# =============================================================================
+# SECURITY MAIN DASHBOARD - Camera Overview
+# =============================================================================
+# This dashboard provides a comprehensive overview of all security cameras
+# with motion detection, recording status, and quick access controls.
+# 
+# Location: /home/marvin/homeassistant/config/dashboards/cameras/security-main.yaml
+# =============================================================================
+
+title: Security - Main
+path: security-main
+icon: mdi:cctv
+subview: false
+
+# Theme and layout configuration
+theme: Backend-selected
+
+# Decluttering templates used across cards
+decluttering_templates:
+  camera_card: !include ../templates/camera-card-template.yaml
+  motion_badge: !include ../templates/motion-badge-template.yaml
+
+# Sidebar with system status and quick actions
+sidebar:
+  - type: custom:mushroom-chips-card
+    chips:
+      - type: template
+        icon: mdi:record-rec
+        content: "{{ 'Recording' if is_state('binary_sensor.any_camera_recording', 'on') else 'Standby' }}"
+        icon_color: "{{ 'red' if is_state('binary_sensor.any_camera_recording', 'on') else 'grey' }}"
+      - type: template
+        icon: mdi:motion-sensor
+        content: "{{ states('sensor.active_motion_cameras') }} Active"
+        icon_color: "{{ 'amber' if int(states('sensor.active_motion_cameras', 0)) > 0 else 'grey' }}"
+      - type: template
+        icon: mdi:cloud-check
+        content: "{{ 'Online' if is_state('binary_sensor.camera_system_online', 'on') else 'Offline' }}"
+        icon_color: "{{ 'green' if is_state('binary_sensor.camera_system_online', 'on') else 'red' }}"
+
+  - type: entities
+    title: System Controls
+    entities:
+      - entity: switch.enable_all_cameras
+        name: All Cameras
+        icon: mdi:cctv
+      - entity: switch.enable_motion_detection
+        name: Motion Detection
+        icon: mdi:motion-sensor
+      - entity: switch.enable_recording
+        name: Continuous Recording
+        icon: mdi:record-rec
+      - entity: input_select.camera_quality
+        name: Stream Quality
+        icon: mdi:quality-high
+      - entity: button.snapshot_all_cameras
+        name: Snapshot All
+        icon: mdi:camera
+
+  - type: history-graph
+    title: Motion Events (24h)
+    hours_to_show: 24
+    entities:
+      - binary_sensor.front_door_motion
+      - binary_sensor.back_yard_motion
+      - binary_sensor.garage_motion
+      - binary_sensor.driveway_motion
+
+# Main content - Priority cameras grid
+views:
+  - type: grid
+    columns: 2
+    cards:
+      # =========================================================================
+      # PRIORITY CAMERAS - Always Visible
+      # =========================================================================
+      
+      # Front Door Camera (Priority)
+      - type: vertical-stack
+        cards:
+          - type: picture-entity
+            entity: camera.front_door
+            name: Front Door
+            show_state: false
+            show_name: true
+            camera_view: live
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/camera-front-door
+            hold_action:
+              action: call-service
+              service: camera.snapshot
+              target:
+                entity_id: camera.front_door
+              data:
+                filename: "/config/www/snapshots/front_door_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+            card_mod:
+              style: |
+                ha-card {
+                  border: {{ '3px solid #ff9800' if is_state('binary_sensor.front_door_motion', 'on') else '1px solid var(--divider-color)' }};
+                  box-shadow: {{ '0 0 15px rgba(255,152,0,0.5)' if is_state('binary_sensor.front_door_motion', 'on') else 'none' }};
+                  transition: all 0.3s ease;
+                }
+          
+          - type: horizontal-stack
+            cards:
+              - type: button
+                entity: binary_sensor.front_door_motion
+                name: Motion
+                tap_action:
+                  action: more-info
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: {{ '#ff980020' if is_state('binary_sensor.front_door_motion', 'on') else 'transparent' }};
+                    }
+              
+              - type: button
+                entity: binary_sensor.front_door_recording
+                name: Recording
+                icon: mdi:record-rec
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: {{ '#f4433620' if is_state('binary_sensor.front_door_recording', 'on') else 'transparent' }};
+                    }
+              
+              - type: button
+                entity: switch.front_door_ptz_enabled
+                name: PTZ
+                icon: mdi:arrow-all
+                tap_action:
+                  action: call-service
+                  service: switch.toggle
+                  target:
+                    entity_id: switch.front_door_ptz_enabled
+
+      # Back Yard Camera (Priority)
+      - type: vertical-stack
+        cards:
+          - type: picture-entity
+            entity: camera.back_yard
+            name: Back Yard
+            show_state: false
+            show_name: true
+            camera_view: live
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/camera-back-yard
+            hold_action:
+              action: call-service
+              service: camera.snapshot
+              target:
+                entity_id: camera.back_yard
+              data:
+                filename: "/config/www/snapshots/back_yard_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+            card_mod:
+              style: |
+                ha-card {
+                  border: {{ '3px solid #ff9800' if is_state('binary_sensor.back_yard_motion', 'on') else '1px solid var(--divider-color)' }};
+                  box-shadow: {{ '0 0 15px rgba(255,152,0,0.5)' if is_state('binary_sensor.back_yard_motion', 'on') else 'none' }};
+                  transition: all 0.3s ease;
+                }
+          
+          - type: horizontal-stack
+            cards:
+              - type: button
+                entity: binary_sensor.back_yard_motion
+                name: Motion
+                tap_action:
+                  action: more-info
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: {{ '#ff980020' if is_state('binary_sensor.back_yard_motion', 'on') else 'transparent' }};
+                    }
+              
+              - type: button
+                entity: binary_sensor.back_yard_recording
+                name: Recording
+                icon: mdi:record-rec
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: {{ '#f4433620' if is_state('binary_sensor.back_yard_recording', 'on') else 'transparent' }};
+                    }
+              
+              - type: button
+                entity: switch.back_yard_night_vision
+                name: Night Vision
+                icon: mdi:weather-night
+
+      # Garage Camera (Priority)
+      - type: vertical-stack
+        cards:
+          - type: picture-entity
+            entity: camera.garage
+            name: Garage
+            show_state: false
+            show_name: true
+            camera_view: live
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/camera-garage
+            hold_action:
+              action: call-service
+              service: camera.snapshot
+              target:
+                entity_id: camera.garage
+              data:
+                filename: "/config/www/snapshots/garage_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+            card_mod:
+              style: |
+                ha-card {
+                  border: {{ '3px solid #ff9800' if is_state('binary_sensor.garage_motion', 'on') else '1px solid var(--divider-color)' }};
+                  box-shadow: {{ '0 0 15px rgba(255,152,0,0.5)' if is_state('binary_sensor.garage_motion', 'on') else 'none' }};
+                  transition: all 0.3s ease;
+                }
+          
+          - type: horizontal-stack
+            cards:
+              - type: button
+                entity: binary_sensor.garage_motion
+                name: Motion
+                tap_action:
+                  action: more-info
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: {{ '#ff980020' if is_state('binary_sensor.garage_motion', 'on') else 'transparent' }};
+                    }
+              
+              - type: button
+                entity: binary_sensor.garage_recording
+                name: Recording
+                icon: mdi:record-rec
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: {{ '#f4433620' if is_state('binary_sensor.garage_recording', 'on') else 'transparent' }};
+                    }
+              
+              - type: button
+                entity: cover.garage_door
+                name: Garage Door
+                icon: mdi:garage
+
+      # Driveway Camera (Priority)
+      - type: vertical-stack
+        cards:
+          - type: picture-entity
+            entity: camera.driveway
+            name: Driveway
+            show_state: false
+            show_name: true
+            camera_view: live
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/camera-driveway
+            hold_action:
+              action: call-service
+              service: camera.snapshot
+              target:
+                entity_id: camera.driveway
+              data:
+                filename: "/config/www/snapshots/driveway_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+            card_mod:
+              style: |
+                ha-card {
+                  border: {{ '3px solid #ff9800' if is_state('binary_sensor.driveway_motion', 'on') else '1px solid var(--divider-color)' }};
+                  box-shadow: {{ '0 0 15px rgba(255,152,0,0.5)' if is_state('binary_sensor.driveway_motion', 'on') else 'none' }};
+                  transition: all 0.3s ease;
+                }
+          
+          - type: horizontal-stack
+            cards:
+              - type: button
+                entity: binary_sensor.driveway_motion
+                name: Motion
+                tap_action:
+                  action: more-info
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: {{ '#ff980020' if is_state('binary_sensor.driveway_motion', 'on') else 'transparent' }};
+                    }
+              
+              - type: button
+                entity: binary_sensor.driveway_recording
+                name: Recording
+                icon: mdi:record-rec
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: {{ '#f4433620' if is_state('binary_sensor.driveway_recording', 'on') else 'transparent' }};
+                    }
+              
+              - type: button
+                entity: switch.driveway_vehicle_detection
+                name: Vehicle Detect
+                icon: mdi:car
+
+  # =========================================================================
+  # SECONDARY CAMERAS - Expandable Section
+  # =========================================================================
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: "## Secondary Cameras"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+            .markdown-body {
+              font-size: 1.2em;
+              font-weight: 500;
+              color: var(--primary-text-color);
+              border-bottom: 2px solid var(--primary-color);
+              padding-bottom: 8px;
+            }
+
+      # Secondary cameras in a collapsible grid
+      - type: grid
+        columns: 3
+        cards:
+          # Living Room Camera
+          - type: picture-entity
+            entity: camera.living_room
+            name: Living Room
+            show_state: false
+            show_name: true
+            camera_view: auto
+            aspect_ratio: 16x9
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/camera-living-room
+            card_mod:
+              style: |
+                ha-card {
+                  border: {{ '2px solid #ff9800' if is_state('binary_sensor.living_room_motion', 'on') else '1px solid var(--divider-color)' }};
+                  opacity: {{ '1' if is_state('binary_sensor.living_room_camera_online', 'on') else '0.5' }};
+                }
+
+          # Kitchen Camera
+          - type: picture-entity
+            entity: camera.kitchen
+            name: Kitchen
+            show_state: false
+            show_name: true
+            camera_view: auto
+            aspect_ratio: 16x9
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/camera-kitchen
+            card_mod:
+              style: |
+                ha-card {
+                  border: {{ '2px solid #ff9800' if is_state('binary_sensor.kitchen_motion', 'on') else '1px solid var(--divider-color)' }};
+                  opacity: {{ '1' if is_state('binary_sensor.kitchen_camera_online', 'on') else '0.5' }};
+                }
+
+          # Side Gate Camera
+          - type: picture-entity
+            entity: camera.side_gate
+            name: Side Gate
+            show_state: false
+            show_name: true
+            camera_view: auto
+            aspect_ratio: 16x9
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/camera-side-gate
+            card_mod:
+              style: |
+                ha-card {
+                  border: {{ '2px solid #ff9800' if is_state('binary_sensor.side_gate_motion', 'on') else '1px solid var(--divider-color)' }};
+                  opacity: {{ '1' if is_state('binary_sensor.side_gate_camera_online', 'on') else '0.5' }};
+                }
+
+          # Backyard Left Camera
+          - type: picture-entity
+            entity: camera.backyard_left
+            name: Backyard Left
+            show_state: false
+            show_name: true
+            camera_view: auto
+            aspect_ratio: 16x9
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/camera-backyard-left
+            card_mod:
+              style: |
+                ha-card {
+                  border: {{ '2px solid #ff9800' if is_state('binary_sensor.backyard_left_motion', 'on') else '1px solid var(--divider-color)' }};
+                  opacity: {{ '1' if is_state('binary_sensor.backyard_left_camera_online', 'on') else '0.5' }};
+                }
+
+          # Backyard Right Camera
+          - type: picture-entity
+            entity: camera.backyard_right
+            name: Backyard Right
+            show_state: false
+            show_name: true
+            camera_view: auto
+            aspect_ratio: 16x9
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/camera-backyard-right
+            card_mod:
+              style: |
+                ha-card {
+                  border: {{ '2px solid #ff9800' if is_state('binary_sensor.backyard_right_motion', 'on') else '1px solid var(--divider-color)' }};
+                  opacity: {{ '1' if is_state('binary_sensor.backyard_right_camera_online', 'on') else '0.5' }};
+                }
+
+          # Front Porch Camera
+          - type: picture-entity
+            entity: camera.front_porch
+            name: Front Porch
+            show_state: false
+            show_name: true
+            camera_view: auto
+            aspect_ratio: 16x9
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/camera-front-porch
+            card_mod:
+              style: |
+                ha-card {
+                  border: {{ '2px solid #ff9800' if is_state('binary_sensor.front_porch_motion', 'on') else '1px solid var(--divider-color)' }};
+                  opacity: {{ '1' if is_state('binary_sensor.front_porch_camera_online', 'on') else '0.5' }};
+                }
+
+  # =========================================================================
+  # MOTION EVENTS & ANALYTICS
+  # =========================================================================
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: "## Recent Motion Events"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+            .markdown-body {
+              font-size: 1.2em;
+              font-weight: 500;
+              color: var(--primary-text-color);
+              border-bottom: 2px solid var(--primary-color);
+              padding-bottom: 8px;
+            }
+
+      - type: logbook
+        entities:
+          - binary_sensor.front_door_motion
+          - binary_sensor.back_yard_motion
+          - binary_sensor.garage_motion
+          - binary_sensor.driveway_motion
+          - binary_sensor.living_room_motion
+          - binary_sensor.kitchen_motion
+          - binary_sensor.side_gate_motion
+        hours_to_show: 4
+        title: ""
+
+      - type: history-graph
+        title: Motion Detection Activity (Last 6 Hours)
+        hours_to_show: 6
+        entities:
+          - entity: binary_sensor.front_door_motion
+            name: Front Door
+          - entity: binary_sensor.back_yard_motion
+            name: Back Yard
+          - entity: binary_sensor.garage_motion
+            name: Garage
+          - entity: binary_sensor.driveway_motion
+            name: Driveway
+        state_color: true
+
+  # =========================================================================
+  # CAMERA STATUS OVERVIEW
+  # =========================================================================
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: "## Camera Status"
+        card_mod:
+          style: |
+            ha-card {
+              background: transparent;
+              box-shadow: none;
+            }
+            .markdown-body {
+              font-size: 1.2em;
+              font-weight: 500;
+              color: var(--primary-text-color);
+              border-bottom: 2px solid var(--primary-color);
+              padding-bottom: 8px;
+            }
+
+      - type: entities
+        title: Online Status
+        entities:
+          - entity: binary_sensor.front_door_camera_online
+            name: Front Door
+            icon: mdi:camera
+          - entity: binary_sensor.back_yard_camera_online
+            name: Back Yard
+            icon: mdi:camera
+          - entity: binary_sensor.garage_camera_online
+            name: Garage
+            icon: mdi:camera
+          - entity: binary_sensor.driveway_camera_online
+            name: Driveway
+            icon: mdi:camera
+          - entity: binary_sensor.living_room_camera_online
+            name: Living Room
+            icon: mdi:camera
+          - entity: binary_sensor.kitchen_camera_online
+            name: Kitchen
+            icon: mdi:camera
+
+      - type: glance
+        title: Storage Usage
+        entities:
+          - entity: sensor.camera_storage_used
+            name: Used
+          - entity: sensor.camera_storage_free
+            name: Free
+          - entity: sensor.camera_storage_percent
+            name: Percent
+        show_state: true
+        show_icon: true
+
+  # =========================================================================
+  # QUICK ACTIONS & SCENES
+  # =========================================================================
+  - type: horizontal-stack
+    cards:
+      - type: button
+        name: All Motion On
+        icon: mdi:motion-sensor
+        tap_action:
+          action: call-service
+          service: input_boolean.turn_on
+          target:
+            entity_id: input_boolean.enable_all_motion
+        card_mod:
+          style: |
+            ha-card {
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              color: white;
+            }
+
+      - type: button
+        name: All Motion Off
+        icon: mdi:motion-sensor-off
+        tap_action:
+          action: call-service
+          service: input_boolean.turn_off
+          target:
+            entity_id: input_boolean.enable_all_motion
+        card_mod:
+          style: |
+            ha-card {
+              background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+              color: white;
+            }
+
+      - type: button
+        name: Snapshot All
+        icon: mdi:camera-burst
+        tap_action:
+          action: call-service
+          service: script.snapshot_all_cameras
+        card_mod:
+          style: |
+            ha-card {
+              background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+              color: white;
+            }
+
+      - type: button
+        name: Download Recordings
+        icon: mdi:download
+        tap_action:
+          action: call-service
+          service: script.download_recent_recordings
+        card_mod:
+          style: |
+            ha-card {
+              background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+              color: white;
+            }
+
+  # =========================================================================
+  # OBJECT DETECTION OVERVIEW
+  # =========================================================================
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.object_detection_enabled
+        state: "on"
+    card:
+      type: vertical-stack
+      cards:
+        - type: markdown
+          content: "## Object Detection"
+          card_mod:
+            style: |
+              ha-card {
+                background: transparent;
+                box-shadow: none;
+              }
+              .markdown-body {
+                font-size: 1.2em;
+                font-weight: 500;
+                color: var(--primary-text-color);
+                border-bottom: 2px solid var(--primary-color);
+                padding-bottom: 8px;
+              }
+
+        - type: grid
+          columns: 4
+          cards:
+            - type: entity
+              entity: sensor.detected_persons
+              name: Persons
+              icon: mdi:account
+            - type: entity
+              entity: sensor.detected_vehicles
+              name: Vehicles
+              icon: mdi:car
+            - type: entity
+              entity: sensor.detected_animals
+              name: Animals
+              icon: mdi:dog-side
+            - type: entity
+              entity: sensor.detected_packages
+              name: Packages
+              icon: mdi:package-variant-closed
+
+        - type: picture-entity
+          entity: camera.object_detection_overlay
+          name: Detection Preview
+          camera_view: auto
+          show_state: false

@@ -1,0 +1,43 @@
+# =============================================================================
+# CAMERA CARD TEMPLATE
+# =============================================================================
+# Reusable template for camera cards with motion indicators
+# Usage: !include camera-card-template.yaml
+# =============================================================================
+
+camera_entity: "[[entity]]"
+camera_name: "[[name]]"
+camera_view: live
+show_state: false
+show_name: true
+aspect_ratio: "16:9"
+tap_action:
+  action: navigate
+  navigation_path: "[[detail_view]]"
+hold_action:
+  action: call-service
+  service: camera.snapshot
+  target:
+    entity_id: "[[entity]]"
+  data:
+    filename: "/config/www/snapshots/[[snapshot_name]]_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+card_mod:
+  style: |
+    ha-card {
+      border: {{ '3px solid #ff9800' if is_state('[[motion_sensor]]', 'on') else '1px solid var(--divider-color)' }};
+      box-shadow: {{ '0 0 15px rgba(255,152,0,0.5)' if is_state('[[motion_sensor]]', 'on') else 'none' }};
+      transition: all 0.3s ease;
+      animation: {{ 'pulse 2s infinite' if is_state('[[motion_sensor]]', 'on') else 'none' }};
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255,152,0,0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(255,152,0,0); }
+      100% { box-shadow: 0 0 0 0 rgba(255,152,0,0); }
+    }
+    
+# Variables:
+# [[entity]] - Camera entity ID (e.g., camera.front_door)
+# [[name]] - Display name for the camera
+# [[motion_sensor]] - Motion sensor entity ID (e.g., binary_sensor.front_door_motion)
+# [[detail_view]] - Navigation path for detail view (e.g., /lovelace/camera-front-door)
+# [[snapshot_name]] - Prefix for snapshot filenames (e.g., front_door)

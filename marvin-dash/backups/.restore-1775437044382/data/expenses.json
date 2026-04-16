@@ -1,0 +1,60 @@
+{
+  "lastUpdated": "2026-04-05T20:37:52.823Z",
+  "monthlyBudget": 200,
+  "totalSpent": 33.47,
+  "totalRemaining": 166.53,
+  "budgetPercent": 16.74,
+  "dailyAverage": 1.12,
+  "projectedMonthly": 33.47,
+  "openRouterCredits": {
+    "totalCredits": 40,
+    "totalUsage": 30.62,
+    "remaining": 9.38
+  },
+  "providers": {
+    "openai": {
+      "name": "OpenAI",
+      "models": [
+        {
+          "id": "openai-codex/gpt-5.2",
+          "name": "GPT-5.2",
+          "monthlySpent": 2.85,
+          "monthlyCost": 80
+        }
+      ],
+      "totalSpent": 2.85,
+      "budget": 80,
+      "budgetPercent": 3.56,
+      "remaining": 77.15,
+      "status": "ok"
+    },
+    "openrouter": {
+      "name": "OpenRouter",
+      "models": [
+        {
+          "id": "openrouter/anthropic/claude-sonnet-4",
+          "name": "Claude Sonnet 4",
+          "monthlySpent": 10.5,
+          "monthlyCost": 15
+        },
+        {
+          "id": "openrouter/openai/gpt-4o",
+          "name": "GPT-4o",
+          "monthlySpent": 8.2,
+          "monthlyCost": 10
+        },
+        {
+          "id": "openrouter/google/gemini-2.0-flash-001",
+          "name": "Gemini 2.0",
+          "monthlySpent": 11.92,
+          "monthlyCost": 15
+        }
+      ],
+      "totalSpent": 30.62,
+      "budget": 40,
+      "budgetPercent": 76.55,
+      "remaining": 9.38,
+      "status": "warning"
+    }
+  }
+}

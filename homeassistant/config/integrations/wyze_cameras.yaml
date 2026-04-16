@@ -1,0 +1,53 @@
+# =============================================================================
+# WYZE CAMERA INTEGRATION
+# =============================================================================
+# Configuration for Wyze cameras using the wyzeapi integration
+# Requires: HACS wyzeapi custom component
+# API Key: Stored in secrets.yaml as wyze_api_key
+# =============================================================================
+
+# Wyze Integration via HACS wyzeapi
+# Install from HACS: https://github.com/JoshuaMulliken/ha-wyzeapi
+
+wyzeapi:
+  - username: !secret wyze_username
+    password: !secret wyze_password
+    api_key: !secret wyze_api_key
+    sensors:
+      - switch
+      - light
+      - lock
+      - climate
+      - camera
+
+# Alternative: Wyze Bridge (Docker container for RTSP streams)
+# https://github.com/mrlt8/docker-wyze-bridge
+#
+# cameras:
+#   - platform: generic
+#     name: Wyze Front Door
+#     still_image_url: "http://wyze-bridge:8888/front-door/image.jpg"
+#     stream_source: "rtsp://wyze-bridge:8554/front-door"
+#     verify_ssl: false
+#   - platform: generic
+#     name: Wyze Garage
+#     still_image_url: "http://wyze-bridge:8888/garage/image.jpg"
+#     stream_source: "rtsp://wyze-bridge:8554/garage"
+#     verify_ssl: false
+#   - platform: generic
+#     name: Wyze Living Room
+#     still_image_url: "http://wyze-bridge:8888/living-room/image.jpg"
+#     stream_source: "rtsp://wyze-bridge:8554/living-room"
+#     verify_ssl: false
+
+# Camera entities will be auto-discovered as:
+# - camera.front_door (Wyze Cam v3/v4)
+# - camera.garage (Wyze Cam v3/v4)
+# - camera.living_room (Wyze Cam Pan)
+# - camera.kitchen (Wyze Cam v3)
+
+# Associated sensors auto-created:
+# - binary_sensor.front_door_motion
+# - switch.front_door_camera_enabled
+# - switch.front_door_night_vision
+# - switch.front_door_motion_detection

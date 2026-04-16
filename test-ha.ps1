@@ -1,0 +1,1 @@
+wsl -d Ubuntu -e bash -c "curl -s -o /dev/null -w '%{http_code}' --max-time 5 http://10.0.1.90:8125/"
