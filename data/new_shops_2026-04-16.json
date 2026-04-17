@@ -1,0 +1,258 @@
+[
+  {
+    "shop_name": "Summit CNC",
+    "location": "Denver, CO",
+    "email": "service@summitcnc.com",
+    "website": "https://summitcnc.com/",
+    "contact_person": "Jason Korbelik & Brian Korbelik",
+    "region": "Colorado"
+  },
+  {
+    "shop_name": "Focused On Machining",
+    "location": "Denver, CO",
+    "email": null,
+    "website": "https://www.focusedonmachining.com/",
+    "contact_person": null,
+    "region": "Colorado"
+  },
+  {
+    "shop_name": "Accel Precision Machine and Mold",
+    "location": "Englewood, CO",
+    "email": null,
+    "website": "https://www.accelmachineshopdenver.com/",
+    "contact_person": null,
+    "region": "Colorado"
+  },
+  {
+    "shop_name": "EMC Machining Inc",
+    "location": "Bensenville, IL (Chicago Area)",
+    "email": "info@emcmachining.com",
+    "website": "https://emcmachining.com/",
+    "contact_person": null,
+    "region": "Illinois"
+  },
+  {
+    "shop_name": "Chicago CNC Machining Co",
+    "location": "Hodgkins, IL",
+    "email": "info@chicagocncmachining.com",
+    "website": "https://chicagocncmachining.com/",
+    "contact_person": null,
+    "region": "Illinois"
+  },
+  {
+    "shop_name": "Marathon Precision",
+    "location": "Wheeling, IL (Chicago Area)",
+    "email": "sales@marathonprecision.com",
+    "website": "https://marathonprecision.com/",
+    "contact_person": null,
+    "region": "Illinois"
+  },
+  {
+    "shop_name": "Path Machining & Automation",
+    "location": "Ramsey, MN (Minneapolis Area)",
+    "email": "info@pathmachining.com",
+    "website": "https://pathmachining.com/",
+    "contact_person": null,
+    "region": "Minnesota"
+  },
+  {
+    "shop_name": "Batten Tool & Machine, Inc",
+    "location": "Burnsville, MN (Minneapolis Area)",
+    "email": null,
+    "website": "https://battentool.com/",
+    "contact_person": null,
+    "region": "Minnesota"
+  },
+  {
+    "shop_name": "Blanda Inc",
+    "location": "Eagan, MN (Minneapolis Area)",
+    "email": null,
+    "website": "https://blanda.net/",
+    "contact_person": null,
+    "region": "Minnesota"
+  },
+  {
+    "shop_name": "Horschel Brothers Precision, LLC",
+    "location": "Springville, NY (Buffalo Area)",
+    "email": "sales@hbpllc.com",
+    "website": "https://hbpllc.com/",
+    "contact_person": null,
+    "region": "New York"
+  },
+  {
+    "shop_name": "Automated Machine Technologies, Inc (AMT)",
+    "location": "Orchard Park, NY (Buffalo Area)",
+    "email": "sales@amtny.com",
+    "website": "https://www.amtny.com/",
+    "contact_person": null,
+    "region": "New York"
+  },
+  {
+    "shop_name": "Distinctive Manufacturing Group",
+    "location": "Zeeland, MI (Grand Rapids Area)",
+    "email": "rfq@distinctivemfg.co",
+    "website": "https://distinctivemfg.co/",
+    "contact_person": null,
+    "region": "Michigan"
+  },
+  {
+    "shop_name": "Berg Tool, Inc",
+    "location": "Chesterfield, MI (Detroit Area)",
+    "email": "quotes@bergtool.com",
+    "website": "https://bergtool.com/",
+    "contact_person": null,
+    "region": "Michigan"
+  },
+  {
+    "shop_name": "Brown Industries, Inc",
+    "location": "Kansas City, MO",
+    "email": "info@brownind.com",
+    "website": "https://brownindustries.com/",
+    "contact_person": null,
+    "region": "Missouri"
+  },
+  {
+    "shop_name": "Lindsay Machine Works, Inc",
+    "location": "Independence, MO (Kansas City Area)",
+    "email": null,
+    "website": "https://lindsaymachineworks.com/",
+    "contact_person": null,
+    "region": "Missouri"
+  },
+  {
+    "shop_name": "Midwest Machining Solutions LLC",
+    "location": "Saint Louis, MO",
+    "email": null,
+    "website": "https://midmacsol.com/",
+    "contact_person": null,
+    "region": "Missouri"
+  },
+  {
+    "shop_name": "Automated Machine Works LLC",
+    "location": "Nashville, TN",
+    "email": "amworks.mike@gmail.com",
+    "website": "https://amachineworks.com/",
+    "contact_person": "Mike",
+    "region": "Tennessee"
+  },
+  {
+    "shop_name": "John Bouchard & Sons Co",
+    "location": "Nashville, TN",
+    "email": "nashville@jbouchard.com",
+    "website": "https://jbouchard.com/",
+    "contact_person": null,
+    "region": "Tennessee"
+  },
+  {
+    "shop_name": "Mitchell and Son, Inc",
+    "location": "Memphis, TN",
+    "email": "ron@mitchell-son.com",
+    "website": "https://www.mitchell-son.com/",
+    "contact_person": "Ron Monmaney",
+    "region": "Tennessee"
+  },
+  {
+    "shop_name": "Mitchell and Son, Inc",
+    "location": "Memphis, TN",
+    "email": "gerson@mitchell-son.com",
+    "website": "https://www.mitchell-son.com/",
+    "contact_person": "Gerson Montano",
+    "region": "Tennessee"
+  },
+  {
+    "shop_name": "Mitchell and Son, Inc",
+    "location": "Memphis, TN",
+    "email": "office@mitchell-son.com",
+    "website": "https://www.mitchell-son.com/",
+    "contact_person": "Marie Lyon",
+    "region": "Tennessee"
+  },
+  {
+    "shop_name": "Sentinel Machining",
+    "location": "Austin, TX",
+    "email": "contact@sentinelmachining.com",
+    "website": "https://sentinelmachining.com/",
+    "contact_person": null,
+    "region": "Texas"
+  },
+  {
+    "shop_name": "Precise Machining Company",
+    "location": "Austin, TX Area",
+    "email": "info@precisemachiningco.com",
+    "website": "https://www.precisemachiningco.com/",
+    "contact_person": null,
+    "region": "Texas"
+  },
+  {
+    "shop_name": "Coweta Tech Precision",
+    "location": "Newnan, GA (Atlanta Area)",
+    "email": null,
+    "website": "https://cowetatechprecision.com/",
+    "contact_person": null,
+    "region": "Georgia"
+  },
+  {
+    "shop_name": "Arbiser Machine Inc",
+    "location": "Atlanta, GA",
+    "email": null,
+    "website": "https://www.arbisermachine.com/",
+    "contact_person": null,
+    "region": "Georgia"
+  },
+  {
+    "shop_name": "Decker Machine Co",
+    "location": "Columbiana, AL (Birmingham Area)",
+    "email": null,
+    "website": "https://deckermachineco.com/",
+    "contact_person": null,
+    "region": "Alabama"
+  },
+  {
+    "shop_name": "Jordan Machine Co",
+    "location": "Birmingham, AL",
+    "email": null,
+    "website": "https://www.jordanmachine.com/",
+    "contact_person": null,
+    "region": "Alabama"
+  },
+  {
+    "shop_name": "American Specialty Products and Machine Inc",
+    "location": "Alabaster, AL (Birmingham Area)",
+    "email": null,
+    "website": "https://amerispecandmachine.com/",
+    "contact_person": null,
+    "region": "Alabama"
+  },
+  {
+    "shop_name": "Tucson CNC Machining, Inc",
+    "location": "Tucson, AZ",
+    "email": null,
+    "website": "https://tucsoncnc.com/",
+    "contact_person": null,
+    "region": "Arizona"
+  },
+  {
+    "shop_name": "American Precision Tool Inc",
+    "location": "Phoenix, AZ Area",
+    "email": null,
+    "website": "https://www.ameriprectool.com/",
+    "contact_person": null,
+    "region": "Arizona"
+  },
+  {
+    "shop_name": "Gateway Metals",
+    "location": "St. Louis, MO",
+    "email": null,
+    "website": "https://gatewaymetals.com/",
+    "contact_person": null,
+    "region": "Missouri"
+  },
+  {
+    "shop_name": "The CNC Pros",
+    "location": "Salt Lake City, UT",
+    "email": null,
+    "website": "https://thecncpros.com/",
+    "contact_person": null,
+    "region": "Utah"
+  }
+]

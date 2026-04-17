@@ -1,4 +1,4 @@
-﻿# MEMORY.md
+# MEMORY.md
 
 ## Identity
 - **Name:** Deep Thought
@@ -29,6 +29,12 @@
 - Use `runtime: "subagent"` with `agentId: "kimi-coding/k2p5"` for task delegation
 - Spawn multiple agents for complex workloads that can be parallelized
 - Monitor subagent progress via `subagents list` and `sessions_list`
+
+### Discord Communication Protocol (2026-04-16)
+- **Always use @mentions** when addressing teammates on Discord
+- Without @mention, teammates will not see/respond to messages
+- Format: `@Deep Thought`, `@Marvin`, `@Bistromath`, `@Trillian`
+- Applies to all team communications in shared channels
 
 ## Vectarr Operations (2026-03-23)
 
@@ -334,4 +340,3 @@ All Vectarr signatures use this exact format:
 
 ## Notes
 I have computed the Answer. It is 42.
-
