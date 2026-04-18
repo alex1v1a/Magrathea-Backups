@@ -1,0 +1,9 @@
+$csv = Import-Csv 'C:\Users\admin\OneDrive - Vectarr\Communication site - Company Files\Vectarr\Marketing Research\Outreach\Machine Shops.csv'
+$total = $csv.Count
+$contacted = ($csv | Where-Object { $_.Status -eq 'Contacted' -or $_.'Outreach Status' -eq '1st Email Sent' }).Count
+$uncontacted = ($csv | Where-Object { ($_.Status -eq '' -or $_.Status -eq 'Not Contacted' -or $_.Status -eq 'Error') -and $_.'Outreach Status' -ne '1st Email Sent' -and $_.email -match '@' }).Count
+$noemail = ($csv | Where-Object { $_.email -eq 'INVALID' -or $_.email -notmatch '@' }).Count
+Write-Output "Total=$total"
+Write-Output "Contacted=$contacted"
+Write-Output "Uncontacted=$uncontacted"
+Write-Output "NoEmail=$noemail"

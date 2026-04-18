@@ -1,0 +1,183 @@
+{
+  "search_date": "2026-04-17",
+  "regions_searched": [
+    "Massachusetts (Boston)",
+    "Louisiana (New Orleans)",
+    "Oklahoma (Tulsa)",
+    "Missouri (Kansas City, St Louis)",
+    "Texas (San Antonio, Austin)",
+    "Tennessee (Nashville, Memphis)",
+    "Wisconsin (Milwaukee, Madison)",
+    "Georgia (Atlanta, Savannah)",
+    "Illinois (Chicago)",
+    "Alabama (Birmingham, Huntsville)",
+    "Oregon (Portland, Eugene)",
+    "Pennsylvania (Pittsburgh, Philadelphia)",
+    "Colorado (Denver)",
+    "Michigan (Detroit, Grand Rapids)"
+  ],
+  "total_shops_found": 23,
+  "shops": [
+    {
+      "shop_name": "A-1 Machine Shop",
+      "location": "Tulsa, OK",
+      "email": "info@a1machine.net",
+      "website": "https://a1machineshop.com/",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Sentinel Machining",
+      "location": "Austin, TX",
+      "email": "contact@sentinelmachining.com",
+      "website": "https://sentinelmachining.com/",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Precise Machining Company",
+      "location": "Austin, TX",
+      "email": "info@precisemachiningco.com",
+      "website": "https://www.precisemachiningco.com/",
+      "contact_person": null
+    },
+    {
+      "shop_name": "H&M Machining",
+      "location": "Savannah, GA",
+      "email": "sales@handmmachining.com",
+      "website": "https://www.handmmachining.com/",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Northeast Precision Machinery",
+      "location": "Warminster, PA",
+      "email": "sales@northeastprecision.com",
+      "website": "https://northeastprecision.com/",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Summit CNC",
+      "location": "Englewood, CO",
+      "email": "service@summitcnc.com",
+      "website": "https://summitcnc.com/",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Prosper-Tech Machine & Tool",
+      "location": "Richmond, MI",
+      "email": "office@prosper-tech.net",
+      "website": "https://www.prosper-tech.net/",
+      "contact_person": null
+    },
+    {
+      "shop_name": "C&C Machine",
+      "location": "Harvey, LA",
+      "email": "office@ccmachineshop.com",
+      "website": "https://www.ccmachineshop.com/",
+      "contact_person": "Paula Bilich"
+    },
+    {
+      "shop_name": "EMC Machining",
+      "location": "Bensenville, IL",
+      "email": "info@emcmachining.com",
+      "website": "http://www.emcmachining.com/",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Chicago CNC Machining Co.",
+      "location": "Hodgkins, IL",
+      "email": "info@chicagocncmachining.com",
+      "website": "https://chicagocncmachining.com/",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Chicago Machining & Tool",
+      "location": "Palatine, IL",
+      "email": "sales@chicago-machining.com",
+      "website": "https://chicago-machining.com/",
+      "contact_person": null
+    },
+    {
+      "shop_name": "M-1 Tool Works",
+      "location": "McHenry, IL",
+      "email": "info@m1toolworks.com",
+      "website": "https://www.m1toolworks.com/",
+      "contact_person": null
+    },
+    {
+      "shop_name": "C & F Tool",
+      "location": "San Antonio, TX",
+      "email": "diana@c-ftool.com",
+      "website": "https://c-ftool.com/",
+      "contact_person": "Diana"
+    },
+    {
+      "shop_name": "Texas Toolmakers",
+      "location": "San Antonio, TX",
+      "email": "info@txtool.com",
+      "website": "https://www.txtoolmakers.com/",
+      "contact_person": null
+    },
+    {
+      "shop_name": "R. Laing Manufacturing",
+      "location": "San Antonio, TX",
+      "email": "stephanie@rlaing.com",
+      "website": "https://rlaing.com/",
+      "contact_person": "Stephanie"
+    },
+    {
+      "shop_name": "Borg Design",
+      "location": "Massachusetts (Near Boston)",
+      "email": "rfq@borgdesign.com",
+      "website": "https://www.borgdesign.com/",
+      "contact_person": "Andrew"
+    },
+    {
+      "shop_name": "Focused on Machining",
+      "location": "Denver, CO",
+      "email": null,
+      "website": "https://www.focusedonmachining.com/",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Mahuta Tool",
+      "location": "Wisconsin (Serves Milwaukee)",
+      "email": null,
+      "website": "https://www.mahutatool.com/",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Cox Manufacturing",
+      "location": "San Antonio, TX",
+      "email": null,
+      "website": "https://www.coxmanufacturing.com/",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Mat-Tech Machining",
+      "location": "Milwaukee, WI",
+      "email": null,
+      "website": "https://www.mattechmachining.com/",
+      "contact_person": null
+    },
+    {
+      "shop_name": "American Precision Industries",
+      "location": "Hillsboro, OR (Portland area)",
+      "email": null,
+      "website": "https://americanprecisionindustries.com/",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Portland Precision Manufacturing",
+      "location": "Portland, OR",
+      "email": null,
+      "website": "https://www.ppmfg.com/",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Brown Industries",
+      "location": "Kansas City, MO",
+      "email": null,
+      "website": "https://brownindustries.com/",
+      "contact_person": null
+    }
+  ]
+}

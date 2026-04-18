@@ -7,3 +7,8 @@ memory/2026-03-26.md
 
 # Phantom file that cannot be indexed
 \,\ 
+
+# Temporary files with secrets
+temp_config.json
+temp_*.ps1
+temp_*.txt

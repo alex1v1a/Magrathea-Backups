@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:5e0c1c74-f01e-0044-4240-c76aa3000000
+Time:2026-04-08T10:14:26.7467374Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was r
+
+2026-04-08T11:09:19Z
+/blob/fileserviceuploadsperm/files/file-LbTmscJqR3gEhSPKZgS8SM
+
+
+
+2024-08-04
+b
+
+
+max-age=299, immutable, private
+attachment; filename=voice_2026-04-07_02-58-12.ogg
+
+
+</AuthenticationErrorDetail></Error>

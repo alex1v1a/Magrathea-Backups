@@ -1,0 +1,327 @@
+' ******************************************************************************
+' SLDPRT to STEP Batch Converter Macro
+' For SolidWorks 2018 and later
+' ******************************************************************************
+
+Option Explicit
+
+' SolidWorks Application Object
+Dim swApp As SldWorks.SldWorks
+Dim swModel As SldWorks.ModelDoc2
+Dim swModelDocExt As SldWorks.ModelDocExtension
+Dim swExportData As SldWorks.ExportStepData
+
+' File System Objects
+Dim fso As Object
+Dim inputFolder As Object
+Dim outputFolder As String
+Dim file As Object
+
+' Counters and Status
+Dim fileCount As Integer
+Dim successCount As Integer
+Dim errorCount As Integer
+Dim errorMessages As String
+
+' ******************************************************************************
+' MAIN ENTRY POINT - Run this sub to execute the batch conversion
+' ******************************************************************************
+Sub Main()
+    
+    ' === CONFIGURATION - Modify these paths as needed ===
+    Dim inputPath As String
+    Dim outputPath As String
+    
+    ' Set your input and output folders here
+    ' Use double backslashes for path separators in VBA
+    inputPath = "C:\\SLDPRT_Files\\Input\\"      ' <-- CHANGE THIS to your input folder
+    outputPath = "C:\\SLDPRT_Files\\Output\\"     ' <-- CHANGE THIS to your output folder
+    
+    ' ====================================================
+    
+    ' Initialize SolidWorks connection
+    Set swApp = Application.SldWorks
+    
+    If swApp Is Nothing Then
+        MsgBox "Failed to connect to SolidWorks application.", vbCritical, "Error"
+        Exit Sub
+    End If
+    
+    ' Initialize counters
+    fileCount = 0
+    successCount = 0
+    errorCount = 0
+    errorMessages = ""
+    
+    ' Verify input folder exists
+    Set fso = CreateObject("Scripting.FileSystemObject")
+    
+    If Not fso.FolderExists(inputPath) Then
+        MsgBox "Input folder does not exist:" & vbCrLf & inputPath, vbExclamation, "Error"
+        Exit Sub
+    End If
+    
+    ' Create output folder if it doesn't exist
+    If Not fso.FolderExists(outputPath) Then
+        fso.CreateFolder (outputPath)
+    End If
+    
+    outputFolder = outputPath
+    
+    ' Get input folder
+    Set inputFolder = fso.GetFolder(inputPath)
+    
+    ' Process all SLDPRT files
+    ProcessFolder inputFolder
+    
+    ' Display results
+    Dim resultMsg As String
+    resultMsg = "Batch Conversion Complete" & vbCrLf & vbCrLf
+    resultMsg = resultMsg & "Files processed: " & fileCount & vbCrLf
+    resultMsg = resultMsg & "Successful: " & successCount & vbCrLf
+    resultMsg = resultMsg & "Failed: " & errorCount & vbCrLf
+    
+    If errorCount > 0 Then
+        resultMsg = resultMsg & vbCrLf & "Errors encountered:" & vbCrLf & errorMessages
+    End If
+    
+    MsgBox resultMsg, vbInformation, "Conversion Results"
+    
+    ' Cleanup
+    Set fso = Nothing
+    Set inputFolder = Nothing
+    
+End Sub
+
+' ******************************************************************************
+' Process all files in folder (including subfolders if needed)
+' ******************************************************************************
+Sub ProcessFolder(folder As Object)
+    
+    Dim file As Object
+    Dim fileName As String
+    Dim fileExtension As String
+    
+    ' Process each file in the folder
+    For Each file In folder.Files
+        fileName = file.Name
+        fileExtension = LCase(fso.GetExtensionName(fileName))
+        
+        ' Check if it's a SolidWorks part file
+        If fileExtension = "sldprt" Then
+            ConvertFile file.Path, fileName
+        End If
+    Next file
+    
+    ' Uncomment the following block to process subfolders recursively
+    ' Dim subFolder As Object
+    ' For Each subFolder In folder.SubFolders
+    '     ProcessFolder subFolder
+    ' Next subFolder
+    
+End Sub
+
+' ******************************************************************************
+' Convert a single SLDPRT file to STEP format
+' ******************************************************************************
+Sub ConvertFile(filePath As String, fileName As String)
+    
+    Dim baseName As String
+    Dim stepFilePath As String
+    Dim status As Boolean
+    Dim warnings As Long
+    Dim errors As Long
+    
+    On Error GoTo ErrorHandler
+    
+    ' Extract base name (without extension)
+    baseName = Left(fileName, InStrRev(fileName, ".") - 1)
+    stepFilePath = outputFolder & baseName & ".step"
+    
+    fileCount = fileCount + 1
+    
+    ' Update status bar
+    swApp.StatusBarText = "Processing: " & fileName & " (" & fileCount & ")"
+    
+    ' Open the SolidWorks part file
+    ' Arguments: filePath, type (0=part), options, config
+    Set swModel = swApp.OpenDoc6(filePath, swDocPART, swOpenDocOptions_Silent, "", errors, warnings)
+    
+    If swModel Is Nothing Then
+        errorCount = errorCount + 1
+        errorMessages = errorMessages & fileName & ": Failed to open file" & vbCrLf
+        Exit Sub
+    End If
+    
+    ' Get model extension for export
+    Set swModelDocExt = swModel.Extension
+    
+    ' Set up STEP export data
+    Set swExportData = swApp.GetExportFileData(swExportFormatSTEP)
+    
+    If swExportData Is Nothing Then
+        errorCount = errorCount + 1
+        errorMessages = errorMessages & fileName & ": Failed to initialize STEP export" & vbCrLf
+        swApp.CloseDoc swModel.GetTitle
+        Exit Sub
+    End If
+    
+    ' Configure STEP export options
+    ' Export as AP214 (automotive/mechanical design standard)
+    ' Options: 1 = AP203, 2 = AP214, 3 = AP242
+    swExportData.ExportAs3DCurves = False
+    swExportData.SetSTEPProtocolType swSTEPProtocol_AP214_CD
+    
+    ' Save as STEP file
+    ' Arguments: path, version, options, exportData
+    status = swModelDocExt.SaveAs(stepFilePath, swSaveAsCurrentVersion, swSaveAsOptions_Silent + swSaveAsOptions_Copy, swExportData, errors, warnings)
+    
+    If status Then
+        successCount = successCount + 1
+    Else
+        errorCount = errorCount + 1
+        errorMessages = errorMessages & fileName & ": Export failed" & vbCrLf
+    End If
+    
+    ' Close the document without saving changes
+    swApp.CloseDoc swModel.GetTitle
+    
+    ' Allow SolidWorks to process
+    DoEvents
+    
+    Exit Sub
+    
+ErrorHandler:
+    errorCount = errorCount + 1
+    errorMessages = errorMessages & fileName & ": " & Err.Description & vbCrLf
+    On Error Resume Next
+    If Not swModel Is Nothing Then
+        swApp.CloseDoc swModel.GetTitle
+    End If
+    On Error GoTo 0
+    
+End Sub
+
+' ******************************************************************************
+' UTILITY: Convert single file with user selection dialog
+' ******************************************************************************
+Sub ConvertSingleFile()
+    
+    Dim filePath As String
+    Dim savePath As String
+    Dim status As Boolean
+    Dim errors As Long
+    Dim warnings As Long
+    
+    ' Initialize SolidWorks
+    Set swApp = Application.SldWorks
+    
+    ' Show file open dialog
+    filePath = swApp.GetOpenFileName("Select SLDPRT file to convert", "", "SolidWorks Part (*.sldprt)|*.sldprt|All Files (*.*)|*.*", 0, "")
+    
+    If filePath = "" Then
+        Exit Sub
+    End If
+    
+    ' Open the file
+    Set swModel = swApp.OpenDoc6(filePath, swDocPART, swOpenDocOptions_Silent, "", errors, warnings)
+    
+    If swModel Is Nothing Then
+        MsgBox "Failed to open file.", vbExclamation, "Error"
+        Exit Sub
+    End If
+    
+    ' Set up export
+    Set swModelDocExt = swModel.Extension
+    Set swExportData = swApp.GetExportFileData(swExportFormatSTEP)
+    swExportData.SetSTEPProtocolType swSTEPProtocol_AP214_CD
+    
+    ' Get save location
+    savePath = Left(filePath, InStrRev(filePath, ".") - 1) & ".step"
+    
+    ' Export
+    status = swModelDocExt.SaveAs(savePath, swSaveAsCurrentVersion, swSaveAsOptions_Silent, swExportData, errors, warnings)
+    
+    ' Close document
+    swApp.CloseDoc swModel.GetTitle
+    
+    If status Then
+        MsgBox "File converted successfully to:" & vbCrLf & savePath, vbInformation, "Success"
+    Else
+        MsgBox "Export failed.", vbExclamation, "Error"
+    End If
+    
+End Sub
+
+' ******************************************************************************
+' UTILITY: Set up folder browser dialog for better UX
+' ******************************************************************************
+Function BrowseForFolder(title As String) As String
+    
+    Dim shellApp As Object
+    Dim folder As Object
+    
+    Set shellApp = CreateObject("Shell.Application")
+    Set folder = shellApp.BrowseForFolder(0, title, 0, 0)
+    
+    If Not folder Is Nothing Then
+        BrowseForFolder = folder.Self.Path & "\"
+    Else
+        BrowseForFolder = ""
+    End If
+    
+End Function
+
+' ******************************************************************************
+' INTERACTIVE VERSION - Prompts user for folders at runtime
+' ******************************************************************************
+Sub MainInteractive()
+    
+    Dim inputPath As String
+    Dim outputPath As String
+    
+    ' Initialize
+    Set swApp = Application.SldWorks
+    
+    ' Get input folder
+    inputPath = BrowseForFolder("Select folder containing SLDPRT files")
+    
+    If inputPath = "" Then
+        MsgBox "No input folder selected. Operation cancelled.", vbInformation, "Cancelled"
+        Exit Sub
+    End If
+    
+    ' Get output folder
+    outputPath = BrowseForFolder("Select folder for STEP output files")
+    
+    If outputPath = "" Then
+        MsgBox "No output folder selected. Operation cancelled.", vbInformation, "Cancelled"
+        Exit Sub
+    End If
+    
+    ' Update paths and run main conversion
+    Set fso = CreateObject("Scripting.FileSystemObject")
+    Set inputFolder = fso.GetFolder(inputPath)
+    outputFolder = outputPath
+    
+    fileCount = 0
+    successCount = 0
+    errorCount = 0
+    errorMessages = ""
+    
+    ProcessFolder inputFolder
+    
+    ' Show results
+    Dim resultMsg As String
+    resultMsg = "Batch Conversion Complete" & vbCrLf & vbCrLf
+    resultMsg = resultMsg & "Files processed: " & fileCount & vbCrLf
+    resultMsg = resultMsg & "Successful: " & successCount & vbCrLf
+    resultMsg = resultMsg & "Failed: " & errorCount & vbCrLf
+    
+    If errorCount > 0 Then
+        resultMsg = resultMsg & vbCrLf & "Errors encountered:" & vbCrLf & errorMessages
+    End If
+    
+    MsgBox resultMsg, vbInformation, "Conversion Results"
+    
+End Sub
