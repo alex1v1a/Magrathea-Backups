@@ -36,6 +36,37 @@
 - Format: `@Deep Thought`, `@Marvin`, `@Bistromath`, `@Trillian`
 - Applies to all team communications in shared channels
 
+## Team Network Status (2026-04-19)
+
+### SSH Mesh Network
+**Documentation:** `docs/TEAM_SSH_MESH.md`
+
+| Member | IP | Username | Status | Notes |
+|--------|-----|----------|--------|-------|
+| Deep Thought | 10.0.1.99 | root | ✅ Online | This machine |
+| Trillian | 10.0.1.199 | trillian | ✅ Online | Mac, requires auth |
+| Bistromath | 10.0.1.9 | (varies) | ⚠️ Check | Fleet machine |
+| **Marvin** | **10.0.1.90** | **hanka** | **❌ OFFLINE** | **Requires physical intervention** |
+
+### Quick SSH Commands
+```powershell
+# Check status remotely
+ssh trillian@10.0.1.199 "openclaw gateway status"
+
+# Restart gateway remotely
+ssh trillian@10.0.1.199 "openclaw gateway restart"
+
+# PowerShell uses ; not &&
+cd C:\Path; git status; git push
+```
+
+### Marvin — Action Required
+- **Status:** Machine does not respond to ping (100% packet loss)
+- **Last Known Online:** 2026-03-26
+- **Issue:** OpenClaw gateway offline, cannot restart remotely
+- **Action:** Physical access needed to restart machine and gateway
+- **Files:** `/Users/hanka/.openclaw/workspace/` (pending deployment tasks)
+
 ## Vectarr Operations (2026-03-23)
 
 ### Role Assignment
