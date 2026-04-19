@@ -1,0 +1,237 @@
+{
+  "discovery_date": "2026-04-18",
+  "target_regions": [
+    "Arizona (Phoenix, Tucson)",
+    "Oregon (Portland, Eugene)",
+    "Indiana (Indianapolis, Fort Wayne)",
+    "California (Los Angeles, San Diego, Bay Area)",
+    "Dallas-Fort Worth, Texas",
+    "Alabama (Birmingham, Huntsville)",
+    "Georgia (Atlanta, Savannah)",
+    "Ohio (Cleveland, Cincinnati)",
+    "North Carolina (Charlotte, Raleigh)",
+    "Missouri (Kansas City, St. Louis)",
+    "El Paso, Texas",
+    "Houston, Texas",
+    "New Mexico (Albuquerque)",
+    "Massachusetts (Boston)"
+  ],
+  "total_shops_found": 21,
+  "shops": [
+    {
+      "shop_name": "Tucson CNC Machining",
+      "location": {
+        "city": "Tucson",
+        "state": "Arizona"
+      },
+      "email": "marcos@tucsoncnc.com",
+      "website": "https://tucsoncnc.com",
+      "contact_person": "Marcos"
+    },
+    {
+      "shop_name": "Bravo CNC",
+      "location": {
+        "city": "Houston",
+        "state": "Texas"
+      },
+      "email": "info@bravocnc.com",
+      "website": "https://usmachineshop.com",
+      "contact_person": null
+    },
+    {
+      "shop_name": "A+ Precision Machine",
+      "location": {
+        "city": "Houston",
+        "state": "Texas"
+      },
+      "email": "aplus1precisionmachine@gmail.com",
+      "website": "https://aplusprecisionmachine.com",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Ronas Machine",
+      "location": {
+        "city": "Homeworth",
+        "state": "Ohio"
+      },
+      "email": "Info@ronasmachine.com",
+      "website": "https://ronasmachine.com",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Accurate Machine",
+      "location": {
+        "city": "San Diego",
+        "state": "California"
+      },
+      "email": "brian@accuratemachinesd.com",
+      "website": "https://www.accuratemachinesd.com",
+      "contact_person": "Brian"
+    },
+    {
+      "shop_name": "G.V. Industries",
+      "location": {
+        "city": "National City",
+        "state": "California"
+      },
+      "email": "email@gvindustries.biz",
+      "website": "https://gvindustries.biz",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Garcia Precision LLC",
+      "location": {
+        "city": "El Paso",
+        "state": "Texas"
+      },
+      "email": "Precisiongarciallc@gmail.com",
+      "website": "https://garciaprecisionllc.com",
+      "contact_person": null
+    },
+    {
+      "shop_name": "J.L. Industrial Machine Shop",
+      "location": {
+        "city": "El Paso",
+        "state": "Texas"
+      },
+      "email": "julioluera@yahoo.com",
+      "website": "http://www.jlinds.com",
+      "contact_person": "Julio Luera"
+    },
+    {
+      "shop_name": "Sierra Peaks",
+      "location": {
+        "city": "Albuquerque",
+        "state": "New Mexico"
+      },
+      "email": "machining@sierra-peaks.com",
+      "website": "https://www.sierra-peaks.com",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Borg Design",
+      "location": {
+        "city": "North Billerica",
+        "state": "Massachusetts"
+      },
+      "email": "andrew@borgdesign.com",
+      "website": "https://www.borgdesign.com",
+      "contact_person": "K. Andrew Borg, President"
+    },
+    {
+      "shop_name": "Tri-Tec Industries",
+      "location": {
+        "city": "Charlotte",
+        "state": "North Carolina"
+      },
+      "email": "rick@tritecindustries.com",
+      "website": "https://tritecindustries.com",
+      "contact_person": "Rick Loyd, President"
+    },
+    {
+      "shop_name": "Distinctive Manufacturing Group",
+      "location": {
+        "city": "Zeeland",
+        "state": "Michigan"
+      },
+      "email": "rfq@distinctivemfg.co",
+      "website": "https://distinctivemfg.co",
+      "contact_person": null,
+      "note": "Serves Charlotte and Raleigh, NC markets"
+    },
+    {
+      "shop_name": "The Nut Place",
+      "location": {
+        "city": "Houston",
+        "state": "Texas"
+      },
+      "email": "web@thenutplace.com",
+      "website": "https://thenutplace.com",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Vargas Manufacturing",
+      "location": {
+        "city": "El Paso",
+        "state": "Texas"
+      },
+      "email": "vargasmfg@msn.com",
+      "website": "https://vargasmfg.com",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Bogue Machine Co.",
+      "location": {
+        "city": "Albuquerque",
+        "state": "New Mexico"
+      },
+      "email": "info@boguemachine.com",
+      "website": "https://boguemachine.com",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Brown Industries",
+      "location": {
+        "city": "Kansas City",
+        "state": "Missouri"
+      },
+      "email": "info@brownindustries.com",
+      "website": "https://brownindustries.com",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Coweta Tech Precision",
+      "location": {
+        "city": "Newnan",
+        "state": "Georgia"
+      },
+      "email": "info@cowetatechprecision.com",
+      "website": "https://cowetatechprecision.com",
+      "contact_person": null,
+      "note": "Serves Atlanta area"
+    },
+    {
+      "shop_name": "Hastreiter Industries",
+      "location": {
+        "city": "Marshfield",
+        "state": "Wisconsin"
+      },
+      "email": "info@hastreiter.industries",
+      "website": "https://hastreiter.industries",
+      "contact_person": null,
+      "note": "Serves Huntsville AL, Raleigh NC, and St. Louis MO markets"
+    },
+    {
+      "shop_name": "Wilson Machine & Welding",
+      "location": {
+        "city": "Cordova",
+        "state": "Alabama"
+      },
+      "email": "info@wilsonmachine.net",
+      "website": "https://wilsonmachine.net",
+      "contact_person": null
+    },
+    {
+      "shop_name": "Ferrum Machining",
+      "location": {
+        "city": "Attleboro",
+        "state": "Massachusetts"
+      },
+      "email": "info@ferrummachining.com",
+      "website": "https://ferrummachining.com",
+      "contact_person": null,
+      "note": "Serves Greater Boston area"
+    },
+    {
+      "shop_name": "P&L Machine",
+      "location": {
+        "city": "Littleton",
+        "state": "Massachusetts"
+      },
+      "email": "info@plmachine.com",
+      "website": "https://plmachine.com",
+      "contact_person": null,
+      "note": "Serves Boston area, 40+ years experience"
+    }
+  ]
+}
